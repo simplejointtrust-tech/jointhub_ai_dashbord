@@ -1,0 +1,29 @@
+{
+  "recommendation_precision_at_5": 0.8083,
+  "recommendation_target": 0.75,
+  "mentor_match_f1": 0.8,
+  "mentor_match_target": 0.7,
+  "dropout_auc_roc": 0.9467,
+  "dropout_target": 0.75,
+  "nlp_entity_recall_estimate": 0.85,
+  "nlp_target": 0.8,
+  "logistic_coefficients": {
+    "days_since_last_login": 0.046938225646254,
+    "gpa_score": -0.5905960602641764,
+    "attendance_rate": -0.599642828439819,
+    "days_since_last_mentor_session": 0.07696666168420196,
+    "profile_completeness": -0.7633636981340173
+  },
+  "random_forest_feature_importance": {
+    "days_since_last_login": 0.1448721960177901,
+    "gpa_score": 0.17644020556200826,
+    "attendance_rate": 0.2372870469650795,
+    "days_since_last_mentor_session": 0.22432710142074022,
+    "profile_completeness": 0.21707345003438183
+  },
+  "notes": {
+    "embeddings": "description_embedding uses deterministic 384-d stub shaped like all-MiniLM-L6-v2 for offline demos; production swaps in sentence-transformers.",
+    "ner": "Production path uses spaCy en_core_web_sm; demo uses lexicon NER with identical output schema.",
+    "matching": "Hungarian algorithm via scipy.optimize.linear_sum_assignment on negative cosine compatibility."
+  }
+}

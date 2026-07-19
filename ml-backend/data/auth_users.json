@@ -1,0 +1,44 @@
+[
+  {
+    "email": "admin@jointhub.demo",
+    "role": "admin",
+    "full_name": "JointHub Admin",
+    "student_id": null
+  },
+  {
+    "email": "scholar1@jointhub.demo",
+    "role": "student",
+    "full_name": "Amina Okoro",
+    "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916"
+  },
+  {
+    "email": "scholar2@jointhub.demo",
+    "role": "student",
+    "full_name": "Kwame Mensah",
+    "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a"
+  },
+  {
+    "email": "scholar3@jointhub.demo",
+    "role": "student",
+    "full_name": "Chiamaka Diallo",
+    "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b"
+  },
+  {
+    "email": "scholar4@jointhub.demo",
+    "role": "student",
+    "full_name": "Thabo Nkrumah",
+    "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5"
+  },
+  {
+    "email": "scholar5@jointhub.demo",
+    "role": "student",
+    "full_name": "Fatou Abebe",
+    "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833"
+  },
+  {
+    "email": "scholar6@jointhub.demo",
+    "role": "student",
+    "full_name": "Ibrahim Mwangi",
+    "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd"
+  }
+]

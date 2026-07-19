@@ -1,0 +1,40 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# build
+.next
+out
+build
+dist
+coverage
+
+# env / local
+.env
+.env*.local
+!.env.example
+
+# logs / os
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+*.pem
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# python
+ml-backend/.venv
+ml-backend/**/__pycache__/
+*.pyc
+
+# supabase local
+supabase/.branches
+supabase/.temp
+
+# misc
+.vercel
+.turbo

@@ -1,0 +1,458 @@
+[
+  {
+    "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
+    "full_name": "Amina Okoro",
+    "career_goal_text": "Building tech for African farmers using data science in Rwanda",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["data science"],
+      "GPE": ["Rwanda", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["data_ai", "music_arts", "creative_tech"],
+    "recommendation_sentence": "Based on your interest in data_ai, music_arts and your goal of data science, we recommend ALX Software Engineering Fellowship \u2014 52% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a",
+    "full_name": "Kwame Mensah",
+    "career_goal_text": "I want to work at Google on AI in Kenya",
+    "entities": {
+      "ORG": ["Google"],
+      "SKILL": ["AI"],
+      "GPE": ["Kenya"],
+      "PRODUCT": []
+    },
+    "top_tags": ["health", "music_arts"],
+    "recommendation_sentence": "Based on your interest in health, music_arts and your goal of AI, we recommend British Council Creative Enterprise Accelerator \u2014 29% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b",
+    "full_name": "Chiamaka Diallo",
+    "career_goal_text": "Launch a social impact media venture focused on youth leadership in Nigeria",
+    "entities": {
+      "ORG": ["UN"],
+      "SKILL": ["leadership"],
+      "GPE": ["Nigeria"],
+      "PRODUCT": []
+    },
+    "top_tags": ["creative_tech", "health"],
+    "recommendation_sentence": "Based on your interest in creative_tech, health and your goal of leadership, we recommend Design Leadership Residency \u2014 37% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
+    "full_name": "Thabo Nkrumah",
+    "career_goal_text": "Building tech for African farmers using data science in Ghana",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["data science"],
+      "GPE": ["Ghana", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["leadership", "finance", "design_ux"],
+    "recommendation_sentence": "Based on your interest in leadership, finance and your goal of data science, we recommend Design Leadership Residency \u2014 44% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833",
+    "full_name": "Fatou Abebe",
+    "career_goal_text": "Launch a social impact media venture focused on youth leadership in Uganda",
+    "entities": {
+      "ORG": ["UN"],
+      "SKILL": ["leadership"],
+      "GPE": ["Uganda"],
+      "PRODUCT": []
+    },
+    "top_tags": ["media_film", "social_impact", "design_ux"],
+    "recommendation_sentence": "Based on your interest in media_film, social_impact and your goal of leadership, we recommend Design Leadership Residency \u2014 56% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
+    "full_name": "Ibrahim Mwangi",
+    "career_goal_text": "Study machine learning and finance to build inclusive fintech in South Africa",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["machine learning", "finance"],
+      "GPE": ["South Africa", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["entrepreneurship", "health"],
+    "recommendation_sentence": "Based on your interest in entrepreneurship, health and your goal of machine learning, we recommend Inclusive Fintech Internship \u2014 45% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "3b8dd516-f0c2-476d-88c9-29ba5731a0a1",
+    "full_name": "Nia Okafor",
+    "career_goal_text": "Create film and music projects that elevate African stories from Senegal",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["film", "music"],
+      "GPE": ["Senegal", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["media_film", "agri_food", "leadership"],
+    "recommendation_sentence": "Based on your interest in media_film, agri_food and your goal of film, we recommend JointHub Professional Mentor Programme \u2014 33% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
+    "full_name": "Oluwaseun Kamau",
+    "career_goal_text": "Scale an agri-food enterprise with leadership training in Ethiopia",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["AI", "leadership"],
+      "GPE": ["Ethiopia"],
+      "PRODUCT": []
+    },
+    "top_tags": ["finance", "climate_env", "social_impact"],
+    "recommendation_sentence": "Based on your interest in finance, climate_env and your goal of AI, we recommend JointHub Professional Mentor Programme \u2014 29% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
+    "full_name": "Zuri Traore",
+    "career_goal_text": "Create film and music projects that elevate African stories from Rwanda",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["film", "music"],
+      "GPE": ["Rwanda", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["music_arts", "agri_food"],
+    "recommendation_sentence": "Based on your interest in music_arts, agri_food and your goal of film, we recommend British Council Creative Enterprise Accelerator \u2014 32% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
+    "full_name": "Kofi Dlamini",
+    "career_goal_text": "Design climate solutions and clean energy products for cities in Kenya",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["design", "climate", "product"],
+      "GPE": ["Kenya"],
+      "PRODUCT": []
+    },
+    "top_tags": ["media_film", "finance", "music_arts"],
+    "recommendation_sentence": "Based on your interest in media_film, finance and your goal of design, we recommend British Council Creative Enterprise Accelerator \u2014 47% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "4404bc54-5468-46aa-95da-738a784bb119",
+    "full_name": "Aisha Boateng",
+    "career_goal_text": "Scale an agri-food enterprise with leadership training in Nigeria",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["AI", "leadership"],
+      "GPE": ["Nigeria"],
+      "PRODUCT": []
+    },
+    "top_tags": ["creative_tech", "data_ai", "music_arts"],
+    "recommendation_sentence": "Based on your interest in creative_tech, data_ai and your goal of AI, we recommend British Council Creative Enterprise Accelerator \u2014 54% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "afe20b59-9dab-4d2b-90cf-b55d23be4cf0",
+    "full_name": "Jelani Nkosi",
+    "career_goal_text": "Building tech for African farmers using data science in Ghana",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["data science"],
+      "GPE": ["Ghana", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["music_arts", "agri_food", "finance"],
+    "recommendation_sentence": "Based on your interest in music_arts, agri_food and your goal of data science, we recommend British Council Creative Enterprise Accelerator \u2014 27% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
+    "full_name": "Mariam Adebayo",
+    "career_goal_text": "Building tech for African farmers using data science in Uganda",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["data science"],
+      "GPE": ["Uganda", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["leadership", "data_ai"],
+    "recommendation_sentence": "Based on your interest in leadership, data_ai and your goal of data science, we recommend Mastercard Foundation Scholars Program \u2014 61% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
+    "full_name": "Tunde Kone",
+    "career_goal_text": "Create film and music projects that elevate African stories from South Africa",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["film", "music"],
+      "GPE": ["South Africa", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["media_film", "climate_env", "entrepreneurship"],
+    "recommendation_sentence": "Based on your interest in media_film, climate_env and your goal of film, we recommend AgriTech for Africa Grant \u2014 50% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
+    "full_name": "Sanaa Mugisha",
+    "career_goal_text": "Scale an agri-food enterprise with leadership training in Senegal",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["AI", "leadership"],
+      "GPE": ["Senegal"],
+      "PRODUCT": []
+    },
+    "top_tags": ["data_ai", "health", "creative_tech"],
+    "recommendation_sentence": "Based on your interest in data_ai, health and your goal of AI, we recommend Women in AI Africa Fellowship \u2014 43% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
+    "full_name": "Bongani Okoro",
+    "career_goal_text": "Scale an agri-food enterprise with leadership training in Ethiopia",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["AI", "leadership"],
+      "GPE": ["Ethiopia"],
+      "PRODUCT": []
+    },
+    "top_tags": ["design_ux", "health", "finance"],
+    "recommendation_sentence": "Based on your interest in design_ux, health and your goal of AI, we recommend Green Cities Design Sprint \u2014 26% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
+    "full_name": "Lindiwe Mensah",
+    "career_goal_text": "Become a product designer for health startups across Africa from Rwanda",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["design", "product"],
+      "GPE": ["Rwanda", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["climate_env", "media_film", "creative_tech"],
+    "recommendation_sentence": "Based on your interest in climate_env, media_film and your goal of design, we recommend Women in AI Africa Fellowship \u2014 44% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "c4031050-5ea6-46e6-8332-517a85594ea6",
+    "full_name": "Yaw Diallo",
+    "career_goal_text": "Create film and music projects that elevate African stories from Kenya",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["film", "music"],
+      "GPE": ["Kenya", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["entrepreneurship", "design_ux"],
+    "recommendation_sentence": "Based on your interest in entrepreneurship, design_ux and your goal of film, we recommend ALX Software Engineering Fellowship \u2014 33% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
+    "full_name": "Adaeze Nkrumah",
+    "career_goal_text": "Design climate solutions and clean energy products for cities in Nigeria",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["design", "climate", "product"],
+      "GPE": ["Nigeria"],
+      "PRODUCT": []
+    },
+    "top_tags": ["entrepreneurship", "finance", "agri_food"],
+    "recommendation_sentence": "Based on your interest in entrepreneurship, finance and your goal of design, we recommend AgriTech for Africa Grant \u2014 40% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
+    "full_name": "Emeka Abebe",
+    "career_goal_text": "Launch a social impact media venture focused on youth leadership in Ghana",
+    "entities": {
+      "ORG": ["UN"],
+      "SKILL": ["leadership"],
+      "GPE": ["Ghana"],
+      "PRODUCT": []
+    },
+    "top_tags": ["data_ai", "agri_food", "finance"],
+    "recommendation_sentence": "Based on your interest in data_ai, agri_food and your goal of leadership, we recommend Women in AI Africa Fellowship \u2014 46% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
+    "full_name": "Naledi Mwangi",
+    "career_goal_text": "Building tech for African farmers using data science in Uganda",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["data science"],
+      "GPE": ["Uganda", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["health", "data_ai", "creative_tech"],
+    "recommendation_sentence": "Based on your interest in health, data_ai and your goal of data science, we recommend Women in AI Africa Fellowship \u2014 63% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
+    "full_name": "Sefu Okafor",
+    "career_goal_text": "Launch a social impact media venture focused on youth leadership in South Africa",
+    "entities": {
+      "ORG": ["UN"],
+      "SKILL": ["leadership"],
+      "GPE": ["South Africa", "Africa"],
+      "PRODUCT": []
+    },
+    "top_tags": ["media_film", "social_impact", "health"],
+    "recommendation_sentence": "Based on your interest in media_film, social_impact and your goal of leadership, we recommend Nollywood Producers Lab \u2014 52% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "fa92f34f-963b-4901-8889-1879d28029d7",
+    "full_name": "Imani Kamau",
+    "career_goal_text": "I want to work at Google on AI in Senegal",
+    "entities": {
+      "ORG": ["Google"],
+      "SKILL": ["AI"],
+      "GPE": ["Senegal"],
+      "PRODUCT": []
+    },
+    "top_tags": ["climate_env", "data_ai"],
+    "recommendation_sentence": "Based on your interest in climate_env, data_ai and your goal of AI, we recommend Women in AI Africa Fellowship \u2014 40% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  },
+  {
+    "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
+    "full_name": "Dakarai Traore",
+    "career_goal_text": "Design climate solutions and clean energy products for cities in Ethiopia",
+    "entities": {
+      "ORG": [],
+      "SKILL": ["design", "climate", "product"],
+      "GPE": ["Ethiopia"],
+      "PRODUCT": []
+    },
+    "top_tags": ["climate_env", "entrepreneurship", "health"],
+    "recommendation_sentence": "Based on your interest in climate_env, entrepreneurship and your goal of design, we recommend British Council Creative Enterprise Accelerator \u2014 20% match.",
+    "pipeline": {
+      "stage1": "lexicon NER (spaCy-compatible schema: ORG/SKILL/GPE/PRODUCT)",
+      "stage2": "TF-IDF blended with interest tags (70% tags / 30% text in rec engine)",
+      "stage3": "deterministic 384-d embedding stub for offline demos",
+      "stage4": "personalised recommendation sentence"
+    }
+  }
+]

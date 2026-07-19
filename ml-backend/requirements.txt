@@ -1,0 +1,12 @@
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2.6
+numpy>=1.26
+scikit-learn>=1.4
+scipy>=1.11
+# Optional production data source
+# gspread>=6.0
+# google-auth>=2.28
+# Optional production NLP / embeddings
+# spacy>=3.7
+# sentence-transformers>=2.6

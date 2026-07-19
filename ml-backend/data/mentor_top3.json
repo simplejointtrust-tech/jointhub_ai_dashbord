@@ -1,0 +1,1251 @@
+{
+  "99c23fc6-d664-47b6-8722-b3e329da305d": [
+    {
+      "mentor_id": "526e5b94-9372-4874-a61a-6648ae14724a",
+      "name": "Mentor Thabo Sarr",
+      "industry": "Agriculture",
+      "country": "South Africa",
+      "compatibility_score": 0.4667,
+      "skills_offered": [
+        "creative_tech",
+        "leadership",
+        "data_ai"
+      ],
+      "availability_hrs_per_month": 6,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "3acd919f-b8e1-4b2b-8867-7980e1f48602",
+      "name": "Mentor Sekou Wanjiru",
+      "industry": "Public Policy",
+      "country": "Ethiopia",
+      "compatibility_score": 0.4667,
+      "skills_offered": [
+        "music_arts",
+        "data_ai",
+        "social_impact"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    }
+  ],
+  "66be741f-5acb-4f6f-aecc-ef4ec8a327ef": [
+    {
+      "mentor_id": "526e5b94-9372-4874-a61a-6648ae14724a",
+      "name": "Mentor Thabo Sarr",
+      "industry": "Agriculture",
+      "country": "South Africa",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "creative_tech",
+        "leadership",
+        "data_ai"
+      ],
+      "availability_hrs_per_month": 6,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+      "name": "Mentor Nia Banda",
+      "industry": "Climate",
+      "country": "Senegal",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "leadership",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.2333,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    }
+  ],
+  "2a87ed51-50b1-4f1b-b065-05a196dae7c4": [
+    {
+      "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+      "name": "Mentor Chidi Annan",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "music_arts",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "dcfbecc1-e9e8-4d82-a63c-19e0b0557d5d",
+      "name": "Mentor Grace Mugisha",
+      "industry": "Health",
+      "country": "Ghana",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "design_ux",
+        "entrepreneurship",
+        "agri_food"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+      "name": "Mentor Kwame Osei",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "15159ebe-c6a0-47fa-83b3-f9351bab4a4d": [
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.5715,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+      "name": "Mentor Nia Banda",
+      "industry": "Climate",
+      "country": "Senegal",
+      "compatibility_score": 0.5715,
+      "skills_offered": [
+        "leadership",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "dcfbecc1-e9e8-4d82-a63c-19e0b0557d5d",
+      "name": "Mentor Grace Mugisha",
+      "industry": "Health",
+      "country": "Ghana",
+      "compatibility_score": 0.4082,
+      "skills_offered": [
+        "design_ux",
+        "entrepreneurship",
+        "agri_food"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    }
+  ],
+  "d09ce9d8-19a4-475c-8021-a5643572ff65": [
+    {
+      "mentor_id": "526e5b94-9372-4874-a61a-6648ae14724a",
+      "name": "Mentor Thabo Sarr",
+      "industry": "Agriculture",
+      "country": "South Africa",
+      "compatibility_score": 0.4082,
+      "skills_offered": [
+        "creative_tech",
+        "leadership",
+        "data_ai"
+      ],
+      "availability_hrs_per_month": 6,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+      "name": "Mentor Nia Banda",
+      "industry": "Climate",
+      "country": "Senegal",
+      "compatibility_score": 0.4082,
+      "skills_offered": [
+        "leadership",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "dcfbecc1-e9e8-4d82-a63c-19e0b0557d5d",
+      "name": "Mentor Grace Mugisha",
+      "industry": "Health",
+      "country": "Ghana",
+      "compatibility_score": 0.2858,
+      "skills_offered": [
+        "design_ux",
+        "entrepreneurship",
+        "agri_food"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    }
+  ],
+  "1ed223d9-376c-488a-b570-afcd324b6da6": [
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.5715,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "ea1232a6-d621-4528-a57d-7ecd532ac9d1",
+      "name": "Mentor Jean Boateng",
+      "industry": "Health",
+      "country": "Ghana",
+      "compatibility_score": 0.5715,
+      "skills_offered": [
+        "agri_food",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "3acd919f-b8e1-4b2b-8867-7980e1f48602",
+      "name": "Mentor Sekou Wanjiru",
+      "industry": "Public Policy",
+      "country": "Ethiopia",
+      "compatibility_score": 0.5307,
+      "skills_offered": [
+        "music_arts",
+        "data_ai",
+        "social_impact"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "db969b1d-89c0-4c97-9588-dd478e7f676b": [
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.4041,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+      "name": "Mentor Nia Banda",
+      "industry": "Climate",
+      "country": "Senegal",
+      "compatibility_score": 0.4041,
+      "skills_offered": [
+        "leadership",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.3245,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    }
+  ],
+  "c6653969-e292-4875-8eaa-0e23d4be0dd9": [
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.5266,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.3245,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+      "name": "Mentor Kwame Osei",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.3245,
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "ffe42604-2f56-41bd-9b0d-17b1c4cd8a28": [
+    {
+      "mentor_id": "526e5b94-9372-4874-a61a-6648ae14724a",
+      "name": "Mentor Thabo Sarr",
+      "industry": "Agriculture",
+      "country": "South Africa",
+      "compatibility_score": 0.4041,
+      "skills_offered": [
+        "creative_tech",
+        "leadership",
+        "data_ai"
+      ],
+      "availability_hrs_per_month": 6,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+      "name": "Mentor Nia Banda",
+      "industry": "Climate",
+      "country": "Senegal",
+      "compatibility_score": 0.4041,
+      "skills_offered": [
+        "leadership",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "c98b0f52-4cad-4a1e-8160-966e6aeb0e2a",
+      "name": "Mentor David Nkosi",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.3245,
+      "skills_offered": [
+        "climate_env",
+        "agri_food",
+        "finance"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "French"
+      ]
+    }
+  ],
+  "56911b09-6c0d-49ce-886a-3c44302cc56e": [
+    {
+      "mentor_id": "c98b0f52-4cad-4a1e-8160-966e6aeb0e2a",
+      "name": "Mentor David Nkosi",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.4667,
+      "skills_offered": [
+        "climate_env",
+        "agri_food",
+        "finance"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "cbe5eafb-081d-4324-a24b-702018ba38cd",
+      "name": "Mentor Zainab Traore",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "media_film",
+        "climate_env",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    }
+  ],
+  "bad31200-9a4e-4c77-8e7c-452a1c2b08be": [
+    {
+      "mentor_id": "dcfbecc1-e9e8-4d82-a63c-19e0b0557d5d",
+      "name": "Mentor Grace Mugisha",
+      "industry": "Health",
+      "country": "Ghana",
+      "compatibility_score": 0.694,
+      "skills_offered": [
+        "design_ux",
+        "entrepreneurship",
+        "agri_food"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "c98b0f52-4cad-4a1e-8160-966e6aeb0e2a",
+      "name": "Mentor David Nkosi",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.2858,
+      "skills_offered": [
+        "climate_env",
+        "agri_food",
+        "finance"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "ea1232a6-d621-4528-a57d-7ecd532ac9d1",
+      "name": "Mentor Jean Boateng",
+      "industry": "Health",
+      "country": "Ghana",
+      "compatibility_score": 0.2858,
+      "skills_offered": [
+        "agri_food",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "008ee475-0338-47f6-9e36-07b6376ea283": [
+    {
+      "mentor_id": "cbe5eafb-081d-4324-a24b-702018ba38cd",
+      "name": "Mentor Zainab Traore",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.5266,
+      "skills_offered": [
+        "media_film",
+        "climate_env",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.447,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "c98b0f52-4cad-4a1e-8160-966e6aeb0e2a",
+      "name": "Mentor David Nkosi",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.4041,
+      "skills_offered": [
+        "climate_env",
+        "agri_food",
+        "finance"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "French"
+      ]
+    }
+  ],
+  "8810c14b-e15a-4cbe-a095-bc6326b3eddc": [
+    {
+      "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+      "name": "Mentor Kwame Osei",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.5266,
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "3acd919f-b8e1-4b2b-8867-7980e1f48602",
+      "name": "Mentor Sekou Wanjiru",
+      "industry": "Public Policy",
+      "country": "Ethiopia",
+      "compatibility_score": 0.5266,
+      "skills_offered": [
+        "music_arts",
+        "data_ai",
+        "social_impact"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+      "name": "Mentor Chidi Annan",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.447,
+      "skills_offered": [
+        "music_arts",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "1e9cb6ca-0ce5-449b-a1f9-8682ed428335": [
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.7287,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.5266,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "cbe5eafb-081d-4324-a24b-702018ba38cd",
+      "name": "Mentor Zainab Traore",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.5266,
+      "skills_offered": [
+        "media_film",
+        "climate_env",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    }
+  ],
+  "5557f048-2469-4e3d-9b1d-cec6d1637f84": [
+    {
+      "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+      "name": "Mentor Chidi Annan",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "music_arts",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+      "name": "Mentor Nia Banda",
+      "industry": "Climate",
+      "country": "Senegal",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "leadership",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    }
+  ],
+  "1d090cf9-8a96-499d-a551-ca2bc1e8369f": [
+    {
+      "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+      "name": "Mentor Nia Banda",
+      "industry": "Climate",
+      "country": "Senegal",
+      "compatibility_score": 0.5266,
+      "skills_offered": [
+        "leadership",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+      "name": "Mentor Kwame Osei",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.3245,
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.3245,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    }
+  ],
+  "030e87ae-43a8-4d5d-acc5-ce511474f3b1": [
+    {
+      "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+      "name": "Mentor Chidi Annan",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "music_arts",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "cbe5eafb-081d-4324-a24b-702018ba38cd",
+      "name": "Mentor Zainab Traore",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "media_film",
+        "climate_env",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "c98b0f52-4cad-4a1e-8160-966e6aeb0e2a",
+      "name": "Mentor David Nkosi",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "climate_env",
+        "agri_food",
+        "finance"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "French"
+      ]
+    }
+  ],
+  "c70b2806-e064-4901-9f9c-3a782d47f29f": [
+    {
+      "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+      "name": "Mentor Nia Banda",
+      "industry": "Climate",
+      "country": "Senegal",
+      "compatibility_score": 0.694,
+      "skills_offered": [
+        "leadership",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+      "name": "Mentor Imani Tadesse",
+      "industry": "Media",
+      "country": "Uganda",
+      "compatibility_score": 0.5715,
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "leadership"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+      "name": "Mentor Chidi Annan",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.4082,
+      "skills_offered": [
+        "music_arts",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "7b85862d-eaac-449f-be09-9d9bc30a9e21": [
+    {
+      "mentor_id": "3acd919f-b8e1-4b2b-8867-7980e1f48602",
+      "name": "Mentor Sekou Wanjiru",
+      "industry": "Public Policy",
+      "country": "Ethiopia",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "music_arts",
+        "data_ai",
+        "social_impact"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+      "name": "Mentor Chidi Annan",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.4783,
+      "skills_offered": [
+        "music_arts",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+      "name": "Mentor Kwame Osei",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "75bfdbc1-e38f-46ac-aaf0-e11b0374bf0c": [
+    {
+      "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+      "name": "Mentor Chidi Annan",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.5715,
+      "skills_offered": [
+        "music_arts",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+      "name": "Mentor Kwame Osei",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.4082,
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "3acd919f-b8e1-4b2b-8867-7980e1f48602",
+      "name": "Mentor Sekou Wanjiru",
+      "industry": "Public Policy",
+      "country": "Ethiopia",
+      "compatibility_score": 0.4082,
+      "skills_offered": [
+        "music_arts",
+        "data_ai",
+        "social_impact"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "c8b0e76a-0bdf-419c-8148-851b956db4ca": [
+    {
+      "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+      "name": "Mentor Kwame Osei",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.5891,
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "3acd919f-b8e1-4b2b-8867-7980e1f48602",
+      "name": "Mentor Sekou Wanjiru",
+      "industry": "Public Policy",
+      "country": "Ethiopia",
+      "compatibility_score": 0.4667,
+      "skills_offered": [
+        "music_arts",
+        "data_ai",
+        "social_impact"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.3558,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    }
+  ],
+  "629600f3-912d-4484-91c6-8230aacbd4be": [
+    {
+      "mentor_id": "f2dba865-24c1-4aeb-a28e-555558505c74",
+      "name": "Mentor Fatou Ibrahim",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.694,
+      "skills_offered": [
+        "data_ai",
+        "entrepreneurship",
+        "media_film"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "ea1232a6-d621-4528-a57d-7ecd532ac9d1",
+      "name": "Mentor Jean Boateng",
+      "industry": "Health",
+      "country": "Ghana",
+      "compatibility_score": 0.5307,
+      "skills_offered": [
+        "agri_food",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.4082,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    }
+  ],
+  "97349df3-66e9-42f4-a854-e8de94fbfb28": [
+    {
+      "mentor_id": "526e5b94-9372-4874-a61a-6648ae14724a",
+      "name": "Mentor Thabo Sarr",
+      "industry": "Agriculture",
+      "country": "South Africa",
+      "compatibility_score": 0.4041,
+      "skills_offered": [
+        "creative_tech",
+        "leadership",
+        "data_ai"
+      ],
+      "availability_hrs_per_month": 6,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "dcfbecc1-e9e8-4d82-a63c-19e0b0557d5d",
+      "name": "Mentor Grace Mugisha",
+      "industry": "Health",
+      "country": "Ghana",
+      "compatibility_score": 0.3245,
+      "skills_offered": [
+        "design_ux",
+        "entrepreneurship",
+        "agri_food"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English",
+        "French"
+      ]
+    },
+    {
+      "mentor_id": "3acd919f-b8e1-4b2b-8867-7980e1f48602",
+      "name": "Mentor Sekou Wanjiru",
+      "industry": "Public Policy",
+      "country": "Ethiopia",
+      "compatibility_score": 0.3245,
+      "skills_offered": [
+        "music_arts",
+        "data_ai",
+        "social_impact"
+      ],
+      "availability_hrs_per_month": 4,
+      "languages": [
+        "English"
+      ]
+    }
+  ],
+  "9f9e5a51-05fc-4eec-822b-f89feb69aa74": [
+    {
+      "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+      "name": "Mentor Kwame Osei",
+      "industry": "Education",
+      "country": "Kenya",
+      "compatibility_score": 0.5715,
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+      "name": "Mentor Amina Kamanzi",
+      "industry": "Technology",
+      "country": "Rwanda",
+      "compatibility_score": 0.4082,
+      "skills_offered": [
+        "media_film",
+        "data_ai",
+        "health"
+      ],
+      "availability_hrs_per_month": 8,
+      "languages": [
+        "English",
+        "French",
+        "Kinyarwanda"
+      ]
+    },
+    {
+      "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+      "name": "Mentor Chidi Annan",
+      "industry": "Finance",
+      "country": "Nigeria",
+      "compatibility_score": 0.2858,
+      "skills_offered": [
+        "music_arts",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "availability_hrs_per_month": 2,
+      "languages": [
+        "English"
+      ]
+    }
+  ]
+}
