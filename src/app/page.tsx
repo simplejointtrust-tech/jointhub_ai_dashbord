@@ -43,7 +43,7 @@ export default function HomePage() {
               href="/dashboard/login"
               className="rounded-full bg-[#F4B942] px-4 py-2 text-sm font-semibold text-[#0D1B2A] hover:bg-[#e0a836]"
             >
-              Open Capstone dashboard
+              Open Mentor Hub
             </Link>
           </div>
         </div>
@@ -51,13 +51,13 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-6xl px-6 py-12 sm:py-16">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#028090]">
-          Capstone II · ALU EMBA 2026 · Data Science & AI
+          Mentor Hub · JointHub Africa
         </p>
         <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
           JointHub Africa AI modules, live for scholars and mentors.
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#0D1B2A]/75">
-          Built for SimpleJoint Trust with ALU. The Capstone dashboard runs four integrated modules
+          Built for SimpleJoint Trust with ALU. Mentor Hub runs four integrated modules
           on sample cohort data so Isaiah can demo matching quality, risk outreach, and NLP goal
           analysis before the 30 August 2026 submission.
         </p>
