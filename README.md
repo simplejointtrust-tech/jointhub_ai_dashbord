@@ -15,7 +15,7 @@ Product app for **SimpleJoint Trust / JointHub Africa** Mentor Hub (built for Is
   - `ml-backend/` — FastAPI Python service implementing the same four ML modules
 - Design tokens: Capstone palette Navy `#0D1B2A`, Teal `#028090`, Gold `#F4B942`, risk green/amber/red.
 - Impact figures (always): **$158,000+ · 85+ students · 6+ countries**.
-- Bootcamp: CreativeTech — Create With AI, **25–26 August 2026**, ALU Kigali.
+- Bootcamp: CreativeTech X SoCreative, **24–25 August 2026**, ALX Kigali.
 
 ## What shipped
 
@@ -31,7 +31,7 @@ Four live AI/DS modules on sample cohort data (not static mock cards):
 1. Open `/dashboard/login`
 2. Sign in as `scholar1@jointhub.demo`
 3. Review **Opportunities** (“Curated for You”) and the NLP recommendation sentence
-4. Open **Mentor Hub** for assigned mentor, top alternatives, matching matrix, session booking/log
+4. Open **AI Mentor Hub** for assigned mentor, top alternatives, matching matrix, session booking/log
 5. Sign out and use `admin@jointhub.demo` for full **Dropout risk** table + outreach and **Analytics** KPIs
 
 Demo accounts:
