@@ -710,7 +710,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F4B942]">
               JointHub Africa
             </p>
-            <h1 className="text-lg font-semibold sm:text-xl">Capstone II AI Dashboard</h1>
+            <h1 className="text-lg font-semibold sm:text-xl">Mentor Hub</h1>
             <p className="text-xs text-white/65">
               {data.student
                 ? `${data.student.full_name} · ${data.student.programme}`
