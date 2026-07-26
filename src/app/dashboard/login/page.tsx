@@ -49,7 +49,7 @@ export default function DashboardLoginPage() {
           </p>
           <h1 className="mt-2 text-2xl font-semibold">Capstone dashboard sign-in</h1>
           <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/70">
-            Demo email gate for Capstone II. Students see their own recommendations, mentor match,
+            Demo email gate for Mentor Hub. Students see their own recommendations, mentor match,
             and risk profile. Admin sees the full cohort. Production Supabase email/password remains
             available at{" "}
             <Link
