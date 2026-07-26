@@ -1,6 +1,6 @@
-# JointHub Africa — Capstone II AI Dashboard
+# JointHub Africa — Mentor Hub
 
-Product app for **SimpleJoint Trust / JointHub Africa** Capstone II (Isaiah Kporon, ALU EMBA 2026 — Data Science & AI).
+Product app for **SimpleJoint Trust / JointHub Africa** Mentor Hub (built for Isaiah Kporon, ALU EMBA 2026 — Data Science & AI).
 
 ## Agent Quick Context
 
@@ -8,7 +8,7 @@ Product app for **SimpleJoint Trust / JointHub Africa** Capstone II (Isaiah Kpor
 - Package manager: Bun (`packageManager: bun@1.3.13`).
 - Main scripts: `bun dev`, `bun run build`, `bun run lint`, `bun run typecheck`, `bun run test`.
 - Product entrypoints:
-  - `/` — JointHub Capstone landing
+  - `/` — JointHub Mentor Hub landing
   - `/dashboard/login` — demo email gate
   - `/dashboard` — tabbed AI dashboard (Opportunities, Mentor Hub, Dropout risk, Analytics)
   - `/api/jointhub/*` — dashboard APIs over sample Capstone datasets
@@ -102,7 +102,7 @@ British Council · ALX · Hood.D · A4 · JointHub Africa · ALU · @alueducatio
 
 ## External GitHub mirror
 
-This package is the Capstone II AI dashboard export intended for:
+This package is the Mentor Hub dashboard export intended for:
 
 `https://github.com/simplejointtrust-tech/jointhub_ai_dashbord`
 
