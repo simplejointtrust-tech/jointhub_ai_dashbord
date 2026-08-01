@@ -24,13 +24,38 @@
       "programme": "ESL",
       "career_stage": 5,
       "scholar_status": true,
-      "interest_tags": ["entrepreneurship", "creative_tech", "social_impact", "design_ux"],
-      "interest_vector": [1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
-      "skills_needed": ["creative_tech", "entrepreneurship"],
+      "interest_tags": [
+        "entrepreneurship",
+        "creative_tech",
+        "social_impact",
+        "design_ux"
+      ],
+      "interest_vector": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "creative_tech",
+        "entrepreneurship"
+      ],
       "career_goal_text": "I want to work at Google on AI in Rwanda and build tools for African youth.",
       "signup_timestamp": "2026-02-25T00:00:00Z",
       "heard_channel": "Campus ambassador",
-      "languages": ["Yoruba", "English", "Swahili"],
+      "languages": [
+        "Yoruba",
+        "English",
+        "Swahili"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -43,13 +68,35 @@
       "programme": "Undergraduate",
       "career_stage": 5,
       "scholar_status": false,
-      "interest_tags": ["agri_food", "finance"],
-      "interest_vector": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
-      "skills_needed": ["creative_tech", "data_ai"],
+      "interest_tags": [
+        "agri_food",
+        "finance"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "skills_needed": [
+        "creative_tech",
+        "data_ai"
+      ],
       "career_goal_text": "Build a climate-tech startup serving farmers in Kenya with satellite data.",
       "signup_timestamp": "2026-06-28T00:00:00Z",
       "heard_channel": "Referral",
-      "languages": ["Swahili", "French"],
+      "languages": [
+        "Swahili",
+        "French"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -62,13 +109,34 @@
       "programme": "JointHub Fellows",
       "career_stage": 7,
       "scholar_status": false,
-      "interest_tags": ["media_film", "entrepreneurship"],
-      "interest_vector": [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
-      "skills_needed": ["social_impact", "creative_tech"],
+      "interest_tags": [
+        "media_film",
+        "entrepreneurship"
+      ],
+      "interest_vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "social_impact",
+        "creative_tech"
+      ],
       "career_goal_text": "Design UX for fintech products across West Africa and mentor other designers.",
       "signup_timestamp": "2026-04-28T00:00:00Z",
       "heard_channel": "LinkedIn",
-      "languages": ["Kinyarwanda"],
+      "languages": [
+        "Kinyarwanda"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -81,13 +149,35 @@
       "programme": "ESL",
       "career_stage": 1,
       "scholar_status": true,
-      "interest_tags": ["health", "social_impact"],
-      "interest_vector": [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
-      "skills_needed": ["social_impact", "entrepreneurship"],
+      "interest_tags": [
+        "health",
+        "social_impact"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "social_impact",
+        "entrepreneurship"
+      ],
       "career_goal_text": "Produce documentary films about social impact and youth leadership in Nigeria.",
       "signup_timestamp": "2026-03-01T00:00:00Z",
       "heard_channel": "Instagram",
-      "languages": ["Swahili", "Kinyarwanda"],
+      "languages": [
+        "Swahili",
+        "Kinyarwanda"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -100,13 +190,38 @@
       "programme": "CreativeTech Bootcamp",
       "career_stage": 5,
       "scholar_status": true,
-      "interest_tags": ["media_film", "data_ai", "agri_food", "leadership"],
-      "interest_vector": [0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1],
-      "skills_needed": ["data_ai", "climate_env"],
+      "interest_tags": [
+        "media_film",
+        "data_ai",
+        "agri_food",
+        "leadership"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "skills_needed": [
+        "data_ai",
+        "climate_env"
+      ],
       "career_goal_text": "Lead health innovation programmes for underserved communities in Ghana.",
       "signup_timestamp": "2026-04-08T00:00:00Z",
       "heard_channel": "Partner university",
-      "languages": ["Yoruba", "French", "Swahili"],
+      "languages": [
+        "Yoruba",
+        "French",
+        "Swahili"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -119,13 +234,36 @@
       "programme": "ESL",
       "career_stage": 2,
       "scholar_status": true,
-      "interest_tags": ["creative_tech", "design_ux", "agri_food"],
-      "interest_vector": [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
-      "skills_needed": ["leadership", "media_film"],
+      "interest_tags": [
+        "creative_tech",
+        "design_ux",
+        "agri_food"
+      ],
+      "interest_vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "skills_needed": [
+        "leadership",
+        "media_film"
+      ],
       "career_goal_text": "Use data science for education policy and scholarship matching at scale.",
       "signup_timestamp": "2026-02-24T00:00:00Z",
       "heard_channel": "Referral",
-      "languages": ["Kinyarwanda", "French"],
+      "languages": [
+        "Kinyarwanda",
+        "French"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -138,13 +276,35 @@
       "programme": "Undergraduate",
       "career_stage": 3,
       "scholar_status": false,
-      "interest_tags": ["data_ai", "design_ux", "health"],
-      "interest_vector": [0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0],
-      "skills_needed": ["data_ai", "health"],
+      "interest_tags": [
+        "data_ai",
+        "design_ux",
+        "health"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "data_ai",
+        "health"
+      ],
       "career_goal_text": "Launch agri-food supply chain platforms connecting rural producers to markets.",
       "signup_timestamp": "2026-05-07T00:00:00Z",
       "heard_channel": "Instagram",
-      "languages": ["English"],
+      "languages": [
+        "English"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -157,13 +317,34 @@
       "programme": "Undergraduate",
       "career_stage": 4,
       "scholar_status": true,
-      "interest_tags": ["finance", "data_ai"],
-      "interest_vector": [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-      "skills_needed": ["climate_env", "health"],
+      "interest_tags": [
+        "finance",
+        "data_ai"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "skills_needed": [
+        "climate_env",
+        "health"
+      ],
       "career_goal_text": "Become a product leader in creative tech and media startups across Africa.",
       "signup_timestamp": "2026-03-06T00:00:00Z",
       "heard_channel": "LinkedIn",
-      "languages": ["English"],
+      "languages": [
+        "English"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -176,13 +357,38 @@
       "programme": "Undergraduate",
       "career_stage": 1,
       "scholar_status": true,
-      "interest_tags": ["health", "social_impact", "media_film", "entrepreneurship"],
-      "interest_vector": [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0],
-      "skills_needed": ["agri_food", "social_impact"],
+      "interest_tags": [
+        "health",
+        "social_impact",
+        "media_film",
+        "entrepreneurship"
+      ],
+      "interest_vector": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "agri_food",
+        "social_impact"
+      ],
       "career_goal_text": "Work on renewable energy finance and climate adaptation grants.",
       "signup_timestamp": "2026-05-09T00:00:00Z",
       "heard_channel": "Campus ambassador",
-      "languages": ["English", "Swahili", "Kinyarwanda"],
+      "languages": [
+        "English",
+        "Swahili",
+        "Kinyarwanda"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -195,13 +401,36 @@
       "programme": "Undergraduate",
       "career_stage": 1,
       "scholar_status": false,
-      "interest_tags": ["leadership", "design_ux", "data_ai", "media_film"],
-      "interest_vector": [0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0],
-      "skills_needed": ["media_film", "social_impact"],
+      "interest_tags": [
+        "leadership",
+        "design_ux",
+        "data_ai",
+        "media_film"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "media_film",
+        "social_impact"
+      ],
       "career_goal_text": "Build music-tech platforms that monetise African artists fairly.",
       "signup_timestamp": "2026-03-03T00:00:00Z",
       "heard_channel": "Instagram",
-      "languages": ["Yoruba"],
+      "languages": [
+        "Yoruba"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -214,13 +443,36 @@
       "programme": "Undergraduate",
       "career_stage": 5,
       "scholar_status": false,
-      "interest_tags": ["entrepreneurship", "climate_env"],
-      "interest_vector": [0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
-      "skills_needed": ["health", "leadership"],
+      "interest_tags": [
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "interest_vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "health",
+        "leadership"
+      ],
       "career_goal_text": "I want to work at Google on AI in Rwanda and build tools for African youth.",
       "signup_timestamp": "2026-04-19T00:00:00Z",
       "heard_channel": "Campus ambassador",
-      "languages": ["French", "Swahili", "Yoruba"],
+      "languages": [
+        "French",
+        "Swahili",
+        "Yoruba"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -233,13 +485,36 @@
       "programme": "CreativeTech Bootcamp",
       "career_stage": 1,
       "scholar_status": false,
-      "interest_tags": ["finance", "media_film", "climate_env", "health"],
-      "interest_vector": [0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0],
-      "skills_needed": ["leadership", "health"],
+      "interest_tags": [
+        "finance",
+        "media_film",
+        "climate_env",
+        "health"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "skills_needed": [
+        "leadership",
+        "health"
+      ],
       "career_goal_text": "Build a climate-tech startup serving farmers in Kenya with satellite data.",
       "signup_timestamp": "2026-02-28T00:00:00Z",
       "heard_channel": "LinkedIn",
-      "languages": ["English"],
+      "languages": [
+        "English"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -252,13 +527,34 @@
       "programme": "ESL",
       "career_stage": 7,
       "scholar_status": false,
-      "interest_tags": ["agri_food", "finance"],
-      "interest_vector": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
-      "skills_needed": ["health", "design_ux"],
+      "interest_tags": [
+        "agri_food",
+        "finance"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "skills_needed": [
+        "health",
+        "design_ux"
+      ],
       "career_goal_text": "Design UX for fintech products across West Africa and mentor other designers.",
       "signup_timestamp": "2026-03-13T00:00:00Z",
       "heard_channel": "Referral",
-      "languages": ["Yoruba"],
+      "languages": [
+        "Yoruba"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -271,13 +567,35 @@
       "programme": "Undergraduate",
       "career_stage": 7,
       "scholar_status": true,
-      "interest_tags": ["agri_food", "leadership"],
-      "interest_vector": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
-      "skills_needed": ["entrepreneurship", "agri_food"],
+      "interest_tags": [
+        "agri_food",
+        "leadership"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "skills_needed": [
+        "entrepreneurship",
+        "agri_food"
+      ],
       "career_goal_text": "Produce documentary films about social impact and youth leadership in Nigeria.",
       "signup_timestamp": "2026-06-18T00:00:00Z",
       "heard_channel": "Referral",
-      "languages": ["Kinyarwanda", "Yoruba"],
+      "languages": [
+        "Kinyarwanda",
+        "Yoruba"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -290,13 +608,35 @@
       "programme": "ESL",
       "career_stage": 2,
       "scholar_status": false,
-      "interest_tags": ["agri_food", "creative_tech", "entrepreneurship"],
-      "interest_vector": [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-      "skills_needed": ["health", "climate_env"],
+      "interest_tags": [
+        "agri_food",
+        "creative_tech",
+        "entrepreneurship"
+      ],
+      "interest_vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "skills_needed": [
+        "health",
+        "climate_env"
+      ],
       "career_goal_text": "Lead health innovation programmes for underserved communities in Ghana.",
       "signup_timestamp": "2026-02-05T00:00:00Z",
       "heard_channel": "Referral",
-      "languages": ["Swahili"],
+      "languages": [
+        "Swahili"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -309,13 +649,36 @@
       "programme": "ESL",
       "career_stage": 1,
       "scholar_status": true,
-      "interest_tags": ["design_ux", "entrepreneurship", "climate_env"],
-      "interest_vector": [0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
-      "skills_needed": ["design_ux", "data_ai"],
+      "interest_tags": [
+        "design_ux",
+        "entrepreneurship",
+        "climate_env"
+      ],
+      "interest_vector": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "design_ux",
+        "data_ai"
+      ],
       "career_goal_text": "Use data science for education policy and scholarship matching at scale.",
       "signup_timestamp": "2026-04-15T00:00:00Z",
       "heard_channel": "Referral",
-      "languages": ["French", "Kinyarwanda"],
+      "languages": [
+        "French",
+        "Kinyarwanda"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -328,13 +691,34 @@
       "programme": "Undergraduate",
       "career_stage": 3,
       "scholar_status": true,
-      "interest_tags": ["data_ai", "music_arts"],
-      "interest_vector": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-      "skills_needed": ["agri_food", "health"],
+      "interest_tags": [
+        "data_ai",
+        "music_arts"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "agri_food",
+        "health"
+      ],
       "career_goal_text": "Launch agri-food supply chain platforms connecting rural producers to markets.",
       "signup_timestamp": "2026-06-19T00:00:00Z",
       "heard_channel": "Referral",
-      "languages": ["French"],
+      "languages": [
+        "French"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -347,13 +731,37 @@
       "programme": "ESL",
       "career_stage": 1,
       "scholar_status": true,
-      "interest_tags": ["design_ux", "creative_tech", "leadership"],
-      "interest_vector": [1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
-      "skills_needed": ["health", "agri_food"],
+      "interest_tags": [
+        "design_ux",
+        "creative_tech",
+        "leadership"
+      ],
+      "interest_vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "health",
+        "agri_food"
+      ],
       "career_goal_text": "Become a product leader in creative tech and media startups across Africa.",
       "signup_timestamp": "2026-02-10T00:00:00Z",
       "heard_channel": "Instagram",
-      "languages": ["English", "French", "Yoruba"],
+      "languages": [
+        "English",
+        "French",
+        "Yoruba"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -366,13 +774,36 @@
       "programme": "ESL",
       "career_stage": 4,
       "scholar_status": true,
-      "interest_tags": ["entrepreneurship", "finance", "design_ux", "music_arts"],
-      "interest_vector": [0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0],
-      "skills_needed": ["leadership", "health"],
+      "interest_tags": [
+        "entrepreneurship",
+        "finance",
+        "design_ux",
+        "music_arts"
+      ],
+      "interest_vector": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "skills_needed": [
+        "leadership",
+        "health"
+      ],
       "career_goal_text": "Work on renewable energy finance and climate adaptation grants.",
       "signup_timestamp": "2026-03-22T00:00:00Z",
       "heard_channel": "Partner university",
-      "languages": ["Swahili"],
+      "languages": [
+        "Swahili"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -385,13 +816,34 @@
       "programme": "JointHub Fellows",
       "career_stage": 7,
       "scholar_status": true,
-      "interest_tags": ["social_impact", "music_arts"],
-      "interest_vector": [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0],
-      "skills_needed": ["creative_tech", "climate_env"],
+      "interest_tags": [
+        "social_impact",
+        "music_arts"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "creative_tech",
+        "climate_env"
+      ],
       "career_goal_text": "Build music-tech platforms that monetise African artists fairly.",
       "signup_timestamp": "2026-06-09T00:00:00Z",
       "heard_channel": "LinkedIn",
-      "languages": ["English"],
+      "languages": [
+        "English"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -404,13 +856,36 @@
       "programme": "JointHub Fellows",
       "career_stage": 3,
       "scholar_status": false,
-      "interest_tags": ["design_ux", "health", "social_impact", "data_ai"],
-      "interest_vector": [0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0],
-      "skills_needed": ["health", "social_impact"],
+      "interest_tags": [
+        "design_ux",
+        "health",
+        "social_impact",
+        "data_ai"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "health",
+        "social_impact"
+      ],
       "career_goal_text": "I want to work at Google on AI in Rwanda and build tools for African youth.",
       "signup_timestamp": "2026-06-06T00:00:00Z",
       "heard_channel": "LinkedIn",
-      "languages": ["Yoruba"],
+      "languages": [
+        "Yoruba"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -423,13 +898,37 @@
       "programme": "CreativeTech Bootcamp",
       "career_stage": 3,
       "scholar_status": false,
-      "interest_tags": ["finance", "entrepreneurship", "data_ai"],
-      "interest_vector": [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-      "skills_needed": ["design_ux", "media_film"],
+      "interest_tags": [
+        "finance",
+        "entrepreneurship",
+        "data_ai"
+      ],
+      "interest_vector": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "skills_needed": [
+        "design_ux",
+        "media_film"
+      ],
       "career_goal_text": "Build a climate-tech startup serving farmers in Kenya with satellite data.",
       "signup_timestamp": "2026-02-22T00:00:00Z",
       "heard_channel": "Partner university",
-      "languages": ["Kinyarwanda", "Swahili", "English"],
+      "languages": [
+        "Kinyarwanda",
+        "Swahili",
+        "English"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -442,13 +941,36 @@
       "programme": "JointHub Fellows",
       "career_stage": 7,
       "scholar_status": false,
-      "interest_tags": ["finance", "music_arts"],
-      "interest_vector": [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0],
-      "skills_needed": ["social_impact", "data_ai"],
+      "interest_tags": [
+        "finance",
+        "music_arts"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "skills_needed": [
+        "social_impact",
+        "data_ai"
+      ],
       "career_goal_text": "Design UX for fintech products across West Africa and mentor other designers.",
       "signup_timestamp": "2026-04-24T00:00:00Z",
       "heard_channel": "LinkedIn",
-      "languages": ["Kinyarwanda", "English", "Yoruba"],
+      "languages": [
+        "Kinyarwanda",
+        "English",
+        "Yoruba"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -461,13 +983,34 @@
       "programme": "CreativeTech Bootcamp",
       "career_stage": 4,
       "scholar_status": false,
-      "interest_tags": ["agri_food", "data_ai"],
-      "interest_vector": [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-      "skills_needed": ["social_impact", "media_film"],
+      "interest_tags": [
+        "agri_food",
+        "data_ai"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "skills_needed": [
+        "social_impact",
+        "media_film"
+      ],
       "career_goal_text": "Produce documentary films about social impact and youth leadership in Nigeria.",
       "signup_timestamp": "2026-01-11T00:00:00Z",
       "heard_channel": "Partner university",
-      "languages": ["French"],
+      "languages": [
+        "French"
+      ],
       "is_admin": false,
       "role": "student"
     },
@@ -480,13 +1023,36 @@
       "programme": "Leadership",
       "career_stage": 7,
       "scholar_status": true,
-      "interest_tags": ["leadership", "data_ai", "social_impact"],
-      "interest_vector": [0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0],
-      "skills_needed": ["leadership", "data_ai"],
+      "interest_tags": [
+        "leadership",
+        "data_ai",
+        "social_impact"
+      ],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "skills_needed": [
+        "leadership",
+        "data_ai"
+      ],
       "career_goal_text": "Scale JointHub Africa mentorship and opportunity matching for 5000 scholars.",
       "signup_timestamp": "2025-09-01T00:00:00Z",
       "heard_channel": "Founder",
-      "languages": ["English", "French"],
+      "languages": [
+        "English",
+        "French"
+      ],
       "is_admin": true,
       "role": "admin"
     }
@@ -497,11 +1063,32 @@
       "name": "Mentor A Moyo",
       "country": "Nigeria",
       "industry": "Health",
-      "skills_offered": ["entrepreneurship", "media_film", "health", "music_arts"],
-      "skills_vector": [0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0],
+      "skills_offered": [
+        "entrepreneurship",
+        "media_film",
+        "health",
+        "music_arts"
+      ],
+      "skills_vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
       "career_stage_mentor": 5,
       "availability_hrs_per_month": 2,
-      "languages": ["English", "French"],
+      "languages": [
+        "English",
+        "French"
+      ],
       "bio": "Experienced entrepreneurship professional mentoring African scholars."
     },
     {
@@ -509,11 +1096,31 @@
       "name": "Mentor B Banda",
       "country": "Kenya",
       "industry": "Climate",
-      "skills_offered": ["media_film", "music_arts", "design_ux", "social_impact"],
-      "skills_vector": [0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0],
+      "skills_offered": [
+        "media_film",
+        "music_arts",
+        "design_ux",
+        "social_impact"
+      ],
+      "skills_vector": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "career_stage_mentor": 4,
       "availability_hrs_per_month": 6,
-      "languages": ["French"],
+      "languages": [
+        "French"
+      ],
       "bio": "Experienced media film professional mentoring African scholars."
     },
     {
@@ -521,11 +1128,31 @@
       "name": "Mentor C Banda",
       "country": "Rwanda",
       "industry": "Health",
-      "skills_offered": ["media_film", "social_impact", "design_ux"],
-      "skills_vector": [0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0],
+      "skills_offered": [
+        "media_film",
+        "social_impact",
+        "design_ux"
+      ],
+      "skills_vector": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "career_stage_mentor": 7,
       "availability_hrs_per_month": 4,
-      "languages": ["English", "Swahili"],
+      "languages": [
+        "English",
+        "Swahili"
+      ],
       "bio": "Experienced media film professional mentoring African scholars."
     },
     {
@@ -533,11 +1160,30 @@
       "name": "Mentor D Moyo",
       "country": "South Africa",
       "industry": "Technology",
-      "skills_offered": ["finance", "health", "music_arts"],
-      "skills_vector": [0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0],
+      "skills_offered": [
+        "finance",
+        "health",
+        "music_arts"
+      ],
+      "skills_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
       "career_stage_mentor": 4,
       "availability_hrs_per_month": 4,
-      "languages": ["Yoruba"],
+      "languages": [
+        "Yoruba"
+      ],
       "bio": "Experienced finance professional mentoring African scholars."
     },
     {
@@ -545,11 +1191,32 @@
       "name": "Mentor E Traore",
       "country": "South Africa",
       "industry": "Agriculture",
-      "skills_offered": ["creative_tech", "entrepreneurship", "leadership"],
-      "skills_vector": [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+      "skills_offered": [
+        "creative_tech",
+        "entrepreneurship",
+        "leadership"
+      ],
+      "skills_vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
       "career_stage_mentor": 7,
       "availability_hrs_per_month": 8,
-      "languages": ["English", "Kinyarwanda", "Swahili"],
+      "languages": [
+        "English",
+        "Kinyarwanda",
+        "Swahili"
+      ],
       "bio": "Experienced creative tech professional mentoring African scholars."
     },
     {
@@ -557,11 +1224,29 @@
       "name": "Mentor F Traore",
       "country": "Rwanda",
       "industry": "Health",
-      "skills_offered": ["social_impact", "creative_tech"],
-      "skills_vector": [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+      "skills_offered": [
+        "social_impact",
+        "creative_tech"
+      ],
+      "skills_vector": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "career_stage_mentor": 6,
       "availability_hrs_per_month": 6,
-      "languages": ["Swahili"],
+      "languages": [
+        "Swahili"
+      ],
       "bio": "Experienced social impact professional mentoring African scholars."
     },
     {
@@ -569,11 +1254,33 @@
       "name": "Mentor G Moyo",
       "country": "Uganda",
       "industry": "Climate",
-      "skills_offered": ["media_film", "finance", "entrepreneurship", "social_impact"],
-      "skills_vector": [0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0],
+      "skills_offered": [
+        "media_film",
+        "finance",
+        "entrepreneurship",
+        "social_impact"
+      ],
+      "skills_vector": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
       "career_stage_mentor": 6,
       "availability_hrs_per_month": 6,
-      "languages": ["Swahili", "French", "English"],
+      "languages": [
+        "Swahili",
+        "French",
+        "English"
+      ],
       "bio": "Experienced media film professional mentoring African scholars."
     },
     {
@@ -581,11 +1288,31 @@
       "name": "Mentor H Moyo",
       "country": "Uganda",
       "industry": "Climate",
-      "skills_offered": ["finance", "music_arts", "data_ai"],
-      "skills_vector": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0],
+      "skills_offered": [
+        "finance",
+        "music_arts",
+        "data_ai"
+      ],
+      "skills_vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
       "career_stage_mentor": 4,
       "availability_hrs_per_month": 4,
-      "languages": ["French", "Kinyarwanda"],
+      "languages": [
+        "French",
+        "Kinyarwanda"
+      ],
       "bio": "Experienced finance professional mentoring African scholars."
     },
     {
@@ -593,11 +1320,31 @@
       "name": "Mentor I Traore",
       "country": "Ethiopia",
       "industry": "Health",
-      "skills_offered": ["leadership", "finance", "media_film", "climate_env"],
-      "skills_vector": [0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0],
+      "skills_offered": [
+        "leadership",
+        "finance",
+        "media_film",
+        "climate_env"
+      ],
+      "skills_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
       "career_stage_mentor": 7,
       "availability_hrs_per_month": 10,
-      "languages": ["English"],
+      "languages": [
+        "English"
+      ],
       "bio": "Experienced leadership professional mentoring African scholars."
     },
     {
@@ -605,11 +1352,30 @@
       "name": "Mentor J Okello",
       "country": "Kenya",
       "industry": "Health",
-      "skills_offered": ["health", "finance", "leadership"],
-      "skills_vector": [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
+      "skills_offered": [
+        "health",
+        "finance",
+        "leadership"
+      ],
+      "skills_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
       "career_stage_mentor": 6,
       "availability_hrs_per_month": 2,
-      "languages": ["French"],
+      "languages": [
+        "French"
+      ],
       "bio": "Experienced health professional mentoring African scholars."
     },
     {
@@ -617,11 +1383,31 @@
       "name": "Mentor K Traore",
       "country": "Kenya",
       "industry": "Public Policy",
-      "skills_offered": ["creative_tech", "design_ux"],
-      "skills_vector": [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "skills_offered": [
+        "creative_tech",
+        "design_ux"
+      ],
+      "skills_vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "career_stage_mentor": 7,
       "availability_hrs_per_month": 10,
-      "languages": ["French", "Kinyarwanda", "Yoruba"],
+      "languages": [
+        "French",
+        "Kinyarwanda",
+        "Yoruba"
+      ],
       "bio": "Experienced creative tech professional mentoring African scholars."
     },
     {
@@ -629,11 +1415,32 @@
       "name": "Mentor L Nkrumah",
       "country": "Senegal",
       "industry": "Health",
-      "skills_offered": ["design_ux", "data_ai", "creative_tech"],
-      "skills_vector": [1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "skills_offered": [
+        "design_ux",
+        "data_ai",
+        "creative_tech"
+      ],
+      "skills_vector": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "career_stage_mentor": 5,
       "availability_hrs_per_month": 10,
-      "languages": ["Kinyarwanda", "English", "Swahili"],
+      "languages": [
+        "Kinyarwanda",
+        "English",
+        "Swahili"
+      ],
       "bio": "Experienced design ux professional mentoring African scholars."
     }
   ],
@@ -1792,7 +2599,10 @@
       "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
       "session_date": "2026-05-12",
       "session_duration_mins": 60,
-      "topics_discussed": ["entrepreneurship", "creative_tech"],
+      "topics_discussed": [
+        "entrepreneurship",
+        "creative_tech"
+      ],
       "student_rating": 3,
       "goals_set": true,
       "days_since_last_session": 50
@@ -1803,7 +2613,10 @@
       "mentor_id": "03d5a14a-5bb4-4d71-b9af-6626c88b597f",
       "session_date": "2026-05-28",
       "session_duration_mins": 45,
-      "topics_discussed": ["agri_food", "finance"],
+      "topics_discussed": [
+        "agri_food",
+        "finance"
+      ],
       "student_rating": 5,
       "goals_set": true,
       "days_since_last_session": 34
@@ -1814,7 +2627,10 @@
       "mentor_id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027",
       "session_date": "2026-06-23",
       "session_duration_mins": 30,
-      "topics_discussed": ["entrepreneurship", "media_film"],
+      "topics_discussed": [
+        "entrepreneurship",
+        "media_film"
+      ],
       "student_rating": 5,
       "goals_set": true,
       "days_since_last_session": 8
@@ -1825,7 +2641,10 @@
       "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
       "session_date": "2026-06-20",
       "session_duration_mins": 45,
-      "topics_discussed": ["health", "social_impact"],
+      "topics_discussed": [
+        "health",
+        "social_impact"
+      ],
       "student_rating": 5,
       "goals_set": true,
       "days_since_last_session": 11
@@ -1836,7 +2655,10 @@
       "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
       "session_date": "2026-06-24",
       "session_duration_mins": 60,
-      "topics_discussed": ["media_film", "data_ai"],
+      "topics_discussed": [
+        "media_film",
+        "data_ai"
+      ],
       "student_rating": 4,
       "goals_set": true,
       "days_since_last_session": 7
@@ -1847,7 +2669,10 @@
       "mentor_id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
       "session_date": "2026-05-30",
       "session_duration_mins": 60,
-      "topics_discussed": ["creative_tech", "design_ux"],
+      "topics_discussed": [
+        "creative_tech",
+        "design_ux"
+      ],
       "student_rating": 5,
       "goals_set": false,
       "days_since_last_session": 32
@@ -1858,7 +2683,10 @@
       "mentor_id": "d78dd86d-6902-45e3-a397-c6c090768c40",
       "session_date": "2026-05-23",
       "session_duration_mins": 30,
-      "topics_discussed": ["health", "design_ux"],
+      "topics_discussed": [
+        "health",
+        "design_ux"
+      ],
       "student_rating": 4,
       "goals_set": true,
       "days_since_last_session": 39
@@ -1869,7 +2697,10 @@
       "mentor_id": "3945f6e4-ce24-45a2-bacb-248e902a21ab",
       "session_date": "2026-06-30",
       "session_duration_mins": 30,
-      "topics_discussed": ["data_ai", "finance"],
+      "topics_discussed": [
+        "data_ai",
+        "finance"
+      ],
       "student_rating": 4,
       "goals_set": true,
       "days_since_last_session": 1
@@ -1880,7 +2711,10 @@
       "mentor_id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739",
       "session_date": "2026-05-31",
       "session_duration_mins": 60,
-      "topics_discussed": ["entrepreneurship", "health"],
+      "topics_discussed": [
+        "entrepreneurship",
+        "health"
+      ],
       "student_rating": 3,
       "goals_set": true,
       "days_since_last_session": 31
@@ -1891,7 +2725,10 @@
       "mentor_id": "cbf63c96-8242-4ad4-93cb-9395776f9820",
       "session_date": "2026-06-22",
       "session_duration_mins": 30,
-      "topics_discussed": ["design_ux", "media_film"],
+      "topics_discussed": [
+        "design_ux",
+        "media_film"
+      ],
       "student_rating": 5,
       "goals_set": true,
       "days_since_last_session": 9
@@ -1902,7 +2739,10 @@
       "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
       "session_date": "2026-05-27",
       "session_duration_mins": 60,
-      "topics_discussed": ["climate_env", "entrepreneurship"],
+      "topics_discussed": [
+        "climate_env",
+        "entrepreneurship"
+      ],
       "student_rating": 5,
       "goals_set": true,
       "days_since_last_session": 35
@@ -1913,7 +2753,10 @@
       "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
       "session_date": "2026-06-02",
       "session_duration_mins": 60,
-      "topics_discussed": ["health", "finance"],
+      "topics_discussed": [
+        "health",
+        "finance"
+      ],
       "student_rating": 5,
       "goals_set": false,
       "days_since_last_session": 29
@@ -1924,7 +2767,10 @@
       "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
       "session_date": "2026-05-21",
       "session_duration_mins": 60,
-      "topics_discussed": ["agri_food", "finance"],
+      "topics_discussed": [
+        "agri_food",
+        "finance"
+      ],
       "student_rating": 4,
       "goals_set": true,
       "days_since_last_session": 41
@@ -1935,7 +2781,10 @@
       "mentor_id": "03d5a14a-5bb4-4d71-b9af-6626c88b597f",
       "session_date": "2026-06-05",
       "session_duration_mins": 45,
-      "topics_discussed": ["leadership", "agri_food"],
+      "topics_discussed": [
+        "leadership",
+        "agri_food"
+      ],
       "student_rating": 4,
       "goals_set": true,
       "days_since_last_session": 26
@@ -1946,7 +2795,10 @@
       "mentor_id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027",
       "session_date": "2026-06-11",
       "session_duration_mins": 45,
-      "topics_discussed": ["creative_tech", "entrepreneurship"],
+      "topics_discussed": [
+        "creative_tech",
+        "entrepreneurship"
+      ],
       "student_rating": 4,
       "goals_set": true,
       "days_since_last_session": 20
@@ -1957,7 +2809,10 @@
       "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
       "session_date": "2026-05-19",
       "session_duration_mins": 45,
-      "topics_discussed": ["design_ux", "climate_env"],
+      "topics_discussed": [
+        "design_ux",
+        "climate_env"
+      ],
       "student_rating": 3,
       "goals_set": false,
       "days_since_last_session": 43
@@ -1969,19 +2824,53 @@
       "title": "Mastercard Foundation Scholars Program",
       "type": "Scholarship",
       "org_name": "Google.org",
-      "eligible_countries": ["Ethiopia", "Kenya", "Ghana", "Rwanda"],
-      "eligible_fields": ["leadership", "social_impact"],
-      "eligible_career_stages": [2, 3, 4, 5, 6, 7],
+      "eligible_countries": [
+        "Ethiopia",
+        "Kenya",
+        "Ghana",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "leadership",
+        "social_impact"
+      ],
+      "eligible_career_stages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
       "deadline": "2026-08-31",
-      "interest_vector": [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
       "description": "Mastercard Foundation Scholars Program helps African youth grow in leadership, social_impact. Partners include ALU.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.014578068567782739, -0.004057920336537123, 0.01900901728239126, 0.044699418252723715,
-        0.5801080272360271, -0.0068716878550065435, 0.04634833247255463, 0.022523449422702235
+        0.014578068567782739,
+        -0.004057920336537123,
+        0.01900901728239126,
+        0.044699418252723715,
+        0.5801080272360271,
+        -0.0068716878550065435,
+        0.04634833247255463,
+        0.022523449422702235
       ]
     },
     {
@@ -1998,18 +2887,46 @@
         "Ethiopia",
         "Rwanda"
       ],
-      "eligible_fields": ["creative_tech", "data_ai"],
-      "eligible_career_stages": [1, 2, 3, 4, 7],
+      "eligible_fields": [
+        "creative_tech",
+        "data_ai"
+      ],
+      "eligible_career_stages": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
       "deadline": "2026-09-22",
-      "interest_vector": [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "interest_vector": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "description": "ALX Software Engineering Fellowship helps African youth grow in creative_tech, data_ai. Partners include Y Combinator.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.558704957913408, 0.004367046072592106, 0.5906719128831704, 0.05447914230290199,
-        0.02759784687318132, -0.016751788107436813, -0.02608763536046525, 0.014284058778585912
+        0.558704957913408,
+        0.004367046072592106,
+        0.5906719128831704,
+        0.05447914230290199,
+        0.02759784687318132,
+        -0.016751788107436813,
+        -0.02608763536046525,
+        0.014284058778585912
       ]
     },
     {
@@ -2017,19 +2934,52 @@
       "title": "British Council Creative Enterprise Fellowship",
       "type": "Fellowship",
       "org_name": "Ashoka",
-      "eligible_countries": ["Nigeria", "Kenya", "Senegal", "Rwanda"],
-      "eligible_fields": ["creative_tech", "entrepreneurship", "media_film"],
-      "eligible_career_stages": [1, 2, 4, 6],
+      "eligible_countries": [
+        "Nigeria",
+        "Kenya",
+        "Senegal",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "creative_tech",
+        "entrepreneurship",
+        "media_film"
+      ],
+      "eligible_career_stages": [
+        1,
+        2,
+        4,
+        6
+      ],
       "deadline": "2026-10-02",
-      "interest_vector": [1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+      "interest_vector": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "description": "British Council Creative Enterprise Fellowship helps African youth grow in creative_tech, entrepreneurship, media_film. Partners include Google.org.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.47748327665921936, 0.5376070665083856, 0.017443820707435137, -0.013863006374224105,
-        0.0155868273351729, 0.5169063640366754, 0.015325626044432283, -0.03870101530209778
+        0.47748327665921936,
+        0.5376070665083856,
+        0.017443820707435137,
+        -0.013863006374224105,
+        0.0155868273351729,
+        0.5169063640366754,
+        0.015325626044432283,
+        -0.03870101530209778
       ]
     },
     {
@@ -2037,19 +2987,55 @@
       "title": "ALU Entrepreneurial Leadership Internship",
       "type": "Internship",
       "org_name": "British Council",
-      "eligible_countries": ["Senegal", "Rwanda", "Kenya", "Ghana", "Uganda", "Nigeria"],
-      "eligible_fields": ["entrepreneurship", "leadership"],
-      "eligible_career_stages": [1, 2, 3, 4, 5, 7],
+      "eligible_countries": [
+        "Senegal",
+        "Rwanda",
+        "Kenya",
+        "Ghana",
+        "Uganda",
+        "Nigeria"
+      ],
+      "eligible_fields": [
+        "entrepreneurship",
+        "leadership"
+      ],
+      "eligible_career_stages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
       "deadline": "2026-10-18",
-      "interest_vector": [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+      "interest_vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
       "description": "ALU Entrepreneurial Leadership Internship helps African youth grow in entrepreneurship, leadership. Partners include Google.org.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        -0.0181709057696574, 0.5311372342077382, 0.046695913886985685, 0.02871735474210483,
-        -0.019569739695369046, 0.0640551627998282, 0.027919618375488495, -0.00923761161306777
+        -0.0181709057696574,
+        0.5311372342077382,
+        0.046695913886985685,
+        0.02871735474210483,
+        -0.019569739695369046,
+        0.0640551627998282,
+        0.027919618375488495,
+        -0.00923761161306777
       ]
     },
     {
@@ -2057,19 +3043,55 @@
       "title": "Google.org AI for Social Good Grant",
       "type": "Grant",
       "org_name": "Google.org",
-      "eligible_countries": ["Ghana", "Nigeria", "Ethiopia", "South Africa", "Rwanda", "Kenya"],
-      "eligible_fields": ["data_ai", "social_impact"],
-      "eligible_career_stages": [1, 2, 3, 4, 6, 7],
+      "eligible_countries": [
+        "Ghana",
+        "Nigeria",
+        "Ethiopia",
+        "South Africa",
+        "Rwanda",
+        "Kenya"
+      ],
+      "eligible_fields": [
+        "data_ai",
+        "social_impact"
+      ],
+      "eligible_career_stages": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
       "deadline": "2026-09-30",
-      "interest_vector": [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "description": "Google.org AI for Social Good Grant helps African youth grow in data_ai, social_impact. Partners include ALU.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.015403281290767621, -0.015976127676341753, 0.5647293760222987, -0.08614145956376383,
-        0.5989909309946942, 0.0531512542780413, 0.04982250324959204, -0.013708685273022846
+        0.015403281290767621,
+        -0.015976127676341753,
+        0.5647293760222987,
+        -0.08614145956376383,
+        0.5989909309946942,
+        0.0531512542780413,
+        0.04982250324959204,
+        -0.013708685273022846
       ]
     },
     {
@@ -2077,19 +3099,50 @@
       "title": "Ashoka Young Changemakers",
       "type": "Leadership Program",
       "org_name": "Mastercard Foundation",
-      "eligible_countries": ["Senegal", "Kenya", "Ghana", "Rwanda"],
-      "eligible_fields": ["social_impact", "leadership"],
-      "eligible_career_stages": [3, 4, 7],
+      "eligible_countries": [
+        "Senegal",
+        "Kenya",
+        "Ghana",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "social_impact",
+        "leadership"
+      ],
+      "eligible_career_stages": [
+        3,
+        4,
+        7
+      ],
       "deadline": "2026-09-07",
-      "interest_vector": [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
       "description": "Ashoka Young Changemakers helps African youth grow in social_impact, leadership. Partners include British Council.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        -0.0540966799249464, 0.020441300264709934, -0.029319376377925782, 0.006538908841915546,
-        0.6033116249304108, -0.025127903169725237, -0.06915584668807997, -0.007816844505883236
+        -0.0540966799249464,
+        0.020441300264709934,
+        -0.029319376377925782,
+        0.006538908841915546,
+        0.6033116249304108,
+        -0.025127903169725237,
+        -0.06915584668807997,
+        -0.007816844505883236
       ]
     },
     {
@@ -2097,19 +3150,52 @@
       "title": "Climate Adaptation Fellowship East Africa",
       "type": "Fellowship",
       "org_name": "UNAI",
-      "eligible_countries": ["South Africa", "Senegal", "Ghana", "Nigeria", "Ethiopia", "Rwanda"],
-      "eligible_fields": ["climate_env", "agri_food"],
-      "eligible_career_stages": [1, 4, 5],
+      "eligible_countries": [
+        "South Africa",
+        "Senegal",
+        "Ghana",
+        "Nigeria",
+        "Ethiopia",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "climate_env",
+        "agri_food"
+      ],
+      "eligible_career_stages": [
+        1,
+        4,
+        5
+      ],
       "deadline": "2026-08-17",
-      "interest_vector": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
       "description": "Climate Adaptation Fellowship East Africa helps African youth grow in climate_env, agri_food. Partners include Y Combinator.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.05648044346095603, 0.08801545351107228, 0.017171190898995423, -0.005184744612438055,
-        0.015127327680141444, 0.02512200672232492, -0.009075384445433137, 0.6168378294524665
+        0.05648044346095603,
+        0.08801545351107228,
+        0.017171190898995423,
+        -0.005184744612438055,
+        0.015127327680141444,
+        0.02512200672232492,
+        -0.009075384445433137,
+        0.6168378294524665
       ]
     },
     {
@@ -2117,19 +3203,51 @@
       "title": "Pan-African Health Innovation Bootcamp",
       "type": "Bootcamp",
       "org_name": "British Council",
-      "eligible_countries": ["Kenya", "Senegal", "South Africa", "Rwanda"],
-      "eligible_fields": ["health", "data_ai"],
-      "eligible_career_stages": [1, 2, 5, 7],
+      "eligible_countries": [
+        "Kenya",
+        "Senegal",
+        "South Africa",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "health",
+        "data_ai"
+      ],
+      "eligible_career_stages": [
+        1,
+        2,
+        5,
+        7
+      ],
       "deadline": "2026-09-10",
-      "interest_vector": [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
       "description": "Pan-African Health Innovation Bootcamp helps African youth grow in health, data_ai. Partners include Google.org.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.021875198234628114, 0.01770358970195171, 0.5487183287682008, -0.007055217510543269,
-        -0.0011361886503571488, -0.003887668907466416, 0.009650320022517565, 0.04137407565287239
+        0.021875198234628114,
+        0.01770358970195171,
+        0.5487183287682008,
+        -0.007055217510543269,
+        -0.0011361886503571488,
+        -0.003887668907466416,
+        0.009650320022517565,
+        0.04137407565287239
       ]
     },
     {
@@ -2146,18 +3264,44 @@
         "South Africa",
         "Rwanda"
       ],
-      "eligible_fields": ["design_ux", "creative_tech"],
-      "eligible_career_stages": [2, 3, 7],
+      "eligible_fields": [
+        "design_ux",
+        "creative_tech"
+      ],
+      "eligible_career_stages": [
+        2,
+        3,
+        7
+      ],
       "deadline": "2026-08-24",
-      "interest_vector": [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "interest_vector": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "description": "Design for Africa UX Residency helps African youth grow in design_ux, creative_tech. Partners include Mastercard Foundation.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.5607589902265695, 0.04529569022208475, -0.02034690388989088, 0.6056071305284698,
-        0.021516104231532454, 0.015350814414638014, 0.0064958509503435105, -0.006898445140567659
+        0.5607589902265695,
+        0.04529569022208475,
+        -0.02034690388989088,
+        0.6056071305284698,
+        0.021516104231532454,
+        0.015350814414638014,
+        0.0064958509503435105,
+        -0.006898445140567659
       ]
     },
     {
@@ -2165,19 +3309,52 @@
       "title": "AgriTech Supply Chain Accelerator",
       "type": "Fellowship",
       "org_name": "ALU",
-      "eligible_countries": ["Senegal", "Ghana", "South Africa", "Kenya", "Rwanda"],
-      "eligible_fields": ["agri_food", "entrepreneurship", "finance"],
-      "eligible_career_stages": [3, 5, 6],
+      "eligible_countries": [
+        "Senegal",
+        "Ghana",
+        "South Africa",
+        "Kenya",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "agri_food",
+        "entrepreneurship",
+        "finance"
+      ],
+      "eligible_career_stages": [
+        3,
+        5,
+        6
+      ],
       "deadline": "2026-11-22",
-      "interest_vector": [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
+      "interest_vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
       "description": "AgriTech Supply Chain Accelerator helps African youth grow in agri_food, entrepreneurship, finance. Partners include British Council.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.027539438805629864, 0.4963636369116356, 0.0004760107582941292, -0.0296359317825742,
-        0.042891768928274565, 0.04799019306237877, 0.0039634254349014, 0.025889277343524985
+        0.027539438805629864,
+        0.4963636369116356,
+        0.0004760107582941292,
+        -0.0296359317825742,
+        0.042891768928274565,
+        0.04799019306237877,
+        0.0039634254349014,
+        0.025889277343524985
       ]
     },
     {
@@ -2185,19 +3362,51 @@
       "title": "UNAI SDG Youth Ambassadors",
       "type": "Leadership Program",
       "org_name": "Google.org",
-      "eligible_countries": ["South Africa", "Uganda", "Ghana", "Rwanda"],
-      "eligible_fields": ["leadership", "social_impact", "climate_env"],
-      "eligible_career_stages": [3, 5, 6],
+      "eligible_countries": [
+        "South Africa",
+        "Uganda",
+        "Ghana",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "leadership",
+        "social_impact",
+        "climate_env"
+      ],
+      "eligible_career_stages": [
+        3,
+        5,
+        6
+      ],
       "deadline": "2026-08-12",
-      "interest_vector": [0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
       "description": "UNAI SDG Youth Ambassadors helps African youth grow in leadership, social_impact, climate_env. Partners include ALX.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        -0.015409544130101415, -0.017804188079178773, 0.024554246402788537, -0.034408497366063835,
-        0.5420298183360238, 0.02077512801432016, 0.0273629297781575, 0.4900632487235693
+        -0.015409544130101415,
+        -0.017804188079178773,
+        0.024554246402788537,
+        -0.034408497366063835,
+        0.5420298183360238,
+        0.02077512801432016,
+        0.0273629297781575,
+        0.4900632487235693
       ]
     },
     {
@@ -2214,18 +3423,47 @@
         "Uganda",
         "Rwanda"
       ],
-      "eligible_fields": ["finance", "design_ux", "data_ai"],
-      "eligible_career_stages": [2, 4, 5, 6, 7],
+      "eligible_fields": [
+        "finance",
+        "design_ux",
+        "data_ai"
+      ],
+      "eligible_career_stages": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
       "deadline": "2026-11-24",
-      "interest_vector": [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+      "interest_vector": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
       "description": "Fintech Product Fellowship Lagos helps African youth grow in finance, design_ux, data_ai. Partners include Ashoka.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        -0.03457281631859523, 0.01308755159751826, 0.5505060666306743, 0.5140274110003524,
-        0.006962415520396121, 0.00021538312837626278, -0.03954396522075296, 0.0341239810176379
+        -0.03457281631859523,
+        0.01308755159751826,
+        0.5505060666306743,
+        0.5140274110003524,
+        0.006962415520396121,
+        0.00021538312837626278,
+        -0.03954396522075296,
+        0.0341239810176379
       ]
     },
     {
@@ -2233,19 +3471,55 @@
       "title": "Documentary Storytelling Lab",
       "type": "Bootcamp",
       "org_name": "ALU",
-      "eligible_countries": ["Ghana", "Senegal", "Rwanda", "Nigeria", "Ethiopia"],
-      "eligible_fields": ["media_film", "music_arts", "social_impact"],
-      "eligible_career_stages": [1, 2, 3, 4, 5, 7],
+      "eligible_countries": [
+        "Ghana",
+        "Senegal",
+        "Rwanda",
+        "Nigeria",
+        "Ethiopia"
+      ],
+      "eligible_fields": [
+        "media_film",
+        "music_arts",
+        "social_impact"
+      ],
+      "eligible_career_stages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
       "deadline": "2026-11-27",
-      "interest_vector": [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "description": "Documentary Storytelling Lab helps African youth grow in media_film, music_arts, social_impact. Partners include UNAI.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.016975525056265303, -0.020748262325442093, 0.0016778442893799735, -0.049958693720360436,
-        0.5303218320087894, 0.48198581758276043, 0.4960400049631402, -0.00765854047096531
+        0.016975525056265303,
+        -0.020748262325442093,
+        0.0016778442893799735,
+        -0.049958693720360436,
+        0.5303218320087894,
+        0.48198581758276043,
+        0.4960400049631402,
+        -0.00765854047096531
       ]
     },
     {
@@ -2253,19 +3527,53 @@
       "title": "Suspicious \"Guaranteed Visa Scholarship\" (flagged)",
       "type": "Internship",
       "org_name": "Google.org",
-      "eligible_countries": ["Ethiopia", "Kenya", "Nigeria", "South Africa", "Rwanda"],
-      "eligible_fields": ["climate_env", "finance"],
-      "eligible_career_stages": [1, 3, 5, 6, 7],
+      "eligible_countries": [
+        "Ethiopia",
+        "Kenya",
+        "Nigeria",
+        "South Africa",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "climate_env",
+        "finance"
+      ],
+      "eligible_career_stages": [
+        1,
+        3,
+        5,
+        6,
+        7
+      ],
       "deadline": "2026-09-04",
-      "interest_vector": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0],
+      "interest_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
       "description": "Renewable Energy Finance Internship helps African youth grow in climate_env, finance. Partners include Google.org.",
       "is_verified": false,
       "is_scam_flag": true,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        -0.003533138333793076, 0.0174428892633804, -0.020231207970295532, -0.0015069411044763446,
-        0.021894274864341833, 0.09580249933993723, 0.024868011443400805, 0.5894173183305914
+        -0.003533138333793076,
+        0.0174428892633804,
+        -0.020231207970295532,
+        -0.0015069411044763446,
+        0.021894274864341833,
+        0.09580249933993723,
+        0.024868011443400805,
+        0.5894173183305914
       ]
     },
     {
@@ -2273,19 +3581,55 @@
       "title": "JointHub CreativeTech Create With AI Bootcamp",
       "type": "Bootcamp",
       "org_name": "Y Combinator",
-      "eligible_countries": ["Senegal", "Ghana", "Uganda", "Kenya", "Rwanda"],
-      "eligible_fields": ["creative_tech", "data_ai", "design_ux"],
-      "eligible_career_stages": [1, 2, 3, 4, 5, 6],
+      "eligible_countries": [
+        "Senegal",
+        "Ghana",
+        "Uganda",
+        "Kenya",
+        "Rwanda"
+      ],
+      "eligible_fields": [
+        "creative_tech",
+        "data_ai",
+        "design_ux"
+      ],
+      "eligible_career_stages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "deadline": "2026-11-07",
-      "interest_vector": [1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "interest_vector": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "description": "JointHub CreativeTech Create With AI Bootcamp helps African youth grow in creative_tech, data_ai, design_ux. Partners include ALX.",
       "is_verified": true,
       "is_scam_flag": false,
       "created_at": "2026-03-01T00:00:00Z",
       "description_embedding_dim": 384,
       "description_embedding_preview": [
-        0.5509561054614469, -0.0549060252331551, 0.5030352230255923, 0.4745777884522381,
-        -0.014313710510339122, -0.01512791551005003, -0.022182008792185452, 0.04111728845286709
+        0.5509561054614469,
+        -0.0549060252331551,
+        0.5030352230255923,
+        0.4745777884522381,
+        -0.014313710510339122,
+        -0.01512791551005003,
+        -0.022182008792185452,
+        0.04111728845286709
       ]
     }
   ],
@@ -2589,7 +3933,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.5923,
-        "components": { "tag_cosine": 0.7071, "tfidf": 0.2462, "semantic": 0.6166 },
+        "components": {
+          "tag_cosine": 0.7071,
+          "tfidf": 0.2462,
+          "semantic": 0.6166
+        },
         "is_verified": true
       },
       {
@@ -2599,7 +3947,11 @@
         "type": "Fellowship",
         "deadline": "2026-10-02",
         "match_score": 0.5356,
-        "components": { "tag_cosine": 0.5774, "tfidf": 0.4545, "semantic": 0.5084 },
+        "components": {
+          "tag_cosine": 0.5774,
+          "tfidf": 0.4545,
+          "semantic": 0.5084
+        },
         "is_verified": true
       },
       {
@@ -2609,7 +3961,11 @@
         "type": "Grant",
         "deadline": "2026-09-30",
         "match_score": 0.3754,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.5848, "semantic": 0.2561 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.5848,
+          "semantic": 0.2561
+        },
         "is_verified": true
       },
       {
@@ -2619,7 +3975,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3601,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.4252, "semantic": 0.3226 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.4252,
+          "semantic": 0.3226
+        },
         "is_verified": true
       },
       {
@@ -2629,7 +3989,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.3279,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.3411, "semantic": 0.2611 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.3411,
+          "semantic": 0.2611
+        },
         "is_verified": true
       }
     ],
@@ -2641,7 +4005,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.6267,
-        "components": { "tag_cosine": 0.8165, "tfidf": 0.0, "semantic": 0.7104 },
+        "components": {
+          "tag_cosine": 0.8165,
+          "tfidf": 0.0,
+          "semantic": 0.7104
+        },
         "is_verified": true
       },
       {
@@ -2651,7 +4019,11 @@
         "type": "Fellowship",
         "deadline": "2026-08-17",
         "match_score": 0.407,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.1326, "semantic": 0.422 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.1326,
+          "semantic": 0.422
+        },
         "is_verified": true
       },
       {
@@ -2661,7 +4033,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.3013,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3072 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3072
+        },
         "is_verified": true
       },
       {
@@ -2671,7 +4047,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.01,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": 0.0399 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": 0.0399
+        },
         "is_verified": true
       },
       {
@@ -2681,7 +4061,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.0036,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": 0.0146 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": 0.0146
+        },
         "is_verified": true
       }
     ],
@@ -2693,7 +4077,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.3802,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.0, "semantic": 0.4209 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.0,
+          "semantic": 0.4209
+        },
         "is_verified": true
       },
       {
@@ -2703,7 +4091,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.3208,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3849 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3849
+        },
         "is_verified": true
       },
       {
@@ -2713,7 +4105,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-27",
         "match_score": 0.3061,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3261 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3261
+        },
         "is_verified": true
       },
       {
@@ -2723,7 +4119,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.0352,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.164, "semantic": 0.0094 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.164,
+          "semantic": 0.0094
+        },
         "is_verified": true
       },
       {
@@ -2733,7 +4133,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.0024,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": 0.0098 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": 0.0098
+        },
         "is_verified": true
       }
     ],
@@ -2745,7 +4149,11 @@
         "type": "Grant",
         "deadline": "2026-09-30",
         "match_score": 0.4345,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.2842, "semantic": 0.4108 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.2842,
+          "semantic": 0.4108
+        },
         "is_verified": true
       },
       {
@@ -2755,7 +4163,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.3968,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.0714, "semantic": 0.4301 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.0714,
+          "semantic": 0.4301
+        },
         "is_verified": true
       },
       {
@@ -2765,7 +4177,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.0327,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.1148, "semantic": 0.0388 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.1148,
+          "semantic": 0.0388
+        },
         "is_verified": true
       },
       {
@@ -2775,7 +4191,11 @@
         "type": "Fellowship",
         "deadline": "2026-08-17",
         "match_score": 0.0269,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.1156, "semantic": 0.0153 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.1156,
+          "semantic": 0.0153
+        },
         "is_verified": true
       }
     ],
@@ -2787,7 +4207,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.2817,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.0, "semantic": 0.3489 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.0,
+          "semantic": 0.3489
+        },
         "is_verified": true
       },
       {
@@ -2797,7 +4221,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.2711,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.0, "semantic": 0.3067 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.0,
+          "semantic": 0.3067
+        },
         "is_verified": true
       },
       {
@@ -2807,7 +4235,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.2255,
-        "components": { "tag_cosine": 0.2887, "tfidf": 0.0, "semantic": 0.2669 },
+        "components": {
+          "tag_cosine": 0.2887,
+          "tfidf": 0.0,
+          "semantic": 0.2669
+        },
         "is_verified": true
       },
       {
@@ -2817,7 +4249,11 @@
         "type": "Leadership Program",
         "deadline": "2026-08-12",
         "match_score": 0.2242,
-        "components": { "tag_cosine": 0.2887, "tfidf": 0.0, "semantic": 0.2617 },
+        "components": {
+          "tag_cosine": 0.2887,
+          "tfidf": 0.0,
+          "semantic": 0.2617
+        },
         "is_verified": true
       },
       {
@@ -2827,7 +4263,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.2152,
-        "components": { "tag_cosine": 0.2887, "tfidf": 0.0, "semantic": 0.2258 },
+        "components": {
+          "tag_cosine": 0.2887,
+          "tfidf": 0.0,
+          "semantic": 0.2258
+        },
         "is_verified": true
       }
     ],
@@ -2839,7 +4279,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.5094,
-        "components": { "tag_cosine": 0.6667, "tfidf": 0.0, "semantic": 0.5708 },
+        "components": {
+          "tag_cosine": 0.6667,
+          "tfidf": 0.0,
+          "semantic": 0.5708
+        },
         "is_verified": true
       },
       {
@@ -2849,7 +4293,11 @@
         "type": "Fellowship",
         "deadline": "2026-08-17",
         "match_score": 0.3154,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3633 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3633
+        },
         "is_verified": true
       },
       {
@@ -2859,7 +4307,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3111,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3462 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3462
+        },
         "is_verified": true
       },
       {
@@ -2869,7 +4321,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.2565,
-        "components": { "tag_cosine": 0.3333, "tfidf": 0.0, "semantic": 0.2928 },
+        "components": {
+          "tag_cosine": 0.3333,
+          "tfidf": 0.0,
+          "semantic": 0.2928
+        },
         "is_verified": true
       },
       {
@@ -2879,7 +4335,11 @@
         "type": "Fellowship",
         "deadline": "2026-10-02",
         "match_score": 0.2525,
-        "components": { "tag_cosine": 0.3333, "tfidf": 0.0, "semantic": 0.2765 },
+        "components": {
+          "tag_cosine": 0.3333,
+          "tfidf": 0.0,
+          "semantic": 0.2765
+        },
         "is_verified": true
       }
     ],
@@ -2891,7 +4351,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.5181,
-        "components": { "tag_cosine": 0.6667, "tfidf": 0.0, "semantic": 0.6057 },
+        "components": {
+          "tag_cosine": 0.6667,
+          "tfidf": 0.0,
+          "semantic": 0.6057
+        },
         "is_verified": true
       },
       {
@@ -2901,7 +4365,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.5107,
-        "components": { "tag_cosine": 0.6667, "tfidf": 0.0, "semantic": 0.5763 },
+        "components": {
+          "tag_cosine": 0.6667,
+          "tfidf": 0.0,
+          "semantic": 0.5763
+        },
         "is_verified": true
       },
       {
@@ -2911,7 +4379,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.3138,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3571 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3571
+        },
         "is_verified": true
       },
       {
@@ -2921,7 +4393,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3121,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3503 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3503
+        },
         "is_verified": true
       },
       {
@@ -2931,7 +4407,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.0006,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": 0.0025 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": 0.0025
+        },
         "is_verified": true
       }
     ],
@@ -2943,7 +4423,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.673,
-        "components": { "tag_cosine": 0.8165, "tfidf": 0.2231, "semantic": 0.7174 },
+        "components": {
+          "tag_cosine": 0.8165,
+          "tfidf": 0.2231,
+          "semantic": 0.7174
+        },
         "is_verified": true
       },
       {
@@ -2953,7 +4437,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3855,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.0, "semantic": 0.4419 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.0,
+          "semantic": 0.4419
+        },
         "is_verified": true
       },
       {
@@ -2963,7 +4451,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.3752,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.0, "semantic": 0.4007 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.0,
+          "semantic": 0.4007
+        },
         "is_verified": true
       },
       {
@@ -2973,7 +4465,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.3193,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.379 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.379
+        },
         "is_verified": true
       },
       {
@@ -2983,7 +4479,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.3122,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3507 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3507
+        },
         "is_verified": true
       }
     ],
@@ -2995,7 +4495,11 @@
         "type": "Fellowship",
         "deadline": "2026-10-02",
         "match_score": 0.4491,
-        "components": { "tag_cosine": 0.5774, "tfidf": 0.0, "semantic": 0.5261 },
+        "components": {
+          "tag_cosine": 0.5774,
+          "tfidf": 0.0,
+          "semantic": 0.5261
+        },
         "is_verified": true
       },
       {
@@ -3005,7 +4509,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-27",
         "match_score": 0.445,
-        "components": { "tag_cosine": 0.5774, "tfidf": 0.0, "semantic": 0.51 },
+        "components": {
+          "tag_cosine": 0.5774,
+          "tfidf": 0.0,
+          "semantic": 0.51
+        },
         "is_verified": true
       },
       {
@@ -3015,7 +4523,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.2722,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.0, "semantic": 0.311 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.0,
+          "semantic": 0.311
+        },
         "is_verified": true
       },
       {
@@ -3025,7 +4537,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.2575,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.0, "semantic": 0.2523 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.0,
+          "semantic": 0.2523
+        },
         "is_verified": true
       },
       {
@@ -3035,7 +4551,11 @@
         "type": "Fellowship",
         "deadline": "2026-08-17",
         "match_score": 0.0873,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.3521, "semantic": 0.0674 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.3521,
+          "semantic": 0.0674
+        },
         "is_verified": true
       }
     ],
@@ -3047,7 +4567,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.4727,
-        "components": { "tag_cosine": 0.5774, "tfidf": 0.1737, "semantic": 0.4815 },
+        "components": {
+          "tag_cosine": 0.5774,
+          "tfidf": 0.1737,
+          "semantic": 0.4815
+        },
         "is_verified": true
       },
       {
@@ -3057,7 +4581,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3253,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.2281, "semantic": 0.3408 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.2281,
+          "semantic": 0.3408
+        },
         "is_verified": true
       },
       {
@@ -3067,7 +4595,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.3123,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.106, "semantic": 0.3867 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.106,
+          "semantic": 0.3867
+        },
         "is_verified": true
       },
       {
@@ -3077,7 +4609,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.2964,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.1321, "semantic": 0.3023 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.1321,
+          "semantic": 0.3023
+        },
         "is_verified": true
       },
       {
@@ -3087,7 +4623,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.2898,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.1641, "semantic": 0.2499 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.1641,
+          "semantic": 0.2499
+        },
         "is_verified": true
       }
     ],
@@ -3099,7 +4639,11 @@
         "type": "Fellowship",
         "deadline": "2026-08-17",
         "match_score": 0.4491,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.2477, "semantic": 0.4984 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.2477,
+          "semantic": 0.4984
+        },
         "is_verified": true
       },
       {
@@ -3109,7 +4653,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.4355,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.3411, "semantic": 0.369 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.3411,
+          "semantic": 0.369
+        },
         "is_verified": true
       },
       {
@@ -3119,7 +4667,11 @@
         "type": "Fellowship",
         "deadline": "2026-10-02",
         "match_score": 0.4036,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.4545, "semantic": 0.3528 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.4545,
+          "semantic": 0.3528
+        },
         "is_verified": true
       },
       {
@@ -3129,7 +4681,11 @@
         "type": "Grant",
         "deadline": "2026-09-30",
         "match_score": 0.1117,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.5848, "semantic": -0.021 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.5848,
+          "semantic": -0.021
+        },
         "is_verified": true
       },
       {
@@ -3139,7 +4695,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.0883,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.4252, "semantic": 0.0132 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.4252,
+          "semantic": 0.0132
+        },
         "is_verified": true
       }
     ],
@@ -3151,7 +4711,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.2776,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.0, "semantic": 0.3324 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.0,
+          "semantic": 0.3324
+        },
         "is_verified": true
       },
       {
@@ -3161,7 +4725,11 @@
         "type": "Fellowship",
         "deadline": "2026-10-02",
         "match_score": 0.2161,
-        "components": { "tag_cosine": 0.2887, "tfidf": 0.0, "semantic": 0.2292 },
+        "components": {
+          "tag_cosine": 0.2887,
+          "tfidf": 0.0,
+          "semantic": 0.2292
+        },
         "is_verified": true
       },
       {
@@ -3171,7 +4739,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.0099,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": 0.0398 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": 0.0398
+        },
         "is_verified": true
       },
       {
@@ -3181,7 +4753,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": -0.0008,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": -0.0033 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": -0.0033
+        },
         "is_verified": true
       },
       {
@@ -3191,7 +4767,11 @@
         "type": "Grant",
         "deadline": "2026-09-30",
         "match_score": -0.0011,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": -0.0043 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": -0.0043
+        },
         "is_verified": true
       }
     ],
@@ -3203,7 +4783,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.6267,
-        "components": { "tag_cosine": 0.8165, "tfidf": 0.0, "semantic": 0.7104 },
+        "components": {
+          "tag_cosine": 0.8165,
+          "tfidf": 0.0,
+          "semantic": 0.7104
+        },
         "is_verified": true
       },
       {
@@ -3213,7 +4797,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.3341,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.164, "semantic": 0.3072 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.164,
+          "semantic": 0.3072
+        },
         "is_verified": true
       },
       {
@@ -3223,7 +4811,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.0818,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.4848, "semantic": -0.0605 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.4848,
+          "semantic": -0.0605
+        },
         "is_verified": true
       },
       {
@@ -3233,7 +4825,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.0036,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": 0.0146 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": 0.0146
+        },
         "is_verified": true
       },
       {
@@ -3243,7 +4839,11 @@
         "type": "Leadership Program",
         "deadline": "2026-08-12",
         "match_score": -0.0001,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": -0.0005 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": -0.0005
+        },
         "is_verified": true
       }
     ],
@@ -3255,7 +4855,11 @@
         "type": "Scholarship",
         "deadline": "2026-08-31",
         "match_score": 0.4563,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.3856, "semantic": 0.4167 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.3856,
+          "semantic": 0.4167
+        },
         "is_verified": true
       },
       {
@@ -3265,7 +4869,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-27",
         "match_score": 0.0642,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.3856, "semantic": -0.0515 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.3856,
+          "semantic": -0.0515
+        },
         "is_verified": true
       },
       {
@@ -3275,7 +4883,11 @@
         "type": "Grant",
         "deadline": "2026-09-30",
         "match_score": 0.0609,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.2842, "semantic": 0.0163 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.2842,
+          "semantic": 0.0163
+        },
         "is_verified": true
       },
       {
@@ -3285,7 +4897,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.0467,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.1984, "semantic": 0.028 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.1984,
+          "semantic": 0.028
+        },
         "is_verified": true
       },
       {
@@ -3295,7 +4911,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.0182,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.1062, "semantic": -0.012 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.1062,
+          "semantic": -0.012
+        },
         "is_verified": true
       }
     ],
@@ -3307,7 +4927,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.5158,
-        "components": { "tag_cosine": 0.6667, "tfidf": 0.0, "semantic": 0.5965 },
+        "components": {
+          "tag_cosine": 0.6667,
+          "tfidf": 0.0,
+          "semantic": 0.5965
+        },
         "is_verified": true
       },
       {
@@ -3317,7 +4941,11 @@
         "type": "Fellowship",
         "deadline": "2026-10-02",
         "match_score": 0.5154,
-        "components": { "tag_cosine": 0.6667, "tfidf": 0.0, "semantic": 0.5949 },
+        "components": {
+          "tag_cosine": 0.6667,
+          "tfidf": 0.0,
+          "semantic": 0.5949
+        },
         "is_verified": true
       },
       {
@@ -3327,7 +4955,11 @@
         "type": "Fellowship",
         "deadline": "2026-08-17",
         "match_score": 0.3288,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.4171 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.4171
+        },
         "is_verified": true
       },
       {
@@ -3337,7 +4969,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3038,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3172 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3172
+        },
         "is_verified": true
       },
       {
@@ -3347,7 +4983,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.2918,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.2691 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.2691
+        },
         "is_verified": true
       }
     ],
@@ -3359,7 +4999,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.3175,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3718 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3718
+        },
         "is_verified": true
       },
       {
@@ -3369,7 +5013,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.304,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3179 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3179
+        },
         "is_verified": true
       },
       {
@@ -3379,7 +5027,11 @@
         "type": "Fellowship",
         "deadline": "2026-10-02",
         "match_score": 0.2533,
-        "components": { "tag_cosine": 0.3333, "tfidf": 0.0, "semantic": 0.28 },
+        "components": {
+          "tag_cosine": 0.3333,
+          "tfidf": 0.0,
+          "semantic": 0.28
+        },
         "is_verified": true
       },
       {
@@ -3389,7 +5041,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.2498,
-        "components": { "tag_cosine": 0.3333, "tfidf": 0.0, "semantic": 0.266 },
+        "components": {
+          "tag_cosine": 0.3333,
+          "tfidf": 0.0,
+          "semantic": 0.266
+        },
         "is_verified": true
       },
       {
@@ -3399,7 +5055,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.0106,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": 0.0422 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": 0.0422
+        },
         "is_verified": true
       }
     ],
@@ -3411,7 +5071,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3748,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.0, "semantic": 0.3992 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.0,
+          "semantic": 0.3992
+        },
         "is_verified": true
       },
       {
@@ -3421,7 +5085,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.3737,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.0, "semantic": 0.3948 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.0,
+          "semantic": 0.3948
+        },
         "is_verified": true
       },
       {
@@ -3431,7 +5099,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.3149,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3613 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3613
+        },
         "is_verified": true
       },
       {
@@ -3441,7 +5113,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-27",
         "match_score": 0.3125,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3519 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3519
+        },
         "is_verified": true
       },
       {
@@ -3451,7 +5127,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.3095,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.34 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.34
+        },
         "is_verified": true
       }
     ],
@@ -3463,7 +5143,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.6472,
-        "components": { "tag_cosine": 0.8165, "tfidf": 0.1459, "semantic": 0.6757 },
+        "components": {
+          "tag_cosine": 0.8165,
+          "tfidf": 0.1459,
+          "semantic": 0.6757
+        },
         "is_verified": true
       },
       {
@@ -3473,7 +5157,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.5148,
-        "components": { "tag_cosine": 0.6667, "tfidf": 0.0, "semantic": 0.5924 },
+        "components": {
+          "tag_cosine": 0.6667,
+          "tfidf": 0.0,
+          "semantic": 0.5924
+        },
         "is_verified": true
       },
       {
@@ -3483,7 +5171,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3207,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3847 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3847
+        },
         "is_verified": true
       },
       {
@@ -3493,7 +5185,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.3176,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3721 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3721
+        },
         "is_verified": true
       },
       {
@@ -3503,7 +5199,11 @@
         "type": "Fellowship",
         "deadline": "2026-10-02",
         "match_score": 0.301,
-        "components": { "tag_cosine": 0.3333, "tfidf": 0.258, "semantic": 0.2641 },
+        "components": {
+          "tag_cosine": 0.3333,
+          "tfidf": 0.258,
+          "semantic": 0.2641
+        },
         "is_verified": true
       }
     ],
@@ -3515,7 +5215,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.4836,
-        "components": { "tag_cosine": 0.5774, "tfidf": 0.2266, "semantic": 0.4831 },
+        "components": {
+          "tag_cosine": 0.5774,
+          "tfidf": 0.2266,
+          "semantic": 0.4831
+        },
         "is_verified": true
       },
       {
@@ -3525,7 +5229,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.4768,
-        "components": { "tag_cosine": 0.5774, "tfidf": 0.2017, "semantic": 0.4758 },
+        "components": {
+          "tag_cosine": 0.5774,
+          "tfidf": 0.2017,
+          "semantic": 0.4758
+        },
         "is_verified": true
       },
       {
@@ -3535,7 +5243,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.2698,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.0, "semantic": 0.3014 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.0,
+          "semantic": 0.3014
+        },
         "is_verified": true
       },
       {
@@ -3545,7 +5257,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.263,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.0, "semantic": 0.2741 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.0,
+          "semantic": 0.2741
+        },
         "is_verified": true
       },
       {
@@ -3555,7 +5271,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.2126,
-        "components": { "tag_cosine": 0.2887, "tfidf": 0.0, "semantic": 0.2152 },
+        "components": {
+          "tag_cosine": 0.2887,
+          "tfidf": 0.0,
+          "semantic": 0.2152
+        },
         "is_verified": true
       }
     ],
@@ -3567,7 +5287,11 @@
         "type": "Leadership Program",
         "deadline": "2026-08-12",
         "match_score": 0.351,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.129, "semantic": 0.4026 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.129,
+          "semantic": 0.4026
+        },
         "is_verified": true
       },
       {
@@ -3577,7 +5301,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.0459,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.2281, "semantic": 0.0011 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.2281,
+          "semantic": 0.0011
+        },
         "is_verified": true
       },
       {
@@ -3587,7 +5315,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.0314,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.1321, "semantic": 0.0198 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.1321,
+          "semantic": 0.0198
+        },
         "is_verified": true
       },
       {
@@ -3597,7 +5329,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.0227,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.106, "semantic": 0.0059 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.106,
+          "semantic": 0.0059
+        },
         "is_verified": true
       },
       {
@@ -3607,7 +5343,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.0187,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.1222, "semantic": -0.023 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.1222,
+          "semantic": -0.023
+        },
         "is_verified": true
       }
     ],
@@ -3619,7 +5359,11 @@
         "type": "Grant",
         "deadline": "2026-09-30",
         "match_score": 0.6383,
-        "components": { "tag_cosine": 0.7071, "tfidf": 0.5848, "semantic": 0.5298 },
+        "components": {
+          "tag_cosine": 0.7071,
+          "tfidf": 0.5848,
+          "semantic": 0.5298
+        },
         "is_verified": true
       },
       {
@@ -3629,7 +5373,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.6017,
-        "components": { "tag_cosine": 0.7071, "tfidf": 0.3455, "semantic": 0.575 },
+        "components": {
+          "tag_cosine": 0.7071,
+          "tfidf": 0.3455,
+          "semantic": 0.575
+        },
         "is_verified": true
       },
       {
@@ -3639,7 +5387,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-07",
         "match_score": 0.5522,
-        "components": { "tag_cosine": 0.5774, "tfidf": 0.5586, "semantic": 0.4919 },
+        "components": {
+          "tag_cosine": 0.5774,
+          "tfidf": 0.5586,
+          "semantic": 0.4919
+        },
         "is_verified": true
       },
       {
@@ -3649,7 +5401,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.4951,
-        "components": { "tag_cosine": 0.5774, "tfidf": 0.2277, "semantic": 0.5281 },
+        "components": {
+          "tag_cosine": 0.5774,
+          "tfidf": 0.2277,
+          "semantic": 0.5281
+        },
         "is_verified": true
       },
       {
@@ -3659,7 +5415,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3588,
-        "components": { "tag_cosine": 0.3536, "tfidf": 0.4252, "semantic": 0.3172 },
+        "components": {
+          "tag_cosine": 0.3536,
+          "tfidf": 0.4252,
+          "semantic": 0.3172
+        },
         "is_verified": true
       }
     ],
@@ -3671,7 +5431,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.515,
-        "components": { "tag_cosine": 0.6667, "tfidf": 0.0, "semantic": 0.5933 },
+        "components": {
+          "tag_cosine": 0.6667,
+          "tfidf": 0.0,
+          "semantic": 0.5933
+        },
         "is_verified": true
       },
       {
@@ -3681,7 +5445,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.5099,
-        "components": { "tag_cosine": 0.6667, "tfidf": 0.0, "semantic": 0.5729 },
+        "components": {
+          "tag_cosine": 0.6667,
+          "tfidf": 0.0,
+          "semantic": 0.5729
+        },
         "is_verified": true
       },
       {
@@ -3691,7 +5459,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.3154,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3633 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3633
+        },
         "is_verified": true
       },
       {
@@ -3701,7 +5473,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.3089,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3374 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3374
+        },
         "is_verified": true
       },
       {
@@ -3711,7 +5487,11 @@
         "type": "Internship",
         "deadline": "2026-10-18",
         "match_score": 0.3022,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3108 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3108
+        },
         "is_verified": true
       }
     ],
@@ -3723,7 +5503,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-24",
         "match_score": 0.3324,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.164, "semantic": 0.3002 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.164,
+          "semantic": 0.3002
+        },
         "is_verified": true
       },
       {
@@ -3733,7 +5517,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.3128,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3531 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3531
+        },
         "is_verified": true
       },
       {
@@ -3743,7 +5531,11 @@
         "type": "Bootcamp",
         "deadline": "2026-11-27",
         "match_score": 0.3122,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.0, "semantic": 0.3505 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.0,
+          "semantic": 0.3505
+        },
         "is_verified": true
       },
       {
@@ -3753,7 +5545,11 @@
         "type": "Internship",
         "deadline": "2026-08-24",
         "match_score": 0.0885,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.4848, "semantic": -0.034 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.4848,
+          "semantic": -0.034
+        },
         "is_verified": true
       },
       {
@@ -3763,7 +5559,11 @@
         "type": "Scholarship",
         "deadline": "2026-08-31",
         "match_score": 0.0058,
-        "components": { "tag_cosine": 0.0, "tfidf": 0.0, "semantic": 0.0232 },
+        "components": {
+          "tag_cosine": 0.0,
+          "tfidf": 0.0,
+          "semantic": 0.0232
+        },
         "is_verified": true
       }
     ],
@@ -3775,7 +5575,11 @@
         "type": "Grant",
         "deadline": "2026-09-30",
         "match_score": 0.4333,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.2842, "semantic": 0.4057 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.2842,
+          "semantic": 0.4057
+        },
         "is_verified": true
       },
       {
@@ -3785,7 +5589,11 @@
         "type": "Fellowship",
         "deadline": "2026-09-22",
         "match_score": 0.4167,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.1984, "semantic": 0.408 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.1984,
+          "semantic": 0.408
+        },
         "is_verified": true
       },
       {
@@ -3795,7 +5603,11 @@
         "type": "Fellowship",
         "deadline": "2026-08-17",
         "match_score": 0.4033,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.1156, "semantic": 0.4208 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.1156,
+          "semantic": 0.4208
+        },
         "is_verified": true
       },
       {
@@ -3805,7 +5617,11 @@
         "type": "Bootcamp",
         "deadline": "2026-09-10",
         "match_score": 0.3931,
-        "components": { "tag_cosine": 0.5, "tfidf": 0.0714, "semantic": 0.4152 },
+        "components": {
+          "tag_cosine": 0.5,
+          "tfidf": 0.0714,
+          "semantic": 0.4152
+        },
         "is_verified": true
       },
       {
@@ -3815,7 +5631,11 @@
         "type": "Fellowship",
         "deadline": "2026-11-22",
         "match_score": 0.3385,
-        "components": { "tag_cosine": 0.4082, "tfidf": 0.1194, "semantic": 0.3604 },
+        "components": {
+          "tag_cosine": 0.4082,
+          "tfidf": 0.1194,
+          "semantic": 0.3604
+        },
         "is_verified": true
       }
     ]
@@ -3827,7 +5647,10 @@
       "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
       "mentor_name": "Mentor E Traore",
       "compatibility": 0.8165,
-      "shared_languages": ["English", "Swahili"],
+      "shared_languages": [
+        "English",
+        "Swahili"
+      ],
       "mentor_industry": "Agriculture",
       "availability_hrs_per_month": 8
     },
@@ -3837,7 +5660,9 @@
       "mentor_id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
       "mentor_name": "Mentor F Traore",
       "compatibility": 0.5,
-      "shared_languages": ["Swahili"],
+      "shared_languages": [
+        "Swahili"
+      ],
       "mentor_industry": "Health",
       "availability_hrs_per_month": 6
     },
@@ -3847,7 +5672,9 @@
       "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
       "mentor_name": "Mentor K Traore",
       "compatibility": 0.5,
-      "shared_languages": ["Kinyarwanda"],
+      "shared_languages": [
+        "Kinyarwanda"
+      ],
       "mentor_industry": "Public Policy",
       "availability_hrs_per_month": 10
     },
@@ -3857,7 +5684,9 @@
       "mentor_id": "d78dd86d-6902-45e3-a397-c6c090768c40",
       "mentor_name": "Mentor G Moyo",
       "compatibility": 0.7071,
-      "shared_languages": ["Swahili"],
+      "shared_languages": [
+        "Swahili"
+      ],
       "mentor_industry": "Climate",
       "availability_hrs_per_month": 6
     },
@@ -3867,7 +5696,9 @@
       "mentor_id": "3945f6e4-ce24-45a2-bacb-248e902a21ab",
       "mentor_name": "Mentor H Moyo",
       "compatibility": 0.4082,
-      "shared_languages": ["French"],
+      "shared_languages": [
+        "French"
+      ],
       "mentor_industry": "Climate",
       "availability_hrs_per_month": 4
     },
@@ -3877,7 +5708,9 @@
       "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
       "mentor_name": "Mentor A Moyo",
       "compatibility": 0.3536,
-      "shared_languages": ["French"],
+      "shared_languages": [
+        "French"
+      ],
       "mentor_industry": "Health",
       "availability_hrs_per_month": 2
     },
@@ -3887,7 +5720,9 @@
       "mentor_id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739",
       "mentor_name": "Mentor I Traore",
       "compatibility": 0.3536,
-      "shared_languages": ["English"],
+      "shared_languages": [
+        "English"
+      ],
       "mentor_industry": "Health",
       "availability_hrs_per_month": 10
     },
@@ -3897,7 +5732,9 @@
       "mentor_id": "cbf63c96-8242-4ad4-93cb-9395776f9820",
       "mentor_name": "Mentor J Okello",
       "compatibility": 0.8165,
-      "shared_languages": ["French"],
+      "shared_languages": [
+        "French"
+      ],
       "mentor_industry": "Health",
       "availability_hrs_per_month": 2
     },
@@ -3907,7 +5744,9 @@
       "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
       "mentor_name": "Mentor D Moyo",
       "compatibility": 0.4082,
-      "shared_languages": ["Yoruba"],
+      "shared_languages": [
+        "Yoruba"
+      ],
       "mentor_industry": "Technology",
       "availability_hrs_per_month": 4
     },
@@ -3917,7 +5756,9 @@
       "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
       "mentor_name": "Mentor L Nkrumah",
       "compatibility": 0.8165,
-      "shared_languages": ["Kinyarwanda"],
+      "shared_languages": [
+        "Kinyarwanda"
+      ],
       "mentor_industry": "Health",
       "availability_hrs_per_month": 10
     },
@@ -3927,7 +5768,10 @@
       "mentor_id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027",
       "mentor_name": "Mentor C Banda",
       "compatibility": 0.8165,
-      "shared_languages": ["English", "Swahili"],
+      "shared_languages": [
+        "English",
+        "Swahili"
+      ],
       "mentor_industry": "Health",
       "availability_hrs_per_month": 4
     },
@@ -3937,7 +5781,9 @@
       "mentor_id": "03d5a14a-5bb4-4d71-b9af-6626c88b597f",
       "mentor_name": "Mentor B Banda",
       "compatibility": 0.7071,
-      "shared_languages": ["French"],
+      "shared_languages": [
+        "French"
+      ],
       "mentor_industry": "Climate",
       "availability_hrs_per_month": 6
     }
@@ -3949,21 +5795,31 @@
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.8165,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.5,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
         "mentor_name": "Mentor F Traore",
         "compatibility": 0.5,
         "industry": "Health",
-        "skills_offered": ["social_impact", "creative_tech"]
+        "skills_offered": [
+          "social_impact",
+          "creative_tech"
+        ]
       }
     ],
     "c67e3d20-558b-479d-9976-77f9f8f71bc6": [
@@ -3972,21 +5828,31 @@
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.8165,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.5,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
         "mentor_name": "Mentor F Traore",
         "compatibility": 0.5,
         "industry": "Health",
-        "skills_offered": ["social_impact", "creative_tech"]
+        "skills_offered": [
+          "social_impact",
+          "creative_tech"
+        ]
       }
     ],
     "541d6c36-c9d0-4dba-bb23-d849ef27771c": [
@@ -3995,21 +5861,32 @@
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.5,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.4082,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       }
     ],
     "5d5979f9-ce81-4612-8c95-27138264b329": [
@@ -4018,21 +5895,33 @@
         "mentor_name": "Mentor G Moyo",
         "compatibility": 0.7071,
         "industry": "Climate",
-        "skills_offered": ["media_film", "finance", "entrepreneurship", "social_impact"]
+        "skills_offered": [
+          "media_film",
+          "finance",
+          "entrepreneurship",
+          "social_impact"
+        ]
       },
       {
         "mentor_id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
         "mentor_name": "Mentor F Traore",
         "compatibility": 0.5,
         "industry": "Health",
-        "skills_offered": ["social_impact", "creative_tech"]
+        "skills_offered": [
+          "social_impact",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.4082,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       }
     ],
     "c51f03a3-f23d-4d09-91c3-43c867d0aaed": [
@@ -4041,21 +5930,32 @@
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "3945f6e4-ce24-45a2-bacb-248e902a21ab",
         "mentor_name": "Mentor H Moyo",
         "compatibility": 0.4082,
         "industry": "Climate",
-        "skills_offered": ["finance", "music_arts", "data_ai"]
+        "skills_offered": [
+          "finance",
+          "music_arts",
+          "data_ai"
+        ]
       },
       {
         "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.0,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       }
     ],
     "8bc42ba2-c2dc-408a-9c36-192040f1f233": [
@@ -4064,21 +5964,34 @@
         "mentor_name": "Mentor J Okello",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["health", "finance", "leadership"]
+        "skills_offered": [
+          "health",
+          "finance",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.4082,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "d78dd86d-6902-45e3-a397-c6c090768c40",
         "mentor_name": "Mentor G Moyo",
         "compatibility": 0.3536,
         "industry": "Climate",
-        "skills_offered": ["media_film", "finance", "entrepreneurship", "social_impact"]
+        "skills_offered": [
+          "media_film",
+          "finance",
+          "entrepreneurship",
+          "social_impact"
+        ]
       }
     ],
     "27d61e05-812e-4b19-b085-89367cecd807": [
@@ -4087,21 +6000,35 @@
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
         "mentor_name": "Mentor A Moyo",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["entrepreneurship", "media_film", "health", "music_arts"]
+        "skills_offered": [
+          "entrepreneurship",
+          "media_film",
+          "health",
+          "music_arts"
+        ]
       },
       {
         "mentor_id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739",
         "mentor_name": "Mentor I Traore",
         "compatibility": 0.0,
         "industry": "Health",
-        "skills_offered": ["leadership", "finance", "media_film", "climate_env"]
+        "skills_offered": [
+          "leadership",
+          "finance",
+          "media_film",
+          "climate_env"
+        ]
       }
     ],
     "0bcbeb0f-a8d8-4b04-b10b-e15337e3874d": [
@@ -4110,21 +6037,35 @@
         "mentor_name": "Mentor I Traore",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["leadership", "finance", "media_film", "climate_env"]
+        "skills_offered": [
+          "leadership",
+          "finance",
+          "media_film",
+          "climate_env"
+        ]
       },
       {
         "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
         "mentor_name": "Mentor A Moyo",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["entrepreneurship", "media_film", "health", "music_arts"]
+        "skills_offered": [
+          "entrepreneurship",
+          "media_film",
+          "health",
+          "music_arts"
+        ]
       },
       {
         "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.0,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       }
     ],
     "bc35042b-2518-4769-a443-abfd55e1254e": [
@@ -4133,21 +6074,33 @@
         "mentor_name": "Mentor F Traore",
         "compatibility": 0.5,
         "industry": "Health",
-        "skills_offered": ["social_impact", "creative_tech"]
+        "skills_offered": [
+          "social_impact",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027",
         "mentor_name": "Mentor C Banda",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["media_film", "social_impact", "design_ux"]
+        "skills_offered": [
+          "media_film",
+          "social_impact",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "d78dd86d-6902-45e3-a397-c6c090768c40",
         "mentor_name": "Mentor G Moyo",
         "compatibility": 0.3536,
         "industry": "Climate",
-        "skills_offered": ["media_film", "finance", "entrepreneurship", "social_impact"]
+        "skills_offered": [
+          "media_film",
+          "finance",
+          "entrepreneurship",
+          "social_impact"
+        ]
       }
     ],
     "de82bb5c-6f7d-4009-a660-0c5cc99c7aef": [
@@ -4156,14 +6109,21 @@
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.0,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
         "mentor_name": "Mentor D Moyo",
         "compatibility": 0.0,
         "industry": "Technology",
-        "skills_offered": ["finance", "health", "music_arts"]
+        "skills_offered": [
+          "finance",
+          "health",
+          "music_arts"
+        ]
       }
     ],
     "af0240f4-42a1-4807-893e-eac4b60104e9": [
@@ -4172,21 +6132,33 @@
         "mentor_name": "Mentor J Okello",
         "compatibility": 0.8165,
         "industry": "Health",
-        "skills_offered": ["health", "finance", "leadership"]
+        "skills_offered": [
+          "health",
+          "finance",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.4082,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
         "mentor_name": "Mentor D Moyo",
         "compatibility": 0.4082,
         "industry": "Technology",
-        "skills_offered": ["finance", "health", "music_arts"]
+        "skills_offered": [
+          "finance",
+          "health",
+          "music_arts"
+        ]
       }
     ],
     "c4b653b4-2969-4ad8-8776-86b054d5b27d": [
@@ -4195,21 +6167,35 @@
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.4082,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739",
         "mentor_name": "Mentor I Traore",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["leadership", "finance", "media_film", "climate_env"]
+        "skills_offered": [
+          "leadership",
+          "finance",
+          "media_film",
+          "climate_env"
+        ]
       },
       {
         "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
         "mentor_name": "Mentor A Moyo",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["entrepreneurship", "media_film", "health", "music_arts"]
+        "skills_offered": [
+          "entrepreneurship",
+          "media_film",
+          "health",
+          "music_arts"
+        ]
       }
     ],
     "fccf3402-335a-4b72-b82b-813c3f872d80": [
@@ -4218,14 +6204,21 @@
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.5,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
         "mentor_name": "Mentor D Moyo",
         "compatibility": 0.4082,
         "industry": "Technology",
-        "skills_offered": ["finance", "health", "music_arts"]
+        "skills_offered": [
+          "finance",
+          "health",
+          "music_arts"
+        ]
       }
     ],
     "b0a5e22a-5346-475c-908e-9c255ba5f818": [
@@ -4234,21 +6227,32 @@
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.4082,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.0,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.0,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       }
     ],
     "67193769-b7e3-4de7-9bfe-72eaf43093b8": [
@@ -4257,21 +6261,33 @@
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.0,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "d78dd86d-6902-45e3-a397-c6c090768c40",
         "mentor_name": "Mentor G Moyo",
         "compatibility": 0.0,
         "industry": "Climate",
-        "skills_offered": ["media_film", "finance", "entrepreneurship", "social_impact"]
+        "skills_offered": [
+          "media_film",
+          "finance",
+          "entrepreneurship",
+          "social_impact"
+        ]
       },
       {
         "mentor_id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
         "mentor_name": "Mentor F Traore",
         "compatibility": 0.0,
         "industry": "Health",
-        "skills_offered": ["social_impact", "creative_tech"]
+        "skills_offered": [
+          "social_impact",
+          "creative_tech"
+        ]
       }
     ],
     "8e9fed31-01ba-4994-b5a3-6c2c1790319a": [
@@ -4280,21 +6296,32 @@
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.8165,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.5,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "3945f6e4-ce24-45a2-bacb-248e902a21ab",
         "mentor_name": "Mentor H Moyo",
         "compatibility": 0.4082,
         "industry": "Climate",
-        "skills_offered": ["finance", "music_arts", "data_ai"]
+        "skills_offered": [
+          "finance",
+          "music_arts",
+          "data_ai"
+        ]
       }
     ],
     "6e5b317d-bae3-4f0f-873c-ac2cf15351bf": [
@@ -4303,21 +6330,33 @@
         "mentor_name": "Mentor J Okello",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["health", "finance", "leadership"]
+        "skills_offered": [
+          "health",
+          "finance",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
         "mentor_name": "Mentor A Moyo",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["entrepreneurship", "media_film", "health", "music_arts"]
+        "skills_offered": [
+          "entrepreneurship",
+          "media_film",
+          "health",
+          "music_arts"
+        ]
       },
       {
         "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.0,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       }
     ],
     "de78dc4a-1522-471c-a8b8-da3647e26557": [
@@ -4326,21 +6365,34 @@
         "mentor_name": "Mentor J Okello",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["health", "finance", "leadership"]
+        "skills_offered": [
+          "health",
+          "finance",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
         "mentor_name": "Mentor D Moyo",
         "compatibility": 0.4082,
         "industry": "Technology",
-        "skills_offered": ["finance", "health", "music_arts"]
+        "skills_offered": [
+          "finance",
+          "health",
+          "music_arts"
+        ]
       },
       {
         "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
         "mentor_name": "Mentor A Moyo",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["entrepreneurship", "media_film", "health", "music_arts"]
+        "skills_offered": [
+          "entrepreneurship",
+          "media_film",
+          "health",
+          "music_arts"
+        ]
       }
     ],
     "44bb8907-6428-4586-9a66-410f5be80ecf": [
@@ -4349,21 +6401,34 @@
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.4082,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.0,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "d78dd86d-6902-45e3-a397-c6c090768c40",
         "mentor_name": "Mentor G Moyo",
         "compatibility": 0.0,
         "industry": "Climate",
-        "skills_offered": ["media_film", "finance", "entrepreneurship", "social_impact"]
+        "skills_offered": [
+          "media_film",
+          "finance",
+          "entrepreneurship",
+          "social_impact"
+        ]
       }
     ],
     "2c4b9bef-3b39-4f2d-b1ba-4a29f483be7b": [
@@ -4372,21 +6437,34 @@
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
         "mentor_name": "Mentor E Traore",
         "compatibility": 0.4082,
         "industry": "Agriculture",
-        "skills_offered": ["creative_tech", "entrepreneurship", "leadership"]
+        "skills_offered": [
+          "creative_tech",
+          "entrepreneurship",
+          "leadership"
+        ]
       },
       {
         "mentor_id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739",
         "mentor_name": "Mentor I Traore",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["leadership", "finance", "media_film", "climate_env"]
+        "skills_offered": [
+          "leadership",
+          "finance",
+          "media_film",
+          "climate_env"
+        ]
       }
     ],
     "9f3bc084-a06a-40e0-9661-e5a516247646": [
@@ -4395,14 +6473,21 @@
         "mentor_name": "Mentor D Moyo",
         "compatibility": 0.4082,
         "industry": "Technology",
-        "skills_offered": ["finance", "health", "music_arts"]
+        "skills_offered": [
+          "finance",
+          "health",
+          "music_arts"
+        ]
       },
       {
         "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.0,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       }
     ],
     "e6bb84fa-603c-416c-bc9a-a0aa372460a0": [
@@ -4411,21 +6496,32 @@
         "mentor_name": "Mentor C Banda",
         "compatibility": 0.8165,
         "industry": "Health",
-        "skills_offered": ["media_film", "social_impact", "design_ux"]
+        "skills_offered": [
+          "media_film",
+          "social_impact",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
         "mentor_name": "Mentor K Traore",
         "compatibility": 0.5,
         "industry": "Public Policy",
-        "skills_offered": ["creative_tech", "design_ux"]
+        "skills_offered": [
+          "creative_tech",
+          "design_ux"
+        ]
       },
       {
         "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       }
     ],
     "d53aae1d-6adc-4906-850f-d12a7fdadee8": [
@@ -4434,21 +6530,33 @@
         "mentor_name": "Mentor L Nkrumah",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["design_ux", "data_ai", "creative_tech"]
+        "skills_offered": [
+          "design_ux",
+          "data_ai",
+          "creative_tech"
+        ]
       },
       {
         "mentor_id": "3945f6e4-ce24-45a2-bacb-248e902a21ab",
         "mentor_name": "Mentor H Moyo",
         "compatibility": 0.4082,
         "industry": "Climate",
-        "skills_offered": ["finance", "music_arts", "data_ai"]
+        "skills_offered": [
+          "finance",
+          "music_arts",
+          "data_ai"
+        ]
       },
       {
         "mentor_id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027",
         "mentor_name": "Mentor C Banda",
         "compatibility": 0.4082,
         "industry": "Health",
-        "skills_offered": ["media_film", "social_impact", "design_ux"]
+        "skills_offered": [
+          "media_film",
+          "social_impact",
+          "design_ux"
+        ]
       }
     ],
     "fd602be5-b239-4074-b0f6-99cf927117d6": [
@@ -4457,66 +6565,309 @@
         "mentor_name": "Mentor G Moyo",
         "compatibility": 0.7071,
         "industry": "Climate",
-        "skills_offered": ["media_film", "finance", "entrepreneurship", "social_impact"]
+        "skills_offered": [
+          "media_film",
+          "finance",
+          "entrepreneurship",
+          "social_impact"
+        ]
       },
       {
         "mentor_id": "03d5a14a-5bb4-4d71-b9af-6626c88b597f",
         "mentor_name": "Mentor B Banda",
         "compatibility": 0.7071,
         "industry": "Climate",
-        "skills_offered": ["media_film", "music_arts", "design_ux", "social_impact"]
+        "skills_offered": [
+          "media_film",
+          "music_arts",
+          "design_ux",
+          "social_impact"
+        ]
       },
       {
         "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
         "mentor_name": "Mentor A Moyo",
         "compatibility": 0.3536,
         "industry": "Health",
-        "skills_offered": ["entrepreneurship", "media_film", "health", "music_arts"]
+        "skills_offered": [
+          "entrepreneurship",
+          "media_film",
+          "health",
+          "music_arts"
+        ]
       }
     ]
   },
   "matching_heatmap": {
     "students": [
-      { "id": "c54ba257-c4ed-45b6-8fd8-4966fd9843de", "name": "Amina Uwase (Demo Scholar)" },
-      { "id": "c67e3d20-558b-479d-9976-77f9f8f71bc6", "name": "Scholar B2 Abebe" },
-      { "id": "541d6c36-c9d0-4dba-bb23-d849ef27771c", "name": "Scholar C3 Uwase" },
-      { "id": "5d5979f9-ce81-4612-8c95-27138264b329", "name": "Scholar D4 Abebe" },
-      { "id": "c51f03a3-f23d-4d09-91c3-43c867d0aaed", "name": "Scholar E5 Okafor" },
-      { "id": "8bc42ba2-c2dc-408a-9c36-192040f1f233", "name": "Scholar F6 Mensah" },
-      { "id": "27d61e05-812e-4b19-b085-89367cecd807", "name": "Scholar G7 Diallo" },
-      { "id": "0bcbeb0f-a8d8-4b04-b10b-e15337e3874d", "name": "Scholar H8 Abebe" },
-      { "id": "bc35042b-2518-4769-a443-abfd55e1254e", "name": "Scholar I9 Mensah" },
-      { "id": "de82bb5c-6f7d-4009-a660-0c5cc99c7aef", "name": "Scholar J10 Okafor" },
-      { "id": "af0240f4-42a1-4807-893e-eac4b60104e9", "name": "Scholar K11 Uwase" },
-      { "id": "c4b653b4-2969-4ad8-8776-86b054d5b27d", "name": "Scholar L12 Kamau" }
+      {
+        "id": "c54ba257-c4ed-45b6-8fd8-4966fd9843de",
+        "name": "Amina Uwase (Demo Scholar)"
+      },
+      {
+        "id": "c67e3d20-558b-479d-9976-77f9f8f71bc6",
+        "name": "Scholar B2 Abebe"
+      },
+      {
+        "id": "541d6c36-c9d0-4dba-bb23-d849ef27771c",
+        "name": "Scholar C3 Uwase"
+      },
+      {
+        "id": "5d5979f9-ce81-4612-8c95-27138264b329",
+        "name": "Scholar D4 Abebe"
+      },
+      {
+        "id": "c51f03a3-f23d-4d09-91c3-43c867d0aaed",
+        "name": "Scholar E5 Okafor"
+      },
+      {
+        "id": "8bc42ba2-c2dc-408a-9c36-192040f1f233",
+        "name": "Scholar F6 Mensah"
+      },
+      {
+        "id": "27d61e05-812e-4b19-b085-89367cecd807",
+        "name": "Scholar G7 Diallo"
+      },
+      {
+        "id": "0bcbeb0f-a8d8-4b04-b10b-e15337e3874d",
+        "name": "Scholar H8 Abebe"
+      },
+      {
+        "id": "bc35042b-2518-4769-a443-abfd55e1254e",
+        "name": "Scholar I9 Mensah"
+      },
+      {
+        "id": "de82bb5c-6f7d-4009-a660-0c5cc99c7aef",
+        "name": "Scholar J10 Okafor"
+      },
+      {
+        "id": "af0240f4-42a1-4807-893e-eac4b60104e9",
+        "name": "Scholar K11 Uwase"
+      },
+      {
+        "id": "c4b653b4-2969-4ad8-8776-86b054d5b27d",
+        "name": "Scholar L12 Kamau"
+      }
     ],
     "mentors": [
-      { "id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696", "name": "Mentor A Moyo" },
-      { "id": "03d5a14a-5bb4-4d71-b9af-6626c88b597f", "name": "Mentor B Banda" },
-      { "id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027", "name": "Mentor C Banda" },
-      { "id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec", "name": "Mentor D Moyo" },
-      { "id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457", "name": "Mentor E Traore" },
-      { "id": "b8c481e0-91b0-42d0-a1c1-882566671ad2", "name": "Mentor F Traore" },
-      { "id": "d78dd86d-6902-45e3-a397-c6c090768c40", "name": "Mentor G Moyo" },
-      { "id": "3945f6e4-ce24-45a2-bacb-248e902a21ab", "name": "Mentor H Moyo" },
-      { "id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739", "name": "Mentor I Traore" },
-      { "id": "cbf63c96-8242-4ad4-93cb-9395776f9820", "name": "Mentor J Okello" },
-      { "id": "86e19b9e-06cb-4227-a4f3-1c2162572867", "name": "Mentor K Traore" },
-      { "id": "540153dd-3b27-490a-ad5e-dd968e7dc91e", "name": "Mentor L Nkrumah" }
+      {
+        "id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
+        "name": "Mentor A Moyo"
+      },
+      {
+        "id": "03d5a14a-5bb4-4d71-b9af-6626c88b597f",
+        "name": "Mentor B Banda"
+      },
+      {
+        "id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027",
+        "name": "Mentor C Banda"
+      },
+      {
+        "id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
+        "name": "Mentor D Moyo"
+      },
+      {
+        "id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
+        "name": "Mentor E Traore"
+      },
+      {
+        "id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
+        "name": "Mentor F Traore"
+      },
+      {
+        "id": "d78dd86d-6902-45e3-a397-c6c090768c40",
+        "name": "Mentor G Moyo"
+      },
+      {
+        "id": "3945f6e4-ce24-45a2-bacb-248e902a21ab",
+        "name": "Mentor H Moyo"
+      },
+      {
+        "id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739",
+        "name": "Mentor I Traore"
+      },
+      {
+        "id": "cbf63c96-8242-4ad4-93cb-9395776f9820",
+        "name": "Mentor J Okello"
+      },
+      {
+        "id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
+        "name": "Mentor K Traore"
+      },
+      {
+        "id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
+        "name": "Mentor L Nkrumah"
+      }
     ],
     "matrix": [
-      [0.354, -1.0, 0.0, 0.0, 0.816, 0.5, 0.354, -1.0, 0.0, -1.0, 0.5, 0.408],
-      [0.0, 0.0, 0.0, -1.0, 0.408, 0.5, 0.0, 0.408, -1.0, 0.0, 0.5, 0.816],
-      [-1.0, -1.0, -1.0, -1.0, 0.408, -1.0, -1.0, 0.0, -1.0, -1.0, 0.5, 0.408],
-      [-1.0, -1.0, 0.408, -1.0, 0.408, 0.5, 0.707, 0.0, -1.0, -1.0, 0.0, 0.0],
-      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.408, -1.0, 0.0, 0.0, 0.408],
-      [0.354, 0.354, -1.0, -1.0, 0.408, -1.0, 0.354, 0.0, -1.0, 0.408, 0.0, 0.0],
-      [0.354, -1.0, 0.0, -1.0, 0.0, -1.0, 0.0, -1.0, 0.0, -1.0, -1.0, 0.408],
-      [0.354, -1.0, 0.0, -1.0, 0.0, -1.0, 0.0, -1.0, 0.354, -1.0, -1.0, 0.0],
-      [0.0, -1.0, 0.408, -1.0, 0.0, 0.5, 0.354, 0.0, 0.0, -1.0, 0.0, 0.0],
-      [-1.0, -1.0, -1.0, 0.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 0.0, -1.0],
-      [0.354, 0.0, 0.0, 0.408, 0.408, 0.0, 0.0, 0.0, -1.0, 0.816, 0.0, 0.0],
-      [0.354, -1.0, 0.0, -1.0, 0.408, -1.0, 0.0, -1.0, 0.354, -1.0, -1.0, 0.0]
+      [
+        0.354,
+        -1.0,
+        0.0,
+        0.0,
+        0.816,
+        0.5,
+        0.354,
+        -1.0,
+        0.0,
+        -1.0,
+        0.5,
+        0.408
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.408,
+        0.5,
+        0.0,
+        0.408,
+        -1.0,
+        0.0,
+        0.5,
+        0.816
+      ],
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        0.408,
+        -1.0,
+        -1.0,
+        0.0,
+        -1.0,
+        -1.0,
+        0.5,
+        0.408
+      ],
+      [
+        -1.0,
+        -1.0,
+        0.408,
+        -1.0,
+        0.408,
+        0.5,
+        0.707,
+        0.0,
+        -1.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.408,
+        -1.0,
+        0.0,
+        0.0,
+        0.408
+      ],
+      [
+        0.354,
+        0.354,
+        -1.0,
+        -1.0,
+        0.408,
+        -1.0,
+        0.354,
+        0.0,
+        -1.0,
+        0.408,
+        0.0,
+        0.0
+      ],
+      [
+        0.354,
+        -1.0,
+        0.0,
+        -1.0,
+        0.0,
+        -1.0,
+        0.0,
+        -1.0,
+        0.0,
+        -1.0,
+        -1.0,
+        0.408
+      ],
+      [
+        0.354,
+        -1.0,
+        0.0,
+        -1.0,
+        0.0,
+        -1.0,
+        0.0,
+        -1.0,
+        0.354,
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.408,
+        -1.0,
+        0.0,
+        0.5,
+        0.354,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.354,
+        0.0,
+        0.0,
+        0.408,
+        0.408,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.816,
+        0.0,
+        0.0
+      ],
+      [
+        0.354,
+        -1.0,
+        0.0,
+        -1.0,
+        0.408,
+        -1.0,
+        0.0,
+        -1.0,
+        0.354,
+        -1.0,
+        -1.0,
+        0.0
+      ]
     ]
   },
   "risk_predictions": [
@@ -4958,9 +7309,16 @@
       "student_id": "c54ba257-c4ed-45b6-8fd8-4966fd9843de",
       "career_goal_text": "I want to work at Google on AI in Rwanda and build tools for African youth.",
       "entities": {
-        "ORG": ["Google"],
-        "SKILL": ["AI"],
-        "GPE": ["Rwanda", "Africa"],
+        "ORG": [
+          "Google"
+        ],
+        "SKILL": [
+          "AI"
+        ],
+        "GPE": [
+          "Rwanda",
+          "Africa"
+        ],
         "PRODUCT": []
       },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
@@ -4970,7 +7328,16 @@
     {
       "student_id": "c67e3d20-558b-479d-9976-77f9f8f71bc6",
       "career_goal_text": "Build a climate-tech startup serving farmers in Kenya with satellite data.",
-      "entities": { "ORG": [], "SKILL": ["climate"], "GPE": ["Kenya"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "climate"
+        ],
+        "GPE": [
+          "Kenya"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in agri food, finance and your goal of climate, we recommend AgriTech Supply Chain Accelerator \u2014 63% match.",
       "top_opportunity_id": "181b1961-7409-4bcd-a84c-d6fc1309183a"
@@ -4980,8 +7347,15 @@
       "career_goal_text": "Design UX for fintech products across West Africa and mentor other designers.",
       "entities": {
         "ORG": [],
-        "SKILL": ["UX", "fintech", "product"],
-        "GPE": ["Africa", "West Africa"],
+        "SKILL": [
+          "UX",
+          "fintech",
+          "product"
+        ],
+        "GPE": [
+          "Africa",
+          "West Africa"
+        ],
         "PRODUCT": []
       },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
@@ -4991,7 +7365,17 @@
     {
       "student_id": "5d5979f9-ce81-4612-8c95-27138264b329",
       "career_goal_text": "Produce documentary films about social impact and youth leadership in Nigeria.",
-      "entities": { "ORG": [], "SKILL": ["film", "leadership"], "GPE": ["Nigeria"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "film",
+          "leadership"
+        ],
+        "GPE": [
+          "Nigeria"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in health, social impact and your goal of film, we recommend Google.org AI for Social Good Grant \u2014 43% match.",
       "top_opportunity_id": "0a01fe7a-8c4a-42eb-9fe4-0c434bd47210"
@@ -4999,7 +7383,14 @@
     {
       "student_id": "c51f03a3-f23d-4d09-91c3-43c867d0aaed",
       "career_goal_text": "Lead health innovation programmes for underserved communities in Ghana.",
-      "entities": { "ORG": [], "SKILL": [], "GPE": ["Ghana"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [],
+        "GPE": [
+          "Ghana"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in media film, data ai and your goal of Ghana, we recommend ALU Entrepreneurial Leadership Internship \u2014 28% match.",
       "top_opportunity_id": "2cdee784-da76-4b60-af6e-cc9dd7a8465d"
@@ -5007,7 +7398,14 @@
     {
       "student_id": "8bc42ba2-c2dc-408a-9c36-192040f1f233",
       "career_goal_text": "Use data science for education policy and scholarship matching at scale.",
-      "entities": { "ORG": [], "SKILL": ["data science"], "GPE": [], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "data science"
+        ],
+        "GPE": [],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in creative tech, design ux and your goal of data science, we recommend JointHub CreativeTech Create With AI Bootcamp \u2014 51% match.",
       "top_opportunity_id": "e0b7dc7d-61aa-4f8d-9652-5a059ef48c0a"
@@ -5015,7 +7413,14 @@
     {
       "student_id": "27d61e05-812e-4b19-b085-89367cecd807",
       "career_goal_text": "Launch agri-food supply chain platforms connecting rural producers to markets.",
-      "entities": { "ORG": [], "SKILL": ["AI"], "GPE": [], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "AI"
+        ],
+        "GPE": [],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in data ai, design ux and your goal of AI, we recommend Fintech Product Fellowship Lagos \u2014 52% match.",
       "top_opportunity_id": "7e5856b9-c419-4337-a449-69c8dc7fe294"
@@ -5023,7 +7428,16 @@
     {
       "student_id": "0bcbeb0f-a8d8-4b04-b10b-e15337e3874d",
       "career_goal_text": "Become a product leader in creative tech and media startups across Africa.",
-      "entities": { "ORG": [], "SKILL": ["product"], "GPE": ["Africa"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "product"
+        ],
+        "GPE": [
+          "Africa"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in finance, data ai and your goal of product, we recommend Fintech Product Fellowship Lagos \u2014 67% match.",
       "top_opportunity_id": "7e5856b9-c419-4337-a449-69c8dc7fe294"
@@ -5031,7 +7445,14 @@
     {
       "student_id": "bc35042b-2518-4769-a443-abfd55e1254e",
       "career_goal_text": "Work on renewable energy finance and climate adaptation grants.",
-      "entities": { "ORG": [], "SKILL": ["climate"], "GPE": [], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "climate"
+        ],
+        "GPE": [],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in health, social impact and your goal of climate, we recommend British Council Creative Enterprise Fellowship \u2014 45% match.",
       "top_opportunity_id": "d6ec8a17-ea0c-416b-8be1-586245949a66"
@@ -5039,7 +7460,17 @@
     {
       "student_id": "de82bb5c-6f7d-4009-a660-0c5cc99c7aef",
       "career_goal_text": "Build music-tech platforms that monetise African artists fairly.",
-      "entities": { "ORG": [], "SKILL": ["AI", "music"], "GPE": ["Africa"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "AI",
+          "music"
+        ],
+        "GPE": [
+          "Africa"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in leadership, design ux and your goal of AI, we recommend JointHub CreativeTech Create With AI Bootcamp \u2014 47% match.",
       "top_opportunity_id": "e0b7dc7d-61aa-4f8d-9652-5a059ef48c0a"
@@ -5048,9 +7479,16 @@
       "student_id": "af0240f4-42a1-4807-893e-eac4b60104e9",
       "career_goal_text": "I want to work at Google on AI in Rwanda and build tools for African youth.",
       "entities": {
-        "ORG": ["Google"],
-        "SKILL": ["AI"],
-        "GPE": ["Rwanda", "Africa"],
+        "ORG": [
+          "Google"
+        ],
+        "SKILL": [
+          "AI"
+        ],
+        "GPE": [
+          "Rwanda",
+          "Africa"
+        ],
         "PRODUCT": []
       },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
@@ -5060,7 +7498,16 @@
     {
       "student_id": "c4b653b4-2969-4ad8-8776-86b054d5b27d",
       "career_goal_text": "Build a climate-tech startup serving farmers in Kenya with satellite data.",
-      "entities": { "ORG": [], "SKILL": ["climate"], "GPE": ["Kenya"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "climate"
+        ],
+        "GPE": [
+          "Kenya"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in finance, media film and your goal of climate, we recommend Pan-African Health Innovation Bootcamp \u2014 28% match.",
       "top_opportunity_id": "480ab1d8-6955-4414-ad44-4b71719934da"
@@ -5070,8 +7517,15 @@
       "career_goal_text": "Design UX for fintech products across West Africa and mentor other designers.",
       "entities": {
         "ORG": [],
-        "SKILL": ["UX", "fintech", "product"],
-        "GPE": ["Africa", "West Africa"],
+        "SKILL": [
+          "UX",
+          "fintech",
+          "product"
+        ],
+        "GPE": [
+          "Africa",
+          "West Africa"
+        ],
         "PRODUCT": []
       },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
@@ -5081,7 +7535,17 @@
     {
       "student_id": "b0a5e22a-5346-475c-908e-9c255ba5f818",
       "career_goal_text": "Produce documentary films about social impact and youth leadership in Nigeria.",
-      "entities": { "ORG": [], "SKILL": ["film", "leadership"], "GPE": ["Nigeria"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "film",
+          "leadership"
+        ],
+        "GPE": [
+          "Nigeria"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in agri food, leadership and your goal of film, we recommend Mastercard Foundation Scholars Program \u2014 46% match.",
       "top_opportunity_id": "f13d5348-87b8-401e-ae96-654e31aa234a"
@@ -5089,7 +7553,14 @@
     {
       "student_id": "67193769-b7e3-4de7-9bfe-72eaf43093b8",
       "career_goal_text": "Lead health innovation programmes for underserved communities in Ghana.",
-      "entities": { "ORG": [], "SKILL": [], "GPE": ["Ghana"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [],
+        "GPE": [
+          "Ghana"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in agri food, creative tech and your goal of Ghana, we recommend AgriTech Supply Chain Accelerator \u2014 52% match.",
       "top_opportunity_id": "181b1961-7409-4bcd-a84c-d6fc1309183a"
@@ -5097,7 +7568,14 @@
     {
       "student_id": "8e9fed31-01ba-4994-b5a3-6c2c1790319a",
       "career_goal_text": "Use data science for education policy and scholarship matching at scale.",
-      "entities": { "ORG": [], "SKILL": ["data science"], "GPE": [], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "data science"
+        ],
+        "GPE": [],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in design ux, entrepreneurship and your goal of data science, we recommend Design for Africa UX Residency \u2014 32% match.",
       "top_opportunity_id": "59502921-2257-4a54-a878-c032d7743e80"
@@ -5105,7 +7583,14 @@
     {
       "student_id": "6e5b317d-bae3-4f0f-873c-ac2cf15351bf",
       "career_goal_text": "Launch agri-food supply chain platforms connecting rural producers to markets.",
-      "entities": { "ORG": [], "SKILL": ["AI"], "GPE": [], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "AI"
+        ],
+        "GPE": [],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in data ai, music arts and your goal of AI, we recommend ALX Software Engineering Fellowship \u2014 37% match.",
       "top_opportunity_id": "8983ed2f-52f4-419a-b248-b3f170e5e659"
@@ -5113,7 +7598,16 @@
     {
       "student_id": "de78dc4a-1522-471c-a8b8-da3647e26557",
       "career_goal_text": "Become a product leader in creative tech and media startups across Africa.",
-      "entities": { "ORG": [], "SKILL": ["product"], "GPE": ["Africa"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "product"
+        ],
+        "GPE": [
+          "Africa"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in design ux, creative tech and your goal of product, we recommend Design for Africa UX Residency \u2014 65% match.",
       "top_opportunity_id": "59502921-2257-4a54-a878-c032d7743e80"
@@ -5121,7 +7615,14 @@
     {
       "student_id": "44bb8907-6428-4586-9a66-410f5be80ecf",
       "career_goal_text": "Work on renewable energy finance and climate adaptation grants.",
-      "entities": { "ORG": [], "SKILL": ["climate"], "GPE": [], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "climate"
+        ],
+        "GPE": [],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in entrepreneurship, finance and your goal of climate, we recommend AgriTech Supply Chain Accelerator \u2014 48% match.",
       "top_opportunity_id": "181b1961-7409-4bcd-a84c-d6fc1309183a"
@@ -5129,7 +7630,17 @@
     {
       "student_id": "2c4b9bef-3b39-4f2d-b1ba-4a29f483be7b",
       "career_goal_text": "Build music-tech platforms that monetise African artists fairly.",
-      "entities": { "ORG": [], "SKILL": ["AI", "music"], "GPE": ["Africa"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "AI",
+          "music"
+        ],
+        "GPE": [
+          "Africa"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in social impact, music arts and your goal of AI, we recommend UNAI SDG Youth Ambassadors \u2014 35% match.",
       "top_opportunity_id": "64918773-068c-4e44-a240-5c2517185d62"
@@ -5138,9 +7649,16 @@
       "student_id": "9f3bc084-a06a-40e0-9661-e5a516247646",
       "career_goal_text": "I want to work at Google on AI in Rwanda and build tools for African youth.",
       "entities": {
-        "ORG": ["Google"],
-        "SKILL": ["AI"],
-        "GPE": ["Rwanda", "Africa"],
+        "ORG": [
+          "Google"
+        ],
+        "SKILL": [
+          "AI"
+        ],
+        "GPE": [
+          "Rwanda",
+          "Africa"
+        ],
         "PRODUCT": []
       },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
@@ -5150,7 +7668,16 @@
     {
       "student_id": "e6bb84fa-603c-416c-bc9a-a0aa372460a0",
       "career_goal_text": "Build a climate-tech startup serving farmers in Kenya with satellite data.",
-      "entities": { "ORG": [], "SKILL": ["climate"], "GPE": ["Kenya"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "climate"
+        ],
+        "GPE": [
+          "Kenya"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in finance, entrepreneurship and your goal of climate, we recommend Fintech Product Fellowship Lagos \u2014 52% match.",
       "top_opportunity_id": "7e5856b9-c419-4337-a449-69c8dc7fe294"
@@ -5160,8 +7687,15 @@
       "career_goal_text": "Design UX for fintech products across West Africa and mentor other designers.",
       "entities": {
         "ORG": [],
-        "SKILL": ["UX", "fintech", "product"],
-        "GPE": ["Africa", "West Africa"],
+        "SKILL": [
+          "UX",
+          "fintech",
+          "product"
+        ],
+        "GPE": [
+          "Africa",
+          "West Africa"
+        ],
         "PRODUCT": []
       },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
@@ -5171,7 +7705,17 @@
     {
       "student_id": "fd602be5-b239-4074-b0f6-99cf927117d6",
       "career_goal_text": "Produce documentary films about social impact and youth leadership in Nigeria.",
-      "entities": { "ORG": [], "SKILL": ["film", "leadership"], "GPE": ["Nigeria"], "PRODUCT": [] },
+      "entities": {
+        "ORG": [],
+        "SKILL": [
+          "film",
+          "leadership"
+        ],
+        "GPE": [
+          "Nigeria"
+        ],
+        "PRODUCT": []
+      },
       "enriched_vector_note": "70% interest_tags + 30% TF-IDF(career_goal_text)",
       "recommendation_sentence": "Based on your interest in agri food, data ai and your goal of film, we recommend Google.org AI for Social Good Grant \u2014 43% match.",
       "top_opportunity_id": "0a01fe7a-8c4a-42eb-9fe4-0c434bd47210"
@@ -5183,8 +7727,7 @@
     "active_mentor_pairs": 12,
     "at_risk_students_flagged": 14,
     "nps_proxy": 42,
-    "scam_flags": 1,
-    "impact": { "scholarships_usd": 158000, "students_supported": 85, "countries": 6 }
+    "scam_flags": 1
   },
   "metrics": {
     "recommendation_precision_at_5": 0.7208,
