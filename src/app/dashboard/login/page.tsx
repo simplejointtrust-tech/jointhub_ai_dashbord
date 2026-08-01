@@ -95,12 +95,7 @@ export default function DashboardLoginPage() {
               {isSubmitting ? "Signing in…" : "Enter dashboard"}
             </button>
           </form>
-
-          <p className="mt-5 text-xs leading-relaxed text-[#0D1B2A]/55">
-            Impact figures used across the product: $158,000+ · 85+ students · 6+ countries.
-            Bootcamp: CreativeTech — Create With AI, 25–26 August 2026, ALU Kigali.
-          </p>
-        </div>
+</div>
       </div>
     </main>
   );
