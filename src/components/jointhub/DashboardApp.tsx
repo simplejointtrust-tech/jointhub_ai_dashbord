@@ -622,32 +622,6 @@ function AnalyticsPanel({
           </ul>
         </section>
       </div>
-
-      <section className="rounded-2xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-5 text-white">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#F4B942]">
-          Impact (SimpleJoint Trust)
-        </p>
-        <div className="mt-3 grid gap-3 sm:grid-cols-3">
-          <div>
-            <p className="text-2xl font-semibold tabular-nums">
-              ${kpis.impact.scholarships_usd.toLocaleString()}+
-            </p>
-            <p className="text-xs text-white/65">scholarships & grants</p>
-          </div>
-          <div>
-            <p className="text-2xl font-semibold tabular-nums">{kpis.impact.students_supported}+</p>
-            <p className="text-xs text-white/65">students supported</p>
-          </div>
-          <div>
-            <p className="text-2xl font-semibold tabular-nums">{kpis.impact.countries}+</p>
-            <p className="text-xs text-white/65">countries</p>
-          </div>
-        </div>
-        <p className="mt-4 text-xs text-white/55">
-          Partners: British Council · ALX · Hood.D · A4 · JointHub Africa · ALU · @alueducation
-          @millenniumfellows @UNAI
-        </p>
-      </section>
     </div>
   );
 }
