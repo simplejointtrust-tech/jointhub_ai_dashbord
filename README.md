@@ -14,7 +14,6 @@ Product app for **SimpleJoint Trust / JointHub Africa** Mentor Hub (built for Is
   - `/api/jointhub/*` — dashboard APIs over sample Capstone datasets
   - `ml-backend/` — FastAPI Python service implementing the same four ML modules
 - Design tokens: Capstone palette Navy `#0D1B2A`, Teal `#028090`, Gold `#F4B942`, risk green/amber/red.
-- Impact figures (always): **$158,000+ · 85+ students · 6+ countries**.
 - Bootcamp: CreativeTech X SoCreative, **24–25 August 2026**, ALX Kigali.
 
 ## What shipped
