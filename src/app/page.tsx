@@ -1,31 +1,6 @@
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-const IMPACT = [
-  { label: "Scholarships & grants", value: "$158,000+" },
-  { label: "Students supported", value: "85+" },
-  { label: "Countries reached", value: "6+" },
-];
-
-const MODULES = [
-  {
-    title: "Opportunity engine",
-    body: "Content-based cosine similarity ranks verified scholarships, fellowships, and programmes against each scholar profile.",
-  },
-  {
-    title: "Mentor Hub",
-    body: "Cosine compatibility plus the Hungarian algorithm assigns mentors globally and surfaces top alternatives per student.",
-  },
-  {
-    title: "Dropout risk",
-    body: "Logistic regression flags scholars who need outreach; Random Forest explains the top contributing factor.",
-  },
-  {
-    title: "NLP goals",
-    body: "Entity extraction and semantic matching turn free-text career goals into personalised recommendation sentences.",
-  },
-];
-
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#F4F7F7] text-[#0D1B2A]">
@@ -54,12 +29,11 @@ export default function HomePage() {
           Mentor Hub · JointHub Africa
         </p>
         <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-          JointHub Africa AI modules, live for scholars and mentors.
+          Mentor Hub for scholars and mentors.
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#0D1B2A]/75">
-          Built for SimpleJoint Trust with ALU. Mentor Hub runs four integrated modules
-          on sample cohort data so Isaiah can demo matching quality, risk outreach, and NLP goal
-          analysis before the 30 August 2026 submission.
+          Built for SimpleJoint Trust with ALU. Open Mentor Hub to review opportunities,
+          mentor matching, risk outreach, and analytics on the demo cohort.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
@@ -75,26 +49,6 @@ export default function HomePage() {
             Supabase auth scaffold
           </Link>
         </div>
-
-        <div className="mt-10 grid gap-3 sm:grid-cols-3">
-          {IMPACT.map((item) => (
-            <div key={item.label} className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
-              <p className="text-2xl font-semibold tabular-nums text-[#0D1B2A]">{item.value}</p>
-              <p className="mt-1 text-sm text-[#0D1B2A]/65">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="border-t border-[#0D1B2A]/10 bg-white">
-        <div className="mx-auto grid max-w-6xl gap-4 px-6 py-12 sm:grid-cols-2">
-          {MODULES.map((module) => (
-            <article key={module.title} className="rounded-2xl border border-[#0D1B2A]/10 p-5">
-              <h2 className="text-lg font-semibold text-[#0D1B2A]">{module.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/70">{module.body}</p>
-            </article>
-          ))}
-        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-10">
@@ -108,7 +62,7 @@ export default function HomePage() {
           <p className="mt-2 max-w-2xl text-sm text-white/70">
             Demo path: sign in as scholar1@jointhub.demo, review curated opportunities, open Mentor
             Hub for the assignment matrix and session booking, then switch to admin@jointhub.demo
-            for risk outreach and analytics KPIs.
+            for risk outreach and analytics.
           </p>
           <p className="mt-4 text-xs text-white/50">
             Partners: British Council · ALX · Hood.D · A4 · JointHub Africa · ALU · @alueducation
