@@ -4,10 +4,5 @@
   "active_mentor_pairs": 11,
   "at_risk_students_flagged": 11,
   "nps_proxy": 42,
-  "scam_flags": 1,
-  "impact": {
-    "scholarships_usd": 158000,
-    "students_supported": 85,
-    "countries": 6
-  }
+  "scam_flags": 1
 }
