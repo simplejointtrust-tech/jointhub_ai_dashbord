@@ -10,7 +10,6 @@ Product app for **SimpleJoint Trust / JointHub Africa** Mentor Hub (built for Is
 - Product entrypoints:
   - `/` — JointHub Mentor Hub landing
   - `/dashboard/login` — demo email gate
-  - `/prototype` — embedded Canva Mentor Hub design (`https://canva.link/tawbtl3fowjdafd`)
   - `/dashboard` — tabbed AI dashboard (Opportunities, Mentor Hub, Dropout risk, Analytics)
   - `/api/jointhub/*` — dashboard APIs over sample Capstone datasets
   - `ml-backend/` — FastAPI Python service implementing the same four ML modules
