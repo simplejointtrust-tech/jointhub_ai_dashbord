@@ -685,6 +685,11 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
               JointHub Africa
             </p>
             <h1 className="text-lg font-semibold sm:text-xl">Mentor Hub</h1>
+            <p className="text-xs text-[#0D1B2A]/55">
+              <a href="/prototype" className="font-medium text-[#028090] underline-offset-2 hover:underline">
+                View Canva prototype
+              </a>
+            </p>
             <p className="text-xs text-white/65">
               {data.student
                 ? `${data.student.full_name} · ${data.student.programme}`
