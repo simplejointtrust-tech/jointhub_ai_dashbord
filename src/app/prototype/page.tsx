@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const CANVA_PROTOTYPE_URL = "https://canva.link/tawbtl3fowjdafd";
-const CANVA_VIEW_URL = "https://www.canva.com/design/DAHPdX_cD54/onR4VikDE4v8lmd7Hk-vtQ/view?utm_content=DAHPdX_cD54&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he91aba97a3";
-const CANVA_EMBED_URL = "https://www.canva.com/design/DAHPdX_cD54/onR4VikDE4v8lmd7Hk-vtQ/view?embed";
+const CANVA_EMBED_URL =
+  "https://www.canva.com/design/DAHPdX_cD54/onR4VikDE4v8lmd7Hk-vtQ/view?embed";
 
 export const metadata = {
   title: "Mentor Hub prototype · JointHub Africa",
@@ -66,25 +66,7 @@ export default function PrototypePage() {
           </div>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-3 text-sm">
-          <a
-            href={CANVA_VIEW_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="font-medium text-[#028090] underline-offset-2 hover:underline"
-          >
-            Full Canva view
-          </a>
-          <span className="text-[#0D1B2A]/30">·</span>
-          <a
-            href={CANVA_PROTOTYPE_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="font-medium text-[#028090] underline-offset-2 hover:underline"
-          >
-            Short link
-          </a>
-        </div>
+        <p className="mt-4 text-xs text-[#0D1B2A]/55">Source: {CANVA_PROTOTYPE_URL}</p>
       </section>
     </main>
   );
