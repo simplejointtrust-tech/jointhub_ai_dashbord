@@ -42,6 +42,13 @@ Algorithms are real (scikit-learn / scipy). Embeddings and NER use offline-safe 
 
 ## Canva Mentor Hub prototype
 
+Current shared prototype: https://canva.link/tawbtl3fowjdafd
+
+In-app routes:
+- `/prototype` full-page embed
+- Landing page section with live Canva embed
+
+
 Link `https://canva.link/je2jeixnk9s2za3` resolved to a Canva design that returned **403** without login, so visual details could not be scraped. Mentor Hub UI follows the Capstone brief + locked brand kit (Navy/Teal/Gold, dense ops layout: assigned mentor card, alternatives, matrix, booking, session log). If Isaiah can export the Canva board as PDF/PNG, a tighter visual pass can follow.
 
 ## Known gaps
