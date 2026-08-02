@@ -19,12 +19,6 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center gap-2">
             <ThemeToggle />
             <Link
-              href="/dashboard/login"
-              className="rounded-full bg-[#F4B942] px-4 py-2 text-sm font-semibold text-[#0D1B2A] hover:bg-[#e0a836]"
-            >
-              Open Mentor Hub
-            </Link>
-            <Link
               href="/login"
               className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
             >
@@ -45,6 +39,14 @@ export default function HomePage() {
           Join Mentor Hub to review opportunities, mentor matching, risk outreach, and analytics on
           the ESL cohort.
         </p>
+        <div className="mt-6">
+          <Link
+            href="/dashboard/login"
+            className="inline-flex rounded-full bg-[#F4B942] px-5 py-2.5 text-sm font-semibold text-[#0D1B2A] hover:bg-[#e0a836]"
+          >
+            Sign in
+          </Link>
+        </div>
       </section>
 
       <section className="border-t border-[#0D1B2A]/10 bg-white">
@@ -54,9 +56,8 @@ export default function HomePage() {
               <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#028090]">
                 Design reference
               </p>
-              <h2 className="mt-2 text-2xl font-semibold text-[#0D1B2A]">Mentor Hub prototype</h2>
               <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[#0D1B2A]/70">
-                Live design embedded in the app for review alongside the working Mentor Hub.
+                Live Canva design embedded in the app for review alongside the working Mentor Hub.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -80,7 +81,7 @@ export default function HomePage() {
           <div className="mt-6 overflow-hidden rounded-3xl border border-[#0D1B2A]/10 bg-[#F4F7F7] shadow-sm">
             <div className="relative w-full" style={{ paddingTop: "62.5%" }}>
               <iframe
-                title="Mentor Hub prototype"
+                title="Mentor Hub design reference"
                 src={CANVA_EMBED_URL}
                 loading="lazy"
                 allowFullScreen
