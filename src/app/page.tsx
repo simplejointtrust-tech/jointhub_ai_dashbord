@@ -2,7 +2,8 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const CANVA_PROTOTYPE_URL = "https://canva.link/tawbtl3fowjdafd";
-const CANVA_EMBED_URL = "https://www.canva.com/design/DAHPdX_cD54/onR4VikDE4v8lmd7Hk-vtQ/view?embed";
+const CANVA_EMBED_URL =
+  "https://www.canva.com/design/DAHPdX_cD54/onR4VikDE4v8lmd7Hk-vtQ/view?embed";
 
 export default function HomePage() {
   return (
@@ -17,12 +18,6 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Link
-              href="/prototype"
-              className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
-            >
-              Design prototype
-            </Link>
             <Link
               href="/dashboard/login"
               className="rounded-full bg-[#F4B942] px-4 py-2 text-sm font-semibold text-[#0D1B2A] hover:bg-[#e0a836]"
@@ -45,18 +40,6 @@ export default function HomePage() {
           mentor matching, risk outreach, and analytics on the demo cohort.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/dashboard/login"
-            className="rounded-full bg-[#028090] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#026f7d]"
-          >
-            Enter dashboard
-          </Link>
-          <Link
-            href="/prototype"
-            className="rounded-full border border-[#0D1B2A]/15 bg-white px-5 py-2.5 text-sm font-semibold text-[#0D1B2A] hover:border-[#028090]/40"
-          >
-            View Canva prototype
-          </Link>
           <Link
             href="/login"
             className="rounded-full border border-[#0D1B2A]/15 bg-white px-5 py-2.5 text-sm font-semibold text-[#0D1B2A] hover:border-[#028090]/40"
@@ -108,29 +91,7 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <p className="mt-3 text-xs text-[#0D1B2A]/55">
-            Source: {CANVA_PROTOTYPE_URL}
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 py-10">
-        <div className="rounded-3xl bg-[#0D1B2A] px-6 py-8 text-white sm:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#F4B942]">
-            CreativeTech bootcamp
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold">
-            Create With AI · 25–26 August 2026 · ALU Kigali
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm text-white/70">
-            Demo path: sign in as scholar1@jointhub.demo, review curated opportunities, open Mentor
-            Hub for the assignment matrix and session booking, then switch to admin@jointhub.demo
-            for risk outreach and analytics.
-          </p>
-          <p className="mt-4 text-xs text-white/50">
-            Partners: British Council · ALX · Hood.D · A4 · JointHub Africa · ALU · @alueducation
-            @millenniumfellows @UNAI
-          </p>
+          <p className="mt-3 text-xs text-[#0D1B2A]/55">Source: {CANVA_PROTOTYPE_URL}</p>
         </div>
       </section>
     </main>
