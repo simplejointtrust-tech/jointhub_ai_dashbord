@@ -6,7 +6,7 @@ const CANVA_EMBED_URL =
   "https://www.canva.com/design/DAHPdX_cD54/onR4VikDE4v8lmd7Hk-vtQ/view?embed";
 
 export const metadata = {
-  title: "Mentor Hub prototype · JointHub Africa",
+  title: "Design reference · JointHub Africa",
   description: "Design prototype for JointHub Africa Mentor Hub.",
 };
 
