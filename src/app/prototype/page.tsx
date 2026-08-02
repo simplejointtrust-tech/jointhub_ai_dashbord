@@ -7,7 +7,7 @@ const CANVA_EMBED_URL =
 
 export const metadata = {
   title: "Design reference · JointHub Africa",
-  description: "Design prototype for JointHub Africa Mentor Hub.",
+  description: "Canva design reference for JointHub Africa Mentor Hub.",
 };
 
 export default function PrototypePage() {
@@ -19,7 +19,7 @@ export default function PrototypePage() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F4B942]">
               SimpleJoint Trust · JointHub Africa
             </p>
-            <h1 className="text-lg font-semibold sm:text-xl">Mentor Hub prototype</h1>
+            <h1 className="text-lg font-semibold sm:text-xl">Design reference</h1>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <ThemeToggle />
@@ -33,7 +33,7 @@ export default function PrototypePage() {
               href="/dashboard/login"
               className="rounded-full bg-[#F4B942] px-4 py-2 text-sm font-semibold text-[#0D1B2A] hover:bg-[#e0a836]"
             >
-              Open Mentor Hub
+              Sign in
             </Link>
             <a
               href={CANVA_PROTOTYPE_URL}
@@ -49,14 +49,14 @@ export default function PrototypePage() {
 
       <section className="mx-auto max-w-6xl px-6 py-8">
         <p className="max-w-3xl text-sm leading-relaxed text-[#0D1B2A]/70">
-          This page embeds the shared design prototype so the team can review it inside the product
+          This page embeds the shared Canva design so the team can review it inside the product
           app. Use Open in Canva if the embed is blocked by browser permissions.
         </p>
 
         <div className="mt-6 overflow-hidden rounded-3xl border border-[#0D1B2A]/10 bg-white shadow-sm">
           <div className="relative w-full" style={{ paddingTop: "66.66%" }}>
             <iframe
-              title="Mentor Hub prototype"
+              title="Design reference"
               src={CANVA_EMBED_URL}
               loading="lazy"
               allowFullScreen
