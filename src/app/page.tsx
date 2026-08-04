@@ -34,11 +34,11 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <Link href="/" className="flex min-w-0 items-center gap-2.5">
             <Image
-              src="/brand/jointhub-logo-mark.png"
+              src="/brand/jointhub-logo.png"
               alt="JointHub Africa"
-              width={44}
-              height={44}
-              className="h-11 w-11 shrink-0 object-contain"
+              width={48}
+              height={48}
+              className="h-12 w-12 shrink-0 object-contain"
               priority
             />
             <div className="min-w-0 leading-tight">
@@ -196,7 +196,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="flex justify-center lg:justify-start">
             <Image
-              src="/brand/jointhub-logo.png"
+              src="/brand/jointhub-logo-mark.png"
               alt="JointHub Africa logo — puzzle pieces and Africa mark with JOINT HUB wordmark"
               width={500}
               height={500}
