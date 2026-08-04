@@ -36,9 +36,9 @@ export default function HomePage() {
             <Image
               src="/brand/jointhub-logo-mark.png"
               alt="JointHub Africa"
-              width={40}
-              height={40}
-              className="h-10 w-10 shrink-0 object-contain"
+              width={44}
+              height={44}
+              className="h-11 w-11 shrink-0 object-contain"
               priority
             />
             <div className="min-w-0 leading-tight">
@@ -63,12 +63,6 @@ export default function HomePage() {
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as scholar
-            </Link>
-            <Link
-              href="/dashboard/login"
-              className="inline-flex rounded-full bg-[#0F3D2E] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20] sm:px-4"
-            >
-              Sign In
             </Link>
           </div>
         </div>
@@ -164,7 +158,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E8A317]">
               Inside the Mentor Hub
             </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#0F3D2E] sm:text-3xl">
+            <h2 className="mt-2 text-nowrap text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:text-3xl">
               Built for ESL scholars first. Meet your AI Coach (Kay).
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
@@ -203,10 +197,10 @@ export default function HomePage() {
           <div className="flex justify-center lg:justify-start">
             <Image
               src="/brand/jointhub-logo.png"
-              alt="JointHub Africa logo — map of Africa in forest green, gold, amber, and earth tones"
-              width={320}
-              height={316}
-              className="h-auto w-full max-w-[280px] object-contain drop-shadow-sm sm:max-w-[320px]"
+              alt="JointHub Africa logo — puzzle pieces and Africa mark with JOINT HUB wordmark"
+              width={500}
+              height={500}
+              className="h-auto w-full max-w-[240px] object-contain drop-shadow-sm sm:max-w-[280px]"
             />
           </div>
           <div>
@@ -214,7 +208,7 @@ export default function HomePage() {
               Capstone preview
             </p>
             <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#0F3D2E] sm:text-3xl">
-              Walk the scholar path in three minutes.
+              Walk the ESL scholar path in three minutes.
             </h2>
             <ol className="mt-6 space-y-4 text-sm leading-relaxed text-[rgba(26,21,16,0.75)] sm:text-base">
               <li className="flex gap-3">
@@ -243,7 +237,7 @@ export default function HomePage() {
                 href="/dashboard/login"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#0F3D2E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0A2A20]"
               >
-                Open demo login
+                Sign In
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
               <Link
@@ -254,7 +248,8 @@ export default function HomePage() {
               </Link>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-[rgba(26,21,16,0.5)]">
-              Bootcamp: CreativeTech × SoCreative · 10–11 August 2026 (tentative) · ALX Kigali
+              Register for our ESL Bootcamp: CreativeTech × SoCreative · 24th - 25th August 2026 ·
+              ALX, Kigali, Rwanda
             </p>
           </div>
         </div>
@@ -266,9 +261,9 @@ export default function HomePage() {
             <Image
               src="/brand/jointhub-logo-mark.png"
               alt=""
-              width={36}
-              height={36}
-              className="h-9 w-9 object-contain brightness-110"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
             />
             <div>
               <p className="text-sm font-semibold">SimpleJoint Trust · JointHub Africa</p>
