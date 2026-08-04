@@ -21,7 +21,7 @@ const PATHS = [
     icon: Users,
   },
   {
-    title: "Ask JointHub Advisor",
+    title: "Ask Kay",
     body: "Eligibility, deadlines, and next steps grounded in your profile — not chatbot filler.",
     icon: MessageSquareText,
   },
@@ -165,11 +165,11 @@ export default function HomePage() {
               Inside the Mentor Hub
             </p>
             <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#0F3D2E] sm:text-3xl">
-              Built for ESL scholars first meet your AI Companion (Coach Kay)
+              Built for ESL scholars first. Meet your AI Coach (Kay).
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
-              Opportunity ranking, mentor matching, soft coaching, and Advisor answers — without
-              turning students into a surveillance dashboard.
+              Kay helps with opportunity ranking, mentor matching, soft coaching, and Advisor
+              answers — without turning students into a surveillance dashboard.
             </p>
           </div>
 
@@ -233,8 +233,8 @@ export default function HomePage() {
               <li className="flex gap-3">
                 <span className="font-semibold tabular-nums text-[#E8A317]">03</span>
                 <span>
-                  Ask <strong className="font-semibold text-[#0F3D2E]">JointHub Advisor</strong> for
-                  a personalised next action.
+                  Ask <strong className="font-semibold text-[#0F3D2E]">Kay</strong> for a
+                  personalised next action.
                 </span>
               </li>
             </ol>
