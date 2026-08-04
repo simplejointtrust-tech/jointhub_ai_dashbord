@@ -36,9 +36,9 @@ export default function HomePage() {
             <Image
               src="/brand/jointhub-logo.png"
               alt="JointHub Africa"
-              width={96}
-              height={96}
-              className="h-20 w-20 shrink-0 object-contain sm:h-24 sm:w-24"
+              width={56}
+              height={56}
+              className="h-12 w-12 shrink-0 object-contain sm:h-14 sm:w-14"
               priority
             />
             <div className="min-w-0 leading-tight">
