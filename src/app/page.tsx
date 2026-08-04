@@ -76,11 +76,13 @@ export default function HomePage() {
               Pan-African youth platform · Kigali
             </p>
             <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-[#0F3D2E] sm:text-4xl lg:text-[2.65rem] lg:leading-[1.12]">
-              Mentors, scholarships, and a clear next step for African scholars.
+              Where African scholars find opportunities, meet Mentors and have a clear next step on
+              their path to success.
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[rgba(26,21,16,0.72)] sm:text-lg">
               JointHub Africa is where ESL scholars discover opportunities, meet mentors, and stay
-              on track - built by SimpleJoint Trust with an AI companion to match and coach you.
+              on track - built by SimpleJoint Trust with an AI companion, to coach you and match you
+              to a mentor.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
