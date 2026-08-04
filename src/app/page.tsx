@@ -1,12 +1,5 @@
-import {
-  ArrowRight,
-  BookOpen,
-  Compass,
-  MessageSquareText,
-  ShieldCheck,
-  Sparkles,
-  Users,
-} from "lucide-react";
+import { ArrowRight, Compass, MessageSquareText, Users } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -16,69 +9,58 @@ const IMPACT = [
   { label: "Countries reached", value: "6+" },
 ];
 
-const MODULES = [
+const PATHS = [
   {
-    title: "Opportunities, ranked for you",
-    body: "Verified scholarships, fellowships, and programmes scored against your goals — not a generic feed.",
+    title: "Find opportunities",
+    body: "Scholarships, fellowships, and programmes ranked to your goals — not a generic feed.",
     icon: Compass,
   },
   {
-    title: "Mentor match that explains itself",
-    body: "See your assigned mentor, fit score, and why the match was made. Book a check-in in one step.",
+    title: "Meet your mentor",
+    body: "See your assigned mentor, why you match, and book a check-in in one step.",
     icon: Users,
   },
   {
-    title: "JointHub Advisor",
-    body: "Ask eligibility, deadline, and next-step questions grounded in your profile and Capstone AI outputs.",
+    title: "Ask JointHub Advisor",
+    body: "Eligibility, deadlines, and next steps grounded in your profile — not chatbot filler.",
     icon: MessageSquareText,
-  },
-  {
-    title: "Stay on track",
-    body: "Applications pipeline, soft coaching when you risk falling behind, and community energy from peers.",
-    icon: BookOpen,
-  },
-];
-
-const STEPS = [
-  {
-    n: "01",
-    title: "Enter as a scholar",
-    body: "Use the Capstone demo login to step into a real ESL scholar workspace.",
-  },
-  {
-    n: "02",
-    title: "Review your path",
-    body: "Overview shows what matters this week: mentor, ranked opportunities, applications.",
-  },
-  {
-    n: "03",
-    title: "Ask the Advisor",
-    body: "Chat with JointHub Advisor for personalised next actions — no generic chatbot filler.",
   },
 ];
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#F4F7F7] text-[#0D1B2A]">
-      <header className="border-b border-[#0D1B2A]/10 bg-[#0D1B2A] text-white">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
-          <div className="min-w-0">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F4B942]">
-              SimpleJoint Trust · JointHub Africa
-            </p>
-            <p className="truncate text-sm text-white/70">AI Mentor Hub for ESL scholars</p>
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
+    <main className="min-h-screen bg-white text-[#1A1510]">
+      <header className="sticky top-0 z-30 border-b border-[rgba(15,61,46,0.10)] bg-white/95 backdrop-blur-sm">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+          <Link href="/" className="flex min-w-0 items-center gap-2.5">
+            <Image
+              src="/brand/jointhub-logo-mark.png"
+              alt="JointHub Africa"
+              width={40}
+              height={40}
+              className="h-10 w-10 shrink-0 object-contain"
+              priority
+            />
+            <div className="min-w-0 leading-tight">
+              <p className="truncate text-sm font-semibold tracking-tight text-[#0F3D2E]">
+                JointHub Africa
+              </p>
+              <p className="truncate text-xs text-[rgba(26,21,16,0.55)]">
+                SimpleJoint Trust · Mentor Hub
+              </p>
+            </div>
+          </Link>
+          <div className="flex flex-wrap items-center justify-end gap-2">
             <ThemeToggle />
             <Link
               href="/login"
-              className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="hidden rounded-full border border-[rgba(15,61,46,0.18)] px-4 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:inline-flex"
             >
               Join as scholar
             </Link>
             <Link
               href="/dashboard/login"
-              className="rounded-full bg-[#F4B942] px-4 py-2 text-sm font-semibold text-[#0D1B2A] transition hover:bg-[#e0a836]"
+              className="inline-flex rounded-full bg-[#0F3D2E] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20]"
             >
               Capstone demo login
             </Link>
@@ -86,161 +68,218 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section className="relative overflow-hidden border-b border-[#0D1B2A]/10 bg-[#0D1B2A] text-white">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-40"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 60% at 85% 20%, rgba(2,128,144,0.45), transparent 55%), radial-gradient(ellipse 50% 40% at 10% 80%, rgba(244,185,66,0.18), transparent 50%)",
-          }}
-        />
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:py-20">
-          <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#F4B942]">
-              <Sparkles className="h-3.5 w-3.5" aria-hidden />
-              Capstone II · staging demo
+      {/* Photo-led hero — white page, real cohort image, logo colours */}
+      <section className="border-b border-[rgba(15,61,46,0.10)] bg-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:py-14">
+          <div className="order-2 lg:order-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E07020]">
+              Pan-African youth platform · Kigali
             </p>
-            <h1 className="mt-5 max-w-xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
-              Your next mentor, opportunity, and next step — in one hub.
+            <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-[#0F3D2E] sm:text-4xl lg:text-[2.65rem] lg:leading-[1.12]">
+              Mentors, scholarships, and a clear next step for African scholars.
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">
-              JointHub Africa’s AI Mentor Hub helps ESL scholars discover verified opportunities,
-              match with the right mentor, and stay on track with personalised guidance. Built for
-              African youth first. Powered by Capstone AI underneath.
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-[rgba(26,21,16,0.72)] sm:text-lg">
+              JointHub Africa is where ESL scholars discover opportunities, meet mentors, and stay
+              on track — built by SimpleJoint Trust with Capstone AI under the hood.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="/dashboard/login"
-                className="inline-flex items-center gap-2 rounded-full bg-[#028090] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#026f7d]"
+                className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#E07020] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9611a]"
               >
                 Enter Mentor Hub
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
               <Link
                 href="/login"
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[rgba(15,61,46,0.2)] bg-white px-5 py-3 text-sm font-semibold text-[#0F3D2E] transition hover:bg-[#FBF7F0]"
               >
                 Join as scholar
               </Link>
-              <Link
-                href="/prototype"
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                View design reference
-              </Link>
             </div>
-            <p className="mt-4 text-xs text-white/55">
-              Demo path: scholar1@jointhub.demo · admin@jointhub.demo · no production publish
-              without Isaiah’s sign-off
+            <p className="mt-4 text-xs leading-relaxed text-[rgba(26,21,16,0.5)]">
+              Demo: scholar1@jointhub.demo · admin@jointhub.demo · preview only, no production
+              publish
             </p>
           </div>
 
-          <aside className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm sm:p-6">
-            <div className="flex items-center gap-2 text-[#F4B942]">
-              <ShieldCheck className="h-4 w-4" aria-hidden />
-              <p className="text-xs font-semibold uppercase tracking-[0.16em]">Who this is for</p>
-            </div>
-            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-white/80">
-              <li>
-                <span className="font-semibold text-white">ESL scholars</span> — personalised
-                opportunities, mentor match, applications, Advisor chat
-              </li>
-              <li>
-                <span className="font-semibold text-white">Programme admins</span> — cohort risk,
-                matching quality, Capstone model evidence
-              </li>
-              <li>
-                <span className="font-semibold text-white">Mentors</span> — first-class role on the
-                roadmap; represented in matching today
-              </li>
-            </ul>
-            <div className="mt-6 grid grid-cols-3 gap-2 border-t border-white/10 pt-5">
-              {IMPACT.map((item) => (
-                <div key={item.label}>
-                  <p className="text-lg font-semibold tabular-nums text-[#F4B942] sm:text-xl">
-                    {item.value}
+          <div className="order-1 lg:order-2">
+            <figure className="overflow-hidden rounded-2xl border border-[rgba(15,61,46,0.12)] bg-[#FBF7F0] shadow-[0_20px_50px_-28px_rgba(58,36,24,0.45)]">
+              <div className="relative aspect-[3/2] w-full">
+                <Image
+                  src="/brand/scholars-hero.jpg"
+                  alt="JointHub Africa scholars and partners gathered on a staircase, smiling and waving"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 560px"
+                  className="object-cover object-[50%_35%]"
+                />
+              </div>
+              <figcaption className="flex items-center gap-3 border-t border-[rgba(15,61,46,0.08)] px-4 py-3">
+                <Image
+                  src="/brand/jointhub-logo-mark.png"
+                  alt=""
+                  width={36}
+                  height={36}
+                  className="h-9 w-9 object-contain"
+                />
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-[#0F3D2E]">Our community</p>
+                  <p className="text-xs text-[rgba(26,21,16,0.55)]">
+                    Scholars, mentors, and partners — lead with service, build with trust
                   </p>
-                  <p className="mt-0.5 text-[11px] leading-snug text-white/55">{item.label}</p>
                 </div>
-              ))}
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#028090]">
-            Inside the hub
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
-            Scholar-first product. Capstone AI underneath.
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-[#0D1B2A]/70 sm:text-base">
-            Canva defines how the scholar experience should feel. Capstone modules power ranking,
-            mentor assignment, soft coaching, and Advisor answers — without exposing surveillance
-            tooling to students.
-          </p>
-        </div>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {MODULES.map((mod) => {
-            const Icon = mod.icon;
-            return (
-              <article
-                key={mod.title}
-                className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#028090]/10 text-[#028090]">
-                  <Icon className="h-5 w-5" aria-hidden />
-                </div>
-                <h3 className="mt-4 text-base font-semibold">{mod.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/70">{mod.body}</p>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="border-y border-[#0D1B2A]/10 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#028090]">
-            Try the demo
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
-            Three steps for Capstone judges
-          </h2>
-          <ol className="mt-8 grid gap-4 md:grid-cols-3">
-            {STEPS.map((step) => (
-              <li key={step.n} className="rounded-2xl border border-[#0D1B2A]/10 bg-[#F4F7F7] p-5">
-                <p className="text-xs font-semibold tabular-nums text-[#F4B942]">{step.n}</p>
-                <h3 className="mt-2 text-base font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/70">{step.body}</p>
-              </li>
-            ))}
-          </ol>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/dashboard/login"
-              className="inline-flex items-center gap-2 rounded-full bg-[#0D1B2A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#162a3d]"
-            >
-              Open demo login
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </Link>
-            <Link
-              href="/prototype"
-              className="inline-flex items-center gap-2 rounded-full border border-[#0D1B2A]/15 px-5 py-3 text-sm font-semibold text-[#0D1B2A] transition hover:border-[#028090]/40"
-            >
-              Canva design reference
-            </Link>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      <footer className="border-t border-[#0D1B2A]/10 bg-[#0D1B2A] text-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>SimpleJoint Trust · Kigali · Lead with service. Build with trust.</p>
-          <p className="text-xs">
+      {/* Impact — quiet numbers, not metric-card grid */}
+      <section className="border-b border-[rgba(15,61,46,0.10)] bg-[#FBF7F0]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-end sm:justify-between sm:px-6">
+          <div className="max-w-md">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0F3D2E]/70">
+              Impact to date
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[rgba(26,21,16,0.68)]">
+              Real outcomes from SimpleJoint Trust programmes across Africa — not demo stats.
+            </p>
+          </div>
+          <dl className="grid grid-cols-3 gap-6 sm:gap-10">
+            {IMPACT.map((item) => (
+              <div key={item.label}>
+                <dt className="text-[11px] font-medium uppercase tracking-wide text-[rgba(26,21,16,0.5)]">
+                  {item.label}
+                </dt>
+                <dd className="mt-1 text-2xl font-semibold tabular-nums tracking-tight text-[#0F3D2E] sm:text-3xl">
+                  {item.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* What you get — open layout, not deck slides */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E8A317]">
+              Inside the Mentor Hub
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#0F3D2E] sm:text-3xl">
+              Built for scholars first. Capstone AI underneath.
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
+              Opportunity ranking, mentor matching, soft coaching, and Advisor answers — without
+              turning students into a surveillance dashboard.
+            </p>
+          </div>
+
+          <ul className="mt-10 divide-y divide-[rgba(15,61,46,0.10)] border-y border-[rgba(15,61,46,0.10)]">
+            {PATHS.map((item) => {
+              const Icon = item.icon;
+              return (
+                <li
+                  key={item.title}
+                  className="grid gap-3 py-6 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-6"
+                >
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0F3D2E]/[0.08] text-[#0F3D2E]">
+                    <Icon className="h-5 w-5" aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#0F3D2E]">{item.title}</h3>
+                    <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[rgba(26,21,16,0.68)] sm:text-base">
+                      {item.body}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+
+      {/* Try path + logo brand block */}
+      <section className="border-t border-[rgba(15,61,46,0.10)] bg-[#FBF7F0]">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="flex justify-center lg:justify-start">
+            <Image
+              src="/brand/jointhub-logo.png"
+              alt="JointHub Africa logo — map of Africa in forest green, gold, amber, and earth tones"
+              width={320}
+              height={316}
+              className="h-auto w-full max-w-[280px] object-contain drop-shadow-sm sm:max-w-[320px]"
+            />
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E07020]">
+              Capstone preview
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#0F3D2E] sm:text-3xl">
+              Walk the scholar path in three minutes.
+            </h2>
+            <ol className="mt-6 space-y-4 text-sm leading-relaxed text-[rgba(26,21,16,0.75)] sm:text-base">
+              <li className="flex gap-3">
+                <span className="font-semibold tabular-nums text-[#E8A317]">01</span>
+                <span>
+                  Open <strong className="font-semibold text-[#0F3D2E]">Capstone demo login</strong>{" "}
+                  and enter as a scholar.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="font-semibold tabular-nums text-[#E8A317]">02</span>
+                <span>
+                  Review Overview: mentor, ranked opportunities, and applications in progress.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="font-semibold tabular-nums text-[#E8A317]">03</span>
+                <span>
+                  Ask <strong className="font-semibold text-[#0F3D2E]">JointHub Advisor</strong> for
+                  a personalised next action.
+                </span>
+              </li>
+            </ol>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/dashboard/login"
+                className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#0F3D2E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0A2A20]"
+              >
+                Open demo login
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+              <Link
+                href="/prototype"
+                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[rgba(15,61,46,0.2)] px-5 py-3 text-sm font-semibold text-[#0F3D2E] transition hover:bg-white"
+              >
+                Canva design reference
+              </Link>
+            </div>
+            <p className="mt-5 text-xs leading-relaxed text-[rgba(26,21,16,0.5)]">
+              Bootcamp: CreativeTech × SoCreative · 10–11 August 2026 (tentative) · ALX Kigali
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-[#0F3D2E] text-white">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/brand/jointhub-logo-mark.png"
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain brightness-110"
+            />
+            <div>
+              <p className="text-sm font-semibold">SimpleJoint Trust · JointHub Africa</p>
+              <p className="text-xs text-white/65">Kigali · Lead with service. Build with trust.</p>
+            </div>
+          </div>
+          <p className="max-w-md text-xs leading-relaxed text-white/60 sm:text-right">
             Partners: British Council · ALX · Hood.D · A4 · ALU · Creative backbone: Hood & Dot
           </p>
         </div>
