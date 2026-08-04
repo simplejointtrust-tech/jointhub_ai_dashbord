@@ -36,9 +36,9 @@ export default function HomePage() {
             <Image
               src="/brand/jointhub-logo.png"
               alt="JointHub Africa"
-              width={48}
-              height={48}
-              className="h-12 w-12 shrink-0 object-contain"
+              width={96}
+              height={96}
+              className="h-20 w-20 shrink-0 object-contain sm:h-24 sm:w-24"
               priority
             />
             <div className="min-w-0 leading-tight">
@@ -197,10 +197,10 @@ export default function HomePage() {
           <div className="flex justify-center lg:justify-start">
             <Image
               src="/brand/jointhub-logo-mark.png"
-              alt="JointHub Africa logo — puzzle pieces and Africa mark with JOINT HUB wordmark"
+              alt="JointHub Africa logo — map of Africa with JOINT Hub wordmark"
               width={500}
               height={500}
-              className="h-auto w-full max-w-[240px] object-contain drop-shadow-sm sm:max-w-[280px]"
+              className="h-auto w-full max-w-[280px] object-contain drop-shadow-sm sm:max-w-[320px]"
             />
           </div>
           <div>
@@ -266,7 +266,7 @@ export default function HomePage() {
               className="h-11 w-auto shrink-0 object-contain"
             />
             <div>
-              <p className="text-sm font-semibold">SimpleJoint Trust · JointHub Africa</p>
+              <p className="text-sm font-semibold">SimpleJoint Trust</p>
               <p className="text-xs text-white/65">Kigali · Lead with service. Build with trust.</p>
             </div>
           </div>
