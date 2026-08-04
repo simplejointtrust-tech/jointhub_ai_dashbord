@@ -89,23 +89,14 @@ export default function HomePage() {
               on track - built by SimpleJoint Trust with an AI companion to match and coach.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link
-                href="/dashboard/login"
+              <a
+                href="https://jointhub.simplejoint.org/"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#E07020] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9611a]"
               >
-                Enter Dashboard
+                Explore Opportunities
                 <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-              <Link
-                href="/login?role=scholar"
-                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[rgba(15,61,46,0.2)] bg-white px-5 py-3 text-sm font-semibold text-[#0F3D2E] transition hover:bg-[#FBF7F0]"
-              >
-                Join as scholar
-              </Link>
+              </a>
             </div>
-            <p className="mt-4 text-xs leading-relaxed text-[rgba(26,21,16,0.5)]">
-              Scholar view: scholar1@jointhub.demo · Admin view: admin@jointhub.demo · preview only
-            </p>
           </div>
 
           <div className="order-1 lg:order-2">
@@ -174,7 +165,7 @@ export default function HomePage() {
               Inside the Mentor Hub
             </p>
             <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#0F3D2E] sm:text-3xl">
-              Built for scholars first. Capstone AI underneath.
+              Built for ESL scholars first meet your AI Companion (Coach Kay)
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
               Opportunity ranking, mentor matching, soft coaching, and Advisor answers — without
