@@ -255,7 +255,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="bg-[#0F3D2E] text-white">
+      <footer className="bg-black text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="flex items-center gap-3">
             <Image
