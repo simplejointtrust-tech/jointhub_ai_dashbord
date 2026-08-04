@@ -107,14 +107,14 @@ export default function HomePage() {
               </div>
               <figcaption className="flex items-center gap-3 border-t border-[rgba(15,61,46,0.08)] px-4 py-3">
                 <Image
-                  src="/brand/jointhub-logo-mark.png"
-                  alt=""
-                  width={36}
-                  height={36}
-                  className="h-9 w-9 object-contain"
+                  src="/brand/simplejoint-trust-logo.png"
+                  alt="SimpleJoint Trust"
+                  width={48}
+                  height={45}
+                  className="h-10 w-auto shrink-0 object-contain"
                 />
                 <div className="min-w-0">
-                  <p className="text-sm font-semibold text-[#0F3D2E]">Our community</p>
+                  <p className="text-sm font-semibold text-[#0F3D2E]">Our ESL community</p>
                   <p className="text-xs text-[rgba(26,21,16,0.55)]">
                     Scholars, mentors, and partners — lead with service, build with trust
                   </p>
@@ -259,11 +259,11 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="flex items-center gap-3">
             <Image
-              src="/brand/jointhub-logo-mark.png"
-              alt=""
-              width={40}
-              height={40}
-              className="h-10 w-10 object-contain"
+              src="/brand/simplejoint-trust-logo.png"
+              alt="SimpleJoint Trust"
+              width={52}
+              height={49}
+              className="h-11 w-auto shrink-0 object-contain"
             />
             <div>
               <p className="text-sm font-semibold">SimpleJoint Trust · JointHub Africa</p>
