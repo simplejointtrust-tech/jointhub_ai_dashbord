@@ -53,16 +53,22 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-end gap-2">
             <ThemeToggle />
             <Link
-              href="/login"
-              className="hidden rounded-full border border-[rgba(15,61,46,0.18)] px-4 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:inline-flex"
+              href="/login?role=mentor"
+              className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
+            >
+              Join as Mentor
+            </Link>
+            <Link
+              href="/login?role=scholar"
+              className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as scholar
             </Link>
             <Link
               href="/dashboard/login"
-              className="inline-flex rounded-full bg-[#0F3D2E] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20]"
+              className="inline-flex rounded-full bg-[#0F3D2E] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20] sm:px-4"
             >
-              Capstone demo login
+              Sign In
             </Link>
           </div>
         </div>
@@ -80,26 +86,25 @@ export default function HomePage() {
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[rgba(26,21,16,0.72)] sm:text-lg">
               JointHub Africa is where ESL scholars discover opportunities, meet mentors, and stay
-              on track — built by SimpleJoint Trust with Capstone AI under the hood.
+              on track - built by SimpleJoint Trust with an AI companion to match and coach.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="/dashboard/login"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#E07020] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9611a]"
               >
-                Enter Mentor Hub
+                Enter Dashboard
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
               <Link
-                href="/login"
+                href="/login?role=scholar"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[rgba(15,61,46,0.2)] bg-white px-5 py-3 text-sm font-semibold text-[#0F3D2E] transition hover:bg-[#FBF7F0]"
               >
                 Join as scholar
               </Link>
             </div>
             <p className="mt-4 text-xs leading-relaxed text-[rgba(26,21,16,0.5)]">
-              Demo: scholar1@jointhub.demo · admin@jointhub.demo · preview only, no production
-              publish
+              Scholar view: scholar1@jointhub.demo · Admin view: admin@jointhub.demo · preview only
             </p>
           </div>
 
@@ -224,8 +229,8 @@ export default function HomePage() {
               <li className="flex gap-3">
                 <span className="font-semibold tabular-nums text-[#E8A317]">01</span>
                 <span>
-                  Open <strong className="font-semibold text-[#0F3D2E]">Capstone demo login</strong>{" "}
-                  and enter as a scholar.
+                  Open <strong className="font-semibold text-[#0F3D2E]">Sign In</strong> and enter
+                  as a scholar.
                 </span>
               </li>
               <li className="flex gap-3">
