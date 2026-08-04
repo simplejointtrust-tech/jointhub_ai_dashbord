@@ -80,7 +80,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[rgba(26,21,16,0.72)] sm:text-lg">
               JointHub Africa is where ESL scholars discover opportunities, meet mentors, and stay
-              on track - built by SimpleJoint Trust with an AI companion to match and coach.
+              on track - built by SimpleJoint Trust with an AI companion to match and coach you.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
