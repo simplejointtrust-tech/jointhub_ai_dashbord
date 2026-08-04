@@ -13,9 +13,9 @@ import {
 } from "@/lib/jointhub/data-store";
 import {
   getCommunityFeed,
-  getScholarApplications,
-  getScholarOverview,
-} from "@/lib/jointhub/scholar-experience";
+  getLeaderApplications,
+  getLeaderOverview,
+} from "@/lib/jointhub/leader-experience";
 import type { DashboardBundle, MentorshipPayload } from "@/lib/jointhub/types";
 
 export const runtime = "nodejs";
@@ -95,8 +95,8 @@ export async function GET(request: Request) {
           country: s.country,
         }))
       : undefined,
-    overview: overviewStudentId ? getScholarOverview(overviewStudentId) : null,
-    applications: overviewStudentId ? getScholarApplications(overviewStudentId) : [],
+    overview: overviewStudentId ? getLeaderOverview(overviewStudentId) : null,
+    applications: overviewStudentId ? getLeaderApplications(overviewStudentId) : [],
     community: getCommunityFeed(overviewStudentId),
   });
 }

@@ -2,12 +2,12 @@
   {
     "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
     "full_name": "Amina Okoro",
-    "email": "scholar1@jointhub.demo",
+    "email": "leader1@jointhub.demo",
     "country": "Rwanda",
     "campus": "Remote / Diaspora",
-    "programme": "ESL Scholar",
+    "programme": "ESL Leader",
     "career_stage": 3,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "data_ai",
       "music_arts",
@@ -42,12 +42,12 @@
   {
     "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a",
     "full_name": "Kwame Mensah",
-    "email": "scholar2@jointhub.demo",
+    "email": "leader2@jointhub.demo",
     "country": "Kenya",
     "campus": "Remote / Diaspora",
-    "programme": "ESL Scholar",
+    "programme": "ESL Leader",
     "career_stage": 2,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "health",
       "music_arts"
@@ -80,12 +80,12 @@
   {
     "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b",
     "full_name": "Chiamaka Diallo",
-    "email": "scholar3@jointhub.demo",
+    "email": "leader3@jointhub.demo",
     "country": "Nigeria",
     "campus": "ALU Mauritius",
     "programme": "University Partner",
     "career_stage": 2,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "creative_tech",
       "health"
@@ -118,12 +118,12 @@
   {
     "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
     "full_name": "Thabo Nkrumah",
-    "email": "scholar4@jointhub.demo",
+    "email": "leader4@jointhub.demo",
     "country": "Ghana",
     "campus": "Remote / Diaspora",
-    "programme": "ESL Scholar",
+    "programme": "ESL Leader",
     "career_stage": 5,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "leadership",
       "finance",
@@ -159,12 +159,12 @@
   {
     "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833",
     "full_name": "Fatou Abebe",
-    "email": "scholar5@jointhub.demo",
+    "email": "leader5@jointhub.demo",
     "country": "Uganda",
     "campus": "Remote / Diaspora",
     "programme": "CreativeTech Bootcamp",
     "career_stage": 1,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "media_film",
       "social_impact",
@@ -198,12 +198,12 @@
   {
     "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
     "full_name": "Ibrahim Mwangi",
-    "email": "scholar6@jointhub.demo",
+    "email": "leader6@jointhub.demo",
     "country": "South Africa",
     "campus": "ALU Kigali",
     "programme": "JointHub Fellow",
     "career_stage": 2,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "entrepreneurship",
       "health"
@@ -236,12 +236,12 @@
   {
     "student_id": "3b8dd516-f0c2-476d-88c9-29ba5731a0a1",
     "full_name": "Nia Okafor",
-    "email": "scholar7@jointhub.demo",
+    "email": "leader7@jointhub.demo",
     "country": "Senegal",
     "campus": "Remote / Diaspora",
     "programme": "University Partner",
     "career_stage": 1,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "media_film",
       "agri_food",
@@ -276,12 +276,12 @@
   {
     "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
     "full_name": "Oluwaseun Kamau",
-    "email": "scholar8@jointhub.demo",
+    "email": "leader8@jointhub.demo",
     "country": "Ethiopia",
     "campus": "ALU Kigali",
     "programme": "University Partner",
     "career_stage": 3,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "finance",
       "climate_env",
@@ -317,12 +317,12 @@
   {
     "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
     "full_name": "Zuri Traore",
-    "email": "scholar9@jointhub.demo",
+    "email": "leader9@jointhub.demo",
     "country": "Rwanda",
     "campus": "ALU Kigali",
     "programme": "CreativeTech Bootcamp",
     "career_stage": 4,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "music_arts",
       "agri_food"
@@ -355,12 +355,12 @@
   {
     "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
     "full_name": "Kofi Dlamini",
-    "email": "scholar10@jointhub.demo",
+    "email": "leader10@jointhub.demo",
     "country": "Kenya",
     "campus": "ALU Kigali",
-    "programme": "ESL Scholar",
+    "programme": "ESL Leader",
     "career_stage": 2,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "media_film",
       "finance",
@@ -395,12 +395,12 @@
   {
     "student_id": "4404bc54-5468-46aa-95da-738a784bb119",
     "full_name": "Aisha Boateng",
-    "email": "scholar11@jointhub.demo",
+    "email": "leader11@jointhub.demo",
     "country": "Nigeria",
     "campus": "Remote / Diaspora",
     "programme": "JointHub Fellow",
     "career_stage": 2,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "creative_tech",
       "data_ai",
@@ -435,12 +435,12 @@
   {
     "student_id": "afe20b59-9dab-4d2b-90cf-b55d23be4cf0",
     "full_name": "Jelani Nkosi",
-    "email": "scholar12@jointhub.demo",
+    "email": "leader12@jointhub.demo",
     "country": "Ghana",
     "campus": "ALU Mauritius",
     "programme": "University Partner",
     "career_stage": 1,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "music_arts",
       "agri_food",
@@ -475,12 +475,12 @@
   {
     "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
     "full_name": "Mariam Adebayo",
-    "email": "scholar13@jointhub.demo",
+    "email": "leader13@jointhub.demo",
     "country": "Uganda",
     "campus": "ALU Mauritius",
-    "programme": "ESL Scholar",
+    "programme": "ESL Leader",
     "career_stage": 1,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "leadership",
       "data_ai"
@@ -513,12 +513,12 @@
   {
     "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
     "full_name": "Tunde Kone",
-    "email": "scholar14@jointhub.demo",
+    "email": "leader14@jointhub.demo",
     "country": "South Africa",
     "campus": "ALU Mauritius",
     "programme": "University Partner",
     "career_stage": 4,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "media_film",
       "climate_env",
@@ -553,12 +553,12 @@
   {
     "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
     "full_name": "Sanaa Mugisha",
-    "email": "scholar15@jointhub.demo",
+    "email": "leader15@jointhub.demo",
     "country": "Senegal",
     "campus": "ALU Kigali",
-    "programme": "ESL Scholar",
+    "programme": "ESL Leader",
     "career_stage": 7,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "data_ai",
       "health",
@@ -593,12 +593,12 @@
   {
     "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
     "full_name": "Bongani Okoro",
-    "email": "scholar16@jointhub.demo",
+    "email": "leader16@jointhub.demo",
     "country": "Ethiopia",
     "campus": "Remote / Diaspora",
     "programme": "CreativeTech Bootcamp",
     "career_stage": 5,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "design_ux",
       "health",
@@ -632,12 +632,12 @@
   {
     "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
     "full_name": "Lindiwe Mensah",
-    "email": "scholar17@jointhub.demo",
+    "email": "leader17@jointhub.demo",
     "country": "Rwanda",
     "campus": "ALU Mauritius",
     "programme": "JointHub Fellow",
     "career_stage": 2,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "climate_env",
       "media_film",
@@ -672,12 +672,12 @@
   {
     "student_id": "c4031050-5ea6-46e6-8332-517a85594ea6",
     "full_name": "Yaw Diallo",
-    "email": "scholar18@jointhub.demo",
+    "email": "leader18@jointhub.demo",
     "country": "Kenya",
     "campus": "ALU Kigali",
     "programme": "JointHub Fellow",
     "career_stage": 2,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "entrepreneurship",
       "design_ux"
@@ -710,12 +710,12 @@
   {
     "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
     "full_name": "Adaeze Nkrumah",
-    "email": "scholar19@jointhub.demo",
+    "email": "leader19@jointhub.demo",
     "country": "Nigeria",
     "campus": "ALU Mauritius",
     "programme": "CreativeTech Bootcamp",
     "career_stage": 4,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "entrepreneurship",
       "finance",
@@ -751,12 +751,12 @@
   {
     "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
     "full_name": "Emeka Abebe",
-    "email": "scholar20@jointhub.demo",
+    "email": "leader20@jointhub.demo",
     "country": "Ghana",
     "campus": "Remote / Diaspora",
     "programme": "University Partner",
     "career_stage": 7,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "data_ai",
       "agri_food",
@@ -791,12 +791,12 @@
   {
     "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
     "full_name": "Naledi Mwangi",
-    "email": "scholar21@jointhub.demo",
+    "email": "leader21@jointhub.demo",
     "country": "Uganda",
     "campus": "Remote / Diaspora",
     "programme": "CreativeTech Bootcamp",
     "career_stage": 4,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "health",
       "data_ai",
@@ -832,12 +832,12 @@
   {
     "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
     "full_name": "Sefu Okafor",
-    "email": "scholar22@jointhub.demo",
+    "email": "leader22@jointhub.demo",
     "country": "South Africa",
     "campus": "ALU Kigali",
     "programme": "JointHub Fellow",
     "career_stage": 4,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "media_film",
       "social_impact",
@@ -873,12 +873,12 @@
   {
     "student_id": "fa92f34f-963b-4901-8889-1879d28029d7",
     "full_name": "Imani Kamau",
-    "email": "scholar23@jointhub.demo",
+    "email": "leader23@jointhub.demo",
     "country": "Senegal",
     "campus": "ALU Kigali",
     "programme": "CreativeTech Bootcamp",
     "career_stage": 2,
-    "scholar_status": true,
+    "leader_status": true,
     "interest_tags": [
       "climate_env",
       "data_ai"
@@ -912,12 +912,12 @@
   {
     "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
     "full_name": "Dakarai Traore",
-    "email": "scholar24@jointhub.demo",
+    "email": "leader24@jointhub.demo",
     "country": "Ethiopia",
     "campus": "ALU Kigali",
     "programme": "JointHub Fellow",
     "career_stage": 1,
-    "scholar_status": false,
+    "leader_status": false,
     "interest_tags": [
       "climate_env",
       "entrepreneurship",

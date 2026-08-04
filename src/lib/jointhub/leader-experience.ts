@@ -1,5 +1,5 @@
 /**
- * Scholar-facing experience helpers derived from Capstone sample data.
+ * Leader-facing experience helpers derived from Capstone sample data.
  * Applications and community are deterministic demo surfaces so judges can
  * walk Canva/tunnel IA without a separate backend.
  */
@@ -23,7 +23,7 @@ import type {
 
 export type ApplicationStage = "active" | "under_review" | "interview" | "accepted";
 
-export type ScholarApplication = {
+export type LeaderApplication = {
   application_id: string;
   opp_id: string;
   title: string;
@@ -46,7 +46,7 @@ export type CommunityPost = {
   when: string;
 };
 
-export type ScholarOverview = {
+export type LeaderOverview = {
   greeting_name: string;
   goal_text: string;
   interest_tags: string[];
@@ -98,7 +98,7 @@ function hashSeed(input: string): number {
   return hash;
 }
 
-export function getScholarApplications(studentId: string): ScholarApplication[] {
+export function getLeaderApplications(studentId: string): LeaderApplication[] {
   const recs = getRecommendationsMap()[studentId] ?? [];
   return recs.slice(0, 4).map((item, index) => {
     const stage = STAGE_CYCLE[(hashSeed(studentId) + index) % STAGE_CYCLE.length];
@@ -120,14 +120,14 @@ export function getScholarApplications(studentId: string): ScholarApplication[] 
 
 export function getCommunityPosts(student: StudentProfile | null): CommunityPost[] {
   const country = student?.country ?? "Africa";
-  const firstName = student?.full_name?.split(" ")[0] ?? "Scholar";
+  const firstName = student?.full_name?.split(" ")[0] ?? "Leader";
   return [
     {
       post_id: "c1",
       author: "ESL Peer Circle",
       role_label: "Community",
       title: "Essay review pods this Friday",
-      body: `Scholars in ${country} are pairing for 25-minute essay reviews before the next fellowship wave. Bring one paragraph and one question.`,
+      body: `Leaders in ${country} are pairing for 25-minute essay reviews before the next fellowship wave. Bring one paragraph and one question.`,
       tag: "Masterclass",
       when: "Today",
     },
@@ -161,7 +161,7 @@ function daysUntil(deadline: string): number | null {
   return diff;
 }
 
-export function getScholarOverview(studentId: string | null): ScholarOverview | null {
+export function getLeaderOverview(studentId: string | null): LeaderOverview | null {
   if (!studentId) {
     return null;
   }
@@ -179,7 +179,7 @@ export function getScholarOverview(studentId: string | null): ScholarOverview | 
     .sort((a, b) => b.session_date.localeCompare(a.session_date));
   const nextSession = sessions.find((row) => row.status === "scheduled") ?? sessions[0] ?? null;
   const recommendations = getRecommendationsMap()[studentId] ?? [];
-  const applications = getScholarApplications(studentId);
+  const applications = getLeaderApplications(studentId);
   const risk = getRiskRows().find((row) => row.student_id === studentId);
   const sentence =
     getRecommendationSentenceMap()[studentId] ??
@@ -191,7 +191,7 @@ export function getScholarOverview(studentId: string | null): ScholarOverview | 
     .filter((value): value is number => value !== null)
     .sort((a, b) => a - b)[0];
 
-  let coaching: ScholarOverview["coaching"] = {
+  let coaching: LeaderOverview["coaching"] = {
     level: "steady",
     message: "You are on track. Keep one application moving and book your next mentor touchpoint.",
     cta: "Review opportunities",
@@ -290,7 +290,7 @@ export type AdvisorContext = {
   recommendations: Recommendation[];
   assignment: MentorAssignment | null;
   alternatives: MentorTop3[];
-  applications: ScholarApplication[];
+  applications: LeaderApplication[];
   risk: RiskRow | null;
   sentence: string | null;
 };
@@ -307,7 +307,7 @@ export function buildAdvisorContext(
     ? (getMentorship().assignments.find((row) => row.student_id === studentId) ?? null)
     : null;
   const alternatives = getMentorAlternatives(studentId);
-  const applications = studentId ? getScholarApplications(studentId) : [];
+  const applications = studentId ? getLeaderApplications(studentId) : [];
   const risk = studentId
     ? (getRiskRows().find((row) => row.student_id === studentId) ?? null)
     : null;
@@ -346,7 +346,7 @@ export function answerAdvisorQuestion(question: string, context: AdvisorContext)
 
   if (/(opportunit|scholarship|fellowship|recommend|match|rank)/.test(q)) {
     if (!topOpp) {
-      return "I do not have ranked opportunities for this account yet. Sign in as a scholar demo user to load personalised matches.";
+      return "I do not have ranked opportunities for this account yet. Sign in as a leader demo user to load personalised matches.";
     }
     const others = context.recommendations
       .slice(1, 3)
@@ -365,7 +365,7 @@ export function answerAdvisorQuestion(question: string, context: AdvisorContext)
 
   if (/(mentor|session|book|check-?in)/.test(q)) {
     if (!mentor) {
-      return "No assigned mentor is loaded for this account. Admin can focus a scholar, or sign in as scholar1@jointhub.demo.";
+      return "No assigned mentor is loaded for this account. Admin can focus a leader, or sign in as leader1@jointhub.demo.";
     }
     const alt = context.alternatives[0];
     return [
@@ -402,7 +402,7 @@ export function answerAdvisorQuestion(question: string, context: AdvisorContext)
 
   if (/(risk|dropout|behind|coaching|stuck)/.test(q)) {
     if (context.role === "admin" && !student) {
-      return "Admin view: open Dropout risk for the full cohort table and outreach queue. Scholars only receive soft coaching, not surveillance-style cohort tools.";
+      return "Admin view: open Dropout risk for the full cohort table and outreach queue. Leaders only receive soft coaching, not surveillance-style cohort tools.";
     }
     if (!context.risk) {
       return "No personal risk row is loaded. In production this would stay private coaching, never a public scoreboard.";
@@ -421,7 +421,7 @@ export function answerAdvisorQuestion(question: string, context: AdvisorContext)
 
   if (/(goal|profile|interest|about me)/.test(q)) {
     if (!student) {
-      return "No scholar profile is in focus. Choose a demo scholar or use the admin focus filter.";
+      return "No leader profile is in focus. Choose a demo leader or use the admin focus filter.";
     }
     return `${student.full_name} · ${student.country} · ${student.programme}. Goal: ${student.career_goal_text}. Interests: ${student.interest_tags.join(", ")}.`;
   }

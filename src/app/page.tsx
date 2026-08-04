@@ -59,10 +59,10 @@ export default function HomePage() {
               Join as Mentor
             </Link>
             <Link
-              href="/login?role=scholar"
+              href="/login?role=leader"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
-              Join as scholar
+              Join as leader
             </Link>
           </div>
         </div>
@@ -79,9 +79,9 @@ export default function HomePage() {
               Meet Mentors, Find Opportunities and have a clear next step on their path to success.
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[rgba(26,21,16,0.72)] sm:text-lg">
-              JointHub Africa is where ESL scholars discover opportunities, meet mentors, and stay
-              on track - built by SimpleJoint Trust with an AI companion, to coach you and match you
-              to a mentor.
+              JointHub Africa is where ESL leaders discover opportunities, meet mentors, and stay on
+              track - built by SimpleJoint Trust with an AI companion, to coach you and match you to
+              a mentor.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
@@ -99,7 +99,7 @@ export default function HomePage() {
               <div className="relative aspect-[3/2] w-full">
                 <Image
                   src="/brand/scholars-hero.jpg"
-                  alt="JointHub Africa scholars and partners gathered on a staircase, smiling and waving"
+                  alt="JointHub Africa leaders and partners gathered on a staircase, smiling and waving"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 560px"
@@ -117,7 +117,7 @@ export default function HomePage() {
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-[#0F3D2E]">Our ESL community</p>
                   <p className="text-xs text-[rgba(26,21,16,0.55)]">
-                    Scholars, mentors, and partners — lead with service, build with trust
+                    Leaders, mentors, and partners — lead with service, build with trust
                   </p>
                 </div>
               </figcaption>
@@ -160,7 +160,7 @@ export default function HomePage() {
               Inside the Mentor Hub
             </p>
             <h2 className="mt-2 text-nowrap text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:text-3xl">
-              Built for ESL scholars first. Meet your AI Coach (Kay).
+              Built for ESL leaders first. Meet your AI Coach (Kay).
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
               Kay helps with opportunity ranking, mentor matching, soft coaching, and Advisor
@@ -209,14 +209,14 @@ export default function HomePage() {
               Capstone preview
             </p>
             <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#0F3D2E] sm:text-3xl">
-              Walk the ESL scholar path in three minutes.
+              Walk the ESL leader path in three minutes.
             </h2>
             <ol className="mt-6 space-y-4 text-sm leading-relaxed text-[rgba(26,21,16,0.75)] sm:text-base">
               <li className="flex gap-3">
                 <span className="font-semibold tabular-nums text-[#E8A317]">01</span>
                 <span>
                   Open <strong className="font-semibold text-[#0F3D2E]">Sign In</strong> and enter
-                  as a scholar.
+                  as a leader.
                 </span>
               </li>
               <li className="flex gap-3">

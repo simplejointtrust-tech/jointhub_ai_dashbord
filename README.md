@@ -8,9 +8,9 @@ Product app for **SimpleJoint Trust / JointHub Africa** Mentor Hub (built for Is
 - Package manager: Bun (`packageManager: bun@1.3.13`).
 - Main scripts: `bun dev`, `bun run build`, `bun run lint`, `bun run typecheck`, `bun run test`.
 - Product entrypoints:
-  - `/` — JointHub Mentor Hub product landing (scholar CTAs + Capstone demo path)
+  - `/` — JointHub Mentor Hub product landing (leader CTAs + Capstone demo path)
   - `/dashboard/login` — demo email gate
-  - `/dashboard` — scholar-first Mentor Hub (Overview, Opportunities, Mentors, Applications, Community, Advisor) with admin Dropout risk + Analytics
+  - `/dashboard` — leader-first Mentor Hub (Overview, Opportunities, Mentors, Applications, Community, Advisor) with admin Dropout risk + Analytics
   - `/prototype` — Canva design reference embed
   - `/api/jointhub/*` — dashboard + JointHub Advisor APIs over sample Capstone datasets
   - `ml-backend/` — FastAPI Python service implementing the same four ML modules
@@ -29,7 +29,7 @@ Four live AI/DS modules on sample cohort data (not static mock cards):
 ## Demo path (Capstone)
 
 1. Open `/` then **Capstone demo login**, or go straight to `/dashboard/login`
-2. Sign in as `scholar1@jointhub.demo`
+2. Sign in as `leader1@jointhub.demo`
 3. Land on **Overview**, then open **Opportunities** and **Mentors**
 4. Walk **Applications** + **Community**, then ask **Advisor** a deadline/eligibility question
 5. Sign out and use `admin@jointhub.demo` for full **Dropout risk** table + outreach and **Analytics** KPIs
@@ -38,8 +38,8 @@ Demo accounts:
 
 | Email | Role |
 | --- | --- |
-| scholar1@jointhub.demo | student |
-| scholar2@jointhub.demo | student |
+| leader1@jointhub.demo | student |
+| leader2@jointhub.demo | student |
 | admin@jointhub.demo | admin |
 
 ## Data integration

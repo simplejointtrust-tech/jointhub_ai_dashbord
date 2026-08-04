@@ -17,13 +17,13 @@
   "student_profiles": [
     {
       "student_id": "c54ba257-c4ed-45b6-8fd8-4966fd9843de",
-      "full_name": "Amina Uwase (Demo Scholar)",
-      "email": "scholar@jointhub.demo",
+      "full_name": "Amina Uwase (Demo Leader)",
+      "email": "leader@jointhub.demo",
       "country": "Nigeria",
       "campus": "ALU Kigali",
       "programme": "ESL",
       "career_stage": 5,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "entrepreneurship",
         "creative_tech",
@@ -61,13 +61,13 @@
     },
     {
       "student_id": "c67e3d20-558b-479d-9976-77f9f8f71bc6",
-      "full_name": "Scholar B2 Abebe",
-      "email": "scholar2@jointhub.demo",
+      "full_name": "Leader B2 Abebe",
+      "email": "leader2@jointhub.demo",
       "country": "Senegal",
       "campus": "ALU Mauritius",
       "programme": "Undergraduate",
       "career_stage": 5,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "agri_food",
         "finance"
@@ -102,13 +102,13 @@
     },
     {
       "student_id": "541d6c36-c9d0-4dba-bb23-d849ef27771c",
-      "full_name": "Scholar C3 Uwase",
-      "email": "scholar3@jointhub.demo",
+      "full_name": "Leader C3 Uwase",
+      "email": "leader3@jointhub.demo",
       "country": "Senegal",
       "campus": "ALU Kigali",
       "programme": "JointHub Fellows",
       "career_stage": 7,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "media_film",
         "entrepreneurship"
@@ -142,13 +142,13 @@
     },
     {
       "student_id": "5d5979f9-ce81-4612-8c95-27138264b329",
-      "full_name": "Scholar D4 Abebe",
-      "email": "scholar4@jointhub.demo",
+      "full_name": "Leader D4 Abebe",
+      "email": "leader4@jointhub.demo",
       "country": "South Africa",
       "campus": "ALU Mauritius",
       "programme": "ESL",
       "career_stage": 1,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "health",
         "social_impact"
@@ -183,13 +183,13 @@
     },
     {
       "student_id": "c51f03a3-f23d-4d09-91c3-43c867d0aaed",
-      "full_name": "Scholar E5 Okafor",
-      "email": "scholar5@jointhub.demo",
+      "full_name": "Leader E5 Okafor",
+      "email": "leader5@jointhub.demo",
       "country": "Uganda",
       "campus": "ALU Kigali",
       "programme": "CreativeTech Bootcamp",
       "career_stage": 5,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "media_film",
         "data_ai",
@@ -227,13 +227,13 @@
     },
     {
       "student_id": "8bc42ba2-c2dc-408a-9c36-192040f1f233",
-      "full_name": "Scholar F6 Mensah",
-      "email": "scholar6@jointhub.demo",
+      "full_name": "Leader F6 Mensah",
+      "email": "leader6@jointhub.demo",
       "country": "Senegal",
       "campus": "Remote Africa",
       "programme": "ESL",
       "career_stage": 2,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "creative_tech",
         "design_ux",
@@ -269,13 +269,13 @@
     },
     {
       "student_id": "27d61e05-812e-4b19-b085-89367cecd807",
-      "full_name": "Scholar G7 Diallo",
-      "email": "scholar7@jointhub.demo",
+      "full_name": "Leader G7 Diallo",
+      "email": "leader7@jointhub.demo",
       "country": "Uganda",
       "campus": "Partner Campus",
       "programme": "Undergraduate",
       "career_stage": 3,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "data_ai",
         "design_ux",
@@ -310,13 +310,13 @@
     },
     {
       "student_id": "0bcbeb0f-a8d8-4b04-b10b-e15337e3874d",
-      "full_name": "Scholar H8 Abebe",
-      "email": "scholar8@jointhub.demo",
+      "full_name": "Leader H8 Abebe",
+      "email": "leader8@jointhub.demo",
       "country": "Senegal",
       "campus": "ALU Kigali",
       "programme": "Undergraduate",
       "career_stage": 4,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "finance",
         "data_ai"
@@ -350,13 +350,13 @@
     },
     {
       "student_id": "bc35042b-2518-4769-a443-abfd55e1254e",
-      "full_name": "Scholar I9 Mensah",
-      "email": "scholar9@jointhub.demo",
+      "full_name": "Leader I9 Mensah",
+      "email": "leader9@jointhub.demo",
       "country": "Senegal",
       "campus": "ALU Mauritius",
       "programme": "Undergraduate",
       "career_stage": 1,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "health",
         "social_impact",
@@ -394,13 +394,13 @@
     },
     {
       "student_id": "de82bb5c-6f7d-4009-a660-0c5cc99c7aef",
-      "full_name": "Scholar J10 Okafor",
-      "email": "scholar10@jointhub.demo",
+      "full_name": "Leader J10 Okafor",
+      "email": "leader10@jointhub.demo",
       "country": "Rwanda",
       "campus": "Remote Africa",
       "programme": "Undergraduate",
       "career_stage": 1,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "leadership",
         "design_ux",
@@ -436,13 +436,13 @@
     },
     {
       "student_id": "af0240f4-42a1-4807-893e-eac4b60104e9",
-      "full_name": "Scholar K11 Uwase",
-      "email": "scholar11@jointhub.demo",
+      "full_name": "Leader K11 Uwase",
+      "email": "leader11@jointhub.demo",
       "country": "Nigeria",
       "campus": "ALU Mauritius",
       "programme": "Undergraduate",
       "career_stage": 5,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "entrepreneurship",
         "climate_env"
@@ -478,13 +478,13 @@
     },
     {
       "student_id": "c4b653b4-2969-4ad8-8776-86b054d5b27d",
-      "full_name": "Scholar L12 Kamau",
-      "email": "scholar12@jointhub.demo",
+      "full_name": "Leader L12 Kamau",
+      "email": "leader12@jointhub.demo",
       "country": "Kenya",
       "campus": "ALU Mauritius",
       "programme": "CreativeTech Bootcamp",
       "career_stage": 1,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "finance",
         "media_film",
@@ -520,13 +520,13 @@
     },
     {
       "student_id": "fccf3402-335a-4b72-b82b-813c3f872d80",
-      "full_name": "Scholar M13 Uwase",
-      "email": "scholar13@jointhub.demo",
+      "full_name": "Leader M13 Uwase",
+      "email": "leader13@jointhub.demo",
       "country": "Ghana",
       "campus": "ALU Kigali",
       "programme": "ESL",
       "career_stage": 7,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "agri_food",
         "finance"
@@ -560,13 +560,13 @@
     },
     {
       "student_id": "b0a5e22a-5346-475c-908e-9c255ba5f818",
-      "full_name": "Scholar N14 Diallo",
-      "email": "scholar14@jointhub.demo",
+      "full_name": "Leader N14 Diallo",
+      "email": "leader14@jointhub.demo",
       "country": "Ethiopia",
       "campus": "ALU Mauritius",
       "programme": "Undergraduate",
       "career_stage": 7,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "agri_food",
         "leadership"
@@ -601,13 +601,13 @@
     },
     {
       "student_id": "67193769-b7e3-4de7-9bfe-72eaf43093b8",
-      "full_name": "Scholar O15 Uwase",
-      "email": "scholar15@jointhub.demo",
+      "full_name": "Leader O15 Uwase",
+      "email": "leader15@jointhub.demo",
       "country": "Senegal",
       "campus": "Remote Africa",
       "programme": "ESL",
       "career_stage": 2,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "agri_food",
         "creative_tech",
@@ -642,13 +642,13 @@
     },
     {
       "student_id": "8e9fed31-01ba-4994-b5a3-6c2c1790319a",
-      "full_name": "Scholar P16 Diallo",
-      "email": "scholar16@jointhub.demo",
+      "full_name": "Leader P16 Diallo",
+      "email": "leader16@jointhub.demo",
       "country": "Kenya",
       "campus": "ALU Kigali",
       "programme": "ESL",
       "career_stage": 1,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "design_ux",
         "entrepreneurship",
@@ -684,13 +684,13 @@
     },
     {
       "student_id": "6e5b317d-bae3-4f0f-873c-ac2cf15351bf",
-      "full_name": "Scholar Q17 Uwase",
-      "email": "scholar17@jointhub.demo",
+      "full_name": "Leader Q17 Uwase",
+      "email": "leader17@jointhub.demo",
       "country": "Senegal",
       "campus": "Remote Africa",
       "programme": "Undergraduate",
       "career_stage": 3,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "data_ai",
         "music_arts"
@@ -724,13 +724,13 @@
     },
     {
       "student_id": "de78dc4a-1522-471c-a8b8-da3647e26557",
-      "full_name": "Scholar R18 Abebe",
-      "email": "scholar18@jointhub.demo",
+      "full_name": "Leader R18 Abebe",
+      "email": "leader18@jointhub.demo",
       "country": "Rwanda",
       "campus": "Remote Africa",
       "programme": "ESL",
       "career_stage": 1,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "design_ux",
         "creative_tech",
@@ -767,13 +767,13 @@
     },
     {
       "student_id": "44bb8907-6428-4586-9a66-410f5be80ecf",
-      "full_name": "Scholar S19 Uwase",
-      "email": "scholar19@jointhub.demo",
+      "full_name": "Leader S19 Uwase",
+      "email": "leader19@jointhub.demo",
       "country": "Ghana",
       "campus": "ALU Kigali",
       "programme": "ESL",
       "career_stage": 4,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "entrepreneurship",
         "finance",
@@ -809,13 +809,13 @@
     },
     {
       "student_id": "2c4b9bef-3b39-4f2d-b1ba-4a29f483be7b",
-      "full_name": "Scholar T20 Okafor",
-      "email": "scholar20@jointhub.demo",
+      "full_name": "Leader T20 Okafor",
+      "email": "leader20@jointhub.demo",
       "country": "Uganda",
       "campus": "Partner Campus",
       "programme": "JointHub Fellows",
       "career_stage": 7,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "social_impact",
         "music_arts"
@@ -849,13 +849,13 @@
     },
     {
       "student_id": "9f3bc084-a06a-40e0-9661-e5a516247646",
-      "full_name": "Scholar U21 Mensah",
-      "email": "scholar21@jointhub.demo",
+      "full_name": "Leader U21 Mensah",
+      "email": "leader21@jointhub.demo",
       "country": "Kenya",
       "campus": "ALU Mauritius",
       "programme": "JointHub Fellows",
       "career_stage": 3,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "design_ux",
         "health",
@@ -891,13 +891,13 @@
     },
     {
       "student_id": "e6bb84fa-603c-416c-bc9a-a0aa372460a0",
-      "full_name": "Scholar V22 Mensah",
-      "email": "scholar22@jointhub.demo",
+      "full_name": "Leader V22 Mensah",
+      "email": "leader22@jointhub.demo",
       "country": "Kenya",
       "campus": "ALU Kigali",
       "programme": "CreativeTech Bootcamp",
       "career_stage": 3,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "finance",
         "entrepreneurship",
@@ -934,13 +934,13 @@
     },
     {
       "student_id": "d53aae1d-6adc-4906-850f-d12a7fdadee8",
-      "full_name": "Scholar W23 Mensah",
-      "email": "scholar23@jointhub.demo",
+      "full_name": "Leader W23 Mensah",
+      "email": "leader23@jointhub.demo",
       "country": "Rwanda",
       "campus": "ALU Kigali",
       "programme": "JointHub Fellows",
       "career_stage": 7,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "finance",
         "music_arts"
@@ -976,13 +976,13 @@
     },
     {
       "student_id": "fd602be5-b239-4074-b0f6-99cf927117d6",
-      "full_name": "Scholar X24 Diallo",
-      "email": "scholar24@jointhub.demo",
+      "full_name": "Leader X24 Diallo",
+      "email": "leader24@jointhub.demo",
       "country": "Rwanda",
       "campus": "Remote Africa",
       "programme": "CreativeTech Bootcamp",
       "career_stage": 4,
-      "scholar_status": false,
+      "leader_status": false,
       "interest_tags": [
         "agri_food",
         "data_ai"
@@ -1022,7 +1022,7 @@
       "campus": "ALU Kigali",
       "programme": "Leadership",
       "career_stage": 7,
-      "scholar_status": true,
+      "leader_status": true,
       "interest_tags": [
         "leadership",
         "data_ai",
@@ -1046,7 +1046,7 @@
         "leadership",
         "data_ai"
       ],
-      "career_goal_text": "Scale JointHub Africa mentorship and opportunity matching for 5000 scholars.",
+      "career_goal_text": "Scale JointHub Africa mentorship and opportunity matching for 5000 leaders.",
       "signup_timestamp": "2025-09-01T00:00:00Z",
       "heard_channel": "Founder",
       "languages": [
@@ -1089,7 +1089,7 @@
         "English",
         "French"
       ],
-      "bio": "Experienced entrepreneurship professional mentoring African scholars."
+      "bio": "Experienced entrepreneurship professional mentoring African leaders."
     },
     {
       "mentor_id": "03d5a14a-5bb4-4d71-b9af-6626c88b597f",
@@ -1121,7 +1121,7 @@
       "languages": [
         "French"
       ],
-      "bio": "Experienced media film professional mentoring African scholars."
+      "bio": "Experienced media film professional mentoring African leaders."
     },
     {
       "mentor_id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027",
@@ -1153,7 +1153,7 @@
         "English",
         "Swahili"
       ],
-      "bio": "Experienced media film professional mentoring African scholars."
+      "bio": "Experienced media film professional mentoring African leaders."
     },
     {
       "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
@@ -1184,7 +1184,7 @@
       "languages": [
         "Yoruba"
       ],
-      "bio": "Experienced finance professional mentoring African scholars."
+      "bio": "Experienced finance professional mentoring African leaders."
     },
     {
       "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
@@ -1217,7 +1217,7 @@
         "Kinyarwanda",
         "Swahili"
       ],
-      "bio": "Experienced creative tech professional mentoring African scholars."
+      "bio": "Experienced creative tech professional mentoring African leaders."
     },
     {
       "mentor_id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
@@ -1247,7 +1247,7 @@
       "languages": [
         "Swahili"
       ],
-      "bio": "Experienced social impact professional mentoring African scholars."
+      "bio": "Experienced social impact professional mentoring African leaders."
     },
     {
       "mentor_id": "d78dd86d-6902-45e3-a397-c6c090768c40",
@@ -1281,7 +1281,7 @@
         "French",
         "English"
       ],
-      "bio": "Experienced media film professional mentoring African scholars."
+      "bio": "Experienced media film professional mentoring African leaders."
     },
     {
       "mentor_id": "3945f6e4-ce24-45a2-bacb-248e902a21ab",
@@ -1313,7 +1313,7 @@
         "French",
         "Kinyarwanda"
       ],
-      "bio": "Experienced finance professional mentoring African scholars."
+      "bio": "Experienced finance professional mentoring African leaders."
     },
     {
       "mentor_id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739",
@@ -1345,7 +1345,7 @@
       "languages": [
         "English"
       ],
-      "bio": "Experienced leadership professional mentoring African scholars."
+      "bio": "Experienced leadership professional mentoring African leaders."
     },
     {
       "mentor_id": "cbf63c96-8242-4ad4-93cb-9395776f9820",
@@ -1376,7 +1376,7 @@
       "languages": [
         "French"
       ],
-      "bio": "Experienced health professional mentoring African scholars."
+      "bio": "Experienced health professional mentoring African leaders."
     },
     {
       "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
@@ -1408,7 +1408,7 @@
         "Kinyarwanda",
         "Yoruba"
       ],
-      "bio": "Experienced creative tech professional mentoring African scholars."
+      "bio": "Experienced creative tech professional mentoring African leaders."
     },
     {
       "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
@@ -1441,7 +1441,7 @@
         "English",
         "Swahili"
       ],
-      "bio": "Experienced design ux professional mentoring African scholars."
+      "bio": "Experienced design ux professional mentoring African leaders."
     }
   ],
   "skills_inventory": [
@@ -5643,7 +5643,7 @@
   "mentor_assignments": [
     {
       "student_id": "c54ba257-c4ed-45b6-8fd8-4966fd9843de",
-      "student_name": "Amina Uwase (Demo Scholar)",
+      "student_name": "Amina Uwase (Demo Leader)",
       "mentor_id": "279a72ef-a03e-4139-b35d-dd2f0c0a2457",
       "mentor_name": "Mentor E Traore",
       "compatibility": 0.8165,
@@ -5656,7 +5656,7 @@
     },
     {
       "student_id": "c67e3d20-558b-479d-9976-77f9f8f71bc6",
-      "student_name": "Scholar B2 Abebe",
+      "student_name": "Leader B2 Abebe",
       "mentor_id": "b8c481e0-91b0-42d0-a1c1-882566671ad2",
       "mentor_name": "Mentor F Traore",
       "compatibility": 0.5,
@@ -5668,7 +5668,7 @@
     },
     {
       "student_id": "541d6c36-c9d0-4dba-bb23-d849ef27771c",
-      "student_name": "Scholar C3 Uwase",
+      "student_name": "Leader C3 Uwase",
       "mentor_id": "86e19b9e-06cb-4227-a4f3-1c2162572867",
       "mentor_name": "Mentor K Traore",
       "compatibility": 0.5,
@@ -5680,7 +5680,7 @@
     },
     {
       "student_id": "5d5979f9-ce81-4612-8c95-27138264b329",
-      "student_name": "Scholar D4 Abebe",
+      "student_name": "Leader D4 Abebe",
       "mentor_id": "d78dd86d-6902-45e3-a397-c6c090768c40",
       "mentor_name": "Mentor G Moyo",
       "compatibility": 0.7071,
@@ -5692,7 +5692,7 @@
     },
     {
       "student_id": "c51f03a3-f23d-4d09-91c3-43c867d0aaed",
-      "student_name": "Scholar E5 Okafor",
+      "student_name": "Leader E5 Okafor",
       "mentor_id": "3945f6e4-ce24-45a2-bacb-248e902a21ab",
       "mentor_name": "Mentor H Moyo",
       "compatibility": 0.4082,
@@ -5704,7 +5704,7 @@
     },
     {
       "student_id": "8bc42ba2-c2dc-408a-9c36-192040f1f233",
-      "student_name": "Scholar F6 Mensah",
+      "student_name": "Leader F6 Mensah",
       "mentor_id": "29d2afad-ea5f-4ced-90c9-b2ccb39e0696",
       "mentor_name": "Mentor A Moyo",
       "compatibility": 0.3536,
@@ -5716,7 +5716,7 @@
     },
     {
       "student_id": "0bcbeb0f-a8d8-4b04-b10b-e15337e3874d",
-      "student_name": "Scholar H8 Abebe",
+      "student_name": "Leader H8 Abebe",
       "mentor_id": "2d03ebb6-1fa7-4477-ab90-9dd8abf2b739",
       "mentor_name": "Mentor I Traore",
       "compatibility": 0.3536,
@@ -5728,7 +5728,7 @@
     },
     {
       "student_id": "af0240f4-42a1-4807-893e-eac4b60104e9",
-      "student_name": "Scholar K11 Uwase",
+      "student_name": "Leader K11 Uwase",
       "mentor_id": "cbf63c96-8242-4ad4-93cb-9395776f9820",
       "mentor_name": "Mentor J Okello",
       "compatibility": 0.8165,
@@ -5740,7 +5740,7 @@
     },
     {
       "student_id": "fccf3402-335a-4b72-b82b-813c3f872d80",
-      "student_name": "Scholar M13 Uwase",
+      "student_name": "Leader M13 Uwase",
       "mentor_id": "bc50a671-bfaf-4d21-a2c3-c508189fe5ec",
       "mentor_name": "Mentor D Moyo",
       "compatibility": 0.4082,
@@ -5752,7 +5752,7 @@
     },
     {
       "student_id": "8e9fed31-01ba-4994-b5a3-6c2c1790319a",
-      "student_name": "Scholar P16 Diallo",
+      "student_name": "Leader P16 Diallo",
       "mentor_id": "540153dd-3b27-490a-ad5e-dd968e7dc91e",
       "mentor_name": "Mentor L Nkrumah",
       "compatibility": 0.8165,
@@ -5764,7 +5764,7 @@
     },
     {
       "student_id": "e6bb84fa-603c-416c-bc9a-a0aa372460a0",
-      "student_name": "Scholar V22 Mensah",
+      "student_name": "Leader V22 Mensah",
       "mentor_id": "b9f14f41-8ed4-4915-a0a5-9858b19cf027",
       "mentor_name": "Mentor C Banda",
       "compatibility": 0.8165,
@@ -5777,7 +5777,7 @@
     },
     {
       "student_id": "fd602be5-b239-4074-b0f6-99cf927117d6",
-      "student_name": "Scholar X24 Diallo",
+      "student_name": "Leader X24 Diallo",
       "mentor_id": "03d5a14a-5bb4-4d71-b9af-6626c88b597f",
       "mentor_name": "Mentor B Banda",
       "compatibility": 0.7071,
@@ -6602,51 +6602,51 @@
     "students": [
       {
         "id": "c54ba257-c4ed-45b6-8fd8-4966fd9843de",
-        "name": "Amina Uwase (Demo Scholar)"
+        "name": "Amina Uwase (Demo Leader)"
       },
       {
         "id": "c67e3d20-558b-479d-9976-77f9f8f71bc6",
-        "name": "Scholar B2 Abebe"
+        "name": "Leader B2 Abebe"
       },
       {
         "id": "541d6c36-c9d0-4dba-bb23-d849ef27771c",
-        "name": "Scholar C3 Uwase"
+        "name": "Leader C3 Uwase"
       },
       {
         "id": "5d5979f9-ce81-4612-8c95-27138264b329",
-        "name": "Scholar D4 Abebe"
+        "name": "Leader D4 Abebe"
       },
       {
         "id": "c51f03a3-f23d-4d09-91c3-43c867d0aaed",
-        "name": "Scholar E5 Okafor"
+        "name": "Leader E5 Okafor"
       },
       {
         "id": "8bc42ba2-c2dc-408a-9c36-192040f1f233",
-        "name": "Scholar F6 Mensah"
+        "name": "Leader F6 Mensah"
       },
       {
         "id": "27d61e05-812e-4b19-b085-89367cecd807",
-        "name": "Scholar G7 Diallo"
+        "name": "Leader G7 Diallo"
       },
       {
         "id": "0bcbeb0f-a8d8-4b04-b10b-e15337e3874d",
-        "name": "Scholar H8 Abebe"
+        "name": "Leader H8 Abebe"
       },
       {
         "id": "bc35042b-2518-4769-a443-abfd55e1254e",
-        "name": "Scholar I9 Mensah"
+        "name": "Leader I9 Mensah"
       },
       {
         "id": "de82bb5c-6f7d-4009-a660-0c5cc99c7aef",
-        "name": "Scholar J10 Okafor"
+        "name": "Leader J10 Okafor"
       },
       {
         "id": "af0240f4-42a1-4807-893e-eac4b60104e9",
-        "name": "Scholar K11 Uwase"
+        "name": "Leader K11 Uwase"
       },
       {
         "id": "c4b653b4-2969-4ad8-8776-86b054d5b27d",
-        "name": "Scholar L12 Kamau"
+        "name": "Leader L12 Kamau"
       }
     ],
     "mentors": [
@@ -6873,8 +6873,8 @@
   "risk_predictions": [
     {
       "student_id": "c54ba257-c4ed-45b6-8fd8-4966fd9843de",
-      "full_name": "Amina Uwase (Demo Scholar)",
-      "email": "scholar@jointhub.demo",
+      "full_name": "Amina Uwase (Demo Leader)",
+      "email": "leader@jointhub.demo",
       "risk_probability": 0.0164,
       "at_risk": false,
       "risk_level": "low",
@@ -6891,8 +6891,8 @@
     },
     {
       "student_id": "c67e3d20-558b-479d-9976-77f9f8f71bc6",
-      "full_name": "Scholar B2 Abebe",
-      "email": "scholar2@jointhub.demo",
+      "full_name": "Leader B2 Abebe",
+      "email": "leader2@jointhub.demo",
       "risk_probability": 0.0002,
       "at_risk": false,
       "risk_level": "low",
@@ -6909,8 +6909,8 @@
     },
     {
       "student_id": "541d6c36-c9d0-4dba-bb23-d849ef27771c",
-      "full_name": "Scholar C3 Uwase",
-      "email": "scholar3@jointhub.demo",
+      "full_name": "Leader C3 Uwase",
+      "email": "leader3@jointhub.demo",
       "risk_probability": 0.0513,
       "at_risk": false,
       "risk_level": "low",
@@ -6927,8 +6927,8 @@
     },
     {
       "student_id": "5d5979f9-ce81-4612-8c95-27138264b329",
-      "full_name": "Scholar D4 Abebe",
-      "email": "scholar4@jointhub.demo",
+      "full_name": "Leader D4 Abebe",
+      "email": "leader4@jointhub.demo",
       "risk_probability": 0.0171,
       "at_risk": false,
       "risk_level": "low",
@@ -6945,8 +6945,8 @@
     },
     {
       "student_id": "c51f03a3-f23d-4d09-91c3-43c867d0aaed",
-      "full_name": "Scholar E5 Okafor",
-      "email": "scholar5@jointhub.demo",
+      "full_name": "Leader E5 Okafor",
+      "email": "leader5@jointhub.demo",
       "risk_probability": 0.0016,
       "at_risk": false,
       "risk_level": "low",
@@ -6963,8 +6963,8 @@
     },
     {
       "student_id": "8bc42ba2-c2dc-408a-9c36-192040f1f233",
-      "full_name": "Scholar F6 Mensah",
-      "email": "scholar6@jointhub.demo",
+      "full_name": "Leader F6 Mensah",
+      "email": "leader6@jointhub.demo",
       "risk_probability": 0.9999,
       "at_risk": true,
       "risk_level": "high",
@@ -6977,12 +6977,12 @@
         "days_since_last_mentor_session": 32.0,
         "profile_completeness": 0.62
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "27d61e05-812e-4b19-b085-89367cecd807",
-      "full_name": "Scholar G7 Diallo",
-      "email": "scholar7@jointhub.demo",
+      "full_name": "Leader G7 Diallo",
+      "email": "leader7@jointhub.demo",
       "risk_probability": 0.0623,
       "at_risk": false,
       "risk_level": "low",
@@ -6999,8 +6999,8 @@
     },
     {
       "student_id": "0bcbeb0f-a8d8-4b04-b10b-e15337e3874d",
-      "full_name": "Scholar H8 Abebe",
-      "email": "scholar8@jointhub.demo",
+      "full_name": "Leader H8 Abebe",
+      "email": "leader8@jointhub.demo",
       "risk_probability": 0.0581,
       "at_risk": false,
       "risk_level": "low",
@@ -7017,8 +7017,8 @@
     },
     {
       "student_id": "bc35042b-2518-4769-a443-abfd55e1254e",
-      "full_name": "Scholar I9 Mensah",
-      "email": "scholar9@jointhub.demo",
+      "full_name": "Leader I9 Mensah",
+      "email": "leader9@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7031,12 +7031,12 @@
         "days_since_last_mentor_session": 31.0,
         "profile_completeness": 0.54
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "de82bb5c-6f7d-4009-a660-0c5cc99c7aef",
-      "full_name": "Scholar J10 Okafor",
-      "email": "scholar10@jointhub.demo",
+      "full_name": "Leader J10 Okafor",
+      "email": "leader10@jointhub.demo",
       "risk_probability": 0.0,
       "at_risk": false,
       "risk_level": "low",
@@ -7053,8 +7053,8 @@
     },
     {
       "student_id": "af0240f4-42a1-4807-893e-eac4b60104e9",
-      "full_name": "Scholar K11 Uwase",
-      "email": "scholar11@jointhub.demo",
+      "full_name": "Leader K11 Uwase",
+      "email": "leader11@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7067,12 +7067,12 @@
         "days_since_last_mentor_session": 35.0,
         "profile_completeness": 0.89
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "c4b653b4-2969-4ad8-8776-86b054d5b27d",
-      "full_name": "Scholar L12 Kamau",
-      "email": "scholar12@jointhub.demo",
+      "full_name": "Leader L12 Kamau",
+      "email": "leader12@jointhub.demo",
       "risk_probability": 0.7596,
       "at_risk": true,
       "risk_level": "high",
@@ -7085,12 +7085,12 @@
         "days_since_last_mentor_session": 29.0,
         "profile_completeness": 0.47
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "fccf3402-335a-4b72-b82b-813c3f872d80",
-      "full_name": "Scholar M13 Uwase",
-      "email": "scholar13@jointhub.demo",
+      "full_name": "Leader M13 Uwase",
+      "email": "leader13@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7103,12 +7103,12 @@
         "days_since_last_mentor_session": 41.0,
         "profile_completeness": 0.47
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "b0a5e22a-5346-475c-908e-9c255ba5f818",
-      "full_name": "Scholar N14 Diallo",
-      "email": "scholar14@jointhub.demo",
+      "full_name": "Leader N14 Diallo",
+      "email": "leader14@jointhub.demo",
       "risk_probability": 0.1103,
       "at_risk": false,
       "risk_level": "low",
@@ -7125,8 +7125,8 @@
     },
     {
       "student_id": "67193769-b7e3-4de7-9bfe-72eaf43093b8",
-      "full_name": "Scholar O15 Uwase",
-      "email": "scholar15@jointhub.demo",
+      "full_name": "Leader O15 Uwase",
+      "email": "leader15@jointhub.demo",
       "risk_probability": 0.0495,
       "at_risk": false,
       "risk_level": "low",
@@ -7143,8 +7143,8 @@
     },
     {
       "student_id": "8e9fed31-01ba-4994-b5a3-6c2c1790319a",
-      "full_name": "Scholar P16 Diallo",
-      "email": "scholar16@jointhub.demo",
+      "full_name": "Leader P16 Diallo",
+      "email": "leader16@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7157,12 +7157,12 @@
         "days_since_last_mentor_session": 43.0,
         "profile_completeness": 0.46
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last login may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "6e5b317d-bae3-4f0f-873c-ac2cf15351bf",
-      "full_name": "Scholar Q17 Uwase",
-      "email": "scholar17@jointhub.demo",
+      "full_name": "Leader Q17 Uwase",
+      "email": "leader17@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7175,12 +7175,12 @@
         "days_since_last_mentor_session": 90.0,
         "profile_completeness": 0.42
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "de78dc4a-1522-471c-a8b8-da3647e26557",
-      "full_name": "Scholar R18 Abebe",
-      "email": "scholar18@jointhub.demo",
+      "full_name": "Leader R18 Abebe",
+      "email": "leader18@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7193,12 +7193,12 @@
         "days_since_last_mentor_session": 90.0,
         "profile_completeness": 0.97
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "44bb8907-6428-4586-9a66-410f5be80ecf",
-      "full_name": "Scholar S19 Uwase",
-      "email": "scholar19@jointhub.demo",
+      "full_name": "Leader S19 Uwase",
+      "email": "leader19@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7211,12 +7211,12 @@
         "days_since_last_mentor_session": 90.0,
         "profile_completeness": 0.62
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "2c4b9bef-3b39-4f2d-b1ba-4a29f483be7b",
-      "full_name": "Scholar T20 Okafor",
-      "email": "scholar20@jointhub.demo",
+      "full_name": "Leader T20 Okafor",
+      "email": "leader20@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7229,12 +7229,12 @@
         "days_since_last_mentor_session": 90.0,
         "profile_completeness": 0.57
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "9f3bc084-a06a-40e0-9661-e5a516247646",
-      "full_name": "Scholar U21 Mensah",
-      "email": "scholar21@jointhub.demo",
+      "full_name": "Leader U21 Mensah",
+      "email": "leader21@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7247,12 +7247,12 @@
         "days_since_last_mentor_session": 90.0,
         "profile_completeness": 0.53
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "e6bb84fa-603c-416c-bc9a-a0aa372460a0",
-      "full_name": "Scholar V22 Mensah",
-      "email": "scholar22@jointhub.demo",
+      "full_name": "Leader V22 Mensah",
+      "email": "leader22@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7265,12 +7265,12 @@
         "days_since_last_mentor_session": 90.0,
         "profile_completeness": 0.87
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "d53aae1d-6adc-4906-850f-d12a7fdadee8",
-      "full_name": "Scholar W23 Mensah",
-      "email": "scholar23@jointhub.demo",
+      "full_name": "Leader W23 Mensah",
+      "email": "leader23@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7283,12 +7283,12 @@
         "days_since_last_mentor_session": 90.0,
         "profile_completeness": 0.44
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     },
     {
       "student_id": "fd602be5-b239-4074-b0f6-99cf927117d6",
-      "full_name": "Scholar X24 Diallo",
-      "email": "scholar24@jointhub.demo",
+      "full_name": "Leader X24 Diallo",
+      "email": "leader24@jointhub.demo",
       "risk_probability": 1.0,
       "at_risk": true,
       "risk_level": "high",
@@ -7301,7 +7301,7 @@
         "days_since_last_mentor_session": 90.0,
         "profile_completeness": 0.53
       },
-      "outreach_prompt": "Hi Scholar, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
+      "outreach_prompt": "Hi Leader, we noticed days since last mentor session may be affecting your engagement. Let's book a 20-min mentor check-in this week."
     }
   ],
   "nlp_pipeline": [
@@ -7769,7 +7769,7 @@
   ],
   "auth_demo_users": [
     {
-      "email": "scholar@jointhub.demo",
+      "email": "leader@jointhub.demo",
       "role": "student",
       "student_id": "c54ba257-c4ed-45b6-8fd8-4966fd9843de",
       "password_hint": "demo-only email gate"

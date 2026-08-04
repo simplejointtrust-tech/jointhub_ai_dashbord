@@ -31,7 +31,7 @@ export type StudentProfile = {
   campus: string;
   programme: string;
   career_stage: number;
-  scholar_status: boolean;
+  leader_status: boolean;
   interest_tags: string[];
   career_goal_text: string;
   signup_timestamp: string;

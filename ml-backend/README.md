@@ -23,12 +23,12 @@ Key endpoints:
 
 - `GET /health`
 - `GET /meta`
-- `POST /auth/login` `{ "email": "scholar1@jointhub.demo" }`
+- `POST /auth/login` `{ "email": "leader1@jointhub.demo" }`
 - `GET /opportunities/recommendations?student_id=...`
 - `GET /mentorship/match`
 - `GET /risk/predictions`
 - `GET /nlp/goals`
-- `GET /dashboard?email=scholar1@jointhub.demo`
+- `GET /dashboard?email=leader1@jointhub.demo`
 
 ## Data
 
@@ -59,6 +59,6 @@ See `app/sheets_loader.py`. Without credentials, the API uses sample JSON.
 
 ## Demo accounts
 
-- `scholar1@jointhub.demo` — student view
-- `scholar2@jointhub.demo` — student view
+- `leader1@jointhub.demo` — student view
+- `leader2@jointhub.demo` — student view
 - `admin@jointhub.demo` — full cohort

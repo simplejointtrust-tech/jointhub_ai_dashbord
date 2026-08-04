@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import { type FormEvent, useState } from "react";
 
 const DEMO_ACCOUNTS = [
-  { email: "scholar1@jointhub.demo", label: "Scholar 1 (student view)" },
-  { email: "scholar2@jointhub.demo", label: "Scholar 2 (student view)" },
+  { email: "leader1@jointhub.demo", label: "Leader 1 (student view)" },
+  { email: "leader2@jointhub.demo", label: "Leader 2 (student view)" },
   { email: "admin@jointhub.demo", label: "Admin (full cohort)" },
 ];
 
@@ -49,7 +49,7 @@ export default function DashboardLoginPage() {
           </p>
           <h1 className="mt-2 text-2xl font-semibold">Mentor Hub sign-in</h1>
           <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/70">
-            Capstone demo gate for Mentor Hub. Scholars open Overview, Opportunities, Mentors,
+            Capstone demo gate for Mentor Hub. Leaders open Overview, Opportunities, Mentors,
             Applications, Community, and JointHub Advisor. Admins also get cohort dropout risk and
             model analytics. Production Supabase email/password remains at{" "}
             <Link

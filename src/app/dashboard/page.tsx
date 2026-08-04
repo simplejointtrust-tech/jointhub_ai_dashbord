@@ -14,9 +14,9 @@ import {
 } from "@/lib/jointhub/data-store";
 import {
   getCommunityFeed,
-  getScholarApplications,
-  getScholarOverview,
-} from "@/lib/jointhub/scholar-experience";
+  getLeaderApplications,
+  getLeaderOverview,
+} from "@/lib/jointhub/leader-experience";
 import type { DashboardBundle } from "@/lib/jointhub/types";
 
 export const dynamic = "force-dynamic";
@@ -73,8 +73,8 @@ export default async function DashboardPage() {
 
   const initialData: DashboardBundle & {
     students?: Array<{ student_id: string; full_name: string; email: string; country: string }>;
-    overview?: ReturnType<typeof getScholarOverview> | null;
-    applications?: ReturnType<typeof getScholarApplications>;
+    overview?: ReturnType<typeof getLeaderOverview> | null;
+    applications?: ReturnType<typeof getLeaderApplications>;
     community?: ReturnType<typeof getCommunityFeed>;
   } = {
     student,
@@ -95,8 +95,8 @@ export default async function DashboardPage() {
           country: item.country,
         }))
       : undefined,
-    overview: overviewStudentId ? getScholarOverview(overviewStudentId) : null,
-    applications: overviewStudentId ? getScholarApplications(overviewStudentId) : [],
+    overview: overviewStudentId ? getLeaderOverview(overviewStudentId) : null,
+    applications: overviewStudentId ? getLeaderApplications(overviewStudentId) : [],
     community: getCommunityFeed(overviewStudentId),
   };
 

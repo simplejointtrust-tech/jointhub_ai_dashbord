@@ -20,9 +20,9 @@ import { useEffect, useMemo, useState, useTransition } from "react";
 import type {
   ApplicationStage,
   CommunityPost,
-  ScholarApplication,
-  ScholarOverview,
-} from "@/lib/jointhub/scholar-experience";
+  LeaderApplication,
+  LeaderOverview,
+} from "@/lib/jointhub/leader-experience";
 import type {
   DashboardBundle,
   MentorAssignment,
@@ -36,7 +36,7 @@ import type {
 } from "@/lib/jointhub/types";
 import { cn } from "@/lib/utils";
 
-type ScholarTabId =
+type LeaderTabId =
   | "overview"
   | "opportunities"
   | "mentors"
@@ -54,8 +54,8 @@ type DashboardResponse = DashboardBundle & {
     email: string;
     country: string;
   }>;
-  overview?: ScholarOverview | null;
-  applications?: ScholarApplication[];
+  overview?: LeaderOverview | null;
+  applications?: LeaderApplication[];
   community?: CommunityPost[];
 };
 
@@ -67,7 +67,7 @@ type AdvisorMessage = {
   suggested_actions?: string[];
 };
 
-const SCHOLAR_TABS: Array<{ id: ScholarTabId; label: string; icon: typeof Target }> = [
+const LEADER_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "opportunities", label: "Opportunities", icon: Target },
   { id: "mentors", label: "Mentors", icon: Users },
@@ -77,7 +77,7 @@ const SCHOLAR_TABS: Array<{ id: ScholarTabId; label: string; icon: typeof Target
   { id: "coaching", label: "Stay on track", icon: Sparkles },
 ];
 
-const ADMIN_TABS: Array<{ id: ScholarTabId; label: string; icon: typeof Target }> = [
+const ADMIN_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "opportunities", label: "Opportunities", icon: Target },
   { id: "mentors", label: "Mentor Hub", icon: Users },
@@ -241,7 +241,7 @@ function Heatmap({
         <table className="min-w-full border-separate border-spacing-1 text-left text-[11px]">
           <thead>
             <tr>
-              <th className="px-2 py-1 font-medium text-[#0D1B2A]/50">Scholar</th>
+              <th className="px-2 py-1 font-medium text-[#0D1B2A]/50">Leader</th>
               {mentorNames.map((name) => (
                 <th
                   key={name}
@@ -486,17 +486,17 @@ function OverviewPanel({
   onOpenTab,
   isAdmin,
 }: {
-  overview: ScholarOverview | null | undefined;
+  overview: LeaderOverview | null | undefined;
   recommendations: Recommendation[];
-  applications: ScholarApplication[];
-  onOpenTab: (tab: ScholarTabId) => void;
+  applications: LeaderApplication[];
+  onOpenTab: (tab: LeaderTabId) => void;
   isAdmin: boolean;
 }) {
   if (!overview) {
     return (
       <div className="rounded-2xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/65">
         {isAdmin
-          ? "Select a focus scholar above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
+          ? "Select a focus leader above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
           : "Overview is not available for this account yet."}
       </div>
     );
@@ -640,7 +640,7 @@ function OverviewPanel({
   );
 }
 
-function ApplicationsPanel({ applications }: { applications: ScholarApplication[] }) {
+function ApplicationsPanel({ applications }: { applications: LeaderApplication[] }) {
   const stages: ApplicationStage[] = ["active", "under_review", "interview", "accepted"];
   return (
     <div className="space-y-4">
@@ -703,7 +703,7 @@ function CommunityPanel({ posts }: { posts: CommunityPost[] }) {
         </p>
         <p className="mt-2 text-sm text-[#0D1B2A]/75">
           Peer posts, masterclasses, and light accountability energy. This is a product surface for
-          scholars — not Capstone model evidence.
+          leaders — not Capstone model evidence.
         </p>
       </div>
       <div className="grid gap-3">
@@ -762,7 +762,7 @@ function CoachingPanel({ risk }: { risk: RiskRow | null | undefined }) {
             "Keep logging sessions and finishing applications. Small weekly actions compound."}
         </p>
         <p className="mt-3 text-xs text-[#0D1B2A]/55">
-          Scholars never see the full cohort risk table. This card is personal guidance only.
+          Leaders never see the full cohort risk table. This card is personal guidance only.
         </p>
       </section>
       <div className="grid gap-3 sm:grid-cols-3">
@@ -801,7 +801,7 @@ function AdvisorPanel({
       role: "assistant",
       content: studentName
         ? `I am JointHub Advisor for ${studentName}. Ask about deadlines, mentor fit, applications, or what to do next. Answers stay on-platform and use your Capstone sample profile — no external model calls.`
-        : "Select a scholar focus (admin) or sign in as a scholar to use JointHub Advisor.",
+        : "Select a leader focus (admin) or sign in as a leader to use JointHub Advisor.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -815,7 +815,7 @@ function AdvisorPanel({
         role: "assistant",
         content: studentName
           ? `I am JointHub Advisor for ${studentName}. Ask about deadlines, mentor fit, applications, or what to do next. Answers stay on-platform and use your Capstone sample profile — no external model calls.`
-          : "Select a scholar focus (admin) or sign in as a scholar to use JointHub Advisor.",
+          : "Select a leader focus (admin) or sign in as a leader to use JointHub Advisor.",
       },
     ]);
     setInput("");
@@ -826,7 +826,7 @@ function AdvisorPanel({
     const message = raw.trim();
     if (!message || isSending) return;
     if (!studentId) {
-      setError("A scholar context is required before chatting.");
+      setError("A leader context is required before chatting.");
       return;
     }
 
@@ -947,9 +947,7 @@ function AdvisorPanel({
               rows={2}
               disabled={!studentId || isSending}
               placeholder={
-                studentId
-                  ? "e.g. What should I apply to next, and why?"
-                  : "Scholar context required"
+                studentId ? "e.g. What should I apply to next, and why?" : "Leader context required"
               }
               className="min-h-[2.75rem] flex-1 resize-y rounded-xl border border-[#0D1B2A]/15 px-3 py-2 text-sm outline-none focus:border-[#028090] disabled:opacity-60"
             />
@@ -1020,7 +1018,7 @@ function RiskPanel({
         <table className="min-w-full text-left text-sm">
           <thead className="bg-[#0D1B2A]/[0.03] text-[11px] uppercase tracking-[0.12em] text-[#0D1B2A]/55">
             <tr>
-              <th className="px-4 py-3 font-semibold">Scholar</th>
+              <th className="px-4 py-3 font-semibold">Leader</th>
               <th className="px-4 py-3 font-semibold">Risk</th>
               <th className="px-4 py-3 font-semibold">Probability</th>
               <th className="px-4 py-3 font-semibold">Top factor</th>
@@ -1203,12 +1201,12 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
   const router = useRouter();
   const isAdmin = initialData.role === "admin";
   const [data, setData] = useState(initialData);
-  const [tab, setTab] = useState<ScholarTabId>(isAdmin ? "risk" : "overview");
+  const [tab, setTab] = useState<LeaderTabId>(isAdmin ? "risk" : "overview");
   const [selectedStudent, setSelectedStudent] = useState(initialData.student?.student_id ?? "");
   const [outreachStatus, setOutreachStatus] = useState<Record<string, string>>({});
   const [isPending, startTransition] = useTransition();
 
-  const tabs = isAdmin ? ADMIN_TABS : SCHOLAR_TABS;
+  const tabs = isAdmin ? ADMIN_TABS : LEADER_TABS;
 
   const assignment = useMemo(() => {
     if (data.role === "admin" && selectedStudent) {
@@ -1222,7 +1220,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
     return key ? (data.mentorship.top3[key] ?? []) : [];
   }, [data, selectedStudent]);
 
-  const scholarRisk = data.risk[0] ?? null;
+  const leaderRisk = data.risk[0] ?? null;
   const advisorStudentId = data.student?.student_id ?? (selectedStudent || null);
   const advisorName = data.student?.full_name ?? null;
   const starterPrompts = data.overview?.starter_prompts ?? [
@@ -1271,7 +1269,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             </p>
             <h1 className="truncate text-lg font-semibold sm:text-xl">
               {data.student
-                ? `${data.student.full_name} · ${isAdmin ? "Admin focus" : "Scholar home"}`
+                ? `${data.student.full_name} · ${isAdmin ? "Admin focus" : "Leader home"}`
                 : isAdmin
                   ? "Programme admin · cohort view"
                   : "Mentor Hub"}
@@ -1324,7 +1322,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
               htmlFor="student-filter"
               className="text-xs font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/55"
             >
-              Focus scholar
+              Focus leader
             </label>
             <select
               id="student-filter"
@@ -1338,7 +1336,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
               }}
               className="min-w-56 rounded-lg border border-[#0D1B2A]/15 bg-white px-3 py-2 text-sm outline-none focus:border-[#028090]"
             >
-              <option value="">All scholars (admin)</option>
+              <option value="">All leaders (admin)</option>
               {data.students.map((student) => (
                 <option key={student.student_id} value={student.student_id}>
                   {student.full_name} · {student.country}
@@ -1398,7 +1396,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           <ApplicationsPanel applications={data.applications ?? []} />
         ) : null}
         {tab === "community" ? <CommunityPanel posts={data.community ?? []} /> : null}
-        {tab === "coaching" ? <CoachingPanel risk={scholarRisk} /> : null}
+        {tab === "coaching" ? <CoachingPanel risk={leaderRisk} /> : null}
         {tab === "advisor" ? (
           <AdvisorPanel
             studentId={advisorStudentId}

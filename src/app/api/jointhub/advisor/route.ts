@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSessionUser } from "@/lib/jointhub/auth";
 import { findStudent } from "@/lib/jointhub/data-store";
-import { answerAdvisor } from "@/lib/jointhub/scholar-experience";
+import { answerAdvisor } from "@/lib/jointhub/leader-experience";
 
 export const runtime = "nodejs";
 
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Pick a focus scholar first (admin), or sign in as a scholar demo account to use JointHub Advisor.",
+          "Pick a focus leader first (admin), or sign in as a leader demo account to use JointHub Advisor.",
       },
       { status: 400 },
     );
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 
   const student = findStudent(studentId);
   if (!student) {
-    return NextResponse.json({ error: "Scholar profile not found." }, { status: 404 });
+    return NextResponse.json({ error: "Leader profile not found." }, { status: 404 });
   }
 
   const payload = answerAdvisor(studentId, message);

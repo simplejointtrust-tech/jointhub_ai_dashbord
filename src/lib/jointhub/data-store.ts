@@ -109,7 +109,7 @@ type RawRisk = {
 export function getStudents(): StudentProfile[] {
   return readJson<StudentProfile[]>("students.json").map((student) => ({
     ...student,
-    programme: student.programme ?? "JointHub Scholar",
+    programme: student.programme ?? "JointHub Leader",
     campus: student.campus ?? "ALU",
   }));
 }
@@ -118,7 +118,7 @@ export function getMentors(): MentorProfile[] {
   return readJson<MentorProfile[]>("mentors.json").map((mentor) => ({
     ...mentor,
     title: mentor.title ?? `${mentor.industry} mentor`,
-    bio: mentor.bio ?? "Professional mentor supporting African scholars on JointHub Africa.",
+    bio: mentor.bio ?? "Professional mentor supporting African leaders on JointHub Africa.",
   }));
 }
 
@@ -174,7 +174,7 @@ export function getMentorship(): MentorshipPayload {
   const mentors = (raw.mentors?.length ? raw.mentors : getMentors()).map((mentor) => ({
     ...mentor,
     title: mentor.title ?? `${mentor.industry} mentor`,
-    bio: mentor.bio ?? "Professional mentor supporting African scholars on JointHub Africa.",
+    bio: mentor.bio ?? "Professional mentor supporting African leaders on JointHub Africa.",
   }));
   const mentorById = new Map(mentors.map((mentor) => [mentor.mentor_id, mentor]));
 

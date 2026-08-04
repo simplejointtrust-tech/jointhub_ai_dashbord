@@ -45,7 +45,7 @@ def load_json(name: str) -> Any:
 
 
 class LoginBody(BaseModel):
-    email: str = Field(..., examples=["scholar1@jointhub.demo"])
+    email: str = Field(..., examples=["leader1@jointhub.demo"])
 
 
 class OutreachBody(BaseModel):
