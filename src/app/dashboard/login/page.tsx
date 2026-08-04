@@ -49,9 +49,9 @@ export default function DashboardLoginPage() {
           </p>
           <h1 className="mt-2 text-2xl font-semibold">Mentor Hub sign-in</h1>
           <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/70">
-            Demo email gate for Mentor Hub. Students see their own recommendations, mentor match,
-            and risk profile. Admin sees the full cohort. Production Supabase email/password remains
-            available at{" "}
+            Capstone demo gate for Mentor Hub. Scholars open Overview, Opportunities, Mentors,
+            Applications, Community, and JointHub Advisor. Admins also get cohort dropout risk and
+            model analytics. Production Supabase email/password remains at{" "}
             <Link
               href="/login"
               className="font-medium text-[#028090] underline-offset-2 hover:underline"
@@ -95,7 +95,7 @@ export default function DashboardLoginPage() {
               {isSubmitting ? "Signing in…" : "Enter dashboard"}
             </button>
           </form>
-</div>
+        </div>
       </div>
     </main>
   );

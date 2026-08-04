@@ -5,18 +5,29 @@ import {
   BookOpen,
   Calendar,
   ChevronRight,
+  Compass,
   LayoutDashboard,
   LogOut,
+  MessageSquareText,
+  Send,
   Sparkles,
   Target,
   Users,
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useState, useTransition } from "react";
+import type {
+  ApplicationStage,
+  CommunityPost,
+  ScholarApplication,
+  ScholarOverview,
+} from "@/lib/jointhub/scholar-experience";
 import type {
   DashboardBundle,
   MentorAssignment,
+  MentorProfile,
+  MentorTop3,
   ModelMetrics,
   NlpRow,
   Recommendation,
@@ -25,7 +36,16 @@ import type {
 } from "@/lib/jointhub/types";
 import { cn } from "@/lib/utils";
 
-type TabId = "opportunities" | "mentorship" | "risk" | "analytics";
+type ScholarTabId =
+  | "overview"
+  | "opportunities"
+  | "mentors"
+  | "applications"
+  | "community"
+  | "advisor"
+  | "coaching"
+  | "risk"
+  | "analytics";
 
 type DashboardResponse = DashboardBundle & {
   students?: Array<{
@@ -34,14 +54,44 @@ type DashboardResponse = DashboardBundle & {
     email: string;
     country: string;
   }>;
+  overview?: ScholarOverview | null;
+  applications?: ScholarApplication[];
+  community?: CommunityPost[];
 };
 
-const TABS: Array<{ id: TabId; label: string; icon: typeof Target }> = [
+type AdvisorMessage = {
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+  citations?: string[];
+  suggested_actions?: string[];
+};
+
+const SCHOLAR_TABS: Array<{ id: ScholarTabId; label: string; icon: typeof Target }> = [
+  { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "opportunities", label: "Opportunities", icon: Target },
-  { id: "mentorship", label: "Mentor Hub", icon: Users },
+  { id: "mentors", label: "Mentors", icon: Users },
+  { id: "applications", label: "Applications", icon: BookOpen },
+  { id: "community", label: "Community", icon: Compass },
+  { id: "advisor", label: "AI Advisor", icon: MessageSquareText },
+  { id: "coaching", label: "Stay on track", icon: Sparkles },
+];
+
+const ADMIN_TABS: Array<{ id: ScholarTabId; label: string; icon: typeof Target }> = [
+  { id: "overview", label: "Overview", icon: LayoutDashboard },
+  { id: "opportunities", label: "Opportunities", icon: Target },
+  { id: "mentors", label: "Mentor Hub", icon: Users },
   { id: "risk", label: "Dropout risk", icon: AlertTriangle },
   { id: "analytics", label: "Analytics", icon: LayoutDashboard },
+  { id: "advisor", label: "AI Advisor", icon: MessageSquareText },
 ];
+
+const STAGE_LABEL: Record<ApplicationStage, string> = {
+  active: "Active",
+  under_review: "Under review",
+  interview: "Interview",
+  accepted: "Accepted",
+};
 
 function formatPct(value: number): string {
   return `${Math.round(value * 100)}%`;
@@ -57,6 +107,13 @@ function riskTone(level: RiskRow["risk_level"]): string {
   if (level === "high") return "bg-[#C0392B]/12 text-[#C0392B] border-[#C0392B]/30";
   if (level === "medium") return "bg-[#F57F17]/12 text-[#F57F17] border-[#F57F17]/30";
   return "bg-[#1B5E20]/12 text-[#1B5E20] border-[#1B5E20]/30";
+}
+
+function stageTone(stage: ApplicationStage): string {
+  if (stage === "accepted") return "bg-[#1B5E20]/12 text-[#1B5E20]";
+  if (stage === "interview") return "bg-[#028090]/15 text-[#028090]";
+  if (stage === "under_review") return "bg-[#F4B942]/25 text-[#0D1B2A]";
+  return "bg-[#0D1B2A]/08 text-[#0D1B2A]/75";
 }
 
 function KpiCard({ label, value, hint }: { label: string; value: string | number; hint?: string }) {
@@ -105,28 +162,28 @@ function OpportunitiesPanel({
               <div className="flex flex-wrap items-center gap-2">
                 <h3 className="text-base font-semibold text-[#0D1B2A]">{item.title}</h3>
                 {item.is_verified ? (
-                  <span className="rounded-full bg-[#028090]/12 px-2 py-0.5 text-[11px] font-semibold text-[#028090]">
+                  <span className="rounded-full bg-[#1B5E20]/10 px-2 py-0.5 text-[11px] font-semibold text-[#1B5E20]">
                     Verified
                   </span>
                 ) : null}
                 {item.is_scam_flag ? (
-                  <span className="rounded-full bg-[#C0392B]/12 px-2 py-0.5 text-[11px] font-semibold text-[#C0392B]">
-                    Scam flag
+                  <span className="rounded-full bg-[#C0392B]/10 px-2 py-0.5 text-[11px] font-semibold text-[#C0392B]">
+                    Review carefully
                   </span>
                 ) : null}
               </div>
               <p className="mt-1 text-sm text-[#0D1B2A]/65">
-                {item.org_name} · {item.type} · Deadline {item.deadline}
+                {item.org_name} · {item.type} · deadline {item.deadline}
               </p>
               {item.description ? (
                 <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/75">{item.description}</p>
               ) : null}
-              {item.interest_overlap?.length ? (
-                <div className="mt-3 flex flex-wrap gap-1.5">
+              {item.interest_overlap && item.interest_overlap.length > 0 ? (
+                <div className="mt-2 flex flex-wrap gap-1">
                   {item.interest_overlap.map((tag) => (
                     <span
-                      key={tag}
-                      className="rounded-full border border-[#0D1B2A]/10 bg-[#0D1B2A]/[0.03] px-2 py-0.5 text-[11px] text-[#0D1B2A]/70"
+                      key={`${item.opp_id}-${tag}`}
+                      className="rounded-full bg-[#0D1B2A]/[0.04] px-2 py-0.5 text-[11px] text-[#0D1B2A]/70"
                     >
                       {tag.replaceAll("_", " ")}
                     </span>
@@ -134,7 +191,7 @@ function OpportunitiesPanel({
                 </div>
               ) : null}
             </div>
-            <div className="flex flex-row items-center gap-3 md:flex-col md:items-end">
+            <div className="flex flex-col items-start gap-2 md:items-end">
               <span
                 className={cn(
                   "rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
@@ -145,17 +202,17 @@ function OpportunitiesPanel({
               </span>
               <button
                 type="button"
-                className="inline-flex items-center gap-1 rounded-full bg-[#028090] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#026f7d]"
+                className="inline-flex items-center gap-1 rounded-full border border-[#0D1B2A]/15 px-3 py-1.5 text-xs font-semibold text-[#0D1B2A] hover:border-[#028090]/50"
               >
-                Apply
-                <ChevronRight className="h-4 w-4" aria-hidden />
+                Save / apply
+                <ChevronRight className="h-3.5 w-3.5" aria-hidden />
               </button>
             </div>
           </article>
         ))}
         {items.length === 0 ? (
-          <p className="rounded-xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/65">
-            No ranked opportunities for this profile yet.
+          <p className="rounded-2xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/60">
+            No ranked opportunities for this view yet.
           </p>
         ) : null}
       </div>
@@ -173,56 +230,58 @@ function Heatmap({
   mentorNames: string[];
 }) {
   return (
-    <div className="overflow-x-auto rounded-2xl border border-[#0D1B2A]/10 bg-white p-4">
-      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#0D1B2A]/55">
-        Matching matrix (cosine compatibility)
-      </p>
-      <table className="min-w-full border-separate border-spacing-1 text-left text-[11px]">
-        <thead>
-          <tr>
-            <th className="p-1 font-medium text-[#0D1B2A]/50">Scholar \\ Mentor</th>
-            {mentorNames.map((name) => (
-              <th
-                key={name}
-                className="max-w-20 truncate p-1 font-medium text-[#0D1B2A]/60"
-                title={name}
-              >
-                {name.split(" ")[0]}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {matrix.map((row, rowIndex) => {
-            const studentKey = studentNames[rowIndex] ?? `student-${rowIndex}`;
-            return (
-              <tr key={studentKey}>
-                <th className="whitespace-nowrap p-1 text-left font-medium text-[#0D1B2A]/70">
-                  {studentKey.split(" ")[0]}
+    <section className="overflow-hidden rounded-2xl border border-[#0D1B2A]/10 bg-white">
+      <div className="border-b border-[#0D1B2A]/08 px-4 py-3">
+        <h3 className="text-sm font-semibold text-[#0D1B2A]">Matching matrix</h3>
+        <p className="text-xs text-[#0D1B2A]/55">
+          Cosine compatibility · darker teal = stronger fit
+        </p>
+      </div>
+      <div className="overflow-x-auto p-3">
+        <table className="min-w-full border-separate border-spacing-1 text-left text-[11px]">
+          <thead>
+            <tr>
+              <th className="px-2 py-1 font-medium text-[#0D1B2A]/50">Scholar</th>
+              {mentorNames.map((name) => (
+                <th
+                  key={name}
+                  className="max-w-16 truncate px-1 py-1 font-medium text-[#0D1B2A]/50"
+                >
+                  {name.split(" ").slice(-1)[0]}
                 </th>
-                {row.map((value, colIndex) => {
-                  const mentorKey = mentorNames[colIndex] ?? `mentor-${colIndex}`;
-                  const intensity = Math.max(0.08, Math.min(1, value));
-                  return (
-                    <td
-                      key={`${studentKey}__${mentorKey}`}
-                      className="rounded-md p-2 text-center font-semibold tabular-nums text-[#0D1B2A]"
-                      style={{
-                        backgroundColor: `rgba(2, 128, 144, ${intensity * 0.85})`,
-                        color: intensity > 0.45 ? "#fff" : "#0D1B2A",
-                      }}
-                      title={`${studentKey} × ${mentorKey}: ${formatPct(value)}`}
-                    >
-                      {Math.round(value * 100)}
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {matrix.map((row, rowIndex) => {
+              const studentKey = studentNames[rowIndex] ?? `student-${rowIndex}`;
+              return (
+                <tr key={studentKey}>
+                  <td className="whitespace-nowrap px-2 py-1 font-medium text-[#0D1B2A]/70">
+                    {studentKey.split(" ")[0]}
+                  </td>
+                  {row.map((value, colIndex) => {
+                    const intensity = Math.max(0.08, Math.min(1, value));
+                    const mentorKey = mentorNames[colIndex] ?? `mentor-${colIndex}`;
+                    return (
+                      <td key={`${studentKey}-${mentorKey}`} className="px-0.5 py-0.5">
+                        <div
+                          className="flex h-8 w-12 items-center justify-center rounded-md text-[10px] font-semibold tabular-nums text-white"
+                          style={{ backgroundColor: `rgba(2, 128, 144, ${intensity})` }}
+                          title={`${formatPct(value)}`}
+                        >
+                          {Math.round(value * 100)}
+                        </div>
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
   );
 }
 
@@ -232,21 +291,14 @@ function MentorshipPanel({
   sessions,
   heatmap,
   mentors,
+  showHeatmap,
 }: {
-  assignment: MentorAssignment | undefined;
-  top3: Array<{
-    mentor_id: string;
-    mentor_name: string;
-    title?: string;
-    industry: string;
-    country: string;
-    score: number;
-    skills_offered?: string[];
-    availability_hrs_per_month: number;
-  }>;
+  assignment?: MentorAssignment;
+  top3: MentorTop3[];
   sessions: SessionLog[];
   heatmap: DashboardBundle["mentorship"]["heatmap"];
-  mentors: DashboardBundle["mentorship"]["mentors"];
+  mentors: MentorProfile[];
+  showHeatmap: boolean;
 }) {
   const [bookingTopic, setBookingTopic] = useState("Career pathing");
   const [bookingNote, setBookingNote] = useState("");
@@ -254,81 +306,76 @@ function MentorshipPanel({
 
   return (
     <div className="space-y-4">
-      <div className="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
+      <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
         <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
-            Assigned mentor
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+            Your mentor match
           </p>
           {assignment ? (
-            <div className="mt-3">
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <h3 className="text-xl font-semibold text-[#0D1B2A]">{assignment.mentor_name}</h3>
-                  <p className="text-sm text-[#0D1B2A]/65">
-                    {[
-                      assignment.mentor_title,
-                      assignment.mentor_industry,
-                      assignment.mentor_country,
-                    ]
-                      .filter(Boolean)
-                      .join(" · ")}
-                  </p>
-                </div>
+            <>
+              <h3 className="mt-2 text-xl font-semibold text-[#0D1B2A]">
+                {assignment.mentor_name}
+              </h3>
+              <p className="mt-1 text-sm text-[#0D1B2A]/65">
+                {assignment.mentor_title ?? assignment.mentor_industry} ·{" "}
+                {assignment.mentor_country}
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-2">
                 <span
                   className={cn(
-                    "rounded-full px-3 py-1 text-sm font-semibold",
+                    "rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
                     scoreTone(assignment.compatibility),
                   )}
                 >
                   {formatPct(assignment.compatibility)} fit
                 </span>
+                {(assignment.languages ?? []).map((language) => (
+                  <span
+                    key={language}
+                    className="rounded-full bg-[#0D1B2A]/[0.04] px-2.5 py-1 text-xs text-[#0D1B2A]/70"
+                  >
+                    {language}
+                  </span>
+                ))}
               </div>
-              <p className="mt-3 text-sm text-[#0D1B2A]/70">
-                Optimal assignment from cosine similarity + Hungarian algorithm across the cohort
-                matrix.
-                {assignment.languages?.length
-                  ? ` Shared languages: ${assignment.languages.join(", ")}.`
-                  : ""}
-              </p>
-            </div>
+            </>
           ) : (
-            <p className="mt-3 text-sm text-[#0D1B2A]/65">
-              No global assignment for this scholar yet.
-            </p>
+            <p className="mt-3 text-sm text-[#0D1B2A]/60">No mentor assignment in this view yet.</p>
           )}
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-3">
-            {top3.map((mentor, index) => (
-              <article
-                key={mentor.mentor_id}
-                className="rounded-xl border border-[#0D1B2A]/10 bg-[#F8FAFA] p-3"
-              >
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/50">
-                  Alt #{index + 1}
-                </p>
-                <h4 className="mt-1 text-sm font-semibold text-[#0D1B2A]">{mentor.mentor_name}</h4>
-                <p className="text-xs text-[#0D1B2A]/60">{mentor.title || mentor.industry}</p>
-                <p className="mt-2 text-sm font-semibold text-[#028090]">
-                  {formatPct(mentor.score)}
-                </p>
-                <p className="mt-1 text-[11px] text-[#0D1B2A]/55">
-                  {mentor.availability_hrs_per_month}h / month · {mentor.country}
-                </p>
-              </article>
-            ))}
+          <div className="mt-6">
+            <h4 className="text-sm font-semibold text-[#0D1B2A]">Strong alternatives</h4>
+            <ul className="mt-3 space-y-2">
+              {top3.map((mentor) => (
+                <li
+                  key={mentor.mentor_id}
+                  className="flex items-center justify-between gap-3 rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+                >
+                  <div>
+                    <p className="text-sm font-medium text-[#0D1B2A]">{mentor.mentor_name}</p>
+                    <p className="text-xs text-[#0D1B2A]/55">
+                      {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}h/mo
+                    </p>
+                  </div>
+                  <span className="text-sm font-semibold tabular-nums text-[#028090]">
+                    {formatPct(mentor.score)}
+                  </span>
+                </li>
+              ))}
+              {top3.length === 0 ? (
+                <li className="text-sm text-[#0D1B2A]/55">No alternatives ranked yet.</li>
+              ) : null}
+            </ul>
           </div>
         </section>
 
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-5 text-white shadow-sm">
+        <section className="rounded-2xl bg-[#0D1B2A] p-5 text-white shadow-sm">
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4 text-[#F4B942]" aria-hidden />
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#F4B942]">
-              Session booking
-            </p>
+            <h3 className="text-sm font-semibold">Book a session</h3>
           </div>
-          <p className="mt-2 text-sm text-white/75">
-            Book a 30–45 minute check-in with your assigned mentor. Demo mode logs the request
-            in-session.
+          <p className="mt-2 text-sm text-white/70">
+            Request time with your assigned mentor. Demo mode logs the request in-session.
           </p>
           <label className="mt-4 block text-xs font-medium text-white/70" htmlFor="topic">
             Topic
@@ -370,11 +417,13 @@ function MentorshipPanel({
         </section>
       </div>
 
-      <Heatmap
-        matrix={heatmap.matrix}
-        studentNames={heatmap.student_names}
-        mentorNames={heatmap.mentor_names}
-      />
+      {showHeatmap ? (
+        <Heatmap
+          matrix={heatmap.matrix}
+          studentNames={heatmap.student_names}
+          mentorNames={heatmap.mentor_names}
+        />
+      ) : null}
 
       <div className="grid gap-4 lg:grid-cols-2">
         <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
@@ -430,6 +479,524 @@ function MentorshipPanel({
   );
 }
 
+function OverviewPanel({
+  overview,
+  recommendations,
+  applications,
+  onOpenTab,
+  isAdmin,
+}: {
+  overview: ScholarOverview | null | undefined;
+  recommendations: Recommendation[];
+  applications: ScholarApplication[];
+  onOpenTab: (tab: ScholarTabId) => void;
+  isAdmin: boolean;
+}) {
+  if (!overview) {
+    return (
+      <div className="rounded-2xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/65">
+        {isAdmin
+          ? "Select a focus scholar above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
+          : "Overview is not available for this account yet."}
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+          Welcome back
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold text-[#0D1B2A]">Hi, {overview.greeting_name}</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#0D1B2A]/75">
+          {overview.goal_text}
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {overview.interest_tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-[#0D1B2A]/[0.04] px-2.5 py-1 text-xs text-[#0D1B2A]/70"
+            >
+              {tag.replaceAll("_", " ")}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {overview.activity_stats.map((stat) => (
+          <KpiCard key={stat.label} label={stat.label} value={stat.value} hint={stat.hint} />
+        ))}
+      </div>
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-sm font-semibold text-[#0D1B2A]">Upcoming mentor session</h3>
+            <button
+              type="button"
+              onClick={() => onOpenTab("mentors")}
+              className="text-xs font-semibold text-[#028090] hover:underline"
+            >
+              Open Mentors
+            </button>
+          </div>
+          {overview.next_session ? (
+            <div className="mt-3 rounded-xl border border-[#028090]/20 bg-[#028090]/[0.06] p-4">
+              <p className="text-sm font-semibold text-[#0D1B2A]">
+                {overview.next_session.session_date}
+              </p>
+              <p className="mt-1 text-xs text-[#0D1B2A]/65">
+                {overview.next_session.session_duration_mins} min ·{" "}
+                {overview.next_session.topics_discussed.join(", ")} ·{" "}
+                {overview.assigned_mentor?.mentor_name ?? "Assigned mentor"}
+              </p>
+            </div>
+          ) : (
+            <p className="mt-3 text-sm text-[#0D1B2A]/60">
+              No upcoming session yet. Book one from Mentors when you are ready.
+            </p>
+          )}
+          {overview.assigned_mentor ? (
+            <p className="mt-3 text-xs text-[#0D1B2A]/55">
+              Match fit {formatPct(overview.assigned_mentor.compatibility)} with{" "}
+              {overview.assigned_mentor.mentor_name}
+            </p>
+          ) : null}
+        </section>
+
+        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-sm font-semibold text-[#0D1B2A]">Worth a closer look</h3>
+            <button
+              type="button"
+              onClick={() => onOpenTab("opportunities")}
+              className="text-xs font-semibold text-[#028090] hover:underline"
+            >
+              All opportunities
+            </button>
+          </div>
+          <ul className="mt-3 space-y-2">
+            {(overview.worth_a_look.length ? overview.worth_a_look : recommendations)
+              .slice(0, 3)
+              .map((item) => (
+                <li key={item.opp_id} className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <p className="text-sm font-medium text-[#0D1B2A]">{item.title}</p>
+                      <p className="text-xs text-[#0D1B2A]/55">
+                        {item.org_name} · due {item.deadline}
+                      </p>
+                    </div>
+                    <span className="text-xs font-semibold tabular-nums text-[#028090]">
+                      {formatPct(item.match_score)}
+                    </span>
+                  </div>
+                </li>
+              ))}
+          </ul>
+          {overview.coaching_nudge ? (
+            <button
+              type="button"
+              onClick={() => onOpenTab("coaching")}
+              className="mt-4 w-full rounded-xl border border-[#F57F17]/30 bg-[#F57F17]/10 px-3 py-2 text-left text-xs font-medium text-[#0D1B2A]"
+            >
+              {overview.coaching_nudge}
+            </button>
+          ) : null}
+        </section>
+      </div>
+
+      <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="text-sm font-semibold text-[#0D1B2A]">Saved & in progress</h3>
+          <button
+            type="button"
+            onClick={() => onOpenTab("applications")}
+            className="text-xs font-semibold text-[#028090] hover:underline"
+          >
+            Applications
+          </button>
+        </div>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {applications.slice(0, 4).map((item) => (
+            <div
+              key={item.application_id}
+              className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+            >
+              <p className="text-sm font-medium text-[#0D1B2A]">{item.title}</p>
+              <p className="text-xs text-[#0D1B2A]/55">
+                {STAGE_LABEL[item.stage]} · {item.updated_label}
+              </p>
+            </div>
+          ))}
+          {applications.length === 0 ? (
+            <p className="text-sm text-[#0D1B2A]/55">No saved applications yet.</p>
+          ) : null}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function ApplicationsPanel({ applications }: { applications: ScholarApplication[] }) {
+  const stages: ApplicationStage[] = ["active", "under_review", "interview", "accepted"];
+  return (
+    <div className="space-y-4">
+      <p className="text-sm text-[#0D1B2A]/70">
+        Your application pipeline across Active, Under review, Interview, and Accepted. Demo stages
+        are derived from your ranked opportunities so Capstone judges can walk the Canva flow.
+      </p>
+      <div className="grid gap-3 lg:grid-cols-4">
+        {stages.map((stage) => {
+          const rows = applications.filter((item) => item.stage === stage);
+          return (
+            <section
+              key={stage}
+              className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-4 shadow-sm"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-sm font-semibold text-[#0D1B2A]">{STAGE_LABEL[stage]}</h3>
+                <span className="rounded-full bg-[#0D1B2A]/[0.05] px-2 py-0.5 text-xs font-semibold tabular-nums text-[#0D1B2A]">
+                  {rows.length}
+                </span>
+              </div>
+              <ul className="mt-3 space-y-2">
+                {rows.map((item) => (
+                  <li
+                    key={item.application_id}
+                    className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+                  >
+                    <p className="text-sm font-medium text-[#0D1B2A]">{item.title}</p>
+                    <p className="text-xs text-[#0D1B2A]/55">
+                      {item.org_name} · {item.updated_label}
+                    </p>
+                    <span
+                      className={cn(
+                        "mt-2 inline-flex rounded-full px-2 py-0.5 text-[11px] font-semibold",
+                        stageTone(item.stage),
+                      )}
+                    >
+                      {formatPct(item.match_score)} match
+                    </span>
+                  </li>
+                ))}
+                {rows.length === 0 ? (
+                  <li className="text-xs text-[#0D1B2A]/50">Nothing in this stage yet.</li>
+                ) : null}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function CommunityPanel({ posts }: { posts: CommunityPost[] }) {
+  return (
+    <div className="space-y-4">
+      <div className="rounded-2xl border border-[#028090]/20 bg-[#028090]/[0.06] p-5">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+          ESL Community
+        </p>
+        <p className="mt-2 text-sm text-[#0D1B2A]/75">
+          Peer posts, masterclasses, and light accountability energy. This is a product surface for
+          scholars — not Capstone model evidence.
+        </p>
+      </div>
+      <div className="grid gap-3">
+        {posts.map((post) => (
+          <article
+            key={post.post_id}
+            className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-4 shadow-sm"
+          >
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-[#0D1B2A]/[0.05] px-2.5 py-0.5 text-[11px] font-semibold text-[#0D1B2A]/70">
+                {post.tag}
+              </span>
+              <span className="text-xs text-[#0D1B2A]/50">{post.when}</span>
+            </div>
+            <h3 className="mt-2 text-base font-semibold text-[#0D1B2A]">{post.title}</h3>
+            <p className="mt-1 text-sm leading-relaxed text-[#0D1B2A]/75">{post.body}</p>
+            <p className="mt-3 text-xs font-medium text-[#028090]">
+              {post.author} · {post.role_label}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CoachingPanel({ risk }: { risk: RiskRow | null | undefined }) {
+  if (!risk) {
+    return (
+      <div className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-6 text-sm text-[#0D1B2A]/65">
+        No personal coaching signal for this view. Keep applying and meeting your mentor on a steady
+        rhythm.
+      </div>
+    );
+  }
+
+  const isHigh = risk.risk_level === "high" || risk.risk_level === "medium";
+  return (
+    <div className="space-y-4">
+      <section
+        className={cn(
+          "rounded-2xl border p-5",
+          isHigh
+            ? "border-[#F57F17]/30 bg-[#F57F17]/10"
+            : "border-[#1B5E20]/25 bg-[#1B5E20]/[0.08]",
+        )}
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0D1B2A]/60">
+          Soft coaching only
+        </p>
+        <h3 className="mt-2 text-lg font-semibold text-[#0D1B2A]">
+          {isHigh ? "You may be falling behind — book a check-in" : "You are in a healthy rhythm"}
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/75">
+          {risk.outreach_prompt ??
+            "Keep logging sessions and finishing applications. Small weekly actions compound."}
+        </p>
+        <p className="mt-3 text-xs text-[#0D1B2A]/55">
+          Scholars never see the full cohort risk table. This card is personal guidance only.
+        </p>
+      </section>
+      <div className="grid gap-3 sm:grid-cols-3">
+        <KpiCard
+          label="Days since login"
+          value={risk.features.days_since_last_login}
+          hint="Lower is better"
+        />
+        <KpiCard
+          label="Days since mentor session"
+          value={risk.features.days_since_last_mentor_session}
+          hint="Aim under 14"
+        />
+        <KpiCard
+          label="Profile completeness"
+          value={formatPct(risk.features.profile_completeness)}
+          hint="Fill interests & goals"
+        />
+      </div>
+    </div>
+  );
+}
+
+function AdvisorPanel({
+  studentId,
+  studentName,
+  starterPrompts,
+}: {
+  studentId: string | null;
+  studentName: string | null;
+  starterPrompts: string[];
+}) {
+  const [messages, setMessages] = useState<AdvisorMessage[]>([
+    {
+      id: "welcome",
+      role: "assistant",
+      content: studentName
+        ? `I am JointHub Advisor for ${studentName}. Ask about deadlines, mentor fit, applications, or what to do next. Answers stay on-platform and use your Capstone sample profile — no external model calls.`
+        : "Select a scholar focus (admin) or sign in as a scholar to use JointHub Advisor.",
+    },
+  ]);
+  const [input, setInput] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setMessages([
+      {
+        id: "welcome",
+        role: "assistant",
+        content: studentName
+          ? `I am JointHub Advisor for ${studentName}. Ask about deadlines, mentor fit, applications, or what to do next. Answers stay on-platform and use your Capstone sample profile — no external model calls.`
+          : "Select a scholar focus (admin) or sign in as a scholar to use JointHub Advisor.",
+      },
+    ]);
+    setInput("");
+    setError(null);
+  }, [studentName]);
+
+  async function sendMessage(raw: string) {
+    const message = raw.trim();
+    if (!message || isSending) return;
+    if (!studentId) {
+      setError("A scholar context is required before chatting.");
+      return;
+    }
+
+    const userMessage: AdvisorMessage = {
+      id: `u-${Date.now()}`,
+      role: "user",
+      content: message,
+    };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
+    setIsSending(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/jointhub/advisor", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message, student_id: studentId }),
+      });
+      const payload = (await response.json()) as {
+        answer?: string;
+        citations?: string[];
+        suggested_actions?: string[];
+        error?: string;
+      };
+      if (!response.ok) {
+        setError(payload.error ?? "Advisor could not answer.");
+        return;
+      }
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `a-${Date.now()}`,
+          role: "assistant",
+          content: payload.answer ?? "No answer returned.",
+          citations: payload.citations,
+          suggested_actions: payload.suggested_actions,
+        },
+      ]);
+    } catch {
+      setError("Could not reach JointHub Advisor.");
+    } finally {
+      setIsSending(false);
+    }
+  }
+
+  return (
+    <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
+      <section className="flex min-h-[28rem] flex-col rounded-2xl border border-[#0D1B2A]/10 bg-white shadow-sm">
+        <div className="border-b border-[#0D1B2A]/08 px-4 py-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+            JointHub Advisor
+          </p>
+          <p className="mt-1 text-sm text-[#0D1B2A]/65">
+            Grounded answers from your profile, ranked opportunities, mentor match, and soft
+            coaching signals.
+          </p>
+        </div>
+        <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
+          {messages.map((message) => (
+            <div
+              key={message.id}
+              className={cn(
+                "max-w-[92%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
+                message.role === "user"
+                  ? "ml-auto bg-[#028090] text-white"
+                  : "bg-[#0D1B2A]/[0.04] text-[#0D1B2A]",
+              )}
+            >
+              <p className="whitespace-pre-wrap">{message.content}</p>
+              {message.citations && message.citations.length > 0 ? (
+                <ul className="mt-2 space-y-1 border-t border-[#0D1B2A]/10 pt-2 text-[11px] text-[#0D1B2A]/60">
+                  {message.citations.map((citation) => (
+                    <li key={citation}>• {citation}</li>
+                  ))}
+                </ul>
+              ) : null}
+              {message.suggested_actions && message.suggested_actions.length > 0 ? (
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {message.suggested_actions.map((action) => (
+                    <button
+                      key={action}
+                      type="button"
+                      onClick={() => void sendMessage(action)}
+                      className="rounded-full border border-[#028090]/30 bg-white px-2.5 py-1 text-[11px] font-semibold text-[#028090]"
+                    >
+                      {action}
+                    </button>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          ))}
+        </div>
+        <form
+          className="border-t border-[#0D1B2A]/08 p-3"
+          onSubmit={(event) => {
+            event.preventDefault();
+            void sendMessage(input);
+          }}
+        >
+          {error ? (
+            <p
+              className="mb-2 rounded-lg bg-[#C0392B]/10 px-3 py-2 text-xs text-[#C0392B]"
+              role="alert"
+            >
+              {error}
+            </p>
+          ) : null}
+          <div className="flex items-end gap-2">
+            <label className="sr-only" htmlFor="advisor-input">
+              Ask JointHub Advisor
+            </label>
+            <textarea
+              id="advisor-input"
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              rows={2}
+              disabled={!studentId || isSending}
+              placeholder={
+                studentId
+                  ? "e.g. What should I apply to next, and why?"
+                  : "Scholar context required"
+              }
+              className="min-h-[2.75rem] flex-1 resize-y rounded-xl border border-[#0D1B2A]/15 px-3 py-2 text-sm outline-none focus:border-[#028090] disabled:opacity-60"
+            />
+            <button
+              type="submit"
+              disabled={!studentId || isSending || !input.trim()}
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#028090] text-white transition hover:bg-[#026f7d] disabled:opacity-50"
+              aria-label="Send message"
+            >
+              <Send className="h-4 w-4" aria-hidden />
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <aside className="space-y-3">
+        <div className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-4">
+          <h3 className="text-sm font-semibold text-[#0D1B2A]">Try asking</h3>
+          <ul className="mt-3 space-y-2">
+            {starterPrompts.map((prompt) => (
+              <li key={prompt}>
+                <button
+                  type="button"
+                  onClick={() => void sendMessage(prompt)}
+                  disabled={!studentId || isSending}
+                  className="w-full rounded-xl border border-[#0D1B2A]/10 px-3 py-2 text-left text-xs font-medium text-[#0D1B2A] hover:border-[#028090]/40 disabled:opacity-50"
+                >
+                  {prompt}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="rounded-2xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-4 text-white">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#F4B942]">
+            Capstone note
+          </p>
+          <p className="mt-2 text-xs leading-relaxed text-white/75">
+            Advisor is a grounded product interaction over sample Capstone outputs. It does not call
+            external LLMs and does not email anyone.
+          </p>
+        </div>
+      </aside>
+    </div>
+  );
+}
+
 function RiskPanel({
   rows,
   isAdmin,
@@ -478,29 +1045,28 @@ function RiskPanel({
                     {row.risk_level}
                   </span>
                 </td>
-                <td className="px-4 py-3 tabular-nums font-semibold text-[#0D1B2A]">
+                <td className="px-4 py-3 font-semibold tabular-nums text-[#0D1B2A]">
                   {formatPct(row.risk_probability)}
                 </td>
                 <td className="px-4 py-3 text-[#0D1B2A]/75">
                   {row.top_risk_factor.replaceAll("_", " ")}
                 </td>
                 <td className="px-4 py-3 text-xs text-[#0D1B2A]/65">
-                  login {row.features.days_since_last_login}d · gpa{" "}
-                  {row.features.gpa_score.toFixed(2)} · attend{" "}
-                  {Math.round(row.features.attendance_rate * 100)}% · mentor{" "}
-                  {row.features.days_since_last_mentor_session}d
+                  login {row.features.days_since_last_login}d · mentor{" "}
+                  {row.features.days_since_last_mentor_session}d · GPA{" "}
+                  {row.features.gpa_score.toFixed(2)}
                 </td>
                 {isAdmin ? (
                   <td className="px-4 py-3">
                     <button
                       type="button"
                       onClick={() => onOutreach(row.student_id)}
-                      className="rounded-full bg-[#C0392B] px-3 py-1.5 text-xs font-semibold text-white hover:bg-[#a93226]"
+                      className="rounded-full bg-[#028090] px-3 py-1.5 text-xs font-semibold text-white hover:bg-[#026f7d]"
                     >
-                      Trigger outreach
+                      Queue outreach
                     </button>
                     {outreachStatus[row.student_id] ? (
-                      <p className="mt-1 max-w-48 text-[11px] text-[#0D1B2A]/60">
+                      <p className="mt-1 max-w-40 text-[11px] text-[#0D1B2A]/55">
                         {outreachStatus[row.student_id]}
                       </p>
                     ) : null}
@@ -526,27 +1092,27 @@ function AnalyticsPanel({
 }) {
   const metricCards = [
     {
-      label: "Rec. Precision@5",
+      label: "Precision@5",
       value: formatPct(metrics.recommendation_precision_at_5),
-      target: `target ≥ ${formatPct(metrics.recommendation_target)}`,
+      target: `target ${formatPct(metrics.recommendation_target)}`,
       pass: metrics.recommendation_precision_at_5 >= metrics.recommendation_target,
     },
     {
       label: "Mentor match F1",
       value: formatPct(metrics.mentor_match_f1),
-      target: `target ≥ ${formatPct(metrics.mentor_match_target)}`,
+      target: `target ${formatPct(metrics.mentor_match_target)}`,
       pass: metrics.mentor_match_f1 >= metrics.mentor_match_target,
     },
     {
       label: "Dropout AUC-ROC",
       value: metrics.dropout_auc_roc.toFixed(2),
-      target: `target ≥ ${metrics.dropout_target.toFixed(2)}`,
+      target: `target ${metrics.dropout_target.toFixed(2)}`,
       pass: metrics.dropout_auc_roc >= metrics.dropout_target,
     },
     {
       label: "NLP entity recall",
       value: formatPct(metrics.nlp_entity_recall_estimate),
-      target: `target ≥ ${formatPct(metrics.nlp_target)}`,
+      target: `target ${formatPct(metrics.nlp_target)}`,
       pass: metrics.nlp_entity_recall_estimate >= metrics.nlp_target,
     },
   ];
@@ -570,6 +1136,13 @@ function AnalyticsPanel({
             </p>
           </div>
         ))}
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <KpiCard label="Registered users" value={kpis.registered_users} />
+        <KpiCard label="Opportunities matched" value={kpis.opportunities_matched} />
+        <KpiCard label="Active mentor pairs" value={kpis.active_mentor_pairs} />
+        <KpiCard label="At-risk flagged" value={kpis.at_risk_students_flagged} />
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
@@ -628,11 +1201,14 @@ function AnalyticsPanel({
 
 export function DashboardApp({ initialData }: { initialData: DashboardResponse }) {
   const router = useRouter();
+  const isAdmin = initialData.role === "admin";
   const [data, setData] = useState(initialData);
-  const [tab, setTab] = useState<TabId>("opportunities");
+  const [tab, setTab] = useState<ScholarTabId>(isAdmin ? "risk" : "overview");
   const [selectedStudent, setSelectedStudent] = useState(initialData.student?.student_id ?? "");
   const [outreachStatus, setOutreachStatus] = useState<Record<string, string>>({});
   const [isPending, startTransition] = useTransition();
+
+  const tabs = isAdmin ? ADMIN_TABS : SCHOLAR_TABS;
 
   const assignment = useMemo(() => {
     if (data.role === "admin" && selectedStudent) {
@@ -645,6 +1221,15 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
     const key = selectedStudent || data.student?.student_id || Object.keys(data.mentorship.top3)[0];
     return key ? (data.mentorship.top3[key] ?? []) : [];
   }, [data, selectedStudent]);
+
+  const scholarRisk = data.risk[0] ?? null;
+  const advisorStudentId = data.student?.student_id ?? (selectedStudent || null);
+  const advisorName = data.student?.full_name ?? null;
+  const starterPrompts = data.overview?.starter_prompts ?? [
+    "What should I apply to next?",
+    "Who is my mentor and why?",
+    "Am I falling behind?",
+  ];
 
   async function reload(studentId?: string) {
     const query = studentId ? `?student_id=${encodeURIComponent(studentId)}` : "";
@@ -680,35 +1265,40 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
     <div className="min-h-screen bg-[#F4F7F7] text-[#0D1B2A]">
       <header className="border-b border-white/10 bg-[#0D1B2A] text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F4B942]">
-              JointHub Africa
+          <div className="min-w-0">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#F4B942]">
+              JointHub Africa · Mentor Hub
             </p>
-            <h1 className="text-lg font-semibold sm:text-xl">Mentor Hub</h1>
-            <p className="text-xs text-[#0D1B2A]/55">
-              <a href="/prototype" className="font-medium text-[#028090] underline-offset-2 hover:underline">
-                View Canva prototype
-              </a>
-            </p>
-            <p className="text-xs text-[#0D1B2A]/55">
-            </p>
-            <p className="text-xs text-white/65">
+            <h1 className="truncate text-lg font-semibold sm:text-xl">
               {data.student
-                ? `${data.student.full_name} · ${data.student.programme}`
-                : "Admin cohort view"}{" "}
-              · {data.auth_email}
+                ? `${data.student.full_name} · ${isAdmin ? "Admin focus" : "Scholar home"}`
+                : isAdmin
+                  ? "Programme admin · cohort view"
+                  : "Mentor Hub"}
+            </h1>
+            <p className="truncate text-xs text-white/60">
+              {data.auth_email}
+              {data.student
+                ? ` · ${data.student.country} · ${data.student.programme}`
+                : " · Capstone sample cohort"}
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <Link
+              href="/prototype"
+              className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/10"
+            >
+              Design reference
+            </Link>
             <Link
               href="/"
-              className="rounded-full border border-white/15 px-3 py-1.5 text-xs font-medium text-white/80 hover:bg-white/10"
+              className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/10"
             >
               Home
             </Link>
             <button
               type="button"
-              onClick={handleSignOut}
+              onClick={() => void handleSignOut()}
               className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/15"
             >
               <LogOut className="h-3.5 w-3.5" aria-hidden />
@@ -718,15 +1308,17 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl space-y-5 px-4 py-5 sm:px-6">
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          <KpiCard label="Registered users" value={data.kpis.registered_users} />
-          <KpiCard label="Opportunities matched" value={data.kpis.opportunities_matched} />
-          <KpiCard label="Active mentor pairs" value={data.kpis.active_mentor_pairs} />
-          <KpiCard label="At-risk students flagged" value={data.kpis.at_risk_students_flagged} />
-        </div>
+      <main className="mx-auto max-w-7xl space-y-5 px-4 py-6 sm:px-6">
+        {isAdmin ? (
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <KpiCard label="Registered users" value={data.kpis.registered_users} />
+            <KpiCard label="Opportunities matched" value={data.kpis.opportunities_matched} />
+            <KpiCard label="Active mentor pairs" value={data.kpis.active_mentor_pairs} />
+            <KpiCard label="At-risk students flagged" value={data.kpis.at_risk_students_flagged} />
+          </div>
+        ) : null}
 
-        {data.role === "admin" && data.students ? (
+        {isAdmin && data.students ? (
           <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-[#0D1B2A]/10 bg-white p-3">
             <label
               htmlFor="student-filter"
@@ -758,7 +1350,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
         ) : null}
 
         <nav className="flex flex-wrap gap-2" aria-label="Dashboard modules">
-          {TABS.map((item) => {
+          {tabs.map((item) => {
             const Icon = item.icon;
             const active = tab === item.id;
             return (
@@ -770,7 +1362,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
                   "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition",
                   active
                     ? "bg-[#028090] text-white"
-                    : "bg-white text-[#0D1B2A]/75 border border-[#0D1B2A]/10 hover:border-[#028090]/40",
+                    : "border border-[#0D1B2A]/10 bg-white text-[#0D1B2A]/75 hover:border-[#028090]/40",
                 )}
               >
                 <Icon className="h-4 w-4" aria-hidden />
@@ -780,22 +1372,44 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           })}
         </nav>
 
+        {tab === "overview" ? (
+          <OverviewPanel
+            overview={data.overview}
+            recommendations={data.recommendations}
+            applications={data.applications ?? []}
+            onOpenTab={setTab}
+            isAdmin={isAdmin}
+          />
+        ) : null}
         {tab === "opportunities" ? (
           <OpportunitiesPanel items={data.recommendations} sentence={data.personalised_sentence} />
         ) : null}
-        {tab === "mentorship" ? (
+        {tab === "mentors" ? (
           <MentorshipPanel
             assignment={assignment}
             top3={top3}
             sessions={data.mentorship.sessions}
             heatmap={data.mentorship.heatmap}
             mentors={data.mentorship.mentors}
+            showHeatmap={isAdmin}
+          />
+        ) : null}
+        {tab === "applications" ? (
+          <ApplicationsPanel applications={data.applications ?? []} />
+        ) : null}
+        {tab === "community" ? <CommunityPanel posts={data.community ?? []} /> : null}
+        {tab === "coaching" ? <CoachingPanel risk={scholarRisk} /> : null}
+        {tab === "advisor" ? (
+          <AdvisorPanel
+            studentId={advisorStudentId}
+            studentName={advisorName}
+            starterPrompts={starterPrompts}
           />
         ) : null}
         {tab === "risk" ? (
           <RiskPanel
             rows={data.risk}
-            isAdmin={data.role === "admin"}
+            isAdmin={isAdmin}
             onOutreach={handleOutreach}
             outreachStatus={outreachStatus}
           />
