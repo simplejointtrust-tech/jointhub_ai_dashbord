@@ -4,6 +4,7 @@ import {
   AlertTriangle,
   BookOpen,
   Calendar,
+  ChevronDown,
   ChevronRight,
   Compass,
   LayoutDashboard,
@@ -139,12 +140,150 @@ function KpiCard({ label, value, hint }: { label: string; value: string | number
   );
 }
 
+
+function WhyRecommendedPanel({
+  title = "Why recommended",
+  reasons,
+  onAskKay,
+  askLabel = "Ask Kay about this",
+}: {
+  title?: string;
+  reasons: string[];
+  onAskKay?: () => void;
+  askLabel?: string;
+}) {
+  const [open, setOpen] = useState(false);
+  if (reasons.length === 0) return null;
+
+  return (
+    <div className="mt-3 rounded-xl border border-[#142033]/08 bg-[#142033]/[0.02]">
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-xs font-semibold text-[#3A87B8] transition hover:bg-[#3A87B8]/[0.06]"
+        aria-expanded={open}
+      >
+        <span>{title}</span>
+        <ChevronDown
+          className={cn("h-3.5 w-3.5 shrink-0 transition", open ? "rotate-180" : "")}
+          aria-hidden
+        />
+      </button>
+      {open ? (
+        <div className="space-y-3 border-t border-[#142033]/08 px-3 py-3">
+          <ul className="space-y-1.5">
+            {reasons.map((reason) => (
+              <li key={reason} className="flex gap-2 text-xs leading-relaxed text-[#142033]/75">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3A87B8]" aria-hidden />
+                <span>{reason}</span>
+              </li>
+            ))}
+          </ul>
+          {onAskKay ? (
+            <button
+              type="button"
+              onClick={onAskKay}
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#3A87B8]/30 bg-white px-3 py-1.5 text-[11px] font-semibold text-[#3A87B8] transition hover:border-[#3A87B8]/60 hover:bg-[#3A87B8]/[0.06]"
+            >
+              <MessageSquareText className="h-3.5 w-3.5" aria-hidden />
+              {askLabel}
+            </button>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function opportunityWhyReasons(item: Recommendation, sentence: string | null): string[] {
+  const reasons: string[] = [];
+  reasons.push(
+    `Match score ${formatPct(item.match_score)} from content-based cosine similarity against your interest vector and career stage.`,
+  );
+  if (item.interest_overlap && item.interest_overlap.length > 0) {
+    reasons.push(
+      `Overlapping interests: ${item.interest_overlap
+        .slice(0, 4)
+        .map((tag) => tag.replaceAll("_", " "))
+        .join(", ")}.`,
+    );
+  }
+  if (sentence) {
+    reasons.push(`Personalised ranking note: ${sentence}`);
+  }
+  reasons.push(`${item.type} opportunity from ${item.org_name} with deadline ${item.deadline}.`);
+  if (item.is_verified) {
+    reasons.push("Verified opportunity in the Capstone catalogue.");
+  }
+  if (item.is_scam_flag) {
+    reasons.push("Flagged for careful review before you apply.");
+  }
+  return reasons;
+}
+
+function mentorAssignmentWhyReasons(
+  assignment: MentorAssignment,
+  portrait?: MentorProfile,
+): string[] {
+  const reasons: string[] = [
+    `Compatibility ${formatPct(assignment.compatibility)} from the ESL mentor matching matrix.`,
+    `Industry fit: ${assignment.mentor_industry}.`,
+    `Based in ${assignment.mentor_country}.`,
+  ];
+  if (assignment.mentor_title) {
+    reasons.push(`Role focus: ${assignment.mentor_title}.`);
+  }
+  if (assignment.languages && assignment.languages.length > 0) {
+    reasons.push(`Shared languages: ${assignment.languages.join(", ")}.`);
+  }
+  if (portrait?.skills_offered && portrait.skills_offered.length > 0) {
+    reasons.push(
+      `Skills offered: ${portrait.skills_offered.slice(0, 4).join(", ")}.`,
+    );
+  }
+  if (portrait?.availability_hrs_per_month) {
+    reasons.push(`${portrait.availability_hrs_per_month} mentoring hours available per month.`);
+  }
+  return reasons;
+}
+
+function mentorTop3WhyReasons(mentor: MentorTop3): string[] {
+  const reasons: string[] = [
+    `Ranked alternative fit ${formatPct(mentor.score)} for your current goals.`,
+    `Industry: ${mentor.industry}.`,
+    `Based in ${mentor.country}.`,
+  ];
+  if (mentor.title) {
+    reasons.push(`Title / focus: ${mentor.title}.`);
+  }
+  if (mentor.skills_offered && mentor.skills_offered.length > 0) {
+    reasons.push(
+      `Skills offered: ${mentor.skills_offered.slice(0, 4).join(", ")}.`,
+    );
+  }
+  reasons.push(`${mentor.availability_hrs_per_month}h/month availability on the ESL roster.`);
+  return reasons;
+}
+
+function riskWhyReasons(row: RiskRow): string[] {
+  return [
+    `Model probability ${formatPct(row.risk_probability)} (threshold 0.65) · level ${row.risk_level}.`,
+    `Top factor: ${row.top_risk_factor.replaceAll("_", " ")}.`,
+    `Days since last login: ${row.features.days_since_last_login}.`,
+    `Days since last mentor session: ${row.features.days_since_last_mentor_session}.`,
+    `GPA signal ${row.features.gpa_score.toFixed(2)} · attendance ${formatPct(row.features.attendance_rate)} · profile ${formatPct(row.features.profile_completeness)}.`,
+    row.outreach_prompt,
+  ].filter(Boolean);
+}
+
 function OpportunitiesPanel({
   items,
   sentence,
+  onAskKay,
 }: {
   items: Recommendation[];
   sentence: string | null;
+  onAskKay?: (prompt: string) => void;
 }) {
   return (
     <div className="space-y-4">
@@ -164,63 +303,79 @@ function OpportunitiesPanel({
       </div>
 
       <div className="grid gap-3">
-        {items.map((item) => (
-          <article
-            key={item.opp_id}
-            className="grid gap-3 rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm md:grid-cols-[1fr_auto] md:items-center"
-          >
-            <div>
-              <div className="flex flex-wrap items-center gap-2">
-                <h3 className="text-base font-semibold text-[#142033]">{item.title}</h3>
-                {item.is_verified ? (
-                  <span className="rounded-full bg-[#1B5E20]/10 px-2 py-0.5 text-[11px] font-semibold text-[#1B5E20]">
-                    Verified
-                  </span>
-                ) : null}
-                {item.is_scam_flag ? (
-                  <span className="rounded-full bg-[#E0312E]/10 px-2 py-0.5 text-[11px] font-semibold text-[#E0312E]">
-                    Review carefully
-                  </span>
-                ) : null}
-              </div>
-              <p className="mt-1 text-sm text-[#142033]/65">
-                {item.org_name} · {item.type} · deadline {item.deadline}
-              </p>
-              {item.description ? (
-                <p className="mt-2 text-sm leading-relaxed text-[#142033]/75">{item.description}</p>
-              ) : null}
-              {item.interest_overlap && item.interest_overlap.length > 0 ? (
-                <div className="mt-2 flex flex-wrap gap-1">
-                  {item.interest_overlap.map((tag) => (
-                    <span
-                      key={`${item.opp_id}-${tag}`}
-                      className="rounded-full bg-[#142033]/[0.04] px-2 py-0.5 text-[11px] text-[#142033]/70"
-                    >
-                      {tag.replaceAll("_", " ")}
-                    </span>
-                  ))}
+        {items.map((item) => {
+          const reasons = opportunityWhyReasons(item, sentence);
+          return (
+            <article
+              key={item.opp_id}
+              className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
+            >
+              <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-start">
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-base font-semibold text-[#142033]">{item.title}</h3>
+                    {item.is_verified ? (
+                      <span className="rounded-full bg-[#1B5E20]/10 px-2 py-0.5 text-[11px] font-semibold text-[#1B5E20]">
+                        Verified
+                      </span>
+                    ) : null}
+                    {item.is_scam_flag ? (
+                      <span className="rounded-full bg-[#E0312E]/10 px-2 py-0.5 text-[11px] font-semibold text-[#E0312E]">
+                        Review carefully
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-1 text-sm text-[#142033]/65">
+                    {item.org_name} · {item.type} · deadline {item.deadline}
+                  </p>
+                  {item.description ? (
+                    <p className="mt-2 text-sm leading-relaxed text-[#142033]/75">{item.description}</p>
+                  ) : null}
+                  {item.interest_overlap && item.interest_overlap.length > 0 ? (
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {item.interest_overlap.map((tag) => (
+                        <span
+                          key={`${item.opp_id}-${tag}`}
+                          className="rounded-full bg-[#142033]/[0.04] px-2 py-0.5 text-[11px] text-[#142033]/70"
+                        >
+                          {tag.replaceAll("_", " ")}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
-              ) : null}
-            </div>
-            <div className="flex flex-col items-start gap-2 md:items-end">
-              <span
-                className={cn(
-                  "rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
-                  scoreTone(item.match_score),
-                )}
-              >
-                {formatPct(item.match_score)} match
-              </span>
-              <button
-                type="button"
-                className="inline-flex items-center gap-1 rounded-full border border-[#142033]/15 px-3 py-1.5 text-xs font-semibold text-[#142033] hover:border-[#3A87B8]/50"
-              >
-                Save / apply
-                <ChevronRight className="h-3.5 w-3.5" aria-hidden />
-              </button>
-            </div>
-          </article>
-        ))}
+                <div className="flex flex-col items-start gap-2 md:items-end">
+                  <span
+                    className={cn(
+                      "rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
+                      scoreTone(item.match_score),
+                    )}
+                  >
+                    {formatPct(item.match_score)} match
+                  </span>
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-1 rounded-full border border-[#142033]/15 px-3 py-1.5 text-xs font-semibold text-[#142033] hover:border-[#3A87B8]/50"
+                  >
+                    Save / apply
+                    <ChevronRight className="h-3.5 w-3.5" aria-hidden />
+                  </button>
+                </div>
+              </div>
+              <WhyRecommendedPanel
+                reasons={reasons}
+                onAskKay={
+                  onAskKay
+                    ? () =>
+                        onAskKay(
+                          `Why is ${item.title} at ${item.org_name} recommended for me at ${formatPct(item.match_score)} match? Walk me through the fit and my next step.`,
+                        )
+                    : undefined
+                }
+              />
+            </article>
+          );
+        })}
         {items.length === 0 ? (
           <p className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/60">
             No ranked opportunities for this view yet.
@@ -303,6 +458,7 @@ function MentorshipPanel({
   heatmap,
   mentors,
   showHeatmap,
+  onAskKay,
 }: {
   assignment?: MentorAssignment;
   top3: MentorTop3[];
@@ -310,6 +466,7 @@ function MentorshipPanel({
   heatmap: DashboardBundle["mentorship"]["heatmap"];
   mentors: MentorProfile[];
   showHeatmap: boolean;
+  onAskKay?: (prompt: string) => void;
 }) {
   const [bookingTopic, setBookingTopic] = useState("Career pathing");
   const [bookingNote, setBookingNote] = useState("");
@@ -381,6 +538,17 @@ function MentorshipPanel({
                   </a>
                 ) : null}
               </div>
+              <WhyRecommendedPanel
+                reasons={mentorAssignmentWhyReasons(assignment, assignedPortrait)}
+                onAskKay={
+                  onAskKay
+                    ? () =>
+                        onAskKay(
+                          `Why is ${assignment.mentor_name} my recommended ESL mentor at ${formatPct(assignment.compatibility)} fit? Explain the match and how I should use the next session.`,
+                        )
+                    : undefined
+                }
+              />
             </>
           ) : (
             <p className="mt-3 text-sm text-[#142033]/60">No mentor assignment in this view yet.</p>
@@ -394,30 +562,43 @@ function MentorshipPanel({
                 return (
                   <li
                     key={mentor.mentor_id}
-                    className="flex items-center justify-between gap-3 rounded-xl border border-[#142033]/08 px-3 py-2"
+                    className="rounded-xl border border-[#142033]/08 px-3 py-2"
                   >
-                    <div className="flex min-w-0 items-center gap-3">
-                      {portrait?.image ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={portrait.image}
-                          alt={mentor.mentor_name}
-                          className="h-10 w-10 shrink-0 rounded-full object-cover"
-                          width={40}
-                          height={40}
-                        />
-                      ) : null}
-                      <div className="min-w-0">
-                        <p className="text-sm font-medium text-[#142033]">{mentor.mentor_name}</p>
-                        <p className="text-xs text-[#142033]/55">
-                          {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}
-                          h/mo
-                        </p>
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex min-w-0 items-center gap-3">
+                        {portrait?.image ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={portrait.image}
+                            alt={mentor.mentor_name}
+                            className="h-10 w-10 shrink-0 rounded-full object-cover"
+                            width={40}
+                            height={40}
+                          />
+                        ) : null}
+                        <div className="min-w-0">
+                          <p className="text-sm font-medium text-[#142033]">{mentor.mentor_name}</p>
+                          <p className="text-xs text-[#142033]/55">
+                            {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}
+                            h/mo
+                          </p>
+                        </div>
                       </div>
+                      <span className="text-sm font-semibold tabular-nums text-[#3A87B8]">
+                        {formatPct(mentor.score)}
+                      </span>
                     </div>
-                    <span className="text-sm font-semibold tabular-nums text-[#3A87B8]">
-                      {formatPct(mentor.score)}
-                    </span>
+                    <WhyRecommendedPanel
+                      reasons={mentorTop3WhyReasons(mentor)}
+                      onAskKay={
+                        onAskKay
+                          ? () =>
+                              onAskKay(
+                                `Why is ${mentor.mentor_name} a strong alternative mentor for me at ${formatPct(mentor.score)} fit?`,
+                              )
+                          : undefined
+                      }
+                    />
                   </li>
                 );
               })}
@@ -877,6 +1058,8 @@ function AiCoachPopup({
   studentName,
   starterPrompts,
   onNavigate,
+  seedPrompt,
+  onSeedConsumed,
 }: {
   open: boolean;
   onClose: () => void;
@@ -884,6 +1067,8 @@ function AiCoachPopup({
   studentName: string | null;
   starterPrompts: string[];
   onNavigate?: (tab: LeaderTabId) => void;
+  seedPrompt?: string | null;
+  onSeedConsumed?: () => void;
 }) {
   const welcomeContent = studentName
     ? `Hi ${studentName.split(" ")[0]} — I am Kay, JointHub Agent in AI Coach mode. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
@@ -928,6 +1113,12 @@ function AiCoachPopup({
     setInput("");
     setError(null);
   }, [studentName, starterPrompts]);
+
+  useEffect(() => {
+    if (!open || !seedPrompt) return;
+    setInput(seedPrompt);
+    onSeedConsumed?.();
+  }, [open, seedPrompt, onSeedConsumed]);
 
   useEffect(() => {
     if (!open) return;
@@ -1350,12 +1541,14 @@ function RiskPanel({
   isMentor,
   onOutreach,
   outreachStatus,
+  onAskKay,
 }: {
   rows: RiskRow[];
   isAdmin: boolean;
   isMentor?: boolean;
   onOutreach: (studentId: string) => void;
   outreachStatus: Record<string, string>;
+  onAskKay?: (prompt: string) => void;
 }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
@@ -1393,6 +1586,19 @@ function RiskPanel({
                 <td className="px-4 py-3">
                   <p className="font-medium text-[#142033]">{row.full_name}</p>
                   <p className="text-xs text-[#142033]/55">{row.country}</p>
+                  <WhyRecommendedPanel
+                    title="Why flagged"
+                    reasons={riskWhyReasons(row)}
+                    onAskKay={
+                      onAskKay
+                        ? () =>
+                            onAskKay(
+                              `Why is ${row.full_name} flagged at ${formatPct(row.risk_probability)} ${row.risk_level} risk, and what should I do next?`,
+                            )
+                        : undefined
+                    }
+                    askLabel="Ask Kay about this risk"
+                  />
                 </td>
                 <td className="px-4 py-3">
                   <span
@@ -1573,6 +1779,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
   );
   const [outreachStatus, setOutreachStatus] = useState<Record<string, string>>({});
   const [coachOpen, setCoachOpen] = useState(false);
+  const [coachSeedPrompt, setCoachSeedPrompt] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
   const tabs = isAdmin ? ADMIN_TABS : isMentor ? MENTOR_TABS : LEADER_TABS;
@@ -1609,6 +1816,11 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
       "Who is my mentor and why?",
       "Am I falling behind?",
     ];
+
+  function askKayAbout(prompt: string) {
+    setCoachSeedPrompt(prompt);
+    setCoachOpen(true);
+  }
 
   async function reload(studentId?: string) {
     const query = studentId ? `?student_id=${encodeURIComponent(studentId)}` : "";
@@ -1780,7 +1992,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           <MentorSessionsPanel sessions={data.mentorship.sessions} />
         ) : null}
         {tab === "opportunities" ? (
-          <OpportunitiesPanel items={data.recommendations} sentence={data.personalised_sentence} />
+          <OpportunitiesPanel items={data.recommendations} sentence={data.personalised_sentence} onAskKay={askKayAbout} />
         ) : null}
         {tab === "mentors" ? (
           <MentorshipPanel
@@ -1790,6 +2002,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             heatmap={data.mentorship.heatmap}
             mentors={data.mentorship.mentors}
             showHeatmap={isAdmin}
+            onAskKay={askKayAbout}
           />
         ) : null}
         {tab === "applications" ? (
@@ -1804,6 +2017,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             isMentor={isMentor}
             onOutreach={handleOutreach}
             outreachStatus={outreachStatus}
+            onAskKay={askKayAbout}
           />
         ) : null}
         {tab === "analytics" ? (
@@ -1831,6 +2045,8 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
         studentName={advisorName}
         starterPrompts={starterPrompts}
         onNavigate={setTab}
+        seedPrompt={coachSeedPrompt}
+        onSeedConsumed={() => setCoachSeedPrompt(null)}
       />
     </div>
   );
