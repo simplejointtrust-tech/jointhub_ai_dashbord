@@ -16,7 +16,6 @@ type MentorCard = {
   location: string;
   blurb: string;
   image: string;
-  imagePosition?: string;
 };
 
 const MENTORS: MentorCard[] = [
@@ -85,12 +84,12 @@ const MENTORS: MentorCard[] = [
     image: "/brand/mentors/blessing-matiro.jpg",
   },
   {
-    id: "amara-okafor",
-    name: "Amara Okafor",
+    id: "stephen-david",
+    name: "Stephen David",
     role: "Community builder",
     location: "Kenya",
     blurb: "Social impact initiatives, network building, and community engagement.",
-    image: "/brand/mentors/amara-okafor.jpg",
+    image: "/brand/mentors/stephen-david.jpg",
   },
   {
     id: "simeon-mwale",
@@ -99,7 +98,6 @@ const MENTORS: MentorCard[] = [
     location: "Lusaka",
     blurb: "Scalable design systems, documentation, and cross-functional leadership.",
     image: "/brand/mentors/simeon-mwale.jpg",
-    imagePosition: "left center",
   },
 ];
 
@@ -226,18 +224,13 @@ export default function EslMentorsPage() {
               key={mentor.id}
               className="flex flex-col overflow-hidden rounded-[1.35rem] border border-[rgba(20,32,51,0.06)] bg-white shadow-[0_10px_30px_rgba(20,32,51,0.05)]"
             >
-              <div className="relative aspect-[4/4.2] overflow-hidden bg-[#E8EEF3]">
+              <div className="relative aspect-square overflow-hidden bg-[#E8EEF3]">
                 <Image
                   src={mentor.image}
                   alt={mentor.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
-                  style={
-                    mentor.imagePosition
-                      ? { objectPosition: mentor.imagePosition }
-                      : { objectPosition: "center top" }
-                  }
+                  className="object-cover object-center"
                 />
               </div>
               <div className="flex flex-1 flex-col px-4 pt-4 pb-5">
