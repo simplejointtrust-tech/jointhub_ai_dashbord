@@ -1,7 +1,6 @@
 import { Bell, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { MentorMatchQuiz } from "@/components/jointhub/MentorMatchQuiz";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ESL_MENTORS } from "@/lib/jointhub/esl-mentors";
 
@@ -84,10 +83,6 @@ export default function EslMentorsPage() {
           <p className="mt-3 max-w-xl text-base leading-relaxed text-[rgba(20,32,51,0.68)] sm:text-lg">
             A small circle of practitioners ready to help you make your next move with clarity.
           </p>
-        </div>
-
-        <div className="mt-8">
-          <MentorMatchQuiz />
         </div>
       </section>
 

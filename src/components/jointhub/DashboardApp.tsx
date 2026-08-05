@@ -38,6 +38,7 @@ import type {
   SessionLog,
 } from "@/lib/jointhub/types";
 import { cn } from "@/lib/utils";
+import { MentorMatchQuiz } from "@/components/jointhub/MentorMatchQuiz";
 
 type LeaderTabId =
   | "overview"
@@ -750,19 +751,24 @@ function OverviewPanel({
   applications,
   onOpenTab,
   isAdmin,
+  showPairingQuiz = false,
 }: {
   overview: LeaderOverview | null | undefined;
   recommendations: Recommendation[];
   applications: LeaderApplication[];
   onOpenTab: (tab: LeaderTabId) => void;
   isAdmin: boolean;
+  showPairingQuiz?: boolean;
 }) {
   if (!overview) {
     return (
-      <div className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/65">
-        {isAdmin
-          ? "Select a focus leader above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
-          : "Overview is not available for this account yet."}
+      <div className="space-y-4">
+        <div className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/65">
+          {isAdmin
+            ? "Select a focus leader above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
+            : "Overview is not available for this account yet."}
+        </div>
+        {showPairingQuiz ? <MentorMatchQuiz /> : null}
       </div>
     );
   }
@@ -788,6 +794,8 @@ function OverviewPanel({
           ))}
         </div>
       </section>
+
+      {showPairingQuiz ? <MentorMatchQuiz /> : null}
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {overview.activity_stats.map((stat) => (
@@ -1979,6 +1987,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             applications={data.applications ?? []}
             onOpenTab={setTab}
             isAdmin={isAdmin}
+            showPairingQuiz={!isAdmin && !isMentor}
           />
         ) : null}
         {tab === "caseload" ? (
