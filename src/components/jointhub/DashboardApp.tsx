@@ -13,6 +13,7 @@ import {
   Sparkles,
   Target,
   Users,
+  X,
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -42,7 +43,6 @@ type LeaderTabId =
   | "mentors"
   | "applications"
   | "community"
-  | "advisor"
   | "coaching"
   | "risk"
   | "analytics";
@@ -73,7 +73,6 @@ const LEADER_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }
   { id: "mentors", label: "ESL Mentors", icon: Users },
   { id: "applications", label: "Applications", icon: BookOpen },
   { id: "community", label: "Community", icon: Compass },
-  { id: "advisor", label: "Kay the AI Coach", icon: MessageSquareText },
   { id: "coaching", label: "Stay on track", icon: Sparkles },
 ];
 
@@ -83,7 +82,6 @@ const ADMIN_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }>
   { id: "mentors", label: "ESL Mentors", icon: Users },
   { id: "risk", label: "Dropout risk", icon: AlertTriangle },
   { id: "analytics", label: "Analytics", icon: LayoutDashboard },
-  { id: "advisor", label: "Kay the AI Coach", icon: MessageSquareText },
 ];
 
 const STAGE_LABEL: Record<ApplicationStage, string> = {
@@ -859,11 +857,15 @@ function CoachingPanel({ risk }: { risk: RiskRow | null | undefined }) {
   );
 }
 
-function AdvisorPanel({
+function AiCoachPopup({
+  open,
+  onClose,
   studentId,
   studentName,
   starterPrompts,
 }: {
+  open: boolean;
+  onClose: () => void;
   studentId: string | null;
   studentName: string | null;
   starterPrompts: string[];
@@ -873,8 +875,8 @@ function AdvisorPanel({
       id: "welcome",
       role: "assistant",
       content: studentName
-        ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next. I stay on-platform and use your Capstone sample profile.`
-        : "Select a leader focus (admin) or sign in as a leader to chat with Kay the AI Coach.",
+        ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next.`
+        : "Select a leader focus (admin) or sign in as a leader to chat with the AI Coach.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -887,13 +889,22 @@ function AdvisorPanel({
         id: "welcome",
         role: "assistant",
         content: studentName
-          ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next. I stay on-platform and use your Capstone sample profile.`
-          : "Select a leader focus (admin) or sign in as a leader to chat with Kay the AI Coach.",
+          ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next.`
+          : "Select a leader focus (admin) or sign in as a leader to chat with the AI Coach.",
       },
     ]);
     setInput("");
     setError(null);
   }, [studentName]);
+
+  useEffect(() => {
+    if (!open) return;
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") onClose();
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open, onClose]);
 
   async function sendMessage(raw: string) {
     const message = raw.trim();
@@ -940,24 +951,42 @@ function AdvisorPanel({
         },
       ]);
     } catch {
-      setError("Could not reach Kay the AI Coach.");
+      setError("Could not reach the AI Coach.");
     } finally {
       setIsSending(false);
     }
   }
 
+  if (!open) return null;
+
   return (
-    <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
-      <section className="flex min-h-[28rem] flex-col rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
-        <div className="border-b border-[#142033]/08 px-4 py-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
-            Kay the AI Coach
-          </p>
-          <p className="mt-1 text-sm text-[#142033]/65">
-            Grounded coaching from your profile, ranked opportunities, ESL mentor match, and soft
-            coaching signals.
-          </p>
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-end p-4 sm:p-6">
+      <div
+        role="dialog"
+        aria-modal="false"
+        aria-label="AI Coach"
+        className="pointer-events-auto flex h-[min(34rem,calc(100vh-5.5rem))] w-full max-w-md flex-col overflow-hidden rounded-3xl border border-[#142033]/12 bg-white shadow-[0_20px_60px_rgba(20,32,51,0.28)]"
+      >
+        <div className="flex items-start justify-between gap-3 border-b border-[#142033]/08 bg-[#142033] px-4 py-3 text-white">
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#B47828]">
+              AI Coach
+            </p>
+            <p className="mt-1 text-sm font-semibold">Kay</p>
+            <p className="mt-0.5 text-xs text-white/70">
+              Opportunities, ESL mentors, applications, and next steps.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/15"
+            aria-label="Close AI Coach"
+          >
+            <X className="h-4 w-4" aria-hidden />
+          </button>
         </div>
+
         <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
           {messages.map((message) => (
             <div
@@ -969,7 +998,7 @@ function AdvisorPanel({
                   : "bg-[#142033]/[0.04] text-[#142033]",
               )}
             >
-              <p className="whitespace-pre-wrap">{message.content}</p>
+              <p>{message.content}</p>
               {message.citations && message.citations.length > 0 ? (
                 <ul className="mt-2 space-y-1 border-t border-[#142033]/10 pt-2 text-[11px] text-[#142033]/60">
                   {message.citations.map((citation) => (
@@ -980,20 +1009,35 @@ function AdvisorPanel({
               {message.suggested_actions && message.suggested_actions.length > 0 ? (
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {message.suggested_actions.map((action) => (
-                    <button
+                    <span
                       key={action}
-                      type="button"
-                      onClick={() => void sendMessage(action)}
-                      className="rounded-full border border-[#3A87B8]/30 bg-white px-2.5 py-1 text-[11px] font-semibold text-[#3A87B8]"
+                      className="rounded-full bg-white px-2 py-0.5 text-[11px] font-medium text-[#3A87B8]"
                     >
                       {action}
-                    </button>
+                    </span>
                   ))}
                 </div>
               ) : null}
             </div>
           ))}
         </div>
+
+        <div className="border-t border-[#142033]/08 px-3 pt-3">
+          <div className="flex gap-2 overflow-x-auto pb-2">
+            {starterPrompts.slice(0, 3).map((prompt) => (
+              <button
+                key={prompt}
+                type="button"
+                onClick={() => void sendMessage(prompt)}
+                disabled={!studentId || isSending}
+                className="shrink-0 rounded-full border border-[#142033]/10 bg-[#F4F0E6] px-3 py-1.5 text-[11px] font-medium text-[#142033] hover:border-[#3A87B8]/40 disabled:opacity-50"
+              >
+                {prompt}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <form
           className="border-t border-[#142033]/08 p-3"
           onSubmit={(event) => {
@@ -1010,62 +1054,33 @@ function AdvisorPanel({
             </p>
           ) : null}
           <div className="flex items-end gap-2">
-            <label className="sr-only" htmlFor="advisor-input">
-              Ask Kay the AI Coach
+            <label className="sr-only" htmlFor="ai-coach-input">
+              Ask AI Coach
             </label>
             <textarea
-              id="advisor-input"
+              id="ai-coach-input"
               value={input}
               onChange={(event) => setInput(event.target.value)}
               rows={2}
               disabled={!studentId || isSending}
               placeholder={
                 studentId
-                  ? "e.g. Which ESL mentor fits me, and what should I apply to next?"
+                  ? "Ask Kay about mentors, deadlines, or next steps…"
                   : "Leader context required"
               }
-              className="min-h-[2.75rem] flex-1 resize-y rounded-xl border border-[#142033]/15 px-3 py-2 text-sm outline-none focus:border-[#3A87B8] disabled:opacity-60"
+              className="min-h-[2.75rem] flex-1 resize-none rounded-xl border border-[#142033]/15 px-3 py-2 text-sm outline-none focus:border-[#3A87B8] disabled:opacity-60"
             />
             <button
               type="submit"
               disabled={!studentId || isSending || !input.trim()}
               className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3A87B8] text-white transition hover:bg-[#2F739E] disabled:opacity-50"
-              aria-label="Send message to Kay"
+              aria-label="Send message to AI Coach"
             >
               <Send className="h-4 w-4" aria-hidden />
             </button>
           </div>
         </form>
-      </section>
-
-      <aside className="space-y-3">
-        <div className="rounded-2xl border border-[#142033]/10 bg-white p-4">
-          <h3 className="text-sm font-semibold text-[#142033]">Try asking Kay</h3>
-          <ul className="mt-3 space-y-2">
-            {starterPrompts.map((prompt) => (
-              <li key={prompt}>
-                <button
-                  type="button"
-                  onClick={() => void sendMessage(prompt)}
-                  disabled={!studentId || isSending}
-                  className="w-full rounded-xl border border-[#142033]/10 px-3 py-2 text-left text-xs font-medium text-[#142033] hover:border-[#3A87B8]/40 disabled:opacity-50"
-                >
-                  {prompt}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="rounded-2xl border border-[#142033]/10 bg-[#142033] p-4 text-white">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#B47828]">
-            Capstone note
-          </p>
-          <p className="mt-2 text-xs leading-relaxed text-white/75">
-            Kay is a grounded coach over sample Capstone outputs and the same ESL mentor roster as
-            the public Mentors page. She does not call external LLMs and does not email anyone.
-          </p>
-        </div>
-      </aside>
+      </div>
     </div>
   );
 }
@@ -1279,6 +1294,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
   const [tab, setTab] = useState<LeaderTabId>(isAdmin ? "risk" : "overview");
   const [selectedStudent, setSelectedStudent] = useState(initialData.student?.student_id ?? "");
   const [outreachStatus, setOutreachStatus] = useState<Record<string, string>>({});
+  const [coachOpen, setCoachOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 
   const tabs = isAdmin ? ADMIN_TABS : LEADER_TABS;
@@ -1475,13 +1491,6 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
         ) : null}
         {tab === "community" ? <CommunityPanel posts={data.community ?? []} /> : null}
         {tab === "coaching" ? <CoachingPanel risk={leaderRisk} /> : null}
-        {tab === "advisor" ? (
-          <AdvisorPanel
-            studentId={advisorStudentId}
-            studentName={advisorName}
-            starterPrompts={starterPrompts}
-          />
-        ) : null}
         {tab === "risk" ? (
           <RiskPanel
             rows={data.risk}
@@ -1494,6 +1503,27 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           <AnalyticsPanel metrics={data.metrics} nlp={data.nlp} kpis={data.kpis} />
         ) : null}
       </main>
+
+      {!coachOpen ? (
+        <button
+          type="button"
+          onClick={() => setCoachOpen(true)}
+          className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-[#3A87B8] px-4 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(58,135,184,0.45)] transition hover:bg-[#2F739E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3A87B8] sm:bottom-6 sm:right-6"
+          aria-haspopup="dialog"
+          aria-expanded={false}
+        >
+          <MessageSquareText className="h-4 w-4" aria-hidden />
+          AI Coach
+        </button>
+      ) : null}
+
+      <AiCoachPopup
+        open={coachOpen}
+        onClose={() => setCoachOpen(false)}
+        studentId={advisorStudentId}
+        studentName={advisorName}
+        starterPrompts={starterPrompts}
+      />
     </div>
   );
 }

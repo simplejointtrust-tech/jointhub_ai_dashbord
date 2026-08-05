@@ -347,7 +347,7 @@ export function answerAdvisorQuestion(question: string, context: AdvisorContext)
   }
 
   if (/(who are you|what can you|help|kay)/.test(q)) {
-    return "I am Kay the AI Coach — a Capstone demo guide grounded in your sample profile and the same ESL mentor roster as the public Mentors page. Ask about top opportunities, mentor fit, applications, risk coaching, or bootcamp timing.";
+    return "I am Kay, your AI Coach — a Capstone demo guide grounded in your sample profile and the same ESL mentor roster as the public Mentors page. Ask about top opportunities, mentor fit, applications, risk coaching, or bootcamp timing.";
   }
 
   if (/(opportunit|scholarship|fellowship|recommend|match|rank)/.test(q)) {

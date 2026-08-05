@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Pick a focus leader first (admin), or sign in as a leader demo account to chat with Kay the AI Coach.",
+          "Pick a focus leader first (admin), or sign in as a leader demo account to chat with the AI Coach.",
       },
       { status: 400 },
     );
