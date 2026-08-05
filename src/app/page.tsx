@@ -53,6 +53,12 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-end gap-2">
             <ThemeToggle />
             <Link
+              href="/mentors"
+              className="inline-flex rounded-full bg-[#0F3D2E] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20] sm:px-4"
+            >
+              ESL Mentors
+            </Link>
+            <Link
               href="/login?role=mentor"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
