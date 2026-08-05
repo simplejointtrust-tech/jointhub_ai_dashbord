@@ -23,13 +23,12 @@ type MentorCard = {
 const MENTORS: MentorCard[] = [
   {
     id: "jane-obed",
-    name: "Jane Obed",
+    name: "Jane Obel",
     role: "Product leader",
     location: "Rwanda",
     blurb: "Design strategy, research craft, and confident portfolios.",
     image: "/brand/mentors/jane-obed.jpg",
-    // Exact public profile not confirmed yet — people search until confirmed.
-    linkedInUrl: "https://www.linkedin.com/search/results/people/?keywords=Jane%20Obed",
+    linkedInUrl: "https://www.linkedin.com/in/jane-obel/",
   },
   {
     id: "edafe-akpovwa",
@@ -43,12 +42,12 @@ const MENTORS: MentorCard[] = [
   },
   {
     id: "bothlale-mdluli",
-    name: "Bothlale Mdluli",
+    name: "Botlhale Mdhluli",
     role: "Career strategist",
     location: "South Africa",
     blurb: "Career narratives, pivots, and networking with purpose.",
     image: "/brand/mentors/bothlale-mdluli.jpg",
-    linkedInUrl: "https://www.linkedin.com/search/results/people/?keywords=Bothlale%20Mdluli",
+    linkedInUrl: "https://www.linkedin.com/in/botlhale-mdhluli-511549287/",
   },
   {
     id: "ololade-oloniyo",
