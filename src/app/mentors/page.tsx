@@ -64,10 +64,16 @@ export default function EslMentorsPage() {
               AM
             </span>
             <Link
+              href="/login"
+              className="inline-flex min-h-10 items-center rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/15 sm:px-4"
+            >
+              Sign Up
+            </Link>
+            <Link
               href="/dashboard/login"
               className="inline-flex min-h-10 items-center rounded-full bg-[#3A87B8] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#2F739E] sm:px-4"
             >
-              Sign In
+              Login
             </Link>
           </div>
         </div>
@@ -157,13 +163,13 @@ export default function EslMentorsPage() {
                 href="/dashboard/login"
                 className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#E0312E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#C42825]"
               >
-                Sign in to Mentor Hub
+                Login to Mentor Hub
               </Link>
               <Link
-                href="/dashboard/login"
+                href="/login?role=mentor"
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-[rgba(20,32,51,0.14)] px-5 py-3 text-sm font-semibold text-[#142033] transition hover:bg-[#F4F0E6]"
               >
-                Become an ESL Mentor
+                Join as Mentor
               </Link>
             </div>
           </div>
