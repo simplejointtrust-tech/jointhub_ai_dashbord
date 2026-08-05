@@ -98,32 +98,32 @@ function formatPct(value: number): string {
 }
 
 function scoreTone(score: number): string {
-  if (score >= 0.75) return "bg-[#F4B942] text-[#0D1B2A]";
-  if (score >= 0.55) return "bg-[#028090]/15 text-[#028090]";
-  return "bg-[#0D1B2A]/10 text-[#0D1B2A]";
+  if (score >= 0.75) return "bg-[#B47828] text-[#142033]";
+  if (score >= 0.55) return "bg-[#3A87B8]/15 text-[#3A87B8]";
+  return "bg-[#142033]/10 text-[#142033]";
 }
 
 function riskTone(level: RiskRow["risk_level"]): string {
-  if (level === "high") return "bg-[#C0392B]/12 text-[#C0392B] border-[#C0392B]/30";
-  if (level === "medium") return "bg-[#F57F17]/12 text-[#F57F17] border-[#F57F17]/30";
+  if (level === "high") return "bg-[#E0312E]/12 text-[#E0312E] border-[#E0312E]/30";
+  if (level === "medium") return "bg-[#DC6414]/12 text-[#DC6414] border-[#DC6414]/30";
   return "bg-[#1B5E20]/12 text-[#1B5E20] border-[#1B5E20]/30";
 }
 
 function stageTone(stage: ApplicationStage): string {
   if (stage === "accepted") return "bg-[#1B5E20]/12 text-[#1B5E20]";
-  if (stage === "interview") return "bg-[#028090]/15 text-[#028090]";
-  if (stage === "under_review") return "bg-[#F4B942]/25 text-[#0D1B2A]";
-  return "bg-[#0D1B2A]/08 text-[#0D1B2A]/75";
+  if (stage === "interview") return "bg-[#3A87B8]/15 text-[#3A87B8]";
+  if (stage === "under_review") return "bg-[#B47828]/25 text-[#142033]";
+  return "bg-[#142033]/08 text-[#142033]/75";
 }
 
 function KpiCard({ label, value, hint }: { label: string; value: string | number; hint?: string }) {
   return (
-    <div className="rounded-xl border border-[#0D1B2A]/10 bg-white px-4 py-3 shadow-sm">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0D1B2A]/55">
+    <div className="rounded-xl border border-[#142033]/10 bg-white px-4 py-3 shadow-sm">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#142033]/55">
         {label}
       </p>
-      <p className="mt-1 text-2xl font-semibold tabular-nums text-[#0D1B2A]">{value}</p>
-      {hint ? <p className="mt-1 text-xs text-[#0D1B2A]/55">{hint}</p> : null}
+      <p className="mt-1 text-2xl font-semibold tabular-nums text-[#142033]">{value}</p>
+      {hint ? <p className="mt-1 text-xs text-[#142033]/55">{hint}</p> : null}
     </div>
   );
 }
@@ -137,14 +137,14 @@ function OpportunitiesPanel({
 }) {
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl border border-[#028090]/20 bg-gradient-to-r from-[#028090]/10 to-white p-5">
+      <div className="rounded-2xl border border-[#3A87B8]/20 bg-gradient-to-r from-[#3A87B8]/10 to-white p-5">
         <div className="flex items-start gap-3">
-          <Sparkles className="mt-0.5 h-5 w-5 text-[#028090]" aria-hidden />
+          <Sparkles className="mt-0.5 h-5 w-5 text-[#3A87B8]" aria-hidden />
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#3A87B8]">
               Curated for you
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-[#0D1B2A]/80">
+            <p className="mt-1 text-sm leading-relaxed text-[#142033]/80">
               {sentence ??
                 "Content-based cosine similarity ranks verified opportunities against your interest vector and career stage."}
             </p>
@@ -156,34 +156,34 @@ function OpportunitiesPanel({
         {items.map((item) => (
           <article
             key={item.opp_id}
-            className="grid gap-3 rounded-2xl border border-[#0D1B2A]/10 bg-white p-4 shadow-sm md:grid-cols-[1fr_auto] md:items-center"
+            className="grid gap-3 rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm md:grid-cols-[1fr_auto] md:items-center"
           >
             <div>
               <div className="flex flex-wrap items-center gap-2">
-                <h3 className="text-base font-semibold text-[#0D1B2A]">{item.title}</h3>
+                <h3 className="text-base font-semibold text-[#142033]">{item.title}</h3>
                 {item.is_verified ? (
                   <span className="rounded-full bg-[#1B5E20]/10 px-2 py-0.5 text-[11px] font-semibold text-[#1B5E20]">
                     Verified
                   </span>
                 ) : null}
                 {item.is_scam_flag ? (
-                  <span className="rounded-full bg-[#C0392B]/10 px-2 py-0.5 text-[11px] font-semibold text-[#C0392B]">
+                  <span className="rounded-full bg-[#E0312E]/10 px-2 py-0.5 text-[11px] font-semibold text-[#E0312E]">
                     Review carefully
                   </span>
                 ) : null}
               </div>
-              <p className="mt-1 text-sm text-[#0D1B2A]/65">
+              <p className="mt-1 text-sm text-[#142033]/65">
                 {item.org_name} · {item.type} · deadline {item.deadline}
               </p>
               {item.description ? (
-                <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/75">{item.description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#142033]/75">{item.description}</p>
               ) : null}
               {item.interest_overlap && item.interest_overlap.length > 0 ? (
                 <div className="mt-2 flex flex-wrap gap-1">
                   {item.interest_overlap.map((tag) => (
                     <span
                       key={`${item.opp_id}-${tag}`}
-                      className="rounded-full bg-[#0D1B2A]/[0.04] px-2 py-0.5 text-[11px] text-[#0D1B2A]/70"
+                      className="rounded-full bg-[#142033]/[0.04] px-2 py-0.5 text-[11px] text-[#142033]/70"
                     >
                       {tag.replaceAll("_", " ")}
                     </span>
@@ -202,7 +202,7 @@ function OpportunitiesPanel({
               </span>
               <button
                 type="button"
-                className="inline-flex items-center gap-1 rounded-full border border-[#0D1B2A]/15 px-3 py-1.5 text-xs font-semibold text-[#0D1B2A] hover:border-[#028090]/50"
+                className="inline-flex items-center gap-1 rounded-full border border-[#142033]/15 px-3 py-1.5 text-xs font-semibold text-[#142033] hover:border-[#3A87B8]/50"
               >
                 Save / apply
                 <ChevronRight className="h-3.5 w-3.5" aria-hidden />
@@ -211,7 +211,7 @@ function OpportunitiesPanel({
           </article>
         ))}
         {items.length === 0 ? (
-          <p className="rounded-2xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/60">
+          <p className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/60">
             No ranked opportunities for this view yet.
           </p>
         ) : null}
@@ -230,10 +230,10 @@ function Heatmap({
   mentorNames: string[];
 }) {
   return (
-    <section className="overflow-hidden rounded-2xl border border-[#0D1B2A]/10 bg-white">
-      <div className="border-b border-[#0D1B2A]/08 px-4 py-3">
-        <h3 className="text-sm font-semibold text-[#0D1B2A]">Matching matrix</h3>
-        <p className="text-xs text-[#0D1B2A]/55">
+    <section className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white">
+      <div className="border-b border-[#142033]/08 px-4 py-3">
+        <h3 className="text-sm font-semibold text-[#142033]">Matching matrix</h3>
+        <p className="text-xs text-[#142033]/55">
           Cosine compatibility · darker teal = stronger fit
         </p>
       </div>
@@ -241,11 +241,11 @@ function Heatmap({
         <table className="min-w-full border-separate border-spacing-1 text-left text-[11px]">
           <thead>
             <tr>
-              <th className="px-2 py-1 font-medium text-[#0D1B2A]/50">Leader</th>
+              <th className="px-2 py-1 font-medium text-[#142033]/50">Leader</th>
               {mentorNames.map((name) => (
                 <th
                   key={name}
-                  className="max-w-16 truncate px-1 py-1 font-medium text-[#0D1B2A]/50"
+                  className="max-w-16 truncate px-1 py-1 font-medium text-[#142033]/50"
                 >
                   {name.split(" ").slice(-1)[0]}
                 </th>
@@ -257,7 +257,7 @@ function Heatmap({
               const studentKey = studentNames[rowIndex] ?? `student-${rowIndex}`;
               return (
                 <tr key={studentKey}>
-                  <td className="whitespace-nowrap px-2 py-1 font-medium text-[#0D1B2A]/70">
+                  <td className="whitespace-nowrap px-2 py-1 font-medium text-[#142033]/70">
                     {studentKey.split(" ")[0]}
                   </td>
                   {row.map((value, colIndex) => {
@@ -307,16 +307,16 @@ function MentorshipPanel({
   return (
     <div className="space-y-4">
       <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
             Your mentor match
           </p>
           {assignment ? (
             <>
-              <h3 className="mt-2 text-xl font-semibold text-[#0D1B2A]">
+              <h3 className="mt-2 text-xl font-semibold text-[#142033]">
                 {assignment.mentor_name}
               </h3>
-              <p className="mt-1 text-sm text-[#0D1B2A]/65">
+              <p className="mt-1 text-sm text-[#142033]/65">
                 {assignment.mentor_title ?? assignment.mentor_industry} ·{" "}
                 {assignment.mentor_country}
               </p>
@@ -332,7 +332,7 @@ function MentorshipPanel({
                 {(assignment.languages ?? []).map((language) => (
                   <span
                     key={language}
-                    className="rounded-full bg-[#0D1B2A]/[0.04] px-2.5 py-1 text-xs text-[#0D1B2A]/70"
+                    className="rounded-full bg-[#142033]/[0.04] px-2.5 py-1 text-xs text-[#142033]/70"
                   >
                     {language}
                   </span>
@@ -340,38 +340,38 @@ function MentorshipPanel({
               </div>
             </>
           ) : (
-            <p className="mt-3 text-sm text-[#0D1B2A]/60">No mentor assignment in this view yet.</p>
+            <p className="mt-3 text-sm text-[#142033]/60">No mentor assignment in this view yet.</p>
           )}
 
           <div className="mt-6">
-            <h4 className="text-sm font-semibold text-[#0D1B2A]">Strong alternatives</h4>
+            <h4 className="text-sm font-semibold text-[#142033]">Strong alternatives</h4>
             <ul className="mt-3 space-y-2">
               {top3.map((mentor) => (
                 <li
                   key={mentor.mentor_id}
-                  className="flex items-center justify-between gap-3 rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+                  className="flex items-center justify-between gap-3 rounded-xl border border-[#142033]/08 px-3 py-2"
                 >
                   <div>
-                    <p className="text-sm font-medium text-[#0D1B2A]">{mentor.mentor_name}</p>
-                    <p className="text-xs text-[#0D1B2A]/55">
+                    <p className="text-sm font-medium text-[#142033]">{mentor.mentor_name}</p>
+                    <p className="text-xs text-[#142033]/55">
                       {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}h/mo
                     </p>
                   </div>
-                  <span className="text-sm font-semibold tabular-nums text-[#028090]">
+                  <span className="text-sm font-semibold tabular-nums text-[#3A87B8]">
                     {formatPct(mentor.score)}
                   </span>
                 </li>
               ))}
               {top3.length === 0 ? (
-                <li className="text-sm text-[#0D1B2A]/55">No alternatives ranked yet.</li>
+                <li className="text-sm text-[#142033]/55">No alternatives ranked yet.</li>
               ) : null}
             </ul>
           </div>
         </section>
 
-        <section className="rounded-2xl bg-[#0D1B2A] p-5 text-white shadow-sm">
+        <section className="rounded-2xl bg-[#142033] p-5 text-white shadow-sm">
           <div className="flex items-center gap-2">
-            <Calendar className="h-4 w-4 text-[#F4B942]" aria-hidden />
+            <Calendar className="h-4 w-4 text-[#B47828]" aria-hidden />
             <h3 className="text-sm font-semibold">Book a session</h3>
           </div>
           <p className="mt-2 text-sm text-white/70">
@@ -384,12 +384,12 @@ function MentorshipPanel({
             id="topic"
             value={bookingTopic}
             onChange={(event) => setBookingTopic(event.target.value)}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#F4B942]"
+            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#B47828]"
           >
-            <option className="text-[#0D1B2A]">Career pathing</option>
-            <option className="text-[#0D1B2A]">Application review</option>
-            <option className="text-[#0D1B2A]">Skills portfolio</option>
-            <option className="text-[#0D1B2A]">Scholarship strategy</option>
+            <option className="text-[#142033]">Career pathing</option>
+            <option className="text-[#142033]">Application review</option>
+            <option className="text-[#142033]">Skills portfolio</option>
+            <option className="text-[#142033]">Scholarship strategy</option>
           </select>
           <label className="mt-3 block text-xs font-medium text-white/70" htmlFor="note">
             Note
@@ -399,18 +399,18 @@ function MentorshipPanel({
             value={bookingNote}
             onChange={(event) => setBookingNote(event.target.value)}
             rows={3}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#F4B942]"
+            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#B47828]"
             placeholder="What should we cover?"
           />
           <button
             type="button"
             onClick={() => setBooked(`${bookingTopic}${bookingNote ? ` — ${bookingNote}` : ""}`)}
-            className="mt-4 w-full rounded-full bg-[#F4B942] px-4 py-2.5 text-sm font-semibold text-[#0D1B2A] transition hover:bg-[#e0a836]"
+            className="mt-4 w-full rounded-full bg-[#B47828] px-4 py-2.5 text-sm font-semibold text-[#142033] transition hover:bg-[#B47828]"
           >
             Request session
           </button>
           {booked ? (
-            <p className="mt-3 rounded-lg bg-white/10 px-3 py-2 text-xs text-[#F4B942]">
+            <p className="mt-3 rounded-lg bg-white/10 px-3 py-2 text-xs text-[#B47828]">
               Request logged: {booked}
             </p>
           ) : null}
@@ -426,50 +426,50 @@ function MentorshipPanel({
       ) : null}
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
           <div className="flex items-center gap-2">
-            <BookOpen className="h-4 w-4 text-[#028090]" aria-hidden />
-            <h3 className="text-sm font-semibold text-[#0D1B2A]">Session log</h3>
+            <BookOpen className="h-4 w-4 text-[#3A87B8]" aria-hidden />
+            <h3 className="text-sm font-semibold text-[#142033]">Session log</h3>
           </div>
           <ul className="mt-3 space-y-2">
             {sessions.slice(0, 8).map((session) => (
               <li
                 key={session.session_id}
-                className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+                className="rounded-xl border border-[#142033]/08 px-3 py-2"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-medium text-[#0D1B2A]">{session.session_date}</p>
-                  <span className="text-xs uppercase tracking-wide text-[#0D1B2A]/50">
+                  <p className="text-sm font-medium text-[#142033]">{session.session_date}</p>
+                  <span className="text-xs uppercase tracking-wide text-[#142033]/50">
                     {session.status ?? (session.goals_set ? "completed" : "logged")}
                   </span>
                 </div>
-                <p className="text-xs text-[#0D1B2A]/65">
+                <p className="text-xs text-[#142033]/65">
                   {session.session_duration_mins} min · rating {session.student_rating}/5 ·{" "}
                   {session.topics_discussed.join(", ")}
                 </p>
               </li>
             ))}
             {sessions.length === 0 ? (
-              <li className="text-sm text-[#0D1B2A]/55">No sessions logged yet.</li>
+              <li className="text-sm text-[#142033]/55">No sessions logged yet.</li>
             ) : null}
           </ul>
         </section>
 
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">Mentor roster</h3>
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+          <h3 className="text-sm font-semibold text-[#142033]">Mentor roster</h3>
           <ul className="mt-3 space-y-2">
             {mentors.slice(0, 8).map((mentor) => (
               <li
                 key={mentor.mentor_id}
-                className="flex items-start justify-between gap-3 rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+                className="flex items-start justify-between gap-3 rounded-xl border border-[#142033]/08 px-3 py-2"
               >
                 <div>
-                  <p className="text-sm font-medium text-[#0D1B2A]">{mentor.name}</p>
-                  <p className="text-xs text-[#0D1B2A]/60">
+                  <p className="text-sm font-medium text-[#142033]">{mentor.name}</p>
+                  <p className="text-xs text-[#142033]/60">
                     {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}h/mo
                   </p>
                 </div>
-                <span className="text-[11px] text-[#028090]">{mentor.languages.join(" / ")}</span>
+                <span className="text-[11px] text-[#3A87B8]">{mentor.languages.join(" / ")}</span>
               </li>
             ))}
           </ul>
@@ -494,7 +494,7 @@ function OverviewPanel({
 }) {
   if (!overview) {
     return (
-      <div className="rounded-2xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/65">
+      <div className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/65">
         {isAdmin
           ? "Select a focus leader above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
           : "Overview is not available for this account yet."}
@@ -504,19 +504,19 @@ function OverviewPanel({
 
   return (
     <div className="space-y-4">
-      <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+      <section className="rounded-2xl border border-[#142033]/10 bg-white p-5 shadow-sm">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
           Welcome back
         </p>
-        <h2 className="mt-2 text-2xl font-semibold text-[#0D1B2A]">Hi, {overview.greeting_name}</h2>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#0D1B2A]/75">
+        <h2 className="mt-2 text-2xl font-semibold text-[#142033]">Hi, {overview.greeting_name}</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#142033]/75">
           {overview.goal_text}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           {overview.interest_tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-[#0D1B2A]/[0.04] px-2.5 py-1 text-xs text-[#0D1B2A]/70"
+              className="rounded-full bg-[#142033]/[0.04] px-2.5 py-1 text-xs text-[#142033]/70"
             >
               {tag.replaceAll("_", " ")}
             </span>
@@ -531,48 +531,48 @@ function OverviewPanel({
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
           <div className="flex items-center justify-between gap-2">
-            <h3 className="text-sm font-semibold text-[#0D1B2A]">Upcoming mentor session</h3>
+            <h3 className="text-sm font-semibold text-[#142033]">Upcoming mentor session</h3>
             <button
               type="button"
               onClick={() => onOpenTab("mentors")}
-              className="text-xs font-semibold text-[#028090] hover:underline"
+              className="text-xs font-semibold text-[#3A87B8] hover:underline"
             >
               Open Mentors
             </button>
           </div>
           {overview.next_session ? (
-            <div className="mt-3 rounded-xl border border-[#028090]/20 bg-[#028090]/[0.06] p-4">
-              <p className="text-sm font-semibold text-[#0D1B2A]">
+            <div className="mt-3 rounded-xl border border-[#3A87B8]/20 bg-[#3A87B8]/[0.06] p-4">
+              <p className="text-sm font-semibold text-[#142033]">
                 {overview.next_session.session_date}
               </p>
-              <p className="mt-1 text-xs text-[#0D1B2A]/65">
+              <p className="mt-1 text-xs text-[#142033]/65">
                 {overview.next_session.session_duration_mins} min ·{" "}
                 {overview.next_session.topics_discussed.join(", ")} ·{" "}
                 {overview.assigned_mentor?.mentor_name ?? "Assigned mentor"}
               </p>
             </div>
           ) : (
-            <p className="mt-3 text-sm text-[#0D1B2A]/60">
+            <p className="mt-3 text-sm text-[#142033]/60">
               No upcoming session yet. Book one from Mentors when you are ready.
             </p>
           )}
           {overview.assigned_mentor ? (
-            <p className="mt-3 text-xs text-[#0D1B2A]/55">
+            <p className="mt-3 text-xs text-[#142033]/55">
               Match fit {formatPct(overview.assigned_mentor.compatibility)} with{" "}
               {overview.assigned_mentor.mentor_name}
             </p>
           ) : null}
         </section>
 
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
           <div className="flex items-center justify-between gap-2">
-            <h3 className="text-sm font-semibold text-[#0D1B2A]">Worth a closer look</h3>
+            <h3 className="text-sm font-semibold text-[#142033]">Worth a closer look</h3>
             <button
               type="button"
               onClick={() => onOpenTab("opportunities")}
-              className="text-xs font-semibold text-[#028090] hover:underline"
+              className="text-xs font-semibold text-[#3A87B8] hover:underline"
             >
               All opportunities
             </button>
@@ -581,15 +581,15 @@ function OverviewPanel({
             {(overview.worth_a_look.length ? overview.worth_a_look : recommendations)
               .slice(0, 3)
               .map((item) => (
-                <li key={item.opp_id} className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
+                <li key={item.opp_id} className="rounded-xl border border-[#142033]/08 px-3 py-2">
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <p className="text-sm font-medium text-[#0D1B2A]">{item.title}</p>
-                      <p className="text-xs text-[#0D1B2A]/55">
+                      <p className="text-sm font-medium text-[#142033]">{item.title}</p>
+                      <p className="text-xs text-[#142033]/55">
                         {item.org_name} · due {item.deadline}
                       </p>
                     </div>
-                    <span className="text-xs font-semibold tabular-nums text-[#028090]">
+                    <span className="text-xs font-semibold tabular-nums text-[#3A87B8]">
                       {formatPct(item.match_score)}
                     </span>
                   </div>
@@ -600,7 +600,7 @@ function OverviewPanel({
             <button
               type="button"
               onClick={() => onOpenTab("coaching")}
-              className="mt-4 w-full rounded-xl border border-[#F57F17]/30 bg-[#F57F17]/10 px-3 py-2 text-left text-xs font-medium text-[#0D1B2A]"
+              className="mt-4 w-full rounded-xl border border-[#DC6414]/30 bg-[#DC6414]/10 px-3 py-2 text-left text-xs font-medium text-[#142033]"
             >
               {overview.coaching_nudge}
             </button>
@@ -608,13 +608,13 @@ function OverviewPanel({
         </section>
       </div>
 
-      <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+      <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
         <div className="flex items-center justify-between gap-2">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">Saved & in progress</h3>
+          <h3 className="text-sm font-semibold text-[#142033]">Saved & in progress</h3>
           <button
             type="button"
             onClick={() => onOpenTab("applications")}
-            className="text-xs font-semibold text-[#028090] hover:underline"
+            className="text-xs font-semibold text-[#3A87B8] hover:underline"
           >
             Applications
           </button>
@@ -623,16 +623,16 @@ function OverviewPanel({
           {applications.slice(0, 4).map((item) => (
             <div
               key={item.application_id}
-              className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+              className="rounded-xl border border-[#142033]/08 px-3 py-2"
             >
-              <p className="text-sm font-medium text-[#0D1B2A]">{item.title}</p>
-              <p className="text-xs text-[#0D1B2A]/55">
+              <p className="text-sm font-medium text-[#142033]">{item.title}</p>
+              <p className="text-xs text-[#142033]/55">
                 {STAGE_LABEL[item.stage]} · {item.updated_label}
               </p>
             </div>
           ))}
           {applications.length === 0 ? (
-            <p className="text-sm text-[#0D1B2A]/55">No saved applications yet.</p>
+            <p className="text-sm text-[#142033]/55">No saved applications yet.</p>
           ) : null}
         </div>
       </section>
@@ -644,7 +644,7 @@ function ApplicationsPanel({ applications }: { applications: LeaderApplication[]
   const stages: ApplicationStage[] = ["active", "under_review", "interview", "accepted"];
   return (
     <div className="space-y-4">
-      <p className="text-sm text-[#0D1B2A]/70">
+      <p className="text-sm text-[#142033]/70">
         Your application pipeline across Active, Under review, Interview, and Accepted. Demo stages
         are derived from your ranked opportunities so Capstone judges can walk the Canva flow.
       </p>
@@ -654,11 +654,11 @@ function ApplicationsPanel({ applications }: { applications: LeaderApplication[]
           return (
             <section
               key={stage}
-              className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-4 shadow-sm"
+              className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
             >
               <div className="flex items-center justify-between gap-2">
-                <h3 className="text-sm font-semibold text-[#0D1B2A]">{STAGE_LABEL[stage]}</h3>
-                <span className="rounded-full bg-[#0D1B2A]/[0.05] px-2 py-0.5 text-xs font-semibold tabular-nums text-[#0D1B2A]">
+                <h3 className="text-sm font-semibold text-[#142033]">{STAGE_LABEL[stage]}</h3>
+                <span className="rounded-full bg-[#142033]/[0.05] px-2 py-0.5 text-xs font-semibold tabular-nums text-[#142033]">
                   {rows.length}
                 </span>
               </div>
@@ -666,10 +666,10 @@ function ApplicationsPanel({ applications }: { applications: LeaderApplication[]
                 {rows.map((item) => (
                   <li
                     key={item.application_id}
-                    className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+                    className="rounded-xl border border-[#142033]/08 px-3 py-2"
                   >
-                    <p className="text-sm font-medium text-[#0D1B2A]">{item.title}</p>
-                    <p className="text-xs text-[#0D1B2A]/55">
+                    <p className="text-sm font-medium text-[#142033]">{item.title}</p>
+                    <p className="text-xs text-[#142033]/55">
                       {item.org_name} · {item.updated_label}
                     </p>
                     <span
@@ -683,7 +683,7 @@ function ApplicationsPanel({ applications }: { applications: LeaderApplication[]
                   </li>
                 ))}
                 {rows.length === 0 ? (
-                  <li className="text-xs text-[#0D1B2A]/50">Nothing in this stage yet.</li>
+                  <li className="text-xs text-[#142033]/50">Nothing in this stage yet.</li>
                 ) : null}
               </ul>
             </section>
@@ -697,11 +697,11 @@ function ApplicationsPanel({ applications }: { applications: LeaderApplication[]
 function CommunityPanel({ posts }: { posts: CommunityPost[] }) {
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl border border-[#028090]/20 bg-[#028090]/[0.06] p-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+      <div className="rounded-2xl border border-[#3A87B8]/20 bg-[#3A87B8]/[0.06] p-5">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
           ESL Community
         </p>
-        <p className="mt-2 text-sm text-[#0D1B2A]/75">
+        <p className="mt-2 text-sm text-[#142033]/75">
           Peer posts, masterclasses, and light accountability energy. This is a product surface for
           leaders — not Capstone model evidence.
         </p>
@@ -710,17 +710,17 @@ function CommunityPanel({ posts }: { posts: CommunityPost[] }) {
         {posts.map((post) => (
           <article
             key={post.post_id}
-            className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-4 shadow-sm"
+            className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
           >
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-[#0D1B2A]/[0.05] px-2.5 py-0.5 text-[11px] font-semibold text-[#0D1B2A]/70">
+              <span className="rounded-full bg-[#142033]/[0.05] px-2.5 py-0.5 text-[11px] font-semibold text-[#142033]/70">
                 {post.tag}
               </span>
-              <span className="text-xs text-[#0D1B2A]/50">{post.when}</span>
+              <span className="text-xs text-[#142033]/50">{post.when}</span>
             </div>
-            <h3 className="mt-2 text-base font-semibold text-[#0D1B2A]">{post.title}</h3>
-            <p className="mt-1 text-sm leading-relaxed text-[#0D1B2A]/75">{post.body}</p>
-            <p className="mt-3 text-xs font-medium text-[#028090]">
+            <h3 className="mt-2 text-base font-semibold text-[#142033]">{post.title}</h3>
+            <p className="mt-1 text-sm leading-relaxed text-[#142033]/75">{post.body}</p>
+            <p className="mt-3 text-xs font-medium text-[#3A87B8]">
               {post.author} · {post.role_label}
             </p>
           </article>
@@ -733,7 +733,7 @@ function CommunityPanel({ posts }: { posts: CommunityPost[] }) {
 function CoachingPanel({ risk }: { risk: RiskRow | null | undefined }) {
   if (!risk) {
     return (
-      <div className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-6 text-sm text-[#0D1B2A]/65">
+      <div className="rounded-2xl border border-[#142033]/10 bg-white p-6 text-sm text-[#142033]/65">
         No personal coaching signal for this view. Keep applying and meeting your mentor on a steady
         rhythm.
       </div>
@@ -747,21 +747,21 @@ function CoachingPanel({ risk }: { risk: RiskRow | null | undefined }) {
         className={cn(
           "rounded-2xl border p-5",
           isHigh
-            ? "border-[#F57F17]/30 bg-[#F57F17]/10"
+            ? "border-[#DC6414]/30 bg-[#DC6414]/10"
             : "border-[#1B5E20]/25 bg-[#1B5E20]/[0.08]",
         )}
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0D1B2A]/60">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#142033]/60">
           Soft coaching only
         </p>
-        <h3 className="mt-2 text-lg font-semibold text-[#0D1B2A]">
+        <h3 className="mt-2 text-lg font-semibold text-[#142033]">
           {isHigh ? "You may be falling behind — book a check-in" : "You are in a healthy rhythm"}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/75">
+        <p className="mt-2 text-sm leading-relaxed text-[#142033]/75">
           {risk.outreach_prompt ??
             "Keep logging sessions and finishing applications. Small weekly actions compound."}
         </p>
-        <p className="mt-3 text-xs text-[#0D1B2A]/55">
+        <p className="mt-3 text-xs text-[#142033]/55">
           Leaders never see the full cohort risk table. This card is personal guidance only.
         </p>
       </section>
@@ -875,12 +875,12 @@ function AdvisorPanel({
 
   return (
     <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
-      <section className="flex min-h-[28rem] flex-col rounded-2xl border border-[#0D1B2A]/10 bg-white shadow-sm">
-        <div className="border-b border-[#0D1B2A]/08 px-4 py-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+      <section className="flex min-h-[28rem] flex-col rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
+        <div className="border-b border-[#142033]/08 px-4 py-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
             JointHub Advisor
           </p>
-          <p className="mt-1 text-sm text-[#0D1B2A]/65">
+          <p className="mt-1 text-sm text-[#142033]/65">
             Grounded answers from your profile, ranked opportunities, mentor match, and soft
             coaching signals.
           </p>
@@ -892,13 +892,13 @@ function AdvisorPanel({
               className={cn(
                 "max-w-[92%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
                 message.role === "user"
-                  ? "ml-auto bg-[#028090] text-white"
-                  : "bg-[#0D1B2A]/[0.04] text-[#0D1B2A]",
+                  ? "ml-auto bg-[#3A87B8] text-white"
+                  : "bg-[#142033]/[0.04] text-[#142033]",
               )}
             >
               <p className="whitespace-pre-wrap">{message.content}</p>
               {message.citations && message.citations.length > 0 ? (
-                <ul className="mt-2 space-y-1 border-t border-[#0D1B2A]/10 pt-2 text-[11px] text-[#0D1B2A]/60">
+                <ul className="mt-2 space-y-1 border-t border-[#142033]/10 pt-2 text-[11px] text-[#142033]/60">
                   {message.citations.map((citation) => (
                     <li key={citation}>• {citation}</li>
                   ))}
@@ -911,7 +911,7 @@ function AdvisorPanel({
                       key={action}
                       type="button"
                       onClick={() => void sendMessage(action)}
-                      className="rounded-full border border-[#028090]/30 bg-white px-2.5 py-1 text-[11px] font-semibold text-[#028090]"
+                      className="rounded-full border border-[#3A87B8]/30 bg-white px-2.5 py-1 text-[11px] font-semibold text-[#3A87B8]"
                     >
                       {action}
                     </button>
@@ -922,7 +922,7 @@ function AdvisorPanel({
           ))}
         </div>
         <form
-          className="border-t border-[#0D1B2A]/08 p-3"
+          className="border-t border-[#142033]/08 p-3"
           onSubmit={(event) => {
             event.preventDefault();
             void sendMessage(input);
@@ -930,7 +930,7 @@ function AdvisorPanel({
         >
           {error ? (
             <p
-              className="mb-2 rounded-lg bg-[#C0392B]/10 px-3 py-2 text-xs text-[#C0392B]"
+              className="mb-2 rounded-lg bg-[#E0312E]/10 px-3 py-2 text-xs text-[#E0312E]"
               role="alert"
             >
               {error}
@@ -949,12 +949,12 @@ function AdvisorPanel({
               placeholder={
                 studentId ? "e.g. What should I apply to next, and why?" : "Leader context required"
               }
-              className="min-h-[2.75rem] flex-1 resize-y rounded-xl border border-[#0D1B2A]/15 px-3 py-2 text-sm outline-none focus:border-[#028090] disabled:opacity-60"
+              className="min-h-[2.75rem] flex-1 resize-y rounded-xl border border-[#142033]/15 px-3 py-2 text-sm outline-none focus:border-[#3A87B8] disabled:opacity-60"
             />
             <button
               type="submit"
               disabled={!studentId || isSending || !input.trim()}
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#028090] text-white transition hover:bg-[#026f7d] disabled:opacity-50"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3A87B8] text-white transition hover:bg-[#2F739E] disabled:opacity-50"
               aria-label="Send message"
             >
               <Send className="h-4 w-4" aria-hidden />
@@ -964,8 +964,8 @@ function AdvisorPanel({
       </section>
 
       <aside className="space-y-3">
-        <div className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-4">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">Try asking</h3>
+        <div className="rounded-2xl border border-[#142033]/10 bg-white p-4">
+          <h3 className="text-sm font-semibold text-[#142033]">Try asking</h3>
           <ul className="mt-3 space-y-2">
             {starterPrompts.map((prompt) => (
               <li key={prompt}>
@@ -973,7 +973,7 @@ function AdvisorPanel({
                   type="button"
                   onClick={() => void sendMessage(prompt)}
                   disabled={!studentId || isSending}
-                  className="w-full rounded-xl border border-[#0D1B2A]/10 px-3 py-2 text-left text-xs font-medium text-[#0D1B2A] hover:border-[#028090]/40 disabled:opacity-50"
+                  className="w-full rounded-xl border border-[#142033]/10 px-3 py-2 text-left text-xs font-medium text-[#142033] hover:border-[#3A87B8]/40 disabled:opacity-50"
                 >
                   {prompt}
                 </button>
@@ -981,8 +981,8 @@ function AdvisorPanel({
             ))}
           </ul>
         </div>
-        <div className="rounded-2xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-4 text-white">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#F4B942]">
+        <div className="rounded-2xl border border-[#142033]/10 bg-[#142033] p-4 text-white">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#B47828]">
             Capstone note
           </p>
           <p className="mt-2 text-xs leading-relaxed text-white/75">
@@ -1007,16 +1007,16 @@ function RiskPanel({
   outreachStatus: Record<string, string>;
 }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-[#0D1B2A]/10 bg-white shadow-sm">
-      <div className="border-b border-[#0D1B2A]/08 px-4 py-3">
-        <h3 className="text-sm font-semibold text-[#0D1B2A]">Dropout risk dashboard</h3>
-        <p className="text-xs text-[#0D1B2A]/60">
+    <div className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
+      <div className="border-b border-[#142033]/08 px-4 py-3">
+        <h3 className="text-sm font-semibold text-[#142033]">Dropout risk dashboard</h3>
+        <p className="text-xs text-[#142033]/60">
           Logistic regression probability · threshold 0.65 · RF feature importance for top factor
         </p>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full text-left text-sm">
-          <thead className="bg-[#0D1B2A]/[0.03] text-[11px] uppercase tracking-[0.12em] text-[#0D1B2A]/55">
+          <thead className="bg-[#142033]/[0.03] text-[11px] uppercase tracking-[0.12em] text-[#142033]/55">
             <tr>
               <th className="px-4 py-3 font-semibold">Leader</th>
               <th className="px-4 py-3 font-semibold">Risk</th>
@@ -1028,10 +1028,10 @@ function RiskPanel({
           </thead>
           <tbody>
             {rows.map((row) => (
-              <tr key={row.student_id} className="border-t border-[#0D1B2A]/08 align-top">
+              <tr key={row.student_id} className="border-t border-[#142033]/08 align-top">
                 <td className="px-4 py-3">
-                  <p className="font-medium text-[#0D1B2A]">{row.full_name}</p>
-                  <p className="text-xs text-[#0D1B2A]/55">{row.country}</p>
+                  <p className="font-medium text-[#142033]">{row.full_name}</p>
+                  <p className="text-xs text-[#142033]/55">{row.country}</p>
                 </td>
                 <td className="px-4 py-3">
                   <span
@@ -1043,13 +1043,13 @@ function RiskPanel({
                     {row.risk_level}
                   </span>
                 </td>
-                <td className="px-4 py-3 font-semibold tabular-nums text-[#0D1B2A]">
+                <td className="px-4 py-3 font-semibold tabular-nums text-[#142033]">
                   {formatPct(row.risk_probability)}
                 </td>
-                <td className="px-4 py-3 text-[#0D1B2A]/75">
+                <td className="px-4 py-3 text-[#142033]/75">
                   {row.top_risk_factor.replaceAll("_", " ")}
                 </td>
-                <td className="px-4 py-3 text-xs text-[#0D1B2A]/65">
+                <td className="px-4 py-3 text-xs text-[#142033]/65">
                   login {row.features.days_since_last_login}d · mentor{" "}
                   {row.features.days_since_last_mentor_session}d · GPA{" "}
                   {row.features.gpa_score.toFixed(2)}
@@ -1059,12 +1059,12 @@ function RiskPanel({
                     <button
                       type="button"
                       onClick={() => onOutreach(row.student_id)}
-                      className="rounded-full bg-[#028090] px-3 py-1.5 text-xs font-semibold text-white hover:bg-[#026f7d]"
+                      className="rounded-full bg-[#3A87B8] px-3 py-1.5 text-xs font-semibold text-white hover:bg-[#2F739E]"
                     >
                       Queue outreach
                     </button>
                     {outreachStatus[row.student_id] ? (
-                      <p className="mt-1 max-w-40 text-[11px] text-[#0D1B2A]/55">
+                      <p className="mt-1 max-w-40 text-[11px] text-[#142033]/55">
                         {outreachStatus[row.student_id]}
                       </p>
                     ) : null}
@@ -1119,15 +1119,15 @@ function AnalyticsPanel({
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {metricCards.map((card) => (
-          <div key={card.label} className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/55">
+          <div key={card.label} className="rounded-2xl border border-[#142033]/10 bg-white p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#142033]/55">
               {card.label}
             </p>
-            <p className="mt-2 text-2xl font-semibold tabular-nums text-[#0D1B2A]">{card.value}</p>
+            <p className="mt-2 text-2xl font-semibold tabular-nums text-[#142033]">{card.value}</p>
             <p
               className={cn(
                 "mt-1 text-xs font-medium",
-                card.pass ? "text-[#1B5E20]" : "text-[#C0392B]",
+                card.pass ? "text-[#1B5E20]" : "text-[#E0312E]",
               )}
             >
               {card.pass ? "On target" : "Below target"} · {card.target}
@@ -1144,8 +1144,8 @@ function AnalyticsPanel({
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+          <h3 className="text-sm font-semibold text-[#142033]">
             Feature importance (Random Forest)
           </h3>
           <ul className="mt-3 space-y-2">
@@ -1153,13 +1153,13 @@ function AnalyticsPanel({
               .sort((a, b) => b[1] - a[1])
               .map(([feature, weight]) => (
                 <li key={feature}>
-                  <div className="mb-1 flex justify-between text-xs text-[#0D1B2A]/70">
+                  <div className="mb-1 flex justify-between text-xs text-[#142033]/70">
                     <span>{feature.replaceAll("_", " ")}</span>
                     <span className="tabular-nums">{formatPct(weight)}</span>
                   </div>
-                  <div className="h-2 overflow-hidden rounded-full bg-[#0D1B2A]/10">
+                  <div className="h-2 overflow-hidden rounded-full bg-[#142033]/10">
                     <div
-                      className="h-full rounded-full bg-[#028090]"
+                      className="h-full rounded-full bg-[#3A87B8]"
                       style={{ width: `${Math.round(weight * 100)}%` }}
                     />
                   </div>
@@ -1168,21 +1168,21 @@ function AnalyticsPanel({
           </ul>
         </section>
 
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">NLP goal extracts</h3>
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+          <h3 className="text-sm font-semibold text-[#142033]">NLP goal extracts</h3>
           <ul className="mt-3 space-y-3">
             {nlp.slice(0, 6).map((row) => (
-              <li key={row.student_id} className="rounded-xl border border-[#0D1B2A]/08 p-3">
-                <p className="text-sm font-medium text-[#0D1B2A]">{row.full_name}</p>
-                <p className="mt-1 text-xs text-[#0D1B2A]/65">{row.career_goal_text}</p>
-                <p className="mt-2 text-xs text-[#028090]">{row.recommendation_sentence}</p>
+              <li key={row.student_id} className="rounded-xl border border-[#142033]/08 p-3">
+                <p className="text-sm font-medium text-[#142033]">{row.full_name}</p>
+                <p className="mt-1 text-xs text-[#142033]/65">{row.career_goal_text}</p>
+                <p className="mt-2 text-xs text-[#3A87B8]">{row.recommendation_sentence}</p>
                 <div className="mt-2 flex flex-wrap gap-1">
                   {[...row.entities.ORG, ...row.entities.SKILL, ...row.entities.GPE]
                     .slice(0, 6)
                     .map((entity) => (
                       <span
                         key={`${row.student_id}-${entity}`}
-                        className="rounded-full bg-[#0D1B2A]/[0.04] px-2 py-0.5 text-[11px] text-[#0D1B2A]/70"
+                        className="rounded-full bg-[#142033]/[0.04] px-2 py-0.5 text-[11px] text-[#142033]/70"
                       >
                         {entity}
                       </span>
@@ -1260,33 +1260,44 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
   }
 
   return (
-    <div className="min-h-screen bg-[#F4F7F7] text-[#0D1B2A]">
-      <header className="border-b border-white/10 bg-[#0D1B2A] text-white">
+    <div className="min-h-screen bg-[#F4F0E6] text-[#142033]">
+      <header className="border-b border-white/10 bg-black text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
-          <div className="min-w-0">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#F4B942]">
-              JointHub Africa · Mentor Hub
-            </p>
-            <h1 className="truncate text-lg font-semibold sm:text-xl">
-              {data.student
-                ? `${data.student.full_name} · ${isAdmin ? "Admin focus" : "Leader home"}`
-                : isAdmin
-                  ? "Programme admin · cohort view"
-                  : "Mentor Hub"}
-            </h1>
-            <p className="truncate text-xs text-white/60">
-              {data.auth_email}
-              {data.student
-                ? ` · ${data.student.country} · ${data.student.programme}`
-                : " · Capstone sample cohort"}
-            </p>
+          <div className="flex min-w-0 items-center gap-3">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/simplejoint-puzzle-logo.png"
+              alt="SimpleJoint Trust"
+              className="h-10 w-10 shrink-0 rounded-lg bg-black object-contain"
+              width={40}
+              height={40}
+            />
+            <div className="min-w-0">
+              <p className="truncate text-sm font-semibold tracking-tight text-white">
+                SimpleJoint Trust
+              </p>
+              <p className="truncate text-xs text-white/65">ESL Mentors · JointHub Africa</p>
+              <h1 className="mt-0.5 truncate text-base font-semibold sm:text-lg">
+                {data.student
+                  ? `${data.student.full_name} · ${isAdmin ? "Admin focus" : "Leader home"}`
+                  : isAdmin
+                    ? "Programme admin · cohort view"
+                    : "Mentor Hub"}
+              </h1>
+              <p className="truncate text-xs text-white/55">
+                {data.auth_email}
+                {data.student
+                  ? ` · ${data.student.country} · ${data.student.programme}`
+                  : " · Capstone sample cohort"}
+              </p>
+            </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <Link
-              href="/prototype"
+              href="/mentors"
               className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/10"
             >
-              Design reference
+              ESL Mentors
             </Link>
             <Link
               href="/"
@@ -1317,10 +1328,10 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
         ) : null}
 
         {isAdmin && data.students ? (
-          <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-[#0D1B2A]/10 bg-white p-3">
+          <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-[#142033]/10 bg-white p-3">
             <label
               htmlFor="student-filter"
-              className="text-xs font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/55"
+              className="text-xs font-semibold uppercase tracking-[0.14em] text-[#142033]/55"
             >
               Focus leader
             </label>
@@ -1334,7 +1345,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
                   void reload(value || undefined);
                 });
               }}
-              className="min-w-56 rounded-lg border border-[#0D1B2A]/15 bg-white px-3 py-2 text-sm outline-none focus:border-[#028090]"
+              className="min-w-56 rounded-lg border border-[#142033]/15 bg-white px-3 py-2 text-sm outline-none focus:border-[#3A87B8]"
             >
               <option value="">All leaders (admin)</option>
               {data.students.map((student) => (
@@ -1343,7 +1354,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
                 </option>
               ))}
             </select>
-            {isPending ? <span className="text-xs text-[#0D1B2A]/50">Updating…</span> : null}
+            {isPending ? <span className="text-xs text-[#142033]/50">Updating…</span> : null}
           </div>
         ) : null}
 
@@ -1359,8 +1370,8 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
                 className={cn(
                   "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition",
                   active
-                    ? "bg-[#028090] text-white"
-                    : "border border-[#0D1B2A]/10 bg-white text-[#0D1B2A]/75 hover:border-[#028090]/40",
+                    ? "bg-[#3A87B8] text-white"
+                    : "border border-[#142033]/10 bg-white text-[#142033]/75 hover:border-[#3A87B8]/40",
                 )}
               >
                 <Icon className="h-4 w-4" aria-hidden />
