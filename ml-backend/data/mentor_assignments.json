@@ -1,0 +1,158 @@
+[
+  {
+    "student_id": "66be741f-5acb-4f6f-aecc-ef4ec8a327ef",
+    "student_name": "Amina Leader",
+    "mentor_id": "526e5b94-9372-4874-a61a-6648ae14724a",
+    "mentor_name": "Mentor Thabo Sarr",
+    "compatibility_score": 0.5891,
+    "industry": "Agriculture",
+    "skills_offered": [
+      "creative_tech",
+      "leadership",
+      "data_ai"
+    ]
+  },
+  {
+    "student_id": "2a87ed51-50b1-4f1b-b065-05a196dae7c4",
+    "student_name": "Chidi Okafor",
+    "mentor_id": "7a099df8-e285-48ed-8622-5c8a2cad275d",
+    "mentor_name": "Mentor Chidi Annan",
+    "compatibility_score": 0.5891,
+    "industry": "Finance",
+    "skills_offered": [
+      "music_arts",
+      "entrepreneurship",
+      "climate_env"
+    ]
+  },
+  {
+    "student_id": "1ed223d9-376c-488a-b570-afcd324b6da6",
+    "student_name": "Thabo Dlamini",
+    "mentor_id": "ea1232a6-d621-4528-a57d-7ecd532ac9d1",
+    "mentor_name": "Mentor Jean Boateng",
+    "compatibility_score": 0.5715,
+    "industry": "Health",
+    "skills_offered": [
+      "agri_food",
+      "data_ai",
+      "health"
+    ]
+  },
+  {
+    "student_id": "56911b09-6c0d-49ce-886a-3c44302cc56e",
+    "student_name": "David Mwangi",
+    "mentor_id": "c98b0f52-4cad-4a1e-8160-966e6aeb0e2a",
+    "mentor_name": "Mentor David Nkosi",
+    "compatibility_score": 0.4667,
+    "industry": "Education",
+    "skills_offered": [
+      "climate_env",
+      "agri_food",
+      "finance"
+    ]
+  },
+  {
+    "student_id": "bad31200-9a4e-4c77-8e7c-452a1c2b08be",
+    "student_name": "Fatou Adeyemi",
+    "mentor_id": "dcfbecc1-e9e8-4d82-a63c-19e0b0557d5d",
+    "mentor_name": "Mentor Grace Mugisha",
+    "compatibility_score": 0.694,
+    "industry": "Health",
+    "skills_offered": [
+      "design_ux",
+      "entrepreneurship",
+      "agri_food"
+    ]
+  },
+  {
+    "student_id": "1e9cb6ca-0ce5-449b-a1f9-8682ed428335",
+    "student_name": "Tunde Ibrahim",
+    "mentor_id": "ca5ae424-b49d-4db6-ba7b-f783b0dce5dc",
+    "mentor_name": "Mentor Imani Tadesse",
+    "compatibility_score": 0.7287,
+    "industry": "Media",
+    "skills_offered": [
+      "entrepreneurship",
+      "media_film",
+      "leadership"
+    ]
+  },
+  {
+    "student_id": "5557f048-2469-4e3d-9b1d-cec6d1637f84",
+    "student_name": "Mariam Nkosi",
+    "mentor_id": "cbe5eafb-081d-4324-a24b-702018ba38cd",
+    "mentor_name": "Mentor Zainab Traore",
+    "compatibility_score": 0.5891,
+    "industry": "Technology",
+    "skills_offered": [
+      "media_film",
+      "climate_env",
+      "entrepreneurship"
+    ]
+  },
+  {
+    "student_id": "c70b2806-e064-4901-9f9c-3a782d47f29f",
+    "student_name": "Lina Banda",
+    "mentor_id": "e21f3fb1-192d-41c5-aceb-651d36871b4d",
+    "mentor_name": "Mentor Nia Banda",
+    "compatibility_score": 0.694,
+    "industry": "Climate",
+    "skills_offered": [
+      "leadership",
+      "creative_tech",
+      "entrepreneurship"
+    ]
+  },
+  {
+    "student_id": "7b85862d-eaac-449f-be09-9d9bc30a9e21",
+    "student_name": "Omar Sarr",
+    "mentor_id": "3acd919f-b8e1-4b2b-8867-7980e1f48602",
+    "mentor_name": "Mentor Sekou Wanjiru",
+    "compatibility_score": 0.5891,
+    "industry": "Public Policy",
+    "skills_offered": [
+      "music_arts",
+      "data_ai",
+      "social_impact"
+    ]
+  },
+  {
+    "student_id": "c8b0e76a-0bdf-419c-8148-851b956db4ca",
+    "student_name": "Eric Mugisha",
+    "mentor_id": "e469d952-13f3-4638-8b65-76fa9ebadb8b",
+    "mentor_name": "Mentor Kwame Osei",
+    "compatibility_score": 0.5891,
+    "industry": "Education",
+    "skills_offered": [
+      "finance",
+      "health",
+      "music_arts"
+    ]
+  },
+  {
+    "student_id": "629600f3-912d-4484-91c6-8230aacbd4be",
+    "student_name": "Blessing Annan",
+    "mentor_id": "f2dba865-24c1-4aeb-a28e-555558505c74",
+    "mentor_name": "Mentor Fatou Ibrahim",
+    "compatibility_score": 0.694,
+    "industry": "Finance",
+    "skills_offered": [
+      "data_ai",
+      "entrepreneurship",
+      "media_film"
+    ]
+  },
+  {
+    "student_id": "9f9e5a51-05fc-4eec-822b-f89feb69aa74",
+    "student_name": "Ruth Kamanzi",
+    "mentor_id": "7f4fdccc-6d10-4a38-aaef-1863430184d0",
+    "mentor_name": "Mentor Amina Kamanzi",
+    "compatibility_score": 0.4082,
+    "industry": "Technology",
+    "skills_offered": [
+      "media_film",
+      "data_ai",
+      "health"
+    ]
+  }
+]

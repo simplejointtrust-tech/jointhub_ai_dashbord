@@ -1,0 +1,1173 @@
+{
+  "assignments": [
+    {
+      "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
+      "student_name": "Amina Okoro",
+      "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+      "mentor_name": "Mentor Ibrahim Nkrumah",
+      "compatibility_score": 0.7071,
+      "mentor_industry": "Technology",
+      "mentor_country": "Rwanda",
+      "shared_skills": ["design_ux", "health"]
+    },
+    {
+      "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
+      "student_name": "Thabo Nkrumah",
+      "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+      "mentor_name": "Mentor Oluwaseun Mwangi",
+      "compatibility_score": 0.5,
+      "mentor_industry": "Finance",
+      "mentor_country": "Nigeria",
+      "shared_skills": ["climate_env"]
+    },
+    {
+      "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
+      "student_name": "Ibrahim Mwangi",
+      "mentor_id": "d13395c7-9191-46b2-b2d2-9b07b8ae4d5b",
+      "mentor_name": "Mentor Tunde Nkosi",
+      "compatibility_score": 0.8165,
+      "mentor_industry": "Technology",
+      "mentor_country": "Rwanda",
+      "shared_skills": ["creative_tech", "music_arts"]
+    },
+    {
+      "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
+      "student_name": "Oluwaseun Kamau",
+      "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
+      "mentor_name": "Mentor Aisha Traore",
+      "compatibility_score": 0.4082,
+      "mentor_industry": "Agriculture",
+      "mentor_country": "South Africa",
+      "shared_skills": ["entrepreneurship"]
+    },
+    {
+      "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
+      "student_name": "Zuri Traore",
+      "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
+      "mentor_name": "Mentor Bongani Kone",
+      "compatibility_score": 0.8165,
+      "mentor_industry": "Finance",
+      "mentor_country": "Nigeria",
+      "shared_skills": ["data_ai", "social_impact"]
+    },
+    {
+      "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
+      "student_name": "Kofi Dlamini",
+      "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
+      "mentor_name": "Mentor Zuri Okafor",
+      "compatibility_score": 1.0,
+      "mentor_industry": "Health",
+      "mentor_country": "Ghana",
+      "shared_skills": ["design_ux", "finance"]
+    },
+    {
+      "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
+      "student_name": "Mariam Adebayo",
+      "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
+      "mentor_name": "Mentor Jelani Dlamini",
+      "compatibility_score": 0.5,
+      "mentor_industry": "Climate",
+      "mentor_country": "Senegal",
+      "shared_skills": ["music_arts"]
+    },
+    {
+      "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
+      "student_name": "Tunde Kone",
+      "mentor_id": "93a920e6-0ab3-4d6c-9d4f-21f723dcb561",
+      "mentor_name": "Mentor Kofi Kamau",
+      "compatibility_score": 0.5,
+      "mentor_industry": "Media",
+      "mentor_country": "Uganda",
+      "shared_skills": ["data_ai"]
+    },
+    {
+      "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
+      "student_name": "Sanaa Mugisha",
+      "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+      "mentor_name": "Mentor Sanaa Adebayo",
+      "compatibility_score": 0.7071,
+      "mentor_industry": "Education",
+      "mentor_country": "Kenya",
+      "shared_skills": ["entrepreneurship", "finance"]
+    },
+    {
+      "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
+      "student_name": "Bongani Okoro",
+      "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+      "mentor_name": "Mentor Nia Abebe",
+      "compatibility_score": 0.8165,
+      "mentor_industry": "Education",
+      "mentor_country": "Kenya",
+      "shared_skills": ["design_ux", "agri_food"]
+    },
+    {
+      "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
+      "student_name": "Adaeze Nkrumah",
+      "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
+      "mentor_name": "Mentor Mariam Boateng",
+      "compatibility_score": 0.8165,
+      "mentor_industry": "Public Policy",
+      "mentor_country": "Ethiopia",
+      "shared_skills": ["entrepreneurship", "media_film"]
+    }
+  ],
+  "top3_by_student": [
+    {
+      "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
+      "recommendations": [
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.8165,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.7071,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        },
+        {
+          "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
+          "mentor_name": "Mentor Zuri Okafor",
+          "compatibility_score": 0.5,
+          "industry": "Health",
+          "country": "Ghana",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a",
+      "recommendations": [
+        {
+          "mentor_id": "d13395c7-9191-46b2-b2d2-9b07b8ae4d5b",
+          "mentor_name": "Mentor Tunde Nkosi",
+          "compatibility_score": 0.4082,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.3536,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        },
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.0,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b",
+      "recommendations": [
+        {
+          "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
+          "mentor_name": "Mentor Bongani Kone",
+          "compatibility_score": 0.4082,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 2
+        },
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.3536,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        },
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.0,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
+      "recommendations": [
+        {
+          "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
+          "mentor_name": "Mentor Zuri Okafor",
+          "compatibility_score": 0.5,
+          "industry": "Health",
+          "country": "Ghana",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.4082,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        }
+      ]
+    },
+    {
+      "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833",
+      "recommendations": [
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.4082,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.3536,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        }
+      ]
+    },
+    {
+      "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
+      "recommendations": [
+        {
+          "mentor_id": "d13395c7-9191-46b2-b2d2-9b07b8ae4d5b",
+          "mentor_name": "Mentor Tunde Nkosi",
+          "compatibility_score": 0.8165,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
+          "mentor_name": "Mentor Jelani Dlamini",
+          "compatibility_score": 0.5,
+          "industry": "Climate",
+          "country": "Senegal",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
+          "mentor_name": "Mentor Bongani Kone",
+          "compatibility_score": 0.4082,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 2
+        }
+      ]
+    },
+    {
+      "student_id": "3b8dd516-f0c2-476d-88c9-29ba5731a0a1",
+      "recommendations": [
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
+          "mentor_name": "Mentor Bongani Kone",
+          "compatibility_score": 0.4082,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 2
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.0,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        }
+      ]
+    },
+    {
+      "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
+      "recommendations": [
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
+          "mentor_name": "Mentor Aisha Traore",
+          "compatibility_score": 0.4082,
+          "industry": "Agriculture",
+          "country": "South Africa",
+          "availability_hrs_per_month": 2
+        },
+        {
+          "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
+          "mentor_name": "Mentor Mariam Boateng",
+          "compatibility_score": 0.4082,
+          "industry": "Public Policy",
+          "country": "Ethiopia",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
+      "recommendations": [
+        {
+          "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
+          "mentor_name": "Mentor Bongani Kone",
+          "compatibility_score": 0.8165,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 2
+        },
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
+          "mentor_name": "Mentor Jelani Dlamini",
+          "compatibility_score": 0.5,
+          "industry": "Climate",
+          "country": "Senegal",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
+      "recommendations": [
+        {
+          "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
+          "mentor_name": "Mentor Zuri Okafor",
+          "compatibility_score": 1.0,
+          "industry": "Health",
+          "country": "Ghana",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+          "mentor_name": "Mentor Sanaa Adebayo",
+          "compatibility_score": 0.7071,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "93a920e6-0ab3-4d6c-9d4f-21f723dcb561",
+          "mentor_name": "Mentor Kofi Kamau",
+          "compatibility_score": 0.5,
+          "industry": "Media",
+          "country": "Uganda",
+          "availability_hrs_per_month": 2
+        }
+      ]
+    },
+    {
+      "student_id": "4404bc54-5468-46aa-95da-738a784bb119",
+      "recommendations": [
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.7071,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.4082,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.0,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "afe20b59-9dab-4d2b-90cf-b55d23be4cf0",
+      "recommendations": [
+        {
+          "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
+          "mentor_name": "Mentor Zuri Okafor",
+          "compatibility_score": 0.5,
+          "industry": "Health",
+          "country": "Ghana",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.4082,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        }
+      ]
+    },
+    {
+      "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
+      "recommendations": [
+        {
+          "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
+          "mentor_name": "Mentor Jelani Dlamini",
+          "compatibility_score": 0.5,
+          "industry": "Climate",
+          "country": "Senegal",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
+          "mentor_name": "Mentor Aisha Traore",
+          "compatibility_score": 0.4082,
+          "industry": "Agriculture",
+          "country": "South Africa",
+          "availability_hrs_per_month": 2
+        },
+        {
+          "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
+          "mentor_name": "Mentor Bongani Kone",
+          "compatibility_score": 0.4082,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 2
+        }
+      ]
+    },
+    {
+      "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
+      "recommendations": [
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "93a920e6-0ab3-4d6c-9d4f-21f723dcb561",
+          "mentor_name": "Mentor Kofi Kamau",
+          "compatibility_score": 0.5,
+          "industry": "Media",
+          "country": "Uganda",
+          "availability_hrs_per_month": 2
+        },
+        {
+          "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
+          "mentor_name": "Mentor Jelani Dlamini",
+          "compatibility_score": 0.5,
+          "industry": "Climate",
+          "country": "Senegal",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
+      "recommendations": [
+        {
+          "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+          "mentor_name": "Mentor Sanaa Adebayo",
+          "compatibility_score": 0.7071,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
+          "mentor_name": "Mentor Zuri Okafor",
+          "compatibility_score": 0.5,
+          "industry": "Health",
+          "country": "Ghana",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "93a920e6-0ab3-4d6c-9d4f-21f723dcb561",
+          "mentor_name": "Mentor Kofi Kamau",
+          "compatibility_score": 0.5,
+          "industry": "Media",
+          "country": "Uganda",
+          "availability_hrs_per_month": 2
+        }
+      ]
+    },
+    {
+      "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
+      "recommendations": [
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.8165,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.7071,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        },
+        {
+          "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+          "mentor_name": "Mentor Sanaa Adebayo",
+          "compatibility_score": 0.7071,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
+      "recommendations": [
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
+          "mentor_name": "Mentor Mariam Boateng",
+          "compatibility_score": 0.4082,
+          "industry": "Public Policy",
+          "country": "Ethiopia",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.0,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        }
+      ]
+    },
+    {
+      "student_id": "c4031050-5ea6-46e6-8332-517a85594ea6",
+      "recommendations": [
+        {
+          "mentor_id": "d13395c7-9191-46b2-b2d2-9b07b8ae4d5b",
+          "mentor_name": "Mentor Tunde Nkosi",
+          "compatibility_score": 0.4082,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.3536,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        },
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.0,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
+      "recommendations": [
+        {
+          "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
+          "mentor_name": "Mentor Mariam Boateng",
+          "compatibility_score": 0.8165,
+          "industry": "Public Policy",
+          "country": "Ethiopia",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
+          "mentor_name": "Mentor Aisha Traore",
+          "compatibility_score": 0.4082,
+          "industry": "Agriculture",
+          "country": "South Africa",
+          "availability_hrs_per_month": 2
+        },
+        {
+          "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+          "mentor_name": "Mentor Sanaa Adebayo",
+          "compatibility_score": 0.3536,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
+      "recommendations": [
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.7071,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.4082,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
+          "mentor_name": "Mentor Mariam Boateng",
+          "compatibility_score": 0.4082,
+          "industry": "Public Policy",
+          "country": "Ethiopia",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
+      "recommendations": [
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.8165,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.7071,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        },
+        {
+          "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+          "mentor_name": "Mentor Sanaa Adebayo",
+          "compatibility_score": 0.7071,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 4
+        }
+      ]
+    },
+    {
+      "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
+      "recommendations": [
+        {
+          "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
+          "mentor_name": "Mentor Jelani Dlamini",
+          "compatibility_score": 0.5,
+          "industry": "Climate",
+          "country": "Senegal",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.4082,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
+          "mentor_name": "Mentor Aisha Traore",
+          "compatibility_score": 0.4082,
+          "industry": "Agriculture",
+          "country": "South Africa",
+          "availability_hrs_per_month": 2
+        }
+      ]
+    },
+    {
+      "student_id": "fa92f34f-963b-4901-8889-1879d28029d7",
+      "recommendations": [
+        {
+          "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
+          "mentor_name": "Mentor Mariam Boateng",
+          "compatibility_score": 0.8165,
+          "industry": "Public Policy",
+          "country": "Ethiopia",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+          "mentor_name": "Mentor Sanaa Adebayo",
+          "compatibility_score": 0.7071,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
+          "mentor_name": "Mentor Aisha Traore",
+          "compatibility_score": 0.4082,
+          "industry": "Agriculture",
+          "country": "South Africa",
+          "availability_hrs_per_month": 2
+        }
+      ]
+    },
+    {
+      "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
+      "recommendations": [
+        {
+          "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+          "mentor_name": "Mentor Oluwaseun Mwangi",
+          "compatibility_score": 0.5,
+          "industry": "Finance",
+          "country": "Nigeria",
+          "availability_hrs_per_month": 4
+        },
+        {
+          "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+          "mentor_name": "Mentor Nia Abebe",
+          "compatibility_score": 0.4082,
+          "industry": "Education",
+          "country": "Kenya",
+          "availability_hrs_per_month": 8
+        },
+        {
+          "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+          "mentor_name": "Mentor Ibrahim Nkrumah",
+          "compatibility_score": 0.3536,
+          "industry": "Technology",
+          "country": "Rwanda",
+          "availability_hrs_per_month": 6
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "3d9c8341-2015-49ba-8652-9d61eac13e9e",
+      "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
+      "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+      "student_name": "Amina Okoro",
+      "mentor_name": "Mentor Ibrahim Nkrumah",
+      "session_date": "2026-07-09",
+      "session_duration_mins": 60,
+      "topics_discussed": ["interview prep", "career goals"],
+      "student_rating": 4,
+      "goals_set": true,
+      "days_since_last_session": 5
+    },
+    {
+      "session_id": "d697c7c6-13eb-4beb-82f3-eeee3cf01dd5",
+      "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
+      "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+      "student_name": "Thabo Nkrumah",
+      "mentor_name": "Mentor Oluwaseun Mwangi",
+      "session_date": "2026-07-04",
+      "session_duration_mins": 60,
+      "topics_discussed": ["interview prep", "applications"],
+      "student_rating": 3,
+      "goals_set": true,
+      "days_since_last_session": 10
+    },
+    {
+      "session_id": "90d82924-9714-4241-882e-91ed7866c46e",
+      "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
+      "mentor_id": "d13395c7-9191-46b2-b2d2-9b07b8ae4d5b",
+      "student_name": "Ibrahim Mwangi",
+      "mentor_name": "Mentor Tunde Nkosi",
+      "session_date": "2026-07-07",
+      "session_duration_mins": 30,
+      "topics_discussed": ["leadership", "applications"],
+      "student_rating": 4,
+      "goals_set": true,
+      "days_since_last_session": 5
+    },
+    {
+      "session_id": "32103570-c52f-44c0-b772-29db17b948df",
+      "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
+      "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
+      "student_name": "Oluwaseun Kamau",
+      "mentor_name": "Mentor Aisha Traore",
+      "session_date": "2026-07-09",
+      "session_duration_mins": 30,
+      "topics_discussed": ["CV review", "applications"],
+      "student_rating": 4,
+      "goals_set": true,
+      "days_since_last_session": 18
+    },
+    {
+      "session_id": "c0ab0f70-5a53-4bc3-99bd-322afd914df2",
+      "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
+      "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
+      "student_name": "Zuri Traore",
+      "mentor_name": "Mentor Bongani Kone",
+      "session_date": "2026-07-01",
+      "session_duration_mins": 60,
+      "topics_discussed": ["interview prep", "leadership"],
+      "student_rating": 3,
+      "goals_set": true,
+      "days_since_last_session": 16
+    },
+    {
+      "session_id": "a1cc8c1a-aad5-4f9c-9fb7-b3d514cb97a4",
+      "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
+      "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
+      "student_name": "Kofi Dlamini",
+      "mentor_name": "Mentor Zuri Okafor",
+      "session_date": "2026-07-07",
+      "session_duration_mins": 45,
+      "topics_discussed": ["CV review", "career goals"],
+      "student_rating": 3,
+      "goals_set": true,
+      "days_since_last_session": 18
+    },
+    {
+      "session_id": "0a2ca136-93c7-4901-93ed-f7cbe2eedfe4",
+      "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
+      "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
+      "student_name": "Mariam Adebayo",
+      "mentor_name": "Mentor Jelani Dlamini",
+      "session_date": "2026-07-03",
+      "session_duration_mins": 60,
+      "topics_discussed": ["leadership", "applications"],
+      "student_rating": 4,
+      "goals_set": true,
+      "days_since_last_session": 7
+    },
+    {
+      "session_id": "954b906e-35e1-4d73-b29f-b8b8200bb18c",
+      "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
+      "mentor_id": "93a920e6-0ab3-4d6c-9d4f-21f723dcb561",
+      "student_name": "Tunde Kone",
+      "mentor_name": "Mentor Kofi Kamau",
+      "session_date": "2026-07-07",
+      "session_duration_mins": 60,
+      "topics_discussed": ["interview prep", "leadership"],
+      "student_rating": 4,
+      "goals_set": false,
+      "days_since_last_session": 0
+    },
+    {
+      "session_id": "ea4c9564-4f5f-4e44-a42b-ade473141da8",
+      "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
+      "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+      "student_name": "Sanaa Mugisha",
+      "mentor_name": "Mentor Sanaa Adebayo",
+      "session_date": "2026-07-01",
+      "session_duration_mins": 45,
+      "topics_discussed": ["interview prep", "leadership"],
+      "student_rating": 3,
+      "goals_set": true,
+      "days_since_last_session": 12
+    },
+    {
+      "session_id": "8688fa3c-99d2-46d9-b3e9-f65027e3c8d3",
+      "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
+      "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+      "student_name": "Bongani Okoro",
+      "mentor_name": "Mentor Nia Abebe",
+      "session_date": "2026-07-08",
+      "session_duration_mins": 45,
+      "topics_discussed": ["applications", "career goals"],
+      "student_rating": 5,
+      "goals_set": true,
+      "days_since_last_session": 4
+    },
+    {
+      "session_id": "ea68f5c8-e143-4ff0-9cd9-df3c1d0f0030",
+      "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
+      "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
+      "student_name": "Adaeze Nkrumah",
+      "mentor_name": "Mentor Mariam Boateng",
+      "session_date": "2026-07-11",
+      "session_duration_mins": 30,
+      "topics_discussed": ["interview prep", "career goals"],
+      "student_rating": 5,
+      "goals_set": true,
+      "days_since_last_session": 1
+    }
+  ],
+  "mentors": [
+    {
+      "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
+      "name": "Mentor Ibrahim Nkrumah",
+      "country": "Rwanda",
+      "industry": "Technology",
+      "skills_offered": ["health", "leadership", "agri_food", "design_ux"],
+      "skills_vector": [0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1],
+      "career_stage_mentor": 6,
+      "availability_hrs_per_month": 6,
+      "languages": ["English"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
+      "name": "Mentor Nia Abebe",
+      "country": "Kenya",
+      "industry": "Education",
+      "skills_offered": ["health", "design_ux", "agri_food"],
+      "skills_vector": [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1],
+      "career_stage_mentor": 6,
+      "availability_hrs_per_month": 8,
+      "languages": ["English"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
+      "name": "Mentor Oluwaseun Mwangi",
+      "country": "Nigeria",
+      "industry": "Finance",
+      "skills_offered": ["climate_env", "data_ai"],
+      "skills_vector": [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+      "career_stage_mentor": 7,
+      "availability_hrs_per_month": 4,
+      "languages": ["English", "Swahili"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
+      "name": "Mentor Zuri Okafor",
+      "country": "Ghana",
+      "industry": "Health",
+      "skills_offered": ["finance", "design_ux"],
+      "skills_vector": [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+      "career_stage_mentor": 7,
+      "availability_hrs_per_month": 4,
+      "languages": ["English", "Swahili"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "93a920e6-0ab3-4d6c-9d4f-21f723dcb561",
+      "name": "Mentor Kofi Kamau",
+      "country": "Uganda",
+      "industry": "Media",
+      "skills_offered": ["data_ai", "finance"],
+      "skills_vector": [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+      "career_stage_mentor": 6,
+      "availability_hrs_per_month": 2,
+      "languages": ["English", "French"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
+      "name": "Mentor Aisha Traore",
+      "country": "South Africa",
+      "industry": "Agriculture",
+      "skills_offered": ["design_ux", "entrepreneurship", "music_arts"],
+      "skills_vector": [0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
+      "career_stage_mentor": 7,
+      "availability_hrs_per_month": 2,
+      "languages": ["English"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
+      "name": "Mentor Jelani Dlamini",
+      "country": "Senegal",
+      "industry": "Climate",
+      "skills_offered": ["data_ai", "music_arts"],
+      "skills_vector": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+      "career_stage_mentor": 7,
+      "availability_hrs_per_month": 4,
+      "languages": ["English"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
+      "name": "Mentor Mariam Boateng",
+      "country": "Ethiopia",
+      "industry": "Public Policy",
+      "skills_offered": ["media_film", "entrepreneurship", "agri_food"],
+      "skills_vector": [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
+      "career_stage_mentor": 4,
+      "availability_hrs_per_month": 4,
+      "languages": ["English"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "d13395c7-9191-46b2-b2d2-9b07b8ae4d5b",
+      "name": "Mentor Tunde Nkosi",
+      "country": "Rwanda",
+      "industry": "Technology",
+      "skills_offered": ["agri_food", "creative_tech", "music_arts"],
+      "skills_vector": [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+      "career_stage_mentor": 6,
+      "availability_hrs_per_month": 8,
+      "languages": ["English"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
+      "name": "Mentor Sanaa Adebayo",
+      "country": "Kenya",
+      "industry": "Education",
+      "skills_offered": ["entrepreneurship", "agri_food", "design_ux", "finance"],
+      "skills_vector": [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1],
+      "career_stage_mentor": 4,
+      "availability_hrs_per_month": 4,
+      "languages": ["English", "French"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
+      "name": "Mentor Bongani Kone",
+      "country": "Nigeria",
+      "industry": "Finance",
+      "skills_offered": ["data_ai", "music_arts", "social_impact"],
+      "skills_vector": [0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0],
+      "career_stage_mentor": 7,
+      "availability_hrs_per_month": 2,
+      "languages": ["English"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    },
+    {
+      "mentor_id": "1f83614f-0b1f-4cfb-a38a-202fdb816b2b",
+      "name": "Mentor Lindiwe Mugisha",
+      "country": "Ghana",
+      "industry": "Health",
+      "skills_offered": ["leadership", "climate_env", "media_film", "entrepreneurship"],
+      "skills_vector": [0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0],
+      "career_stage_mentor": 6,
+      "availability_hrs_per_month": 0,
+      "languages": ["English"],
+      "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    }
+  ],
+  "matrix": [
+    [0.7071, 0.8165, 0.0, 0.5, 0.0, 0.4082, 0.0, 0.0, 0.0, 0.3536, 0.0, -1.0],
+    [0.3536, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4082, 0.0, 0.0, -1.0],
+    [0.3536, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4082, -1.0],
+    [0.3536, 0.4082, 0.5, 0.5, 0.0, 0.4082, 0.0, 0.0, 0.0, 0.3536, 0.0, -1.0],
+    [0.3536, 0.4082, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0],
+    [0.0, 0.0, 0.0, 0.0, 0.0, 0.4082, 0.5, 0.0, 0.8165, 0.0, 0.4082, -1.0],
+    [0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4082, -1.0],
+    [0.0, 0.0, 0.5, 0.0, 0.0, 0.4082, 0.0, 0.4082, 0.0, 0.3536, 0.0, -1.0],
+    [0.0, 0.0, 0.5, 0.0, 0.5, 0.0, 0.5, 0.0, 0.0, 0.0, 0.8165, -1.0],
+    [0.3536, 0.4082, 0.0, 1.0, 0.5, 0.4082, 0.0, 0.0, 0.0, 0.7071, 0.0, -1.0],
+    [0.7071, 0.4082, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0],
+    [0.3536, 0.4082, 0.5, 0.5, 0.0, 0.4082, 0.0, 0.0, 0.0, 0.3536, 0.0, -1.0],
+    [0.3536, 0.0, 0.0, 0.0, 0.0, 0.4082, 0.5, 0.0, 0.4082, 0.0, 0.4082, -1.0],
+    [0.0, 0.0, 0.5, 0.0, 0.5, 0.4082, 0.5, 0.4082, 0.0, 0.3536, 0.4082, -1.0],
+    [0.0, 0.0, 0.0, 0.5, 0.5, 0.4082, 0.0, 0.4082, 0.0, 0.7071, 0.0, -1.0],
+    [0.7071, 0.8165, 0.0, 0.5, 0.0, 0.4082, 0.0, 0.4082, 0.4082, 0.7071, 0.0, -1.0],
+    [0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.4082, 0.0, 0.0, 0.0, -1.0],
+    [0.3536, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4082, 0.0, 0.0, -1.0],
+    [0.0, 0.0, 0.0, 0.0, 0.0, 0.4082, 0.0, 0.8165, 0.0, 0.3536, 0.0, -1.0],
+    [0.7071, 0.4082, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4082, 0.4082, 0.3536, 0.0, -1.0],
+    [0.7071, 0.8165, 0.0, 0.5, 0.0, 0.4082, 0.0, 0.4082, 0.4082, 0.7071, 0.0, -1.0],
+    [0.3536, 0.4082, 0.0, 0.0, 0.0, 0.4082, 0.5, 0.0, 0.4082, 0.0, 0.4082, -1.0],
+    [0.3536, 0.4082, 0.0, 0.0, 0.0, 0.4082, 0.0, 0.8165, 0.4082, 0.7071, 0.0, -1.0],
+    [0.3536, 0.4082, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0]
+  ],
+  "student_labels": [
+    "Amina Okoro",
+    "Kwame Mensah",
+    "Chiamaka Diallo",
+    "Thabo Nkrumah",
+    "Fatou Abebe",
+    "Ibrahim Mwangi",
+    "Nia Okafor",
+    "Oluwaseun Kamau",
+    "Zuri Traore",
+    "Kofi Dlamini",
+    "Aisha Boateng",
+    "Jelani Nkosi",
+    "Mariam Adebayo",
+    "Tunde Kone",
+    "Sanaa Mugisha",
+    "Bongani Okoro",
+    "Lindiwe Mensah",
+    "Yaw Diallo",
+    "Adaeze Nkrumah",
+    "Emeka Abebe",
+    "Naledi Mwangi",
+    "Sefu Okafor",
+    "Imani Kamau",
+    "Dakarai Traore"
+  ],
+  "mentor_labels": [
+    "Mentor Ibrahim Nkrumah",
+    "Mentor Nia Abebe",
+    "Mentor Oluwaseun Mwangi",
+    "Mentor Zuri Okafor",
+    "Mentor Kofi Kamau",
+    "Mentor Aisha Traore",
+    "Mentor Jelani Dlamini",
+    "Mentor Mariam Boateng",
+    "Mentor Tunde Nkosi",
+    "Mentor Sanaa Adebayo",
+    "Mentor Bongani Kone",
+    "Mentor Lindiwe Mugisha"
+  ],
+  "metrics": {
+    "f1": 0.7778,
+    "target": 0.7
+  }
+}
