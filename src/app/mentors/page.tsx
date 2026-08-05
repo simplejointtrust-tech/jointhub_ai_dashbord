@@ -1,109 +1,15 @@
 import { Bell, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { MentorMatchQuiz } from "@/components/jointhub/MentorMatchQuiz";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { ESL_MENTORS } from "@/lib/jointhub/esl-mentors";
 
 export const metadata = {
   title: "ESL Mentors · JointHub Africa",
   description:
     "Meet ESL mentors on JointHub Africa — practitioners ready to help Emerging Servant Leaders take the next step with clarity.",
 };
-
-type MentorCard = {
-  id: string;
-  name: string;
-  role: string;
-  location: string;
-  blurb: string;
-  image: string;
-  /** Public LinkedIn profile URL opened by View profile */
-  linkedInUrl: string;
-};
-
-const MENTORS: MentorCard[] = [
-  {
-    id: "jane-obed",
-    name: "Jane Obel",
-    role: "Product leader",
-    location: "Rwanda",
-    blurb: "Design strategy, research craft, and confident portfolios.",
-    image: "/brand/mentors/jane-obed.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/jane-obel/",
-  },
-  {
-    id: "edafe-akpovwa",
-    name: "Edafe Akpovwa",
-    role: "Engineering mentor",
-    location: "Rwanda",
-    blurb: "Technical career choices, prototypes, and practical problem-solving.",
-    image: "/brand/mentors/edafe-akpovwa.jpg",
-    // Best public match titled CEO, Wealth Tech Solutions | MINDS Scholar.
-    linkedInUrl: "https://www.linkedin.com/in/edafe-akpovwa-643738193",
-  },
-  {
-    id: "bothlale-mdluli",
-    name: "Botlhale Mdhluli",
-    role: "Career strategist",
-    location: "South Africa",
-    blurb: "Career narratives, pivots, and networking with purpose.",
-    image: "/brand/mentors/bothlale-mdluli.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/botlhale-mdhluli-511549287/",
-  },
-  {
-    id: "ololade-oloniyo",
-    name: "Ololade Oloniyo",
-    role: "Creative director",
-    location: "Nigeria",
-    blurb: "Emerging creators, visual strategy, and distinctive brand identity.",
-    image: "/brand/mentors/ololade-oloniyo.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/oloniyoololade",
-  },
-  {
-    id: "isaiah-kporon",
-    name: "Isaiah Kporon",
-    role: "Executive coach",
-    location: "Rwanda",
-    blurb: "Leadership acceleration, strategic thinking, and executive presence.",
-    image: "/brand/mentors/isaiah-kporon.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/isaiahkporon",
-  },
-  {
-    id: "chengetai-chikadaya",
-    name: "Chengetai Chikadaya",
-    role: "Academic coach",
-    location: "Zimbabwe",
-    blurb: "Scholarly research, academic publishing, and confident pathways.",
-    image: "/brand/mentors/chengetai-chikadaya.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/chengetaichikadaya",
-  },
-  {
-    id: "michael-adeniyi",
-    name: "Michael Adeniyi",
-    role: "Entrepreneurship mentor",
-    location: "Nigeria",
-    blurb: "Idea validation, fundraising, and building resilient startups.",
-    image: "/brand/mentors/michael-adeniyi.jpg",
-    linkedInUrl: "https://www.linkedin.com/search/results/people/?keywords=Michael%20Adeniyi",
-  },
-  {
-    id: "blessing-matiro",
-    name: "Blessing Matiro",
-    role: "Data science mentor",
-    location: "South Africa",
-    blurb: "Analytical skills, research publishing, and meaningful technical roles.",
-    image: "/brand/mentors/blessing-matiro.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/blessing-matiro-5618b3143",
-  },
-  {
-    id: "stephen-david",
-    name: "Stephen David",
-    role: "Community builder",
-    location: "Rwanda",
-    blurb: "Social impact initiatives, network building, and community engagement.",
-    image: "/brand/mentors/stephen-david.jpg",
-    linkedInUrl: "https://www.linkedin.com/in/stephen-david-mhya",
-  },
-];
 
 export default function EslMentorsPage() {
   return (
@@ -168,62 +74,40 @@ export default function EslMentorsPage() {
       </header>
 
       <section className="mx-auto max-w-6xl px-4 pt-8 pb-6 sm:px-6 sm:pt-10">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold tracking-[0.18em] text-[rgba(20,32,51,0.48)] uppercase">
-              Human guidance
-            </p>
-            <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-[#142033] sm:text-4xl">
-              Meet people who have made the path
-            </h1>
-            <p className="mt-3 max-w-xl text-base leading-relaxed text-[rgba(20,32,51,0.68)] sm:text-lg">
-              A small circle of practitioners ready to help you make your next move with clarity.
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Image
-              src="/brand/simplejoint-puzzle-logo.png"
-              alt="SimpleJoint Trust"
-              width={72}
-              height={72}
-              className="h-14 w-14 rounded-2xl bg-black object-contain p-1.5 sm:h-16 sm:w-16"
-            />
-            <div className="leading-tight">
-              <p className="text-sm font-semibold text-[#142033]">SimpleJoint Trust</p>
-              <p className="text-xs text-[rgba(20,32,51,0.55)]">ESL Mentors · JointHub Africa</p>
-            </div>
-          </div>
+        <div className="max-w-2xl">
+          <p className="text-xs font-semibold tracking-[0.18em] text-[rgba(20,32,51,0.48)] uppercase">
+            Human guidance
+          </p>
+          <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-[#142033] sm:text-4xl">
+            Meet people who have made the path
+          </h1>
+          <p className="mt-3 max-w-xl text-base leading-relaxed text-[rgba(20,32,51,0.68)] sm:text-lg">
+            A small circle of practitioners ready to help you make your next move with clarity.
+          </p>
         </div>
 
-        <div className="mt-8 overflow-hidden rounded-[1.35rem] bg-[#2B6F9C] px-5 py-6 text-white shadow-[0_18px_40px_rgba(20,32,51,0.12)] sm:px-7 sm:py-7">
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div className="max-w-2xl">
-              <p className="text-xs font-semibold tracking-[0.18em] text-[#A9D7F2] uppercase">
-                AI pairing
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-[1.7rem]">
-                Find your ideal mentor match
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-white/85 sm:text-base">
-                To discover your generous mentor, answer three quick questions about your goals,
-                learning style, and availability. Our AI Coach (Kay) will recommend your best fit.
-              </p>
-            </div>
-            <Link
-              href="/dashboard/login"
-              className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-white/15 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/25 transition hover:bg-white/25"
-            >
-              Start Quiz
-            </Link>
-          </div>
+        <div className="mt-8">
+          <MentorMatchQuiz />
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-14 sm:px-6">
+        <div className="mb-5 flex items-end justify-between gap-3">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.16em] text-[rgba(20,32,51,0.48)] uppercase">
+              Mentor directory
+            </p>
+            <h2 className="mt-1 text-xl font-semibold tracking-tight text-[#142033]">
+              Browse every ESL mentor
+            </h2>
+          </div>
+        </div>
+
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {MENTORS.map((mentor) => (
+          {ESL_MENTORS.map((mentor) => (
             <article
               key={mentor.id}
+              id={`mentor-${mentor.id}`}
               className="flex flex-col overflow-hidden rounded-[1.35rem] border border-[rgba(20,32,51,0.06)] bg-white shadow-[0_10px_30px_rgba(20,32,51,0.05)]"
             >
               <div className="relative aspect-square overflow-hidden bg-[#E8EEF3]">
