@@ -3,6 +3,7 @@ import { getSessionUser } from "@/lib/jointhub/auth";
 import { findStudent } from "@/lib/jointhub/data-store";
 import {
   answerAdvisor,
+  getMentorOverview,
   type AdvisorChatTurn,
 } from "@/lib/jointhub/leader-experience";
 
@@ -55,16 +56,28 @@ export async function POST(request: Request) {
   }
 
   const isAdmin = session.role === "admin";
+  const isMentor = session.role === "mentor";
+  const mentorOverview = isMentor ? getMentorOverview(session.mentor_id ?? null) : null;
+  const menteeIds = new Set(mentorOverview?.mentees.map((row) => row.student_id) ?? []);
+
   let studentId = session.student_id;
   if (isAdmin && body.student_id) {
     studentId = body.student_id;
+  }
+  if (isMentor) {
+    if (body.student_id && menteeIds.has(body.student_id)) {
+      studentId = body.student_id;
+    } else {
+      studentId = mentorOverview?.mentees[0]?.student_id ?? null;
+    }
   }
 
   if (!studentId) {
     return NextResponse.json(
       {
-        error:
-          "Pick a focus leader first (admin), or sign in as a leader demo account to chat with the AI Coach.",
+        error: isMentor
+          ? "No mentee is assigned to this mentor demo account yet."
+          : "Pick a focus leader first (admin), or sign in as a leader demo account to chat with the AI Coach.",
       },
       { status: 400 },
     );
@@ -76,7 +89,7 @@ export async function POST(request: Request) {
   }
 
   const history = sanitizeHistory(body.history);
-  const payload = answerAdvisor(studentId, message, history);
+  const payload = answerAdvisor(studentId, message, history, session.role);
   return NextResponse.json({
     ...payload,
     student: {

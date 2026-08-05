@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Unknown demo account. Use leader1@jointhub.demo, leader2@jointhub.demo, or admin@jointhub.demo.",
+          "Unknown demo account. Use leader1@jointhub.demo, leader2@jointhub.demo, mentor1@jointhub.demo, or admin@jointhub.demo.",
       },
       { status: 401 },
     );

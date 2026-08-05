@@ -14,12 +14,14 @@ export type InterestTag =
   | "finance"
   | "agri_food";
 
-export type Role = "student" | "admin";
+export type Role = "student" | "admin" | "mentor";
 
 export type AuthUser = {
   email: string;
   role: Role;
   student_id: string | null;
+  /** Present when role is mentor — scopes caseload to this ESL mentor. */
+  mentor_id?: string | null;
   full_name: string;
 };
 

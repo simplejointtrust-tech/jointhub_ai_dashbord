@@ -71,6 +71,40 @@ export type LeaderOverview = {
   starter_prompts: string[];
 };
 
+export type MentorCaseloadMentee = {
+  student_id: string;
+  full_name: string;
+  country: string;
+  programme: string;
+  career_goal_text: string;
+  interest_tags: string[];
+  compatibility: number;
+  risk_level: RiskRow["risk_level"] | null;
+  risk_probability: number | null;
+  top_risk_factor: string | null;
+  days_since_last_session: number | null;
+  top_opportunity: string | null;
+  applications_in_flight: number;
+};
+
+export type MentorOverview = {
+  greeting_name: string;
+  mentor_id: string;
+  mentor_title: string;
+  mentor_industry: string;
+  mentor_country: string;
+  availability_hrs_per_month: number;
+  languages: string[];
+  mentee_count: number;
+  high_risk_count: number;
+  sessions_logged: number;
+  average_fit_pct: number | null;
+  next_session: SessionLog | null;
+  mentees: MentorCaseloadMentee[];
+  focus_note: string;
+  starter_prompts: string[];
+};
+
 const STAGE_CYCLE: ApplicationStage[] = [
   "active",
   "under_review",
@@ -271,6 +305,97 @@ export function getLeaderOverview(studentId: string | null): LeaderOverview | nu
   };
 }
 
+export function getMentorOverview(mentorId: string | null): MentorOverview | null {
+  if (!mentorId) {
+    return null;
+  }
+
+  const mentorship = getMentorship();
+  const mentor = mentorship.mentors.find((row) => row.mentor_id === mentorId) ?? null;
+  const assignments = mentorship.assignments.filter((row) => row.mentor_id === mentorId);
+  const sessions = mentorship.sessions
+    .filter((row) => row.mentor_id === mentorId)
+    .slice()
+    .sort((a, b) => b.session_date.localeCompare(a.session_date));
+  const nextSession =
+    sessions.find((row) => row.status === "scheduled") ?? sessions[0] ?? null;
+  const riskByStudent = new Map(getRiskRows().map((row) => [row.student_id, row]));
+  const studentsById = new Map(getStudents().map((row) => [row.student_id, row]));
+  const recommendationsMap = getRecommendationsMap();
+
+  const mentees: MentorCaseloadMentee[] = assignments.map((assignment) => {
+    const student = studentsById.get(assignment.student_id);
+    const risk = riskByStudent.get(assignment.student_id) ?? null;
+    const applications = getLeaderApplications(assignment.student_id);
+    const latestSession = sessions.find((row) => row.student_id === assignment.student_id) ?? null;
+    const topOpp = recommendationsMap[assignment.student_id]?.[0] ?? null;
+
+    return {
+      student_id: assignment.student_id,
+      full_name: student?.full_name ?? assignment.student_name,
+      country: student?.country ?? "—",
+      programme: student?.programme ?? "ESL Leader",
+      career_goal_text: student?.career_goal_text ?? "Leadership development",
+      interest_tags: student?.interest_tags ?? [],
+      compatibility: assignment.compatibility,
+      risk_level: risk?.risk_level ?? null,
+      risk_probability: risk?.risk_probability ?? null,
+      top_risk_factor: risk?.top_risk_factor ?? null,
+      days_since_last_session: latestSession?.days_since_last_session ?? null,
+      top_opportunity: topOpp?.title ?? null,
+      applications_in_flight: applications.filter((item) => item.stage !== "accepted").length,
+    };
+  });
+
+  const highRiskCount = mentees.filter((row) => row.risk_level === "high").length;
+  const averageFit =
+    mentees.length > 0
+      ? Math.round(
+          (mentees.reduce((sum, row) => sum + row.compatibility, 0) / mentees.length) * 100,
+        )
+      : null;
+
+  const focusLeader = mentees.find((row) => row.risk_level === "high") ?? mentees[0] ?? null;
+  const focusNote = focusLeader
+    ? highRiskCount > 0
+      ? `${focusLeader.full_name} shows a high coaching signal${
+          focusLeader.top_risk_factor
+            ? ` around ${focusLeader.top_risk_factor.replaceAll("_", " ")}`
+            : ""
+        }. Prioritise a check-in this week.`
+      : `Start with ${focusLeader.full_name} — review their top opportunity and protect one session slot.`
+    : "No mentees are assigned to this mentor in the demo caseload yet.";
+
+  const greeting =
+    mentor?.name.split(" ")[0] ??
+    assignments[0]?.mentor_name.split(" ")[0] ??
+    "Mentor";
+
+  return {
+    greeting_name: greeting,
+    mentor_id: mentorId,
+    mentor_title: mentor?.title ?? assignments[0]?.mentor_title ?? "ESL Mentor",
+    mentor_industry:
+      mentor?.industry ?? assignments[0]?.mentor_industry ?? "Mentorship",
+    mentor_country: mentor?.country ?? assignments[0]?.mentor_country ?? "Africa",
+    availability_hrs_per_month: mentor?.availability_hrs_per_month ?? 6,
+    languages: mentor?.languages ?? assignments[0]?.languages ?? ["English"],
+    mentee_count: mentees.length,
+    high_risk_count: highRiskCount,
+    sessions_logged: sessions.length,
+    average_fit_pct: averageFit,
+    next_session: nextSession,
+    mentees,
+    focus_note: focusNote,
+    starter_prompts: [
+      "Who on my caseload needs attention first?",
+      "What should I cover with my highest-risk mentee?",
+      "Summarise my mentees' top opportunities",
+      "How should I structure this week's check-ins?",
+    ],
+  };
+}
+
 export function getCommunityFeed(studentId: string | null): CommunityPost[] {
   const student = studentId
     ? (getStudents().find((row) => row.student_id === studentId) ?? null)
@@ -293,7 +418,7 @@ export function getMentorAlternatives(studentId: string | null): MentorTop3[] {
 
 export type AdvisorContext = {
   student: StudentProfile | null;
-  role: "student" | "admin";
+  role: "student" | "admin" | "mentor";
   recommendations: Recommendation[];
   assignment: MentorAssignment | null;
   alternatives: MentorTop3[];
@@ -303,7 +428,7 @@ export type AdvisorContext = {
 };
 
 export function buildAdvisorContext(
-  role: "student" | "admin",
+  role: "student" | "admin" | "mentor",
   studentId: string | null,
 ): AdvisorContext {
   const student = studentId
@@ -659,26 +784,38 @@ export function answerAdvisor(
   studentId: string,
   message: string,
   history: AdvisorChatTurn[] = [],
+  role: "student" | "admin" | "mentor" = "student",
 ): AdvisorReply {
-  const context = buildAdvisorContext("student", studentId);
+  const context = buildAdvisorContext(role, studentId);
   const intent = detectAdvisorIntent(message, history);
   const answer = answerAdvisorQuestion(message, context, history);
   const citations: string[] = [];
   const suggested_actions: string[] = [];
   const follow_ups = buildFollowUps(intent, context);
+  const isMentor = role === "mentor";
 
-  citations.push("Coach: Kay · JointHub Agent (Engineering coaching mode)");
+  citations.push(
+    isMentor
+      ? "Coach: Kay · JointHub Agent (mentor caseload mode)"
+      : "Coach: Kay · JointHub Agent (Engineering coaching mode)",
+  );
   if (context.recommendations[0]) {
     citations.push(
       `Top opportunity: ${context.recommendations[0].title} (${Math.round(context.recommendations[0].match_score * 100)}% match)`,
     );
-    suggested_actions.push("Open Opportunities and advance your top match");
+    suggested_actions.push(
+      isMentor
+        ? "Review the mentee's top opportunity before the next session"
+        : "Open Opportunities and advance your top match",
+    );
   }
   if (context.assignment) {
     citations.push(
       `Assigned mentor: ${context.assignment.mentor_name} · ${Math.round(context.assignment.compatibility * 100)}% fit`,
     );
-    suggested_actions.push("Request a mentor session from ESL Mentors");
+    suggested_actions.push(
+      isMentor ? "Open Sessions and log the next check-in" : "Request a mentor session from ESL Mentors",
+    );
   }
   if (context.sentence) {
     citations.push(`NLP note: ${context.sentence}`);
@@ -687,7 +824,9 @@ export function answerAdvisor(
     citations.push(
       `Soft coaching: ${context.risk.risk_level} signal · ${context.risk.top_risk_factor.replaceAll("_", " ")}`,
     );
-    suggested_actions.push("Open Stay on track for private coaching cues");
+    suggested_actions.push(
+      isMentor ? "Open Mentee risk for this leader" : "Open Stay on track for private coaching cues",
+    );
   }
   if (context.applications[0]) {
     citations.push(
@@ -695,7 +834,9 @@ export function answerAdvisor(
     );
   }
   if (suggested_actions.length === 0) {
-    suggested_actions.push("Review Overview for your next best action");
+    suggested_actions.push(
+      isMentor ? "Open My caseload and pick a mentee" : "Review Overview for your next best action",
+    );
   }
 
   return {
