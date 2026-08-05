@@ -59,13 +59,13 @@ export default function HomePage() {
               ESL Mentors
             </Link>
             <Link
-              href="/login?role=mentor"
+              href="/dashboard/login"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as Mentor
             </Link>
             <Link
-              href="/login?role=leader"
+              href="/dashboard/login"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as leader
@@ -165,8 +165,8 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E8A317]">
               Inside the Mentor Hub
             </p>
-            <h2 className="mt-2 text-nowrap text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:text-3xl">
-              Built for Emerging servant Leaders first. With an your AI coach (Kay).
+            <h2 className="mt-2 text-balance text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:text-3xl">
+              Built for Emerging Servant Leaders (ESL) first. With an AI coach (Kay).
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
               Kay helps with opportunity ranking, mentor matching, soft coaching, and Advisor
@@ -246,12 +246,6 @@ export default function HomePage() {
               >
                 Sign In
                 <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-              <Link
-                href="/prototype"
-                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[rgba(15,61,46,0.2)] px-5 py-3 text-sm font-semibold text-[#0F3D2E] transition hover:bg-white"
-              >
-                Canva design reference
               </Link>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-[rgba(26,21,16,0.5)]">

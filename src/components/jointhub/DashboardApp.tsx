@@ -74,6 +74,7 @@ const LEADER_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }
   { id: "applications", label: "Applications", icon: BookOpen },
   { id: "community", label: "Community", icon: Compass },
   { id: "coaching", label: "Stay on track", icon: Sparkles },
+  { id: "risk", label: "Dropout risk", icon: AlertTriangle },
 ];
 
 const ADMIN_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
@@ -1099,9 +1100,13 @@ function RiskPanel({
   return (
     <div className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
       <div className="border-b border-[#142033]/08 px-4 py-3">
-        <h3 className="text-sm font-semibold text-[#142033]">Dropout risk dashboard</h3>
+        <h3 className="text-sm font-semibold text-[#142033]">
+          {isAdmin ? "Cohort dropout risk" : "Your dropout risk"}
+        </h3>
         <p className="text-xs text-[#142033]/60">
-          Logistic regression probability · threshold 0.65 · RF feature importance for top factor
+          {isAdmin
+            ? "Full cohort view · logistic regression probability · threshold 0.65 · RF feature importance for top factor"
+            : "Personal risk signal for students and mentors · probability threshold 0.65 · top factor from model features"}
         </p>
       </div>
       <div className="overflow-x-auto">
