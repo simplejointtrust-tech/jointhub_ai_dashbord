@@ -16,16 +16,20 @@ type MentorCard = {
   location: string;
   blurb: string;
   image: string;
+  /** Public LinkedIn profile URL opened by View profile */
+  linkedInUrl: string;
 };
 
 const MENTORS: MentorCard[] = [
   {
-    id: "amina-njoroge",
-    name: "Amina Njoroge",
+    id: "jane-obed",
+    name: "Jane Obed",
     role: "Product leader",
-    location: "Kenya",
+    location: "Rwanda",
     blurb: "Design strategy, research craft, and confident portfolios.",
-    image: "/brand/mentors/amina-njoroge.jpg",
+    image: "/brand/mentors/jane-obed.jpg",
+    // Exact public profile not confirmed yet — people search until confirmed.
+    linkedInUrl: "https://www.linkedin.com/search/results/people/?keywords=Jane%20Obed",
   },
   {
     id: "edafe-akpovwa",
@@ -34,6 +38,8 @@ const MENTORS: MentorCard[] = [
     location: "Rwanda",
     blurb: "Technical career choices, prototypes, and practical problem-solving.",
     image: "/brand/mentors/edafe-akpovwa.jpg",
+    // Best public match titled CEO, Wealth Tech Solutions | MINDS Scholar.
+    linkedInUrl: "https://www.linkedin.com/in/edafe-akpovwa-643738193",
   },
   {
     id: "bothlale-mdluli",
@@ -42,6 +48,7 @@ const MENTORS: MentorCard[] = [
     location: "South Africa",
     blurb: "Career narratives, pivots, and networking with purpose.",
     image: "/brand/mentors/bothlale-mdluli.jpg",
+    linkedInUrl: "https://www.linkedin.com/search/results/people/?keywords=Bothlale%20Mdluli",
   },
   {
     id: "ololade-oloniyo",
@@ -50,6 +57,7 @@ const MENTORS: MentorCard[] = [
     location: "Nigeria",
     blurb: "Emerging creators, visual strategy, and distinctive brand identity.",
     image: "/brand/mentors/ololade-oloniyo.jpg",
+    linkedInUrl: "https://www.linkedin.com/in/oloniyoololade",
   },
   {
     id: "isaiah-kporon",
@@ -58,6 +66,7 @@ const MENTORS: MentorCard[] = [
     location: "Rwanda",
     blurb: "Leadership acceleration, strategic thinking, and executive presence.",
     image: "/brand/mentors/isaiah-kporon.jpg",
+    linkedInUrl: "https://www.linkedin.com/in/isaiahkporon",
   },
   {
     id: "chengetai-chikadaya",
@@ -66,6 +75,7 @@ const MENTORS: MentorCard[] = [
     location: "Zimbabwe",
     blurb: "Scholarly research, academic publishing, and confident pathways.",
     image: "/brand/mentors/chengetai-chikadaya.jpg",
+    linkedInUrl: "https://www.linkedin.com/in/chengetaichikadaya",
   },
   {
     id: "michael-adeniyi",
@@ -74,6 +84,7 @@ const MENTORS: MentorCard[] = [
     location: "Nigeria",
     blurb: "Idea validation, fundraising, and building resilient startups.",
     image: "/brand/mentors/michael-adeniyi.jpg",
+    linkedInUrl: "https://www.linkedin.com/search/results/people/?keywords=Michael%20Adeniyi",
   },
   {
     id: "blessing-matiro",
@@ -82,22 +93,16 @@ const MENTORS: MentorCard[] = [
     location: "South Africa",
     blurb: "Analytical skills, research publishing, and meaningful technical roles.",
     image: "/brand/mentors/blessing-matiro.jpg",
+    linkedInUrl: "https://www.linkedin.com/in/blessing-matiro-5618b3143",
   },
   {
     id: "stephen-david",
     name: "Stephen David",
     role: "Community builder",
-    location: "Kenya",
+    location: "Rwanda",
     blurb: "Social impact initiatives, network building, and community engagement.",
     image: "/brand/mentors/stephen-david.jpg",
-  },
-  {
-    id: "simeon-mwale",
-    name: "Simeon Mwale",
-    role: "Design systems mentor",
-    location: "Lusaka",
-    blurb: "Scalable design systems, documentation, and cross-functional leadership.",
-    image: "/brand/mentors/simeon-mwale.jpg",
+    linkedInUrl: "https://www.linkedin.com/in/stephen-david-mhya",
   },
 ];
 
@@ -243,12 +248,14 @@ export default function EslMentorsPage() {
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-[rgba(20,32,51,0.68)]">
                   {mentor.blurb}
                 </p>
-                <Link
-                  href="/dashboard/login"
+                <a
+                  href={mentor.linkedInUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-4 inline-flex min-h-10 w-fit items-center justify-center rounded-full bg-[#D7EEF8] px-4 py-2 text-sm font-semibold text-[#2B6F9C] transition hover:bg-[#C4E5F5]"
                 >
                   View profile
-                </Link>
+                </a>
               </div>
             </article>
           ))}
