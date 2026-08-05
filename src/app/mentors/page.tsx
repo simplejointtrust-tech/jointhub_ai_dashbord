@@ -110,15 +110,21 @@ export default function EslMentorsPage() {
     <main className="min-h-screen bg-[#F4F0E6] text-[#142033]">
       <header className="sticky top-0 z-30 border-b border-white/10 bg-black">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-          <Link href="/" className="flex min-w-0 items-center">
+          <Link href="/" className="flex min-w-0 items-center gap-2.5">
             <Image
-              src="/brand/esl-mentors-header.png"
-              alt="SimpleJoint Trust — ESL Mentors · JointHub Africa"
-              width={617}
-              height={172}
-              className="h-10 w-auto max-w-[min(100%,17.5rem)] object-contain object-left sm:h-12 sm:max-w-[20rem]"
+              src="/brand/simplejoint-puzzle-logo.png"
+              alt="SimpleJoint Trust"
+              width={48}
+              height={48}
+              className="h-10 w-10 shrink-0 rounded-xl bg-black object-contain p-0.5 sm:h-11 sm:w-11"
               priority
             />
+            <div className="min-w-0 leading-tight">
+              <p className="truncate text-sm font-semibold tracking-tight text-white">
+                SimpleJoint Trust
+              </p>
+              <p className="truncate text-xs text-white/60">ESL Mentors · JointHub Africa</p>
+            </div>
           </Link>
 
           <div className="flex flex-wrap items-center justify-end gap-2">
