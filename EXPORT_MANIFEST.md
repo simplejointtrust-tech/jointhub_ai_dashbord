@@ -34,6 +34,6 @@ $158,000+ | 85+ students | 6+ countries
 
 | Email | Role |
 | --- | --- |
-| scholar1@jointhub.demo | student |
-| scholar2@jointhub.demo | student |
+| leader1@jointhub.demo | student |
+| leader2@jointhub.demo | student |
 | admin@jointhub.demo | admin |

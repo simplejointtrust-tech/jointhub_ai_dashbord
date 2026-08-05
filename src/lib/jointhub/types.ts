@@ -31,7 +31,7 @@ export type StudentProfile = {
   campus: string;
   programme: string;
   career_stage: number;
-  scholar_status: boolean;
+  leader_status: boolean;
   interest_tags: string[];
   career_goal_text: string;
   signup_timestamp: string;
@@ -53,6 +53,9 @@ export type MentorProfile = {
   languages: string[];
   title?: string;
   bio?: string;
+  /** Optional portrait path shared with the public ESL Mentors page */
+  image?: string;
+  linkedInUrl?: string;
 };
 
 export type OpportunityListing = {

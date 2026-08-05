@@ -5,6 +5,7 @@
 
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { ESL_MENTORS } from "@/lib/jointhub/esl-mentors";
 import type {
   AuthUser,
   MentorAssignment,
@@ -26,6 +27,54 @@ const DATA_DIR = join(process.cwd(), "src/lib/jointhub/data");
 function readJson<T>(name: string): T {
   const raw = readFileSync(join(DATA_DIR, name), "utf8");
   return JSON.parse(raw) as T;
+}
+
+/** Stable hash so the same student always maps to the same ESL mentor. */
+function hashToIndex(seed: string, modulo: number): number {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i += 1) {
+    hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
+  }
+  return modulo === 0 ? 0 : hash % modulo;
+}
+
+function availabilityHours(mentorId: string): number {
+  const mentor = ESL_MENTORS.find((item) => item.id === mentorId);
+  if (!mentor) return 6;
+  if (mentor.availability.includes("weekdays") && mentor.availability.includes("evenings")) {
+    return 8;
+  }
+  if (mentor.availability.includes("async")) return 7;
+  return 6;
+}
+
+function eslMentorProfiles(): MentorProfile[] {
+  return ESL_MENTORS.map((mentor) => ({
+    mentor_id: mentor.id,
+    name: mentor.name,
+    country: mentor.location,
+    industry: mentor.role,
+    skills_offered: mentor.focusAreas,
+    skills_vector: mentor.focusAreas.map(() => 1),
+    career_stage_mentor: 5,
+    availability_hrs_per_month: availabilityHours(mentor.id),
+    languages: ["English"],
+    title: mentor.role,
+    bio: mentor.blurb,
+    image: mentor.image,
+    linkedInUrl: mentor.linkedInUrl,
+  }));
+}
+
+function pickEslMentorsForStudent(studentId: string, count = 3): MentorProfile[] {
+  const roster = eslMentorProfiles();
+  if (roster.length === 0) return [];
+  const start = hashToIndex(studentId, roster.length);
+  const picks: MentorProfile[] = [];
+  for (let i = 0; i < Math.min(count, roster.length); i += 1) {
+    picks.push(roster[(start + i) % roster.length]!);
+  }
+  return picks;
 }
 
 type RawRecommendationBundle = {
@@ -109,17 +158,14 @@ type RawRisk = {
 export function getStudents(): StudentProfile[] {
   return readJson<StudentProfile[]>("students.json").map((student) => ({
     ...student,
-    programme: student.programme ?? "JointHub Scholar",
+    programme: student.programme ?? "JointHub Leader",
     campus: student.campus ?? "ALU",
   }));
 }
 
 export function getMentors(): MentorProfile[] {
-  return readJson<MentorProfile[]>("mentors.json").map((mentor) => ({
-    ...mentor,
-    title: mentor.title ?? `${mentor.industry} mentor`,
-    bio: mentor.bio ?? "Professional mentor supporting African scholars on JointHub Africa.",
-  }));
+  // Single source of truth with the public ESL Mentors page / Kay matching quiz.
+  return eslMentorProfiles();
 }
 
 export function getOpportunities(): OpportunityListing[] {
@@ -171,67 +217,83 @@ export function getRecommendationSentenceMap(): Record<string, string> {
 
 export function getMentorship(): MentorshipPayload {
   const raw = readJson<RawMentorship>("mentorship.json");
-  const mentors = (raw.mentors?.length ? raw.mentors : getMentors()).map((mentor) => ({
-    ...mentor,
-    title: mentor.title ?? `${mentor.industry} mentor`,
-    bio: mentor.bio ?? "Professional mentor supporting African scholars on JointHub Africa.",
-  }));
-  const mentorById = new Map(mentors.map((mentor) => [mentor.mentor_id, mentor]));
+  const mentors = getMentors();
 
+  // Remap Capstone sample pairings onto the live ESL mentor roster for consistent matching.
   const assignments: MentorAssignment[] = raw.assignments.map((row) => {
-    const mentor = mentorById.get(row.mentor_id);
+    const primary = pickEslMentorsForStudent(row.student_id, 1)[0] ?? mentors[0]!;
+    const fitBase = 0.72 + (hashToIndex(row.student_id + primary.mentor_id, 20) / 100);
     return {
       student_id: row.student_id,
       student_name: row.student_name,
-      mentor_id: row.mentor_id,
-      mentor_name: row.mentor_name,
-      mentor_title: mentor?.title ?? `${row.mentor_industry} mentor`,
-      mentor_industry: row.mentor_industry,
-      mentor_country: row.mentor_country,
-      compatibility: row.compatibility_score,
-      languages: mentor?.languages ?? ["English"],
+      mentor_id: primary.mentor_id,
+      mentor_name: primary.name,
+      mentor_title: primary.title ?? primary.industry,
+      mentor_industry: primary.industry,
+      mentor_country: primary.country,
+      compatibility: Math.min(0.96, Number(fitBase.toFixed(2))),
+      languages: primary.languages,
     };
   });
 
   const top3: Record<string, MentorTop3[]> = {};
-  for (const entry of raw.top3_by_student) {
-    top3[entry.student_id] = entry.recommendations.map((item) => {
-      const mentor = mentorById.get(item.mentor_id);
-      return {
-        mentor_id: item.mentor_id,
-        mentor_name: item.mentor_name,
-        title: item.title ?? mentor?.title ?? `${item.industry} mentor`,
-        industry: item.industry,
-        country: item.country,
-        score: item.compatibility_score,
-        skills_offered: item.skills_offered ?? mentor?.skills_offered ?? [],
-        availability_hrs_per_month: item.availability_hrs_per_month,
-      };
-    });
+  const studentIds = new Set<string>([
+    ...raw.top3_by_student.map((entry) => entry.student_id),
+    ...assignments.map((row) => row.student_id),
+  ]);
+  for (const studentId of studentIds) {
+    const picks = pickEslMentorsForStudent(studentId, 3);
+    top3[studentId] = picks.map((mentor, index) => ({
+      mentor_id: mentor.mentor_id,
+      mentor_name: mentor.name,
+      title: mentor.title ?? mentor.industry,
+      industry: mentor.industry,
+      country: mentor.country,
+      score: Number((0.9 - index * 0.08 + hashToIndex(studentId + mentor.mentor_id, 5) / 100).toFixed(2)),
+      skills_offered: mentor.skills_offered,
+      availability_hrs_per_month: mentor.availability_hrs_per_month,
+    }));
   }
 
-  const sessions: SessionLog[] = raw.sessions.map((session) => ({
-    session_id: session.session_id,
-    student_id: session.student_id,
-    mentor_id: session.mentor_id,
-    session_date: session.session_date,
-    session_duration_mins: session.session_duration_mins,
-    topics_discussed: session.topics_discussed,
-    student_rating: session.student_rating,
-    goals_set: session.goals_set,
-    days_since_last_session: session.days_since_last_session,
-    status: session.status ?? "completed",
-  }));
+  const sessions: SessionLog[] = raw.sessions.map((session) => {
+    const assigned =
+      assignments.find((row) => row.student_id === session.student_id) ??
+      assignments[hashToIndex(session.session_id, Math.max(assignments.length, 1))];
+    return {
+      session_id: session.session_id,
+      student_id: session.student_id,
+      mentor_id: assigned?.mentor_id ?? mentors[0]?.mentor_id ?? session.mentor_id,
+      session_date: session.session_date,
+      session_duration_mins: session.session_duration_mins,
+      topics_discussed: session.topics_discussed,
+      student_rating: session.student_rating,
+      goals_set: session.goals_set,
+      days_since_last_session: session.days_since_last_session,
+      status: session.status ?? "completed",
+    };
+  });
+
+  // Rebuild a compact ESL-sized heatmap from remapped assignments for admin view.
+  const studentLabels = assignments.map((row) => row.student_name);
+  const mentorIds = mentors.map((mentor) => mentor.mentor_id);
+  const mentorNames = mentors.map((mentor) => mentor.name);
+  const matrix = assignments.map((row) =>
+    mentorIds.map((mentorId) => {
+      if (mentorId === row.mentor_id) return row.compatibility;
+      const alt = top3[row.student_id]?.find((item) => item.mentor_id === mentorId);
+      return alt ? alt.score * 0.85 : 0.12 + hashToIndex(row.student_id + mentorId, 25) / 100;
+    }),
+  );
 
   return {
     assignments,
     top3,
     heatmap: {
       student_ids: assignments.map((row) => row.student_id),
-      student_names: raw.student_labels,
-      mentor_ids: mentors.map((mentor) => mentor.mentor_id),
-      mentor_names: raw.mentor_labels,
-      matrix: raw.matrix,
+      student_names: studentLabels,
+      mentor_ids: mentorIds,
+      mentor_names: mentorNames,
+      matrix,
     },
     sessions,
     mentors,

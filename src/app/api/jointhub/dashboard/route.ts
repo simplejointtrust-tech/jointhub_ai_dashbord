@@ -11,6 +11,11 @@ import {
   getRiskRows,
   getStudents,
 } from "@/lib/jointhub/data-store";
+import {
+  getCommunityFeed,
+  getLeaderApplications,
+  getLeaderOverview,
+} from "@/lib/jointhub/leader-experience";
 import type { DashboardBundle, MentorshipPayload } from "@/lib/jointhub/types";
 
 export const runtime = "nodejs";
@@ -65,6 +70,8 @@ export async function GET(request: Request) {
   const personalised =
     (studentId ? sentenceMap[studentId] : null) ?? nlp[0]?.recommendation_sentence ?? null;
 
+  const overviewStudentId = studentId ?? (isAdmin ? (getStudents()[0]?.student_id ?? null) : null);
+
   const bundle: DashboardBundle = {
     student,
     kpis: getKpis(),
@@ -88,5 +95,8 @@ export async function GET(request: Request) {
           country: s.country,
         }))
       : undefined,
+    overview: overviewStudentId ? getLeaderOverview(overviewStudentId) : null,
+    applications: overviewStudentId ? getLeaderApplications(overviewStudentId) : [],
+    community: getCommunityFeed(overviewStudentId),
   });
 }
