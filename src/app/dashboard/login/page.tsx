@@ -62,8 +62,8 @@ export default function DashboardLoginPage() {
           </div>
           <h1 className="mt-5 text-2xl font-semibold">Mentor Hub sign-in</h1>
           <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
-            Demo gate for the scholar dashboard. Leaders open Overview, Opportunities, Mentors,
-            Applications, Community, and JointHub Advisor. Admins also get cohort dropout risk and
+            Demo gate for the scholar dashboard. Leaders open Overview, Opportunities, ESL Mentors,
+            Applications, Community, and Kay the AI Coach. Admins also get cohort dropout risk and
             model analytics. Account signup stays at{" "}
             <Link
               href="/login"

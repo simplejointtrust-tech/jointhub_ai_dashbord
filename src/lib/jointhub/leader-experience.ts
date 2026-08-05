@@ -133,8 +133,8 @@ export function getCommunityPosts(student: StudentProfile | null): CommunityPost
     },
     {
       post_id: "c2",
-      author: "Mentor Ibrahim Nkrumah",
-      role_label: "Mentor",
+      author: "Isaiah Kporon",
+      role_label: "ESL Mentor",
       title: "How I structure a 20-minute check-in",
       body: "Open with one win, one blocker, one ask. End with a written next step your mentor can hold you to.",
       tag: "Mentorship",
@@ -281,7 +281,13 @@ export function getMentorAlternatives(studentId: string | null): MentorTop3[] {
   if (!studentId) {
     return [];
   }
-  return getMentorship().top3[studentId] ?? [];
+  const mentorship = getMentorship();
+  const assignedId =
+    mentorship.assignments.find((row) => row.student_id === studentId)?.mentor_id ?? null;
+  const ranked = mentorship.top3[studentId] ?? [];
+  // Prefer distinct ESL mentors (exclude the assigned match) for Kay and UI alternatives.
+  const distinct = ranked.filter((item) => item.mentor_id !== assignedId);
+  return distinct.length > 0 ? distinct : ranked.slice(1);
 }
 
 export type AdvisorContext = {
@@ -337,11 +343,11 @@ export function answerAdvisorQuestion(question: string, context: AdvisorContext)
   }
 
   if (/(hello|hi |hey|good morning|good afternoon)/.test(q)) {
-    return `Hi ${name}. I am the JointHub Advisor. I can explain your ranked opportunities, mentor match, application stages, and a sensible next step for this week.`;
+    return `Hi ${name}. I am Kay, your AI Coach on JointHub Africa. I can explain your ranked opportunities, ESL mentor match, application stages, and a sensible next step for this week.`;
   }
 
-  if (/(who are you|what can you|help)/.test(q)) {
-    return "I am JointHub Advisor — a Capstone demo guide grounded in your sample profile. Ask about top opportunities, mentor fit, applications, risk coaching, or bootcamp timing.";
+  if (/(who are you|what can you|help|kay)/.test(q)) {
+    return "I am Kay the AI Coach — a Capstone demo guide grounded in your sample profile and the same ESL mentor roster as the public Mentors page. Ask about top opportunities, mentor fit, applications, risk coaching, or bootcamp timing.";
   }
 
   if (/(opportunit|scholarship|fellowship|recommend|match|rank)/.test(q)) {
@@ -367,13 +373,16 @@ export function answerAdvisorQuestion(question: string, context: AdvisorContext)
     if (!mentor) {
       return "No assigned mentor is loaded for this account. Admin can focus a leader, or sign in as leader1@jointhub.demo.";
     }
-    const alt = context.alternatives[0];
+    // Skip the assigned mentor so Kay never names the same person twice.
+    const alt =
+      context.alternatives.find((item) => item.mentor_id !== mentor.mentor_id) ??
+      context.alternatives.find((item) => item.mentor_name !== mentor.mentor_name);
     return [
       `You are matched with ${mentor.mentor_name} (${mentor.mentor_industry}, ${mentor.mentor_country}) at ${Math.round(mentor.compatibility * 100)}% compatibility.`,
       alt
         ? `A strong alternative is ${alt.mentor_name} in ${alt.industry} (${Math.round(alt.score * 100)}% fit, ${alt.availability_hrs_per_month}h/mo).`
         : "",
-      "Use Mentor Hub to request a session on career pathing, application review, or scholarship strategy.",
+      "Open ESL Mentors to request a session on career pathing, application review, or scholarship strategy.",
     ]
       .filter(Boolean)
       .join(" ");
@@ -431,16 +440,16 @@ export function answerAdvisorQuestion(question: string, context: AdvisorContext)
       topOpp
         ? `1) Advance ${topOpp.title} one stage.`
         : "1) Open Opportunities and pick a top match.",
-      mentor ? `2) Request a session with ${mentor.mentor_name}.` : "2) Review Mentor Hub matches.",
-      "3) Ask me about deadlines or essay framing if you get stuck.",
+      mentor ? `2) Request a session with ${mentor.mentor_name}.` : "2) Review ESL mentor matches.",
+      "3) Ask Kay about deadlines or essay framing if you get stuck.",
     ];
     return `Here is a tight week plan, ${name}: ${steps.join(" ")}`;
   }
 
   return [
-    "I can help with opportunities, mentors, applications, deadlines, risk coaching, or a weekly plan.",
+    "I can help with opportunities, ESL mentors, applications, deadlines, risk coaching, or a weekly plan.",
     topOpp ? `Right now your top match is ${topOpp.title}.` : "",
-    mentor ? `Your mentor is ${mentor.mentor_name}.` : "",
+    mentor ? `Your ESL mentor is ${mentor.mentor_name}.` : "",
   ]
     .filter(Boolean)
     .join(" ");
@@ -468,7 +477,7 @@ export function answerAdvisor(studentId: string, message: string): AdvisorReply 
     citations.push(
       `Assigned mentor: ${context.assignment.mentor_name} · ${Math.round(context.assignment.compatibility * 100)}% fit`,
     );
-    suggested_actions.push("Request a mentor session from Mentors");
+    suggested_actions.push("Request a mentor session from ESL Mentors");
   }
   if (context.sentence) {
     citations.push(`NLP note: ${context.sentence}`);

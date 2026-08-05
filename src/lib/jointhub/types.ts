@@ -53,6 +53,9 @@ export type MentorProfile = {
   languages: string[];
   title?: string;
   bio?: string;
+  /** Optional portrait path shared with the public ESL Mentors page */
+  image?: string;
+  linkedInUrl?: string;
 };
 
 export type OpportunityListing = {

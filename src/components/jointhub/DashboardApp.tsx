@@ -70,20 +70,20 @@ type AdvisorMessage = {
 const LEADER_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "opportunities", label: "Opportunities", icon: Target },
-  { id: "mentors", label: "Mentors", icon: Users },
+  { id: "mentors", label: "ESL Mentors", icon: Users },
   { id: "applications", label: "Applications", icon: BookOpen },
   { id: "community", label: "Community", icon: Compass },
-  { id: "advisor", label: "AI Advisor", icon: MessageSquareText },
+  { id: "advisor", label: "Kay the AI Coach", icon: MessageSquareText },
   { id: "coaching", label: "Stay on track", icon: Sparkles },
 ];
 
 const ADMIN_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "opportunities", label: "Opportunities", icon: Target },
-  { id: "mentors", label: "Mentor Hub", icon: Users },
+  { id: "mentors", label: "ESL Mentors", icon: Users },
   { id: "risk", label: "Dropout risk", icon: AlertTriangle },
   { id: "analytics", label: "Analytics", icon: LayoutDashboard },
-  { id: "advisor", label: "AI Advisor", icon: MessageSquareText },
+  { id: "advisor", label: "Kay the AI Coach", icon: MessageSquareText },
 ];
 
 const STAGE_LABEL: Record<ApplicationStage, string> = {
@@ -303,23 +303,45 @@ function MentorshipPanel({
   const [bookingTopic, setBookingTopic] = useState("Career pathing");
   const [bookingNote, setBookingNote] = useState("");
   const [booked, setBooked] = useState<string | null>(null);
+  const mentorById = useMemo(
+    () => new Map(mentors.map((mentor) => [mentor.mentor_id, mentor])),
+    [mentors],
+  );
+  const assignedPortrait = assignment ? mentorById.get(assignment.mentor_id) : undefined;
 
   return (
     <div className="space-y-4">
       <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
         <section className="rounded-2xl border border-[#142033]/10 bg-white p-5 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
-            Your mentor match
+            Your ESL mentor match
           </p>
           {assignment ? (
             <>
-              <h3 className="mt-2 text-xl font-semibold text-[#142033]">
-                {assignment.mentor_name}
-              </h3>
-              <p className="mt-1 text-sm text-[#142033]/65">
-                {assignment.mentor_title ?? assignment.mentor_industry} ·{" "}
-                {assignment.mentor_country}
-              </p>
+              <div className="mt-3 flex items-start gap-3">
+                {assignedPortrait?.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={assignedPortrait.image}
+                    alt={assignment.mentor_name}
+                    className="h-16 w-16 shrink-0 rounded-full object-cover"
+                    width={64}
+                    height={64}
+                  />
+                ) : null}
+                <div className="min-w-0">
+                  <h3 className="text-xl font-semibold text-[#142033]">{assignment.mentor_name}</h3>
+                  <p className="mt-1 text-sm text-[#142033]/65">
+                    {assignment.mentor_title ?? assignment.mentor_industry} ·{" "}
+                    {assignment.mentor_country}
+                  </p>
+                  {assignedPortrait?.bio ? (
+                    <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
+                      {assignedPortrait.bio}
+                    </p>
+                  ) : null}
+                </div>
+              </div>
               <div className="mt-4 flex flex-wrap items-center gap-2">
                 <span
                   className={cn(
@@ -337,6 +359,16 @@ function MentorshipPanel({
                     {language}
                   </span>
                 ))}
+                {assignedPortrait?.linkedInUrl ? (
+                  <a
+                    href={assignedPortrait.linkedInUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-[#142033]/15 px-2.5 py-1 text-xs font-semibold text-[#3A87B8] hover:border-[#3A87B8]/40"
+                  >
+                    LinkedIn
+                  </a>
+                ) : null}
               </div>
             </>
           ) : (
@@ -346,22 +378,38 @@ function MentorshipPanel({
           <div className="mt-6">
             <h4 className="text-sm font-semibold text-[#142033]">Strong alternatives</h4>
             <ul className="mt-3 space-y-2">
-              {top3.map((mentor) => (
-                <li
-                  key={mentor.mentor_id}
-                  className="flex items-center justify-between gap-3 rounded-xl border border-[#142033]/08 px-3 py-2"
-                >
-                  <div>
-                    <p className="text-sm font-medium text-[#142033]">{mentor.mentor_name}</p>
-                    <p className="text-xs text-[#142033]/55">
-                      {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}h/mo
-                    </p>
-                  </div>
-                  <span className="text-sm font-semibold tabular-nums text-[#3A87B8]">
-                    {formatPct(mentor.score)}
-                  </span>
-                </li>
-              ))}
+              {top3.map((mentor) => {
+                const portrait = mentorById.get(mentor.mentor_id);
+                return (
+                  <li
+                    key={mentor.mentor_id}
+                    className="flex items-center justify-between gap-3 rounded-xl border border-[#142033]/08 px-3 py-2"
+                  >
+                    <div className="flex min-w-0 items-center gap-3">
+                      {portrait?.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={portrait.image}
+                          alt={mentor.mentor_name}
+                          className="h-10 w-10 shrink-0 rounded-full object-cover"
+                          width={40}
+                          height={40}
+                        />
+                      ) : null}
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-[#142033]">{mentor.mentor_name}</p>
+                        <p className="text-xs text-[#142033]/55">
+                          {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}
+                          h/mo
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-sm font-semibold tabular-nums text-[#3A87B8]">
+                      {formatPct(mentor.score)}
+                    </span>
+                  </li>
+                );
+              })}
               {top3.length === 0 ? (
                 <li className="text-sm text-[#142033]/55">No alternatives ranked yet.</li>
               ) : null}
@@ -456,20 +504,45 @@ function MentorshipPanel({
         </section>
 
         <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#142033]">Mentor roster</h3>
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h3 className="text-sm font-semibold text-[#142033]">ESL mentor roster</h3>
+            <Link
+              href="/mentors"
+              className="text-xs font-semibold text-[#3A87B8] hover:underline"
+            >
+              Open public directory
+            </Link>
+          </div>
           <ul className="mt-3 space-y-2">
-            {mentors.slice(0, 8).map((mentor) => (
+            {mentors.map((mentor) => (
               <li
                 key={mentor.mentor_id}
                 className="flex items-start justify-between gap-3 rounded-xl border border-[#142033]/08 px-3 py-2"
               >
-                <div>
-                  <p className="text-sm font-medium text-[#142033]">{mentor.name}</p>
-                  <p className="text-xs text-[#142033]/60">
-                    {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}h/mo
-                  </p>
+                <div className="flex min-w-0 items-start gap-3">
+                  {mentor.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={mentor.image}
+                      alt={mentor.name}
+                      className="h-11 w-11 shrink-0 rounded-full object-cover"
+                      width={44}
+                      height={44}
+                    />
+                  ) : null}
+                  <div className="min-w-0">
+                    <p className="text-sm font-medium text-[#142033]">{mentor.name}</p>
+                    <p className="text-xs text-[#142033]/60">
+                      {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}h/mo
+                    </p>
+                    {mentor.bio ? (
+                      <p className="mt-1 line-clamp-2 text-xs text-[#142033]/55">{mentor.bio}</p>
+                    ) : null}
+                  </div>
                 </div>
-                <span className="text-[11px] text-[#3A87B8]">{mentor.languages.join(" / ")}</span>
+                <span className="shrink-0 text-[11px] text-[#3A87B8]">
+                  {mentor.languages.join(" / ")}
+                </span>
               </li>
             ))}
           </ul>
@@ -555,7 +628,7 @@ function OverviewPanel({
             </div>
           ) : (
             <p className="mt-3 text-sm text-[#142033]/60">
-              No upcoming session yet. Book one from Mentors when you are ready.
+              No upcoming session yet. Book one from ESL Mentors when you are ready.
             </p>
           )}
           {overview.assigned_mentor ? (
@@ -800,8 +873,8 @@ function AdvisorPanel({
       id: "welcome",
       role: "assistant",
       content: studentName
-        ? `I am JointHub Advisor for ${studentName}. Ask about deadlines, mentor fit, applications, or what to do next. Answers stay on-platform and use your Capstone sample profile — no external model calls.`
-        : "Select a leader focus (admin) or sign in as a leader to use JointHub Advisor.",
+        ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next. I stay on-platform and use your Capstone sample profile.`
+        : "Select a leader focus (admin) or sign in as a leader to chat with Kay the AI Coach.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -814,8 +887,8 @@ function AdvisorPanel({
         id: "welcome",
         role: "assistant",
         content: studentName
-          ? `I am JointHub Advisor for ${studentName}. Ask about deadlines, mentor fit, applications, or what to do next. Answers stay on-platform and use your Capstone sample profile — no external model calls.`
-          : "Select a leader focus (admin) or sign in as a leader to use JointHub Advisor.",
+          ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next. I stay on-platform and use your Capstone sample profile.`
+          : "Select a leader focus (admin) or sign in as a leader to chat with Kay the AI Coach.",
       },
     ]);
     setInput("");
@@ -853,7 +926,7 @@ function AdvisorPanel({
         error?: string;
       };
       if (!response.ok) {
-        setError(payload.error ?? "Advisor could not answer.");
+        setError(payload.error ?? "Kay could not answer just now.");
         return;
       }
       setMessages((prev) => [
@@ -867,7 +940,7 @@ function AdvisorPanel({
         },
       ]);
     } catch {
-      setError("Could not reach JointHub Advisor.");
+      setError("Could not reach Kay the AI Coach.");
     } finally {
       setIsSending(false);
     }
@@ -878,10 +951,10 @@ function AdvisorPanel({
       <section className="flex min-h-[28rem] flex-col rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
         <div className="border-b border-[#142033]/08 px-4 py-3">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
-            JointHub Advisor
+            Kay the AI Coach
           </p>
           <p className="mt-1 text-sm text-[#142033]/65">
-            Grounded answers from your profile, ranked opportunities, mentor match, and soft
+            Grounded coaching from your profile, ranked opportunities, ESL mentor match, and soft
             coaching signals.
           </p>
         </div>
@@ -938,7 +1011,7 @@ function AdvisorPanel({
           ) : null}
           <div className="flex items-end gap-2">
             <label className="sr-only" htmlFor="advisor-input">
-              Ask JointHub Advisor
+              Ask Kay the AI Coach
             </label>
             <textarea
               id="advisor-input"
@@ -947,7 +1020,9 @@ function AdvisorPanel({
               rows={2}
               disabled={!studentId || isSending}
               placeholder={
-                studentId ? "e.g. What should I apply to next, and why?" : "Leader context required"
+                studentId
+                  ? "e.g. Which ESL mentor fits me, and what should I apply to next?"
+                  : "Leader context required"
               }
               className="min-h-[2.75rem] flex-1 resize-y rounded-xl border border-[#142033]/15 px-3 py-2 text-sm outline-none focus:border-[#3A87B8] disabled:opacity-60"
             />
@@ -955,7 +1030,7 @@ function AdvisorPanel({
               type="submit"
               disabled={!studentId || isSending || !input.trim()}
               className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3A87B8] text-white transition hover:bg-[#2F739E] disabled:opacity-50"
-              aria-label="Send message"
+              aria-label="Send message to Kay"
             >
               <Send className="h-4 w-4" aria-hidden />
             </button>
@@ -965,7 +1040,7 @@ function AdvisorPanel({
 
       <aside className="space-y-3">
         <div className="rounded-2xl border border-[#142033]/10 bg-white p-4">
-          <h3 className="text-sm font-semibold text-[#142033]">Try asking</h3>
+          <h3 className="text-sm font-semibold text-[#142033]">Try asking Kay</h3>
           <ul className="mt-3 space-y-2">
             {starterPrompts.map((prompt) => (
               <li key={prompt}>
@@ -986,8 +1061,8 @@ function AdvisorPanel({
             Capstone note
           </p>
           <p className="mt-2 text-xs leading-relaxed text-white/75">
-            Advisor is a grounded product interaction over sample Capstone outputs. It does not call
-            external LLMs and does not email anyone.
+            Kay is a grounded coach over sample Capstone outputs and the same ESL mentor roster as
+            the public Mentors page. She does not call external LLMs and does not email anyone.
           </p>
         </div>
       </aside>
@@ -1217,8 +1292,13 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
 
   const top3 = useMemo(() => {
     const key = selectedStudent || data.student?.student_id || Object.keys(data.mentorship.top3)[0];
-    return key ? (data.mentorship.top3[key] ?? []) : [];
-  }, [data, selectedStudent]);
+    const ranked = key ? (data.mentorship.top3[key] ?? []) : [];
+    const assignedId = assignment?.mentor_id;
+    if (!assignedId) return ranked;
+    // Keep alternatives distinct from the assigned ESL mentor for matching consistency.
+    const distinct = ranked.filter((item) => item.mentor_id !== assignedId);
+    return distinct.length > 0 ? distinct : ranked.slice(1);
+  }, [assignment?.mentor_id, data, selectedStudent]);
 
   const leaderRisk = data.risk[0] ?? null;
   const advisorStudentId = data.student?.student_id ?? (selectedStudent || null);
@@ -1273,22 +1353,9 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
               height={40}
             />
             <div className="min-w-0">
-              <p className="truncate text-sm font-semibold tracking-tight text-white">
-                SimpleJoint Trust
-              </p>
-              <p className="truncate text-xs text-white/65">ESL Mentors · JointHub Africa</p>
-              <h1 className="mt-0.5 truncate text-base font-semibold sm:text-lg">
-                {data.student
-                  ? `${data.student.full_name} · ${isAdmin ? "Admin focus" : "Leader home"}`
-                  : isAdmin
-                    ? "Programme admin · cohort view"
-                    : "Mentor Hub"}
-              </h1>
-              <p className="truncate text-xs text-white/55">
-                {data.auth_email}
-                {data.student
-                  ? ` · ${data.student.country} · ${data.student.programme}`
-                  : " · Capstone sample cohort"}
+              <p className="truncate text-sm font-semibold tracking-tight text-white">Dashboard</p>
+              <p className="truncate text-xs text-white/65">
+                {isAdmin ? "Programme admin" : "Leader workspace"}
               </p>
             </div>
           </div>
