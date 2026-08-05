@@ -261,11 +261,8 @@ export default function EslMentorsPage() {
         <div className="mt-10 rounded-[1.35rem] border border-[rgba(20,32,51,0.08)] bg-white px-5 py-6 sm:px-7">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-xs font-semibold tracking-[0.16em] text-[#E0312E] uppercase">
-                Join the circle
-              </p>
-              <h2 className="mt-2 text-xl font-semibold tracking-tight text-[#142033] sm:text-2xl">
-                Ready to meet your mentor?
+              <h2 className="text-xl font-semibold tracking-tight text-[#142033] sm:text-2xl">
+                Ready to meet your mentor? Join the hub
               </h2>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-[rgba(20,32,51,0.68)]">
                 Sign in as a leader to open Mentor Hub, or apply to guide ESL leaders as a mentor.
