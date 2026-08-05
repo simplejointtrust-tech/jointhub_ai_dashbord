@@ -6,6 +6,13 @@
     "student_id": null
   },
   {
+    "email": "mentor1@jointhub.demo",
+    "role": "mentor",
+    "full_name": "Michael Adeniyi",
+    "student_id": null,
+    "mentor_id": "michael-adeniyi"
+  },
+  {
     "email": "leader1@jointhub.demo",
     "role": "student",
     "full_name": "Amina Okoro",

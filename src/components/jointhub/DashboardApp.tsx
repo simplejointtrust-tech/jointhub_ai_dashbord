@@ -17,12 +17,13 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import type {
   ApplicationStage,
   CommunityPost,
   LeaderApplication,
   LeaderOverview,
+  MentorOverview,
 } from "@/lib/jointhub/leader-experience";
 import type {
   DashboardBundle,
@@ -39,12 +40,14 @@ import { cn } from "@/lib/utils";
 
 type LeaderTabId =
   | "overview"
+  | "caseload"
   | "opportunities"
   | "mentors"
   | "applications"
   | "community"
   | "coaching"
   | "risk"
+  | "sessions"
   | "analytics";
 
 type DashboardResponse = DashboardBundle & {
@@ -55,6 +58,7 @@ type DashboardResponse = DashboardBundle & {
     country: string;
   }>;
   overview?: LeaderOverview | null;
+  mentor_overview?: MentorOverview | null;
   applications?: LeaderApplication[];
   community?: CommunityPost[];
 };
@@ -65,6 +69,7 @@ type AdvisorMessage = {
   content: string;
   citations?: string[];
   suggested_actions?: string[];
+  follow_ups?: string[];
 };
 
 const LEADER_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
@@ -74,6 +79,7 @@ const LEADER_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }
   { id: "applications", label: "Applications", icon: BookOpen },
   { id: "community", label: "Community", icon: Compass },
   { id: "coaching", label: "Stay on track", icon: Sparkles },
+  { id: "risk", label: "Dropout risk", icon: AlertTriangle },
 ];
 
 const ADMIN_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
@@ -82,6 +88,13 @@ const ADMIN_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }>
   { id: "mentors", label: "ESL Mentors", icon: Users },
   { id: "risk", label: "Dropout risk", icon: AlertTriangle },
   { id: "analytics", label: "Analytics", icon: LayoutDashboard },
+];
+
+const MENTOR_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
+  { id: "caseload", label: "My caseload", icon: LayoutDashboard },
+  { id: "sessions", label: "Sessions", icon: Calendar },
+  { id: "risk", label: "Mentee risk", icon: AlertTriangle },
+  { id: "community", label: "Community", icon: Compass },
 ];
 
 const STAGE_LABEL: Record<ApplicationStage, string> = {
@@ -863,25 +876,43 @@ function AiCoachPopup({
   studentId,
   studentName,
   starterPrompts,
+  onNavigate,
 }: {
   open: boolean;
   onClose: () => void;
   studentId: string | null;
   studentName: string | null;
   starterPrompts: string[];
+  onNavigate?: (tab: LeaderTabId) => void;
 }) {
+  const welcomeContent = studentName
+    ? `Hi ${studentName.split(" ")[0]} — I am Kay, JointHub Agent in AI Coach mode. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
+    : "Select a leader focus (admin) or sign in as a leader to chat with Kay, the JointHub Agent coach.";
+
   const [messages, setMessages] = useState<AdvisorMessage[]>([
     {
       id: "welcome",
       role: "assistant",
-      content: studentName
-        ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next.`
-        : "Select a leader focus (admin) or sign in as a leader to chat with the AI Coach.",
+      content: welcomeContent,
+      follow_ups: starterPrompts.slice(0, 3),
     },
   ]);
   const [input, setInput] = useState("");
   const [isSending, setIsSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const messagesRef = useRef(messages);
+  messagesRef.current = messages;
+
+  const latestFollowUps = useMemo(() => {
+    for (let i = messages.length - 1; i >= 0; i -= 1) {
+      const msg = messages[i];
+      if (msg.role === "assistant" && msg.follow_ups && msg.follow_ups.length > 0) {
+        return msg.follow_ups;
+      }
+    }
+    return starterPrompts.slice(0, 3);
+  }, [messages, starterPrompts]);
 
   useEffect(() => {
     setMessages([
@@ -889,13 +920,14 @@ function AiCoachPopup({
         id: "welcome",
         role: "assistant",
         content: studentName
-          ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next.`
-          : "Select a leader focus (admin) or sign in as a leader to chat with the AI Coach.",
+          ? `Hi ${studentName.split(" ")[0]} — I am Kay, JointHub Agent in AI Coach mode. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
+          : "Select a leader focus (admin) or sign in as a leader to chat with Kay, the JointHub Agent coach.",
+        follow_ups: starterPrompts.slice(0, 3),
       },
     ]);
     setInput("");
     setError(null);
-  }, [studentName]);
+  }, [studentName, starterPrompts]);
 
   useEffect(() => {
     if (!open) return;
@@ -906,6 +938,27 @@ function AiCoachPopup({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
 
+  useEffect(() => {
+    if (!open) return;
+    const node = scrollRef.current;
+    if (node) {
+      node.scrollTop = node.scrollHeight;
+    }
+  }, [messages, open, isSending]);
+
+  function actionToTab(action: string): LeaderTabId | null {
+    const lower = action.toLowerCase();
+    if (lower.includes("opportunit")) return "opportunities";
+    if (lower.includes("mentor")) return "mentors";
+    if (lower.includes("application")) return "applications";
+    if (lower.includes("stay on track") || lower.includes("coaching")) return "coaching";
+    if (lower.includes("dropout") || lower.includes("risk")) return "risk";
+    if (lower.includes("overview")) return "overview";
+    if (lower.includes("community")) return "community";
+    if (lower.includes("analytics")) return "analytics";
+    return null;
+  }
+
   async function sendMessage(raw: string) {
     const message = raw.trim();
     if (!message || isSending) return;
@@ -913,6 +966,11 @@ function AiCoachPopup({
       setError("A leader context is required before chatting.");
       return;
     }
+
+    const history = messagesRef.current
+      .filter((item) => item.id !== "welcome")
+      .map((item) => ({ role: item.role, content: item.content }))
+      .slice(-12);
 
     const userMessage: AdvisorMessage = {
       id: `u-${Date.now()}`,
@@ -928,12 +986,17 @@ function AiCoachPopup({
       const response = await fetch("/api/jointhub/advisor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message, student_id: studentId }),
+        body: JSON.stringify({
+          message,
+          student_id: studentId,
+          history,
+        }),
       });
       const payload = (await response.json()) as {
         answer?: string;
         citations?: string[];
         suggested_actions?: string[];
+        follow_ups?: string[];
         error?: string;
       };
       if (!response.ok) {
@@ -948,6 +1011,7 @@ function AiCoachPopup({
           content: payload.answer ?? "No answer returned.",
           citations: payload.citations,
           suggested_actions: payload.suggested_actions,
+          follow_ups: payload.follow_ups,
         },
       ]);
     } catch {
@@ -964,17 +1028,17 @@ function AiCoachPopup({
       <div
         role="dialog"
         aria-modal="false"
-        aria-label="AI Coach"
-        className="pointer-events-auto flex h-[min(34rem,calc(100vh-5.5rem))] w-full max-w-md flex-col overflow-hidden rounded-3xl border border-[#142033]/12 bg-white shadow-[0_20px_60px_rgba(20,32,51,0.28)]"
+        aria-label="AI Coach Kay, JointHub Agent"
+        className="pointer-events-auto flex h-[min(36rem,calc(100vh-5.5rem))] w-full max-w-md flex-col overflow-hidden rounded-3xl border border-[#142033]/12 bg-white shadow-[0_20px_60px_rgba(20,32,51,0.28)]"
       >
         <div className="flex items-start justify-between gap-3 border-b border-[#142033]/08 bg-[#142033] px-4 py-3 text-white">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#B47828]">
               AI Coach
             </p>
-            <p className="mt-1 text-sm font-semibold">Kay</p>
+            <p className="mt-1 text-sm font-semibold">Kay · JointHub Agent</p>
             <p className="mt-0.5 text-xs text-white/70">
-              Opportunities, ESL mentors, applications, and next steps.
+              Live coaching on opportunities, ESL mentors, applications, and next steps.
             </p>
           </div>
           <button
@@ -987,7 +1051,7 @@ function AiCoachPopup({
           </button>
         </div>
 
-        <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
+        <div ref={scrollRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -998,7 +1062,7 @@ function AiCoachPopup({
                   : "bg-[#142033]/[0.04] text-[#142033]",
               )}
             >
-              <p>{message.content}</p>
+              <p className="whitespace-pre-wrap">{message.content}</p>
               {message.citations && message.citations.length > 0 ? (
                 <ul className="mt-2 space-y-1 border-t border-[#142033]/10 pt-2 text-[11px] text-[#142033]/60">
                   {message.citations.map((citation) => (
@@ -1008,23 +1072,49 @@ function AiCoachPopup({
               ) : null}
               {message.suggested_actions && message.suggested_actions.length > 0 ? (
                 <div className="mt-2 flex flex-wrap gap-1.5">
-                  {message.suggested_actions.map((action) => (
-                    <span
-                      key={action}
-                      className="rounded-full bg-white px-2 py-0.5 text-[11px] font-medium text-[#3A87B8]"
-                    >
-                      {action}
-                    </span>
-                  ))}
+                  {message.suggested_actions.map((action) => {
+                    const tab = actionToTab(action);
+                    if (tab && onNavigate) {
+                      return (
+                        <button
+                          key={action}
+                          type="button"
+                          onClick={() => {
+                            onNavigate(tab);
+                            onClose();
+                          }}
+                          className="rounded-full bg-white px-2 py-0.5 text-left text-[11px] font-medium text-[#3A87B8] underline-offset-2 hover:underline"
+                        >
+                          {action}
+                        </button>
+                      );
+                    }
+                    return (
+                      <span
+                        key={action}
+                        className="rounded-full bg-white px-2 py-0.5 text-[11px] font-medium text-[#3A87B8]"
+                      >
+                        {action}
+                      </span>
+                    );
+                  })}
                 </div>
               ) : null}
             </div>
           ))}
+          {isSending ? (
+            <p className="text-xs font-medium text-[#142033]/55" aria-live="polite">
+              Kay is thinking…
+            </p>
+          ) : null}
         </div>
 
         <div className="border-t border-[#142033]/08 px-3 pt-3">
+          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#142033]/45">
+            Keep talking
+          </p>
           <div className="flex gap-2 overflow-x-auto pb-2">
-            {starterPrompts.slice(0, 3).map((prompt) => (
+            {latestFollowUps.slice(0, 4).map((prompt) => (
               <button
                 key={prompt}
                 type="button"
@@ -1055,17 +1145,23 @@ function AiCoachPopup({
           ) : null}
           <div className="flex items-end gap-2">
             <label className="sr-only" htmlFor="ai-coach-input">
-              Ask AI Coach
+              Ask AI Coach Kay
             </label>
             <textarea
               id="ai-coach-input"
               value={input}
               onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" && !event.shiftKey) {
+                  event.preventDefault();
+                  void sendMessage(input);
+                }
+              }}
               rows={2}
               disabled={!studentId || isSending}
               placeholder={
                 studentId
-                  ? "Ask Kay about mentors, deadlines, or next steps…"
+                  ? "Message Kay — try “why this mentor?” or “plan my week”"
                   : "Leader context required"
               }
               className="min-h-[2.75rem] flex-1 resize-none rounded-xl border border-[#142033]/15 px-3 py-2 text-sm outline-none focus:border-[#3A87B8] disabled:opacity-60"
@@ -1085,23 +1181,198 @@ function AiCoachPopup({
   );
 }
 
+function MentorCaseloadPanel({
+  overview,
+  onSelectMentee,
+  selectedStudentId,
+}: {
+  overview: MentorOverview | null | undefined;
+  onSelectMentee: (studentId: string) => void;
+  selectedStudentId: string;
+}) {
+  if (!overview) {
+    return (
+      <div className="rounded-2xl border border-[#142033]/10 bg-white p-6 text-sm text-[#142033]/70">
+        No mentor caseload is loaded for this demo account.
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      <section className="rounded-2xl border border-[#142033]/10 bg-white p-5 shadow-sm">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
+          Mentor workspace
+        </p>
+        <h2 className="mt-1 text-xl font-semibold text-[#142033]">
+          Welcome back, {overview.greeting_name}
+        </h2>
+        <p className="mt-1 text-sm text-[#142033]/65">
+          {overview.mentor_title} · {overview.mentor_industry} · {overview.mentor_country}
+        </p>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#142033]/75]">
+          {overview.focus_note}
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <KpiCard label="Assigned leaders" value={overview.mentee_count} hint="Active caseload" />
+          <KpiCard
+            label="High-risk mentees"
+            value={overview.high_risk_count}
+            hint="Need check-in soon"
+          />
+          <KpiCard
+            label="Sessions logged"
+            value={overview.sessions_logged}
+            hint="Demo session history"
+          />
+          <KpiCard
+            label="Average fit"
+            value={overview.average_fit_pct != null ? `${overview.average_fit_pct}%` : "—"}
+            hint="Match compatibility"
+          />
+        </div>
+      </section>
+
+      <section className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
+        <div className="border-b border-[#142033]/08 px-4 py-3">
+          <h3 className="text-sm font-semibold text-[#142033]">Your ESL leaders</h3>
+          <p className="text-xs text-[#142033]/60">
+            Select a mentee to focus coaching, sessions, and Kay prompts on their profile.
+          </p>
+        </div>
+        <div className="divide-y divide-[#142033]/08">
+          {overview.mentees.map((mentee) => {
+            const active = selectedStudentId === mentee.student_id;
+            return (
+              <button
+                key={mentee.student_id}
+                type="button"
+                onClick={() => onSelectMentee(mentee.student_id)}
+                className={cn(
+                  "flex w-full flex-col gap-2 px-4 py-4 text-left transition sm:flex-row sm:items-center sm:justify-between",
+                  active ? "bg-[#3A87B8]/08" : "hover:bg-[#142033]/[0.03]",
+                )}
+              >
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="font-semibold text-[#142033]">{mentee.full_name}</p>
+                    {mentee.risk_level ? (
+                      <span
+                        className={cn(
+                          "rounded-full border px-2 py-0.5 text-[11px] font-semibold capitalize",
+                          riskTone(mentee.risk_level),
+                        )}
+                      >
+                        {mentee.risk_level} risk
+                      </span>
+                    ) : null}
+                    {active ? (
+                      <span className="rounded-full bg-[#3A87B8] px-2 py-0.5 text-[11px] font-semibold text-white">
+                        Focused
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-1 text-sm text-[#142033]/65">
+                    {mentee.country} · {mentee.programme} · {formatPct(mentee.compatibility)} fit
+                  </p>
+                  <p className="mt-1 line-clamp-2 text-sm text-[#142033]/70]">
+                    {mentee.career_goal_text}
+                  </p>
+                  {mentee.top_opportunity ? (
+                    <p className="mt-1 text-xs text-[#3A87B8]">
+                      Top opportunity: {mentee.top_opportunity}
+                    </p>
+                  ) : null}
+                </div>
+                <div className="shrink-0 text-xs text-[#142033]/55 sm:text-right">
+                  <p>
+                    {mentee.days_since_last_session != null
+                      ? `${mentee.days_since_last_session}d since session`
+                      : "No session logged"}
+                  </p>
+                  <p className="mt-1">{mentee.applications_in_flight} apps in flight</p>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function MentorSessionsPanel({ sessions }: { sessions: SessionLog[] }) {
+  if (sessions.length === 0) {
+    return (
+      <div className="rounded-2xl border border-[#142033]/10 bg-white p-6 text-sm text-[#142033]/70">
+        No sessions are logged for this mentor caseload yet.
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      {sessions.map((session) => (
+        <article
+          key={session.session_id}
+          className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <p className="text-sm font-semibold text-[#142033]">
+                Session · {session.session_date}
+              </p>
+              <p className="mt-1 text-xs text-[#142033]/60">
+                Leader {session.student_id.slice(0, 8)} · {session.session_duration_mins} mins ·{" "}
+                {session.status ?? "logged"}
+              </p>
+            </div>
+            <span className="rounded-full bg-[#142033]/[0.05] px-2.5 py-1 text-xs font-semibold tabular-nums text-[#142033]">
+              ★ {session.student_rating.toFixed(1)}
+            </span>
+          </div>
+          <p className="mt-2 text-sm text-[#142033]/75">
+            Topics: {session.topics_discussed.join(", ") || "General check-in"}
+          </p>
+          <p className="mt-1 text-xs text-[#142033]/55">
+            {session.goals_set ? "Goals set" : "No goals captured"} ·{" "}
+            {session.days_since_last_session}d since prior touchpoint
+          </p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 function RiskPanel({
   rows,
   isAdmin,
+  isMentor,
   onOutreach,
   outreachStatus,
 }: {
   rows: RiskRow[];
   isAdmin: boolean;
+  isMentor?: boolean;
   onOutreach: (studentId: string) => void;
   outreachStatus: Record<string, string>;
 }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
       <div className="border-b border-[#142033]/08 px-4 py-3">
-        <h3 className="text-sm font-semibold text-[#142033]">Dropout risk dashboard</h3>
+        <h3 className="text-sm font-semibold text-[#142033]">
+          {isAdmin
+            ? "Cohort dropout risk"
+            : isMentor
+              ? "Mentee dropout risk"
+              : "Your dropout risk"}
+        </h3>
         <p className="text-xs text-[#142033]/60">
-          Logistic regression probability · threshold 0.65 · RF feature importance for top factor
+          {isAdmin
+            ? "Full cohort view · logistic regression probability · threshold 0.65 · RF feature importance for top factor"
+            : isMentor
+              ? "Leaders assigned to you · soft coaching signals only · no public scoreboard"
+              : "Personal risk signal for students and mentors · probability threshold 0.65 · top factor from model features"}
         </p>
       </div>
       <div className="overflow-x-auto">
@@ -1290,17 +1561,24 @@ function AnalyticsPanel({
 export function DashboardApp({ initialData }: { initialData: DashboardResponse }) {
   const router = useRouter();
   const isAdmin = initialData.role === "admin";
+  const isMentor = initialData.role === "mentor";
   const [data, setData] = useState(initialData);
-  const [tab, setTab] = useState<LeaderTabId>(isAdmin ? "risk" : "overview");
-  const [selectedStudent, setSelectedStudent] = useState(initialData.student?.student_id ?? "");
+  const [tab, setTab] = useState<LeaderTabId>(
+    isAdmin ? "risk" : isMentor ? "caseload" : "overview",
+  );
+  const [selectedStudent, setSelectedStudent] = useState(
+    initialData.student?.student_id ??
+      initialData.mentor_overview?.mentees[0]?.student_id ??
+      "",
+  );
   const [outreachStatus, setOutreachStatus] = useState<Record<string, string>>({});
   const [coachOpen, setCoachOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
 
-  const tabs = isAdmin ? ADMIN_TABS : LEADER_TABS;
+  const tabs = isAdmin ? ADMIN_TABS : isMentor ? MENTOR_TABS : LEADER_TABS;
 
   const assignment = useMemo(() => {
-    if (data.role === "admin" && selectedStudent) {
+    if ((data.role === "admin" || data.role === "mentor") && selectedStudent) {
       return data.mentorship.assignments.find((row) => row.student_id === selectedStudent);
     }
     return data.mentorship.assignments[0];
@@ -1316,14 +1594,21 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
     return distinct.length > 0 ? distinct : ranked.slice(1);
   }, [assignment?.mentor_id, data, selectedStudent]);
 
-  const leaderRisk = data.risk[0] ?? null;
-  const advisorStudentId = data.student?.student_id ?? (selectedStudent || null);
-  const advisorName = data.student?.full_name ?? null;
-  const starterPrompts = data.overview?.starter_prompts ?? [
-    "What should I apply to next?",
-    "Who is my mentor and why?",
-    "Am I falling behind?",
-  ];
+  const leaderRisk =
+    data.risk.find((row) => row.student_id === selectedStudent) ?? data.risk[0] ?? null;
+  const advisorStudentId = selectedStudent || data.student?.student_id || null;
+  const advisorName =
+    data.students?.find((row) => row.student_id === advisorStudentId)?.full_name ??
+    data.student?.full_name ??
+    null;
+  const starterPrompts =
+    data.mentor_overview?.starter_prompts ??
+    data.overview?.starter_prompts ??
+    [
+      "What should I apply to next?",
+      "Who is my mentor and why?",
+      "Am I falling behind?",
+    ];
 
   async function reload(studentId?: string) {
     const query = studentId ? `?student_id=${encodeURIComponent(studentId)}` : "";
@@ -1355,6 +1640,19 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
     }));
   }
 
+  function handleSelectMentee(studentId: string) {
+    setSelectedStudent(studentId);
+    startTransition(() => {
+      void reload(studentId);
+    });
+  }
+
+  const roleLabel = isAdmin
+    ? "Programme admin"
+    : isMentor
+      ? "Mentor workspace"
+      : "Leader workspace";
+
   return (
     <div className="min-h-screen bg-[#F4F0E6] text-[#142033]">
       <header className="border-b border-white/10 bg-black text-white">
@@ -1370,9 +1668,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             />
             <div className="min-w-0">
               <p className="truncate text-sm font-semibold tracking-tight text-white">Dashboard</p>
-              <p className="truncate text-xs text-white/65">
-                {isAdmin ? "Programme admin" : "Leader workspace"}
-              </p>
+              <p className="truncate text-xs text-white/65">{roleLabel}</p>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -1410,13 +1706,13 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           </div>
         ) : null}
 
-        {isAdmin && data.students ? (
+        {(isAdmin || isMentor) && data.students ? (
           <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-[#142033]/10 bg-white p-3">
             <label
               htmlFor="student-filter"
               className="text-xs font-semibold uppercase tracking-[0.14em] text-[#142033]/55"
             >
-              Focus leader
+              {isMentor ? "Focus mentee" : "Focus leader"}
             </label>
             <select
               id="student-filter"
@@ -1430,7 +1726,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
               }}
               className="min-w-56 rounded-lg border border-[#142033]/15 bg-white px-3 py-2 text-sm outline-none focus:border-[#3A87B8]"
             >
-              <option value="">All leaders (admin)</option>
+              {isAdmin ? <option value="">All leaders (admin)</option> : null}
               {data.students.map((student) => (
                 <option key={student.student_id} value={student.student_id}>
                   {student.full_name} · {student.country}
@@ -1473,6 +1769,16 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             isAdmin={isAdmin}
           />
         ) : null}
+        {tab === "caseload" ? (
+          <MentorCaseloadPanel
+            overview={data.mentor_overview}
+            onSelectMentee={handleSelectMentee}
+            selectedStudentId={selectedStudent}
+          />
+        ) : null}
+        {tab === "sessions" ? (
+          <MentorSessionsPanel sessions={data.mentorship.sessions} />
+        ) : null}
         {tab === "opportunities" ? (
           <OpportunitiesPanel items={data.recommendations} sentence={data.personalised_sentence} />
         ) : null}
@@ -1495,6 +1801,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           <RiskPanel
             rows={data.risk}
             isAdmin={isAdmin}
+            isMentor={isMentor}
             onOutreach={handleOutreach}
             outreachStatus={outreachStatus}
           />
@@ -1523,6 +1830,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
         studentId={advisorStudentId}
         studentName={advisorName}
         starterPrompts={starterPrompts}
+        onNavigate={setTab}
       />
     </div>
   );

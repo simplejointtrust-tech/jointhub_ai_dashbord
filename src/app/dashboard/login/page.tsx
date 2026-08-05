@@ -7,6 +7,7 @@ import { type FormEvent, useState } from "react";
 const DEMO_ACCOUNTS = [
   { email: "leader1@jointhub.demo", label: "Leader 1 (student view)" },
   { email: "leader2@jointhub.demo", label: "Leader 2 (student view)" },
+  { email: "mentor1@jointhub.demo", label: "Mentor (caseload view)" },
   { email: "admin@jointhub.demo", label: "Admin (full cohort)" },
 ];
 
@@ -62,9 +63,24 @@ export default function DashboardLoginPage() {
           </div>
           <h1 className="mt-5 text-2xl font-semibold">Mentor Hub sign-in</h1>
           <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
-            Demo gate for the scholar dashboard. Leaders open Overview, Opportunities, ESL Mentors,
-            Applications, and Community, plus the floating AI Coach. Admins also get cohort dropout
-            risk and model analytics. Account signup stays at{" "}
+            Demo gate for the Mentor Hub dashboard. Choose a role:
+          </p>
+          <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-[#142033]/70">
+            <li>
+              <strong className="font-semibold text-[#142033]">Leader</strong> — scholar workspace,
+              personal dropout risk, and AI Coach Kay.
+            </li>
+            <li>
+              <strong className="font-semibold text-[#142033]">Mentor</strong> — caseload of assigned
+              ESL leaders, session history, and mentee risk signals.
+            </li>
+            <li>
+              <strong className="font-semibold text-[#142033]">Admin</strong> — full cohort dropout
+              risk and model analytics.
+            </li>
+          </ul>
+          <p className="mt-3 text-sm leading-relaxed text-[#142033]/70">
+            Account signup stays at{" "}
             <Link
               href="/login"
               className="font-medium text-[#3A87B8] underline-offset-2 hover:underline"

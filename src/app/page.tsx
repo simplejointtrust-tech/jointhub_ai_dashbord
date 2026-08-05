@@ -59,13 +59,13 @@ export default function HomePage() {
               ESL Mentors
             </Link>
             <Link
-              href="/login?role=mentor"
+              href="/dashboard/login"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as Mentor
             </Link>
             <Link
-              href="/login?role=leader"
+              href="/dashboard/login"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as leader
@@ -165,12 +165,13 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E8A317]">
               Inside the Mentor Hub
             </p>
-            <h2 className="mt-2 text-nowrap text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:text-3xl">
-              Built for Emerging servant Leaders first. With an your AI coach (Kay).
+            <h2 className="mt-2 text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:whitespace-nowrap lg:text-3xl">
+              Built for Emerging Servant Leaders (ESL) first — with an AI coach (Kay).
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
-              Kay helps with opportunity ranking, mentor matching, soft coaching, and Advisor
-              answers — without turning students into a surveillance dashboard.
+              Kay is JointHub&apos;s in-product coach agent: opportunity ranking, mentor matching,
+              soft coaching, and live next-step guidance — without turning students into a
+              surveillance dashboard.
             </p>
           </div>
 
@@ -247,12 +248,6 @@ export default function HomePage() {
                 Sign In
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
-              <Link
-                href="/prototype"
-                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[rgba(15,61,46,0.2)] px-5 py-3 text-sm font-semibold text-[#0F3D2E] transition hover:bg-white"
-              >
-                Canva design reference
-              </Link>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-[rgba(26,21,16,0.5)]">
               Register for our ESL Bootcamp: CreativeTech × SoCreative · 24th - 25th August 2026 ·
@@ -273,8 +268,10 @@ export default function HomePage() {
               className="h-11 w-auto shrink-0 object-contain"
             />
             <div>
-              <p className="text-sm font-semibold">SimpleJoint Trust</p>
-              <p className="text-xs text-white/65">Kigali · Lead with service. Build with trust.</p>
+              <p className="text-sm font-semibold">
+                © {new Date().getFullYear()} JointHub Africa | Powered by SimpleJoint Trust
+              </p>
+              <p className="text-xs text-white/65">All rights reserved.</p>
             </div>
           </div>
           <p className="max-w-md text-xs leading-relaxed text-white/60 sm:text-right">
