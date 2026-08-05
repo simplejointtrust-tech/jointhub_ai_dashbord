@@ -54,21 +54,21 @@ export default function HomePage() {
             <ThemeToggle />
             <Link
               href="/mentors"
-              className="inline-flex rounded-full bg-[#0F3D2E] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20] sm:px-4"
+              className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               ESL Mentors
             </Link>
             <Link
-              href="/dashboard/login"
+              href="/login"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
-              Join as Mentor
+              Sign Up
             </Link>
             <Link
               href="/dashboard/login"
-              className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
+              className="inline-flex rounded-full bg-[#0F3D2E] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20] sm:px-4"
             >
-              Join as leader
+              Login
             </Link>
           </div>
         </div>
@@ -90,13 +90,25 @@ export default function HomePage() {
               a mentor.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                href="https://jointhub.simplejoint.org/"
+              <Link
+                href="/dashboard/login"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#E07020] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9611a]"
               >
-                Explore Opportunities
+                Login
                 <ArrowRight className="h-4 w-4" aria-hidden />
-              </a>
+              </Link>
+              <Link
+                href="/login"
+                className="inline-flex min-h-11 items-center rounded-full border border-[rgba(15,61,46,0.18)] px-5 py-3 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0]"
+              >
+                Sign Up
+              </Link>
+              <Link
+                href="/login?role=mentor"
+                className="inline-flex min-h-11 items-center text-sm font-semibold text-[#0F3D2E]/75 underline-offset-4 transition hover:text-[#0F3D2E] hover:underline"
+              >
+                Join as Mentor
+              </Link>
             </div>
           </div>
 
@@ -222,8 +234,8 @@ export default function HomePage() {
               <li className="flex gap-3">
                 <span className="font-semibold tabular-nums text-[#E8A317]">01</span>
                 <span>
-                  Open <strong className="font-semibold text-[#0F3D2E]">Sign In</strong> and enter
-                  as a leader.
+                  Open <strong className="font-semibold text-[#0F3D2E]">Login</strong> and enter the
+                  Capstone demo as a leader, mentor, or admin.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -245,8 +257,14 @@ export default function HomePage() {
                 href="/dashboard/login"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#0F3D2E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0A2A20]"
               >
-                Sign In
+                Login
                 <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+              <Link
+                href="/login"
+                className="inline-flex min-h-11 items-center rounded-full border border-[rgba(15,61,46,0.18)] px-5 py-3 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-white"
+              >
+                Sign Up
               </Link>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-[rgba(26,21,16,0.5)]">
