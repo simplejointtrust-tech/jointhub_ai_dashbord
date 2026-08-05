@@ -20,5 +20,10 @@ export async function getSessionUser(): Promise<AuthUser | null> {
 }
 
 export function demoAccounts(): string[] {
-  return ["leader1@jointhub.demo", "leader2@jointhub.demo", "admin@jointhub.demo"];
+  return [
+    "leader1@jointhub.demo",
+    "leader2@jointhub.demo",
+    "mentor1@jointhub.demo",
+    "admin@jointhub.demo",
+  ];
 }

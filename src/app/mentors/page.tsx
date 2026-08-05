@@ -64,7 +64,7 @@ export default function EslMentorsPage() {
               AM
             </span>
             <Link
-              href="/login?role=leader"
+              href="/dashboard/login"
               className="inline-flex min-h-10 items-center rounded-full bg-[#3A87B8] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#2F739E] sm:px-4"
             >
               Sign In
@@ -160,7 +160,7 @@ export default function EslMentorsPage() {
                 Sign in to Mentor Hub
               </Link>
               <Link
-                href="/login?role=mentor"
+                href="/dashboard/login"
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-[rgba(20,32,51,0.14)] px-5 py-3 text-sm font-semibold text-[#142033] transition hover:bg-[#F4F0E6]"
               >
                 Become an ESL Mentor
@@ -181,8 +181,10 @@ export default function EslMentorsPage() {
               className="h-11 w-11 shrink-0 rounded-xl bg-black object-contain"
             />
             <div>
-              <p className="text-sm font-semibold">SimpleJoint Trust</p>
-              <p className="text-xs text-white/65">Kigali · Lead with service. Build with trust.</p>
+              <p className="text-sm font-semibold">
+                © {new Date().getFullYear()} JointHub Africa | Powered by SimpleJoint Trust
+              </p>
+              <p className="text-xs text-white/65">All rights reserved.</p>
             </div>
           </div>
           <p className="max-w-md text-xs leading-relaxed text-white/60 sm:text-right">
