@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import type {
   ApplicationStage,
   CommunityPost,
@@ -65,6 +65,7 @@ type AdvisorMessage = {
   content: string;
   citations?: string[];
   suggested_actions?: string[];
+  follow_ups?: string[];
 };
 
 const LEADER_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
@@ -864,25 +865,43 @@ function AiCoachPopup({
   studentId,
   studentName,
   starterPrompts,
+  onNavigate,
 }: {
   open: boolean;
   onClose: () => void;
   studentId: string | null;
   studentName: string | null;
   starterPrompts: string[];
+  onNavigate?: (tab: LeaderTabId) => void;
 }) {
+  const welcomeContent = studentName
+    ? `Hi ${studentName.split(" ")[0]} — I am Kay, JointHub Agent in AI Coach mode. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
+    : "Select a leader focus (admin) or sign in as a leader to chat with Kay, the JointHub Agent coach.";
+
   const [messages, setMessages] = useState<AdvisorMessage[]>([
     {
       id: "welcome",
       role: "assistant",
-      content: studentName
-        ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next.`
-        : "Select a leader focus (admin) or sign in as a leader to chat with the AI Coach.",
+      content: welcomeContent,
+      follow_ups: starterPrompts.slice(0, 3),
     },
   ]);
   const [input, setInput] = useState("");
   const [isSending, setIsSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const messagesRef = useRef(messages);
+  messagesRef.current = messages;
+
+  const latestFollowUps = useMemo(() => {
+    for (let i = messages.length - 1; i >= 0; i -= 1) {
+      const msg = messages[i];
+      if (msg.role === "assistant" && msg.follow_ups && msg.follow_ups.length > 0) {
+        return msg.follow_ups;
+      }
+    }
+    return starterPrompts.slice(0, 3);
+  }, [messages, starterPrompts]);
 
   useEffect(() => {
     setMessages([
@@ -890,13 +909,14 @@ function AiCoachPopup({
         id: "welcome",
         role: "assistant",
         content: studentName
-          ? `Hi ${studentName} — I am Kay, your AI Coach on JointHub Africa. Ask about deadlines, ESL mentor fit, applications, or what to do next.`
-          : "Select a leader focus (admin) or sign in as a leader to chat with the AI Coach.",
+          ? `Hi ${studentName.split(" ")[0]} — I am Kay, JointHub Agent in AI Coach mode. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
+          : "Select a leader focus (admin) or sign in as a leader to chat with Kay, the JointHub Agent coach.",
+        follow_ups: starterPrompts.slice(0, 3),
       },
     ]);
     setInput("");
     setError(null);
-  }, [studentName]);
+  }, [studentName, starterPrompts]);
 
   useEffect(() => {
     if (!open) return;
@@ -907,6 +927,27 @@ function AiCoachPopup({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
 
+  useEffect(() => {
+    if (!open) return;
+    const node = scrollRef.current;
+    if (node) {
+      node.scrollTop = node.scrollHeight;
+    }
+  }, [messages, open, isSending]);
+
+  function actionToTab(action: string): LeaderTabId | null {
+    const lower = action.toLowerCase();
+    if (lower.includes("opportunit")) return "opportunities";
+    if (lower.includes("mentor")) return "mentors";
+    if (lower.includes("application")) return "applications";
+    if (lower.includes("stay on track") || lower.includes("coaching")) return "coaching";
+    if (lower.includes("dropout") || lower.includes("risk")) return "risk";
+    if (lower.includes("overview")) return "overview";
+    if (lower.includes("community")) return "community";
+    if (lower.includes("analytics")) return "analytics";
+    return null;
+  }
+
   async function sendMessage(raw: string) {
     const message = raw.trim();
     if (!message || isSending) return;
@@ -914,6 +955,11 @@ function AiCoachPopup({
       setError("A leader context is required before chatting.");
       return;
     }
+
+    const history = messagesRef.current
+      .filter((item) => item.id !== "welcome")
+      .map((item) => ({ role: item.role, content: item.content }))
+      .slice(-12);
 
     const userMessage: AdvisorMessage = {
       id: `u-${Date.now()}`,
@@ -929,12 +975,17 @@ function AiCoachPopup({
       const response = await fetch("/api/jointhub/advisor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message, student_id: studentId }),
+        body: JSON.stringify({
+          message,
+          student_id: studentId,
+          history,
+        }),
       });
       const payload = (await response.json()) as {
         answer?: string;
         citations?: string[];
         suggested_actions?: string[];
+        follow_ups?: string[];
         error?: string;
       };
       if (!response.ok) {
@@ -949,6 +1000,7 @@ function AiCoachPopup({
           content: payload.answer ?? "No answer returned.",
           citations: payload.citations,
           suggested_actions: payload.suggested_actions,
+          follow_ups: payload.follow_ups,
         },
       ]);
     } catch {
@@ -965,17 +1017,17 @@ function AiCoachPopup({
       <div
         role="dialog"
         aria-modal="false"
-        aria-label="AI Coach"
-        className="pointer-events-auto flex h-[min(34rem,calc(100vh-5.5rem))] w-full max-w-md flex-col overflow-hidden rounded-3xl border border-[#142033]/12 bg-white shadow-[0_20px_60px_rgba(20,32,51,0.28)]"
+        aria-label="AI Coach Kay, JointHub Agent"
+        className="pointer-events-auto flex h-[min(36rem,calc(100vh-5.5rem))] w-full max-w-md flex-col overflow-hidden rounded-3xl border border-[#142033]/12 bg-white shadow-[0_20px_60px_rgba(20,32,51,0.28)]"
       >
         <div className="flex items-start justify-between gap-3 border-b border-[#142033]/08 bg-[#142033] px-4 py-3 text-white">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#B47828]">
               AI Coach
             </p>
-            <p className="mt-1 text-sm font-semibold">Kay</p>
+            <p className="mt-1 text-sm font-semibold">Kay · JointHub Agent</p>
             <p className="mt-0.5 text-xs text-white/70">
-              Opportunities, ESL mentors, applications, and next steps.
+              Live coaching on opportunities, ESL mentors, applications, and next steps.
             </p>
           </div>
           <button
@@ -988,7 +1040,7 @@ function AiCoachPopup({
           </button>
         </div>
 
-        <div className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
+        <div ref={scrollRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -999,7 +1051,7 @@ function AiCoachPopup({
                   : "bg-[#142033]/[0.04] text-[#142033]",
               )}
             >
-              <p>{message.content}</p>
+              <p className="whitespace-pre-wrap">{message.content}</p>
               {message.citations && message.citations.length > 0 ? (
                 <ul className="mt-2 space-y-1 border-t border-[#142033]/10 pt-2 text-[11px] text-[#142033]/60">
                   {message.citations.map((citation) => (
@@ -1009,23 +1061,49 @@ function AiCoachPopup({
               ) : null}
               {message.suggested_actions && message.suggested_actions.length > 0 ? (
                 <div className="mt-2 flex flex-wrap gap-1.5">
-                  {message.suggested_actions.map((action) => (
-                    <span
-                      key={action}
-                      className="rounded-full bg-white px-2 py-0.5 text-[11px] font-medium text-[#3A87B8]"
-                    >
-                      {action}
-                    </span>
-                  ))}
+                  {message.suggested_actions.map((action) => {
+                    const tab = actionToTab(action);
+                    if (tab && onNavigate) {
+                      return (
+                        <button
+                          key={action}
+                          type="button"
+                          onClick={() => {
+                            onNavigate(tab);
+                            onClose();
+                          }}
+                          className="rounded-full bg-white px-2 py-0.5 text-left text-[11px] font-medium text-[#3A87B8] underline-offset-2 hover:underline"
+                        >
+                          {action}
+                        </button>
+                      );
+                    }
+                    return (
+                      <span
+                        key={action}
+                        className="rounded-full bg-white px-2 py-0.5 text-[11px] font-medium text-[#3A87B8]"
+                      >
+                        {action}
+                      </span>
+                    );
+                  })}
                 </div>
               ) : null}
             </div>
           ))}
+          {isSending ? (
+            <p className="text-xs font-medium text-[#142033]/55" aria-live="polite">
+              Kay is thinking…
+            </p>
+          ) : null}
         </div>
 
         <div className="border-t border-[#142033]/08 px-3 pt-3">
+          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#142033]/45">
+            Keep talking
+          </p>
           <div className="flex gap-2 overflow-x-auto pb-2">
-            {starterPrompts.slice(0, 3).map((prompt) => (
+            {latestFollowUps.slice(0, 4).map((prompt) => (
               <button
                 key={prompt}
                 type="button"
@@ -1056,17 +1134,23 @@ function AiCoachPopup({
           ) : null}
           <div className="flex items-end gap-2">
             <label className="sr-only" htmlFor="ai-coach-input">
-              Ask AI Coach
+              Ask AI Coach Kay
             </label>
             <textarea
               id="ai-coach-input"
               value={input}
               onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" && !event.shiftKey) {
+                  event.preventDefault();
+                  void sendMessage(input);
+                }
+              }}
               rows={2}
               disabled={!studentId || isSending}
               placeholder={
                 studentId
-                  ? "Ask Kay about mentors, deadlines, or next steps…"
+                  ? "Message Kay — try “why this mentor?” or “plan my week”"
                   : "Leader context required"
               }
               className="min-h-[2.75rem] flex-1 resize-none rounded-xl border border-[#142033]/15 px-3 py-2 text-sm outline-none focus:border-[#3A87B8] disabled:opacity-60"
@@ -1528,6 +1612,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
         studentId={advisorStudentId}
         studentName={advisorName}
         starterPrompts={starterPrompts}
+        onNavigate={setTab}
       />
     </div>
   );

@@ -1,14 +1,37 @@
 import { NextResponse } from "next/server";
 import { getSessionUser } from "@/lib/jointhub/auth";
 import { findStudent } from "@/lib/jointhub/data-store";
-import { answerAdvisor } from "@/lib/jointhub/leader-experience";
+import {
+  answerAdvisor,
+  type AdvisorChatTurn,
+} from "@/lib/jointhub/leader-experience";
 
 export const runtime = "nodejs";
 
 type AdvisorBody = {
   message?: string;
   student_id?: string;
+  history?: AdvisorChatTurn[];
 };
+
+function sanitizeHistory(raw: unknown): AdvisorChatTurn[] {
+  if (!Array.isArray(raw)) return [];
+  return raw
+    .filter((item): item is AdvisorChatTurn => {
+      if (!item || typeof item !== "object") return false;
+      const turn = item as AdvisorChatTurn;
+      return (
+        (turn.role === "user" || turn.role === "assistant") &&
+        typeof turn.content === "string" &&
+        turn.content.trim().length > 0
+      );
+    })
+    .map((turn) => ({
+      role: turn.role,
+      content: turn.content.trim().slice(0, 800),
+    }))
+    .slice(-12);
+}
 
 export async function POST(request: Request) {
   const session = await getSessionUser();
@@ -52,7 +75,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Leader profile not found." }, { status: 404 });
   }
 
-  const payload = answerAdvisor(studentId, message);
+  const history = sanitizeHistory(body.history);
+  const payload = answerAdvisor(studentId, message, history);
   return NextResponse.json({
     ...payload,
     student: {

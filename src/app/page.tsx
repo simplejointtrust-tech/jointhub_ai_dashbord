@@ -165,12 +165,13 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#E8A317]">
               Inside the Mentor Hub
             </p>
-            <h2 className="mt-2 text-balance text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:text-3xl">
-              Built for Emerging Servant Leaders (ESL) first. With an AI coach (Kay).
+            <h2 className="mt-2 text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:whitespace-nowrap lg:text-3xl">
+              Built for Emerging Servant Leaders (ESL) first — with an AI coach (Kay).
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
-              Kay helps with opportunity ranking, mentor matching, soft coaching, and Advisor
-              answers — without turning students into a surveillance dashboard.
+              Kay is JointHub&apos;s in-product coach agent: opportunity ranking, mentor matching,
+              soft coaching, and live next-step guidance — without turning students into a
+              surveillance dashboard.
             </p>
           </div>
 
