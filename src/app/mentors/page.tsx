@@ -181,8 +181,10 @@ export default function EslMentorsPage() {
               className="h-11 w-11 shrink-0 rounded-xl bg-black object-contain"
             />
             <div>
-              <p className="text-sm font-semibold">SimpleJoint Trust</p>
-              <p className="text-xs text-white/65">Kigali · Lead with service. Build with trust.</p>
+              <p className="text-sm font-semibold">
+                © {new Date().getFullYear()} JointHub Africa | Powered by SimpleJoint Trust
+              </p>
+              <p className="text-xs text-white/65">All rights reserved.</p>
             </div>
           </div>
           <p className="max-w-md text-xs leading-relaxed text-white/60 sm:text-right">
