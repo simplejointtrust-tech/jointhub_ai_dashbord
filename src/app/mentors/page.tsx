@@ -109,7 +109,7 @@ const MENTORS: MentorCard[] = [
 export default function EslMentorsPage() {
   return (
     <main className="min-h-screen bg-[#F4F0E6] text-[#142033]">
-      <header className="sticky top-0 z-30 border-b border-[rgba(20,32,51,0.08)] bg-[#F4F0E6]/95 backdrop-blur-sm">
+      <header className="sticky top-0 z-30 border-b border-white/10 bg-black">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <Link href="/" className="flex min-w-0 items-center">
             <Image
@@ -125,7 +125,7 @@ export default function EslMentorsPage() {
           <div className="flex flex-wrap items-center justify-end gap-2">
             <div className="relative hidden min-w-[13rem] md:block">
               <Search
-                className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[rgba(20,32,51,0.45)]"
+                className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-white/45"
                 aria-hidden
               />
               <label htmlFor="mentor-search" className="sr-only">
@@ -135,13 +135,13 @@ export default function EslMentorsPage() {
                 id="mentor-search"
                 type="search"
                 placeholder="Search opportunities"
-                className="h-10 w-full rounded-full border border-[rgba(20,32,51,0.10)] bg-white pr-4 pl-9 text-sm text-[#142033] outline-none placeholder:text-[rgba(20,32,51,0.42)] focus:border-[#3A87B8] focus:ring-2 focus:ring-[rgba(58,135,184,0.18)]"
+                className="h-10 w-full rounded-full border border-white/15 bg-white/10 pr-4 pl-9 text-sm text-white outline-none placeholder:text-white/45 focus:border-[#3A87B8] focus:ring-2 focus:ring-[rgba(58,135,184,0.35)]"
               />
             </div>
             <ThemeToggle />
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(20,32,51,0.10)] bg-white text-[#142033] transition hover:bg-white/80"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:bg-white/15"
               aria-label="Notifications"
             >
               <Bell className="h-4 w-4" aria-hidden />
