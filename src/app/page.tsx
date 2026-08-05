@@ -76,7 +76,7 @@ export default function HomePage() {
               Pan-African youth platform · Kigali
             </p>
             <h1 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-[#0F3D2E] sm:text-4xl lg:text-[2.65rem] lg:leading-[1.12]">
-              Meet Mentors, Find Opportunities and have a clear next step on their path to success.
+              Be mentored, See Opportunities for growth and Walk on a path to success.
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[rgba(26,21,16,0.72)] sm:text-lg">
               JointHub Africa is where ESL leaders discover opportunities, meet mentors, and stay on
@@ -134,7 +134,7 @@ export default function HomePage() {
               Impact to date
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[rgba(26,21,16,0.68)]">
-              Real outcomes from SimpleJoint Trust programmes across Africa — not demo stats.
+              Real outcomes from SimpleJoint impact.
             </p>
           </div>
           <dl className="grid grid-cols-3 gap-6 sm:gap-10">
@@ -160,7 +160,7 @@ export default function HomePage() {
               Inside the Mentor Hub
             </p>
             <h2 className="mt-2 text-nowrap text-[1.35rem] font-semibold tracking-tight text-[#0F3D2E] sm:text-2xl lg:text-3xl">
-              Built for ESL leaders first. Meet your AI Coach (Kay).
+              Built for Emerging servant Leaders first. With an your AI coach (Kay).
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[rgba(26,21,16,0.68)]">
               Kay helps with opportunity ranking, mentor matching, soft coaching, and Advisor
