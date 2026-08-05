@@ -1,7 +1,6 @@
 import { Bell, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { MentorMatchQuiz } from "@/components/jointhub/MentorMatchQuiz";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ESL_MENTORS } from "@/lib/jointhub/esl-mentors";
 
@@ -64,16 +63,10 @@ export default function EslMentorsPage() {
               AM
             </span>
             <Link
-              href="/login"
-              className="inline-flex min-h-10 items-center rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-semibold text-white transition hover:bg-white/15 sm:px-4"
-            >
-              Sign Up
-            </Link>
-            <Link
               href="/dashboard/login"
               className="inline-flex min-h-10 items-center rounded-full bg-[#3A87B8] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#2F739E] sm:px-4"
             >
-              Login
+              Sign In
             </Link>
           </div>
         </div>
@@ -90,10 +83,6 @@ export default function EslMentorsPage() {
           <p className="mt-3 max-w-xl text-base leading-relaxed text-[rgba(20,32,51,0.68)] sm:text-lg">
             A small circle of practitioners ready to help you make your next move with clarity.
           </p>
-        </div>
-
-        <div className="mt-8">
-          <MentorMatchQuiz />
         </div>
       </section>
 

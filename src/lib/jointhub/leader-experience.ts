@@ -609,7 +609,7 @@ export function answerAdvisorQuestion(
   const continuity =
     priorUserTurns > 0
       ? "I am staying with your profile context from this chat."
-      : "I am Kay — JointHub Agent in coaching mode for your ESL journey.";
+      : "I am Kay, your AI coach for your ESL journey.";
 
   if (intent === "clarify") {
     return `${continuity} Ask me about opportunities, ESL mentors, applications, deadlines, risk coaching, essays, or what to do next.`;
@@ -620,7 +620,7 @@ export function answerAdvisorQuestion(
   }
 
   if (intent === "identity") {
-    return `I am Kay, the JointHub Agent acting as your AI Coach inside the dashboard. I use your sample leader profile, ranked opportunities, ESL mentor roster, application pipeline, and soft coaching signals — the same product data judges and leaders see. I am interactive: ask follow-ups, tap suggested prompts, or say "why" / "what next" and I will stay on topic.`;
+    return `I am Kay, your AI coach inside the dashboard. I use your sample leader profile, ranked opportunities, ESL mentor roster, application pipeline, and soft coaching signals — the same product data judges and leaders see. I am interactive: ask follow-ups, tap suggested prompts, or say "why" / "what next" and I will stay on topic.`;
   }
 
   if (intent === "thanks") {
@@ -755,7 +755,7 @@ export function answerAdvisorQuestion(
       mentor
         ? `2) Request a session with ${mentor.mentor_name} and bring one blocker.`
         : "2) Review ESL mentor matches and request a session.",
-      "3) Come back to me (Kay / JointHub Agent) if you get stuck on deadlines, essays, or sequencing.",
+      "3) Come back to me (Kay, your AI coach) if you get stuck on deadlines, essays, or sequencing.",
     ];
     return `${continuity} Here is a tight week plan, ${name}: ${steps.join(" ")} Which step should we unpack first?`;
   }
@@ -777,7 +777,7 @@ export type AdvisorReply = {
   suggested_actions: string[];
   follow_ups: string[];
   coach: "Kay";
-  agent_role: "JointHub Agent";
+  agent_role: "AI Coach";
 };
 
 export function answerAdvisor(
@@ -796,8 +796,8 @@ export function answerAdvisor(
 
   citations.push(
     isMentor
-      ? "Coach: Kay · JointHub Agent (mentor caseload mode)"
-      : "Coach: Kay · JointHub Agent (Engineering coaching mode)",
+      ? "Coach: Kay · AI coach (mentor caseload mode)"
+      : "Coach: Kay · AI coach",
   );
   if (context.recommendations[0]) {
     citations.push(
@@ -845,6 +845,6 @@ export function answerAdvisor(
     suggested_actions: suggested_actions.slice(0, 3),
     follow_ups,
     coach: "Kay",
-    agent_role: "JointHub Agent",
+    agent_role: "AI Coach",
   };
 }

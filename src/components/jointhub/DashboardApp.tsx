@@ -38,6 +38,7 @@ import type {
   SessionLog,
 } from "@/lib/jointhub/types";
 import { cn } from "@/lib/utils";
+import { MentorMatchQuiz } from "@/components/jointhub/MentorMatchQuiz";
 
 type LeaderTabId =
   | "overview"
@@ -750,19 +751,24 @@ function OverviewPanel({
   applications,
   onOpenTab,
   isAdmin,
+  showPairingQuiz = false,
 }: {
   overview: LeaderOverview | null | undefined;
   recommendations: Recommendation[];
   applications: LeaderApplication[];
   onOpenTab: (tab: LeaderTabId) => void;
   isAdmin: boolean;
+  showPairingQuiz?: boolean;
 }) {
   if (!overview) {
     return (
-      <div className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/65">
-        {isAdmin
-          ? "Select a focus leader above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
-          : "Overview is not available for this account yet."}
+      <div className="space-y-4">
+        <div className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/65">
+          {isAdmin
+            ? "Select a focus leader above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
+            : "Overview is not available for this account yet."}
+        </div>
+        {showPairingQuiz ? <MentorMatchQuiz /> : null}
       </div>
     );
   }
@@ -788,6 +794,8 @@ function OverviewPanel({
           ))}
         </div>
       </section>
+
+      {showPairingQuiz ? <MentorMatchQuiz /> : null}
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {overview.activity_stats.map((stat) => (
@@ -1071,8 +1079,8 @@ function AiCoachPopup({
   onSeedConsumed?: () => void;
 }) {
   const welcomeContent = studentName
-    ? `Hi ${studentName.split(" ")[0]} — I am Kay, JointHub Agent in AI Coach mode. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
-    : "Select a leader focus (admin) or sign in as a leader to chat with Kay, the JointHub Agent coach.";
+    ? `Hi ${studentName.split(" ")[0]} — I am Kay, your AI coach. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
+    : "Select a leader focus (admin) or sign in as a leader to chat with Kay, your AI coach.";
 
   const [messages, setMessages] = useState<AdvisorMessage[]>([
     {
@@ -1105,8 +1113,8 @@ function AiCoachPopup({
         id: "welcome",
         role: "assistant",
         content: studentName
-          ? `Hi ${studentName.split(" ")[0]} — I am Kay, JointHub Agent in AI Coach mode. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
-          : "Select a leader focus (admin) or sign in as a leader to chat with Kay, the JointHub Agent coach.",
+          ? `Hi ${studentName.split(" ")[0]} — I am Kay, your AI coach. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
+          : "Select a leader focus (admin) or sign in as a leader to chat with Kay, your AI coach.",
         follow_ups: starterPrompts.slice(0, 3),
       },
     ]);
@@ -1219,7 +1227,7 @@ function AiCoachPopup({
       <div
         role="dialog"
         aria-modal="false"
-        aria-label="AI Coach Kay, JointHub Agent"
+        aria-label="AI Coach Kay"
         className="pointer-events-auto flex h-[min(36rem,calc(100vh-5.5rem))] w-full max-w-md flex-col overflow-hidden rounded-3xl border border-[#142033]/12 bg-white shadow-[0_20px_60px_rgba(20,32,51,0.28)]"
       >
         <div className="flex items-start justify-between gap-3 border-b border-[#142033]/08 bg-[#142033] px-4 py-3 text-white">
@@ -1227,7 +1235,7 @@ function AiCoachPopup({
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#B47828]">
               AI Coach
             </p>
-            <p className="mt-1 text-sm font-semibold">Kay · JointHub Agent</p>
+            <p className="mt-1 text-sm font-semibold">Kay</p>
             <p className="mt-0.5 text-xs text-white/70">
               Live coaching on opportunities, ESL mentors, applications, and next steps.
             </p>
@@ -1979,6 +1987,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             applications={data.applications ?? []}
             onOpenTab={setTab}
             isAdmin={isAdmin}
+            showPairingQuiz={!isAdmin && !isMentor}
           />
         ) : null}
         {tab === "caseload" ? (
