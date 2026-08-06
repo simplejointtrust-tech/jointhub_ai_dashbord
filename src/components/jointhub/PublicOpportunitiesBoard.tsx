@@ -63,21 +63,21 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl border border-[#3A87B8]/20 bg-gradient-to-r from-[#3A87B8]/10 to-white p-5">
+      <div className="rounded-2xl border border-[rgba(15,61,46,0.12)] bg-gradient-to-r from-[#0F3D2E]/[0.08] to-[#FBF7F0] p-5">
         <div className="flex items-start gap-3">
-          <Sparkles className="mt-0.5 h-5 w-5 text-[#3A87B8]" aria-hidden />
+          <Sparkles className="mt-0.5 h-5 w-5 text-[#E07020]" aria-hidden />
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#3A87B8]">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#E07020]">
               Trusted Opportunities
             </p>
-            <h1 className="mt-1 text-lg font-semibold tracking-tight text-[#142033] sm:text-xl">
+            <h1 className="mt-1 text-lg font-semibold tracking-tight text-[#0F3D2E] sm:text-xl">
               Your Path to Growth Starts Here
             </h1>
-            <p className="mt-1 text-sm font-medium leading-relaxed text-[#142033]/80">
+            <p className="mt-1 text-sm font-medium leading-relaxed text-[rgba(26,21,16,0.80)]">
               Curated scholarships, fellowships, internships, and funding opportunities for African
               Leaders.
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
+            <p className="mt-2 text-sm leading-relaxed text-[rgba(26,21,16,0.68)]">
               These opportunities are curated from the JointHub Africa opportunity board. Open each
               official link to confirm deadlines and eligibility.
             </p>
@@ -85,10 +85,10 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 rounded-2xl border border-[#142033]/10 bg-white p-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 rounded-2xl border border-[rgba(15,61,46,0.10)] bg-[#FBF7F0] p-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="relative min-w-0 flex-1">
           <Search
-            className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[#142033]/40"
+            className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-[rgba(26,21,16,0.40)]"
             aria-hidden
           />
           <label htmlFor="opportunity-search" className="sr-only">
@@ -100,7 +100,7 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search by name, organisation, or topic"
-            className="h-11 w-full rounded-full border border-[#142033]/12 bg-[#FBF7F0]/40 pr-4 pl-10 text-sm text-[#142033] outline-none placeholder:text-[#142033]/45 focus:border-[#3A87B8] focus:ring-2 focus:ring-[rgba(58,135,184,0.25)]"
+            className="h-11 w-full rounded-full border border-[rgba(15,61,46,0.14)] bg-white pr-4 pl-10 text-sm text-[#1A1510] outline-none placeholder:text-[rgba(26,21,16,0.45)] focus:border-[#0F3D2E] focus:ring-2 focus:ring-[rgba(15,61,46,0.18)]"
           />
         </div>
         <div className="flex flex-wrap items-center gap-2">
@@ -111,7 +111,7 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
             id="opportunity-type"
             value={typeFilter}
             onChange={(event) => setTypeFilter(event.target.value)}
-            className="h-11 min-w-[10rem] rounded-full border border-[#142033]/12 bg-white px-4 text-sm font-medium text-[#142033] outline-none focus:border-[#3A87B8] focus:ring-2 focus:ring-[rgba(58,135,184,0.25)]"
+            className="h-11 min-w-[10rem] rounded-full border border-[rgba(15,61,46,0.14)] bg-white px-4 text-sm font-medium text-[#0F3D2E] outline-none focus:border-[#0F3D2E] focus:ring-2 focus:ring-[rgba(15,61,46,0.18)]"
           >
             <option value="all">All types</option>
             {types.map((type) => (
@@ -120,7 +120,7 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
               </option>
             ))}
           </select>
-          <p className="rounded-full bg-[#142033]/[0.04] px-3 py-2 text-xs font-semibold tabular-nums text-[#142033]/70">
+          <p className="rounded-full bg-white px-3 py-2 text-xs font-semibold tabular-nums text-[rgba(26,21,16,0.70)]">
             {filtered.length} of {items.length}
           </p>
         </div>
@@ -132,7 +132,7 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
             <a
               key={letter}
               href={`#letter-${letter === "#" ? "other" : letter}`}
-              className="inline-flex h-9 min-w-9 items-center justify-center rounded-full border border-[#142033]/10 bg-white px-2 text-xs font-semibold text-[#142033] transition hover:border-[#3A87B8]/40 hover:bg-[#3A87B8]/5"
+              className="inline-flex h-9 min-w-9 items-center justify-center rounded-full border border-[rgba(15,61,46,0.12)] bg-white px-2 text-xs font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0]"
             >
               {letter}
             </a>
@@ -152,10 +152,10 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
                 {letter}
               </span>
               <div>
-                <h2 className="text-sm font-semibold tracking-tight text-[#142033]">
+                <h2 className="text-sm font-semibold tracking-tight text-[#0F3D2E]">
                   {letter === "#" ? "Other" : `Starting with ${letter}`}
                 </h2>
-                <p className="text-xs text-[#142033]/55 tabular-nums">
+                <p className="text-xs tabular-nums text-[rgba(26,21,16,0.55)]">
                   {groupItems.length} opportunit{groupItems.length === 1 ? "y" : "ies"}
                 </p>
               </div>
@@ -167,19 +167,19 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
                 return (
                   <article
                     key={item.opp_id}
-                    className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
+                    className="rounded-2xl border border-[rgba(15,61,46,0.10)] bg-white p-4 shadow-sm"
                   >
                     <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-start">
                       <div>
                         <div className="flex flex-wrap items-center gap-2">
-                          <h3 className="text-base font-semibold text-[#142033]">{item.title}</h3>
+                          <h3 className="text-base font-semibold text-[#0F3D2E]">{item.title}</h3>
                           {item.is_verified ? (
-                            <span className="rounded-full bg-[#1B5E20]/10 px-2 py-0.5 text-[11px] font-semibold text-[#1B5E20]">
+                            <span className="rounded-full bg-[#0F3D2E]/10 px-2 py-0.5 text-[11px] font-semibold text-[#0F3D2E]">
                               Curated
                             </span>
                           ) : null}
                           {item.status ? (
-                            <span className="rounded-full bg-[#3A87B8]/10 px-2 py-0.5 text-[11px] font-semibold text-[#2F739E]">
+                            <span className="rounded-full bg-[#E07020]/10 px-2 py-0.5 text-[11px] font-semibold text-[#c9611a]">
                               {item.status}
                             </span>
                           ) : null}
@@ -189,14 +189,14 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
                             </span>
                           ) : null}
                         </div>
-                        <p className="mt-1 text-sm text-[#142033]/65">
+                        <p className="mt-1 text-sm text-[rgba(26,21,16,0.65)]">
                           {item.org_name} · {formatType(item.type)} · {item.deadline}
                         </p>
                         {item.location ? (
-                          <p className="mt-1 text-xs text-[#142033]/55">{item.location}</p>
+                          <p className="mt-1 text-xs text-[rgba(26,21,16,0.55)]">{item.location}</p>
                         ) : null}
                         {item.description ? (
-                          <p className="mt-2 text-sm leading-relaxed text-[#142033]/75">
+                          <p className="mt-2 text-sm leading-relaxed text-[rgba(26,21,16,0.72)]">
                             {item.description}
                           </p>
                         ) : null}
@@ -205,7 +205,7 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
                             {item.interest_tags.slice(0, 6).map((tag) => (
                               <span
                                 key={`${item.opp_id}-${tag}`}
-                                className="rounded-full bg-[#142033]/[0.04] px-2 py-0.5 text-[11px] text-[#142033]/70"
+                                className="rounded-full bg-[#FBF7F0] px-2 py-0.5 text-[11px] text-[rgba(26,21,16,0.70)]"
                               >
                                 {tag.replaceAll("_", " ")}
                               </span>
@@ -219,13 +219,13 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
                             href={applyHref}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 rounded-full bg-[#3A87B8] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#2F739E]"
+                            className="inline-flex items-center gap-1 rounded-full bg-[#0F3D2E] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#0A2A20]"
                           >
                             Open listing
                             <ChevronRight className="h-3.5 w-3.5" aria-hidden />
                           </a>
                         ) : (
-                          <span className="inline-flex items-center gap-1 rounded-full border border-[#142033]/15 px-3 py-1.5 text-xs font-semibold text-[#142033]/55">
+                          <span className="inline-flex items-center gap-1 rounded-full border border-[rgba(15,61,46,0.15)] px-3 py-1.5 text-xs font-semibold text-[rgba(26,21,16,0.55)]">
                             Link pending
                           </span>
                         )}
@@ -239,7 +239,7 @@ export function PublicOpportunitiesBoard({ items }: { items: OpportunityListing[
         ))}
 
         {filtered.length === 0 ? (
-          <p className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/60">
+          <p className="rounded-2xl border border-dashed border-[rgba(15,61,46,0.18)] bg-[#FBF7F0] p-6 text-sm text-[rgba(26,21,16,0.60)]">
             No opportunities match that search. Try another keyword or clear the type filter.
           </p>
         ) : null}
