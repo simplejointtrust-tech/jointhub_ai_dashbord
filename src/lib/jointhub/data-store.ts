@@ -93,6 +93,8 @@ type RawRecommendationBundle = {
     description?: string;
     eligible_countries?: string[];
     interest_overlap?: string[];
+    url?: string | null;
+    status?: string;
   }>;
   recommendation_sentence?: string;
 };
@@ -199,6 +201,8 @@ export function getRecommendationsMap(): Record<string, Recommendation[]> {
       is_scam_flag: item.is_scam_flag ?? false,
       description: item.description ?? `${item.type} from ${item.org_name}`,
       interest_overlap: item.interest_overlap ?? [],
+      url: item.url ?? null,
+      status: item.status,
     }));
   }
   return map;

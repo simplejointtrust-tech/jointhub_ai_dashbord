@@ -47,9 +47,9 @@ export default async function DashboardPage() {
 
   const recommendations =
     isAdmin && !focusStudentId
-      ? Object.values(recommendationsMap).flat().slice(0, 12)
+      ? Object.values(recommendationsMap).flat().slice(0, 40)
       : isMentor
-        ? Array.from(menteeIds).flatMap((id) => recommendationsMap[id] ?? []).slice(0, 12)
+        ? Array.from(menteeIds).flatMap((id) => recommendationsMap[id] ?? []).slice(0, 40)
         : (recommendationsMap[focusStudentId ?? ""] ?? []);
 
   const nlp =
