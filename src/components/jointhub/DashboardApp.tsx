@@ -196,7 +196,7 @@ function WhyRecommendedPanel({
   );
 }
 
-function opportunityWhyReasons(item: Recommendation, sentence: string | null): string[] {
+function opportunityWhyReasons(item: Recommendation): string[] {
   const reasons: string[] = [];
   reasons.push(
     `Match score ${formatPct(item.match_score)} from content-based cosine similarity against your interest vector and career stage.`,
@@ -209,12 +209,9 @@ function opportunityWhyReasons(item: Recommendation, sentence: string | null): s
         .join(", ")}.`,
     );
   }
-  if (sentence) {
-    reasons.push(`Personalised ranking note: ${sentence}`);
-  }
   reasons.push(`${item.type} opportunity from ${item.org_name} with deadline ${item.deadline}.`);
   if (item.is_verified) {
-    reasons.push("Verified opportunity in the Capstone catalogue.");
+    reasons.push("Verified opportunity on the JointHub Africa opportunity board.");
   }
   if (item.is_scam_flag) {
     reasons.push("Flagged for careful review before you apply.");
@@ -279,11 +276,9 @@ function riskWhyReasons(row: RiskRow): string[] {
 
 function OpportunitiesPanel({
   items,
-  sentence,
   onAskKay,
 }: {
   items: Recommendation[];
-  sentence: string | null;
   onAskKay?: (prompt: string) => void;
 }) {
   return (
@@ -293,11 +288,18 @@ function OpportunitiesPanel({
           <Sparkles className="mt-0.5 h-5 w-5 text-[#3A87B8]" aria-hidden />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#3A87B8]">
-              From the SimpleJoint opportunities sheet
+              Trusted Opportunities
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-[#142033]/80">
-              {sentence ??
-                "Live curated opportunities from the SimpleJoint shared sheet, ranked for your profile. Always confirm deadlines and eligibility on the official page."}
+            <h2 className="mt-1 text-lg font-semibold tracking-tight text-[#142033]">
+              Your Path to Growth Starts Here
+            </h2>
+            <p className="mt-1 text-sm font-medium leading-relaxed text-[#142033]/80">
+              Curated scholarships, fellowships, internships, and funding opportunities for African
+              Leaders.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
+              These opportunities are curated from the JointHub Africa opportunity board. Open each
+              official link to confirm deadlines and eligibility.
             </p>
           </div>
         </div>
@@ -305,7 +307,7 @@ function OpportunitiesPanel({
 
       <div className="grid gap-3">
         {items.map((item) => {
-          const reasons = opportunityWhyReasons(item, sentence);
+          const reasons = opportunityWhyReasons(item);
           const applyHref = item.url?.trim() || null;
           return (
             <article
@@ -2015,7 +2017,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           <MentorSessionsPanel sessions={data.mentorship.sessions} />
         ) : null}
         {tab === "opportunities" ? (
-          <OpportunitiesPanel items={data.recommendations} sentence={data.personalised_sentence} onAskKay={askKayAbout} />
+          <OpportunitiesPanel items={data.recommendations} onAskKay={askKayAbout} />
         ) : null}
         {tab === "mentors" ? (
           <MentorshipPanel
