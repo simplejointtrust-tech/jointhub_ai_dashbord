@@ -281,6 +281,14 @@ function OpportunitiesPanel({
   items: Recommendation[];
   onAskKay?: (prompt: string) => void;
 }) {
+  const sortedItems = useMemo(
+    () =>
+      items
+        .slice()
+        .sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: "base" })),
+    [items],
+  );
+
   return (
     <div className="space-y-4">
       <div className="rounded-2xl border border-[#3A87B8]/20 bg-gradient-to-r from-[#3A87B8]/10 to-white p-5">
@@ -306,7 +314,7 @@ function OpportunitiesPanel({
       </div>
 
       <div className="grid gap-3">
-        {items.map((item) => {
+        {sortedItems.map((item) => {
           const reasons = opportunityWhyReasons(item);
           const applyHref = item.url?.trim() || null;
           return (

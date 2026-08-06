@@ -90,13 +90,13 @@ export default function HomePage() {
               a mentor.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                href="https://jointhub.simplejoint.org/"
+              <Link
+                href="/opportunities"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#E07020] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9611a]"
               >
                 Explore Opportunities
                 <ArrowRight className="h-4 w-4" aria-hidden />
-              </a>
+              </Link>
             </div>
           </div>
 

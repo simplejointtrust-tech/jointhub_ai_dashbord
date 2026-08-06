@@ -4603,6 +4603,59 @@
     "status": "Listed"
   },
   {
+    "opp_id": "3fcd8ff3-1f61-9c8b-bee0-c83bad11679c",
+    "title": "Mountain Top",
+    "type": "opportunity",
+    "org_name": "Mountain Top",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai"
+    ],
+    "description": "Mountain Top — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": null,
+    "status": "Listed"
+  },
+  {
     "opp_id": "8b817336-4bb5-6bc7-f694-f196c7d75e4c",
     "title": "Movemeback",
     "type": "opportunity",
@@ -4710,59 +4763,6 @@
     "created_at": "2026-08-06T00:00:00Z",
     "location": "Global / Africa-focused",
     "url": "https://www.mulagofoundation.org/rainer-arnhold-fellows",
-    "status": "Listed"
-  },
-  {
-    "opp_id": "3fcd8ff3-1f61-9c8b-bee0-c83bad11679c",
-    "title": "Mountain Top",
-    "type": "opportunity",
-    "org_name": "Mountain Top",
-    "eligible_countries": [
-      "Rwanda",
-      "Kenya",
-      "Nigeria",
-      "Ghana",
-      "Uganda",
-      "South Africa",
-      "Senegal",
-      "Ethiopia"
-    ],
-    "eligible_fields": [
-      "data_ai"
-    ],
-    "eligible_career_stages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-    ],
-    "deadline": "Ongoing",
-    "interest_vector": [
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "interest_tags": [
-      "data_ai"
-    ],
-    "description": "Mountain Top — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
-    "is_verified": true,
-    "is_scam_flag": false,
-    "created_at": "2026-08-06T00:00:00Z",
-    "location": "Global / Africa-focused",
-    "url": null,
     "status": "Listed"
   },
   {

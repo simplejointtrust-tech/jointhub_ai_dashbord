@@ -171,7 +171,9 @@ export function getMentors(): MentorProfile[] {
 }
 
 export function getOpportunities(): OpportunityListing[] {
-  return readJson<OpportunityListing[]>("opportunities.json");
+  return readJson<OpportunityListing[]>("opportunities.json").slice().sort((a, b) =>
+    a.title.localeCompare(b.title, undefined, { sensitivity: "base" }),
+  );
 }
 
 export function getAuthUsers(): AuthUser[] {
