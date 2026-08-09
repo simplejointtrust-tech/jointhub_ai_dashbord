@@ -25,7 +25,7 @@ export const dynamic = "force-dynamic";
 export default async function DashboardPage() {
   const session = await getSessionUser();
   if (!session) {
-    redirect("/dashboard/login");
+    redirect("/login");
   }
 
   const isAdmin = session.role === "admin";

@@ -1866,7 +1866,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
 
   async function handleSignOut() {
     await fetch("/api/jointhub/auth", { method: "DELETE" });
-    router.push("/dashboard/login");
+    router.push("/login");
     router.refresh();
   }
 

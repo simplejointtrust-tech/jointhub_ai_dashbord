@@ -70,13 +70,13 @@ export default function HomePage() {
               ESL Mentors
             </Link>
             <Link
-              href="/dashboard/login"
+              href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login?role=mentor"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as Mentor
             </Link>
             <Link
-              href="/dashboard/login"
+              href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login?role=leader"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as Leader
@@ -256,7 +256,7 @@ export default function HomePage() {
             </ol>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/dashboard/login"
+                href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#0F3D2E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0A2A20]"
               >
                 Sign In

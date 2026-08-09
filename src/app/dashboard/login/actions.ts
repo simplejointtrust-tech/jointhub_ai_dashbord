@@ -3,14 +3,11 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { JOINTHUB_AUTH_COOKIE } from "@/lib/jointhub/auth";
+import {
+  authenticateDemoCredential,
+  findDemoCredential,
+} from "@/lib/jointhub/demo-credentials";
 import { findAuthUser } from "@/lib/jointhub/data-store";
-
-const DEMO_EMAILS = new Set([
-  "leader1@jointhub.demo",
-  "leader2@jointhub.demo",
-  "mentor1@jointhub.demo",
-  "admin@jointhub.demo",
-]);
 
 export type DemoSignInState = {
   error: string | null;
@@ -23,15 +20,31 @@ export async function signInDemoAccount(
   const email = String(formData.get("email") ?? "")
     .trim()
     .toLowerCase();
+  const password = String(formData.get("password") ?? "");
 
-  if (!email || !DEMO_EMAILS.has(email)) {
-    return {
-      error:
-        "Unknown demo account. Choose Leader, Mentor, or Admin from the list.",
-    };
+  // Prefer explicit password auth when provided; fall back to known demo emails for the quick picker.
+  let accountEmail = email;
+  if (password) {
+    const demo = authenticateDemoCredential(email, password);
+    if (!demo) {
+      return {
+        error:
+          "Invalid email or password. Use the Leader, Mentor, or Admin demo credentials.",
+      };
+    }
+    accountEmail = demo.email;
+  } else {
+    const known = findDemoCredential(email);
+    if (!known) {
+      return {
+        error:
+          "Unknown demo account. Choose Leader, Mentor, or Admin, or enter email and password on /login.",
+      };
+    }
+    accountEmail = known.email;
   }
 
-  const user = findAuthUser(email);
+  const user = findAuthUser(accountEmail);
   if (!user) {
     return {
       error:

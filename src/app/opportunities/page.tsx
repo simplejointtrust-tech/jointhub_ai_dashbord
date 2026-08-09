@@ -45,7 +45,7 @@ export default function OpportunitiesPage() {
               ESL Mentors
             </Link>
             <Link
-              href="/dashboard/login"
+              href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Sign In
@@ -70,7 +70,7 @@ export default function OpportunitiesPage() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/dashboard/login"
+                href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login?role=leader"
                 className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#E07020] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9611a]"
               >
                 Join as Leader
