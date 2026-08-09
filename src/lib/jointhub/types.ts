@@ -71,10 +71,15 @@ export type OpportunityListing = {
   deadline: string;
   interest_vector: number[];
   description: string;
-  description_embedding: number[];
+  description_embedding?: number[];
   is_verified: boolean;
   is_scam_flag: boolean;
   created_at: string;
+  /** Official listing URL from the curated opportunities sheet */
+  url?: string | null;
+  status?: string;
+  interest_tags?: string[];
+  location?: string;
 };
 
 export type Recommendation = {
@@ -88,6 +93,9 @@ export type Recommendation = {
   is_scam_flag?: boolean;
   description?: string;
   interest_overlap?: string[];
+  /** Official listing URL from the curated opportunities sheet */
+  url?: string | null;
+  status?: string;
 };
 
 export type MentorAssignment = {

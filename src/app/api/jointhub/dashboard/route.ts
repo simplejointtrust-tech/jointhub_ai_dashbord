@@ -92,9 +92,9 @@ export async function GET(request: Request) {
 
   const recommendations =
     isAdmin && !studentId
-      ? Object.values(recommendationsMap).flat().slice(0, 12)
+      ? Object.values(recommendationsMap).flat().slice(0, 40)
       : isMentor
-        ? Array.from(menteeIds).flatMap((id) => recommendationsMap[id] ?? []).slice(0, 12)
+        ? Array.from(menteeIds).flatMap((id) => recommendationsMap[id] ?? []).slice(0, 40)
         : (recommendationsMap[studentId ?? ""] ?? []);
 
   const nlp =
