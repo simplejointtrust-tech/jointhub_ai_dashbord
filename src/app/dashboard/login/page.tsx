@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { type FormEvent, useState } from "react";
+import { useActionState } from "react";
+import { type DemoSignInState, signInDemoAccount } from "./actions";
 
 const DEMO_ACCOUNTS = [
   { email: "leader1@jointhub.demo", label: "Leader 1 (student view)" },
@@ -11,35 +11,13 @@ const DEMO_ACCOUNTS = [
   { email: "admin@jointhub.demo", label: "Admin (full cohort)" },
 ];
 
-export default function DashboardLoginPage() {
-  const router = useRouter();
-  const [email, setEmail] = useState(DEMO_ACCOUNTS[0].email);
-  const [error, setError] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+const initialState: DemoSignInState = { error: null };
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setError(null);
-    setIsSubmitting(true);
-    try {
-      const response = await fetch("/api/jointhub/auth", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      const payload = (await response.json()) as { error?: string };
-      if (!response.ok) {
-        setError(payload.error ?? "Sign-in failed.");
-        return;
-      }
-      router.push("/dashboard");
-      router.refresh();
-    } catch {
-      setError("Could not reach the demo auth endpoint.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
+export default function DashboardLoginPage() {
+  const [state, formAction, isPending] = useActionState(
+    signInDemoAccount,
+    initialState,
+  );
 
   return (
     <main className="min-h-screen bg-[#F4F0E6] text-[#142033]">
@@ -62,10 +40,10 @@ export default function DashboardLoginPage() {
             </div>
           </div>
           <h1 className="mt-5 text-2xl font-semibold">Mentor Hub sign-in</h1>
-          <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
+          <p className="mt-2 text-sm leading-relaxed text-[#142033]/70]">
             Demo gate for the Mentor Hub dashboard. Choose a role:
           </p>
-          <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-[#142033]/70">
+          <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-[#142033]/70]">
             <li>
               <strong className="font-semibold text-[#142033]">Leader</strong> — scholar workspace,
               personal dropout risk, and AI Coach Kay.
@@ -79,7 +57,7 @@ export default function DashboardLoginPage() {
               risk and model analytics.
             </li>
           </ul>
-          <p className="mt-3 text-sm leading-relaxed text-[#142033]/70">
+          <p className="mt-3 text-sm leading-relaxed text-[#142033]/70]">
             Account signup stays at{" "}
             <Link
               href="/login"
@@ -90,15 +68,16 @@ export default function DashboardLoginPage() {
             .
           </p>
 
-          <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+          <form action={formAction} className="mt-6 space-y-4">
             <label className="block text-sm font-medium" htmlFor="email">
               Demo account
             </label>
             <select
               id="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
+              name="email"
+              defaultValue={DEMO_ACCOUNTS[0].email}
               className="w-full rounded-xl border border-[#142033]/15 px-3 py-2.5 text-sm outline-none focus:border-[#3A87B8]"
+              required
             >
               {DEMO_ACCOUNTS.map((account) => (
                 <option key={account.email} value={account.email}>
@@ -107,21 +86,21 @@ export default function DashboardLoginPage() {
               ))}
             </select>
 
-            {error ? (
+            {state.error ? (
               <p
                 className="rounded-lg bg-[#E0312E]/10 px-3 py-2 text-sm text-[#E0312E]"
                 role="alert"
               >
-                {error}
+                {state.error}
               </p>
             ) : null}
 
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isPending}
               className="w-full rounded-full bg-[#3A87B8] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2F739E] disabled:opacity-60"
             >
-              {isSubmitting ? "Signing in…" : "Enter dashboard"}
+              {isPending ? "Signing in…" : "Enter dashboard"}
             </button>
           </form>
         </div>

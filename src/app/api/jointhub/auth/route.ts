@@ -32,6 +32,7 @@ export async function POST(request: Request) {
   response.cookies.set(JOINTHUB_AUTH_COOKIE, user.email, {
     httpOnly: true,
     sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
     path: "/",
     maxAge: 60 * 60 * 24 * 14,
   });
@@ -43,6 +44,7 @@ export async function DELETE() {
   response.cookies.set(JOINTHUB_AUTH_COOKIE, "", {
     httpOnly: true,
     sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
     path: "/",
     maxAge: 0,
   });
