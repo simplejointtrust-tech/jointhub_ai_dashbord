@@ -1,26 +1,9 @@
 [
   {
-    "opp_id": "a7b59649-5724-4daa-844d-1c8734f4da75",
-    "title": "ALX AI Career Accelerator",
+    "opp_id": "8b000e74-1727-bda9-92b2-071ff36ea063",
+    "title": "1 Hotels Fellowship at E2",
     "type": "fellowship",
-    "org_name": "ALX Africa",
-    "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-    "eligible_fields": ["data_ai", "creative_tech"],
-    "eligible_career_stages": [2, 3, 4, 5, 6],
-    "deadline": "2026-08-30",
-    "interest_vector": [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "interest_tags": ["data_ai", "creative_tech"],
-    "description": "ALX AI Career Accelerator supports African youth in data_ai, creative_tech. Verified JointHub listing for leaders seeking fellowship opportunities.",
-    "is_verified": true,
-    "is_scam_flag": false,
-    "created_at": "2026-05-01T00:00:00Z",
-    "location": "Kigali"
-  },
-  {
-    "opp_id": "f98b0236-d9b6-4fb3-b919-fa0778436a37",
-    "title": "British Council Creative Enterprise",
-    "type": "grant",
-    "org_name": "British Council",
+    "org_name": "1 Hotels Fellowship at E2",
     "eligible_countries": [
       "Rwanda",
       "Kenya",
@@ -31,186 +14,161 @@
       "Senegal",
       "Ethiopia"
     ],
-    "eligible_fields": ["creative_tech", "music_arts", "media_film"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2026-09-09",
-    "interest_vector": [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
-    "interest_tags": ["creative_tech", "music_arts", "media_film"],
-    "description": "British Council Creative Enterprise supports African youth in creative_tech, music_arts, media_film. Verified JointHub listing for leaders seeking grant opportunities.",
-    "is_verified": true,
-    "is_scam_flag": false,
-    "created_at": "2026-05-02T00:00:00Z",
-    "location": "Lagos"
-  },
-  {
-    "opp_id": "0c2104d8-7e8e-4320-ab03-9649f7f972a5",
-    "title": "Mastercard Foundation Scholars Leadership Lab",
-    "type": "scholarship",
-    "org_name": "Mastercard Foundation",
-    "eligible_countries": [
-      "Rwanda",
-      "Kenya",
-      "Nigeria",
-      "Ghana",
-      "Uganda",
-      "South Africa",
-      "Senegal",
-      "Ethiopia"
+    "eligible_fields": [
+      "leadership"
     ],
-    "eligible_fields": ["leadership", "social_impact"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2026-09-19",
-    "interest_vector": [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
-    "interest_tags": ["leadership", "social_impact"],
-    "description": "Mastercard Foundation Scholars Leadership Lab supports African youth in leadership, social_impact. Verified JointHub listing for leaders seeking scholarship opportunities.",
-    "is_verified": true,
-    "is_scam_flag": false,
-    "created_at": "2026-05-03T00:00:00Z",
-    "location": "Remote"
-  },
-  {
-    "opp_id": "2a5c441d-e2b3-4d27-87b0-56a261d99a8c",
-    "title": "Google.org Impact Challenge Africa",
-    "type": "grant",
-    "org_name": "Google.org",
-    "eligible_countries": [
-      "Rwanda",
-      "Kenya",
-      "Nigeria",
-      "Ghana",
-      "Uganda",
-      "South Africa",
-      "Senegal",
-      "Ethiopia"
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
     ],
-    "eligible_fields": ["data_ai", "social_impact"],
-    "eligible_career_stages": [2, 3, 4, 5, 6],
-    "deadline": "2026-09-29",
-    "interest_vector": [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-    "interest_tags": ["data_ai", "social_impact"],
-    "description": "Google.org Impact Challenge Africa supports African youth in data_ai, social_impact. Verified JointHub listing for leaders seeking grant opportunities.",
-    "is_verified": true,
-    "is_scam_flag": false,
-    "created_at": "2026-05-04T00:00:00Z",
-    "location": "Lagos"
-  },
-  {
-    "opp_id": "7cbaead7-7fb5-40e4-8e48-c6ea404c1e54",
-    "title": "YALI Regional Leadership Center",
-    "type": "fellowship",
-    "org_name": "YALI",
-    "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-    "eligible_fields": ["leadership", "entrepreneurship"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2026-10-09",
-    "interest_vector": [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-    "interest_tags": ["leadership", "entrepreneurship"],
-    "description": "YALI Regional Leadership Center supports African youth in leadership, entrepreneurship. Verified JointHub listing for leaders seeking fellowship opportunities.",
-    "is_verified": true,
-    "is_scam_flag": false,
-    "created_at": "2026-05-05T00:00:00Z",
-    "location": "Hybrid"
-  },
-  {
-    "opp_id": "e18a5e7e-2d9d-4327-8da8-7992949e0e4e",
-    "title": "One Acre Fund Agri-Tech Internship",
-    "type": "internship",
-    "org_name": "One Acre Fund",
-    "eligible_countries": [
-      "Rwanda",
-      "Kenya",
-      "Nigeria",
-      "Ghana",
-      "Uganda",
-      "South Africa",
-      "Senegal",
-      "Ethiopia"
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
     ],
-    "eligible_fields": ["agri_food", "climate_env"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2026-10-19",
-    "interest_vector": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
-    "interest_tags": ["agri_food", "climate_env"],
-    "description": "One Acre Fund Agri-Tech Internship supports African youth in agri_food, climate_env. Verified JointHub listing for leaders seeking internship opportunities.",
-    "is_verified": true,
-    "is_scam_flag": false,
-    "created_at": "2026-05-06T00:00:00Z",
-    "location": "Remote"
-  },
-  {
-    "opp_id": "7288a0ad-d723-46e3-acd1-809b396ade0a",
-    "title": "Andela Technical Leadership Program",
-    "type": "fellowship",
-    "org_name": "Andela",
-    "eligible_countries": [
-      "Rwanda",
-      "Kenya",
-      "Nigeria",
-      "Ghana",
-      "Uganda",
-      "South Africa",
-      "Senegal",
-      "Ethiopia"
+    "interest_tags": [
+      "leadership"
     ],
-    "eligible_fields": ["data_ai", "creative_tech"],
-    "eligible_career_stages": [2, 3, 4, 5, 6],
-    "deadline": "2026-10-29",
-    "interest_vector": [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "interest_tags": ["data_ai", "creative_tech"],
-    "description": "Andela Technical Leadership Program supports African youth in data_ai, creative_tech. Verified JointHub listing for leaders seeking fellowship opportunities.",
+    "description": "1 Hotels Fellowship at E2 — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
     "is_verified": true,
     "is_scam_flag": false,
-    "created_at": "2026-05-07T00:00:00Z",
-    "location": "Hybrid"
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://e2.org/fellowship/",
+    "status": "Listed"
   },
   {
-    "opp_id": "30d29a14-4b05-4ce4-8472-1b81f17188b9",
-    "title": "Chevening Scholarship Pathway Workshop",
-    "type": "scholarship",
-    "org_name": "Chevening",
-    "eligible_countries": [
-      "Rwanda",
-      "Kenya",
-      "Nigeria",
-      "Ghana",
-      "Uganda",
-      "South Africa",
-      "Senegal",
-      "Ethiopia"
-    ],
-    "eligible_fields": ["leadership", "finance"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2026-11-08",
-    "interest_vector": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-    "interest_tags": ["leadership", "finance"],
-    "description": "Chevening Scholarship Pathway Workshop supports African youth in leadership, finance. Verified JointHub listing for leaders seeking scholarship opportunities.",
-    "is_verified": true,
-    "is_scam_flag": false,
-    "created_at": "2026-05-08T00:00:00Z",
-    "location": "Lagos"
-  },
-  {
-    "opp_id": "eb1cc6e0-31ef-4063-b273-fd864788d722",
-    "title": "ALU Ventures Seed Sprint",
+    "opp_id": "e28b6529-ccdb-af4a-5bce-aafa3648725a",
+    "title": "100x Impact Accelerator (London School of Economics)",
     "type": "accelerator",
-    "org_name": "ALU Ventures",
-    "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-    "eligible_fields": ["entrepreneurship", "creative_tech"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2026-11-18",
-    "interest_vector": [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "interest_tags": ["entrepreneurship", "creative_tech"],
-    "description": "ALU Ventures Seed Sprint supports African youth in entrepreneurship, creative_tech. Verified JointHub listing for leaders seeking accelerator opportunities.",
+    "org_name": "100x Impact Accelerator",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "entrepreneurship",
+      "social_impact",
+      "finance"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "interest_tags": [
+      "entrepreneurship",
+      "social_impact",
+      "finance"
+    ],
+    "description": "100x Impact Accelerator (London School of Economics) — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
     "is_verified": true,
     "is_scam_flag": false,
-    "created_at": "2026-05-09T00:00:00Z",
-    "location": "Lagos"
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://100ximpact.org",
+    "status": "Ongoing"
   },
   {
-    "opp_id": "6cdd4033-24e4-4e97-abdc-d98d762ed17f",
-    "title": "Ashoka Young Changemakers",
+    "opp_id": "047f3a61-d541-9e5f-c963-8686beb31179",
+    "title": "Accountability Lab",
+    "type": "network",
+    "org_name": "Accountability Lab",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Accountability Lab — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://accountabilitylab.org",
+    "status": "Ongoing"
+  },
+  {
+    "opp_id": "680e1201-435c-c850-2c25-27f826e7f16c",
+    "title": "Activate Fellowship",
     "type": "fellowship",
-    "org_name": "Ashoka",
+    "org_name": "Activate Fellowship",
     "eligible_countries": [
       "Rwanda",
       "Kenya",
@@ -221,22 +179,157 @@
       "Senegal",
       "Ethiopia"
     ],
-    "eligible_fields": ["social_impact", "leadership"],
-    "eligible_career_stages": [2, 3, 4, 5, 6],
-    "deadline": "2026-11-28",
-    "interest_vector": [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
-    "interest_tags": ["social_impact", "leadership"],
-    "description": "Ashoka Young Changemakers supports African youth in social_impact, leadership. Verified JointHub listing for leaders seeking fellowship opportunities.",
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Activate Fellowship — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
     "is_verified": true,
     "is_scam_flag": false,
-    "created_at": "2026-05-10T00:00:00Z",
-    "location": "Hybrid"
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.activate.org/the-fellowship",
+    "status": "Ongoing"
   },
   {
-    "opp_id": "c2a3da82-c8f2-4d0d-8565-ed0d46f4a491",
-    "title": "UN Women Digital Inclusion Fellowship",
+    "opp_id": "3c26d202-7999-12c8-673f-9694c8219784",
+    "title": "Acumen",
+    "type": "opportunity",
+    "org_name": "Acumen",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Acumen — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://acumen.org",
+    "status": "Ongoing"
+  },
+  {
+    "opp_id": "da2c287e-51da-7cf4-f0eb-f7e53ee69866",
+    "title": "African Leadership Academy",
+    "type": "programme",
+    "org_name": "African Leadership Academy",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "African Leadership Academy — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.africanleadershipacademy.org",
+    "status": "Ongoing"
+  },
+  {
+    "opp_id": "a75177ef-352a-4627-57eb-d2d2e6c3b395",
+    "title": "African Leadership Institute / Archbishop Tutu Leadership Fellowship",
     "type": "fellowship",
-    "org_name": "UN Women",
+    "org_name": "African Leadership Institute",
     "eligible_countries": [
       "Rwanda",
       "Kenya",
@@ -247,22 +340,49 @@
       "Senegal",
       "Ethiopia"
     ],
-    "eligible_fields": ["social_impact", "design_ux"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2026-12-08",
-    "interest_vector": [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
-    "interest_tags": ["social_impact", "design_ux"],
-    "description": "UN Women Digital Inclusion Fellowship supports African youth in social_impact, design_ux. Verified JointHub listing for leaders seeking fellowship opportunities.",
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "African Leadership Institute / Archbishop Tutu Leadership Fellowship — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
     "is_verified": true,
     "is_scam_flag": false,
-    "created_at": "2026-05-11T00:00:00Z",
-    "location": "Nairobi"
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://alinstitute.org",
+    "status": "Ongoing"
   },
   {
-    "opp_id": "a9d50b26-2407-4952-be56-841171e6e636",
-    "title": "African Development Bank Young Professionals",
-    "type": "job",
-    "org_name": "African Development Bank",
+    "opp_id": "ace60016-36f0-46a4-ffea-88f8250677a0",
+    "title": "African Leadership Network",
+    "type": "network",
+    "org_name": "African Leadership Network",
     "eligible_countries": [
       "Rwanda",
       "Kenya",
@@ -273,38 +393,6395 @@
       "Senegal",
       "Ethiopia"
     ],
-    "eligible_fields": ["finance", "leadership"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2026-12-18",
-    "interest_vector": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-    "interest_tags": ["finance", "leadership"],
-    "description": "African Development Bank Young Professionals supports African youth in finance, leadership. Verified JointHub listing for leaders seeking job opportunities.",
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "African Leadership Network — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
     "is_verified": true,
     "is_scam_flag": false,
-    "created_at": "2026-05-12T00:00:00Z",
-    "location": "Remote"
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://africanleadership.net",
+    "status": "Ongoing"
   },
   {
-    "opp_id": "954ba579-ac56-4b4a-a791-06ba9e060e6c",
-    "title": "Microsoft for Startups Founders Hub",
-    "type": "accelerator",
-    "org_name": "Microsoft for Startups",
-    "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-    "eligible_fields": ["entrepreneurship", "data_ai"],
-    "eligible_career_stages": [2, 3, 4, 5, 6],
-    "deadline": "2026-12-28",
-    "interest_vector": [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "interest_tags": ["entrepreneurship", "data_ai"],
-    "description": "Microsoft for Startups Founders Hub supports African youth in entrepreneurship, data_ai. Verified JointHub listing for leaders seeking accelerator opportunities.",
+    "opp_id": "fa531f49-aa86-84b0-5aa6-e12c63f22fd9",
+    "title": "African Leadership University",
+    "type": "programme",
+    "org_name": "African Leadership University",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "African Leadership University — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
     "is_verified": true,
     "is_scam_flag": false,
-    "created_at": "2026-05-13T00:00:00Z",
-    "location": "Kigali"
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.alueducation.com",
+    "status": "Ongoing"
   },
   {
-    "opp_id": "e98138be-56ed-4e21-91a8-4dbfe2d87303",
-    "title": "Tony Elumelu Entrepreneurship Programme",
+    "opp_id": "cd5e0001-451d-9715-b738-5d316f7e4866",
+    "title": "AIESEC",
+    "type": "opportunity",
+    "org_name": "AIESEC",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai"
+    ],
+    "description": "AIESEC — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://aiesec.org",
+    "status": "Ongoing"
+  },
+  {
+    "opp_id": "3c65fc13-e277-5fc0-8b56-1a6955188104",
+    "title": "AIF Banyan Impact Fellowship, India",
+    "type": "fellowship",
+    "org_name": "AIF Banyan Impact Fellowship, India",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai",
+      "social_impact",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai",
+      "social_impact",
+      "leadership"
+    ],
+    "description": "AIF Banyan Impact Fellowship, India — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://aif.org/fellowship/apply-for-service-in-india/",
+    "status": "Ongoing"
+  },
+  {
+    "opp_id": "5a9888fa-509a-8ef8-8598-bb8ae27d5e57",
+    "title": "AIM Research Program",
+    "type": "programme",
+    "org_name": "AIM Research Program",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai"
+    ],
+    "description": "AIM Research Program — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.aimresearchprogram.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "05322c77-f78b-85ec-43a1-5fe396c3687d",
+    "title": "An Africanist Perspective",
+    "type": "opportunity",
+    "org_name": "An Africanist Perspective",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "An Africanist Perspective — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.africanistperspective.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "b202d1d2-ea78-40e0-5a4b-568762b69f55",
+    "title": "Ann-Murray Brown (Monitoring and Evaluation Coach)",
+    "type": "opportunity",
+    "org_name": "Ann-Murray Brown",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Ann-Murray Brown (Monitoring and Evaluation Coach) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.linkedin.com/in/annmurraybrown/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "7a58ccb0-7f0f-dc44-d1e5-2241a1d13fee",
+    "title": "Apolitical Foundation",
+    "type": "opportunity",
+    "org_name": "Apolitical Foundation",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Apolitical Foundation — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://apoliticalfoundation.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "9c76c942-8272-cf22-de88-5047a42b70db",
+    "title": "Ashoka Changemakers",
+    "type": "opportunity",
+    "org_name": "Ashoka Changemakers",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Ashoka Changemakers — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.ashoka.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "e3642d55-84e6-d764-bff6-6a72921d9444",
+    "title": "Aspire Leaders Program (Formerly Crossroads Emerging Leaders Program)",
+    "type": "programme",
+    "org_name": "Aspire Leaders Program",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Aspire Leaders Program (Formerly Crossroads Emerging Leaders Program) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.aspireleaders.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "0c2beca8-37f4-8354-a649-df5cf9856842",
+    "title": "Atlas Corps",
+    "type": "opportunity",
+    "org_name": "Atlas Corps",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Atlas Corps — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://atlascorps.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "72a1eaa7-0d44-6505-1edf-dfdf2ec61c65",
+    "title": "Awareness 360",
+    "type": "opportunity",
+    "org_name": "Awareness 360",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Awareness 360 — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.awareness360.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "a28860b6-aae0-ee35-15b9-59eb55eb97dc",
+    "title": "Awesome Foundation",
+    "type": "opportunity",
+    "org_name": "Awesome Foundation",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Awesome Foundation — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.awesomefoundation.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "4148f2d3-75a6-5e12-48ae-5367ccd03405",
+    "title": "Ban Ki-Moon Centre For Global Citizens / Global Citizen Scholarship Program",
+    "type": "scholarship",
+    "org_name": "Ban Ki-Moon Centre For Global Citizens",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Ban Ki-Moon Centre For Global Citizens / Global Citizen Scholarship Program — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://bankimooncentre.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "c26f5ca8-a9c1-5cd8-0e66-45bc69f6872a",
+    "title": "Baret Scholars",
+    "type": "scholarship",
+    "org_name": "Baret Scholars",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Baret Scholars — curated JointHub opportunity listing (Ongoing). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.baretscholars.org/",
+    "status": "Ongoing"
+  },
+  {
+    "opp_id": "92c45564-7633-040c-2b11-3f9dc6a79c21",
+    "title": "beVisioneers Fellowship",
+    "type": "fellowship",
+    "org_name": "beVisioneers Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "beVisioneers Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://bevisioneers.world/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "cc5987f9-1438-b1bb-4e60-0f7dccc41238",
+    "title": "Camelback Fellowship",
+    "type": "fellowship",
+    "org_name": "Camelback Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Camelback Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.camelbackventures.org/fellowship/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "c80fc3db-f7a1-6c89-d663-1334a54b6dd2",
+    "title": "Catalyst 2030",
+    "type": "opportunity",
+    "org_name": "Catalyst 2030",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Catalyst 2030 — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://catalyst2030.net",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "0ab21a42-f950-88b5-d1cd-4a490bb7615f",
+    "title": "ChangemakerXchange / Possibilists",
+    "type": "opportunity",
+    "org_name": "ChangemakerXchange",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "ChangemakerXchange / Possibilists — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://changemakerxchange.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "438b6c4e-6bff-0130-0254-5fd6de32361c",
+    "title": "Charity Entrepreneurship / Ambitious Impact",
+    "type": "opportunity",
+    "org_name": "Charity Entrepreneurship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "entrepreneurship",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "entrepreneurship",
+      "social_impact"
+    ],
+    "description": "Charity Entrepreneurship / Ambitious Impact — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.charityentrepreneurship.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "19f0b174-9eb5-9588-c695-6d39a3705e46",
+    "title": "Charity Pot Fund",
     "type": "grant",
+    "org_name": "Charity Pot Fund",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Charity Pot Fund — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.lush.com/uk/en/a/charity-pot-funding-guidelines",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "1e8429a8-b54e-14f5-c181-b914d0024981",
+    "title": "Clinton Global Initiative University",
+    "type": "programme",
+    "org_name": "Clinton Global Initiative University",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Clinton Global Initiative University — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.clintonfoundation.org/clinton-global-initiative/meetings/cgi-university/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "834958c0-9cc4-cf78-1dbe-de24c837b81a",
+    "title": "CorpsAfrica",
+    "type": "opportunity",
+    "org_name": "CorpsAfrica",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "CorpsAfrica — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.corpsafrica.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2e1f9f70-7a5f-593e-7f50-0e525896203e",
+    "title": "D-Prize",
+    "type": "competition",
+    "org_name": "D-Prize",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "D-Prize — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.d-prize.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "26166174-41d2-0300-e3fe-341b9e58d317",
+    "title": "DAWN Fellowship for Young Women Feminists from the Global South",
+    "type": "fellowship",
+    "org_name": "DAWN Fellowship for Young Women Feminists from the Global South",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "DAWN Fellowship for Young Women Feminists from the Global South — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.dawnfeminist.org/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "7005abca-3e39-4c5a-5ff1-1a02987bb0bd",
+    "title": "Don Lavoie Fellowship",
+    "type": "fellowship",
+    "org_name": "Don Lavoie Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Don Lavoie Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.mercatus.org/students/don-lavoie-fellowship",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "051aebef-173e-af8b-3355-dfbe175a4ae8",
+    "title": "Duke of Edinburgh's Award",
+    "type": "competition",
+    "org_name": "Duke of Edinburgh's Award",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Duke of Edinburgh's Award — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.dofe.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "da34726d-6122-40bf-0a99-7b9e036f9107",
+    "title": "Echoing Green",
+    "type": "opportunity",
+    "org_name": "Echoing Green",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "climate_env"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "climate_env"
+    ],
+    "description": "Echoing Green — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://echoinggreen.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "3c54293f-78d8-28a4-18c4-28a296ff3cad",
+    "title": "Elevate Prize Foundation",
+    "type": "competition",
+    "org_name": "Elevate Prize Foundation",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Elevate Prize Foundation — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://elevateprize.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "a6145c9b-bfcd-93b2-1141-f85274c5fa7b",
+    "title": "Emerging Leaders Foundation",
+    "type": "opportunity",
+    "org_name": "Emerging Leaders Foundation",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Emerging Leaders Foundation — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://elfafrica.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "ca2d722f-e4d1-2255-64a8-5d3dcb388082",
+    "title": "Emerging Public Leaders (EPL)",
+    "type": "opportunity",
+    "org_name": "Emerging Public Leaders",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Emerging Public Leaders (EPL) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://emergingpublicleaders.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "e853e8be-710f-8327-7b45-372daa74a96a",
+    "title": "Enactus",
+    "type": "opportunity",
+    "org_name": "Enactus",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Enactus — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://enactus.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "f4b0ab2a-3db0-78d9-66f8-eba536d8e710",
+    "title": "Endeavor",
+    "type": "opportunity",
+    "org_name": "Endeavor",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Endeavor — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://endeavor.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "96b90adf-b3ea-a6d4-30fe-43deac9adce9",
+    "title": "Euphrates Institute",
+    "type": "programme",
+    "org_name": "Euphrates Institute",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Euphrates Institute — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://euphrates.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "6d7701cf-f0bc-e69b-d922-b20266d8cbfb",
+    "title": "Fito Network",
+    "type": "network",
+    "org_name": "Fito Network",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Fito Network — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.fito.network/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "1ca1153c-f023-91ad-9b7f-cf96224bc956",
+    "title": "Fiverr",
+    "type": "opportunity",
+    "org_name": "Fiverr",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Fiverr — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.fiverr.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "cc144e65-6b49-8173-0879-1cde6c21f5e6",
+    "title": "Ford Global Fellows",
+    "type": "fellowship",
+    "org_name": "Ford Global Fellows",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Ford Global Fellows — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.fordfoundation.org/work/investing-in-individuals/the-ford-global-fellowship/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "e0af36d7-ad4b-c3f9-3e84-8d1851653c37",
+    "title": "Fratelli Tutti Political School",
+    "type": "programme",
+    "org_name": "Fratelli Tutti Political School",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Fratelli Tutti Political School — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://fratellitutti.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "65e41354-a451-4777-3e43-61e6559e81f2",
+    "title": "Fulbright Foreign Student Program",
+    "type": "programme",
+    "org_name": "Fulbright Foreign Student Program",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Fulbright Foreign Student Program — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://foreign.fulbrightonline.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "41a3158f-1374-db7d-8235-88cadd201e56",
+    "title": "Fundable & Findable by Kevin L. Brown",
+    "type": "opportunity",
+    "org_name": "Fundable & Findable by Kevin L. Brown",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Fundable & Findable by Kevin L. Brown — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://kevinlbrown.substack.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "7c6e1aae-64fe-ba3c-7ecb-e400476483be",
+    "title": "Future Leaders in Action (FLIA) Fellowships",
+    "type": "fellowship",
+    "org_name": "Future Leaders in Action",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Future Leaders in Action (FLIA) Fellowships — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.futureleadersinaction.org/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "ee735696-1fe7-7325-9813-79857fb0394e",
+    "title": "Gandhi Fellowship / Piramal School of Leadership / Kaivalya Education Foundation",
+    "type": "fellowship",
+    "org_name": "Gandhi Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai",
+      "leadership"
+    ],
+    "description": "Gandhi Fellowship / Piramal School of Leadership / Kaivalya Education Foundation — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.gandhifellowship.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "66690821-e1cc-b247-e694-210f616971d2",
+    "title": "Giddy2School Global Leadership Fellowship",
+    "type": "fellowship",
+    "org_name": "Giddy2School Global Leadership Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Giddy2School Global Leadership Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.giddy2school.org/projects/global-leadership-fellowship",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "680b8a06-29c9-a852-edfa-f5882099de91",
+    "title": "Global Citizen / Cisco Youth Leadership Award / Global Citizen Fellows",
+    "type": "fellowship",
+    "org_name": "Global Citizen",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Global Citizen / Cisco Youth Leadership Award / Global Citizen Fellows — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.globalcitizen.org/en/programs/global-citizen-prize/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "c3a7f004-9a01-befa-ae9e-5d8a768bb27c",
+    "title": "Global Citizen Year / Take Action Lab",
+    "type": "network",
+    "org_name": "Global Citizen Year",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Global Citizen Year / Take Action Lab — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.globalcitizenyear.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "71497bec-77dc-11b1-1651-ba57a886efca",
+    "title": "Global Development Incubator",
+    "type": "accelerator",
+    "org_name": "Global Development Incubator",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "entrepreneurship"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "entrepreneurship"
+    ],
+    "description": "Global Development Incubator — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://globaldevincubator.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "295f77d4-28d3-15e4-8364-63c8625321fd",
+    "title": "Global Good Fund Fellowship",
+    "type": "fellowship",
+    "org_name": "Global Good Fund Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Global Good Fund Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://globalgoodfund.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "ba2086dc-33a4-b70d-01c2-79e3a8bd8b37",
+    "title": "Global Health Corps",
+    "type": "opportunity",
+    "org_name": "Global Health Corps",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "health"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "health"
+    ],
+    "description": "Global Health Corps — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://ghcorps.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "3012e790-7d12-e7cb-f5a9-23538d84c1e4",
+    "title": "Global Impact Hub",
+    "type": "network",
+    "org_name": "Global Impact Hub",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "social_impact"
+    ],
+    "description": "Global Impact Hub — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://impacthub.net",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "4c257c66-79c2-0e12-8d85-b2601881bd0d",
+    "title": "Global Leadership Challenge Oxford",
+    "type": "competition",
+    "org_name": "Global Leadership Challenge Oxford",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Global Leadership Challenge Oxford — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.globaleadershipchallenge.com",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "31999e15-9e1c-f1aa-66e5-71a454de2346",
+    "title": "Global Philanthropy Alliance",
+    "type": "opportunity",
+    "org_name": "Global Philanthropy Alliance",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Global Philanthropy Alliance — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.globalphilanthropyalliance.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "921294f9-118a-a540-e4d2-9310141404f8",
+    "title": "GlobalGiving",
+    "type": "opportunity",
+    "org_name": "GlobalGiving",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "GlobalGiving — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.globalgiving.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "c81b452f-7e0b-2f61-a216-9bc80cc5d943",
+    "title": "Goldin Global Fellows",
+    "type": "fellowship",
+    "org_name": "Goldin Global Fellows",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Goldin Global Fellows — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.goldininstitute.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "34938bcf-7ffe-c792-fe4c-1e951bfe34c8",
+    "title": "GovTracker Fellowship, Nigeria",
+    "type": "fellowship",
+    "org_name": "GovTracker Fellowship, Nigeria",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "GovTracker Fellowship, Nigeria — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://yeshub.ng/apply-to-the-govtracker-fellowship-for-nigerians/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "d6c08999-2277-1729-32b1-4575150be800",
+    "title": "Halcyon",
+    "type": "opportunity",
+    "org_name": "Halcyon",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Halcyon — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://halcyonhouse.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "bec1df95-f364-5684-3b41-3f70a1dc058c",
+    "title": "imaGen Ventures",
+    "type": "opportunity",
+    "org_name": "imaGen Ventures",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "entrepreneurship"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "entrepreneurship"
+    ],
+    "description": "imaGen Ventures — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.generationunlimited.org/imagen",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2c0ce741-8ea6-c590-f483-1de10147b009",
+    "title": "Indian School of Democracy",
+    "type": "programme",
+    "org_name": "Indian School of Democracy",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Indian School of Democracy — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.indianschoolofdemocracy.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "d8f4fe7f-e2b1-8ff2-d18c-58ba092af2c5",
+    "title": "International Program in Public Health Leadership (IPPHL) Fellowship",
+    "type": "fellowship",
+    "org_name": "International Program in Public Health Leadership",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "health",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "health",
+      "leadership"
+    ],
+    "description": "International Program in Public Health Leadership (IPPHL) Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://globalhealth.washington.edu/education-training/international-program-public-health-leadership-ipphl",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "32b49e8a-24bc-8eb0-12f8-765154540c43",
+    "title": "IREX and US Department of State Programs (YALI, YSEALI, Community Engagement Exchange, etc.)",
+    "type": "programme",
+    "org_name": "IREX and US Department of State Programs",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "social_impact",
+      "music_arts"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "social_impact",
+      "music_arts"
+    ],
+    "description": "IREX and US Department of State Programs (YALI, YSEALI, Community Engagement Exchange, etc.) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.irex.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "b2a69a98-b935-acf1-6a34-bb7cdf5f40f1",
+    "title": "Jesuit Worldwide Learning (JWL)",
+    "type": "opportunity",
+    "org_name": "Jesuit Worldwide Learning",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "design_ux"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "design_ux"
+    ],
+    "description": "Jesuit Worldwide Learning (JWL) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.jwl.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "cf9149fb-165a-a3f7-ad9a-0c5daac28bd8",
+    "title": "Jobstoapply by Patrick Chandiga Justine",
+    "type": "opportunity",
+    "org_name": "Jobstoapply by Patrick Chandiga Justine",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Jobstoapply by Patrick Chandiga Justine — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://opportunities.jobstoapply.com/fellowships/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "481a1b25-6833-414e-77d1-0cdc6c5c02c1",
+    "title": "Junior Chamber International (JCI)",
+    "type": "opportunity",
+    "org_name": "Junior Chamber International",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Junior Chamber International (JCI) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://jci.cc",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "acfda017-05db-bd29-b6b8-39cae154d6ed",
+    "title": "Justice Funds",
+    "type": "opportunity",
+    "org_name": "Justice Funds",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "social_impact"
+    ],
+    "description": "Justice Funds — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://justicefunds.substack.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "98d6fa8b-c3ed-e788-0598-9ecb997b8c5f",
+    "title": "Kaiciid Dialogue Center",
+    "type": "opportunity",
+    "org_name": "Kaiciid Dialogue Center",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai"
+    ],
+    "description": "Kaiciid Dialogue Center — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.kaiciid.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "030ffc53-6abf-beb0-8192-c9c8ff8e696d",
+    "title": "Kectil Youth Leadership Program",
+    "type": "programme",
+    "org_name": "Kectil Youth Leadership Program",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Kectil Youth Leadership Program — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://kectil.com",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "5077dcc7-5d77-2b64-68c9-83594566c362",
+    "title": "Latin American Leadership Academy",
+    "type": "programme",
+    "org_name": "Latin American Leadership Academy",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Latin American Leadership Academy — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.latinamericanleadershipacademy.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "928241e7-4672-d002-09c9-a21ba98047a5",
+    "title": "LearnServe International",
+    "type": "opportunity",
+    "org_name": "LearnServe International",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "LearnServe International — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://learn-serve.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "6aed2819-cd29-c216-0aa0-800cd4afb434",
+    "title": "Local Pathways Fellowship",
+    "type": "fellowship",
+    "org_name": "Local Pathways Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Local Pathways Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.sustainabledevelopment.un.org/sdinaction/youth",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "98120b83-ed4f-8f11-6446-622a5b76a975",
+    "title": "Localized",
+    "type": "opportunity",
+    "org_name": "Localized",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Localized — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.localized.world/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2129e9d8-2c79-db62-76ce-a09d588ed8a1",
+    "title": "Mallory Erickson (Fundraising Coach)",
+    "type": "opportunity",
+    "org_name": "Mallory Erickson",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai"
+    ],
+    "description": "Mallory Erickson (Fundraising Coach) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://malloryerickson.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "f5fe6da9-a6cd-f9f8-4bfd-78b64684ca64",
+    "title": "Mama Cash",
+    "type": "opportunity",
+    "org_name": "Mama Cash",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Mama Cash — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.mamacash.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "7d8a6e10-a647-12b3-3a59-dd730cece7a2",
+    "title": "MasterCard Foundation Scholars",
+    "type": "scholarship",
+    "org_name": "MasterCard Foundation Scholars",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "MasterCard Foundation Scholars — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://mastercardfdn.org/all/scholars/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "210ea068-e3cb-ac89-f202-3f7ddcc0487d",
+    "title": "McCain Global Leaders",
+    "type": "opportunity",
+    "org_name": "McCain Global Leaders",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai",
+      "leadership"
+    ],
+    "description": "McCain Global Leaders — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.mccaininstitute.org/programs/leadership-programs/mccain-global-leaders/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "adc4b1bc-0046-8e27-2019-103fcad75018",
+    "title": "McKinsey Forward",
+    "type": "opportunity",
+    "org_name": "McKinsey Forward",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "McKinsey Forward — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.mckinsey.com/forward",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "0576fe03-3f7f-dd24-d106-a3434a6345e8",
+    "title": "Meridian International Center",
+    "type": "opportunity",
+    "org_name": "Meridian International Center",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Meridian International Center — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.meridian.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "364add89-5e79-b6fb-d2d5-b3d252eaeeba",
+    "title": "MILEAD Fellow / Moremi Initiative",
+    "type": "fellowship",
+    "org_name": "MILEAD Fellow",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "MILEAD Fellow / Moremi Initiative — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://moremiinitiative.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "bb9f74b6-540e-974c-0680-a894e857396d",
+    "title": "Milken Institute / Young Leaders' Circle",
+    "type": "programme",
+    "org_name": "Milken Institute",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Milken Institute / Young Leaders' Circle — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://milkeninstitute.org/centers/leadership-programs/young-leaders-circle",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "d2b5a41f-d8bd-7883-babe-efa4caf08043",
+    "title": "Millennium Campus Network / Millennium Fellowship",
+    "type": "fellowship",
+    "org_name": "Millennium Campus Network",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Millennium Campus Network / Millennium Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.millenniumfellows.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "3fcd8ff3-1f61-9c8b-bee0-c83bad11679c",
+    "title": "Mountain Top",
+    "type": "opportunity",
+    "org_name": "Mountain Top",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai"
+    ],
+    "description": "Mountain Top — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": null,
+    "status": "Listed"
+  },
+  {
+    "opp_id": "8b817336-4bb5-6bc7-f694-f196c7d75e4c",
+    "title": "Movemeback",
+    "type": "opportunity",
+    "org_name": "Movemeback",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Movemeback — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.movemeback.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "298da71c-9701-d421-f628-c3a6eb73ac1b",
+    "title": "Mulago Foundation / Rainer Arnhold Fellowship",
+    "type": "fellowship",
+    "org_name": "Mulago Foundation",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai",
+      "leadership"
+    ],
+    "description": "Mulago Foundation / Rainer Arnhold Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.mulagofoundation.org/rainer-arnhold-fellows",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "f87a2dab-8026-f0cb-7596-ae5362c6a4ea",
+    "title": "Obama Foundation: Africa Leaders Program / Voyager Scholarship",
+    "type": "scholarship",
+    "org_name": "Obama Foundation: Africa Leaders Program",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Obama Foundation: Africa Leaders Program / Voyager Scholarship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.obama.org/africa",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2019b97d-8085-a1b8-f16e-14b242217830",
+    "title": "One Young World",
+    "type": "opportunity",
+    "org_name": "One Young World",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "One Young World — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.oneyoungworld.com",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "f5a6cc1c-1e86-84d0-0b39-a1043d81c6fd",
+    "title": "Opportunities for Africans",
+    "type": "opportunity",
+    "org_name": "Opportunities for Africans",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Opportunities for Africans — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.opportunitiesforafricans.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "261b8009-b85e-4d76-8c20-f56ce9ec401c",
+    "title": "Opportunities for Youth (Fellowships, Grants, Jobs, Etc.)",
+    "type": "fellowship",
+    "org_name": "Opportunities for Youth",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Opportunities for Youth (Fellowships, Grants, Jobs, Etc.) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://opportunitiesforyouth.org/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "53259002-2571-0cc1-c0ac-af6385730f87",
+    "title": "Opportunity Desk",
+    "type": "opportunity",
+    "org_name": "Opportunity Desk",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Opportunity Desk — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://opportunitydesk.org/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "0cd7e7c3-4a63-0cee-9558-6b95e5b4a271",
+    "title": "OSV Fellowship and Grant Program",
+    "type": "fellowship",
+    "org_name": "OSV Fellowship and Grant Program",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "OSV Fellowship and Grant Program — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.osv.llc/oshaughnessy-fellowships",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "051cc4a7-4833-bf62-f270-7953b4828284",
+    "title": "OYA Opportunities",
+    "type": "opportunity",
+    "org_name": "OYA Opportunities",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "OYA Opportunities — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://oyaop.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "52144900-9a25-8a6d-853a-4e8ec0bf56ea",
+    "title": "Princeton in Africa / Latin America",
+    "type": "opportunity",
+    "org_name": "Princeton in Africa",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Princeton in Africa / Latin America — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.princetoninafrica.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "5a1e276e-248e-5f77-af38-8211e40c5ba5",
+    "title": "ProFellow",
+    "type": "fellowship",
+    "org_name": "ProFellow",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "ProFellow — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.profellow.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2499bb6c-70ac-63c7-6935-2204452e0b5f",
+    "title": "Queen's University Jim Leech Mastercard Foundation Fellowship on Entrepreneurship",
+    "type": "fellowship",
+    "org_name": "Queen's University Jim Leech Mastercard Foundation Fellowship on Entrepreneurshi",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "entrepreneurship",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "entrepreneurship",
+      "leadership"
+    ],
+    "description": "Queen's University Jim Leech Mastercard Foundation Fellowship on Entrepreneurship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.queensu.ca/innovationcentre/jim-leech-mastercard-foundation-fellowship-entrepreneurship",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "326a7c0c-839c-1088-cc5e-225963c612b1",
+    "title": "Quest Fellowship Program",
+    "type": "fellowship",
+    "org_name": "Quest Fellowship Program",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Quest Fellowship Program — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://airtable.com/app3084mcp3w7Z14Z/pagFniLOfBQJOMzHh/form",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "197c0e61-260c-844e-bab0-b85a21874c10",
+    "title": "Re-Earth Initiative",
+    "type": "opportunity",
+    "org_name": "Re-Earth Initiative",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "music_arts"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "music_arts"
+    ],
+    "description": "Re-Earth Initiative — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.reearthin.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "47e212bd-e843-0892-a78b-1e8a187cc79a",
+    "title": "Reimagine Responsible Enterprises (RRE) Fellowship",
+    "type": "fellowship",
+    "org_name": "Reimagine Responsible Enterprises",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "entrepreneurship",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "entrepreneurship",
+      "leadership"
+    ],
+    "description": "Reimagine Responsible Enterprises (RRE) Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://tii.alcindia.org/reimagine_farmer_enterprises/index.php",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "79975350-f0d9-1fcd-f083-1b1deeb8908c",
+    "title": "Remote Africa",
+    "type": "opportunity",
+    "org_name": "Remote Africa",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Remote Africa — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://remoteafrica.io/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "aefa3baa-1a47-0641-138f-e8c09bb42456",
+    "title": "Remote4Africa",
+    "type": "opportunity",
+    "org_name": "Remote4Africa",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Remote4Africa — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://remote4africa.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "5639cf9f-65ad-d780-c133-2cbf002a69bc",
+    "title": "Resolution Project",
+    "type": "opportunity",
+    "org_name": "Resolution Project",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Resolution Project — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://resolutionproject.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "361cef2a-3ac7-53a9-dc65-72a46143174f",
+    "title": "Restless Development / The Youth Collective",
+    "type": "opportunity",
+    "org_name": "Restless Development",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Restless Development / The Youth Collective — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://restlessdevelopment.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "9869eb59-82cb-72b4-5e3e-9022e5725262",
+    "title": "Restless Development / Youth Collective",
+    "type": "opportunity",
+    "org_name": "Restless Development",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Restless Development / Youth Collective — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://restlessdevelopment.org/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "9c338005-2408-87fe-963e-72a9935bd99d",
+    "title": "Ripple Fellowship",
+    "type": "fellowship",
+    "org_name": "Ripple Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Ripple Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.fellowship.rippleventures.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2ee9b219-c9ed-d84f-7b71-9f3f5ca2cde2",
+    "title": "RIVET",
+    "type": "opportunity",
+    "org_name": "RIVET",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "RIVET — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://discord.gg/2nGz9bagF5",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "a720b25f-7d99-9004-1996-281e43f522ff",
+    "title": "Robert F. Kennedy Human Rights Emergency Funding Support for Human Rights Defenders and Journalists",
+    "type": "opportunity",
+    "org_name": "Robert F. Kennedy Human Rights Emergency Funding Support for Human Rights Defend",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "social_impact",
+      "media_film"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "social_impact",
+      "media_film"
+    ],
+    "description": "Robert F. Kennedy Human Rights Emergency Funding Support for Human Rights Defenders and Journalists — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://rfkhumanrights.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "46317697-670d-749d-794a-b113b4bff85a",
+    "title": "Roddenberry Catalyst Fund",
+    "type": "grant",
+    "org_name": "Roddenberry Catalyst Fund",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Roddenberry Catalyst Fund — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://roddenberryfoundation.org/our-work/catalyst-fund/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "fb1c2c6e-87df-8b8c-5641-1fba8486a828",
+    "title": "Rotary International Peace Fellowships",
+    "type": "fellowship",
+    "org_name": "Rotary International Peace Fellowships",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Rotary International Peace Fellowships — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.rotary.org/en/our-programs/peace-fellowships",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "a4def71a-d2b4-7aee-771c-9e16c539b16e",
+    "title": "RubyOnRemote",
+    "type": "opportunity",
+    "org_name": "RubyOnRemote",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "RubyOnRemote — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://rubyonremote.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2d6b08cc-ff8c-c584-ddf3-428d68db6fe0",
+    "title": "Savvy Global Fellowship",
+    "type": "fellowship",
+    "org_name": "Savvy Global Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Savvy Global Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://savvyfellows.com",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "83a195f8-ada7-3616-eb02-fe97515694aa",
+    "title": "Scholarship Abroad",
+    "type": "scholarship",
+    "org_name": "Scholarship Abroad",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Scholarship Abroad — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://opportunityportal.info/  and https://www.linkedin.com/company/scholarshippk/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "43e1b992-9017-4d36-5c46-7b43ee9055b0",
+    "title": "Scholarship Region",
+    "type": "scholarship",
+    "org_name": "Scholarship Region",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Scholarship Region — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.scholarshipregion.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "7b9ec0f2-a89c-65cb-78a3-8986b9570f03",
+    "title": "SK Ventures",
+    "type": "opportunity",
+    "org_name": "SK Ventures",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "entrepreneurship"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "entrepreneurship"
+    ],
+    "description": "SK Ventures — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.skventuresgroup.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "c22e30d2-bcad-8239-9ae8-1ddf6b26a396",
+    "title": "Social Shifters",
+    "type": "opportunity",
+    "org_name": "Social Shifters",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "social_impact"
+    ],
+    "description": "Social Shifters — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://socialshifters.co",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2d066670-d0a5-52dc-6d72-4858e5c03f2e",
+    "title": "Solferino Academy / Limitless",
+    "type": "programme",
+    "org_name": "Solferino Academy",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Solferino Academy / Limitless — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://solferinoacademy.com",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "02fbeea1-ffc3-92d5-d39b-56b7d200cf22",
+    "title": "Spark MicroGrants",
+    "type": "grant",
+    "org_name": "Spark MicroGrants",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Spark MicroGrants — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://sparkmicrogrants.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "0c2c91d7-8094-2b91-bf96-2c562bac0fb4",
+    "title": "Sustainable Education and Leadership for Africa Fellowship (SELA)",
+    "type": "fellowship",
+    "org_name": "Sustainable Education and Leadership for Africa Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai",
+      "climate_env",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai",
+      "climate_env",
+      "leadership"
+    ],
+    "description": "Sustainable Education and Leadership for Africa Fellowship (SELA) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://primacyyouthdevelopmentinitiative.org/sela-fellowship/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "4ec65490-a5df-e269-2934-a2fec6cf1e74",
+    "title": "TechSoup",
+    "type": "opportunity",
+    "org_name": "TechSoup",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai"
+    ],
+    "description": "TechSoup — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://techsoup.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "8f0de8bb-4115-9108-9651-73627606d6a6",
+    "title": "The Bloom",
+    "type": "opportunity",
+    "org_name": "The Bloom",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "The Bloom — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://readtobloom.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "87e4505e-689c-86e8-be73-5457894ca3a1",
+    "title": "The Diana Award",
+    "type": "competition",
+    "org_name": "The Diana Award",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "The Diana Award — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://diana-award.org.uk",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "168f47ee-79e6-b342-cfa3-2c371834772d",
+    "title": "The Pollination Project",
+    "type": "opportunity",
+    "org_name": "The Pollination Project",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "The Pollination Project — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://thepollinationproject.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "90fe613e-5d5a-8611-19c6-d103ced42040",
+    "title": "Theirworld Global Youth Ambassador (GYA) Programme",
+    "type": "programme",
+    "org_name": "Theirworld Global Youth Ambassador",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Theirworld Global Youth Ambassador (GYA) Programme — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://theirworld.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "092602a1-2a8b-320e-83dd-00c8620023c4",
+    "title": "Tony Elumelu Foundation",
+    "type": "opportunity",
     "org_name": "Tony Elumelu Foundation",
     "eligible_countries": [
       "Rwanda",
@@ -316,22 +6793,51 @@
       "Senegal",
       "Ethiopia"
     ],
-    "eligible_fields": ["entrepreneurship", "agri_food"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2027-01-07",
-    "interest_vector": [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    "interest_tags": ["entrepreneurship", "agri_food"],
-    "description": "Tony Elumelu Entrepreneurship Programme supports African youth in entrepreneurship, agri_food. Verified JointHub listing for leaders seeking grant opportunities.",
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Tony Elumelu Foundation — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
     "is_verified": true,
     "is_scam_flag": false,
-    "created_at": "2026-05-14T00:00:00Z",
-    "location": "Lagos"
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.tonyelumelufoundation.org",
+    "status": "Listed"
   },
   {
-    "opp_id": "6d9ab813-2b2b-47f5-935d-1cb2bc23512c",
-    "title": "Suspicious Remote Crypto Internship",
-    "type": "internship",
-    "org_name": "Unknown Global LLC",
+    "opp_id": "32fb50c8-cbaa-f702-11e1-7f4b1040d63b",
+    "title": "Trinity Leadership Fellows Program",
+    "type": "fellowship",
+    "org_name": "Trinity Leadership Fellows Program",
     "eligible_countries": [
       "Rwanda",
       "Kenya",
@@ -342,15 +6848,1450 @@
       "Senegal",
       "Ethiopia"
     ],
-    "eligible_fields": ["finance", "data_ai"],
-    "eligible_career_stages": [1, 2, 3, 4, 5, 6, 7],
-    "deadline": "2027-01-17",
-    "interest_vector": [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-    "interest_tags": ["finance", "data_ai"],
-    "description": "Suspicious Remote Crypto Internship supports African youth in finance, data_ai. Verified JointHub listing for leaders seeking internship opportunities.",
-    "is_verified": false,
-    "is_scam_flag": true,
-    "created_at": "2026-05-15T00:00:00Z",
-    "location": "Nairobi"
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Trinity Leadership Fellows Program — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://trinitychurchnyc.org/community/how-we-partner/leadership-development/trinity-leadership-fellows",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "2504668e-6d54-3172-d77e-794a37529dd3",
+    "title": "Truly Remote",
+    "type": "opportunity",
+    "org_name": "Truly Remote",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Truly Remote — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://trulyremote.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "c47c4b38-7f45-6af8-f555-eef13a88fddf",
+    "title": "Ubuntu Leaders Academy",
+    "type": "programme",
+    "org_name": "Ubuntu Leaders Academy",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Ubuntu Leaders Academy — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://ubuntuleadersacademy.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "e79f1ec7-5dc1-cf3f-0346-405d6f6c7696",
+    "title": "UN Foundation Next Generation Fellows",
+    "type": "fellowship",
+    "org_name": "UN Foundation Next Generation Fellows",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "UN Foundation Next Generation Fellows — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://unfoundation.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "e4f668db-63ee-1bab-76ab-098f4d495381",
+    "title": "UNIDIR Women in AI Fellowship",
+    "type": "fellowship",
+    "org_name": "UNIDIR Women in AI Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai",
+      "leadership"
+    ],
+    "description": "UNIDIR Women in AI Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://unidir.org/call-for-applications-unidir-women-in-ai-fellowship/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "57652afe-c5be-11e7-f3f1-771751d9b1fb",
+    "title": "United People Global (UPG)",
+    "type": "opportunity",
+    "org_name": "United People Global",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "United People Global (UPG) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://unitedpeople.global",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "20586b91-ec3e-a30c-6e54-7c2c47916c60",
+    "title": "United Religions Initiative",
+    "type": "opportunity",
+    "org_name": "United Religions Initiative",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "United Religions Initiative — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://uri.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "9e6e425b-962d-4bd1-1f4a-53a44afc7e30",
+    "title": "UNLEASH",
+    "type": "opportunity",
+    "org_name": "UNLEASH",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "UNLEASH — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://unleash.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "076f4962-43e8-29b0-b0b6-64bfd4b306a4",
+    "title": "Upwork",
+    "type": "opportunity",
+    "org_name": "Upwork",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Upwork — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.upwork.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "6eb283dc-a453-cbca-10ee-ccfb6d12e6ad",
+    "title": "USA Development Foundation",
+    "type": "opportunity",
+    "org_name": "USA Development Foundation",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "USA Development Foundation — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://usadf.gov",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "dce7a598-b4d5-2280-77c6-b3dc990180ba",
+    "title": "Village Capital",
+    "type": "opportunity",
+    "org_name": "Village Capital",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "finance"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "interest_tags": [
+      "finance"
+    ],
+    "description": "Village Capital — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://vilcap.com",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "68abd530-eab2-26d8-a6bf-b21066e2291f",
+    "title": "Village Capital Applicant Resource Repository",
+    "type": "opportunity",
+    "org_name": "Village Capital Applicant Resource Repository",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "finance"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "interest_tags": [
+      "finance"
+    ],
+    "description": "Village Capital Applicant Resource Repository — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://docs.google.com/spreadsheets/d/1bwkUGMLy71q5hNkj68dImSja4XNqSajWY22AK0z2iqU/edit?usp=sharing",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "5d9e6d34-181e-0318-6236-572b786d7482",
+    "title": "Vital Voices Global Partnership / VV Engage / Voices That Inspire",
+    "type": "opportunity",
+    "org_name": "Vital Voices Global Partnership",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "music_arts"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "music_arts"
+    ],
+    "description": "Vital Voices Global Partnership / VV Engage / Voices That Inspire — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://vitalvoices.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "97ba2602-5136-e420-63ba-bb47201913ea",
+    "title": "Voluntary Service Overseas (VSO)",
+    "type": "opportunity",
+    "org_name": "Voluntary Service Overseas",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Voluntary Service Overseas (VSO) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://vsointernational.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "c1e4045a-4023-2bf5-0a15-e74b1c32dda3",
+    "title": "Vu Le, Nonprofit AF",
+    "type": "opportunity",
+    "org_name": "Vu Le, Nonprofit AF",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "social_impact"
+    ],
+    "description": "Vu Le, Nonprofit AF — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://nonprofitaf.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "b2acd6d6-55a4-9515-095f-a5ba4e822b01",
+    "title": "Watson's Mobility Fellowship",
+    "type": "fellowship",
+    "org_name": "Watson's Mobility Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Watson's Mobility Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://watson.is/ford-philanthropy-fellowship/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "520eaf82-dafd-c86e-da83-17c7dd5ccc53",
+    "title": "We Are Family Foundation / Global Teen Leaders",
+    "type": "opportunity",
+    "org_name": "We Are Family Foundation",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "We Are Family Foundation / Global Teen Leaders — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://wearefamilyfoundation.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "d0cd918a-4db7-1fa7-b190-86cd339b2391",
+    "title": "Western Union Foundation Fellowship",
+    "type": "fellowship",
+    "org_name": "Western Union Foundation Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Western Union Foundation Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.westernunionfoundation.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "d9bda421-492a-dbf6-bd1d-4befd31c49fb",
+    "title": "Women Emerging",
+    "type": "opportunity",
+    "org_name": "Women Emerging",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Women Emerging — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.womenemerging.org/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "daae0a52-c331-c25b-19bc-974b3240c3da",
+    "title": "Women Techsters Fellowship",
+    "type": "fellowship",
+    "org_name": "Women Techsters Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai",
+      "leadership"
+    ],
+    "description": "Women Techsters Fellowship — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.womentechsters.org/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "e1ba2044-2070-702f-899d-79150caae662",
+    "title": "World Connect",
+    "type": "opportunity",
+    "org_name": "World Connect",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "World Connect — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://worldconnect-us.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "5f804546-7268-5d92-9bc3-838db99acc1b",
+    "title": "World Economic Forum / Global Shapers / Young Global Leaders",
+    "type": "opportunity",
+    "org_name": "World Economic Forum",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "finance"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "finance"
+    ],
+    "description": "World Economic Forum / Global Shapers / Young Global Leaders — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://weforum.org",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "144a8ec6-0ac1-a888-093f-1b46b9d0e99c",
+    "title": "Yale Africa Initiative / Yale Young African Scholars",
+    "type": "scholarship",
+    "org_name": "Yale Africa Initiative",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "Yale Africa Initiative / Yale Young African Scholars — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://africa.yale.edu",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "3469338f-cac5-4377-e331-aed90595f412",
+    "title": "Yale World Fellows / International Leadership Center / Jackson School of Global Affairs",
+    "type": "fellowship",
+    "org_name": "Yale World Fellows",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "data_ai",
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "data_ai",
+      "leadership"
+    ],
+    "description": "Yale World Fellows / International Leadership Center / Jackson School of Global Affairs — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://jackson.yale.edu",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "0ca882f3-2e6f-573d-669c-1d26d88143e3",
+    "title": "Yes Hub (Fellowships, Internships, Scholarships, Etc.)",
+    "type": "fellowship",
+    "org_name": "Yes Hub",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Yes Hub (Fellowships, Internships, Scholarships, Etc.) — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://yeshub.ng/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "e029db0d-4d6d-3443-e939-7ed455f04012",
+    "title": "YOCILAB",
+    "type": "network",
+    "org_name": "YOCILAB",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership",
+      "social_impact"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership",
+      "social_impact"
+    ],
+    "description": "YOCILAB — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://yocilab.com/",
+    "status": "Listed"
+  },
+  {
+    "opp_id": "fdc74c4d-21c7-96c9-98c4-8329ff2422bc",
+    "title": "Young India Fellowship / Ashoka University",
+    "type": "fellowship",
+    "org_name": "Young India Fellowship",
+    "eligible_countries": [
+      "Rwanda",
+      "Kenya",
+      "Nigeria",
+      "Ghana",
+      "Uganda",
+      "South Africa",
+      "Senegal",
+      "Ethiopia"
+    ],
+    "eligible_fields": [
+      "leadership"
+    ],
+    "eligible_career_stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "deadline": "Ongoing",
+    "interest_vector": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "interest_tags": [
+      "leadership"
+    ],
+    "description": "Young India Fellowship / Ashoka University — curated JointHub opportunity listing (Listed). Sourced from the JointHub Africa opportunity board. Verify eligibility and deadlines on the official page before applying.",
+    "is_verified": true,
+    "is_scam_flag": false,
+    "created_at": "2026-08-06T00:00:00Z",
+    "location": "Global / Africa-focused",
+    "url": "https://www.ashoka.edu.in",
+    "status": "Listed"
   }
 ]

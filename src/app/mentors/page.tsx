@@ -63,7 +63,7 @@ export default function EslMentorsPage() {
               AM
             </span>
             <Link
-              href="/dashboard/login"
+              href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login"
               className="inline-flex min-h-10 items-center rounded-full bg-[#3A87B8] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#2F739E] sm:px-4"
             >
               Sign In
@@ -149,13 +149,13 @@ export default function EslMentorsPage() {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/dashboard/login"
+                href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login?role=leader"
                 className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#E0312E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#C42825]"
               >
                 Login to Mentor Hub
               </Link>
               <Link
-                href="/login?role=mentor"
+                href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login?role=mentor"
                 className="inline-flex min-h-11 items-center justify-center rounded-full border border-[rgba(20,32,51,0.14)] px-5 py-3 text-sm font-semibold text-[#142033] transition hover:bg-[#F4F0E6]"
               >
                 Join as Mentor

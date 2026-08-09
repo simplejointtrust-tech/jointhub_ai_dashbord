@@ -196,7 +196,7 @@ function WhyRecommendedPanel({
   );
 }
 
-function opportunityWhyReasons(item: Recommendation, sentence: string | null): string[] {
+function opportunityWhyReasons(item: Recommendation): string[] {
   const reasons: string[] = [];
   reasons.push(
     `Match score ${formatPct(item.match_score)} from content-based cosine similarity against your interest vector and career stage.`,
@@ -209,12 +209,9 @@ function opportunityWhyReasons(item: Recommendation, sentence: string | null): s
         .join(", ")}.`,
     );
   }
-  if (sentence) {
-    reasons.push(`Personalised ranking note: ${sentence}`);
-  }
   reasons.push(`${item.type} opportunity from ${item.org_name} with deadline ${item.deadline}.`);
   if (item.is_verified) {
-    reasons.push("Verified opportunity in the Capstone catalogue.");
+    reasons.push("Verified opportunity on the JointHub Africa opportunity board.");
   }
   if (item.is_scam_flag) {
     reasons.push("Flagged for careful review before you apply.");
@@ -279,13 +276,19 @@ function riskWhyReasons(row: RiskRow): string[] {
 
 function OpportunitiesPanel({
   items,
-  sentence,
   onAskKay,
 }: {
   items: Recommendation[];
-  sentence: string | null;
   onAskKay?: (prompt: string) => void;
 }) {
+  const sortedItems = useMemo(
+    () =>
+      items
+        .slice()
+        .sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: "base" })),
+    [items],
+  );
+
   return (
     <div className="space-y-4">
       <div className="rounded-2xl border border-[#3A87B8]/20 bg-gradient-to-r from-[#3A87B8]/10 to-white p-5">
@@ -293,19 +296,27 @@ function OpportunitiesPanel({
           <Sparkles className="mt-0.5 h-5 w-5 text-[#3A87B8]" aria-hidden />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#3A87B8]">
-              Curated for you
+              Trusted Opportunities
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-[#142033]/80">
-              {sentence ??
-                "Content-based cosine similarity ranks verified opportunities against your interest vector and career stage."}
+            <h2 className="mt-1 text-lg font-semibold tracking-tight text-[#142033]">
+              Your Path to Growth Starts Here
+            </h2>
+            <p className="mt-1 text-sm font-medium leading-relaxed text-[#142033]/80">
+              Curated scholarships, fellowships, internships, and funding opportunities for African
+              Leaders.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
+              These opportunities are curated from the JointHub Africa opportunity board. Open each
+              official link to confirm deadlines and eligibility.
             </p>
           </div>
         </div>
       </div>
 
       <div className="grid gap-3">
-        {items.map((item) => {
-          const reasons = opportunityWhyReasons(item, sentence);
+        {sortedItems.map((item) => {
+          const reasons = opportunityWhyReasons(item);
+          const applyHref = item.url?.trim() || null;
           return (
             <article
               key={item.opp_id}
@@ -317,7 +328,12 @@ function OpportunitiesPanel({
                     <h3 className="text-base font-semibold text-[#142033]">{item.title}</h3>
                     {item.is_verified ? (
                       <span className="rounded-full bg-[#1B5E20]/10 px-2 py-0.5 text-[11px] font-semibold text-[#1B5E20]">
-                        Verified
+                        Curated
+                      </span>
+                    ) : null}
+                    {item.status ? (
+                      <span className="rounded-full bg-[#3A87B8]/10 px-2 py-0.5 text-[11px] font-semibold text-[#2F739E]">
+                        {item.status}
                       </span>
                     ) : null}
                     {item.is_scam_flag ? (
@@ -327,7 +343,7 @@ function OpportunitiesPanel({
                     ) : null}
                   </div>
                   <p className="mt-1 text-sm text-[#142033]/65">
-                    {item.org_name} · {item.type} · deadline {item.deadline}
+                    {item.org_name} · {item.type} · {item.deadline}
                   </p>
                   {item.description ? (
                     <p className="mt-2 text-sm leading-relaxed text-[#142033]/75">{item.description}</p>
@@ -354,13 +370,21 @@ function OpportunitiesPanel({
                   >
                     {formatPct(item.match_score)} match
                   </span>
-                  <button
-                    type="button"
-                    className="inline-flex items-center gap-1 rounded-full border border-[#142033]/15 px-3 py-1.5 text-xs font-semibold text-[#142033] hover:border-[#3A87B8]/50"
-                  >
-                    Save / apply
-                    <ChevronRight className="h-3.5 w-3.5" aria-hidden />
-                  </button>
+                  {applyHref ? (
+                    <a
+                      href={applyHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 rounded-full bg-[#3A87B8] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#2F739E]"
+                    >
+                      Open listing
+                      <ChevronRight className="h-3.5 w-3.5" aria-hidden />
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-[#142033]/15 px-3 py-1.5 text-xs font-semibold text-[#142033]/55">
+                      Link pending
+                    </span>
+                  )}
                 </div>
               </div>
               <WhyRecommendedPanel
@@ -1842,7 +1866,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
 
   async function handleSignOut() {
     await fetch("/api/jointhub/auth", { method: "DELETE" });
-    router.push("/dashboard/login");
+    router.push("/login");
     router.refresh();
   }
 
@@ -2001,7 +2025,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           <MentorSessionsPanel sessions={data.mentorship.sessions} />
         ) : null}
         {tab === "opportunities" ? (
-          <OpportunitiesPanel items={data.recommendations} sentence={data.personalised_sentence} onAskKay={askKayAbout} />
+          <OpportunitiesPanel items={data.recommendations} onAskKay={askKayAbout} />
         ) : null}
         {tab === "mentors" ? (
           <MentorshipPanel

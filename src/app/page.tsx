@@ -4,9 +4,20 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const IMPACT = [
-  { label: "Scholarships & grants", value: "$158,000+" },
-  { label: "Students supported", value: "85+" },
-  { label: "Countries reached", value: "6+" },
+  {
+    value: "153+",
+    label: "Curated opportunities for matching",
+  },
+  {
+    value: "100%",
+    label:
+      "of our ESL community can confidently articulate their skills and experiences in an interview setting post-mentorship and coaching.",
+  },
+  {
+    value: "88%",
+    label:
+      "of ESL students feel equipped to lead missions, serve community, or volunteer projects after the program.",
+  },
 ];
 
 const PATHS = [
@@ -59,13 +70,13 @@ export default function HomePage() {
               ESL Mentors
             </Link>
             <Link
-              href="/dashboard/login"
+              href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login?role=mentor"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as Mentor
             </Link>
             <Link
-              href="/dashboard/login"
+              href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login?role=leader"
               className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0] sm:px-4"
             >
               Join as Leader
@@ -90,13 +101,13 @@ export default function HomePage() {
               a mentor.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a
-                href="https://jointhub.simplejoint.org/"
+              <Link
+                href="/opportunities"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#E07020] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c9611a]"
               >
                 Explore Opportunities
                 <ArrowRight className="h-4 w-4" aria-hidden />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -132,10 +143,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Impact — quiet numbers, not metric-card grid */}
+      {/* Impact — outcomes that fit long ESL evidence copy */}
       <section className="border-b border-[rgba(15,61,46,0.10)] bg-[#FBF7F0]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-end sm:justify-between sm:px-6">
-          <div className="max-w-md">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+          <div className="max-w-xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0F3D2E]/70">
               Impact to date
             </p>
@@ -143,14 +154,17 @@ export default function HomePage() {
               Real outcomes from SimpleJoint impact.
             </p>
           </div>
-          <dl className="grid grid-cols-3 gap-6 sm:gap-10">
+          <dl className="mt-8 grid gap-6 sm:grid-cols-3 sm:gap-8">
             {IMPACT.map((item) => (
-              <div key={item.label}>
-                <dt className="text-[11px] font-medium uppercase tracking-wide text-[rgba(26,21,16,0.5)]">
-                  {item.label}
-                </dt>
-                <dd className="mt-1 text-2xl font-semibold tabular-nums tracking-tight text-[#0F3D2E] sm:text-3xl">
+              <div
+                key={item.value + item.label.slice(0, 24)}
+                className="rounded-2xl border border-[rgba(15,61,46,0.10)] bg-white px-5 py-5"
+              >
+                <dt className="text-3xl font-semibold tabular-nums tracking-tight text-[#0F3D2E] sm:text-[2rem]">
                   {item.value}
+                </dt>
+                <dd className="mt-2 text-sm leading-relaxed text-[rgba(26,21,16,0.72)]">
+                  {item.label}
                 </dd>
               </div>
             ))}
@@ -242,7 +256,7 @@ export default function HomePage() {
             </ol>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/dashboard/login"
+                href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login"
                 className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#0F3D2E] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0A2A20]"
               >
                 Sign In

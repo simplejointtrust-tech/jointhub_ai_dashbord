@@ -30,7 +30,7 @@ export default function PrototypePage() {
               Home
             </Link>
             <Link
-              href="/dashboard/login"
+              href="/login"
               className="rounded-full bg-[#F4B942] px-4 py-2 text-sm font-semibold text-[#0D1B2A] hover:bg-[#e0a836]"
             >
               Sign in
