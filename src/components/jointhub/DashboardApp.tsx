@@ -37,6 +37,10 @@ import type {
   RiskRow,
   SessionLog,
 } from "@/lib/jointhub/types";
+import {
+  buildMentorSessionBookingUrl,
+  resolveMentorBookingContact,
+} from "@/lib/jointhub/booking";
 import { cn } from "@/lib/utils";
 import { MentorMatchQuiz } from "@/components/jointhub/MentorMatchQuiz";
 
@@ -496,11 +500,42 @@ function MentorshipPanel({
   const [bookingTopic, setBookingTopic] = useState("Career pathing");
   const [bookingNote, setBookingNote] = useState("");
   const [booked, setBooked] = useState<string | null>(null);
+  const [bookingError, setBookingError] = useState<string | null>(null);
   const mentorById = useMemo(
     () => new Map(mentors.map((mentor) => [mentor.mentor_id, mentor])),
     [mentors],
   );
   const assignedPortrait = assignment ? mentorById.get(assignment.mentor_id) : undefined;
+  const rosterContact = resolveMentorBookingContact(assignment?.mentor_id);
+  const bookingContact = {
+    calendlyUrl: assignedPortrait?.calendlyUrl ?? rosterContact.calendlyUrl,
+    bookingEmail: assignedPortrait?.bookingEmail ?? rosterContact.bookingEmail,
+  };
+  const bookingChannel = bookingContact.calendlyUrl ? "Calendly" : "Google Calendar";
+
+  function handleRequestSession() {
+    if (!assignment) {
+      setBookingError("Assign a mentor before requesting a session.");
+      return;
+    }
+    setBookingError(null);
+    const { url, channel } = buildMentorSessionBookingUrl({
+      mentorName: assignment.mentor_name,
+      topic: bookingTopic,
+      note: bookingNote,
+      calendlyUrl: bookingContact.calendlyUrl,
+      bookingEmail: bookingContact.bookingEmail,
+    });
+    const opened = window.open(url, "_blank", "noopener,noreferrer");
+    if (!opened) {
+      setBookingError("Allow pop-ups to open the booking page, or try again.");
+      return;
+    }
+    const channelLabel = channel === "calendly" ? "Calendly" : "Google Calendar";
+    setBooked(
+      `${bookingTopic}${bookingNote ? ` — ${bookingNote}` : ""} · opened in ${channelLabel}`,
+    );
+  }
 
   return (
     <div className="space-y-4">
@@ -636,11 +671,13 @@ function MentorshipPanel({
 
         <section className="rounded-2xl bg-[#142033] p-5 text-white shadow-sm">
           <div className="flex items-center gap-2">
-            <Calendar className="h-4 w-4 text-[#B47828]" aria-hidden />
+            <Calendar className="h-4 w-4 text-[#E0312E]" aria-hidden />
             <h3 className="text-sm font-semibold">Book a session</h3>
           </div>
           <p className="mt-2 text-sm text-white/70">
-            Request time with your assigned mentor. Demo mode logs the request in-session.
+            Send a session request to{" "}
+            {assignment ? assignment.mentor_name : "your assigned mentor"} through {bookingChannel}.
+            Your topic and note are included automatically.
           </p>
           <label className="mt-4 block text-xs font-medium text-white/70" htmlFor="topic">
             Topic
@@ -649,7 +686,7 @@ function MentorshipPanel({
             id="topic"
             value={bookingTopic}
             onChange={(event) => setBookingTopic(event.target.value)}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#B47828]"
+            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#E0312E]"
           >
             <option className="text-[#142033]">Career pathing</option>
             <option className="text-[#142033]">Application review</option>
@@ -664,19 +701,25 @@ function MentorshipPanel({
             value={bookingNote}
             onChange={(event) => setBookingNote(event.target.value)}
             rows={3}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#B47828]"
+            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#E0312E]"
             placeholder="What should we cover?"
           />
           <button
             type="button"
-            onClick={() => setBooked(`${bookingTopic}${bookingNote ? ` — ${bookingNote}` : ""}`)}
-            className="mt-4 w-full rounded-full bg-[#B47828] px-4 py-2.5 text-sm font-semibold text-[#142033] transition hover:bg-[#B47828]"
+            onClick={handleRequestSession}
+            disabled={!assignment}
+            className="mt-4 w-full rounded-full bg-[#E0312E] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#C42A27] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E0312E]/60 disabled:cursor-not-allowed disabled:opacity-60"
           >
             Request session
           </button>
+          {bookingError ? (
+            <p className="mt-3 rounded-lg bg-white/10 px-3 py-2 text-xs text-[#FFD0CE]" role="alert">
+              {bookingError}
+            </p>
+          ) : null}
           {booked ? (
-            <p className="mt-3 rounded-lg bg-white/10 px-3 py-2 text-xs text-[#B47828]">
-              Request logged: {booked}
+            <p className="mt-3 rounded-lg bg-white/10 px-3 py-2 text-xs text-white/80">
+              Request started: {booked}
             </p>
           ) : null}
         </section>

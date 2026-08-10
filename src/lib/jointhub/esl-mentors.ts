@@ -7,6 +7,10 @@ export type MentorCard = {
   image: string;
   /** Public LinkedIn profile URL opened by View profile */
   linkedInUrl: string;
+  /** Optional Calendly scheduling URL for Book a session */
+  calendlyUrl?: string;
+  /** Optional mentor email for Google Calendar session invites */
+  bookingEmail?: string;
   /** Tags used by AI Coach Kay for mentor matching */
   focusAreas: string[];
   learningStyles: Array<"hands-on" | "reflective" | "structured" | "conversational">;
@@ -81,6 +85,7 @@ export const ESL_MENTORS: MentorCard[] = [
     blurb: "Leadership acceleration, strategic thinking, and executive presence.",
     image: "/brand/mentors/isaiah-kporon.jpg",
     linkedInUrl: "https://www.linkedin.com/in/isaiahkporon",
+    bookingEmail: "simplejoint.info@gmail.com",
     focusAreas: ["leadership", "community", "career"],
     learningStyles: ["conversational", "reflective", "structured"],
     availability: ["weekdays", "evenings", "async"],
@@ -105,6 +110,7 @@ export const ESL_MENTORS: MentorCard[] = [
     blurb: "Idea validation, fundraising, and building resilient startups.",
     image: "/brand/mentors/michael-adeniyi.jpg",
     linkedInUrl: "https://www.linkedin.com/search/results/people/?keywords=Michael%20Adeniyi",
+    bookingEmail: "mentor1@jointhub.demo",
     focusAreas: ["startup", "leadership", "community"],
     learningStyles: ["hands-on", "conversational"],
     availability: ["evenings", "weekends", "async"],

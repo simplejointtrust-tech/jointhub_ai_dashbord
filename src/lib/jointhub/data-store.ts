@@ -63,6 +63,8 @@ function eslMentorProfiles(): MentorProfile[] {
     bio: mentor.blurb,
     image: mentor.image,
     linkedInUrl: mentor.linkedInUrl,
+    calendlyUrl: mentor.calendlyUrl,
+    bookingEmail: mentor.bookingEmail,
   }));
 }
 

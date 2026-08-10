@@ -58,6 +58,10 @@ export type MentorProfile = {
   /** Optional portrait path shared with the public ESL Mentors page */
   image?: string;
   linkedInUrl?: string;
+  /** Optional Calendly scheduling URL for session requests */
+  calendlyUrl?: string;
+  /** Optional mentor email for Google Calendar session invites */
+  bookingEmail?: string;
 };
 
 export type OpportunityListing = {
