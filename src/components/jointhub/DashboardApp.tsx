@@ -1899,39 +1899,41 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
 
   return (
     <div className="min-h-screen bg-[#F4F0E6] text-[#142033]">
-      <header className="border-b border-white/10 bg-black text-white">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
+      <header className="sticky top-0 z-30 border-b border-[rgba(15,61,46,0.10)] bg-white/95 text-[#0F3D2E] backdrop-blur-sm">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
           <div className="flex min-w-0 items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/brand/simplejoint-puzzle-logo.png"
-              alt="SimpleJoint Trust"
-              className="h-10 w-10 shrink-0 rounded-lg bg-black object-contain"
-              width={40}
-              height={40}
+              src="/brand/jointhub-logo.png"
+              alt="JointHub Africa"
+              className="h-10 w-10 shrink-0 object-contain sm:h-12 sm:w-12"
+              width={48}
+              height={48}
             />
             <div className="min-w-0">
-              <p className="truncate text-sm font-semibold tracking-tight text-white">Dashboard</p>
-              <p className="truncate text-xs text-white/65">{roleLabel}</p>
+              <p className="truncate text-sm font-semibold tracking-tight text-[#0F3D2E]">
+                JointHub Africa
+              </p>
+              <p className="truncate text-xs text-[rgba(26,21,16,0.55)]">{roleLabel}</p>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <Link
               href="/mentors"
-              className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/10"
+              className="inline-flex rounded-full bg-[#0F3D2E] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20]"
             >
               ESL Mentors
             </Link>
             <Link
               href="/"
-              className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/10"
+              className="inline-flex rounded-full border border-[rgba(15,61,46,0.18)] px-3 py-2 text-sm font-semibold text-[#0F3D2E] transition hover:border-[#0F3D2E]/40 hover:bg-[#FBF7F0]"
             >
               Home
             </Link>
             <button
               type="button"
               onClick={() => void handleSignOut()}
-              className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/15"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[#3A87B8] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#2F739E]"
             >
               <LogOut className="h-3.5 w-3.5" aria-hidden />
               Sign out

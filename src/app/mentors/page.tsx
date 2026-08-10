@@ -1,4 +1,3 @@
-import { Bell, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -13,58 +12,39 @@ export const metadata = {
 export default function EslMentorsPage() {
   return (
     <main className="min-h-screen bg-[#F4F0E6] text-[#142033]">
-      <header className="sticky top-0 z-30 border-b border-white/10 bg-black">
+      <header className="sticky top-0 z-30 border-b border-[rgba(15,61,46,0.10)] bg-white/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <Link href="/" className="flex min-w-0 items-center gap-2.5">
             <Image
-              src="/brand/simplejoint-puzzle-logo.png"
-              alt="SimpleJoint Trust"
-              width={48}
-              height={48}
-              className="h-10 w-10 shrink-0 rounded-xl bg-black object-contain p-0.5 sm:h-11 sm:w-11"
+              src="/brand/jointhub-logo.png"
+              alt="JointHub Africa"
+              width={56}
+              height={56}
+              className="h-12 w-12 shrink-0 object-contain sm:h-14 sm:w-14"
               priority
             />
             <div className="min-w-0 leading-tight">
-              <p className="truncate text-sm font-semibold tracking-tight text-white">
-                SimpleJoint Trust
+              <p className="truncate text-sm font-semibold tracking-tight text-[#0F3D2E]">
+                JointHub Africa
               </p>
-              <p className="truncate text-xs text-white/60">ESL Mentors · JointHub Africa</p>
+              <p className="truncate text-xs text-[rgba(26,21,16,0.55)]">
+                ESL Mentors · SimpleJoint Trust
+              </p>
             </div>
           </Link>
 
           <div className="flex flex-wrap items-center justify-end gap-2">
-            <div className="relative hidden min-w-[13rem] md:block">
-              <Search
-                className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-white/45"
-                aria-hidden
-              />
-              <label htmlFor="mentor-search" className="sr-only">
-                Search opportunities
-              </label>
-              <input
-                id="mentor-search"
-                type="search"
-                placeholder="Search opportunities"
-                className="h-10 w-full rounded-full border border-white/15 bg-white/10 pr-4 pl-9 text-sm text-white outline-none placeholder:text-white/45 focus:border-[#3A87B8] focus:ring-2 focus:ring-[rgba(58,135,184,0.35)]"
-              />
-            </div>
             <ThemeToggle />
-            <button
-              type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition hover:bg-white/15"
-              aria-label="Notifications"
+            <Link
+              href="/mentors"
+              className="inline-flex rounded-full bg-[#0F3D2E] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#0A2A20] sm:px-4"
+              aria-current="page"
             >
-              <Bell className="h-4 w-4" aria-hidden />
-            </button>
-            <span
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#E0312E] text-sm font-semibold text-white"
-              aria-hidden
-            >
-              AM
-            </span>
+              ESL Mentors
+            </Link>
             <Link
               href="https://staging.app.simplejoint-trust-4b4a02.cofounder.company/login"
-              className="inline-flex min-h-10 items-center rounded-full bg-[#3A87B8] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#2F739E] sm:px-4"
+              className="inline-flex rounded-full bg-[#3A87B8] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#2F739E] sm:px-4"
             >
               Sign In
             </Link>
