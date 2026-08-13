@@ -1,2309 +1,659 @@
 [
   {
-    "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
-    "full_name": "Amina Okoro",
-    "email": "scholar1@jointhub.demo",
+    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e",
+    "full_name": "Callie Davis",
+    "email": "esl02@jointhub.demo",
     "top5": [
       {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.5163,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "data_ai"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
+        "opp_id": "81c65c2b-adec-54e1-8f31-e0506abe4489",
         "title": "British Council Creative Enterprise Accelerator",
         "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.5053,
+        "type": "grant",
+        "deadline": "2026-09-19",
+        "match_score": 0.5422,
         "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "music_arts"]
+        "is_scam_flag": false,
+        "description": "Creative enterprise support for media and arts founders.",
+        "interest_overlap": [
+          "creative_tech",
+          "media_film",
+          "music_arts"
+        ]
       },
       {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
+        "opp_id": "a0c8fc72-5491-5b6b-aec9-b8003aca3938",
+        "title": "ESL CreativeTech Bootcamp — Create With AI",
+        "org_name": "SimpleJoint Trust",
+        "type": "bootcamp",
+        "deadline": "2026-08-20",
+        "match_score": 0.3615,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Hands-on AI creation bootcamp for Emerging Servant Leaders (ALU Kigali context).",
+        "interest_overlap": [
+          "creative_tech",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "87bd866a-cb83-5239-a0c7-5b1bce6ea857",
+        "title": "Youth Media Story Lab",
+        "org_name": "SoCreative",
         "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.4873,
+        "deadline": "2026-11-28",
+        "match_score": 0.3615,
         "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "data_ai"]
+        "is_scam_flag": false,
+        "description": "Storytelling fellowship for African youth media makers.",
+        "interest_overlap": [
+          "media_film",
+          "music_arts"
+        ]
       },
       {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
+        "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+        "title": "Mastercard Foundation Scholars Leadership Lab",
         "org_name": "Mastercard Foundation",
         "type": "scholarship",
-        "deadline": "2026-09-01",
-        "match_score": 0.2754,
+        "deadline": "2026-08-30",
+        "match_score": 0.2214,
         "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["data_ai"]
+        "is_scam_flag": false,
+        "description": "Leadership lab for African scholars building community impact.",
+        "interest_overlap": [
+          "leadership"
+        ]
       },
       {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.272,
+        "opp_id": "82d28fa4-ad8d-53c3-a982-afdc8a388e2e",
+        "title": "ALX Software Engineering Fellowship",
+        "org_name": "ALX Africa",
+        "type": "fellowship",
+        "deadline": "2026-09-09",
+        "match_score": 0.2214,
         "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["music_arts"]
+        "is_scam_flag": false,
+        "description": "Practical software pathway for African talent.",
+        "interest_overlap": [
+          "creative_tech"
+        ]
       }
     ],
-    "recommendation_sentence": "Based on your interest in data_ai, music_arts and your goal of data science, we recommend ALX Software Engineering Fellowship \u2014 52% match."
+    "recommendation_sentence": "Based on your interest in leadership, creative_tech and your goal around leadership, we recommend British Council Creative Enterprise Accelerator — 54% match."
   },
   {
-    "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a",
-    "full_name": "Kwame Mensah",
-    "email": "scholar2@jointhub.demo",
+    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c",
+    "full_name": "Desmond Tunyinko",
+    "email": "esl03@jointhub.demo",
     "top5": [
       {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["music_arts"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["health"]
-      },
-      {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["music_arts"]
-      },
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.1097,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      },
-      {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
+        "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+        "title": "Mastercard Foundation Scholars Leadership Lab",
         "org_name": "Mastercard Foundation",
         "type": "scholarship",
-        "deadline": "2026-09-01",
+        "deadline": "2026-08-30",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Leadership lab for African scholars building community impact.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "bc949980-6e08-56f6-818b-b6a25ae287c8",
+        "title": "Africa Climate Fellowship",
+        "org_name": "African Climate Foundation",
+        "type": "fellowship",
+        "deadline": "2026-09-29",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Climate leadership and project delivery across Africa.",
+        "interest_overlap": [
+          "climate_env",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "a4b36330-ccd2-539c-9443-553a292b403c",
+        "title": "Public Policy Leadership Seminar",
+        "org_name": "African Leadership University",
+        "type": "programme",
+        "deadline": "2026-10-29",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Policy and advocacy readiness for young African leaders.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "9bd4b313-9ed7-5b5a-a15f-f6a6be671b60",
+        "title": "JointHub Opportunity Discovery Sprint",
+        "org_name": "JointHub Africa",
+        "type": "programme",
+        "deadline": "2026-12-08",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Guided sprint to shortlist scholarships, mentors, and career moves.",
+        "interest_overlap": [
+          "entrepreneurship",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "42f328cb-e570-5b77-a802-1f40fbc305e3",
+        "title": "AgriFood Venture Studio",
+        "org_name": "AGRA partners",
+        "type": "accelerator",
+        "deadline": "2026-10-19",
+        "match_score": 0.2475,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Venture studio for agri-food and rural innovation.",
+        "interest_overlap": [
+          "entrepreneurship"
+        ]
+      }
+    ],
+    "recommendation_sentence": "Based on your interest in leadership, entrepreneurship and your goal around full stack, we recommend Mastercard Foundation Scholars Leadership Lab — 50% match."
+  },
+  {
+    "student_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4",
+    "full_name": "Lisa Swai",
+    "email": "esl06@jointhub.demo",
+    "top5": [
+      {
+        "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+        "title": "Mastercard Foundation Scholars Leadership Lab",
+        "org_name": "Mastercard Foundation",
+        "type": "scholarship",
+        "deadline": "2026-08-30",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Leadership lab for African scholars building community impact.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "a4b36330-ccd2-539c-9443-553a292b403c",
+        "title": "Public Policy Leadership Seminar",
+        "org_name": "African Leadership University",
+        "type": "programme",
+        "deadline": "2026-10-29",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Policy and advocacy readiness for young African leaders.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "9bd4b313-9ed7-5b5a-a15f-f6a6be671b60",
+        "title": "JointHub Opportunity Discovery Sprint",
+        "org_name": "JointHub Africa",
+        "type": "programme",
+        "deadline": "2026-12-08",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Guided sprint to shortlist scholarships, mentors, and career moves.",
+        "interest_overlap": [
+          "entrepreneurship",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "a0c8fc72-5491-5b6b-aec9-b8003aca3938",
+        "title": "ESL CreativeTech Bootcamp — Create With AI",
+        "org_name": "SimpleJoint Trust",
+        "type": "bootcamp",
+        "deadline": "2026-08-20",
+        "match_score": 0.4663,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Hands-on AI creation bootcamp for Emerging Servant Leaders (ALU Kigali context).",
+        "interest_overlap": [
+          "data_ai",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "c21a44e6-2840-5831-bd5c-726b95a5a1ad",
+        "title": "Inclusive Fintech Founders Lab",
+        "org_name": "Equity partners",
+        "type": "accelerator",
+        "deadline": "2026-11-18",
+        "match_score": 0.4041,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Founder lab for inclusive finance and fintech.",
+        "interest_overlap": [
+          "entrepreneurship",
+          "data_ai"
+        ]
+      }
+    ],
+    "recommendation_sentence": "Based on your interest in leadership, entrepreneurship and your goal around AI, we recommend Mastercard Foundation Scholars Leadership Lab — 50% match."
+  },
+  {
+    "student_id": "7912e963-9252-54a0-8543-262e566ff29c",
+    "full_name": "Blessing Matiro",
+    "email": "esl07@jointhub.demo",
+    "top5": [
+      {
+        "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+        "title": "Mastercard Foundation Scholars Leadership Lab",
+        "org_name": "Mastercard Foundation",
+        "type": "scholarship",
+        "deadline": "2026-08-30",
+        "match_score": 0.6226,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Leadership lab for African scholars building community impact.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "a0c8fc72-5491-5b6b-aec9-b8003aca3938",
+        "title": "ESL CreativeTech Bootcamp — Create With AI",
+        "org_name": "SimpleJoint Trust",
+        "type": "bootcamp",
+        "deadline": "2026-08-20",
+        "match_score": 0.4965,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Hands-on AI creation bootcamp for Emerging Servant Leaders (ALU Kigali context).",
+        "interest_overlap": [
+          "data_ai",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "a4b36330-ccd2-539c-9443-553a292b403c",
+        "title": "Public Policy Leadership Seminar",
+        "org_name": "African Leadership University",
+        "type": "programme",
+        "deadline": "2026-10-29",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Policy and advocacy readiness for young African leaders.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "9bd4b313-9ed7-5b5a-a15f-f6a6be671b60",
+        "title": "JointHub Opportunity Discovery Sprint",
+        "org_name": "JointHub Africa",
+        "type": "programme",
+        "deadline": "2026-12-08",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Guided sprint to shortlist scholarships, mentors, and career moves.",
+        "interest_overlap": [
+          "entrepreneurship",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "c21a44e6-2840-5831-bd5c-726b95a5a1ad",
+        "title": "Inclusive Fintech Founders Lab",
+        "org_name": "Equity partners",
+        "type": "accelerator",
+        "deadline": "2026-11-18",
+        "match_score": 0.4041,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Founder lab for inclusive finance and fintech.",
+        "interest_overlap": [
+          "entrepreneurship",
+          "data_ai"
+        ]
+      }
+    ],
+    "recommendation_sentence": "Based on your interest in leadership, entrepreneurship and your goal around AI, we recommend Mastercard Foundation Scholars Leadership Lab — 62% match."
+  },
+  {
+    "student_id": "ba194f0a-4ac8-595f-a11d-54a5c7a8387b",
+    "full_name": "CONFREY ALIANJI",
+    "email": "esl08@jointhub.demo",
+    "top5": [
+      {
+        "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+        "title": "Mastercard Foundation Scholars Leadership Lab",
+        "org_name": "Mastercard Foundation",
+        "type": "scholarship",
+        "deadline": "2026-08-30",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Leadership lab for African scholars building community impact.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "bc949980-6e08-56f6-818b-b6a25ae287c8",
+        "title": "Africa Climate Fellowship",
+        "org_name": "African Climate Foundation",
+        "type": "fellowship",
+        "deadline": "2026-09-29",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Climate leadership and project delivery across Africa.",
+        "interest_overlap": [
+          "climate_env",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "a4b36330-ccd2-539c-9443-553a292b403c",
+        "title": "Public Policy Leadership Seminar",
+        "org_name": "African Leadership University",
+        "type": "programme",
+        "deadline": "2026-10-29",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Policy and advocacy readiness for young African leaders.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "9bd4b313-9ed7-5b5a-a15f-f6a6be671b60",
+        "title": "JointHub Opportunity Discovery Sprint",
+        "org_name": "JointHub Africa",
+        "type": "programme",
+        "deadline": "2026-12-08",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Guided sprint to shortlist scholarships, mentors, and career moves.",
+        "interest_overlap": [
+          "entrepreneurship",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "42f328cb-e570-5b77-a802-1f40fbc305e3",
+        "title": "AgriFood Venture Studio",
+        "org_name": "AGRA partners",
+        "type": "accelerator",
+        "deadline": "2026-10-19",
+        "match_score": 0.2475,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Venture studio for agri-food and rural innovation.",
+        "interest_overlap": [
+          "entrepreneurship"
+        ]
+      }
+    ],
+    "recommendation_sentence": "Based on your interest in leadership, entrepreneurship and your goal around leadership, we recommend Mastercard Foundation Scholars Leadership Lab — 50% match."
+  },
+  {
+    "student_id": "6a79888b-55bf-5996-a851-820283a533dd",
+    "full_name": "Winnie",
+    "email": "esl11@jointhub.demo",
+    "top5": [
+      {
+        "opp_id": "a0c8fc72-5491-5b6b-aec9-b8003aca3938",
+        "title": "ESL CreativeTech Bootcamp — Create With AI",
+        "org_name": "SimpleJoint Trust",
+        "type": "bootcamp",
+        "deadline": "2026-08-20",
+        "match_score": 0.5422,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Hands-on AI creation bootcamp for Emerging Servant Leaders (ALU Kigali context).",
+        "interest_overlap": [
+          "creative_tech",
+          "data_ai",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+        "title": "Mastercard Foundation Scholars Leadership Lab",
+        "org_name": "Mastercard Foundation",
+        "type": "scholarship",
+        "deadline": "2026-08-30",
+        "match_score": 0.4427,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Leadership lab for African scholars building community impact.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "82d28fa4-ad8d-53c3-a982-afdc8a388e2e",
+        "title": "ALX Software Engineering Fellowship",
+        "org_name": "ALX Africa",
+        "type": "fellowship",
+        "deadline": "2026-09-09",
+        "match_score": 0.4427,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Practical software pathway for African talent.",
+        "interest_overlap": [
+          "creative_tech",
+          "data_ai"
+        ]
+      },
+      {
+        "opp_id": "a4b36330-ccd2-539c-9443-553a292b403c",
+        "title": "Public Policy Leadership Seminar",
+        "org_name": "African Leadership University",
+        "type": "programme",
+        "deadline": "2026-10-29",
+        "match_score": 0.4427,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Policy and advocacy readiness for young African leaders.",
+        "interest_overlap": [
+          "social_impact",
+          "leadership"
+        ]
+      },
+      {
+        "opp_id": "9bd4b313-9ed7-5b5a-a15f-f6a6be671b60",
+        "title": "JointHub Opportunity Discovery Sprint",
+        "org_name": "JointHub Africa",
+        "type": "programme",
+        "deadline": "2026-12-08",
+        "match_score": 0.4427,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Guided sprint to shortlist scholarships, mentors, and career moves.",
+        "interest_overlap": [
+          "entrepreneurship",
+          "leadership"
+        ]
+      }
+    ],
+    "recommendation_sentence": "Based on your interest in leadership, creative_tech and your goal around leadership, we recommend ESL CreativeTech Bootcamp — Create With AI — 54% match."
+  },
+  {
+    "student_id": "92562ba5-db8c-5c42-8b92-74c208014f07",
+    "full_name": "Calvin Felician Girambo",
+    "email": "esl13@jointhub.demo",
+    "top5": [
+      {
+        "opp_id": "c21a44e6-2840-5831-bd5c-726b95a5a1ad",
+        "title": "Inclusive Fintech Founders Lab",
+        "org_name": "Equity partners",
+        "type": "accelerator",
+        "deadline": "2026-11-18",
+        "match_score": 0.6062,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Founder lab for inclusive finance and fintech.",
+        "interest_overlap": [
+          "entrepreneurship",
+          "data_ai",
+          "finance"
+        ]
+      },
+      {
+        "opp_id": "82d28fa4-ad8d-53c3-a982-afdc8a388e2e",
+        "title": "ALX Software Engineering Fellowship",
+        "org_name": "ALX Africa",
+        "type": "fellowship",
+        "deadline": "2026-09-09",
+        "match_score": 0.495,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Practical software pathway for African talent.",
+        "interest_overlap": [
+          "creative_tech",
+          "data_ai"
+        ]
+      },
+      {
+        "opp_id": "a0c8fc72-5491-5b6b-aec9-b8003aca3938",
+        "title": "ESL CreativeTech Bootcamp — Create With AI",
+        "org_name": "SimpleJoint Trust",
+        "type": "bootcamp",
+        "deadline": "2026-08-20",
+        "match_score": 0.477,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Hands-on AI creation bootcamp for Emerging Servant Leaders (ALU Kigali context).",
+        "interest_overlap": [
+          "creative_tech",
+          "data_ai"
+        ]
+      },
+      {
+        "opp_id": "048583c9-b387-5151-a3d4-c571563901bd",
+        "title": "Health Innovation Challenge Africa",
+        "org_name": "WHO AFRO partners",
+        "type": "competition",
+        "deadline": "2026-10-09",
+        "match_score": 0.2475,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Challenge fund for youth health innovators.",
+        "interest_overlap": [
+          "data_ai"
+        ]
+      },
+      {
+        "opp_id": "42f328cb-e570-5b77-a802-1f40fbc305e3",
+        "title": "AgriFood Venture Studio",
+        "org_name": "AGRA partners",
+        "type": "accelerator",
+        "deadline": "2026-10-19",
+        "match_score": 0.2475,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Venture studio for agri-food and rural innovation.",
+        "interest_overlap": [
+          "entrepreneurship"
+        ]
+      }
+    ],
+    "recommendation_sentence": "Based on your interest in creative_tech, entrepreneurship and your goal around AI, we recommend Inclusive Fintech Founders Lab — 61% match."
+  },
+  {
+    "student_id": "21eb43a5-603e-50f6-9fa6-1b9397c5d31c",
+    "full_name": "Kobi Owulosua",
+    "email": "esl16@jointhub.demo",
+    "top5": [
+      {
+        "opp_id": "87bd866a-cb83-5239-a0c7-5b1bce6ea857",
+        "title": "Youth Media Story Lab",
+        "org_name": "SoCreative",
+        "type": "fellowship",
+        "deadline": "2026-11-28",
+        "match_score": 0.7,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Storytelling fellowship for African youth media makers.",
+        "interest_overlap": [
+          "social_impact",
+          "media_film",
+          "music_arts"
+        ]
+      },
+      {
+        "opp_id": "81c65c2b-adec-54e1-8f31-e0506abe4489",
+        "title": "British Council Creative Enterprise Accelerator",
+        "org_name": "British Council",
+        "type": "grant",
+        "deadline": "2026-09-19",
+        "match_score": 0.4667,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Creative enterprise support for media and arts founders.",
+        "interest_overlap": [
+          "media_film",
+          "music_arts"
+        ]
+      },
+      {
+        "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+        "title": "Mastercard Foundation Scholars Leadership Lab",
+        "org_name": "Mastercard Foundation",
+        "type": "scholarship",
+        "deadline": "2026-08-30",
+        "match_score": 0.2858,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Leadership lab for African scholars building community impact.",
+        "interest_overlap": [
+          "social_impact"
+        ]
+      },
+      {
+        "opp_id": "a4b36330-ccd2-539c-9443-553a292b403c",
+        "title": "Public Policy Leadership Seminar",
+        "org_name": "African Leadership University",
+        "type": "programme",
+        "deadline": "2026-10-29",
+        "match_score": 0.2858,
+        "is_verified": true,
+        "is_scam_flag": false,
+        "description": "Policy and advocacy readiness for young African leaders.",
+        "interest_overlap": [
+          "social_impact"
+        ]
+      },
+      {
+        "opp_id": "a0c8fc72-5491-5b6b-aec9-b8003aca3938",
+        "title": "ESL CreativeTech Bootcamp — Create With AI",
+        "org_name": "SimpleJoint Trust",
+        "type": "bootcamp",
+        "deadline": "2026-08-20",
         "match_score": 0.0,
         "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
+        "is_scam_flag": false,
+        "description": "Hands-on AI creation bootcamp for Emerging Servant Leaders (ALU Kigali context).",
         "interest_overlap": []
       }
     ],
-    "recommendation_sentence": "Based on your interest in health, music_arts and your goal of AI, we recommend British Council Creative Enterprise Accelerator \u2014 29% match."
-  },
-  {
-    "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b",
-    "full_name": "Chiamaka Diallo",
-    "email": "scholar3@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.3747,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.3674,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.3493,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.3402,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.3157,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["health"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in creative_tech, health and your goal of leadership, we recommend Design Leadership Residency \u2014 37% match."
-  },
-  {
-    "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
-    "full_name": "Thabo Nkrumah",
-    "email": "scholar4@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.4379,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["design_ux", "media_film"]
-      },
-      {
-        "opp_id": "ad02dd8a-0e6e-42e2-92e5-17019dc390dc",
-        "title": "Green Cities Design Sprint",
-        "org_name": "C40 Cities",
-        "type": "sprint",
-        "deadline": "2027-01-09",
-        "match_score": 0.4259,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["design_ux", "leadership"]
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.2896,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["leadership"]
-      },
-      {
-        "opp_id": "40ca8b6f-29c4-4b6a-a1a6-a49b3966ad11",
-        "title": "Youth Policy Leadership Summit",
-        "org_name": "AU Youth Envoy",
-        "type": "summit",
-        "deadline": "2026-12-30",
-        "match_score": 0.2653,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["leadership"]
-      },
-      {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
-        "org_name": "Mastercard Foundation",
-        "type": "scholarship",
-        "deadline": "2026-09-01",
-        "match_score": 0.2442,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["leadership"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in leadership, finance and your goal of data science, we recommend Design Leadership Residency \u2014 44% match."
-  },
-  {
-    "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833",
-    "full_name": "Fatou Abebe",
-    "email": "scholar5@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.5556,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["design_ux", "media_film"]
-      },
-      {
-        "opp_id": "40ca8b6f-29c4-4b6a-a1a6-a49b3966ad11",
-        "title": "Youth Policy Leadership Summit",
-        "org_name": "AU Youth Envoy",
-        "type": "summit",
-        "deadline": "2026-12-30",
-        "match_score": 0.4089,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["social_impact"]
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.3965,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["social_impact"]
-      },
-      {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
-        "org_name": "Mastercard Foundation",
-        "type": "scholarship",
-        "deadline": "2026-09-01",
-        "match_score": 0.3441,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["social_impact"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.2969,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["media_film"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in media_film, social_impact and your goal of leadership, we recommend Design Leadership Residency \u2014 56% match."
-  },
-  {
-    "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
-    "full_name": "Ibrahim Mwangi",
-    "email": "scholar6@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "e89f57ee-4097-4bdf-94f8-af995d3876af",
-        "title": "Inclusive Fintech Internship",
-        "org_name": "Flutterwave",
-        "type": "internship",
-        "deadline": "2026-11-10",
-        "match_score": 0.4462,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship"]
-      },
-      {
-        "opp_id": "8be6a27a-eba7-486d-b5ad-612f079c1861",
-        "title": "AgriTech for Africa Grant",
-        "org_name": "AGRA",
-        "type": "grant",
-        "deadline": "2026-10-21",
-        "match_score": 0.3345,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.3087,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["health"]
-      },
-      {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship"]
-      },
-      {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in entrepreneurship, health and your goal of machine learning, we recommend Inclusive Fintech Internship \u2014 45% match."
-  },
-  {
-    "student_id": "3b8dd516-f0c2-476d-88c9-29ba5731a0a1",
-    "full_name": "Nia Okafor",
-    "email": "scholar7@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.3256,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["leadership"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.2699,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["media_film"]
-      },
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.2529,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["leadership"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.0344,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in media_film, agri_food and your goal of film, we recommend JointHub Professional Mentor Programme \u2014 33% match."
-  },
-  {
-    "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
-    "full_name": "Oluwaseun Kamau",
-    "email": "scholar8@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.2948,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["social_impact"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.2744,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["music_arts"]
-      },
-      {
-        "opp_id": "ad02dd8a-0e6e-42e2-92e5-17019dc390dc",
-        "title": "Green Cities Design Sprint",
-        "org_name": "C40 Cities",
-        "type": "sprint",
-        "deadline": "2027-01-09",
-        "match_score": 0.2265,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["climate_env"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.2021,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["social_impact"]
-      },
-      {
-        "opp_id": "8be6a27a-eba7-486d-b5ad-612f079c1861",
-        "title": "AgriTech for Africa Grant",
-        "org_name": "AGRA",
-        "type": "grant",
-        "deadline": "2026-10-21",
-        "match_score": 0.2021,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["climate_env"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in finance, climate_env and your goal of AI, we recommend JointHub Professional Mentor Programme \u2014 29% match."
-  },
-  {
-    "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
-    "full_name": "Zuri Traore",
-    "email": "scholar9@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.3223,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["music_arts"]
-      },
-      {
-        "opp_id": "8be6a27a-eba7-486d-b5ad-612f079c1861",
-        "title": "AgriTech for Africa Grant",
-        "org_name": "AGRA",
-        "type": "grant",
-        "deadline": "2026-10-21",
-        "match_score": 0.3223,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["agri_food"]
-      },
-      {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.3223,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["music_arts"]
-      },
-      {
-        "opp_id": "43774bbe-3659-4a8c-8bf8-99d80fc933d1",
-        "title": "Africa Climate Leadership Fellowship",
-        "org_name": "UN Climate Hub",
-        "type": "fellowship",
-        "deadline": "2026-10-01",
-        "match_score": 0.3045,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["agri_food"]
-      },
-      {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.0469,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in music_arts, agri_food and your goal of film, we recommend British Council Creative Enterprise Accelerator \u2014 32% match."
-  },
-  {
-    "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
-    "full_name": "Kofi Dlamini",
-    "email": "scholar10@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.4667,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["media_film", "music_arts"]
-      },
-      {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.4667,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["media_film", "music_arts"]
-      },
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.2965,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["media_film"]
-      },
-      {
-        "opp_id": "e89f57ee-4097-4bdf-94f8-af995d3876af",
-        "title": "Inclusive Fintech Internship",
-        "org_name": "Flutterwave",
-        "type": "internship",
-        "deadline": "2026-11-10",
-        "match_score": 0.2333,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["finance"]
-      },
-      {
-        "opp_id": "ad02dd8a-0e6e-42e2-92e5-17019dc390dc",
-        "title": "Green Cities Design Sprint",
-        "org_name": "C40 Cities",
-        "type": "sprint",
-        "deadline": "2027-01-09",
-        "match_score": 0.1219,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in media_film, finance and your goal of design, we recommend British Council Creative Enterprise Accelerator \u2014 47% match."
-  },
-  {
-    "student_id": "4404bc54-5468-46aa-95da-738a784bb119",
-    "full_name": "Aisha Boateng",
-    "email": "scholar11@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.539,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "music_arts"]
-      },
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.4899,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "data_ai"]
-      },
-      {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.4667,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "data_ai"]
-      },
-      {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
-        "org_name": "Mastercard Foundation",
-        "type": "scholarship",
-        "deadline": "2026-09-01",
-        "match_score": 0.2806,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["data_ai"]
-      },
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.2713,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["creative_tech"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in creative_tech, data_ai and your goal of AI, we recommend British Council Creative Enterprise Accelerator \u2014 54% match."
-  },
-  {
-    "student_id": "afe20b59-9dab-4d2b-90cf-b55d23be4cf0",
-    "full_name": "Jelani Nkosi",
-    "email": "scholar12@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.272,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["music_arts"]
-      },
-      {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
-        "org_name": "Mastercard Foundation",
-        "type": "scholarship",
-        "deadline": "2026-09-01",
-        "match_score": 0.0421,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": []
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.0421,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.0364,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      },
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.0338,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": []
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in music_arts, agri_food and your goal of data science, we recommend British Council Creative Enterprise Accelerator \u2014 27% match."
-  },
-  {
-    "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
-    "full_name": "Mariam Adebayo",
-    "email": "scholar13@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
-        "org_name": "Mastercard Foundation",
-        "type": "scholarship",
-        "deadline": "2026-09-01",
-        "match_score": 0.6136,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["data_ai", "leadership"]
-      },
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.5922,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai", "leadership"]
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.3921,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["leadership"]
-      },
-      {
-        "opp_id": "40ca8b6f-29c4-4b6a-a1a6-a49b3966ad11",
-        "title": "Youth Policy Leadership Summit",
-        "org_name": "AU Youth Envoy",
-        "type": "summit",
-        "deadline": "2026-12-30",
-        "match_score": 0.3678,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["leadership"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.3221,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in leadership, data_ai and your goal of data science, we recommend Mastercard Foundation Scholars Program \u2014 61% match."
-  },
-  {
-    "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
-    "full_name": "Tunde Kone",
-    "email": "scholar14@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "8be6a27a-eba7-486d-b5ad-612f079c1861",
-        "title": "AgriTech for Africa Grant",
-        "org_name": "AGRA",
-        "type": "grant",
-        "deadline": "2026-10-21",
-        "match_score": 0.5023,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship", "climate_env"]
-      },
-      {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.4385,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship", "media_film"]
-      },
-      {
-        "opp_id": "ad02dd8a-0e6e-42e2-92e5-17019dc390dc",
-        "title": "Green Cities Design Sprint",
-        "org_name": "C40 Cities",
-        "type": "sprint",
-        "deadline": "2027-01-09",
-        "match_score": 0.4235,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["climate_env", "leadership"]
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.2849,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["leadership"]
-      },
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.2546,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["leadership"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in media_film, climate_env and your goal of film, we recommend AgriTech for Africa Grant \u2014 50% match."
-  },
-  {
-    "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
-    "full_name": "Sanaa Mugisha",
-    "email": "scholar15@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.4274,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "data_ai"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.4041,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai", "health"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.2744,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.0473,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in data_ai, health and your goal of AI, we recommend Women in AI Africa Fellowship \u2014 43% match."
-  },
-  {
-    "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
-    "full_name": "Bongani Okoro",
-    "email": "scholar16@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "ad02dd8a-0e6e-42e2-92e5-17019dc390dc",
-        "title": "Green Cities Design Sprint",
-        "org_name": "C40 Cities",
-        "type": "sprint",
-        "deadline": "2027-01-09",
-        "match_score": 0.2577,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["design_ux"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.2333,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["health"]
-      },
-      {
-        "opp_id": "e89f57ee-4097-4bdf-94f8-af995d3876af",
-        "title": "Inclusive Fintech Internship",
-        "org_name": "Flutterwave",
-        "type": "internship",
-        "deadline": "2026-11-10",
-        "match_score": 0.2333,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["finance"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.0723,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.0473,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in design_ux, health and your goal of AI, we recommend Green Cities Design Sprint \u2014 26% match."
-  },
-  {
-    "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
-    "full_name": "Lindiwe Mensah",
-    "email": "scholar17@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.4369,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "leadership"]
-      },
-      {
-        "opp_id": "43774bbe-3659-4a8c-8bf8-99d80fc933d1",
-        "title": "Africa Climate Leadership Fellowship",
-        "org_name": "UN Climate Hub",
-        "type": "fellowship",
-        "deadline": "2026-10-01",
-        "match_score": 0.4355,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["climate_env", "leadership"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.4041,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "media_film"]
-      },
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.4041,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["creative_tech", "media_film"]
-      },
-      {
-        "opp_id": "ad02dd8a-0e6e-42e2-92e5-17019dc390dc",
-        "title": "Green Cities Design Sprint",
-        "org_name": "C40 Cities",
-        "type": "sprint",
-        "deadline": "2027-01-09",
-        "match_score": 0.4041,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["climate_env", "leadership"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in climate_env, media_film and your goal of design, we recommend Women in AI Africa Fellowship \u2014 44% match."
-  },
-  {
-    "student_id": "c4031050-5ea6-46e6-8332-517a85594ea6",
-    "full_name": "Yaw Diallo",
-    "email": "scholar18@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.3327,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship"]
-      },
-      {
-        "opp_id": "8be6a27a-eba7-486d-b5ad-612f079c1861",
-        "title": "AgriTech for Africa Grant",
-        "org_name": "AGRA",
-        "type": "grant",
-        "deadline": "2026-10-21",
-        "match_score": 0.3223,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship"]
-      },
-      {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.3223,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship"]
-      },
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.3177,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["design_ux"]
-      },
-      {
-        "opp_id": "be7ddb44-5ed6-447e-a78a-cf8f8efa8497",
-        "title": "ALU Social Venture Seed Studio",
-        "org_name": "ALU",
-        "type": "accelerator",
-        "deadline": "2026-11-30",
-        "match_score": 0.3144,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["entrepreneurship"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in entrepreneurship, design_ux and your goal of film, we recommend ALX Software Engineering Fellowship \u2014 33% match."
-  },
-  {
-    "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
-    "full_name": "Adaeze Nkrumah",
-    "email": "scholar19@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "8be6a27a-eba7-486d-b5ad-612f079c1861",
-        "title": "AgriTech for Africa Grant",
-        "org_name": "AGRA",
-        "type": "grant",
-        "deadline": "2026-10-21",
-        "match_score": 0.4041,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship", "agri_food"]
-      },
-      {
-        "opp_id": "e89f57ee-4097-4bdf-94f8-af995d3876af",
-        "title": "Inclusive Fintech Internship",
-        "org_name": "Flutterwave",
-        "type": "internship",
-        "deadline": "2026-11-10",
-        "match_score": 0.4041,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship", "finance"]
-      },
-      {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.4041,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship", "music_arts"]
-      },
-      {
-        "opp_id": "43774bbe-3659-4a8c-8bf8-99d80fc933d1",
-        "title": "Africa Climate Leadership Fellowship",
-        "org_name": "UN Climate Hub",
-        "type": "fellowship",
-        "deadline": "2026-10-01",
-        "match_score": 0.2762,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["agri_food"]
-      },
-      {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.2021,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["entrepreneurship"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in entrepreneurship, finance and your goal of design, we recommend AgriTech for Africa Grant \u2014 40% match."
-  },
-  {
-    "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
-    "full_name": "Emeka Abebe",
-    "email": "scholar20@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.4586,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "data_ai"]
-      },
-      {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
-        "org_name": "Mastercard Foundation",
-        "type": "scholarship",
-        "deadline": "2026-09-01",
-        "match_score": 0.3128,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["data_ai"]
-      },
-      {
-        "opp_id": "38607d2f-fc10-41e3-93bc-8b250982ba90",
-        "title": "Design Leadership Residency",
-        "org_name": "Hood.D Studio",
-        "type": "residency",
-        "deadline": "2026-10-31",
-        "match_score": 0.291,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.2656,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.232,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in data_ai, agri_food and your goal of leadership, we recommend Women in AI Africa Fellowship \u2014 46% match."
-  },
-  {
-    "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
-    "full_name": "Naledi Mwangi",
-    "email": "scholar21@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.6269,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "data_ai", "leadership"]
-      },
-      {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.4538,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech", "data_ai"]
-      },
-      {
-        "opp_id": "9969b54c-0066-461c-80ed-3afcd741e89d",
-        "title": "Mastercard Foundation Scholars Program",
-        "org_name": "Mastercard Foundation",
-        "type": "scholarship",
-        "deadline": "2026-09-01",
-        "match_score": 0.4462,
-        "is_verified": true,
-        "eligible_countries": ["Rwanda", "Kenya", "Nigeria", "Ghana", "Uganda"],
-        "interest_overlap": ["data_ai", "leadership"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.4405,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai", "health"]
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.2896,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["leadership"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in health, data_ai and your goal of data science, we recommend Women in AI Africa Fellowship \u2014 63% match."
-  },
-  {
-    "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
-    "full_name": "Sefu Okafor",
-    "email": "scholar22@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "e523e254-e1ea-49fe-8a4c-56ce9dcb8f05",
-        "title": "Nollywood Producers Lab",
-        "org_name": "A4 Media",
-        "type": "lab",
-        "deadline": "2026-12-20",
-        "match_score": 0.5246,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["media_film", "music_arts"]
-      },
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.4643,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["media_film", "music_arts"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.4608,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["social_impact", "health"]
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.3524,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["social_impact"]
-      },
-      {
-        "opp_id": "8be6a27a-eba7-486d-b5ad-612f079c1861",
-        "title": "AgriTech for Africa Grant",
-        "org_name": "AGRA",
-        "type": "grant",
-        "deadline": "2026-10-21",
-        "match_score": 0.1204,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in media_film, social_impact and your goal of leadership, we recommend Nollywood Producers Lab \u2014 52% match."
-  },
-  {
-    "student_id": "fa92f34f-963b-4901-8889-1879d28029d7",
-    "full_name": "Imani Kamau",
-    "email": "scholar23@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.3955,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai"]
-      },
-      {
-        "opp_id": "060f8b1e-36e1-479a-a58c-b4102f0c50b1",
-        "title": "ALX Software Engineering Fellowship",
-        "org_name": "ALX",
-        "type": "fellowship",
-        "deadline": "2026-09-11",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai"]
-      },
-      {
-        "opp_id": "8be6a27a-eba7-486d-b5ad-612f079c1861",
-        "title": "AgriTech for Africa Grant",
-        "org_name": "AGRA",
-        "type": "grant",
-        "deadline": "2026-10-21",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["climate_env"]
-      },
-      {
-        "opp_id": "e89f57ee-4097-4bdf-94f8-af995d3876af",
-        "title": "Inclusive Fintech Internship",
-        "org_name": "Flutterwave",
-        "type": "internship",
-        "deadline": "2026-11-10",
-        "match_score": 0.2858,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["data_ai"]
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in climate_env, data_ai and your goal of AI, we recommend Women in AI Africa Fellowship \u2014 40% match."
-  },
-  {
-    "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
-    "full_name": "Dakarai Traore",
-    "email": "scholar24@jointhub.demo",
-    "top5": [
-      {
-        "opp_id": "574db9f1-8843-4362-b640-ea553f9425f3",
-        "title": "British Council Creative Enterprise Accelerator",
-        "org_name": "British Council",
-        "type": "accelerator",
-        "deadline": "2026-09-21",
-        "match_score": 0.2021,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "4a6f7eeb-0725-4feb-a218-d2035d5d779d",
-        "title": "Pan-African Health Innovation Challenge",
-        "org_name": "WHO Africa",
-        "type": "challenge",
-        "deadline": "2026-10-11",
-        "match_score": 0.2021,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["health"]
-      },
-      {
-        "opp_id": "064c1601-c219-4099-9ef1-071d64bc3699",
-        "title": "Women in AI Africa Fellowship",
-        "org_name": "Women in AI",
-        "type": "fellowship",
-        "deadline": "2026-12-10",
-        "match_score": 0.2021,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": ["creative_tech"]
-      },
-      {
-        "opp_id": "e91c9ef9-ed21-4841-acfb-ef55cd6d934d",
-        "title": "JointHub Professional Mentor Programme",
-        "org_name": "SimpleJoint Trust",
-        "type": "mentorship",
-        "deadline": "2026-11-20",
-        "match_score": 0.0,
-        "is_verified": true,
-        "eligible_countries": [
-          "Rwanda",
-          "Kenya",
-          "Nigeria",
-          "Ghana",
-          "Uganda",
-          "South Africa",
-          "Senegal",
-          "Ethiopia"
-        ],
-        "interest_overlap": []
-      }
-    ],
-    "recommendation_sentence": "Based on your interest in climate_env, entrepreneurship and your goal of design, we recommend British Council Creative Enterprise Accelerator \u2014 20% match."
+    "recommendation_sentence": "Based on your interest in social_impact, media_film and your goal around script, we recommend Youth Media Story Lab — 70% match."
   }
 ]

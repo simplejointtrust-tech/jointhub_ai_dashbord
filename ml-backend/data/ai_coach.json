@@ -1,0 +1,1030 @@
+[
+  {
+    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e",
+    "full_name": "Callie Davis",
+    "coach_name": "Kay · AI Coach",
+    "headline": "Your ESL mentor plan prioritises Career path clarity, CV / LinkedIn / portfolio review.",
+    "summary": "From your survey: you are at career stage 1 in Tanzania, focused on leadership, creative_tech, media_film. Preferred format: Video call; style: Structured monthly goals. Match confidence self-score: 5.0/5.",
+    "goal": "I want to explore working with",
+    "priority_needs": [
+      "Career path clarity",
+      "CV / LinkedIn / portfolio review",
+      "Leadership",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Limited access to opportunities",
+      "Financial pressure",
+      "Internet / device limits",
+      "Time management / overload",
+      "Lack of role models"
+    ],
+    "session_format": "Video call",
+    "working_style": "Structured monthly goals",
+    "discover_preference": "I choose from top 3 recommendations",
+    "hours_per_month": 1,
+    "assigned_mentor": {
+      "mentor_id": "10a757a7-b196-5197-a9a6-b51810504f1a",
+      "mentor_name": "AHMED MASOUD",
+      "compatibility": 0.5774,
+      "industry": "Education",
+      "country": "Tanzania"
+    },
+    "top_mentor_alternatives": [
+      {
+        "mentor_id": "a053c220-52c1-541e-b5fa-d59bb1ec3108",
+        "mentor_name": "Adelina",
+        "compatibility_score": 0.866,
+        "industry": "Media",
+        "country": "Tanzania",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "entrepreneurship",
+          "media_film"
+        ],
+        "title": "Media mentor · ESL network"
+      },
+      {
+        "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+        "mentor_name": "Musana Rwiyereka Emile",
+        "compatibility_score": 0.6667,
+        "industry": "Technology",
+        "country": "Drc",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "leadership",
+          "entrepreneurship",
+          "data_ai"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "1bcd3f2a-c8e9-5c7f-b5e7-1e9649cf76de",
+        "mentor_name": "Isaiah O'Kevwe Kporon",
+        "compatibility_score": 0.5774,
+        "industry": "Public policy",
+        "country": "Rwanda",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Public policy mentor · ESL network"
+      }
+    ],
+    "top_opportunity": {
+      "opp_id": "81c65c2b-adec-54e1-8f31-e0506abe4489",
+      "title": "British Council Creative Enterprise Accelerator",
+      "org_name": "British Council",
+      "type": "grant",
+      "deadline": "2026-09-19",
+      "match_score": 0.5422,
+      "is_verified": true,
+      "is_scam_flag": false,
+      "description": "Creative enterprise support for media and arts founders.",
+      "interest_overlap": [
+        "creative_tech",
+        "media_film",
+        "music_arts"
+      ]
+    },
+    "risk_level": "low",
+    "risk_note": "Hi Callie, Kay here from JointHub. I noticed barriers around Unclear career direction, Limited access to opportunities. Want a 20-min check-in to unblock your next mentor step?",
+    "weekly_plan": [
+      {
+        "focus": "Career path clarity",
+        "action": "Book a 30-min session on “Career path clarity” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "CV / LinkedIn / portfolio review",
+        "action": "Book a 30-min session on “CV / LinkedIn / portfolio review” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Leadership",
+        "action": "Book a 30-min session on “Leadership” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Unblock: Unclear career direction",
+        "action": "Write a 5-line barrier brief on “Unclear career direction” and ask your mentor for one practical workaround this week.",
+        "why": "Survey barrier signals feed JointHub dropout-risk and outreach prioritisation."
+      },
+      {
+        "focus": "Opportunity: British Council Creative Enterprise Accelerator",
+        "action": "Draft application notes for British Council Creative Enterprise Accelerator (British Council) before 2026-09-19.",
+        "why": "Based on your interest in leadership, creative_tech and your goal around leadership, we recommend British Council Creative Enterprise Accelerator — 54% match."
+      }
+    ],
+    "talking_points": [
+      "Goal: I want to explore working with",
+      "Top needs: Career path clarity, CV / LinkedIn / portfolio review, Leadership",
+      "Barriers to name early: Unclear career direction, Limited access to opportunities, Financial pressure",
+      "Format/style: Video call · Structured monthly goals"
+    ],
+    "dashboard_requests": [
+      "Assigned mentor match score",
+      "Session log / goals tracker",
+      "Risk / check-in reminders"
+    ],
+    "survey_source": "ESL Mentor Needs Survey"
+  },
+  {
+    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c",
+    "full_name": "Desmond Tunyinko",
+    "coach_name": "Kay · AI Coach",
+    "headline": "Your ESL mentor plan prioritises Scholarship / fellowship applications, Leadership.",
+    "summary": "From your survey: you are at career stage 5 in Rwanda, focused on leadership, entrepreneurship, climate_env. Preferred format: In-person if same city; style: Accountability check-ins. Match confidence self-score: 4.0/5.",
+    "goal": "I want to work on full stack software projects at the intersection human capital development.",
+    "priority_needs": [
+      "Scholarship / fellowship applications",
+      "Leadership",
+      "Entrepreneurship / startup advice"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Limited access to opportunities",
+      "Financial pressure",
+      "Time management / overload",
+      "Family or community expectations",
+      "Academic performance pressure"
+    ],
+    "session_format": "In-person if same city",
+    "working_style": "Accountability check-ins",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "hours_per_month": 1,
+    "assigned_mentor": {
+      "mentor_id": "61360981-37bc-53a3-b8b5-ada88d7de5e0",
+      "mentor_name": "Junior Ohouko",
+      "compatibility": 0.6667,
+      "industry": "Technology",
+      "country": "Benin"
+    },
+    "top_mentor_alternatives": [
+      {
+        "mentor_id": "61360981-37bc-53a3-b8b5-ada88d7de5e0",
+        "mentor_name": "Junior Ohouko",
+        "compatibility_score": 0.6667,
+        "industry": "Technology",
+        "country": "Benin",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+        "mentor_name": "Musana Rwiyereka Emile",
+        "compatibility_score": 0.6667,
+        "industry": "Technology",
+        "country": "Drc",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "leadership",
+          "entrepreneurship",
+          "data_ai"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "1bcd3f2a-c8e9-5c7f-b5e7-1e9649cf76de",
+        "mentor_name": "Isaiah O'Kevwe Kporon",
+        "compatibility_score": 0.5774,
+        "industry": "Public policy",
+        "country": "Rwanda",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Public policy mentor · ESL network"
+      }
+    ],
+    "top_opportunity": {
+      "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+      "title": "Mastercard Foundation Scholars Leadership Lab",
+      "org_name": "Mastercard Foundation",
+      "type": "scholarship",
+      "deadline": "2026-08-30",
+      "match_score": 0.495,
+      "is_verified": true,
+      "is_scam_flag": false,
+      "description": "Leadership lab for African scholars building community impact.",
+      "interest_overlap": [
+        "social_impact",
+        "leadership"
+      ]
+    },
+    "risk_level": "low",
+    "risk_note": "Hi Desmond, Kay here from JointHub. I noticed barriers around Unclear career direction, Limited access to opportunities. Want a 20-min check-in to unblock your next mentor step?",
+    "weekly_plan": [
+      {
+        "focus": "Scholarship / fellowship applications",
+        "action": "Book a 30-min session on “Scholarship / fellowship applications” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Leadership",
+        "action": "Book a 30-min session on “Leadership” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Entrepreneurship / startup advice",
+        "action": "Book a 30-min session on “Entrepreneurship / startup advice” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Unblock: Unclear career direction",
+        "action": "Write a 5-line barrier brief on “Unclear career direction” and ask your mentor for one practical workaround this week.",
+        "why": "Survey barrier signals feed JointHub dropout-risk and outreach prioritisation."
+      },
+      {
+        "focus": "Opportunity: Mastercard Foundation Scholars Leadership Lab",
+        "action": "Draft application notes for Mastercard Foundation Scholars Leadership Lab (Mastercard Foundation) before 2026-08-30.",
+        "why": "Based on your interest in leadership, entrepreneurship and your goal around full stack, we recommend Mastercard Foundation Scholars Leadership Lab — 50% match."
+      }
+    ],
+    "talking_points": [
+      "Goal: I want to work on full stack software projects at the intersection human capital development.",
+      "Top needs: Scholarship / fellowship applications, Leadership, Entrepreneurship / startup advice",
+      "Barriers to name early: Unclear career direction, Limited access to opportunities, Financial pressure",
+      "Format/style: In-person if same city · Accountability check-ins"
+    ],
+    "dashboard_requests": [
+      "Assigned mentor match score",
+      "Session booking",
+      "Opportunity recommendations tied to mentor advice",
+      "Offline / low-bandwidth model"
+    ],
+    "survey_source": "ESL Mentor Needs Survey"
+  },
+  {
+    "student_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4",
+    "full_name": "Lisa Swai",
+    "coach_name": "Kay · AI Coach",
+    "headline": "Your ESL mentor plan prioritises Scholarship / fellowship applications, Leadership.",
+    "summary": "From your survey: you are at career stage 2 in Tanzania, focused on leadership, entrepreneurship, data_ai. Preferred format: Phone / WhatsApp voice; style: Structured monthly goals. Match confidence self-score: 4.0/5.",
+    "goal": "I want to build a business Intelligence company that solves business requirements with technical solutions using AI.",
+    "priority_needs": [
+      "Scholarship / fellowship applications",
+      "Leadership",
+      "Entrepreneurship / startup advice",
+      "Networking introductions",
+      "Research / academic guidance"
+    ],
+    "barriers": [
+      "Limited access to opportunities",
+      "Financial pressure",
+      "Lack of role models",
+      "Family or community expectations"
+    ],
+    "session_format": "Phone / WhatsApp voice",
+    "working_style": "Structured monthly goals",
+    "discover_preference": "I want to browse all mentors",
+    "hours_per_month": 2,
+    "assigned_mentor": {
+      "mentor_id": "cd812142-5c61-56f8-9ec8-f619ee39de63",
+      "mentor_name": "Barasa Wafula",
+      "compatibility": 0.5,
+      "industry": "Finance",
+      "country": "Kenya"
+    },
+    "top_mentor_alternatives": [
+      {
+        "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+        "mentor_name": "Musana Rwiyereka Emile",
+        "compatibility_score": 0.866,
+        "industry": "Technology",
+        "country": "Drc",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "leadership",
+          "entrepreneurship",
+          "data_ai"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "61360981-37bc-53a3-b8b5-ada88d7de5e0",
+        "mentor_name": "Junior Ohouko",
+        "compatibility_score": 0.5774,
+        "industry": "Technology",
+        "country": "Benin",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "1bcd3f2a-c8e9-5c7f-b5e7-1e9649cf76de",
+        "mentor_name": "Isaiah O'Kevwe Kporon",
+        "compatibility_score": 0.5,
+        "industry": "Public policy",
+        "country": "Rwanda",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Public policy mentor · ESL network"
+      }
+    ],
+    "top_opportunity": {
+      "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+      "title": "Mastercard Foundation Scholars Leadership Lab",
+      "org_name": "Mastercard Foundation",
+      "type": "scholarship",
+      "deadline": "2026-08-30",
+      "match_score": 0.495,
+      "is_verified": true,
+      "is_scam_flag": false,
+      "description": "Leadership lab for African scholars building community impact.",
+      "interest_overlap": [
+        "social_impact",
+        "leadership"
+      ]
+    },
+    "risk_level": "low",
+    "risk_note": "Hi Lisa, Kay here from JointHub. I noticed barriers around Limited access to opportunities, Financial pressure. Want a 20-min check-in to unblock your next mentor step?",
+    "weekly_plan": [
+      {
+        "focus": "Scholarship / fellowship applications",
+        "action": "Book a 30-min session on “Scholarship / fellowship applications” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Leadership",
+        "action": "Book a 30-min session on “Leadership” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Entrepreneurship / startup advice",
+        "action": "Book a 30-min session on “Entrepreneurship / startup advice” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Unblock: Limited access to opportunities",
+        "action": "Write a 5-line barrier brief on “Limited access to opportunities” and ask your mentor for one practical workaround this week.",
+        "why": "Survey barrier signals feed JointHub dropout-risk and outreach prioritisation."
+      },
+      {
+        "focus": "Opportunity: Mastercard Foundation Scholars Leadership Lab",
+        "action": "Draft application notes for Mastercard Foundation Scholars Leadership Lab (Mastercard Foundation) before 2026-08-30.",
+        "why": "Based on your interest in leadership, entrepreneurship and your goal around AI, we recommend Mastercard Foundation Scholars Leadership Lab — 50% match."
+      }
+    ],
+    "talking_points": [
+      "Goal: I want to build a business Intelligence company that solves business requirements with technical solutions using AI.",
+      "Top needs: Scholarship / fellowship applications, Leadership, Entrepreneurship / startup advice",
+      "Barriers to name early: Limited access to opportunities, Financial pressure, Lack of role models",
+      "Format/style: Phone / WhatsApp voice · Structured monthly goals"
+    ],
+    "dashboard_requests": [
+      "Opportunity recommendations tied to mentor advice",
+      "Mobile-friendly experience",
+      "Offline / low-bandwidth model",
+      "AI Matching"
+    ],
+    "survey_source": "ESL Mentor Needs Survey"
+  },
+  {
+    "student_id": "7912e963-9252-54a0-8543-262e566ff29c",
+    "full_name": "Blessing Matiro",
+    "coach_name": "Kay · AI Coach",
+    "headline": "Your ESL mentor plan prioritises Career path clarity, Scholarship / fellowship applications.",
+    "summary": "From your survey: you are at career stage 3 in Zimbabwe, focused on leadership, entrepreneurship, data_ai. Preferred format: Video call; style: Structured monthly goals. Match confidence self-score: 4.0/5.",
+    "goal": "I would like to grow and learn more about leadership in the AI industry",
+    "priority_needs": [
+      "Career path clarity",
+      "Scholarship / fellowship applications",
+      "Entrepreneurship / startup advice"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Limited access to opportunities"
+    ],
+    "session_format": "Video call",
+    "working_style": "Structured monthly goals",
+    "discover_preference": "I want to browse all mentors",
+    "hours_per_month": 2,
+    "assigned_mentor": {
+      "mentor_id": "d3685eb5-90f9-5fca-ba07-f2679b0dfb88",
+      "mentor_name": "Neemaisabella Henry swai",
+      "compatibility": 0.5774,
+      "industry": "Health",
+      "country": "Tanzania"
+    },
+    "top_mentor_alternatives": [
+      {
+        "mentor_id": "61360981-37bc-53a3-b8b5-ada88d7de5e0",
+        "mentor_name": "Junior Ohouko",
+        "compatibility_score": 0.6667,
+        "industry": "Technology",
+        "country": "Benin",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+        "mentor_name": "Musana Rwiyereka Emile",
+        "compatibility_score": 0.6667,
+        "industry": "Technology",
+        "country": "Drc",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "leadership",
+          "entrepreneurship",
+          "data_ai"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "1bcd3f2a-c8e9-5c7f-b5e7-1e9649cf76de",
+        "mentor_name": "Isaiah O'Kevwe Kporon",
+        "compatibility_score": 0.5774,
+        "industry": "Public policy",
+        "country": "Rwanda",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Public policy mentor · ESL network"
+      }
+    ],
+    "top_opportunity": {
+      "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+      "title": "Mastercard Foundation Scholars Leadership Lab",
+      "org_name": "Mastercard Foundation",
+      "type": "scholarship",
+      "deadline": "2026-08-30",
+      "match_score": 0.6226,
+      "is_verified": true,
+      "is_scam_flag": false,
+      "description": "Leadership lab for African scholars building community impact.",
+      "interest_overlap": [
+        "social_impact",
+        "leadership"
+      ]
+    },
+    "risk_level": "low",
+    "risk_note": "Hi Blessing, Kay here from JointHub. I noticed barriers around Unclear career direction, Limited access to opportunities. Want a 20-min check-in to unblock your next mentor step?",
+    "weekly_plan": [
+      {
+        "focus": "Career path clarity",
+        "action": "Book a 30-min session on “Career path clarity” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Scholarship / fellowship applications",
+        "action": "Book a 30-min session on “Scholarship / fellowship applications” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Entrepreneurship / startup advice",
+        "action": "Book a 30-min session on “Entrepreneurship / startup advice” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Unblock: Unclear career direction",
+        "action": "Write a 5-line barrier brief on “Unclear career direction” and ask your mentor for one practical workaround this week.",
+        "why": "Survey barrier signals feed JointHub dropout-risk and outreach prioritisation."
+      },
+      {
+        "focus": "Opportunity: Mastercard Foundation Scholars Leadership Lab",
+        "action": "Draft application notes for Mastercard Foundation Scholars Leadership Lab (Mastercard Foundation) before 2026-08-30.",
+        "why": "Based on your interest in leadership, entrepreneurship and your goal around AI, we recommend Mastercard Foundation Scholars Leadership Lab — 62% match."
+      }
+    ],
+    "talking_points": [
+      "Goal: I would like to grow and learn more about leadership in the AI industry",
+      "Top needs: Career path clarity, Scholarship / fellowship applications, Entrepreneurship / startup advice",
+      "Barriers to name early: Unclear career direction, Limited access to opportunities",
+      "Format/style: Video call · Structured monthly goals"
+    ],
+    "dashboard_requests": [
+      "Assigned mentor match score",
+      "Session booking",
+      "Session log / goals tracker",
+      "Mobile-friendly experience",
+      "Offline / low-bandwidth model"
+    ],
+    "survey_source": "ESL Mentor Needs Survey"
+  },
+  {
+    "student_id": "ba194f0a-4ac8-595f-a11d-54a5c7a8387b",
+    "full_name": "CONFREY ALIANJI",
+    "coach_name": "Kay · AI Coach",
+    "headline": "Your ESL mentor plan prioritises Entrepreneurship / startup advice.",
+    "summary": "From your survey: you are at career stage 6 in Kenyan, focused on leadership, entrepreneurship, social_impact. Preferred format: Video call; style: Portfolio / application co-working. Match confidence self-score: 5.0/5.",
+    "goal": "Build conservation ventures and create jobs",
+    "priority_needs": [
+      "Entrepreneurship / startup advice"
+    ],
+    "barriers": [
+      "Financial pressure"
+    ],
+    "session_format": "Video call",
+    "working_style": "Portfolio / application co-working",
+    "discover_preference": "I choose from top 3 recommendations",
+    "hours_per_month": 12,
+    "assigned_mentor": {
+      "mentor_id": "b0c8db39-db5a-55b0-ab3c-21d6ecd68119",
+      "mentor_name": "Peggy Mapondera",
+      "compatibility": 0.5774,
+      "industry": "Finance",
+      "country": "Zimbabwe"
+    },
+    "top_mentor_alternatives": [
+      {
+        "mentor_id": "b0c8db39-db5a-55b0-ab3c-21d6ecd68119",
+        "mentor_name": "Peggy Mapondera",
+        "compatibility_score": 0.5774,
+        "industry": "Finance",
+        "country": "Zimbabwe",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "entrepreneurship",
+          "finance",
+          "agri_food"
+        ],
+        "title": "Finance mentor · ESL network"
+      },
+      {
+        "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+        "mentor_name": "Musana Rwiyereka Emile",
+        "compatibility_score": 0.5774,
+        "industry": "Technology",
+        "country": "Drc",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "leadership",
+          "entrepreneurship",
+          "data_ai"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "a053c220-52c1-541e-b5fa-d59bb1ec3108",
+        "mentor_name": "Adelina",
+        "compatibility_score": 0.5,
+        "industry": "Media",
+        "country": "Tanzania",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "entrepreneurship",
+          "media_film"
+        ],
+        "title": "Media mentor · ESL network"
+      }
+    ],
+    "top_opportunity": {
+      "opp_id": "0f686808-0e7f-567b-aa40-39149d3dd45a",
+      "title": "Mastercard Foundation Scholars Leadership Lab",
+      "org_name": "Mastercard Foundation",
+      "type": "scholarship",
+      "deadline": "2026-08-30",
+      "match_score": 0.495,
+      "is_verified": true,
+      "is_scam_flag": false,
+      "description": "Leadership lab for African scholars building community impact.",
+      "interest_overlap": [
+        "social_impact",
+        "leadership"
+      ]
+    },
+    "risk_level": "low",
+    "risk_note": "Hi CONFREY, Kay here from JointHub. I noticed barriers around Financial pressure. Want a 20-min check-in to unblock your next mentor step?",
+    "weekly_plan": [
+      {
+        "focus": "Entrepreneurship / startup advice",
+        "action": "Book a 30-min session on “Entrepreneurship / startup advice” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Unblock: Financial pressure",
+        "action": "Write a 5-line barrier brief on “Financial pressure” and ask your mentor for one practical workaround this week.",
+        "why": "Survey barrier signals feed JointHub dropout-risk and outreach prioritisation."
+      },
+      {
+        "focus": "Opportunity: Mastercard Foundation Scholars Leadership Lab",
+        "action": "Draft application notes for Mastercard Foundation Scholars Leadership Lab (Mastercard Foundation) before 2026-08-30.",
+        "why": "Based on your interest in leadership, entrepreneurship and your goal around leadership, we recommend Mastercard Foundation Scholars Leadership Lab — 50% match."
+      }
+    ],
+    "talking_points": [
+      "Goal: Build conservation ventures and create jobs",
+      "Top needs: Entrepreneurship / startup advice",
+      "Barriers to name early: Financial pressure",
+      "Format/style: Video call · Portfolio / application co-working"
+    ],
+    "dashboard_requests": [
+      "Opportunity recommendations tied to mentor advice"
+    ],
+    "survey_source": "ESL Mentor Needs Survey"
+  },
+  {
+    "student_id": "6a79888b-55bf-5996-a851-820283a533dd",
+    "full_name": "Winnie",
+    "coach_name": "Kay · AI Coach",
+    "headline": "Your ESL mentor plan prioritises Networking introductions.",
+    "summary": "From your survey: you are at career stage 6 in Tanzania, focused on leadership, creative_tech, entrepreneurship. Preferred format: No preference; style: Flexible ad-hoc advice. Match confidence self-score: 5.0/5.",
+    "goal": "I want to build a learning center",
+    "priority_needs": [
+      "Networking introductions"
+    ],
+    "barriers": [
+      "Financial pressure"
+    ],
+    "session_format": "No preference",
+    "working_style": "Flexible ad-hoc advice",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "hours_per_month": 1,
+    "assigned_mentor": {
+      "mentor_id": "1bcd3f2a-c8e9-5c7f-b5e7-1e9649cf76de",
+      "mentor_name": "Isaiah O'Kevwe Kporon",
+      "compatibility": 0.5,
+      "industry": "Public policy",
+      "country": "Rwanda"
+    },
+    "top_mentor_alternatives": [
+      {
+        "mentor_id": "61360981-37bc-53a3-b8b5-ada88d7de5e0",
+        "mentor_name": "Junior Ohouko",
+        "compatibility_score": 0.5774,
+        "industry": "Technology",
+        "country": "Benin",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+        "mentor_name": "Musana Rwiyereka Emile",
+        "compatibility_score": 0.5774,
+        "industry": "Technology",
+        "country": "Drc",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "leadership",
+          "entrepreneurship",
+          "data_ai"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "1bcd3f2a-c8e9-5c7f-b5e7-1e9649cf76de",
+        "mentor_name": "Isaiah O'Kevwe Kporon",
+        "compatibility_score": 0.5,
+        "industry": "Public policy",
+        "country": "Rwanda",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "climate_env",
+          "social_impact"
+        ],
+        "title": "Public policy mentor · ESL network"
+      }
+    ],
+    "top_opportunity": {
+      "opp_id": "a0c8fc72-5491-5b6b-aec9-b8003aca3938",
+      "title": "ESL CreativeTech Bootcamp — Create With AI",
+      "org_name": "SimpleJoint Trust",
+      "type": "bootcamp",
+      "deadline": "2026-08-20",
+      "match_score": 0.5422,
+      "is_verified": true,
+      "is_scam_flag": false,
+      "description": "Hands-on AI creation bootcamp for Emerging Servant Leaders (ALU Kigali context).",
+      "interest_overlap": [
+        "creative_tech",
+        "data_ai",
+        "leadership"
+      ]
+    },
+    "risk_level": "low",
+    "risk_note": "Hi Winnie, Kay here from JointHub. I noticed barriers around Financial pressure. Want a 20-min check-in to unblock your next mentor step?",
+    "weekly_plan": [
+      {
+        "focus": "Networking introductions",
+        "action": "Book a 30-min session on “Networking introductions” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Unblock: Financial pressure",
+        "action": "Write a 5-line barrier brief on “Financial pressure” and ask your mentor for one practical workaround this week.",
+        "why": "Survey barrier signals feed JointHub dropout-risk and outreach prioritisation."
+      },
+      {
+        "focus": "Opportunity: ESL CreativeTech Bootcamp — Create With AI",
+        "action": "Draft application notes for ESL CreativeTech Bootcamp — Create With AI (SimpleJoint Trust) before 2026-08-20.",
+        "why": "Based on your interest in leadership, creative_tech and your goal around leadership, we recommend ESL CreativeTech Bootcamp — Create With AI — 54% match."
+      }
+    ],
+    "talking_points": [
+      "Goal: I want to build a learning center",
+      "Top needs: Networking introductions",
+      "Barriers to name early: Financial pressure",
+      "Format/style: No preference · Flexible ad-hoc advice"
+    ],
+    "dashboard_requests": [
+      "Opportunity recommendations tied to mentor advice"
+    ],
+    "survey_source": "ESL Mentor Needs Survey"
+  },
+  {
+    "student_id": "92562ba5-db8c-5c42-8b92-74c208014f07",
+    "full_name": "Calvin Felician Girambo",
+    "coach_name": "Kay · AI Coach",
+    "headline": "Your ESL mentor plan prioritises Career path clarity, Entrepreneurship / startup advice.",
+    "summary": "From your survey: you are at career stage 2 in Tanzania, focused on creative_tech, entrepreneurship, data_ai. Preferred format: Chat / async; style: Structured monthly goals. Match confidence self-score: 3.0/5.",
+    "goal": "I want to build up my portfolio based of digital marketing and AI skills that I'm still currently trying to work on",
+    "priority_needs": [
+      "Career path clarity",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Limited access to opportunities",
+      "Low confidence / impostor feelings"
+    ],
+    "session_format": "Chat / async",
+    "working_style": "Structured monthly goals",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "hours_per_month": 2,
+    "assigned_mentor": {
+      "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+      "mentor_name": "Musana Rwiyereka Emile",
+      "compatibility": 0.8165,
+      "industry": "Technology",
+      "country": "Drc"
+    },
+    "top_mentor_alternatives": [
+      {
+        "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+        "mentor_name": "Musana Rwiyereka Emile",
+        "compatibility_score": 0.8165,
+        "industry": "Technology",
+        "country": "Drc",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "leadership",
+          "entrepreneurship",
+          "data_ai"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "a053c220-52c1-541e-b5fa-d59bb1ec3108",
+        "mentor_name": "Adelina",
+        "compatibility_score": 0.7071,
+        "industry": "Media",
+        "country": "Tanzania",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "entrepreneurship",
+          "media_film"
+        ],
+        "title": "Media mentor · ESL network"
+      },
+      {
+        "mentor_id": "b0c8db39-db5a-55b0-ab3c-21d6ecd68119",
+        "mentor_name": "Peggy Mapondera",
+        "compatibility_score": 0.4082,
+        "industry": "Finance",
+        "country": "Zimbabwe",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "entrepreneurship",
+          "finance",
+          "agri_food"
+        ],
+        "title": "Finance mentor · ESL network"
+      }
+    ],
+    "top_opportunity": {
+      "opp_id": "c21a44e6-2840-5831-bd5c-726b95a5a1ad",
+      "title": "Inclusive Fintech Founders Lab",
+      "org_name": "Equity partners",
+      "type": "accelerator",
+      "deadline": "2026-11-18",
+      "match_score": 0.6062,
+      "is_verified": true,
+      "is_scam_flag": false,
+      "description": "Founder lab for inclusive finance and fintech.",
+      "interest_overlap": [
+        "entrepreneurship",
+        "data_ai",
+        "finance"
+      ]
+    },
+    "risk_level": "low",
+    "risk_note": "Hi Calvin, Kay here from JointHub. I noticed barriers around Unclear career direction, Limited access to opportunities. Want a 20-min check-in to unblock your next mentor step?",
+    "weekly_plan": [
+      {
+        "focus": "Career path clarity",
+        "action": "Book a 30-min session on “Career path clarity” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Entrepreneurship / startup advice",
+        "action": "Book a 30-min session on “Entrepreneurship / startup advice” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Networking introductions",
+        "action": "Book a 30-min session on “Networking introductions” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Unblock: Unclear career direction",
+        "action": "Write a 5-line barrier brief on “Unclear career direction” and ask your mentor for one practical workaround this week.",
+        "why": "Survey barrier signals feed JointHub dropout-risk and outreach prioritisation."
+      },
+      {
+        "focus": "Opportunity: Inclusive Fintech Founders Lab",
+        "action": "Draft application notes for Inclusive Fintech Founders Lab (Equity partners) before 2026-11-18.",
+        "why": "Based on your interest in creative_tech, entrepreneurship and your goal around AI, we recommend Inclusive Fintech Founders Lab — 61% match."
+      }
+    ],
+    "talking_points": [
+      "Goal: I want to build up my portfolio based of digital marketing and AI skills that I'm still currently trying to work on",
+      "Top needs: Career path clarity, Entrepreneurship / startup advice, Networking introductions",
+      "Barriers to name early: Unclear career direction, Limited access to opportunities, Low confidence / impostor feelings",
+      "Format/style: Chat / async · Structured monthly goals"
+    ],
+    "dashboard_requests": [
+      "Assigned mentor match score",
+      "Top 3 mentor alternatives",
+      "Session booking",
+      "Session log / goals tracker",
+      "Opportunity recommendations tied to mentor advice",
+      "AI Matching"
+    ],
+    "survey_source": "ESL Mentor Needs Survey"
+  },
+  {
+    "student_id": "21eb43a5-603e-50f6-9fa6-1b9397c5d31c",
+    "full_name": "Kobi Owulosua",
+    "coach_name": "Kay · AI Coach",
+    "headline": "Your ESL mentor plan prioritises Career path clarity, Entrepreneurship / startup advice.",
+    "summary": "From your survey: you are at career stage 5 in United States, focused on social_impact, media_film, music_arts. Preferred format: Video call; style: Accountability check-ins. Match confidence self-score: 5.0/5.",
+    "goal": "I want to sell a script",
+    "priority_needs": [
+      "Career path clarity",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ],
+    "barriers": [
+      "Limited access to opportunities",
+      "Low confidence / impostor feelings",
+      "Time management / overload"
+    ],
+    "session_format": "Video call",
+    "working_style": "Accountability check-ins",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "hours_per_month": 2,
+    "assigned_mentor": {
+      "mentor_id": "a053c220-52c1-541e-b5fa-d59bb1ec3108",
+      "mentor_name": "Adelina",
+      "compatibility": 0.7071,
+      "industry": "Media",
+      "country": "Tanzania"
+    },
+    "top_mentor_alternatives": [
+      {
+        "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+        "mentor_name": "Musana Rwiyereka Emile",
+        "compatibility_score": 0.8165,
+        "industry": "Technology",
+        "country": "Drc",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "leadership",
+          "entrepreneurship",
+          "data_ai"
+        ],
+        "title": "Technology mentor · ESL network"
+      },
+      {
+        "mentor_id": "a053c220-52c1-541e-b5fa-d59bb1ec3108",
+        "mentor_name": "Adelina",
+        "compatibility_score": 0.7071,
+        "industry": "Media",
+        "country": "Tanzania",
+        "availability_hrs_per_month": 1,
+        "skills_offered": [
+          "leadership",
+          "creative_tech",
+          "entrepreneurship",
+          "media_film"
+        ],
+        "title": "Media mentor · ESL network"
+      },
+      {
+        "mentor_id": "b0c8db39-db5a-55b0-ab3c-21d6ecd68119",
+        "mentor_name": "Peggy Mapondera",
+        "compatibility_score": 0.4082,
+        "industry": "Finance",
+        "country": "Zimbabwe",
+        "availability_hrs_per_month": 2,
+        "skills_offered": [
+          "entrepreneurship",
+          "finance",
+          "agri_food"
+        ],
+        "title": "Finance mentor · ESL network"
+      }
+    ],
+    "top_opportunity": {
+      "opp_id": "87bd866a-cb83-5239-a0c7-5b1bce6ea857",
+      "title": "Youth Media Story Lab",
+      "org_name": "SoCreative",
+      "type": "fellowship",
+      "deadline": "2026-11-28",
+      "match_score": 0.7,
+      "is_verified": true,
+      "is_scam_flag": false,
+      "description": "Storytelling fellowship for African youth media makers.",
+      "interest_overlap": [
+        "social_impact",
+        "media_film",
+        "music_arts"
+      ]
+    },
+    "risk_level": "low",
+    "risk_note": "Hi Kobi, Kay here from JointHub. I noticed barriers around Limited access to opportunities, Low confidence / impostor feelings. Want a 20-min check-in to unblock your next mentor step?",
+    "weekly_plan": [
+      {
+        "focus": "Career path clarity",
+        "action": "Book a 30-min session on “Career path clarity” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Entrepreneurship / startup advice",
+        "action": "Book a 30-min session on “Entrepreneurship / startup advice” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Networking introductions",
+        "action": "Book a 30-min session on “Networking introductions” and capture one decision + one follow-up.",
+        "why": "Named by you in the ESL Mentor Needs Survey as a top mentorship priority."
+      },
+      {
+        "focus": "Unblock: Limited access to opportunities",
+        "action": "Write a 5-line barrier brief on “Limited access to opportunities” and ask your mentor for one practical workaround this week.",
+        "why": "Survey barrier signals feed JointHub dropout-risk and outreach prioritisation."
+      },
+      {
+        "focus": "Opportunity: Youth Media Story Lab",
+        "action": "Draft application notes for Youth Media Story Lab (SoCreative) before 2026-11-28.",
+        "why": "Based on your interest in social_impact, media_film and your goal around script, we recommend Youth Media Story Lab — 70% match."
+      }
+    ],
+    "talking_points": [
+      "Goal: I want to sell a script",
+      "Top needs: Career path clarity, Entrepreneurship / startup advice, Networking introductions",
+      "Barriers to name early: Limited access to opportunities, Low confidence / impostor feelings, Time management / overload",
+      "Format/style: Video call · Accountability check-ins"
+    ],
+    "dashboard_requests": [
+      "Opportunity recommendations tied to mentor advice"
+    ],
+    "survey_source": "ESL Mentor Needs Survey"
+  }
+]

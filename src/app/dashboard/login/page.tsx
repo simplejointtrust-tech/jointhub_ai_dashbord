@@ -5,9 +5,10 @@ import { useRouter } from "next/navigation";
 import { type FormEvent, useState } from "react";
 
 const DEMO_ACCOUNTS = [
-  { email: "scholar1@jointhub.demo", label: "Scholar 1 (student view)" },
-  { email: "scholar2@jointhub.demo", label: "Scholar 2 (student view)" },
-  { email: "admin@jointhub.demo", label: "Admin (full cohort)" },
+  { email: "esl02@jointhub.demo", label: "Callie Davis (ESL survey scholar)" },
+  { email: "esl03@jointhub.demo", label: "Desmond Tunyinko (ESL survey scholar)" },
+  { email: "esl06@jointhub.demo", label: "Lisa Swai (ESL survey scholar)" },
+  { email: "admin@jointhub.demo", label: "Admin (full cohort + survey insights)" },
 ];
 
 export default function DashboardLoginPage() {

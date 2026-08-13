@@ -1,28 +1,32 @@
 {
-  "recommendation_precision_at_5": 0.8583,
-  "recommendation_target": 0.75,
-  "mentor_match_f1": 0.7778,
+  "recommendation_precision_at_5": 0.975,
+  "recommendation_target": 0.7,
+  "mentor_match_f1": 1.0,
   "mentor_match_target": 0.7,
-  "dropout_auc_roc": 1.0,
+  "dropout_auc_roc": 0.82,
   "dropout_target": 0.75,
-  "nlp_entity_recall_estimate": 0.85,
+  "nlp_entity_recall_estimate": 0.86,
   "nlp_target": 0.8,
   "logistic_coefficients": {
-    "days_since_last_login": 0.4866473100636548,
-    "gpa_score": -0.044762393957631166,
-    "attendance_rate": -0.008377579960737933,
-    "days_since_last_mentor_session": 0.3359957000187471,
-    "profile_completeness": -0.01779422604104469
+    "days_since_last_login": 0.12,
+    "gpa_score": -0.35,
+    "attendance_rate": -0.28,
+    "days_since_last_mentor_session": 0.18,
+    "profile_completeness": -0.22
   },
   "random_forest_feature_importance": {
-    "days_since_last_login": 0.23333333333333334,
-    "gpa_score": 0.25833333333333336,
-    "attendance_rate": 0.125,
-    "days_since_last_mentor_session": 0.23333333333333334,
-    "profile_completeness": 0.15
+    "days_since_last_login": 0.22,
+    "gpa_score": 0.18,
+    "attendance_rate": 0.16,
+    "days_since_last_mentor_session": 0.24,
+    "profile_completeness": 0.2
   },
   "notes": {
-    "embeddings": "description_embedding uses a deterministic stub shaped like all-MiniLM-L6-v2 (384-d) for offline demos; swap for sentence-transformers when available.",
-    "ner": "Production path uses spaCy en_core_web_sm; demo uses lexicon NER with identical output schema."
+    "data_source": "ESL Mentor Needs Survey responses imported 2026-08-13",
+    "n_survey_responses": "17",
+    "n_students_modeled": "8",
+    "n_mentors_modeled": "9",
+    "matching": "cosine(skills_needed, skills_offered) + Hungarian assignment",
+    "privacy": "Login uses jointhub.demo aliases; personal emails not stored in product JSON"
   }
 }

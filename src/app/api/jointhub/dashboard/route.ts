@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getSessionUser } from "@/lib/jointhub/auth";
 import {
   findStudent,
+  getAiCoachForStudent,
+  getAiCoachPlans,
   getKpis,
   getMentorship,
   getMetrics,
@@ -10,6 +12,7 @@ import {
   getRecommendationsMap,
   getRiskRows,
   getStudents,
+  getSurveyInsights,
 } from "@/lib/jointhub/data-store";
 import type { DashboardBundle, MentorshipPayload } from "@/lib/jointhub/types";
 
@@ -65,6 +68,13 @@ export async function GET(request: Request) {
   const personalised =
     (studentId ? sentenceMap[studentId] : null) ?? nlp[0]?.recommendation_sentence ?? null;
 
+  const aiCoach =
+    studentId
+      ? getAiCoachForStudent(studentId)
+      : isAdmin
+        ? getAiCoachPlans()[0] ?? null
+        : null;
+
   const bundle: DashboardBundle = {
     student,
     kpis: getKpis(),
@@ -76,6 +86,8 @@ export async function GET(request: Request) {
     role: session.role,
     auth_email: session.email,
     personalised_sentence: personalised,
+    ai_coach: aiCoach,
+    survey_insights: getSurveyInsights(),
   };
 
   return NextResponse.json({
@@ -88,5 +100,6 @@ export async function GET(request: Request) {
           country: s.country,
         }))
       : undefined,
+    ai_coach_all: isAdmin ? getAiCoachPlans() : undefined,
   });
 }

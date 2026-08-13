@@ -39,6 +39,16 @@ export type StudentProfile = {
   interest_vector: number[];
   skills_needed: string[];
   languages: string[];
+  mentor_need_labels?: string[];
+  barriers?: string[];
+  preferred_session_format?: string;
+  preferred_working_style?: string;
+  hours_per_month?: number;
+  discover_preference?: string;
+  inactivity_outreach_opt_in?: boolean;
+  dashboard_feature_requests?: string[];
+  mentor_confidence?: number;
+  survey_source?: string;
 };
 
 export type MentorProfile = {
@@ -158,6 +168,83 @@ export type NlpRow = {
   pipeline?: Record<string, string>;
 };
 
+export type CountLabel = {
+  label: string;
+  count: number;
+};
+
+export type SurveyInsights = {
+  survey_name: string;
+  collected_at: string;
+  n_responses: number;
+  n_scholars: number;
+  n_mentor_track: number;
+  avg_mentor_confidence: number;
+  top_interests: CountLabel[];
+  top_mentor_needs: CountLabel[];
+  top_barriers: CountLabel[];
+  countries: CountLabel[];
+  career_stages: CountLabel[];
+  session_formats: CountLabel[];
+  working_styles: CountLabel[];
+  discover_preferences: CountLabel[];
+  dashboard_feature_requests: CountLabel[];
+  industry_preferences?: CountLabel[];
+  languages?: CountLabel[];
+  product_implications: string[];
+  representative_quotes: Array<{
+    name: string;
+    country?: string;
+    quote: string;
+    theme?: string;
+  }>;
+  impact_context?: {
+    scholarships_usd: number;
+    students_supported: number;
+    countries: number;
+  };
+};
+
+export type AiCoachPlan = {
+  student_id: string;
+  full_name: string;
+  coach_name: string;
+  headline: string;
+  summary: string;
+  goal: string;
+  priority_needs: string[];
+  barriers: string[];
+  session_format: string;
+  working_style: string;
+  discover_preference: string;
+  hours_per_month: number | string;
+  assigned_mentor?: {
+    mentor_id: string;
+    mentor_name: string;
+    compatibility: number;
+    industry: string;
+    country: string;
+  } | null;
+  top_mentor_alternatives?: Array<{
+    mentor_id: string;
+    mentor_name: string;
+    compatibility_score: number;
+    industry: string;
+    country: string;
+    availability_hrs_per_month: number;
+    skills_offered?: string[];
+    title?: string;
+  }>;
+  top_opportunity?: Recommendation | null;
+  risk_level?: string;
+  risk_note?: string;
+  weekly_plan: Array<{ focus: string; action: string; why: string }>;
+  coach_prompts?: string[];
+  advice_quote?: string;
+  survey_confidence?: number;
+  sources?: string[];
+};
+
 export type PlatformKpis = {
   registered_users: number;
   opportunities_matched: number;
@@ -165,6 +252,7 @@ export type PlatformKpis = {
   at_risk_students_flagged: number;
   nps_proxy: number;
   scam_flags: number;
+  survey_responses?: number;
   impact: {
     scholarships_usd: number;
     students_supported: number;
@@ -211,4 +299,6 @@ export type DashboardBundle = {
   role: Role;
   auth_email: string;
   personalised_sentence: string | null;
+  ai_coach: AiCoachPlan | null;
+  survey_insights: SurveyInsights | null;
 };

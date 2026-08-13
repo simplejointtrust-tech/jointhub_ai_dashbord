@@ -3,6 +3,7 @@
 import {
   AlertTriangle,
   BookOpen,
+  Bot,
   Calendar,
   ChevronRight,
   LayoutDashboard,
@@ -15,6 +16,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState, useTransition } from "react";
 import type {
+  AiCoachPlan,
   DashboardBundle,
   MentorAssignment,
   ModelMetrics,
@@ -22,10 +24,11 @@ import type {
   Recommendation,
   RiskRow,
   SessionLog,
+  SurveyInsights,
 } from "@/lib/jointhub/types";
 import { cn } from "@/lib/utils";
 
-type TabId = "opportunities" | "mentorship" | "risk" | "analytics";
+type TabId = "coach" | "opportunities" | "mentorship" | "risk" | "analytics";
 
 type DashboardResponse = DashboardBundle & {
   students?: Array<{
@@ -34,9 +37,11 @@ type DashboardResponse = DashboardBundle & {
     email: string;
     country: string;
   }>;
+  ai_coach_all?: AiCoachPlan[];
 };
 
 const TABS: Array<{ id: TabId; label: string; icon: typeof Target }> = [
+  { id: "coach", label: "AI Coach", icon: Bot },
   { id: "opportunities", label: "Opportunities", icon: Target },
   { id: "mentorship", label: "Mentor Hub", icon: Users },
   { id: "risk", label: "Dropout risk", icon: AlertTriangle },
@@ -226,12 +231,242 @@ function Heatmap({
   );
 }
 
+function CountBars({
+  title,
+  items,
+  accent = "#028090",
+}: {
+  title: string;
+  items: Array<{ label: string; count: number }>;
+  accent?: string;
+}) {
+  const max = Math.max(1, ...items.map((item) => item.count));
+  return (
+    <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
+      <h3 className="text-sm font-semibold text-[#0D1B2A]">{title}</h3>
+      <ul className="mt-3 space-y-2">
+        {items.slice(0, 6).map((item) => (
+          <li key={`${title}-${item.label}`}>
+            <div className="mb-1 flex justify-between gap-2 text-xs text-[#0D1B2A]/70">
+              <span className="truncate">{item.label}</span>
+              <span className="tabular-nums font-semibold">{item.count}</span>
+            </div>
+            <div className="h-2 overflow-hidden rounded-full bg-[#0D1B2A]/10">
+              <div
+                className="h-full rounded-full"
+                style={{
+                  width: `${Math.round((item.count / max) * 100)}%`,
+                  backgroundColor: accent,
+                }}
+              />
+            </div>
+          </li>
+        ))}
+        {items.length === 0 ? (
+          <li className="text-sm text-[#0D1B2A]/55">No survey signal yet.</li>
+        ) : null}
+      </ul>
+    </section>
+  );
+}
+
+function CoachPanel({
+  plans,
+  insights,
+  isAdmin,
+}: {
+  plans: AiCoachPlan[];
+  insights: SurveyInsights | null;
+  isAdmin: boolean;
+}) {
+  if (!plans.length) {
+    return (
+      <div className="rounded-2xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/65">
+        No AI Coach plan for this profile yet. Import ESL survey responses to generate Kay plans.
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      {insights ? (
+        <div className="rounded-2xl border border-[#028090]/20 bg-gradient-to-r from-[#028090]/10 to-white p-5">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
+                ESL survey → AI Coach
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-[#0D1B2A]/80">
+                Kay now plans from {insights.n_responses} live Mentor Needs responses
+                ({insights.n_scholars} scholar-track · {insights.n_mentor_track} mentor-track).
+                Average confidence a good match helps: {insights.avg_mentor_confidence.toFixed(1)}/5.
+              </p>
+            </div>
+            <div className="rounded-xl border border-[#0D1B2A]/10 bg-white px-3 py-2 text-right">
+              <p className="text-[11px] uppercase tracking-[0.14em] text-[#0D1B2A]/50">Cohort needs</p>
+              <p className="text-sm font-semibold text-[#0D1B2A]">
+                {(insights.top_mentor_needs[0]?.label ?? "Networking")} first
+              </p>
+            </div>
+          </div>
+          {insights.product_implications?.length ? (
+            <ul className="mt-3 grid gap-2 md:grid-cols-2">
+              {insights.product_implications.slice(0, 4).map((item) => (
+                <li
+                  key={item}
+                  className="rounded-xl border border-[#0D1B2A]/08 bg-white/80 px-3 py-2 text-xs text-[#0D1B2A]/75"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      ) : null}
+
+      {isAdmin && insights ? (
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <CountBars title="Top mentor needs" items={insights.top_mentor_needs} />
+          <CountBars title="Barriers" items={insights.top_barriers} accent="#C0392B" />
+          <CountBars title="Session formats" items={insights.session_formats} accent="#F4B942" />
+          <CountBars title="Dashboard asks" items={insights.dashboard_feature_requests} />
+        </div>
+      ) : null}
+
+      <div className="grid gap-4">
+        {plans.map((plan) => (
+          <article
+            key={plan.student_id}
+            className="grid gap-4 rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm xl:grid-cols-[1.3fr_0.9fr]"
+          >
+            <div>
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
+                    {plan.coach_name}
+                  </p>
+                  <h3 className="mt-1 text-xl font-semibold text-[#0D1B2A]">{plan.full_name}</h3>
+                  <p className="mt-1 text-sm text-[#0D1B2A]/70">{plan.headline}</p>
+                </div>
+                <span className="rounded-full bg-[#0D1B2A]/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#0D1B2A]/70">
+                  {plan.risk_level} risk
+                </span>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-[#0D1B2A]/75">{plan.summary}</p>
+              <p className="mt-3 rounded-xl border border-[#0D1B2A]/08 bg-[#F8FAFA] px-3 py-2 text-sm text-[#0D1B2A]/80">
+                <span className="font-semibold">Goal:</span> {plan.goal}
+              </p>
+              <div className="mt-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/50">
+                  Priority needs
+                </p>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {plan.priority_needs.map((need) => (
+                    <span
+                      key={`${plan.student_id}-need-${need}`}
+                      className="rounded-full border border-[#028090]/20 bg-[#028090]/10 px-2.5 py-1 text-[11px] font-medium text-[#026f7d]"
+                    >
+                      {need}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {plan.barriers.length ? (
+                <div className="mt-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/50">
+                    Barriers
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {plan.barriers.slice(0, 6).map((barrier) => (
+                      <span
+                        key={`${plan.student_id}-bar-${barrier}`}
+                        className="rounded-full border border-[#C0392B]/20 bg-[#C0392B]/[0.08] px-2.5 py-1 text-[11px] text-[#C0392B]"
+                      >
+                        {barrier}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+              <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
+                  <p className="text-[11px] uppercase tracking-wide text-[#0D1B2A]/50">Format</p>
+                  <p className="text-sm font-medium text-[#0D1B2A]">{plan.session_format || "Flexible"}</p>
+                </div>
+                <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
+                  <p className="text-[11px] uppercase tracking-wide text-[#0D1B2A]/50">Style</p>
+                  <p className="text-sm font-medium text-[#0D1B2A]">{plan.working_style || "Open"}</p>
+                </div>
+                <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
+                  <p className="text-[11px] uppercase tracking-wide text-[#0D1B2A]/50">Hours / mo</p>
+                  <p className="text-sm font-medium tabular-nums text-[#0D1B2A]">{plan.hours_per_month}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <div className="rounded-xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-4 text-white">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#F4B942]">
+                  Match path
+                </p>
+                <p className="mt-1 text-xs text-white/70">{plan.discover_preference}</p>
+                {plan.assigned_mentor ? (
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold">{plan.assigned_mentor.mentor_name}</p>
+                    <p className="text-xs text-white/70">
+                      {plan.assigned_mentor.industry} · {plan.assigned_mentor.country} ·{" "}
+                      {formatPct(plan.assigned_mentor.compatibility)} fit
+                    </p>
+                  </div>
+                ) : (
+                  <p className="mt-3 text-sm text-white/70">No mentor assigned yet.</p>
+                )}
+                {plan.top_opportunity ? (
+                  <div className="mt-3 rounded-lg bg-white/10 px-3 py-2">
+                    <p className="text-[11px] uppercase tracking-wide text-[#F4B942]">Tied opportunity</p>
+                    <p className="text-sm font-medium">{plan.top_opportunity.title}</p>
+                    <p className="text-xs text-white/70">
+                      {plan.top_opportunity.org_name} · {formatPct(plan.top_opportunity.match_score)}
+                    </p>
+                  </div>
+                ) : null}
+              </div>
+
+              <div className="rounded-xl border border-[#0D1B2A]/10 bg-[#F8FAFA] p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/50">
+                  Weekly plan
+                </p>
+                <ol className="mt-2 space-y-2">
+                  {plan.weekly_plan.slice(0, 4).map((step, index) => (
+                    <li key={`${plan.student_id}-step-${index}`} className="text-sm text-[#0D1B2A]/80">
+                      <span className="font-semibold text-[#028090]">{index + 1}. {step.focus}</span>
+                      <span className="block text-xs text-[#0D1B2A]/65">{step.action}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {(plan.coach_prompts?.length || plan.advice_quote) ? (
+                <blockquote className="rounded-xl border border-[#F4B942]/40 bg-[#F4B942]/10 px-3 py-2 text-xs italic text-[#0D1B2A]/75">
+                  “{plan.advice_quote || plan.coach_prompts?.[0]}”
+                </blockquote>
+              ) : null}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function MentorshipPanel({
   assignment,
   top3,
   sessions,
   heatmap,
   mentors,
+  coach,
+  insights,
 }: {
   assignment: MentorAssignment | undefined;
   top3: Array<{
@@ -247,13 +482,63 @@ function MentorshipPanel({
   sessions: SessionLog[];
   heatmap: DashboardBundle["mentorship"]["heatmap"];
   mentors: DashboardBundle["mentorship"]["mentors"];
+  coach?: AiCoachPlan | null;
+  insights: SurveyInsights | null;
 }) {
-  const [bookingTopic, setBookingTopic] = useState("Career pathing");
+  const defaultTopic =
+    coach?.priority_needs?.[0] ||
+    insights?.top_mentor_needs?.[0]?.label ||
+    "Career path clarity";
+  const [bookingTopic, setBookingTopic] = useState(defaultTopic);
   const [bookingNote, setBookingNote] = useState("");
   const [booked, setBooked] = useState<string | null>(null);
+  const topicOptions = Array.from(
+    new Set(
+      [
+        ...(coach?.priority_needs ?? []),
+        ...(insights?.top_mentor_needs?.map((item) => item.label) ?? []),
+        "Career path clarity",
+        "Networking introductions",
+        "Entrepreneurship / startup advice",
+        "Scholarship / fellowship applications",
+        "Application review",
+        "Skills portfolio",
+      ].filter(Boolean),
+    ),
+  ).slice(0, 8);
 
   return (
     <div className="space-y-4">
+      {insights ? (
+        <div className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
+                Survey-shaped Mentor Hub
+              </p>
+              <p className="mt-1 max-w-3xl text-sm text-[#0D1B2A]/75">
+                Discovery defaults to top-3 choice ({insights.discover_preferences[0]?.label ?? "mixed AI + choice"}).
+                Booking defaults to {insights.session_formats[0]?.label ?? "video"} and structured monthly goals.
+                Highest demand: {(insights.top_mentor_needs[0]?.label ?? "networking")}.
+              </p>
+            </div>
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
+                <p className="text-lg font-semibold tabular-nums text-[#0D1B2A]">{insights.n_responses}</p>
+                <p className="text-[10px] uppercase tracking-wide text-[#0D1B2A]/50">Responses</p>
+              </div>
+              <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
+                <p className="text-lg font-semibold tabular-nums text-[#0D1B2A]">{insights.n_scholars}</p>
+                <p className="text-[10px] uppercase tracking-wide text-[#0D1B2A]/50">Scholars</p>
+              </div>
+              <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
+                <p className="text-lg font-semibold tabular-nums text-[#0D1B2A]">{insights.n_mentor_track}</p>
+                <p className="text-[10px] uppercase tracking-wide text-[#0D1B2A]/50">Mentors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
       <div className="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
         <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
@@ -284,12 +569,27 @@ function MentorshipPanel({
                 </span>
               </div>
               <p className="mt-3 text-sm text-[#0D1B2A]/70">
-                Optimal assignment from cosine similarity + Hungarian algorithm across the cohort
-                matrix.
+                Optimal assignment from cosine similarity + Hungarian algorithm on ESL survey vectors
+                (skills needed × mentor skills offered).
                 {assignment.languages?.length
                   ? ` Shared languages: ${assignment.languages.join(", ")}.`
                   : ""}
+                {coach?.discover_preference
+                  ? ` Your survey preference: ${coach.discover_preference}.`
+                  : ""}
               </p>
+              {coach?.priority_needs?.length ? (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {coach.priority_needs.slice(0, 4).map((need) => (
+                    <span
+                      key={`assign-need-${need}`}
+                      className="rounded-full bg-[#028090]/10 px-2 py-0.5 text-[11px] text-[#026f7d]"
+                    >
+                      {need}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
             </div>
           ) : (
             <p className="mt-3 text-sm text-[#0D1B2A]/65">
@@ -339,11 +639,16 @@ function MentorshipPanel({
             onChange={(event) => setBookingTopic(event.target.value)}
             className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#F4B942]"
           >
-            <option className="text-[#0D1B2A]">Career pathing</option>
-            <option className="text-[#0D1B2A]">Application review</option>
-            <option className="text-[#0D1B2A]">Skills portfolio</option>
-            <option className="text-[#0D1B2A]">Scholarship strategy</option>
+            {topicOptions.map((topic) => (
+              <option key={topic} className="text-[#0D1B2A]" value={topic}>
+                {topic}
+              </option>
+            ))}
           </select>
+          <p className="mt-2 text-[11px] text-white/60">
+            Prefers {coach?.session_format || insights?.session_formats?.[0]?.label || "video call"} ·{" "}
+            {coach?.working_style || insights?.working_styles?.[0]?.label || "structured monthly goals"}
+          </p>
           <label className="mt-3 block text-xs font-medium text-white/70" htmlFor="note">
             Note
           </label>
@@ -519,10 +824,12 @@ function AnalyticsPanel({
   metrics,
   nlp,
   kpis,
+  insights,
 }: {
   metrics: ModelMetrics;
   nlp: NlpRow[];
   kpis: DashboardBundle["kpis"];
+  insights: SurveyInsights | null;
 }) {
   const metricCards = [
     {
@@ -623,6 +930,36 @@ function AnalyticsPanel({
         </section>
       </div>
 
+      {insights ? (
+        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+          <h3 className="text-sm font-semibold text-[#0D1B2A]">ESL Mentor Needs survey snapshot</h3>
+          <p className="mt-1 text-xs text-[#0D1B2A]/60">
+            {insights.survey_name} · collected {insights.collected_at} · n={insights.n_responses}
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <CountBars title="Interests" items={insights.top_interests} />
+            <CountBars title="Mentor needs" items={insights.top_mentor_needs} />
+            <CountBars title="Barriers" items={insights.top_barriers} accent="#C0392B" />
+          </div>
+          {insights.representative_quotes?.length ? (
+            <div className="mt-4 grid gap-2 md:grid-cols-2">
+              {insights.representative_quotes.slice(0, 4).map((item, index) => (
+                <blockquote
+                  key={`${item.name}-${index}`}
+                  className="rounded-xl border border-[#0D1B2A]/08 bg-[#F8FAFA] px-3 py-2 text-xs italic text-[#0D1B2A]/75"
+                >
+                  “{item.quote}”
+                  <span className="mt-1 block not-italic text-[11px] text-[#0D1B2A]/55">
+                    — {item.name}
+                    {item.country ? ` · ${item.country}` : ""}
+                  </span>
+                </blockquote>
+              ))}
+            </div>
+          ) : null}
+        </section>
+      ) : null}
+
       <section className="rounded-2xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-5 text-white">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#F4B942]">
           Impact (SimpleJoint Trust)
@@ -655,7 +992,7 @@ function AnalyticsPanel({
 export function DashboardApp({ initialData }: { initialData: DashboardResponse }) {
   const router = useRouter();
   const [data, setData] = useState(initialData);
-  const [tab, setTab] = useState<TabId>("opportunities");
+  const [tab, setTab] = useState<TabId>("coach");
   const [selectedStudent, setSelectedStudent] = useState(initialData.student?.student_id ?? "");
   const [outreachStatus, setOutreachStatus] = useState<Record<string, string>>({});
   const [isPending, startTransition] = useTransition();
@@ -739,8 +1076,8 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
 
       <main className="mx-auto max-w-7xl space-y-5 px-4 py-5 sm:px-6">
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          <KpiCard label="Registered users" value={data.kpis.registered_users} />
-          <KpiCard label="Opportunities matched" value={data.kpis.opportunities_matched} />
+          <KpiCard label="Registered users" value={data.kpis.registered_users} hint="ESL survey + demo cohort" />
+          <KpiCard label="Survey responses" value={data.kpis.survey_responses ?? data.survey_insights?.n_responses ?? "—"} hint="Mentor Needs form" />
           <KpiCard label="Active mentor pairs" value={data.kpis.active_mentor_pairs} />
           <KpiCard label="At-risk students flagged" value={data.kpis.at_risk_students_flagged} />
         </div>
@@ -799,6 +1136,19 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           })}
         </nav>
 
+        {tab === "coach" ? (
+          <CoachPanel
+            plans={
+              data.role === "admin"
+                ? data.ai_coach_all ?? (data.ai_coach ? [data.ai_coach] : [])
+                : data.ai_coach
+                  ? [data.ai_coach]
+                  : []
+            }
+            insights={data.survey_insights ?? null}
+            isAdmin={data.role === "admin"}
+          />
+        ) : null}
         {tab === "opportunities" ? (
           <OpportunitiesPanel items={data.recommendations} sentence={data.personalised_sentence} />
         ) : null}
@@ -809,6 +1159,8 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             sessions={data.mentorship.sessions}
             heatmap={data.mentorship.heatmap}
             mentors={data.mentorship.mentors}
+            coach={data.ai_coach}
+            insights={data.survey_insights ?? null}
           />
         ) : null}
         {tab === "risk" ? (
@@ -820,7 +1172,12 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           />
         ) : null}
         {tab === "analytics" ? (
-          <AnalyticsPanel metrics={data.metrics} nlp={data.nlp} kpis={data.kpis} />
+          <AnalyticsPanel
+            metrics={data.metrics}
+            nlp={data.nlp}
+            kpis={data.kpis}
+            insights={data.survey_insights ?? null}
+          />
         ) : null}
       </main>
     </div>

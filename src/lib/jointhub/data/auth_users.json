@@ -6,39 +6,63 @@
     "student_id": null
   },
   {
+    "email": "esl02@jointhub.demo",
+    "role": "student",
+    "full_name": "Callie Davis",
+    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e"
+  },
+  {
+    "email": "esl03@jointhub.demo",
+    "role": "student",
+    "full_name": "Desmond Tunyinko",
+    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c"
+  },
+  {
+    "email": "esl06@jointhub.demo",
+    "role": "student",
+    "full_name": "Lisa Swai",
+    "student_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4"
+  },
+  {
+    "email": "esl07@jointhub.demo",
+    "role": "student",
+    "full_name": "Blessing Matiro",
+    "student_id": "7912e963-9252-54a0-8543-262e566ff29c"
+  },
+  {
+    "email": "esl08@jointhub.demo",
+    "role": "student",
+    "full_name": "CONFREY ALIANJI",
+    "student_id": "ba194f0a-4ac8-595f-a11d-54a5c7a8387b"
+  },
+  {
+    "email": "esl11@jointhub.demo",
+    "role": "student",
+    "full_name": "Winnie",
+    "student_id": "6a79888b-55bf-5996-a851-820283a533dd"
+  },
+  {
+    "email": "esl13@jointhub.demo",
+    "role": "student",
+    "full_name": "Calvin Felician Girambo",
+    "student_id": "92562ba5-db8c-5c42-8b92-74c208014f07"
+  },
+  {
+    "email": "esl16@jointhub.demo",
+    "role": "student",
+    "full_name": "Kobi Owulosua",
+    "student_id": "21eb43a5-603e-50f6-9fa6-1b9397c5d31c"
+  },
+  {
     "email": "scholar1@jointhub.demo",
     "role": "student",
-    "full_name": "Amina Okoro",
-    "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916"
+    "full_name": "Callie Davis",
+    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e"
   },
   {
     "email": "scholar2@jointhub.demo",
     "role": "student",
-    "full_name": "Kwame Mensah",
-    "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a"
-  },
-  {
-    "email": "scholar3@jointhub.demo",
-    "role": "student",
-    "full_name": "Chiamaka Diallo",
-    "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b"
-  },
-  {
-    "email": "scholar4@jointhub.demo",
-    "role": "student",
-    "full_name": "Thabo Nkrumah",
-    "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5"
-  },
-  {
-    "email": "scholar5@jointhub.demo",
-    "role": "student",
-    "full_name": "Fatou Abebe",
-    "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833"
-  },
-  {
-    "email": "scholar6@jointhub.demo",
-    "role": "student",
-    "full_name": "Ibrahim Mwangi",
-    "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd"
+    "full_name": "Desmond Tunyinko",
+    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c"
   }
 ]

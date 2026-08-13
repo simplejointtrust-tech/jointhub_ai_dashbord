@@ -1,0 +1,1096 @@
+[
+  {
+    "response_id": "26022e54-151e-53d3-b5cd-5731b1473bd1",
+    "full_name": "Maria Laetitia Pereira",
+    "country": "South Africa",
+    "campus": "Eduvos university",
+    "programme_field": "Media studies",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "creative_tech",
+      "social_impact",
+      "media_film"
+    ],
+    "interest_labels_raw": [
+      "Creativity and Innovation",
+      "Social impact",
+      "Media / film"
+    ],
+    "skills_needed": [
+      "creative_tech",
+      "leadership",
+      "data_ai"
+    ],
+    "mentor_need_labels": [
+      "CV / LinkedIn / portfolio review",
+      "Interview practice",
+      "Technical skill growth",
+      "Mental resilience & confidence"
+    ],
+    "career_goal_text": "My main career goal over the next 6–12 months is to strengthen my leadership skills, expand my professional experience in communications and media, and take on opportunities where I can contribute strategically, lead projects, and create meaningful impact.",
+    "languages": [
+      "English",
+      "Portuguese"
+    ],
+    "barriers": [
+      "Limited access to opportunities",
+      "Weak application materials"
+    ],
+    "preferred_session_format": "No preference",
+    "preferred_working_style": "Structured monthly goals",
+    "hours_per_month": 2,
+    "hours_label": "Not sure",
+    "discover_preference": "I choose from top 3 recommendations",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "Top 3 mentor alternatives"
+    ],
+    "mentor_confidence": 3.0,
+    "industry_preferences": [
+      "Education",
+      "Media",
+      "Climate",
+      "Public policy"
+    ],
+    "advice": "I believe the Mentor Hub should create a supportive and inclusive environment where mentors and mentees can build meaningful relationships. Providing clear goals, regular check-ins, networking opportunities, and resources for leadership development would help maximize the impact of the program.",
+    "heard_channel": "WhatsApp group",
+    "age_range": "27+",
+    "gender": "Female",
+    "track": "mentor",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-23T18:15:14Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl01@jointhub.demo"
+  },
+  {
+    "response_id": "6936256f-985a-5a10-8115-62ea7b2d601e",
+    "full_name": "Callie Davis",
+    "country": "Tanzania",
+    "campus": "Kairuki university",
+    "programme_field": "Medicine",
+    "career_stage_label": "Exploring interests (high school / early uni)",
+    "career_stage": 1,
+    "interest_tags": [
+      "leadership",
+      "creative_tech",
+      "media_film",
+      "music_arts",
+      "health"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Creativity and Innovation",
+      "Media / film",
+      "Music / arts",
+      "Healthcae"
+    ],
+    "skills_needed": [
+      "leadership",
+      "creative_tech",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "CV / LinkedIn / portfolio review",
+      "Leadership",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ],
+    "career_goal_text": "I want to explore working with",
+    "languages": [
+      "English"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Limited access to opportunities",
+      "Financial pressure",
+      "Internet / device limits",
+      "Time management / overload",
+      "Lack of role models",
+      "Academic performance pressure"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Structured monthly goals",
+    "hours_per_month": 1,
+    "hours_label": "1 hour",
+    "discover_preference": "I choose from top 3 recommendations",
+    "inactivity_outreach_opt_in": true,
+    "dashboard_feature_requests": [
+      "Assigned mentor match score",
+      "Session log / goals tracker",
+      "Risk / check-in reminders"
+    ],
+    "mentor_confidence": 5.0,
+    "industry_preferences": [
+      "Media",
+      "Creative industries",
+      "Any — best match on skills"
+    ],
+    "advice": "None so far .",
+    "heard_channel": "Friend / referral",
+    "age_range": "21–23",
+    "gender": "Female",
+    "track": "scholar",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-23T18:36:55Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl02@jointhub.demo"
+  },
+  {
+    "response_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c",
+    "full_name": "Desmond Tunyinko",
+    "country": "Rwanda",
+    "campus": "African Leadership University, Rwanda",
+    "programme_field": "BSc. Software Engineering",
+    "career_stage_label": "Early-career professional",
+    "career_stage": 5,
+    "interest_tags": [
+      "leadership",
+      "entrepreneurship",
+      "climate_env",
+      "social_impact"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Entrepreneurship",
+      "Sustainability/Environment",
+      "Human Development"
+    ],
+    "skills_needed": [
+      "social_impact",
+      "leadership",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Scholarship / fellowship applications",
+      "Leadership",
+      "Entrepreneurship / startup advice"
+    ],
+    "career_goal_text": "I want to work on full stack software projects at the intersection human capital development.",
+    "languages": [
+      "English"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Limited access to opportunities",
+      "Financial pressure",
+      "Time management / overload",
+      "Family or community expectations",
+      "Academic performance pressure"
+    ],
+    "preferred_session_format": "In-person if same city",
+    "preferred_working_style": "Accountability check-ins",
+    "hours_per_month": 1,
+    "hours_label": "1 hour",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "Assigned mentor match score",
+      "Session booking",
+      "Opportunity recommendations tied to mentor advice",
+      "Offline / low-bandwidth model"
+    ],
+    "mentor_confidence": 4.0,
+    "industry_preferences": [
+      "Education",
+      "Climate",
+      "Any — best match on skills",
+      "Entrepreneurship"
+    ],
+    "advice": "Mentors could also come to mentorship sessions with opportunities",
+    "heard_channel": "Friend / referral",
+    "age_range": "24–26",
+    "gender": "Male",
+    "track": "scholar",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-23T20:45:54Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl03@jointhub.demo"
+  },
+  {
+    "response_id": "1bcd3f2a-c8e9-5c7f-b5e7-1e9649cf76de",
+    "full_name": "Isaiah O'Kevwe Kporon",
+    "country": "Rwanda",
+    "campus": "African Leadership University (ALU)",
+    "programme_field": "EMBA",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "leadership",
+      "creative_tech",
+      "climate_env",
+      "social_impact"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Creativity and Innovation",
+      "Sustainability/Environment",
+      "Human Development"
+    ],
+    "skills_needed": [
+      "leadership",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Leadership",
+      "Entrepreneurship / startup advice",
+      "Mental resilience & confidence"
+    ],
+    "career_goal_text": "I want to work on AI projects SimpleJoint Trust, study Theology, graduate and join the SJ in July 2027.",
+    "languages": [
+      "English"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Time management / overload"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Structured monthly goals",
+    "hours_per_month": 1,
+    "hours_label": "1 hour",
+    "discover_preference": "AI Matching system - Auto-assigned best global match",
+    "inactivity_outreach_opt_in": true,
+    "dashboard_feature_requests": [
+      "Assigned mentor match score",
+      "Top 3 mentor alternatives",
+      "Matching matrix transparency",
+      "Risk / check-in reminders"
+    ],
+    "mentor_confidence": 5.0,
+    "industry_preferences": [
+      "Public policy",
+      "Nonprofit / social enterprise",
+      "Creative industries"
+    ],
+    "advice": "Keep moving",
+    "heard_channel": "SimpleJoint Website",
+    "age_range": "27+",
+    "gender": "Male",
+    "track": "mentor",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-23T22:56:19Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl04@jointhub.demo"
+  },
+  {
+    "response_id": "d3685eb5-90f9-5fca-ba07-f2679b0dfb88",
+    "full_name": "Neemaisabella Henry swai",
+    "country": "Tanzania",
+    "campus": "Currently a high school graduate student",
+    "programme_field": "None for now",
+    "career_stage_label": "Applying to scholarships / fellowships",
+    "career_stage": 3,
+    "interest_tags": [
+      "leadership",
+      "music_arts",
+      "health",
+      "social_impact"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Music / arts",
+      "Healthcae",
+      "Human Development"
+    ],
+    "skills_needed": [
+      "leadership",
+      "social_impact"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "Scholarship / fellowship applications",
+      "Networking introductions"
+    ],
+    "career_goal_text": "I want to work in saving lives and doing research on different ways diseases especially genetic ones and trying to find out their cure",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "barriers": [
+      "Limited access to opportunities",
+      "Financial pressure"
+    ],
+    "preferred_session_format": "Phone / WhatsApp voice",
+    "preferred_working_style": "Structured monthly goals",
+    "hours_per_month": 1,
+    "hours_label": "1 hour",
+    "discover_preference": "AI Matching system - Auto-assigned best global match",
+    "inactivity_outreach_opt_in": true,
+    "dashboard_feature_requests": [
+      "Opportunity recommendations tied to mentor advice"
+    ],
+    "mentor_confidence": 4.0,
+    "industry_preferences": [
+      "Health"
+    ],
+    "advice": "All is good",
+    "heard_channel": "Friend / referral",
+    "age_range": "18–20",
+    "gender": "Female",
+    "track": "mentor",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-24T04:34:31Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl05@jointhub.demo"
+  },
+  {
+    "response_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4",
+    "full_name": "Lisa Swai",
+    "country": "Tanzania",
+    "campus": "University of Dar es Salaam",
+    "programme_field": "Statistics",
+    "career_stage_label": "Building foundations",
+    "career_stage": 2,
+    "interest_tags": [
+      "leadership",
+      "entrepreneurship",
+      "data_ai",
+      "social_impact"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Entrepreneurship",
+      "Data & AI",
+      "Policy & Advocacy"
+    ],
+    "skills_needed": [
+      "social_impact",
+      "leadership",
+      "entrepreneurship",
+      "data_ai"
+    ],
+    "mentor_need_labels": [
+      "Scholarship / fellowship applications",
+      "Leadership",
+      "Entrepreneurship / startup advice",
+      "Networking introductions",
+      "Research / academic guidance"
+    ],
+    "career_goal_text": "I want to build a business Intelligence company that solves business requirements with technical solutions using AI.",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "barriers": [
+      "Limited access to opportunities",
+      "Financial pressure",
+      "Lack of role models",
+      "Family or community expectations"
+    ],
+    "preferred_session_format": "Phone / WhatsApp voice",
+    "preferred_working_style": "Structured monthly goals",
+    "hours_per_month": 2,
+    "hours_label": "2 hours",
+    "discover_preference": "I want to browse all mentors",
+    "inactivity_outreach_opt_in": true,
+    "dashboard_feature_requests": [
+      "Opportunity recommendations tied to mentor advice",
+      "Mobile-friendly experience",
+      "Offline / low-bandwidth model",
+      "AI Matching"
+    ],
+    "mentor_confidence": 4.0,
+    "industry_preferences": [
+      "Technology",
+      "Finance",
+      "Nonprofit / social enterprise",
+      "Creative industries"
+    ],
+    "advice": "Always do things with intentions it helps to narrow and concentrate your focus and attention",
+    "heard_channel": "LinkedIn",
+    "age_range": "24–26",
+    "gender": "Female",
+    "track": "scholar",
+    "bootcamp_contact_ok": false,
+    "submitted_at": "2026-07-24T05:04:49Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl06@jointhub.demo"
+  },
+  {
+    "response_id": "7912e963-9252-54a0-8543-262e566ff29c",
+    "full_name": "Blessing Matiro",
+    "country": "Zimbabwe",
+    "campus": "ALU Kigali",
+    "programme_field": "EMBA AI & Data Science",
+    "career_stage_label": "Applying to scholarships / fellowships",
+    "career_stage": 3,
+    "interest_tags": [
+      "leadership",
+      "entrepreneurship",
+      "data_ai",
+      "social_impact"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Entrepreneurship",
+      "Data & AI",
+      "Social impact"
+    ],
+    "skills_needed": [
+      "leadership",
+      "social_impact",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "Scholarship / fellowship applications",
+      "Entrepreneurship / startup advice"
+    ],
+    "career_goal_text": "I would like to grow and learn more about leadership in the AI industry",
+    "languages": [
+      "English",
+      "Shona"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Limited access to opportunities"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Structured monthly goals",
+    "hours_per_month": 2,
+    "hours_label": "2 hours",
+    "discover_preference": "I want to browse all mentors",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "Assigned mentor match score",
+      "Session booking",
+      "Session log / goals tracker",
+      "Mobile-friendly experience",
+      "Offline / low-bandwidth model"
+    ],
+    "mentor_confidence": 4.0,
+    "industry_preferences": [
+      "Technology"
+    ],
+    "advice": "This is an interesting and great project Kay !!!",
+    "heard_channel": "WhatsApp group",
+    "age_range": "27+",
+    "gender": "Female",
+    "track": "scholar",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-24T13:35:48Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl07@jointhub.demo"
+  },
+  {
+    "response_id": "ba194f0a-4ac8-595f-a11d-54a5c7a8387b",
+    "full_name": "CONFREY ALIANJI",
+    "country": "Kenyan",
+    "campus": "ALU",
+    "programme_field": "MBA",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "leadership",
+      "entrepreneurship",
+      "social_impact",
+      "climate_env"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Entrepreneurship",
+      "Social impact",
+      "Sustainability/Environment",
+      "Mission"
+    ],
+    "skills_needed": [
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Entrepreneurship / startup advice"
+    ],
+    "career_goal_text": "Build conservation ventures and create jobs",
+    "languages": [
+      "English"
+    ],
+    "barriers": [
+      "Financial pressure"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Portfolio / application co-working",
+    "hours_per_month": 12,
+    "hours_label": "45 mins",
+    "discover_preference": "I choose from top 3 recommendations",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "Opportunity recommendations tied to mentor advice"
+    ],
+    "mentor_confidence": 5.0,
+    "industry_preferences": [
+      "Finance"
+    ],
+    "advice": "Na",
+    "heard_channel": "ALU Student/Alumni",
+    "age_range": "27+",
+    "gender": "Male",
+    "track": "scholar",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-25T03:42:25Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl08@jointhub.demo"
+  },
+  {
+    "response_id": "b0c8db39-db5a-55b0-ab3c-21d6ecd68119",
+    "full_name": "Peggy Mapondera",
+    "country": "Zimbabwe",
+    "campus": "Africa Leadership University School of Business",
+    "programme_field": "EMBA",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "entrepreneurship",
+      "finance",
+      "agri_food"
+    ],
+    "interest_labels_raw": [
+      "Entrepreneurship",
+      "Finance",
+      "AgriTech /Business"
+    ],
+    "skills_needed": [
+      "leadership"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "Leadership",
+      "Networking introductions"
+    ],
+    "career_goal_text": "I want to set up a gender lens fund focused on agribusinesses in Zimbabwe and across Africa",
+    "languages": [
+      "English"
+    ],
+    "barriers": [
+      "Limited access to opportunities",
+      "Lack of role models"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Accountability check-ins",
+    "hours_per_month": 2,
+    "hours_label": "2 hours",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "Assigned mentor match score",
+      "Session booking",
+      "Opportunity recommendations tied to mentor advice",
+      "Mobile-friendly experience"
+    ],
+    "mentor_confidence": 5.0,
+    "industry_preferences": [
+      "Finance",
+      "Agriculture"
+    ],
+    "advice": "None for now",
+    "heard_channel": "ALU Student/Alumni",
+    "age_range": "27+",
+    "gender": "Female",
+    "track": "mentor",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-26T13:53:21Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl09@jointhub.demo"
+  },
+  {
+    "response_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+    "full_name": "Musana Rwiyereka Emile",
+    "country": "Drc",
+    "campus": "ALUSB",
+    "programme_field": "EMBA",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "leadership",
+      "entrepreneurship",
+      "data_ai"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Entrepreneurship",
+      "Data & AI"
+    ],
+    "skills_needed": [
+      "leadership",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Leadership",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ],
+    "career_goal_text": "Starting a new venture into telecom infrastructure",
+    "languages": [
+      "English",
+      "French"
+    ],
+    "barriers": [
+      "Time management / overload"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Accountability check-ins",
+    "hours_per_month": 2,
+    "hours_label": "2 hours",
+    "discover_preference": "I choose from top 3 recommendations",
+    "inactivity_outreach_opt_in": true,
+    "dashboard_feature_requests": [
+      "Assigned mentor match score",
+      "Top 3 mentor alternatives",
+      "Session log / goals tracker",
+      "Matching matrix transparency",
+      "Risk / check-in reminders"
+    ],
+    "mentor_confidence": 4.0,
+    "industry_preferences": [
+      "Technology",
+      "Finance"
+    ],
+    "advice": "N/a",
+    "heard_channel": "Friend / referral",
+    "age_range": "27+",
+    "gender": "Male",
+    "track": "mentor",
+    "bootcamp_contact_ok": false,
+    "submitted_at": "2026-07-26T15:19:14Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl10@jointhub.demo"
+  },
+  {
+    "response_id": "6a79888b-55bf-5996-a851-820283a533dd",
+    "full_name": "Winnie",
+    "country": "Tanzania",
+    "campus": "ALU Kigali",
+    "programme_field": "EMBA",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "leadership",
+      "creative_tech",
+      "entrepreneurship",
+      "data_ai",
+      "social_impact"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Creativity and Innovation",
+      "Entrepreneurship",
+      "Data & AI",
+      "Human Development"
+    ],
+    "skills_needed": [
+      "leadership"
+    ],
+    "mentor_need_labels": [
+      "Networking introductions"
+    ],
+    "career_goal_text": "I want to build a learning center",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "barriers": [
+      "Financial pressure"
+    ],
+    "preferred_session_format": "No preference",
+    "preferred_working_style": "Flexible ad-hoc advice",
+    "hours_per_month": 1,
+    "hours_label": "1 hour",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "Opportunity recommendations tied to mentor advice"
+    ],
+    "mentor_confidence": 5.0,
+    "industry_preferences": [
+      "Technology",
+      "Education",
+      "Finance",
+      "Nonprofit / social enterprise",
+      "Creative industries"
+    ],
+    "advice": "None",
+    "heard_channel": "ALU Student/Alumni",
+    "age_range": "27+",
+    "gender": "Female",
+    "track": "scholar",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-26T18:56:28Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl11@jointhub.demo"
+  },
+  {
+    "response_id": "a053c220-52c1-541e-b5fa-d59bb1ec3108",
+    "full_name": "Adelina",
+    "country": "Tanzania",
+    "campus": "ALUSB Kigali",
+    "programme_field": "ALUSB EMBA",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "leadership",
+      "creative_tech",
+      "entrepreneurship",
+      "media_film"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Creativity and Innovation",
+      "Entrepreneurship",
+      "Media / film"
+    ],
+    "skills_needed": [
+      "leadership"
+    ],
+    "mentor_need_labels": [
+      "Networking introductions"
+    ],
+    "career_goal_text": "Working in real estate, self-employed.",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "barriers": [
+      "Low confidence / impostor feelings",
+      "Time management / overload",
+      "Family or community expectations"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Portfolio / application co-working",
+    "hours_per_month": 1,
+    "hours_label": "1 hour",
+    "discover_preference": "I choose from top 3 recommendations",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "Top 3 mentor alternatives"
+    ],
+    "mentor_confidence": 5.0,
+    "industry_preferences": [
+      "Media",
+      "Real estate"
+    ],
+    "advice": "not for now",
+    "heard_channel": "Friend / referral",
+    "age_range": "27+",
+    "gender": "Female",
+    "track": "mentor",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-27T09:22:59Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl12@jointhub.demo"
+  },
+  {
+    "response_id": "92562ba5-db8c-5c42-8b92-74c208014f07",
+    "full_name": "Calvin Felician Girambo",
+    "country": "Tanzania",
+    "campus": "Feza International School",
+    "programme_field": "Business",
+    "career_stage_label": "Building foundations",
+    "career_stage": 2,
+    "interest_tags": [
+      "creative_tech",
+      "entrepreneurship",
+      "data_ai",
+      "finance"
+    ],
+    "interest_labels_raw": [
+      "Creativity and Innovation",
+      "Entrepreneurship",
+      "Data & AI",
+      "Finance"
+    ],
+    "skills_needed": [
+      "leadership",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ],
+    "career_goal_text": "I want to build up my portfolio based of digital marketing and AI skills that I'm still currently trying to work on",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "barriers": [
+      "Unclear career direction",
+      "Limited access to opportunities",
+      "Low confidence / impostor feelings"
+    ],
+    "preferred_session_format": "Chat / async",
+    "preferred_working_style": "Structured monthly goals",
+    "hours_per_month": 2,
+    "hours_label": "2 hours",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "Assigned mentor match score",
+      "Top 3 mentor alternatives",
+      "Session booking",
+      "Session log / goals tracker",
+      "Opportunity recommendations tied to mentor advice",
+      "AI Matching"
+    ],
+    "mentor_confidence": 3.0,
+    "industry_preferences": [
+      "Technology",
+      "Finance"
+    ],
+    "advice": "N/A",
+    "heard_channel": "Friend / referral",
+    "age_range": "18–20",
+    "gender": "Male",
+    "track": "scholar",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-27T21:04:14Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl13@jointhub.demo"
+  },
+  {
+    "response_id": "10a757a7-b196-5197-a9a6-b51810504f1a",
+    "full_name": "AHMED MASOUD",
+    "country": "Tanzania",
+    "campus": "TANZANIA INSTITUTE OF ACCOUNTING",
+    "programme_field": "ACCOUNTING",
+    "career_stage_label": "Applying to scholarships / fellowships",
+    "career_stage": 3,
+    "interest_tags": [
+      "leadership",
+      "creative_tech",
+      "media_film",
+      "social_impact"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Creativity and Innovation",
+      "Media / film",
+      "Policy & Advocacy"
+    ],
+    "skills_needed": [
+      "social_impact",
+      "leadership"
+    ],
+    "mentor_need_labels": [
+      "Scholarship / fellowship applications",
+      "Leadership",
+      "Networking introductions"
+    ],
+    "career_goal_text": "Over the next 6–12 months, I want to strengthen my leadership skills while completing my undergraduate degree. I also want to mentor and guide young people in Tanzania by helping them develop the practical life skills, career awareness, and leadership abilities that are often missing from the traditional education system",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "barriers": [
+      "Limited access to opportunities"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Structured monthly goals",
+    "hours_per_month": 2,
+    "hours_label": "2 hours",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "inactivity_outreach_opt_in": true,
+    "dashboard_feature_requests": [
+      "Opportunity recommendations tied to mentor advice",
+      "Risk / check-in reminders",
+      "Mobile-friendly experience",
+      "Offline / low-bandwidth model"
+    ],
+    "mentor_confidence": 5.0,
+    "industry_preferences": [
+      "Education",
+      "Media",
+      "Public policy",
+      "Nonprofit / social enterprise"
+    ],
+    "advice": "No",
+    "heard_channel": "Friend / referral",
+    "age_range": "21–23",
+    "gender": "Male",
+    "track": "mentor",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-27T21:22:48Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl14@jointhub.demo"
+  },
+  {
+    "response_id": "61360981-37bc-53a3-b8b5-ada88d7de5e0",
+    "full_name": "Junior Ohouko",
+    "country": "Benin",
+    "campus": "ALU Kigali",
+    "programme_field": "Business of Conservation",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "leadership",
+      "climate_env",
+      "social_impact"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Sustainability/Environment",
+      "Human Development",
+      "Policy & Advocacy"
+    ],
+    "skills_needed": [
+      "data_ai",
+      "leadership"
+    ],
+    "mentor_need_labels": [
+      "Technical skill growth",
+      "Leadership",
+      "Mental resilience & confidence"
+    ],
+    "career_goal_text": "Support African countries in better protecting their natural sites, through an improved understanding and application of the Works Heritage Convention.",
+    "languages": [
+      "English",
+      "French"
+    ],
+    "barriers": [
+      "Weak application materials",
+      "Time management / overload",
+      "Family or community expectations"
+    ],
+    "preferred_session_format": "No preference",
+    "preferred_working_style": "Flexible ad-hoc advice",
+    "hours_per_month": 1,
+    "hours_label": "1 hour",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "inactivity_outreach_opt_in": true,
+    "dashboard_feature_requests": [
+      "Session booking",
+      "Opportunity recommendations tied to mentor advice",
+      "Risk / check-in reminders"
+    ],
+    "mentor_confidence": 4.0,
+    "industry_preferences": [
+      "Technology",
+      "Education",
+      "Finance",
+      "Public policy"
+    ],
+    "advice": "N/A",
+    "heard_channel": "ALU Student/Alumni",
+    "age_range": "27+",
+    "gender": "Male",
+    "track": "mentor",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-28T18:01:06Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl15@jointhub.demo"
+  },
+  {
+    "response_id": "21eb43a5-603e-50f6-9fa6-1b9397c5d31c",
+    "full_name": "Kobi Owulosua",
+    "country": "United States",
+    "campus": "Ithaca College",
+    "programme_field": "Communications",
+    "career_stage_label": "Early-career professional",
+    "career_stage": 5,
+    "interest_tags": [
+      "social_impact",
+      "media_film",
+      "music_arts"
+    ],
+    "interest_labels_raw": [
+      "Social impact",
+      "Media / film",
+      "Music / arts",
+      "Policy & Advocacy"
+    ],
+    "skills_needed": [
+      "leadership",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ],
+    "career_goal_text": "I want to sell a script",
+    "languages": [
+      "English"
+    ],
+    "barriers": [
+      "Limited access to opportunities",
+      "Low confidence / impostor feelings",
+      "Time management / overload"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Accountability check-ins",
+    "hours_per_month": 2,
+    "hours_label": "2 hours",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "inactivity_outreach_opt_in": true,
+    "dashboard_feature_requests": [
+      "Opportunity recommendations tied to mentor advice"
+    ],
+    "mentor_confidence": 5.0,
+    "industry_preferences": [
+      "Creative industries"
+    ],
+    "advice": "N/a",
+    "heard_channel": "Friend / referral",
+    "age_range": "27+",
+    "gender": "Male",
+    "track": "scholar",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-07-29T11:54:22Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl16@jointhub.demo"
+  },
+  {
+    "response_id": "cd812142-5c61-56f8-9ec8-f619ee39de63",
+    "full_name": "Barasa Wafula",
+    "country": "Kenya",
+    "campus": "ALU School of Business",
+    "programme_field": "EMBA",
+    "career_stage_label": "Leading projects / teams",
+    "career_stage": 6,
+    "interest_tags": [
+      "leadership",
+      "social_impact",
+      "climate_env",
+      "finance"
+    ],
+    "interest_labels_raw": [
+      "Leadership",
+      "Social impact",
+      "Sustainability/Environment",
+      "Finance"
+    ],
+    "skills_needed": [
+      "leadership"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity"
+    ],
+    "career_goal_text": "I want to lead energy access projects across Africa and Asia.",
+    "languages": [
+      "English"
+    ],
+    "barriers": [
+      "Limited time for networking"
+    ],
+    "preferred_session_format": "Video call",
+    "preferred_working_style": "Flexible ad-hoc advice",
+    "hours_per_month": 12,
+    "hours_label": "30 mins",
+    "discover_preference": "Mix — system suggests, I confirm",
+    "inactivity_outreach_opt_in": false,
+    "dashboard_feature_requests": [
+      "AI Matching"
+    ],
+    "mentor_confidence": 3.0,
+    "industry_preferences": [
+      "Finance"
+    ],
+    "advice": "N/A",
+    "heard_channel": "WhatsApp group",
+    "age_range": "27+",
+    "gender": "Male",
+    "track": "mentor",
+    "bootcamp_contact_ok": true,
+    "submitted_at": "2026-08-04T14:46:54Z",
+    "source": "ESL Mentor Needs Survey 2026-07",
+    "email_alias": "esl17@jointhub.demo"
+  }
+]

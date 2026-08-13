@@ -29,7 +29,7 @@ Four live AI/DS modules on sample cohort data (not static mock cards):
 ## Demo path (Capstone)
 
 1. Open `/dashboard/login`
-2. Sign in as `scholar1@jointhub.demo`
+2. Sign in as `esl02@jointhub.demo (Callie), esl03@jointhub.demo (Desmond), admin@jointhub.demo
 3. Review **Opportunities** (“Curated for You”) and the NLP recommendation sentence
 4. Open **Mentor Hub** for assigned mentor, top alternatives, matching matrix, session booking/log
 5. Sign out and use `admin@jointhub.demo` for full **Dropout risk** table + outreach and **Analytics** KPIs

@@ -3,6 +3,8 @@ import { DashboardApp } from "@/components/jointhub/DashboardApp";
 import { getSessionUser } from "@/lib/jointhub/auth";
 import {
   findStudent,
+  getAiCoachForStudent,
+  getAiCoachPlans,
   getKpis,
   getMentorship,
   getMetrics,
@@ -11,6 +13,7 @@ import {
   getRecommendationsMap,
   getRiskRows,
   getStudents,
+  getSurveyInsights,
 } from "@/lib/jointhub/data-store";
 import type { DashboardBundle } from "@/lib/jointhub/types";
 
@@ -64,6 +67,7 @@ export default async function DashboardPage() {
 
   const initialData: DashboardBundle & {
     students?: Array<{ student_id: string; full_name: string; email: string; country: string }>;
+    ai_coach_all?: ReturnType<typeof getAiCoachPlans>;
   } = {
     student,
     kpis: getKpis(),
@@ -75,6 +79,8 @@ export default async function DashboardPage() {
     role: session.role,
     auth_email: session.email,
     personalised_sentence: personalised,
+    ai_coach: getAiCoachForStudent(session.student_id),
+    survey_insights: getSurveyInsights(),
     students: isAdmin
       ? getStudents().map((item) => ({
           student_id: item.student_id,
@@ -83,6 +89,7 @@ export default async function DashboardPage() {
           country: item.country,
         }))
       : undefined,
+    ai_coach_all: isAdmin ? getAiCoachPlans() : undefined,
   };
 
   return <DashboardApp initialData={initialData} />;
