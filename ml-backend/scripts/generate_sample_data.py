@@ -199,14 +199,14 @@ def main() -> int:
             {
                 "student_id": str(uuid.uuid4()),
                 "full_name": f"{FIRST[i]} {LAST[i % len(LAST)]}",
-                "email": f"scholar{i + 1}@jointhub.demo",
+                "email": f"leader{i + 1}@jointhub.demo",
                 "country": country,
                 "campus": random.choice(["ALU Kigali", "ALU Mauritius", "Remote / Diaspora"]),
                 "programme": random.choice(
-                    ["ESL Scholar", "CreativeTech Bootcamp", "JointHub Fellow", "University Partner"]
+                    ["ESL Leader", "CreativeTech Bootcamp", "JointHub Fellow", "University Partner"]
                 ),
                 "career_stage": random.randint(1, 7),
-                "scholar_status": bool(random.random() < 0.55),
+                "leader_status": bool(random.random() < 0.55),
                 "interest_tags": tags,
                 "interest_vector": multi_hot(tags),
                 "skills_needed": random.sample(INTERESTS, k=2),
@@ -236,7 +236,7 @@ def main() -> int:
                 "availability_hrs_per_month": random.choice([0, 2, 4, 6, 8, 10]),
                 "languages": ["English"]
                 + ([random.choice(["French", "Swahili"])] if random.random() < 0.4 else []),
-                "bio": "Professional mentor supporting African scholars on JointHub Africa.",
+                "bio": "Professional mentor supporting African leaders on JointHub Africa.",
             }
         )
     # ensure enough available mentors

@@ -14,12 +14,14 @@ export type InterestTag =
   | "finance"
   | "agri_food";
 
-export type Role = "student" | "admin";
+export type Role = "student" | "admin" | "mentor";
 
 export type AuthUser = {
   email: string;
   role: Role;
   student_id: string | null;
+  /** Present when role is mentor — scopes caseload to this ESL mentor. */
+  mentor_id?: string | null;
   full_name: string;
 };
 
@@ -31,7 +33,7 @@ export type StudentProfile = {
   campus: string;
   programme: string;
   career_stage: number;
-  scholar_status: boolean;
+  leader_status: boolean;
   interest_tags: string[];
   career_goal_text: string;
   signup_timestamp: string;
@@ -63,6 +65,9 @@ export type MentorProfile = {
   languages: string[];
   title?: string;
   bio?: string;
+  /** Optional portrait path shared with the public ESL Mentors page */
+  image?: string;
+  linkedInUrl?: string;
 };
 
 export type OpportunityListing = {
@@ -76,10 +81,15 @@ export type OpportunityListing = {
   deadline: string;
   interest_vector: number[];
   description: string;
-  description_embedding: number[];
+  description_embedding?: number[];
   is_verified: boolean;
   is_scam_flag: boolean;
   created_at: string;
+  /** Official listing URL from the curated opportunities sheet */
+  url?: string | null;
+  status?: string;
+  interest_tags?: string[];
+  location?: string;
 };
 
 export type Recommendation = {
@@ -93,6 +103,9 @@ export type Recommendation = {
   is_scam_flag?: boolean;
   description?: string;
   interest_overlap?: string[];
+  /** Official listing URL from the curated opportunities sheet */
+  url?: string | null;
+  status?: string;
 };
 
 export type MentorAssignment = {

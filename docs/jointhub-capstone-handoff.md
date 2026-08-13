@@ -9,9 +9,9 @@
 Working Capstone AI dashboard in the product repository:
 
 - Landing page pointing into the Capstone dashboard
-- Demo auth: `scholar1@jointhub.demo`, `scholar2@jointhub.demo`, `admin@jointhub.demo`
+- Demo auth: `leader1@jointhub.demo`, `leader2@jointhub.demo`, `admin@jointhub.demo`
 - Four tabs with live computed sample outputs:
-  1. Opportunities — ranked top-5 per scholar
+  1. Opportunities — ranked top-5 per leader
   2. Mentor Hub — Hungarian assignment, heatmap, top-3, session booking/log
   3. Dropout risk — probabilities, risk levels, outreach trigger (admin)
   4. Analytics — KPI row + model metric targets vs sample results
@@ -22,7 +22,7 @@ Working Capstone AI dashboard in the product repository:
 ## Demo path for Capstone / bootcamp
 
 1. Open the staging/preview URL → **Open Capstone dashboard**
-2. Sign in as **scholar1@jointhub.demo**
+2. Sign in as **leader1@jointhub.demo**
 3. Opportunities → Mentor Hub → (optional) risk for self
 4. Sign out → **admin@jointhub.demo** → Dropout risk outreach + Analytics
 
@@ -41,6 +41,13 @@ From `metrics.json` after generator run (approx.):
 Algorithms are real (scikit-learn / scipy). Embeddings and NER use offline-safe stubs with production swap notes.
 
 ## Canva Mentor Hub prototype
+
+Current shared prototype: https://canva.link/tawbtl3fowjdafd
+
+In-app routes:
+- `/prototype` full-page embed
+- Landing page section with live Canva embed
+
 
 Link `https://canva.link/je2jeixnk9s2za3` resolved to a Canva design that returned **403** without login, so visual details could not be scraped. Mentor Hub UI follows the Capstone brief + locked brand kit (Navy/Teal/Gold, dense ops layout: assigned mentor card, alternatives, matrix, booking, session log). If Isaiah can export the Canva board as PDF/PNG, a tighter visual pass can follow.
 
@@ -67,8 +74,8 @@ Link `https://canva.link/je2jeixnk9s2za3` resolved to a Canva design that return
 ## Verification completed (local sandbox)
 
 - `/` 200 — JointHub Capstone landing with impact figures and module overview
-- `/dashboard/login` 200 — demo email gate (scholar1/scholar2/admin)
-- Auth API — `scholar1@jointhub.demo` and `admin@jointhub.demo` succeed
+- `/dashboard/login` 200 — demo email gate (leader1/leader2/admin)
+- Auth API — `leader1@jointhub.demo` and `admin@jointhub.demo` succeed
 - Dashboard API (student): 5 ranked opportunities (e.g. ALX Software Engineering Fellowship), assigned mentor **Mentor Ibrahim Nkrumah**, personalised NLP sentence, self risk row, KPI strip values present
 - Dashboard API (admin): 24 risk rows, 24 students, outreach trigger returns `queued_for_mentor` (no email sent)
 - Authenticated `/dashboard` HTML includes: Curated for You, Mentor Hub, Dropout risk, Analytics, Amina Okoro, ALX Software, Mentor Ibrahim, Registered users
@@ -78,7 +85,7 @@ Link `https://canva.link/je2jeixnk9s2za3` resolved to a Canva design that return
 ## Verification checklist (for PR review)
 
 - [x] `/dashboard/login` accepts demo emails
-- [x] Scholar sees own opportunities + mentor assignment
+- [x] Leader sees own opportunities + mentor assignment
 - [x] Admin sees risk table and can trigger outreach status
 - [x] Analytics shows metrics vs targets
 - [x] KPI strip visible on all tabs

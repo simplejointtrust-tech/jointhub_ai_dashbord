@@ -3,22 +3,34 @@
 import {
   AlertTriangle,
   BookOpen,
-  Bot,
   Calendar,
+  ChevronDown,
   ChevronRight,
+  Compass,
   LayoutDashboard,
   LogOut,
+  MessageSquareText,
+  Send,
   Sparkles,
   Target,
   Users,
+  X,
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import type {
-  AiCoachPlan,
+  ApplicationStage,
+  CommunityPost,
+  LeaderApplication,
+  LeaderOverview,
+  MentorOverview,
+} from "@/lib/jointhub/leader-experience";
+import type {
   DashboardBundle,
   MentorAssignment,
+  MentorProfile,
+  MentorTop3,
   ModelMetrics,
   NlpRow,
   Recommendation,
@@ -27,8 +39,19 @@ import type {
   SurveyInsights,
 } from "@/lib/jointhub/types";
 import { cn } from "@/lib/utils";
+import { MentorMatchQuiz } from "@/components/jointhub/MentorMatchQuiz";
 
-type TabId = "coach" | "opportunities" | "mentorship" | "risk" | "analytics";
+type LeaderTabId =
+  | "overview"
+  | "caseload"
+  | "opportunities"
+  | "mentors"
+  | "applications"
+  | "community"
+  | "coaching"
+  | "risk"
+  | "sessions"
+  | "analytics";
 
 type DashboardResponse = DashboardBundle & {
   students?: Array<{
@@ -37,130 +60,351 @@ type DashboardResponse = DashboardBundle & {
     email: string;
     country: string;
   }>;
-  ai_coach_all?: AiCoachPlan[];
+  overview?: LeaderOverview | null;
+  mentor_overview?: MentorOverview | null;
+  applications?: LeaderApplication[];
+  community?: CommunityPost[];
 };
 
-const TABS: Array<{ id: TabId; label: string; icon: typeof Target }> = [
-  { id: "coach", label: "AI Coach", icon: Bot },
+type AdvisorMessage = {
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+  citations?: string[];
+  suggested_actions?: string[];
+  follow_ups?: string[];
+};
+
+const LEADER_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
+  { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "opportunities", label: "Opportunities", icon: Target },
-  { id: "mentorship", label: "Mentor Hub", icon: Users },
+  { id: "mentors", label: "ESL Mentors", icon: Users },
+  { id: "applications", label: "Applications", icon: BookOpen },
+  { id: "community", label: "Community", icon: Compass },
+  { id: "coaching", label: "Stay on track", icon: Sparkles },
+  { id: "risk", label: "Dropout risk", icon: AlertTriangle },
+];
+
+const ADMIN_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
+  { id: "overview", label: "Overview", icon: LayoutDashboard },
+  { id: "opportunities", label: "Opportunities", icon: Target },
+  { id: "mentors", label: "ESL Mentors", icon: Users },
   { id: "risk", label: "Dropout risk", icon: AlertTriangle },
   { id: "analytics", label: "Analytics", icon: LayoutDashboard },
 ];
+
+const MENTOR_TABS: Array<{ id: LeaderTabId; label: string; icon: typeof Target }> = [
+  { id: "caseload", label: "My caseload", icon: LayoutDashboard },
+  { id: "sessions", label: "Sessions", icon: Calendar },
+  { id: "risk", label: "Mentee risk", icon: AlertTriangle },
+  { id: "community", label: "Community", icon: Compass },
+];
+
+const STAGE_LABEL: Record<ApplicationStage, string> = {
+  active: "Active",
+  under_review: "Under review",
+  interview: "Interview",
+  accepted: "Accepted",
+};
 
 function formatPct(value: number): string {
   return `${Math.round(value * 100)}%`;
 }
 
 function scoreTone(score: number): string {
-  if (score >= 0.75) return "bg-[#F4B942] text-[#0D1B2A]";
-  if (score >= 0.55) return "bg-[#028090]/15 text-[#028090]";
-  return "bg-[#0D1B2A]/10 text-[#0D1B2A]";
+  if (score >= 0.75) return "bg-[#B47828] text-[#142033]";
+  if (score >= 0.55) return "bg-[#3A87B8]/15 text-[#3A87B8]";
+  return "bg-[#142033]/10 text-[#142033]";
 }
 
 function riskTone(level: RiskRow["risk_level"]): string {
-  if (level === "high") return "bg-[#C0392B]/12 text-[#C0392B] border-[#C0392B]/30";
-  if (level === "medium") return "bg-[#F57F17]/12 text-[#F57F17] border-[#F57F17]/30";
+  if (level === "high") return "bg-[#E0312E]/12 text-[#E0312E] border-[#E0312E]/30";
+  if (level === "medium") return "bg-[#DC6414]/12 text-[#DC6414] border-[#DC6414]/30";
   return "bg-[#1B5E20]/12 text-[#1B5E20] border-[#1B5E20]/30";
+}
+
+function stageTone(stage: ApplicationStage): string {
+  if (stage === "accepted") return "bg-[#1B5E20]/12 text-[#1B5E20]";
+  if (stage === "interview") return "bg-[#3A87B8]/15 text-[#3A87B8]";
+  if (stage === "under_review") return "bg-[#B47828]/25 text-[#142033]";
+  return "bg-[#142033]/08 text-[#142033]/75";
 }
 
 function KpiCard({ label, value, hint }: { label: string; value: string | number; hint?: string }) {
   return (
-    <div className="rounded-xl border border-[#0D1B2A]/10 bg-white px-4 py-3 shadow-sm">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0D1B2A]/55">
+    <div className="rounded-xl border border-[#142033]/10 bg-white px-4 py-3 shadow-sm">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#142033]/55">
         {label}
       </p>
-      <p className="mt-1 text-2xl font-semibold tabular-nums text-[#0D1B2A]">{value}</p>
-      {hint ? <p className="mt-1 text-xs text-[#0D1B2A]/55">{hint}</p> : null}
+      <p className="mt-1 text-2xl font-semibold tabular-nums text-[#142033]">{value}</p>
+      {hint ? <p className="mt-1 text-xs text-[#142033]/55">{hint}</p> : null}
     </div>
   );
 }
 
+
+function WhyRecommendedPanel({
+  title = "Why recommended",
+  reasons,
+  onAskKay,
+  askLabel = "Ask Kay about this",
+}: {
+  title?: string;
+  reasons: string[];
+  onAskKay?: () => void;
+  askLabel?: string;
+}) {
+  const [open, setOpen] = useState(false);
+  if (reasons.length === 0) return null;
+
+  return (
+    <div className="mt-3 rounded-xl border border-[#142033]/08 bg-[#142033]/[0.02]">
+      <button
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-xs font-semibold text-[#3A87B8] transition hover:bg-[#3A87B8]/[0.06]"
+        aria-expanded={open}
+      >
+        <span>{title}</span>
+        <ChevronDown
+          className={cn("h-3.5 w-3.5 shrink-0 transition", open ? "rotate-180" : "")}
+          aria-hidden
+        />
+      </button>
+      {open ? (
+        <div className="space-y-3 border-t border-[#142033]/08 px-3 py-3">
+          <ul className="space-y-1.5">
+            {reasons.map((reason) => (
+              <li key={reason} className="flex gap-2 text-xs leading-relaxed text-[#142033]/75">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3A87B8]" aria-hidden />
+                <span>{reason}</span>
+              </li>
+            ))}
+          </ul>
+          {onAskKay ? (
+            <button
+              type="button"
+              onClick={onAskKay}
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#3A87B8]/30 bg-white px-3 py-1.5 text-[11px] font-semibold text-[#3A87B8] transition hover:border-[#3A87B8]/60 hover:bg-[#3A87B8]/[0.06]"
+            >
+              <MessageSquareText className="h-3.5 w-3.5" aria-hidden />
+              {askLabel}
+            </button>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function opportunityWhyReasons(item: Recommendation): string[] {
+  const reasons: string[] = [];
+  reasons.push(
+    `Match score ${formatPct(item.match_score)} from content-based cosine similarity against your interest vector and career stage.`,
+  );
+  if (item.interest_overlap && item.interest_overlap.length > 0) {
+    reasons.push(
+      `Overlapping interests: ${item.interest_overlap
+        .slice(0, 4)
+        .map((tag) => tag.replaceAll("_", " "))
+        .join(", ")}.`,
+    );
+  }
+  reasons.push(`${item.type} opportunity from ${item.org_name} with deadline ${item.deadline}.`);
+  if (item.is_verified) {
+    reasons.push("Verified opportunity on the JointHub Africa opportunity board.");
+  }
+  if (item.is_scam_flag) {
+    reasons.push("Flagged for careful review before you apply.");
+  }
+  return reasons;
+}
+
+function mentorAssignmentWhyReasons(
+  assignment: MentorAssignment,
+  portrait?: MentorProfile,
+): string[] {
+  const reasons: string[] = [
+    `Compatibility ${formatPct(assignment.compatibility)} from the ESL mentor matching matrix.`,
+    `Industry fit: ${assignment.mentor_industry}.`,
+    `Based in ${assignment.mentor_country}.`,
+  ];
+  if (assignment.mentor_title) {
+    reasons.push(`Role focus: ${assignment.mentor_title}.`);
+  }
+  if (assignment.languages && assignment.languages.length > 0) {
+    reasons.push(`Shared languages: ${assignment.languages.join(", ")}.`);
+  }
+  if (portrait?.skills_offered && portrait.skills_offered.length > 0) {
+    reasons.push(
+      `Skills offered: ${portrait.skills_offered.slice(0, 4).join(", ")}.`,
+    );
+  }
+  if (portrait?.availability_hrs_per_month) {
+    reasons.push(`${portrait.availability_hrs_per_month} mentoring hours available per month.`);
+  }
+  return reasons;
+}
+
+function mentorTop3WhyReasons(mentor: MentorTop3): string[] {
+  const reasons: string[] = [
+    `Ranked alternative fit ${formatPct(mentor.score)} for your current goals.`,
+    `Industry: ${mentor.industry}.`,
+    `Based in ${mentor.country}.`,
+  ];
+  if (mentor.title) {
+    reasons.push(`Title / focus: ${mentor.title}.`);
+  }
+  if (mentor.skills_offered && mentor.skills_offered.length > 0) {
+    reasons.push(
+      `Skills offered: ${mentor.skills_offered.slice(0, 4).join(", ")}.`,
+    );
+  }
+  reasons.push(`${mentor.availability_hrs_per_month}h/month availability on the ESL roster.`);
+  return reasons;
+}
+
+function riskWhyReasons(row: RiskRow): string[] {
+  return [
+    `Model probability ${formatPct(row.risk_probability)} (threshold 0.65) · level ${row.risk_level}.`,
+    `Top factor: ${row.top_risk_factor.replaceAll("_", " ")}.`,
+    `Days since last login: ${row.features.days_since_last_login}.`,
+    `Days since last mentor session: ${row.features.days_since_last_mentor_session}.`,
+    `GPA signal ${row.features.gpa_score.toFixed(2)} · attendance ${formatPct(row.features.attendance_rate)} · profile ${formatPct(row.features.profile_completeness)}.`,
+    row.outreach_prompt,
+  ].filter(Boolean);
+}
+
 function OpportunitiesPanel({
   items,
-  sentence,
+  onAskKay,
 }: {
   items: Recommendation[];
-  sentence: string | null;
+  onAskKay?: (prompt: string) => void;
 }) {
+  const sortedItems = useMemo(
+    () =>
+      items
+        .slice()
+        .sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: "base" })),
+    [items],
+  );
+
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl border border-[#028090]/20 bg-gradient-to-r from-[#028090]/10 to-white p-5">
+      <div className="rounded-2xl border border-[#3A87B8]/20 bg-gradient-to-r from-[#3A87B8]/10 to-white p-5">
         <div className="flex items-start gap-3">
-          <Sparkles className="mt-0.5 h-5 w-5 text-[#028090]" aria-hidden />
+          <Sparkles className="mt-0.5 h-5 w-5 text-[#3A87B8]" aria-hidden />
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
-              Curated for you
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#3A87B8]">
+              Trusted Opportunities
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-[#0D1B2A]/80">
-              {sentence ??
-                "Content-based cosine similarity ranks verified opportunities against your interest vector and career stage."}
+            <h2 className="mt-1 text-lg font-semibold tracking-tight text-[#142033]">
+              Your Path to Growth Starts Here
+            </h2>
+            <p className="mt-1 text-sm font-medium leading-relaxed text-[#142033]/80">
+              Curated scholarships, fellowships, internships, and funding opportunities for African
+              Leaders.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
+              These opportunities are curated from the JointHub Africa opportunity board. Open each
+              official link to confirm deadlines and eligibility.
             </p>
           </div>
         </div>
       </div>
 
       <div className="grid gap-3">
-        {items.map((item) => (
-          <article
-            key={item.opp_id}
-            className="grid gap-3 rounded-2xl border border-[#0D1B2A]/10 bg-white p-4 shadow-sm md:grid-cols-[1fr_auto] md:items-center"
-          >
-            <div>
-              <div className="flex flex-wrap items-center gap-2">
-                <h3 className="text-base font-semibold text-[#0D1B2A]">{item.title}</h3>
-                {item.is_verified ? (
-                  <span className="rounded-full bg-[#028090]/12 px-2 py-0.5 text-[11px] font-semibold text-[#028090]">
-                    Verified
-                  </span>
-                ) : null}
-                {item.is_scam_flag ? (
-                  <span className="rounded-full bg-[#C0392B]/12 px-2 py-0.5 text-[11px] font-semibold text-[#C0392B]">
-                    Scam flag
-                  </span>
-                ) : null}
-              </div>
-              <p className="mt-1 text-sm text-[#0D1B2A]/65">
-                {item.org_name} · {item.type} · Deadline {item.deadline}
-              </p>
-              {item.description ? (
-                <p className="mt-2 text-sm leading-relaxed text-[#0D1B2A]/75">{item.description}</p>
-              ) : null}
-              {item.interest_overlap?.length ? (
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {item.interest_overlap.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-[#0D1B2A]/10 bg-[#0D1B2A]/[0.03] px-2 py-0.5 text-[11px] text-[#0D1B2A]/70"
-                    >
-                      {tag.replaceAll("_", " ")}
-                    </span>
-                  ))}
+        {sortedItems.map((item) => {
+          const reasons = opportunityWhyReasons(item);
+          const applyHref = item.url?.trim() || null;
+          return (
+            <article
+              key={item.opp_id}
+              className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
+            >
+              <div className="grid gap-3 md:grid-cols-[1fr_auto] md:items-start">
+                <div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-base font-semibold text-[#142033]">{item.title}</h3>
+                    {item.is_verified ? (
+                      <span className="rounded-full bg-[#1B5E20]/10 px-2 py-0.5 text-[11px] font-semibold text-[#1B5E20]">
+                        Curated
+                      </span>
+                    ) : null}
+                    {item.status ? (
+                      <span className="rounded-full bg-[#3A87B8]/10 px-2 py-0.5 text-[11px] font-semibold text-[#2F739E]">
+                        {item.status}
+                      </span>
+                    ) : null}
+                    {item.is_scam_flag ? (
+                      <span className="rounded-full bg-[#E0312E]/10 px-2 py-0.5 text-[11px] font-semibold text-[#E0312E]">
+                        Review carefully
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-1 text-sm text-[#142033]/65">
+                    {item.org_name} · {item.type} · {item.deadline}
+                  </p>
+                  {item.description ? (
+                    <p className="mt-2 text-sm leading-relaxed text-[#142033]/75">{item.description}</p>
+                  ) : null}
+                  {item.interest_overlap && item.interest_overlap.length > 0 ? (
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {item.interest_overlap.map((tag) => (
+                        <span
+                          key={`${item.opp_id}-${tag}`}
+                          className="rounded-full bg-[#142033]/[0.04] px-2 py-0.5 text-[11px] text-[#142033]/70"
+                        >
+                          {tag.replaceAll("_", " ")}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
-              ) : null}
-            </div>
-            <div className="flex flex-row items-center gap-3 md:flex-col md:items-end">
-              <span
-                className={cn(
-                  "rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
-                  scoreTone(item.match_score),
-                )}
-              >
-                {formatPct(item.match_score)} match
-              </span>
-              <button
-                type="button"
-                className="inline-flex items-center gap-1 rounded-full bg-[#028090] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#026f7d]"
-              >
-                Apply
-                <ChevronRight className="h-4 w-4" aria-hidden />
-              </button>
-            </div>
-          </article>
-        ))}
+                <div className="flex flex-col items-start gap-2 md:items-end">
+                  <span
+                    className={cn(
+                      "rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
+                      scoreTone(item.match_score),
+                    )}
+                  >
+                    {formatPct(item.match_score)} match
+                  </span>
+                  {applyHref ? (
+                    <a
+                      href={applyHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 rounded-full bg-[#3A87B8] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#2F739E]"
+                    >
+                      Open listing
+                      <ChevronRight className="h-3.5 w-3.5" aria-hidden />
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-[#142033]/15 px-3 py-1.5 text-xs font-semibold text-[#142033]/55">
+                      Link pending
+                    </span>
+                  )}
+                </div>
+              </div>
+              <WhyRecommendedPanel
+                reasons={reasons}
+                onAskKay={
+                  onAskKay
+                    ? () =>
+                        onAskKay(
+                          `Why is ${item.title} at ${item.org_name} recommended for me at ${formatPct(item.match_score)} match? Walk me through the fit and my next step.`,
+                        )
+                    : undefined
+                }
+              />
+            </article>
+          );
+        })}
         {items.length === 0 ? (
-          <p className="rounded-xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/65">
-            No ranked opportunities for this profile yet.
+          <p className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/60">
+            No ranked opportunities for this view yet.
           </p>
         ) : null}
       </div>
@@ -178,284 +422,58 @@ function Heatmap({
   mentorNames: string[];
 }) {
   return (
-    <div className="overflow-x-auto rounded-2xl border border-[#0D1B2A]/10 bg-white p-4">
-      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#0D1B2A]/55">
-        Matching matrix (cosine compatibility)
-      </p>
-      <table className="min-w-full border-separate border-spacing-1 text-left text-[11px]">
-        <thead>
-          <tr>
-            <th className="p-1 font-medium text-[#0D1B2A]/50">Scholar \\ Mentor</th>
-            {mentorNames.map((name) => (
-              <th
-                key={name}
-                className="max-w-20 truncate p-1 font-medium text-[#0D1B2A]/60"
-                title={name}
-              >
-                {name.split(" ")[0]}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {matrix.map((row, rowIndex) => {
-            const studentKey = studentNames[rowIndex] ?? `student-${rowIndex}`;
-            return (
-              <tr key={studentKey}>
-                <th className="whitespace-nowrap p-1 text-left font-medium text-[#0D1B2A]/70">
-                  {studentKey.split(" ")[0]}
-                </th>
-                {row.map((value, colIndex) => {
-                  const mentorKey = mentorNames[colIndex] ?? `mentor-${colIndex}`;
-                  const intensity = Math.max(0.08, Math.min(1, value));
-                  return (
-                    <td
-                      key={`${studentKey}__${mentorKey}`}
-                      className="rounded-md p-2 text-center font-semibold tabular-nums text-[#0D1B2A]"
-                      style={{
-                        backgroundColor: `rgba(2, 128, 144, ${intensity * 0.85})`,
-                        color: intensity > 0.45 ? "#fff" : "#0D1B2A",
-                      }}
-                      title={`${studentKey} × ${mentorKey}: ${formatPct(value)}`}
-                    >
-                      {Math.round(value * 100)}
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function CountBars({
-  title,
-  items,
-  accent = "#028090",
-}: {
-  title: string;
-  items: Array<{ label: string; count: number }>;
-  accent?: string;
-}) {
-  const max = Math.max(1, ...items.map((item) => item.count));
-  return (
-    <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
-      <h3 className="text-sm font-semibold text-[#0D1B2A]">{title}</h3>
-      <ul className="mt-3 space-y-2">
-        {items.slice(0, 6).map((item) => (
-          <li key={`${title}-${item.label}`}>
-            <div className="mb-1 flex justify-between gap-2 text-xs text-[#0D1B2A]/70">
-              <span className="truncate">{item.label}</span>
-              <span className="tabular-nums font-semibold">{item.count}</span>
-            </div>
-            <div className="h-2 overflow-hidden rounded-full bg-[#0D1B2A]/10">
-              <div
-                className="h-full rounded-full"
-                style={{
-                  width: `${Math.round((item.count / max) * 100)}%`,
-                  backgroundColor: accent,
-                }}
-              />
-            </div>
-          </li>
-        ))}
-        {items.length === 0 ? (
-          <li className="text-sm text-[#0D1B2A]/55">No survey signal yet.</li>
-        ) : null}
-      </ul>
-    </section>
-  );
-}
-
-function CoachPanel({
-  plans,
-  insights,
-  isAdmin,
-}: {
-  plans: AiCoachPlan[];
-  insights: SurveyInsights | null;
-  isAdmin: boolean;
-}) {
-  if (!plans.length) {
-    return (
-      <div className="rounded-2xl border border-dashed border-[#0D1B2A]/15 bg-white p-6 text-sm text-[#0D1B2A]/65">
-        No AI Coach plan for this profile yet. Import ESL survey responses to generate Kay plans.
+    <section className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white">
+      <div className="border-b border-[#142033]/08 px-4 py-3">
+        <h3 className="text-sm font-semibold text-[#142033]">Matching matrix</h3>
+        <p className="text-xs text-[#142033]/55">
+          Cosine compatibility · darker teal = stronger fit
+        </p>
       </div>
-    );
-  }
-
-  return (
-    <div className="space-y-4">
-      {insights ? (
-        <div className="rounded-2xl border border-[#028090]/20 bg-gradient-to-r from-[#028090]/10 to-white p-5">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
-                ESL survey → AI Coach
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-[#0D1B2A]/80">
-                Kay now plans from {insights.n_responses} live Mentor Needs responses
-                ({insights.n_scholars} scholar-track · {insights.n_mentor_track} mentor-track).
-                Average confidence a good match helps: {insights.avg_mentor_confidence.toFixed(1)}/5.
-              </p>
-            </div>
-            <div className="rounded-xl border border-[#0D1B2A]/10 bg-white px-3 py-2 text-right">
-              <p className="text-[11px] uppercase tracking-[0.14em] text-[#0D1B2A]/50">Cohort needs</p>
-              <p className="text-sm font-semibold text-[#0D1B2A]">
-                {(insights.top_mentor_needs[0]?.label ?? "Networking")} first
-              </p>
-            </div>
-          </div>
-          {insights.product_implications?.length ? (
-            <ul className="mt-3 grid gap-2 md:grid-cols-2">
-              {insights.product_implications.slice(0, 4).map((item) => (
-                <li
-                  key={item}
-                  className="rounded-xl border border-[#0D1B2A]/08 bg-white/80 px-3 py-2 text-xs text-[#0D1B2A]/75"
+      <div className="overflow-x-auto p-3">
+        <table className="min-w-full border-separate border-spacing-1 text-left text-[11px]">
+          <thead>
+            <tr>
+              <th className="px-2 py-1 font-medium text-[#142033]/50">Leader</th>
+              {mentorNames.map((name) => (
+                <th
+                  key={name}
+                  className="max-w-16 truncate px-1 py-1 font-medium text-[#142033]/50"
                 >
-                  {item}
-                </li>
+                  {name.split(" ").slice(-1)[0]}
+                </th>
               ))}
-            </ul>
-          ) : null}
-        </div>
-      ) : null}
-
-      {isAdmin && insights ? (
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-          <CountBars title="Top mentor needs" items={insights.top_mentor_needs} />
-          <CountBars title="Barriers" items={insights.top_barriers} accent="#C0392B" />
-          <CountBars title="Session formats" items={insights.session_formats} accent="#F4B942" />
-          <CountBars title="Dashboard asks" items={insights.dashboard_feature_requests} />
-        </div>
-      ) : null}
-
-      <div className="grid gap-4">
-        {plans.map((plan) => (
-          <article
-            key={plan.student_id}
-            className="grid gap-4 rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm xl:grid-cols-[1.3fr_0.9fr]"
-          >
-            <div>
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#028090]">
-                    {plan.coach_name}
-                  </p>
-                  <h3 className="mt-1 text-xl font-semibold text-[#0D1B2A]">{plan.full_name}</h3>
-                  <p className="mt-1 text-sm text-[#0D1B2A]/70">{plan.headline}</p>
-                </div>
-                <span className="rounded-full bg-[#0D1B2A]/[0.05] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#0D1B2A]/70">
-                  {plan.risk_level} risk
-                </span>
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-[#0D1B2A]/75">{plan.summary}</p>
-              <p className="mt-3 rounded-xl border border-[#0D1B2A]/08 bg-[#F8FAFA] px-3 py-2 text-sm text-[#0D1B2A]/80">
-                <span className="font-semibold">Goal:</span> {plan.goal}
-              </p>
-              <div className="mt-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/50">
-                  Priority needs
-                </p>
-                <div className="mt-2 flex flex-wrap gap-1.5">
-                  {plan.priority_needs.map((need) => (
-                    <span
-                      key={`${plan.student_id}-need-${need}`}
-                      className="rounded-full border border-[#028090]/20 bg-[#028090]/10 px-2.5 py-1 text-[11px] font-medium text-[#026f7d]"
-                    >
-                      {need}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              {plan.barriers.length ? (
-                <div className="mt-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/50">
-                    Barriers
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {plan.barriers.slice(0, 6).map((barrier) => (
-                      <span
-                        key={`${plan.student_id}-bar-${barrier}`}
-                        className="rounded-full border border-[#C0392B]/20 bg-[#C0392B]/[0.08] px-2.5 py-1 text-[11px] text-[#C0392B]"
-                      >
-                        {barrier}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-              <div className="mt-4 grid gap-2 sm:grid-cols-3">
-                <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
-                  <p className="text-[11px] uppercase tracking-wide text-[#0D1B2A]/50">Format</p>
-                  <p className="text-sm font-medium text-[#0D1B2A]">{plan.session_format || "Flexible"}</p>
-                </div>
-                <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
-                  <p className="text-[11px] uppercase tracking-wide text-[#0D1B2A]/50">Style</p>
-                  <p className="text-sm font-medium text-[#0D1B2A]">{plan.working_style || "Open"}</p>
-                </div>
-                <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
-                  <p className="text-[11px] uppercase tracking-wide text-[#0D1B2A]/50">Hours / mo</p>
-                  <p className="text-sm font-medium tabular-nums text-[#0D1B2A]">{plan.hours_per_month}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-3">
-              <div className="rounded-xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-4 text-white">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#F4B942]">
-                  Match path
-                </p>
-                <p className="mt-1 text-xs text-white/70">{plan.discover_preference}</p>
-                {plan.assigned_mentor ? (
-                  <div className="mt-3">
-                    <p className="text-sm font-semibold">{plan.assigned_mentor.mentor_name}</p>
-                    <p className="text-xs text-white/70">
-                      {plan.assigned_mentor.industry} · {plan.assigned_mentor.country} ·{" "}
-                      {formatPct(plan.assigned_mentor.compatibility)} fit
-                    </p>
-                  </div>
-                ) : (
-                  <p className="mt-3 text-sm text-white/70">No mentor assigned yet.</p>
-                )}
-                {plan.top_opportunity ? (
-                  <div className="mt-3 rounded-lg bg-white/10 px-3 py-2">
-                    <p className="text-[11px] uppercase tracking-wide text-[#F4B942]">Tied opportunity</p>
-                    <p className="text-sm font-medium">{plan.top_opportunity.title}</p>
-                    <p className="text-xs text-white/70">
-                      {plan.top_opportunity.org_name} · {formatPct(plan.top_opportunity.match_score)}
-                    </p>
-                  </div>
-                ) : null}
-              </div>
-
-              <div className="rounded-xl border border-[#0D1B2A]/10 bg-[#F8FAFA] p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/50">
-                  Weekly plan
-                </p>
-                <ol className="mt-2 space-y-2">
-                  {plan.weekly_plan.slice(0, 4).map((step, index) => (
-                    <li key={`${plan.student_id}-step-${index}`} className="text-sm text-[#0D1B2A]/80">
-                      <span className="font-semibold text-[#028090]">{index + 1}. {step.focus}</span>
-                      <span className="block text-xs text-[#0D1B2A]/65">{step.action}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-
-              {(plan.coach_prompts?.length || plan.advice_quote) ? (
-                <blockquote className="rounded-xl border border-[#F4B942]/40 bg-[#F4B942]/10 px-3 py-2 text-xs italic text-[#0D1B2A]/75">
-                  “{plan.advice_quote || plan.coach_prompts?.[0]}”
-                </blockquote>
-              ) : null}
-            </div>
-          </article>
-        ))}
+            </tr>
+          </thead>
+          <tbody>
+            {matrix.map((row, rowIndex) => {
+              const studentKey = studentNames[rowIndex] ?? `student-${rowIndex}`;
+              return (
+                <tr key={studentKey}>
+                  <td className="whitespace-nowrap px-2 py-1 font-medium text-[#142033]/70">
+                    {studentKey.split(" ")[0]}
+                  </td>
+                  {row.map((value, colIndex) => {
+                    const intensity = Math.max(0.08, Math.min(1, value));
+                    const mentorKey = mentorNames[colIndex] ?? `mentor-${colIndex}`;
+                    return (
+                      <td key={`${studentKey}-${mentorKey}`} className="px-0.5 py-0.5">
+                        <div
+                          className="flex h-8 w-12 items-center justify-center rounded-md text-[10px] font-semibold tabular-nums text-white"
+                          style={{ backgroundColor: `rgba(2, 128, 144, ${intensity})` }}
+                          title={`${formatPct(value)}`}
+                        >
+                          {Math.round(value * 100)}
+                        </div>
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -465,170 +483,200 @@ function MentorshipPanel({
   sessions,
   heatmap,
   mentors,
-  coach,
-  insights,
+  showHeatmap,
+  onAskKay,
+  coachPlan,
+  surveyInsights,
 }: {
-  assignment: MentorAssignment | undefined;
-  top3: Array<{
-    mentor_id: string;
-    mentor_name: string;
-    title?: string;
-    industry: string;
-    country: string;
-    score: number;
-    skills_offered?: string[];
-    availability_hrs_per_month: number;
-  }>;
+  assignment?: MentorAssignment;
+  top3: MentorTop3[];
   sessions: SessionLog[];
   heatmap: DashboardBundle["mentorship"]["heatmap"];
-  mentors: DashboardBundle["mentorship"]["mentors"];
-  coach?: AiCoachPlan | null;
-  insights: SurveyInsights | null;
+  mentors: MentorProfile[];
+  showHeatmap: boolean;
+  onAskKay?: (prompt: string) => void;
+  coachPlan?: DashboardBundle["ai_coach"];
+  surveyInsights?: SurveyInsights | null;
 }) {
-  const defaultTopic =
-    coach?.priority_needs?.[0] ||
-    insights?.top_mentor_needs?.[0]?.label ||
-    "Career path clarity";
-  const [bookingTopic, setBookingTopic] = useState(defaultTopic);
+  const [bookingTopic, setBookingTopic] = useState("Career pathing");
   const [bookingNote, setBookingNote] = useState("");
   const [booked, setBooked] = useState<string | null>(null);
-  const topicOptions = Array.from(
-    new Set(
-      [
-        ...(coach?.priority_needs ?? []),
-        ...(insights?.top_mentor_needs?.map((item) => item.label) ?? []),
-        "Career path clarity",
-        "Networking introductions",
-        "Entrepreneurship / startup advice",
-        "Scholarship / fellowship applications",
-        "Application review",
-        "Skills portfolio",
-      ].filter(Boolean),
-    ),
-  ).slice(0, 8);
+  const mentorById = useMemo(
+    () => new Map(mentors.map((mentor) => [mentor.mentor_id, mentor])),
+    [mentors],
+  );
+  const assignedPortrait = assignment ? mentorById.get(assignment.mentor_id) : undefined;
+  const surveyNeedLabels =
+    coachPlan?.priority_needs?.slice(0, 3) ??
+    surveyInsights?.top_mentor_needs.slice(0, 3).map((row) => row.label) ??
+    [];
 
   return (
     <div className="space-y-4">
-      {insights ? (
-        <div className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
-                Survey-shaped Mentor Hub
-              </p>
-              <p className="mt-1 max-w-3xl text-sm text-[#0D1B2A]/75">
-                Discovery defaults to top-3 choice ({insights.discover_preferences[0]?.label ?? "mixed AI + choice"}).
-                Booking defaults to {insights.session_formats[0]?.label ?? "video"} and structured monthly goals.
-                Highest demand: {(insights.top_mentor_needs[0]?.label ?? "networking")}.
-              </p>
+      {coachPlan || surveyInsights ? (
+        <section className="rounded-2xl border border-[#3A87B8]/20 bg-[#3A87B8]/[0.06] p-4">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3A87B8]">
+            Survey-informed Mentor Hub
+          </p>
+          <p className="mt-1 text-sm text-[#142033]/75">
+            {coachPlan
+              ? `${coachPlan.coach_name} built this plan from ${coachPlan.full_name}'s ESL mentor needs survey.`
+              : `${surveyInsights?.n_responses ?? 0} ESL survey responses are shaping mentor matching and Kay coaching.`}
+          </p>
+          {surveyNeedLabels.length > 0 ? (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {surveyNeedLabels.map((need) => (
+                <span
+                  key={need}
+                  className="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-[#142033]/75"
+                >
+                  {need}
+                </span>
+              ))}
             </div>
-            <div className="grid grid-cols-3 gap-2 text-center">
-              <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
-                <p className="text-lg font-semibold tabular-nums text-[#0D1B2A]">{insights.n_responses}</p>
-                <p className="text-[10px] uppercase tracking-wide text-[#0D1B2A]/50">Responses</p>
-              </div>
-              <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
-                <p className="text-lg font-semibold tabular-nums text-[#0D1B2A]">{insights.n_scholars}</p>
-                <p className="text-[10px] uppercase tracking-wide text-[#0D1B2A]/50">Scholars</p>
-              </div>
-              <div className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2">
-                <p className="text-lg font-semibold tabular-nums text-[#0D1B2A]">{insights.n_mentor_track}</p>
-                <p className="text-[10px] uppercase tracking-wide text-[#0D1B2A]/50">Mentors</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          ) : null}
+          {coachPlan?.headline ? (
+            <p className="mt-3 text-sm font-medium text-[#142033]">{coachPlan.headline}</p>
+          ) : null}
+        </section>
       ) : null}
-      <div className="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#028090]">
-            Assigned mentor
+      <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
+            Your ESL mentor match
           </p>
           {assignment ? (
-            <div className="mt-3">
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <h3 className="text-xl font-semibold text-[#0D1B2A]">{assignment.mentor_name}</h3>
-                  <p className="text-sm text-[#0D1B2A]/65">
-                    {[
-                      assignment.mentor_title,
-                      assignment.mentor_industry,
-                      assignment.mentor_country,
-                    ]
-                      .filter(Boolean)
-                      .join(" · ")}
+            <>
+              <div className="mt-3 flex items-start gap-3">
+                {assignedPortrait?.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={assignedPortrait.image}
+                    alt={assignment.mentor_name}
+                    className="h-16 w-16 shrink-0 rounded-full object-cover"
+                    width={64}
+                    height={64}
+                  />
+                ) : null}
+                <div className="min-w-0">
+                  <h3 className="text-xl font-semibold text-[#142033]">{assignment.mentor_name}</h3>
+                  <p className="mt-1 text-sm text-[#142033]/65">
+                    {assignment.mentor_title ?? assignment.mentor_industry} ·{" "}
+                    {assignment.mentor_country}
                   </p>
+                  {assignedPortrait?.bio ? (
+                    <p className="mt-2 text-sm leading-relaxed text-[#142033]/70">
+                      {assignedPortrait.bio}
+                    </p>
+                  ) : null}
                 </div>
+              </div>
+              <div className="mt-4 flex flex-wrap items-center gap-2">
                 <span
                   className={cn(
-                    "rounded-full px-3 py-1 text-sm font-semibold",
+                    "rounded-full px-3 py-1 text-sm font-semibold tabular-nums",
                     scoreTone(assignment.compatibility),
                   )}
                 >
                   {formatPct(assignment.compatibility)} fit
                 </span>
+                {(assignment.languages ?? []).map((language) => (
+                  <span
+                    key={language}
+                    className="rounded-full bg-[#142033]/[0.04] px-2.5 py-1 text-xs text-[#142033]/70"
+                  >
+                    {language}
+                  </span>
+                ))}
+                {assignedPortrait?.linkedInUrl ? (
+                  <a
+                    href={assignedPortrait.linkedInUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-[#142033]/15 px-2.5 py-1 text-xs font-semibold text-[#3A87B8] hover:border-[#3A87B8]/40"
+                  >
+                    LinkedIn
+                  </a>
+                ) : null}
               </div>
-              <p className="mt-3 text-sm text-[#0D1B2A]/70">
-                Optimal assignment from cosine similarity + Hungarian algorithm on ESL survey vectors
-                (skills needed × mentor skills offered).
-                {assignment.languages?.length
-                  ? ` Shared languages: ${assignment.languages.join(", ")}.`
-                  : ""}
-                {coach?.discover_preference
-                  ? ` Your survey preference: ${coach.discover_preference}.`
-                  : ""}
-              </p>
-              {coach?.priority_needs?.length ? (
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {coach.priority_needs.slice(0, 4).map((need) => (
-                    <span
-                      key={`assign-need-${need}`}
-                      className="rounded-full bg-[#028090]/10 px-2 py-0.5 text-[11px] text-[#026f7d]"
-                    >
-                      {need}
-                    </span>
-                  ))}
-                </div>
-              ) : null}
-            </div>
+              <WhyRecommendedPanel
+                reasons={mentorAssignmentWhyReasons(assignment, assignedPortrait)}
+                onAskKay={
+                  onAskKay
+                    ? () =>
+                        onAskKay(
+                          `Why is ${assignment.mentor_name} my recommended ESL mentor at ${formatPct(assignment.compatibility)} fit? Explain the match and how I should use the next session.`,
+                        )
+                    : undefined
+                }
+              />
+            </>
           ) : (
-            <p className="mt-3 text-sm text-[#0D1B2A]/65">
-              No global assignment for this scholar yet.
-            </p>
+            <p className="mt-3 text-sm text-[#142033]/60">No mentor assignment in this view yet.</p>
           )}
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-3">
-            {top3.map((mentor, index) => (
-              <article
-                key={mentor.mentor_id}
-                className="rounded-xl border border-[#0D1B2A]/10 bg-[#F8FAFA] p-3"
-              >
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/50">
-                  Alt #{index + 1}
-                </p>
-                <h4 className="mt-1 text-sm font-semibold text-[#0D1B2A]">{mentor.mentor_name}</h4>
-                <p className="text-xs text-[#0D1B2A]/60">{mentor.title || mentor.industry}</p>
-                <p className="mt-2 text-sm font-semibold text-[#028090]">
-                  {formatPct(mentor.score)}
-                </p>
-                <p className="mt-1 text-[11px] text-[#0D1B2A]/55">
-                  {mentor.availability_hrs_per_month}h / month · {mentor.country}
-                </p>
-              </article>
-            ))}
+          <div className="mt-6">
+            <h4 className="text-sm font-semibold text-[#142033]">Strong alternatives</h4>
+            <ul className="mt-3 space-y-2">
+              {top3.map((mentor) => {
+                const portrait = mentorById.get(mentor.mentor_id);
+                return (
+                  <li
+                    key={mentor.mentor_id}
+                    className="rounded-xl border border-[#142033]/08 px-3 py-2"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex min-w-0 items-center gap-3">
+                        {portrait?.image ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={portrait.image}
+                            alt={mentor.mentor_name}
+                            className="h-10 w-10 shrink-0 rounded-full object-cover"
+                            width={40}
+                            height={40}
+                          />
+                        ) : null}
+                        <div className="min-w-0">
+                          <p className="text-sm font-medium text-[#142033]">{mentor.mentor_name}</p>
+                          <p className="text-xs text-[#142033]/55">
+                            {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}
+                            h/mo
+                          </p>
+                        </div>
+                      </div>
+                      <span className="text-sm font-semibold tabular-nums text-[#3A87B8]">
+                        {formatPct(mentor.score)}
+                      </span>
+                    </div>
+                    <WhyRecommendedPanel
+                      reasons={mentorTop3WhyReasons(mentor)}
+                      onAskKay={
+                        onAskKay
+                          ? () =>
+                              onAskKay(
+                                `Why is ${mentor.mentor_name} a strong alternative mentor for me at ${formatPct(mentor.score)} fit?`,
+                              )
+                          : undefined
+                      }
+                    />
+                  </li>
+                );
+              })}
+              {top3.length === 0 ? (
+                <li className="text-sm text-[#142033]/55">No alternatives ranked yet.</li>
+              ) : null}
+            </ul>
           </div>
         </section>
 
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-5 text-white shadow-sm">
+        <section className="rounded-2xl bg-[#142033] p-5 text-white shadow-sm">
           <div className="flex items-center gap-2">
-            <Calendar className="h-4 w-4 text-[#F4B942]" aria-hidden />
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#F4B942]">
-              Session booking
-            </p>
+            <Calendar className="h-4 w-4 text-[#B47828]" aria-hidden />
+            <h3 className="text-sm font-semibold">Book a session</h3>
           </div>
-          <p className="mt-2 text-sm text-white/75">
-            Book a 30–45 minute check-in with your assigned mentor. Demo mode logs the request
-            in-session.
+          <p className="mt-2 text-sm text-white/70">
+            Request time with your assigned mentor. Demo mode logs the request in-session.
           </p>
           <label className="mt-4 block text-xs font-medium text-white/70" htmlFor="topic">
             Topic
@@ -637,18 +685,13 @@ function MentorshipPanel({
             id="topic"
             value={bookingTopic}
             onChange={(event) => setBookingTopic(event.target.value)}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#F4B942]"
+            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#B47828]"
           >
-            {topicOptions.map((topic) => (
-              <option key={topic} className="text-[#0D1B2A]" value={topic}>
-                {topic}
-              </option>
-            ))}
+            <option className="text-[#142033]">Career pathing</option>
+            <option className="text-[#142033]">Application review</option>
+            <option className="text-[#142033]">Skills portfolio</option>
+            <option className="text-[#142033]">Scholarship strategy</option>
           </select>
-          <p className="mt-2 text-[11px] text-white/60">
-            Prefers {coach?.session_format || insights?.session_formats?.[0]?.label || "video call"} ·{" "}
-            {coach?.working_style || insights?.working_styles?.[0]?.label || "structured monthly goals"}
-          </p>
           <label className="mt-3 block text-xs font-medium text-white/70" htmlFor="note">
             Note
           </label>
@@ -657,75 +700,102 @@ function MentorshipPanel({
             value={bookingNote}
             onChange={(event) => setBookingNote(event.target.value)}
             rows={3}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#F4B942]"
+            className="mt-1 w-full rounded-lg border border-white/15 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-[#B47828]"
             placeholder="What should we cover?"
           />
           <button
             type="button"
             onClick={() => setBooked(`${bookingTopic}${bookingNote ? ` — ${bookingNote}` : ""}`)}
-            className="mt-4 w-full rounded-full bg-[#F4B942] px-4 py-2.5 text-sm font-semibold text-[#0D1B2A] transition hover:bg-[#e0a836]"
+            className="mt-4 w-full rounded-full bg-[#B47828] px-4 py-2.5 text-sm font-semibold text-[#142033] transition hover:bg-[#B47828]"
           >
             Request session
           </button>
           {booked ? (
-            <p className="mt-3 rounded-lg bg-white/10 px-3 py-2 text-xs text-[#F4B942]">
+            <p className="mt-3 rounded-lg bg-white/10 px-3 py-2 text-xs text-[#B47828]">
               Request logged: {booked}
             </p>
           ) : null}
         </section>
       </div>
 
-      <Heatmap
-        matrix={heatmap.matrix}
-        studentNames={heatmap.student_names}
-        mentorNames={heatmap.mentor_names}
-      />
+      {showHeatmap ? (
+        <Heatmap
+          matrix={heatmap.matrix}
+          studentNames={heatmap.student_names}
+          mentorNames={heatmap.mentor_names}
+        />
+      ) : null}
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
           <div className="flex items-center gap-2">
-            <BookOpen className="h-4 w-4 text-[#028090]" aria-hidden />
-            <h3 className="text-sm font-semibold text-[#0D1B2A]">Session log</h3>
+            <BookOpen className="h-4 w-4 text-[#3A87B8]" aria-hidden />
+            <h3 className="text-sm font-semibold text-[#142033]">Session log</h3>
           </div>
           <ul className="mt-3 space-y-2">
             {sessions.slice(0, 8).map((session) => (
               <li
                 key={session.session_id}
-                className="rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+                className="rounded-xl border border-[#142033]/08 px-3 py-2"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-medium text-[#0D1B2A]">{session.session_date}</p>
-                  <span className="text-xs uppercase tracking-wide text-[#0D1B2A]/50">
+                  <p className="text-sm font-medium text-[#142033]">{session.session_date}</p>
+                  <span className="text-xs uppercase tracking-wide text-[#142033]/50">
                     {session.status ?? (session.goals_set ? "completed" : "logged")}
                   </span>
                 </div>
-                <p className="text-xs text-[#0D1B2A]/65">
+                <p className="text-xs text-[#142033]/65">
                   {session.session_duration_mins} min · rating {session.student_rating}/5 ·{" "}
                   {session.topics_discussed.join(", ")}
                 </p>
               </li>
             ))}
             {sessions.length === 0 ? (
-              <li className="text-sm text-[#0D1B2A]/55">No sessions logged yet.</li>
+              <li className="text-sm text-[#142033]/55">No sessions logged yet.</li>
             ) : null}
           </ul>
         </section>
 
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">Mentor roster</h3>
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h3 className="text-sm font-semibold text-[#142033]">ESL mentor roster</h3>
+            <Link
+              href="/mentors"
+              className="text-xs font-semibold text-[#3A87B8] hover:underline"
+            >
+              Open public directory
+            </Link>
+          </div>
           <ul className="mt-3 space-y-2">
-            {mentors.slice(0, 8).map((mentor) => (
+            {mentors.map((mentor) => (
               <li
                 key={mentor.mentor_id}
-                className="flex items-start justify-between gap-3 rounded-xl border border-[#0D1B2A]/08 px-3 py-2"
+                className="flex items-start justify-between gap-3 rounded-xl border border-[#142033]/08 px-3 py-2"
               >
-                <div>
-                  <p className="text-sm font-medium text-[#0D1B2A]">{mentor.name}</p>
-                  <p className="text-xs text-[#0D1B2A]/60">
-                    {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}h/mo
-                  </p>
+                <div className="flex min-w-0 items-start gap-3">
+                  {mentor.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={mentor.image}
+                      alt={mentor.name}
+                      className="h-11 w-11 shrink-0 rounded-full object-cover"
+                      width={44}
+                      height={44}
+                    />
+                  ) : null}
+                  <div className="min-w-0">
+                    <p className="text-sm font-medium text-[#142033]">{mentor.name}</p>
+                    <p className="text-xs text-[#142033]/60">
+                      {mentor.industry} · {mentor.country} · {mentor.availability_hrs_per_month}h/mo
+                    </p>
+                    {mentor.bio ? (
+                      <p className="mt-1 line-clamp-2 text-xs text-[#142033]/55">{mentor.bio}</p>
+                    ) : null}
+                  </div>
                 </div>
-                <span className="text-[11px] text-[#028090]">{mentor.languages.join(" / ")}</span>
+                <span className="shrink-0 text-[11px] text-[#3A87B8]">
+                  {mentor.languages.join(" / ")}
+                </span>
               </li>
             ))}
           </ul>
@@ -735,30 +805,842 @@ function MentorshipPanel({
   );
 }
 
+function OverviewPanel({
+  overview,
+  recommendations,
+  applications,
+  onOpenTab,
+  isAdmin,
+  showPairingQuiz = false,
+}: {
+  overview: LeaderOverview | null | undefined;
+  recommendations: Recommendation[];
+  applications: LeaderApplication[];
+  onOpenTab: (tab: LeaderTabId) => void;
+  isAdmin: boolean;
+  showPairingQuiz?: boolean;
+}) {
+  if (!overview) {
+    return (
+      <div className="space-y-4">
+        <div className="rounded-2xl border border-dashed border-[#142033]/15 bg-white p-6 text-sm text-[#142033]/65">
+          {isAdmin
+            ? "Select a focus leader above to open a personal Overview, or stay on Opportunities / Risk / Analytics for cohort evidence."
+            : "Overview is not available for this account yet."}
+        </div>
+        {showPairingQuiz ? <MentorMatchQuiz /> : null}
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      <section className="rounded-2xl border border-[#142033]/10 bg-white p-5 shadow-sm">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
+          Welcome back
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold text-[#142033]">Hi, {overview.greeting_name}</h2>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#142033]/75">
+          {overview.goal_text}
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {overview.interest_tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-[#142033]/[0.04] px-2.5 py-1 text-xs text-[#142033]/70"
+            >
+              {tag.replaceAll("_", " ")}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {showPairingQuiz ? <MentorMatchQuiz /> : null}
+
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {overview.activity_stats.map((stat) => (
+          <KpiCard key={stat.label} label={stat.label} value={stat.value} hint={stat.hint} />
+        ))}
+      </div>
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-sm font-semibold text-[#142033]">Upcoming mentor session</h3>
+            <button
+              type="button"
+              onClick={() => onOpenTab("mentors")}
+              className="text-xs font-semibold text-[#3A87B8] hover:underline"
+            >
+              Open Mentors
+            </button>
+          </div>
+          {overview.next_session ? (
+            <div className="mt-3 rounded-xl border border-[#3A87B8]/20 bg-[#3A87B8]/[0.06] p-4">
+              <p className="text-sm font-semibold text-[#142033]">
+                {overview.next_session.session_date}
+              </p>
+              <p className="mt-1 text-xs text-[#142033]/65">
+                {overview.next_session.session_duration_mins} min ·{" "}
+                {overview.next_session.topics_discussed.join(", ")} ·{" "}
+                {overview.assigned_mentor?.mentor_name ?? "Assigned mentor"}
+              </p>
+            </div>
+          ) : (
+            <p className="mt-3 text-sm text-[#142033]/60">
+              No upcoming session yet. Book one from ESL Mentors when you are ready.
+            </p>
+          )}
+          {overview.assigned_mentor ? (
+            <p className="mt-3 text-xs text-[#142033]/55">
+              Match fit {formatPct(overview.assigned_mentor.compatibility)} with{" "}
+              {overview.assigned_mentor.mentor_name}
+            </p>
+          ) : null}
+        </section>
+
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-sm font-semibold text-[#142033]">Worth a closer look</h3>
+            <button
+              type="button"
+              onClick={() => onOpenTab("opportunities")}
+              className="text-xs font-semibold text-[#3A87B8] hover:underline"
+            >
+              All opportunities
+            </button>
+          </div>
+          <ul className="mt-3 space-y-2">
+            {(overview.worth_a_look.length ? overview.worth_a_look : recommendations)
+              .slice(0, 3)
+              .map((item) => (
+                <li key={item.opp_id} className="rounded-xl border border-[#142033]/08 px-3 py-2">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <p className="text-sm font-medium text-[#142033]">{item.title}</p>
+                      <p className="text-xs text-[#142033]/55">
+                        {item.org_name} · due {item.deadline}
+                      </p>
+                    </div>
+                    <span className="text-xs font-semibold tabular-nums text-[#3A87B8]">
+                      {formatPct(item.match_score)}
+                    </span>
+                  </div>
+                </li>
+              ))}
+          </ul>
+          {overview.coaching_nudge ? (
+            <button
+              type="button"
+              onClick={() => onOpenTab("coaching")}
+              className="mt-4 w-full rounded-xl border border-[#DC6414]/30 bg-[#DC6414]/10 px-3 py-2 text-left text-xs font-medium text-[#142033]"
+            >
+              {overview.coaching_nudge}
+            </button>
+          ) : null}
+        </section>
+      </div>
+
+      <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="text-sm font-semibold text-[#142033]">Saved & in progress</h3>
+          <button
+            type="button"
+            onClick={() => onOpenTab("applications")}
+            className="text-xs font-semibold text-[#3A87B8] hover:underline"
+          >
+            Applications
+          </button>
+        </div>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {applications.slice(0, 4).map((item) => (
+            <div
+              key={item.application_id}
+              className="rounded-xl border border-[#142033]/08 px-3 py-2"
+            >
+              <p className="text-sm font-medium text-[#142033]">{item.title}</p>
+              <p className="text-xs text-[#142033]/55">
+                {STAGE_LABEL[item.stage]} · {item.updated_label}
+              </p>
+            </div>
+          ))}
+          {applications.length === 0 ? (
+            <p className="text-sm text-[#142033]/55">No saved applications yet.</p>
+          ) : null}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function ApplicationsPanel({ applications }: { applications: LeaderApplication[] }) {
+  const stages: ApplicationStage[] = ["active", "under_review", "interview", "accepted"];
+  return (
+    <div className="space-y-4">
+      <p className="text-sm text-[#142033]/70">
+        Your application pipeline across Active, Under review, Interview, and Accepted. Demo stages
+        are derived from your ranked opportunities so Capstone judges can walk the Canva flow.
+      </p>
+      <div className="grid gap-3 lg:grid-cols-4">
+        {stages.map((stage) => {
+          const rows = applications.filter((item) => item.stage === stage);
+          return (
+            <section
+              key={stage}
+              className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-sm font-semibold text-[#142033]">{STAGE_LABEL[stage]}</h3>
+                <span className="rounded-full bg-[#142033]/[0.05] px-2 py-0.5 text-xs font-semibold tabular-nums text-[#142033]">
+                  {rows.length}
+                </span>
+              </div>
+              <ul className="mt-3 space-y-2">
+                {rows.map((item) => (
+                  <li
+                    key={item.application_id}
+                    className="rounded-xl border border-[#142033]/08 px-3 py-2"
+                  >
+                    <p className="text-sm font-medium text-[#142033]">{item.title}</p>
+                    <p className="text-xs text-[#142033]/55">
+                      {item.org_name} · {item.updated_label}
+                    </p>
+                    <span
+                      className={cn(
+                        "mt-2 inline-flex rounded-full px-2 py-0.5 text-[11px] font-semibold",
+                        stageTone(item.stage),
+                      )}
+                    >
+                      {formatPct(item.match_score)} match
+                    </span>
+                  </li>
+                ))}
+                {rows.length === 0 ? (
+                  <li className="text-xs text-[#142033]/50">Nothing in this stage yet.</li>
+                ) : null}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function CommunityPanel({ posts }: { posts: CommunityPost[] }) {
+  return (
+    <div className="space-y-4">
+      <div className="rounded-2xl border border-[#3A87B8]/20 bg-[#3A87B8]/[0.06] p-5">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
+          ESL Community
+        </p>
+        <p className="mt-2 text-sm text-[#142033]/75">
+          Peer posts, masterclasses, and light accountability energy. This is a product surface for
+          leaders — not Capstone model evidence.
+        </p>
+      </div>
+      <div className="grid gap-3">
+        {posts.map((post) => (
+          <article
+            key={post.post_id}
+            className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
+          >
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-[#142033]/[0.05] px-2.5 py-0.5 text-[11px] font-semibold text-[#142033]/70">
+                {post.tag}
+              </span>
+              <span className="text-xs text-[#142033]/50">{post.when}</span>
+            </div>
+            <h3 className="mt-2 text-base font-semibold text-[#142033]">{post.title}</h3>
+            <p className="mt-1 text-sm leading-relaxed text-[#142033]/75">{post.body}</p>
+            <p className="mt-3 text-xs font-medium text-[#3A87B8]">
+              {post.author} · {post.role_label}
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CoachingPanel({ risk }: { risk: RiskRow | null | undefined }) {
+  if (!risk) {
+    return (
+      <div className="rounded-2xl border border-[#142033]/10 bg-white p-6 text-sm text-[#142033]/65">
+        No personal coaching signal for this view. Keep applying and meeting your mentor on a steady
+        rhythm.
+      </div>
+    );
+  }
+
+  const isHigh = risk.risk_level === "high" || risk.risk_level === "medium";
+  return (
+    <div className="space-y-4">
+      <section
+        className={cn(
+          "rounded-2xl border p-5",
+          isHigh
+            ? "border-[#DC6414]/30 bg-[#DC6414]/10"
+            : "border-[#1B5E20]/25 bg-[#1B5E20]/[0.08]",
+        )}
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#142033]/60">
+          Soft coaching only
+        </p>
+        <h3 className="mt-2 text-lg font-semibold text-[#142033]">
+          {isHigh ? "You may be falling behind — book a check-in" : "You are in a healthy rhythm"}
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-[#142033]/75">
+          {risk.outreach_prompt ??
+            "Keep logging sessions and finishing applications. Small weekly actions compound."}
+        </p>
+        <p className="mt-3 text-xs text-[#142033]/55">
+          Leaders never see the full cohort risk table. This card is personal guidance only.
+        </p>
+      </section>
+      <div className="grid gap-3 sm:grid-cols-3">
+        <KpiCard
+          label="Days since login"
+          value={risk.features.days_since_last_login}
+          hint="Lower is better"
+        />
+        <KpiCard
+          label="Days since mentor session"
+          value={risk.features.days_since_last_mentor_session}
+          hint="Aim under 14"
+        />
+        <KpiCard
+          label="Profile completeness"
+          value={formatPct(risk.features.profile_completeness)}
+          hint="Fill interests & goals"
+        />
+      </div>
+    </div>
+  );
+}
+
+function AiCoachPopup({
+  open,
+  onClose,
+  studentId,
+  studentName,
+  starterPrompts,
+  onNavigate,
+  seedPrompt,
+  onSeedConsumed,
+}: {
+  open: boolean;
+  onClose: () => void;
+  studentId: string | null;
+  studentName: string | null;
+  starterPrompts: string[];
+  onNavigate?: (tab: LeaderTabId) => void;
+  seedPrompt?: string | null;
+  onSeedConsumed?: () => void;
+}) {
+  const welcomeContent = studentName
+    ? `Hi ${studentName.split(" ")[0]} — I am Kay, your AI coach. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
+    : "Select a leader focus (admin) or sign in as a leader to chat with Kay, your AI coach.";
+
+  const [messages, setMessages] = useState<AdvisorMessage[]>([
+    {
+      id: "welcome",
+      role: "assistant",
+      content: welcomeContent,
+      follow_ups: starterPrompts.slice(0, 3),
+    },
+  ]);
+  const [input, setInput] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const messagesRef = useRef(messages);
+  messagesRef.current = messages;
+
+  const latestFollowUps = useMemo(() => {
+    for (let i = messages.length - 1; i >= 0; i -= 1) {
+      const msg = messages[i];
+      if (msg.role === "assistant" && msg.follow_ups && msg.follow_ups.length > 0) {
+        return msg.follow_ups;
+      }
+    }
+    return starterPrompts.slice(0, 3);
+  }, [messages, starterPrompts]);
+
+  useEffect(() => {
+    setMessages([
+      {
+        id: "welcome",
+        role: "assistant",
+        content: studentName
+          ? `Hi ${studentName.split(" ")[0]} — I am Kay, your AI coach. Ask me anything about opportunities, ESL mentors, applications, risk coaching, essays, or your week plan. Tap a prompt or keep the conversation going.`
+          : "Select a leader focus (admin) or sign in as a leader to chat with Kay, your AI coach.",
+        follow_ups: starterPrompts.slice(0, 3),
+      },
+    ]);
+    setInput("");
+    setError(null);
+  }, [studentName, starterPrompts]);
+
+  useEffect(() => {
+    if (!open || !seedPrompt) return;
+    setInput(seedPrompt);
+    onSeedConsumed?.();
+  }, [open, seedPrompt, onSeedConsumed]);
+
+  useEffect(() => {
+    if (!open) return;
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") onClose();
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open, onClose]);
+
+  useEffect(() => {
+    if (!open) return;
+    const node = scrollRef.current;
+    if (node) {
+      node.scrollTop = node.scrollHeight;
+    }
+  }, [messages, open, isSending]);
+
+  function actionToTab(action: string): LeaderTabId | null {
+    const lower = action.toLowerCase();
+    if (lower.includes("opportunit")) return "opportunities";
+    if (lower.includes("mentor")) return "mentors";
+    if (lower.includes("application")) return "applications";
+    if (lower.includes("stay on track") || lower.includes("coaching")) return "coaching";
+    if (lower.includes("dropout") || lower.includes("risk")) return "risk";
+    if (lower.includes("overview")) return "overview";
+    if (lower.includes("community")) return "community";
+    if (lower.includes("analytics")) return "analytics";
+    return null;
+  }
+
+  async function sendMessage(raw: string) {
+    const message = raw.trim();
+    if (!message || isSending) return;
+    if (!studentId) {
+      setError("A leader context is required before chatting.");
+      return;
+    }
+
+    const history = messagesRef.current
+      .filter((item) => item.id !== "welcome")
+      .map((item) => ({ role: item.role, content: item.content }))
+      .slice(-12);
+
+    const userMessage: AdvisorMessage = {
+      id: `u-${Date.now()}`,
+      role: "user",
+      content: message,
+    };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
+    setIsSending(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/jointhub/advisor", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message,
+          student_id: studentId,
+          history,
+        }),
+      });
+      const payload = (await response.json()) as {
+        answer?: string;
+        citations?: string[];
+        suggested_actions?: string[];
+        follow_ups?: string[];
+        error?: string;
+      };
+      if (!response.ok) {
+        setError(payload.error ?? "Kay could not answer just now.");
+        return;
+      }
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `a-${Date.now()}`,
+          role: "assistant",
+          content: payload.answer ?? "No answer returned.",
+          citations: payload.citations,
+          suggested_actions: payload.suggested_actions,
+          follow_ups: payload.follow_ups,
+        },
+      ]);
+    } catch {
+      setError("Could not reach the AI Coach.");
+    } finally {
+      setIsSending(false);
+    }
+  }
+
+  if (!open) return null;
+
+  return (
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-end p-4 sm:p-6">
+      <div
+        role="dialog"
+        aria-modal="false"
+        aria-label="AI Coach Kay"
+        className="pointer-events-auto flex h-[min(36rem,calc(100vh-5.5rem))] w-full max-w-md flex-col overflow-hidden rounded-3xl border border-[#142033]/12 bg-white shadow-[0_20px_60px_rgba(20,32,51,0.28)]"
+      >
+        <div className="flex items-start justify-between gap-3 border-b border-[#142033]/08 bg-[#142033] px-4 py-3 text-white">
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#B47828]">
+              AI Coach
+            </p>
+            <p className="mt-1 text-sm font-semibold">Kay</p>
+            <p className="mt-0.5 text-xs text-white/70">
+              Live coaching on opportunities, ESL mentors, applications, and next steps.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/15"
+            aria-label="Close AI Coach"
+          >
+            <X className="h-4 w-4" aria-hidden />
+          </button>
+        </div>
+
+        <div ref={scrollRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4">
+          {messages.map((message) => (
+            <div
+              key={message.id}
+              className={cn(
+                "max-w-[92%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
+                message.role === "user"
+                  ? "ml-auto bg-[#3A87B8] text-white"
+                  : "bg-[#142033]/[0.04] text-[#142033]",
+              )}
+            >
+              <p className="whitespace-pre-wrap">{message.content}</p>
+              {message.citations && message.citations.length > 0 ? (
+                <ul className="mt-2 space-y-1 border-t border-[#142033]/10 pt-2 text-[11px] text-[#142033]/60">
+                  {message.citations.map((citation) => (
+                    <li key={citation}>• {citation}</li>
+                  ))}
+                </ul>
+              ) : null}
+              {message.suggested_actions && message.suggested_actions.length > 0 ? (
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {message.suggested_actions.map((action) => {
+                    const tab = actionToTab(action);
+                    if (tab && onNavigate) {
+                      return (
+                        <button
+                          key={action}
+                          type="button"
+                          onClick={() => {
+                            onNavigate(tab);
+                            onClose();
+                          }}
+                          className="rounded-full bg-white px-2 py-0.5 text-left text-[11px] font-medium text-[#3A87B8] underline-offset-2 hover:underline"
+                        >
+                          {action}
+                        </button>
+                      );
+                    }
+                    return (
+                      <span
+                        key={action}
+                        className="rounded-full bg-white px-2 py-0.5 text-[11px] font-medium text-[#3A87B8]"
+                      >
+                        {action}
+                      </span>
+                    );
+                  })}
+                </div>
+              ) : null}
+            </div>
+          ))}
+          {isSending ? (
+            <p className="text-xs font-medium text-[#142033]/55" aria-live="polite">
+              Kay is thinking…
+            </p>
+          ) : null}
+        </div>
+
+        <div className="border-t border-[#142033]/08 px-3 pt-3">
+          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#142033]/45">
+            Keep talking
+          </p>
+          <div className="flex gap-2 overflow-x-auto pb-2">
+            {latestFollowUps.slice(0, 4).map((prompt) => (
+              <button
+                key={prompt}
+                type="button"
+                onClick={() => void sendMessage(prompt)}
+                disabled={!studentId || isSending}
+                className="shrink-0 rounded-full border border-[#142033]/10 bg-[#F4F0E6] px-3 py-1.5 text-[11px] font-medium text-[#142033] hover:border-[#3A87B8]/40 disabled:opacity-50"
+              >
+                {prompt}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <form
+          className="border-t border-[#142033]/08 p-3"
+          onSubmit={(event) => {
+            event.preventDefault();
+            void sendMessage(input);
+          }}
+        >
+          {error ? (
+            <p
+              className="mb-2 rounded-lg bg-[#E0312E]/10 px-3 py-2 text-xs text-[#E0312E]"
+              role="alert"
+            >
+              {error}
+            </p>
+          ) : null}
+          <div className="flex items-end gap-2">
+            <label className="sr-only" htmlFor="ai-coach-input">
+              Ask AI Coach Kay
+            </label>
+            <textarea
+              id="ai-coach-input"
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" && !event.shiftKey) {
+                  event.preventDefault();
+                  void sendMessage(input);
+                }
+              }}
+              rows={2}
+              disabled={!studentId || isSending}
+              placeholder={
+                studentId
+                  ? "Message Kay — try “why this mentor?” or “plan my week”"
+                  : "Leader context required"
+              }
+              className="min-h-[2.75rem] flex-1 resize-none rounded-xl border border-[#142033]/15 px-3 py-2 text-sm outline-none focus:border-[#3A87B8] disabled:opacity-60"
+            />
+            <button
+              type="submit"
+              disabled={!studentId || isSending || !input.trim()}
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3A87B8] text-white transition hover:bg-[#2F739E] disabled:opacity-50"
+              aria-label="Send message to AI Coach"
+            >
+              <Send className="h-4 w-4" aria-hidden />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+function MentorCaseloadPanel({
+  overview,
+  onSelectMentee,
+  selectedStudentId,
+}: {
+  overview: MentorOverview | null | undefined;
+  onSelectMentee: (studentId: string) => void;
+  selectedStudentId: string;
+}) {
+  if (!overview) {
+    return (
+      <div className="rounded-2xl border border-[#142033]/10 bg-white p-6 text-sm text-[#142033]/70">
+        No mentor caseload is loaded for this demo account.
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      <section className="rounded-2xl border border-[#142033]/10 bg-white p-5 shadow-sm">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
+          Mentor workspace
+        </p>
+        <h2 className="mt-1 text-xl font-semibold text-[#142033]">
+          Welcome back, {overview.greeting_name}
+        </h2>
+        <p className="mt-1 text-sm text-[#142033]/65">
+          {overview.mentor_title} · {overview.mentor_industry} · {overview.mentor_country}
+        </p>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-[#142033]/75]">
+          {overview.focus_note}
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <KpiCard label="Assigned leaders" value={overview.mentee_count} hint="Active caseload" />
+          <KpiCard
+            label="High-risk mentees"
+            value={overview.high_risk_count}
+            hint="Need check-in soon"
+          />
+          <KpiCard
+            label="Sessions logged"
+            value={overview.sessions_logged}
+            hint="Demo session history"
+          />
+          <KpiCard
+            label="Average fit"
+            value={overview.average_fit_pct != null ? `${overview.average_fit_pct}%` : "—"}
+            hint="Match compatibility"
+          />
+        </div>
+      </section>
+
+      <section className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
+        <div className="border-b border-[#142033]/08 px-4 py-3">
+          <h3 className="text-sm font-semibold text-[#142033]">Your ESL leaders</h3>
+          <p className="text-xs text-[#142033]/60">
+            Select a mentee to focus coaching, sessions, and Kay prompts on their profile.
+          </p>
+        </div>
+        <div className="divide-y divide-[#142033]/08">
+          {overview.mentees.map((mentee) => {
+            const active = selectedStudentId === mentee.student_id;
+            return (
+              <button
+                key={mentee.student_id}
+                type="button"
+                onClick={() => onSelectMentee(mentee.student_id)}
+                className={cn(
+                  "flex w-full flex-col gap-2 px-4 py-4 text-left transition sm:flex-row sm:items-center sm:justify-between",
+                  active ? "bg-[#3A87B8]/08" : "hover:bg-[#142033]/[0.03]",
+                )}
+              >
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="font-semibold text-[#142033]">{mentee.full_name}</p>
+                    {mentee.risk_level ? (
+                      <span
+                        className={cn(
+                          "rounded-full border px-2 py-0.5 text-[11px] font-semibold capitalize",
+                          riskTone(mentee.risk_level),
+                        )}
+                      >
+                        {mentee.risk_level} risk
+                      </span>
+                    ) : null}
+                    {active ? (
+                      <span className="rounded-full bg-[#3A87B8] px-2 py-0.5 text-[11px] font-semibold text-white">
+                        Focused
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-1 text-sm text-[#142033]/65">
+                    {mentee.country} · {mentee.programme} · {formatPct(mentee.compatibility)} fit
+                  </p>
+                  <p className="mt-1 line-clamp-2 text-sm text-[#142033]/70]">
+                    {mentee.career_goal_text}
+                  </p>
+                  {mentee.top_opportunity ? (
+                    <p className="mt-1 text-xs text-[#3A87B8]">
+                      Top opportunity: {mentee.top_opportunity}
+                    </p>
+                  ) : null}
+                </div>
+                <div className="shrink-0 text-xs text-[#142033]/55 sm:text-right">
+                  <p>
+                    {mentee.days_since_last_session != null
+                      ? `${mentee.days_since_last_session}d since session`
+                      : "No session logged"}
+                  </p>
+                  <p className="mt-1">{mentee.applications_in_flight} apps in flight</p>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function MentorSessionsPanel({ sessions }: { sessions: SessionLog[] }) {
+  if (sessions.length === 0) {
+    return (
+      <div className="rounded-2xl border border-[#142033]/10 bg-white p-6 text-sm text-[#142033]/70">
+        No sessions are logged for this mentor caseload yet.
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      {sessions.map((session) => (
+        <article
+          key={session.session_id}
+          className="rounded-2xl border border-[#142033]/10 bg-white p-4 shadow-sm"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <p className="text-sm font-semibold text-[#142033]">
+                Session · {session.session_date}
+              </p>
+              <p className="mt-1 text-xs text-[#142033]/60">
+                Leader {session.student_id.slice(0, 8)} · {session.session_duration_mins} mins ·{" "}
+                {session.status ?? "logged"}
+              </p>
+            </div>
+            <span className="rounded-full bg-[#142033]/[0.05] px-2.5 py-1 text-xs font-semibold tabular-nums text-[#142033]">
+              ★ {session.student_rating.toFixed(1)}
+            </span>
+          </div>
+          <p className="mt-2 text-sm text-[#142033]/75">
+            Topics: {session.topics_discussed.join(", ") || "General check-in"}
+          </p>
+          <p className="mt-1 text-xs text-[#142033]/55">
+            {session.goals_set ? "Goals set" : "No goals captured"} ·{" "}
+            {session.days_since_last_session}d since prior touchpoint
+          </p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 function RiskPanel({
   rows,
   isAdmin,
+  isMentor,
   onOutreach,
   outreachStatus,
+  onAskKay,
 }: {
   rows: RiskRow[];
   isAdmin: boolean;
+  isMentor?: boolean;
   onOutreach: (studentId: string) => void;
   outreachStatus: Record<string, string>;
+  onAskKay?: (prompt: string) => void;
 }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-[#0D1B2A]/10 bg-white shadow-sm">
-      <div className="border-b border-[#0D1B2A]/08 px-4 py-3">
-        <h3 className="text-sm font-semibold text-[#0D1B2A]">Dropout risk dashboard</h3>
-        <p className="text-xs text-[#0D1B2A]/60">
-          Logistic regression probability · threshold 0.65 · RF feature importance for top factor
+    <div className="overflow-hidden rounded-2xl border border-[#142033]/10 bg-white shadow-sm">
+      <div className="border-b border-[#142033]/08 px-4 py-3">
+        <h3 className="text-sm font-semibold text-[#142033]">
+          {isAdmin
+            ? "Cohort dropout risk"
+            : isMentor
+              ? "Mentee dropout risk"
+              : "Your dropout risk"}
+        </h3>
+        <p className="text-xs text-[#142033]/60">
+          {isAdmin
+            ? "Full cohort view · logistic regression probability · threshold 0.65 · RF feature importance for top factor"
+            : isMentor
+              ? "Leaders assigned to you · soft coaching signals only · no public scoreboard"
+              : "Personal risk signal for students and mentors · probability threshold 0.65 · top factor from model features"}
         </p>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-full text-left text-sm">
-          <thead className="bg-[#0D1B2A]/[0.03] text-[11px] uppercase tracking-[0.12em] text-[#0D1B2A]/55">
+          <thead className="bg-[#142033]/[0.03] text-[11px] uppercase tracking-[0.12em] text-[#142033]/55">
             <tr>
-              <th className="px-4 py-3 font-semibold">Scholar</th>
+              <th className="px-4 py-3 font-semibold">Leader</th>
               <th className="px-4 py-3 font-semibold">Risk</th>
               <th className="px-4 py-3 font-semibold">Probability</th>
               <th className="px-4 py-3 font-semibold">Top factor</th>
@@ -768,10 +1650,23 @@ function RiskPanel({
           </thead>
           <tbody>
             {rows.map((row) => (
-              <tr key={row.student_id} className="border-t border-[#0D1B2A]/08 align-top">
+              <tr key={row.student_id} className="border-t border-[#142033]/08 align-top">
                 <td className="px-4 py-3">
-                  <p className="font-medium text-[#0D1B2A]">{row.full_name}</p>
-                  <p className="text-xs text-[#0D1B2A]/55">{row.country}</p>
+                  <p className="font-medium text-[#142033]">{row.full_name}</p>
+                  <p className="text-xs text-[#142033]/55">{row.country}</p>
+                  <WhyRecommendedPanel
+                    title="Why flagged"
+                    reasons={riskWhyReasons(row)}
+                    onAskKay={
+                      onAskKay
+                        ? () =>
+                            onAskKay(
+                              `Why is ${row.full_name} flagged at ${formatPct(row.risk_probability)} ${row.risk_level} risk, and what should I do next?`,
+                            )
+                        : undefined
+                    }
+                    askLabel="Ask Kay about this risk"
+                  />
                 </td>
                 <td className="px-4 py-3">
                   <span
@@ -783,29 +1678,28 @@ function RiskPanel({
                     {row.risk_level}
                   </span>
                 </td>
-                <td className="px-4 py-3 tabular-nums font-semibold text-[#0D1B2A]">
+                <td className="px-4 py-3 font-semibold tabular-nums text-[#142033]">
                   {formatPct(row.risk_probability)}
                 </td>
-                <td className="px-4 py-3 text-[#0D1B2A]/75">
+                <td className="px-4 py-3 text-[#142033]/75">
                   {row.top_risk_factor.replaceAll("_", " ")}
                 </td>
-                <td className="px-4 py-3 text-xs text-[#0D1B2A]/65">
-                  login {row.features.days_since_last_login}d · gpa{" "}
-                  {row.features.gpa_score.toFixed(2)} · attend{" "}
-                  {Math.round(row.features.attendance_rate * 100)}% · mentor{" "}
-                  {row.features.days_since_last_mentor_session}d
+                <td className="px-4 py-3 text-xs text-[#142033]/65">
+                  login {row.features.days_since_last_login}d · mentor{" "}
+                  {row.features.days_since_last_mentor_session}d · GPA{" "}
+                  {row.features.gpa_score.toFixed(2)}
                 </td>
                 {isAdmin ? (
                   <td className="px-4 py-3">
                     <button
                       type="button"
                       onClick={() => onOutreach(row.student_id)}
-                      className="rounded-full bg-[#C0392B] px-3 py-1.5 text-xs font-semibold text-white hover:bg-[#a93226]"
+                      className="rounded-full bg-[#3A87B8] px-3 py-1.5 text-xs font-semibold text-white hover:bg-[#2F739E]"
                     >
-                      Trigger outreach
+                      Queue outreach
                     </button>
                     {outreachStatus[row.student_id] ? (
-                      <p className="mt-1 max-w-48 text-[11px] text-[#0D1B2A]/60">
+                      <p className="mt-1 max-w-40 text-[11px] text-[#142033]/55">
                         {outreachStatus[row.student_id]}
                       </p>
                     ) : null}
@@ -820,57 +1714,177 @@ function RiskPanel({
   );
 }
 
+function SurveyInsightsPanel({ insights }: { insights: SurveyInsights }) {
+  const topNeeds = insights.top_mentor_needs.slice(0, 5);
+  const topInterests = insights.top_interests.slice(0, 5);
+  const topBarriers = insights.top_barriers.slice(0, 4);
+  const maxNeed = Math.max(...topNeeds.map((row) => row.count), 1);
+
+  return (
+    <section className="space-y-4 rounded-2xl border border-[#142033]/10 bg-white p-5">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3A87B8]">
+            ESL survey signal
+          </p>
+          <h3 className="mt-1 text-base font-semibold text-[#142033]">{insights.survey_name}</h3>
+          <p className="mt-1 text-sm text-[#142033]/65">
+            {insights.n_responses} responses · {insights.n_scholars} scholar track ·{" "}
+            {insights.n_mentor_track} mentor track · collected {insights.collected_at}
+          </p>
+        </div>
+        <div className="rounded-xl bg-[#142033]/[0.04] px-3 py-2 text-right">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#142033]/55">
+            Mentor confidence
+          </p>
+          <p className="text-xl font-semibold tabular-nums text-[#142033]">
+            {insights.avg_mentor_confidence.toFixed(2)}
+            <span className="text-sm font-medium text-[#142033]/55"> / 5</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <KpiCard label="Survey responses" value={insights.n_responses} />
+        <KpiCard label="Scholar track" value={insights.n_scholars} />
+        <KpiCard label="Mentor track" value={insights.n_mentor_track} />
+        <KpiCard
+          label="Impact countries"
+          value={insights.impact_context?.countries ?? 6}
+        />
+      </div>
+
+      <div className="grid gap-4 lg:grid-cols-3">
+        <div>
+          <h4 className="text-sm font-semibold text-[#142033]">Top mentor needs</h4>
+          <ul className="mt-3 space-y-2">
+            {topNeeds.map((row) => (
+              <li key={row.label}>
+                <div className="mb-1 flex justify-between gap-2 text-xs text-[#142033]/70">
+                  <span>{row.label}</span>
+                  <span className="tabular-nums">{row.count}</span>
+                </div>
+                <div className="h-2 overflow-hidden rounded-full bg-[#142033]/10">
+                  <div
+                    className="h-full rounded-full bg-[#3A87B8]"
+                    style={{ width: `${Math.round((row.count / maxNeed) * 100)}%` }}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold text-[#142033]">Top interests</h4>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {topInterests.map((row) => (
+              <span
+                key={row.label}
+                className="rounded-full bg-[#142033]/[0.04] px-2.5 py-1 text-xs text-[#142033]/75"
+              >
+                {row.label} · {row.count}
+              </span>
+            ))}
+          </div>
+          <h4 className="mt-4 text-sm font-semibold text-[#142033]">Barriers</h4>
+          <ul className="mt-2 space-y-1.5 text-sm text-[#142033]/70">
+            {topBarriers.map((row) => (
+              <li key={row.label}>
+                {row.label}{" "}
+                <span className="tabular-nums text-[#142033]/45">({row.count})</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold text-[#142033]">What this means for Mentor Hub</h4>
+          <ul className="mt-3 space-y-2 text-sm text-[#142033]/70">
+            {insights.product_implications.slice(0, 4).map((item) => (
+              <li key={item} className="rounded-xl border border-[#142033]/08 px-3 py-2">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {insights.representative_quotes.length > 0 ? (
+        <div>
+          <h4 className="text-sm font-semibold text-[#142033]">Scholar voices</h4>
+          <div className="mt-3 grid gap-3 md:grid-cols-2">
+            {insights.representative_quotes.slice(0, 4).map((quote) => (
+              <blockquote
+                key={`${quote.name}-${quote.quote.slice(0, 24)}`}
+                className="rounded-xl border border-[#142033]/08 bg-[#142033]/[0.02] p-3"
+              >
+                <p className="text-sm leading-relaxed text-[#142033]/80">“{quote.quote}”</p>
+                <footer className="mt-2 text-xs font-medium text-[#142033]/55">
+                  {quote.name}
+                  {quote.country ? ` · ${quote.country}` : ""}
+                  {quote.theme ? ` · ${quote.theme}` : ""}
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
 function AnalyticsPanel({
   metrics,
   nlp,
   kpis,
-  insights,
+  surveyInsights,
 }: {
   metrics: ModelMetrics;
   nlp: NlpRow[];
   kpis: DashboardBundle["kpis"];
-  insights: SurveyInsights | null;
+  surveyInsights: SurveyInsights | null;
 }) {
   const metricCards = [
     {
-      label: "Rec. Precision@5",
+      label: "Precision@5",
       value: formatPct(metrics.recommendation_precision_at_5),
-      target: `target ≥ ${formatPct(metrics.recommendation_target)}`,
+      target: `target ${formatPct(metrics.recommendation_target)}`,
       pass: metrics.recommendation_precision_at_5 >= metrics.recommendation_target,
     },
     {
       label: "Mentor match F1",
       value: formatPct(metrics.mentor_match_f1),
-      target: `target ≥ ${formatPct(metrics.mentor_match_target)}`,
+      target: `target ${formatPct(metrics.mentor_match_target)}`,
       pass: metrics.mentor_match_f1 >= metrics.mentor_match_target,
     },
     {
       label: "Dropout AUC-ROC",
       value: metrics.dropout_auc_roc.toFixed(2),
-      target: `target ≥ ${metrics.dropout_target.toFixed(2)}`,
+      target: `target ${metrics.dropout_target.toFixed(2)}`,
       pass: metrics.dropout_auc_roc >= metrics.dropout_target,
     },
     {
       label: "NLP entity recall",
       value: formatPct(metrics.nlp_entity_recall_estimate),
-      target: `target ≥ ${formatPct(metrics.nlp_target)}`,
+      target: `target ${formatPct(metrics.nlp_target)}`,
       pass: metrics.nlp_entity_recall_estimate >= metrics.nlp_target,
     },
   ];
 
   return (
     <div className="space-y-4">
+      {surveyInsights ? <SurveyInsightsPanel insights={surveyInsights} /> : null}
+
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {metricCards.map((card) => (
-          <div key={card.label} className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/55">
+          <div key={card.label} className="rounded-2xl border border-[#142033]/10 bg-white p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#142033]/55">
               {card.label}
             </p>
-            <p className="mt-2 text-2xl font-semibold tabular-nums text-[#0D1B2A]">{card.value}</p>
+            <p className="mt-2 text-2xl font-semibold tabular-nums text-[#142033]">{card.value}</p>
             <p
               className={cn(
                 "mt-1 text-xs font-medium",
-                card.pass ? "text-[#1B5E20]" : "text-[#C0392B]",
+                card.pass ? "text-[#1B5E20]" : "text-[#E0312E]",
               )}
             >
               {card.pass ? "On target" : "Below target"} · {card.target}
@@ -879,9 +1893,19 @@ function AnalyticsPanel({
         ))}
       </div>
 
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <KpiCard label="Registered users" value={kpis.registered_users} />
+        <KpiCard label="Opportunities matched" value={kpis.opportunities_matched} />
+        <KpiCard label="Active mentor pairs" value={kpis.active_mentor_pairs} />
+        <KpiCard
+          label="Survey responses"
+          value={kpis.survey_responses ?? surveyInsights?.n_responses ?? 0}
+        />
+      </div>
+
       <div className="grid gap-4 lg:grid-cols-2">
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+          <h3 className="text-sm font-semibold text-[#142033]">
             Feature importance (Random Forest)
           </h3>
           <ul className="mt-3 space-y-2">
@@ -889,13 +1913,13 @@ function AnalyticsPanel({
               .sort((a, b) => b[1] - a[1])
               .map(([feature, weight]) => (
                 <li key={feature}>
-                  <div className="mb-1 flex justify-between text-xs text-[#0D1B2A]/70">
+                  <div className="mb-1 flex justify-between text-xs text-[#142033]/70">
                     <span>{feature.replaceAll("_", " ")}</span>
                     <span className="tabular-nums">{formatPct(weight)}</span>
                   </div>
-                  <div className="h-2 overflow-hidden rounded-full bg-[#0D1B2A]/10">
+                  <div className="h-2 overflow-hidden rounded-full bg-[#142033]/10">
                     <div
-                      className="h-full rounded-full bg-[#028090]"
+                      className="h-full rounded-full bg-[#3A87B8]"
                       style={{ width: `${Math.round(weight * 100)}%` }}
                     />
                   </div>
@@ -904,21 +1928,21 @@ function AnalyticsPanel({
           </ul>
         </section>
 
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">NLP goal extracts</h3>
+        <section className="rounded-2xl border border-[#142033]/10 bg-white p-5">
+          <h3 className="text-sm font-semibold text-[#142033]">NLP goal extracts</h3>
           <ul className="mt-3 space-y-3">
             {nlp.slice(0, 6).map((row) => (
-              <li key={row.student_id} className="rounded-xl border border-[#0D1B2A]/08 p-3">
-                <p className="text-sm font-medium text-[#0D1B2A]">{row.full_name}</p>
-                <p className="mt-1 text-xs text-[#0D1B2A]/65">{row.career_goal_text}</p>
-                <p className="mt-2 text-xs text-[#028090]">{row.recommendation_sentence}</p>
+              <li key={row.student_id} className="rounded-xl border border-[#142033]/08 p-3">
+                <p className="text-sm font-medium text-[#142033]">{row.full_name}</p>
+                <p className="mt-1 text-xs text-[#142033]/65">{row.career_goal_text}</p>
+                <p className="mt-2 text-xs text-[#3A87B8]">{row.recommendation_sentence}</p>
                 <div className="mt-2 flex flex-wrap gap-1">
                   {[...row.entities.ORG, ...row.entities.SKILL, ...row.entities.GPE]
                     .slice(0, 6)
                     .map((entity) => (
                       <span
                         key={`${row.student_id}-${entity}`}
-                        className="rounded-full bg-[#0D1B2A]/[0.04] px-2 py-0.5 text-[11px] text-[#0D1B2A]/70"
+                        className="rounded-full bg-[#142033]/[0.04] px-2 py-0.5 text-[11px] text-[#142033]/70"
                       >
                         {entity}
                       </span>
@@ -929,76 +1953,32 @@ function AnalyticsPanel({
           </ul>
         </section>
       </div>
-
-      {insights ? (
-        <section className="rounded-2xl border border-[#0D1B2A]/10 bg-white p-5">
-          <h3 className="text-sm font-semibold text-[#0D1B2A]">ESL Mentor Needs survey snapshot</h3>
-          <p className="mt-1 text-xs text-[#0D1B2A]/60">
-            {insights.survey_name} · collected {insights.collected_at} · n={insights.n_responses}
-          </p>
-          <div className="mt-4 grid gap-3 md:grid-cols-3">
-            <CountBars title="Interests" items={insights.top_interests} />
-            <CountBars title="Mentor needs" items={insights.top_mentor_needs} />
-            <CountBars title="Barriers" items={insights.top_barriers} accent="#C0392B" />
-          </div>
-          {insights.representative_quotes?.length ? (
-            <div className="mt-4 grid gap-2 md:grid-cols-2">
-              {insights.representative_quotes.slice(0, 4).map((item, index) => (
-                <blockquote
-                  key={`${item.name}-${index}`}
-                  className="rounded-xl border border-[#0D1B2A]/08 bg-[#F8FAFA] px-3 py-2 text-xs italic text-[#0D1B2A]/75"
-                >
-                  “{item.quote}”
-                  <span className="mt-1 block not-italic text-[11px] text-[#0D1B2A]/55">
-                    — {item.name}
-                    {item.country ? ` · ${item.country}` : ""}
-                  </span>
-                </blockquote>
-              ))}
-            </div>
-          ) : null}
-        </section>
-      ) : null}
-
-      <section className="rounded-2xl border border-[#0D1B2A]/10 bg-[#0D1B2A] p-5 text-white">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#F4B942]">
-          Impact (SimpleJoint Trust)
-        </p>
-        <div className="mt-3 grid gap-3 sm:grid-cols-3">
-          <div>
-            <p className="text-2xl font-semibold tabular-nums">
-              ${kpis.impact.scholarships_usd.toLocaleString()}+
-            </p>
-            <p className="text-xs text-white/65">scholarships & grants</p>
-          </div>
-          <div>
-            <p className="text-2xl font-semibold tabular-nums">{kpis.impact.students_supported}+</p>
-            <p className="text-xs text-white/65">students supported</p>
-          </div>
-          <div>
-            <p className="text-2xl font-semibold tabular-nums">{kpis.impact.countries}+</p>
-            <p className="text-xs text-white/65">countries</p>
-          </div>
-        </div>
-        <p className="mt-4 text-xs text-white/55">
-          Partners: British Council · ALX · Hood.D · A4 · JointHub Africa · ALU · @alueducation
-          @millenniumfellows @UNAI
-        </p>
-      </section>
     </div>
   );
 }
 
 export function DashboardApp({ initialData }: { initialData: DashboardResponse }) {
   const router = useRouter();
+  const isAdmin = initialData.role === "admin";
+  const isMentor = initialData.role === "mentor";
   const [data, setData] = useState(initialData);
-  const [tab, setTab] = useState<TabId>("coach");
-  const [selectedStudent, setSelectedStudent] = useState(initialData.student?.student_id ?? "");
+  const [tab, setTab] = useState<LeaderTabId>(
+    isAdmin ? "risk" : isMentor ? "caseload" : "overview",
+  );
+  const [selectedStudent, setSelectedStudent] = useState(
+    initialData.student?.student_id ??
+      initialData.mentor_overview?.mentees[0]?.student_id ??
+      "",
+  );
   const [outreachStatus, setOutreachStatus] = useState<Record<string, string>>({});
+  const [coachOpen, setCoachOpen] = useState(false);
+  const [coachSeedPrompt, setCoachSeedPrompt] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
+  const tabs = isAdmin ? ADMIN_TABS : isMentor ? MENTOR_TABS : LEADER_TABS;
+
   const assignment = useMemo(() => {
-    if (data.role === "admin" && selectedStudent) {
+    if ((data.role === "admin" || data.role === "mentor") && selectedStudent) {
       return data.mentorship.assignments.find((row) => row.student_id === selectedStudent);
     }
     return data.mentorship.assignments[0];
@@ -1006,8 +1986,37 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
 
   const top3 = useMemo(() => {
     const key = selectedStudent || data.student?.student_id || Object.keys(data.mentorship.top3)[0];
-    return key ? (data.mentorship.top3[key] ?? []) : [];
-  }, [data, selectedStudent]);
+    const ranked = key ? (data.mentorship.top3[key] ?? []) : [];
+    const assignedId = assignment?.mentor_id;
+    if (!assignedId) return ranked;
+    // Keep alternatives distinct from the assigned ESL mentor for matching consistency.
+    const distinct = ranked.filter((item) => item.mentor_id !== assignedId);
+    return distinct.length > 0 ? distinct : ranked.slice(1);
+  }, [assignment?.mentor_id, data, selectedStudent]);
+
+  const leaderRisk =
+    data.risk.find((row) => row.student_id === selectedStudent) ?? data.risk[0] ?? null;
+  const advisorStudentId = selectedStudent || data.student?.student_id || null;
+  const advisorName =
+    data.students?.find((row) => row.student_id === advisorStudentId)?.full_name ??
+    data.student?.full_name ??
+    null;
+  const starterPrompts =
+    (data.ai_coach?.coach_prompts && data.ai_coach.coach_prompts.length > 0
+      ? data.ai_coach.coach_prompts
+      : null) ??
+    data.mentor_overview?.starter_prompts ??
+    data.overview?.starter_prompts ??
+    [
+      "What should I apply to next?",
+      "Who is my mentor and why?",
+      "Am I falling behind?",
+    ];
+
+  function askKayAbout(prompt: string) {
+    setCoachSeedPrompt(prompt);
+    setCoachOpen(true);
+  }
 
   async function reload(studentId?: string) {
     const query = studentId ? `?student_id=${encodeURIComponent(studentId)}` : "";
@@ -1021,7 +2030,7 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
 
   async function handleSignOut() {
     await fetch("/api/jointhub/auth", { method: "DELETE" });
-    router.push("/dashboard/login");
+    router.push("/login");
     router.refresh();
   }
 
@@ -1039,32 +2048,53 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
     }));
   }
 
+  function handleSelectMentee(studentId: string) {
+    setSelectedStudent(studentId);
+    startTransition(() => {
+      void reload(studentId);
+    });
+  }
+
+  const roleLabel = isAdmin
+    ? "Programme admin"
+    : isMentor
+      ? "Mentor workspace"
+      : "Leader workspace";
+
   return (
-    <div className="min-h-screen bg-[#F4F7F7] text-[#0D1B2A]">
-      <header className="border-b border-white/10 bg-[#0D1B2A] text-white">
+    <div className="min-h-screen bg-[#F4F0E6] text-[#142033]">
+      <header className="border-b border-white/10 bg-black text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F4B942]">
-              JointHub Africa
-            </p>
-            <h1 className="text-lg font-semibold sm:text-xl">Capstone II AI Dashboard</h1>
-            <p className="text-xs text-white/65">
-              {data.student
-                ? `${data.student.full_name} · ${data.student.programme}`
-                : "Admin cohort view"}{" "}
-              · {data.auth_email}
-            </p>
+          <div className="flex min-w-0 items-center gap-3">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/simplejoint-puzzle-logo.png"
+              alt="SimpleJoint Trust"
+              className="h-10 w-10 shrink-0 rounded-lg bg-black object-contain"
+              width={40}
+              height={40}
+            />
+            <div className="min-w-0">
+              <p className="truncate text-sm font-semibold tracking-tight text-white">Dashboard</p>
+              <p className="truncate text-xs text-white/65">{roleLabel}</p>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <Link
+              href="/mentors"
+              className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/10"
+            >
+              ESL Mentors
+            </Link>
             <Link
               href="/"
-              className="rounded-full border border-white/15 px-3 py-1.5 text-xs font-medium text-white/80 hover:bg-white/10"
+              className="rounded-full border border-white/20 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/10"
             >
               Home
             </Link>
             <button
               type="button"
-              onClick={handleSignOut}
+              onClick={() => void handleSignOut()}
               className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white hover:bg-white/15"
             >
               <LogOut className="h-3.5 w-3.5" aria-hidden />
@@ -1074,21 +2104,26 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl space-y-5 px-4 py-5 sm:px-6">
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          <KpiCard label="Registered users" value={data.kpis.registered_users} hint="ESL survey + demo cohort" />
-          <KpiCard label="Survey responses" value={data.kpis.survey_responses ?? data.survey_insights?.n_responses ?? "—"} hint="Mentor Needs form" />
-          <KpiCard label="Active mentor pairs" value={data.kpis.active_mentor_pairs} />
-          <KpiCard label="At-risk students flagged" value={data.kpis.at_risk_students_flagged} />
-        </div>
+      <main className="mx-auto max-w-7xl space-y-5 px-4 py-6 sm:px-6">
+        {isAdmin ? (
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <KpiCard label="Registered users" value={data.kpis.registered_users} />
+            <KpiCard label="Opportunities matched" value={data.kpis.opportunities_matched} />
+            <KpiCard label="Active mentor pairs" value={data.kpis.active_mentor_pairs} />
+            <KpiCard
+              label="Survey responses"
+              value={data.kpis.survey_responses ?? data.survey_insights?.n_responses ?? 0}
+            />
+          </div>
+        ) : null}
 
-        {data.role === "admin" && data.students ? (
-          <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-[#0D1B2A]/10 bg-white p-3">
+        {(isAdmin || isMentor) && data.students ? (
+          <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-[#142033]/10 bg-white p-3">
             <label
               htmlFor="student-filter"
-              className="text-xs font-semibold uppercase tracking-[0.14em] text-[#0D1B2A]/55"
+              className="text-xs font-semibold uppercase tracking-[0.14em] text-[#142033]/55"
             >
-              Focus scholar
+              {isMentor ? "Focus mentee" : "Focus leader"}
             </label>
             <select
               id="student-filter"
@@ -1100,21 +2135,21 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
                   void reload(value || undefined);
                 });
               }}
-              className="min-w-56 rounded-lg border border-[#0D1B2A]/15 bg-white px-3 py-2 text-sm outline-none focus:border-[#028090]"
+              className="min-w-56 rounded-lg border border-[#142033]/15 bg-white px-3 py-2 text-sm outline-none focus:border-[#3A87B8]"
             >
-              <option value="">All scholars (admin)</option>
+              {isAdmin ? <option value="">All leaders (admin)</option> : null}
               {data.students.map((student) => (
                 <option key={student.student_id} value={student.student_id}>
                   {student.full_name} · {student.country}
                 </option>
               ))}
             </select>
-            {isPending ? <span className="text-xs text-[#0D1B2A]/50">Updating…</span> : null}
+            {isPending ? <span className="text-xs text-[#142033]/50">Updating…</span> : null}
           </div>
         ) : null}
 
         <nav className="flex flex-wrap gap-2" aria-label="Dashboard modules">
-          {TABS.map((item) => {
+          {tabs.map((item) => {
             const Icon = item.icon;
             const active = tab === item.id;
             return (
@@ -1125,8 +2160,8 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
                 className={cn(
                   "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition",
                   active
-                    ? "bg-[#028090] text-white"
-                    : "bg-white text-[#0D1B2A]/75 border border-[#0D1B2A]/10 hover:border-[#028090]/40",
+                    ? "bg-[#3A87B8] text-white"
+                    : "border border-[#142033]/10 bg-white text-[#142033]/75 hover:border-[#3A87B8]/40",
                 )}
               >
                 <Icon className="h-4 w-4" aria-hidden />
@@ -1136,39 +2171,55 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           })}
         </nav>
 
-        {tab === "coach" ? (
-          <CoachPanel
-            plans={
-              data.role === "admin"
-                ? data.ai_coach_all ?? (data.ai_coach ? [data.ai_coach] : [])
-                : data.ai_coach
-                  ? [data.ai_coach]
-                  : []
-            }
-            insights={data.survey_insights ?? null}
-            isAdmin={data.role === "admin"}
+        {tab === "overview" ? (
+          <OverviewPanel
+            overview={data.overview}
+            recommendations={data.recommendations}
+            applications={data.applications ?? []}
+            onOpenTab={setTab}
+            isAdmin={isAdmin}
+            showPairingQuiz={!isAdmin && !isMentor}
           />
         ) : null}
-        {tab === "opportunities" ? (
-          <OpportunitiesPanel items={data.recommendations} sentence={data.personalised_sentence} />
+        {tab === "caseload" ? (
+          <MentorCaseloadPanel
+            overview={data.mentor_overview}
+            onSelectMentee={handleSelectMentee}
+            selectedStudentId={selectedStudent}
+          />
         ) : null}
-        {tab === "mentorship" ? (
+        {tab === "sessions" ? (
+          <MentorSessionsPanel sessions={data.mentorship.sessions} />
+        ) : null}
+        {tab === "opportunities" ? (
+          <OpportunitiesPanel items={data.recommendations} onAskKay={askKayAbout} />
+        ) : null}
+        {tab === "mentors" ? (
           <MentorshipPanel
             assignment={assignment}
             top3={top3}
             sessions={data.mentorship.sessions}
             heatmap={data.mentorship.heatmap}
             mentors={data.mentorship.mentors}
-            coach={data.ai_coach}
-            insights={data.survey_insights ?? null}
+            showHeatmap={isAdmin}
+            onAskKay={askKayAbout}
+            coachPlan={data.ai_coach}
+            surveyInsights={data.survey_insights}
           />
         ) : null}
+        {tab === "applications" ? (
+          <ApplicationsPanel applications={data.applications ?? []} />
+        ) : null}
+        {tab === "community" ? <CommunityPanel posts={data.community ?? []} /> : null}
+        {tab === "coaching" ? <CoachingPanel risk={leaderRisk} /> : null}
         {tab === "risk" ? (
           <RiskPanel
             rows={data.risk}
-            isAdmin={data.role === "admin"}
+            isAdmin={isAdmin}
+            isMentor={isMentor}
             onOutreach={handleOutreach}
             outreachStatus={outreachStatus}
+            onAskKay={askKayAbout}
           />
         ) : null}
         {tab === "analytics" ? (
@@ -1176,10 +2227,34 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             metrics={data.metrics}
             nlp={data.nlp}
             kpis={data.kpis}
-            insights={data.survey_insights ?? null}
+            surveyInsights={data.survey_insights}
           />
         ) : null}
       </main>
+
+      {!coachOpen ? (
+        <button
+          type="button"
+          onClick={() => setCoachOpen(true)}
+          className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-[#3A87B8] px-4 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(58,135,184,0.45)] transition hover:bg-[#2F739E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3A87B8] sm:bottom-6 sm:right-6"
+          aria-haspopup="dialog"
+          aria-expanded={false}
+        >
+          <MessageSquareText className="h-4 w-4" aria-hidden />
+          AI Coach
+        </button>
+      ) : null}
+
+      <AiCoachPopup
+        open={coachOpen}
+        onClose={() => setCoachOpen(false)}
+        studentId={advisorStudentId}
+        studentName={advisorName}
+        starterPrompts={starterPrompts}
+        onNavigate={setTab}
+        seedPrompt={coachSeedPrompt}
+        onSeedConsumed={() => setCoachSeedPrompt(null)}
+      />
     </div>
   );
 }

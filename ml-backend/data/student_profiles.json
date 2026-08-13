@@ -7,7 +7,6 @@
     "campus": "Kairuki university",
     "programme": "ESL Prospect (survey)",
     "career_stage": 1,
-    "scholar_status": false,
     "interest_tags": [
       "leadership",
       "creative_tech",
@@ -88,7 +87,8 @@
       "Any — best match on skills"
     ],
     "survey_advice": "None so far .",
-    "source": "esl_survey"
+    "leader_status": false,
+    "survey_source": "esl_survey"
   },
   {
     "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c",
@@ -98,7 +98,6 @@
     "campus": "African Leadership University, Rwanda",
     "programme": "ESL Prospect (survey)",
     "career_stage": 5,
-    "scholar_status": false,
     "interest_tags": [
       "leadership",
       "entrepreneurship",
@@ -177,7 +176,8 @@
       "Entrepreneurship"
     ],
     "survey_advice": "Mentors could also come to mentorship sessions with opportunities",
-    "source": "esl_survey"
+    "leader_status": false,
+    "survey_source": "esl_survey"
   },
   {
     "student_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4",
@@ -187,7 +187,6 @@
     "campus": "University of Dar es Salaam",
     "programme": "ESL Prospect (survey)",
     "career_stage": 2,
-    "scholar_status": false,
     "interest_tags": [
       "leadership",
       "entrepreneurship",
@@ -268,7 +267,8 @@
       "Creative industries"
     ],
     "survey_advice": "Always do things with intentions it helps to narrow and concentrate your focus and attention",
-    "source": "esl_survey"
+    "leader_status": false,
+    "survey_source": "esl_survey"
   },
   {
     "student_id": "7912e963-9252-54a0-8543-262e566ff29c",
@@ -278,7 +278,6 @@
     "campus": "ALU Kigali",
     "programme": "ESL Prospect (survey)",
     "career_stage": 3,
-    "scholar_status": false,
     "interest_tags": [
       "leadership",
       "entrepreneurship",
@@ -352,7 +351,8 @@
       "Technology"
     ],
     "survey_advice": "This is an interesting and great project Kay !!!",
-    "source": "esl_survey"
+    "leader_status": false,
+    "survey_source": "esl_survey"
   },
   {
     "student_id": "ba194f0a-4ac8-595f-a11d-54a5c7a8387b",
@@ -362,7 +362,6 @@
     "campus": "ALU",
     "programme": "ESL Prospect (survey)",
     "career_stage": 6,
-    "scholar_status": false,
     "interest_tags": [
       "leadership",
       "entrepreneurship",
@@ -426,7 +425,8 @@
       "Finance"
     ],
     "survey_advice": "Na",
-    "source": "esl_survey"
+    "leader_status": false,
+    "survey_source": "esl_survey"
   },
   {
     "student_id": "6a79888b-55bf-5996-a851-820283a533dd",
@@ -436,7 +436,6 @@
     "campus": "ALU Kigali",
     "programme": "ESL Prospect (survey)",
     "career_stage": 6,
-    "scholar_status": false,
     "interest_tags": [
       "leadership",
       "creative_tech",
@@ -506,7 +505,8 @@
       "Creative industries"
     ],
     "survey_advice": "None",
-    "source": "esl_survey"
+    "leader_status": false,
+    "survey_source": "esl_survey"
   },
   {
     "student_id": "92562ba5-db8c-5c42-8b92-74c208014f07",
@@ -516,7 +516,6 @@
     "campus": "Feza International School",
     "programme": "ESL Prospect (survey)",
     "career_stage": 2,
-    "scholar_status": false,
     "interest_tags": [
       "creative_tech",
       "entrepreneurship",
@@ -592,7 +591,8 @@
       "Finance"
     ],
     "survey_advice": "N/A",
-    "source": "esl_survey"
+    "leader_status": false,
+    "survey_source": "esl_survey"
   },
   {
     "student_id": "21eb43a5-603e-50f6-9fa6-1b9397c5d31c",
@@ -602,7 +602,6 @@
     "campus": "Ithaca College",
     "programme": "ESL Prospect (survey)",
     "career_stage": 5,
-    "scholar_status": false,
     "interest_tags": [
       "social_impact",
       "media_film",
@@ -670,6 +669,7 @@
       "Creative industries"
     ],
     "survey_advice": "N/a",
-    "source": "esl_survey"
+    "leader_status": false,
+    "survey_source": "esl_survey"
   }
 ]

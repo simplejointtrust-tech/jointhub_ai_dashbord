@@ -15,9 +15,9 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "JointHub Africa — Capstone AI Dashboard",
+  title: "JointHub Africa — Mentor Hub",
   description:
-    "JointHub Africa Capstone II dashboard for opportunity matching, mentor assignment, dropout risk, and NLP goal analysis.",
+    "JointHub Africa Mentor Hub for opportunity matching, mentor assignment, dropout risk, and NLP goal analysis.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

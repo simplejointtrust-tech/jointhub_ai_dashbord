@@ -1,6 +1,6 @@
-# JointHub Africa — Capstone II AI Dashboard
+# JointHub Africa — Mentor Hub
 
-Product app for **SimpleJoint Trust / JointHub Africa** Capstone II (Isaiah Kporon, ALU EMBA 2026 — Data Science & AI).
+Product app for **SimpleJoint Trust / JointHub Africa** Mentor Hub (built for Isaiah Kporon, ALU EMBA 2026 — Data Science & AI).
 
 ## Agent Quick Context
 
@@ -8,14 +8,14 @@ Product app for **SimpleJoint Trust / JointHub Africa** Capstone II (Isaiah Kpor
 - Package manager: Bun (`packageManager: bun@1.3.13`).
 - Main scripts: `bun dev`, `bun run build`, `bun run lint`, `bun run typecheck`, `bun run test`.
 - Product entrypoints:
-  - `/` — JointHub Capstone landing
+  - `/` — JointHub Mentor Hub product landing (leader CTAs + Capstone demo path)
   - `/dashboard/login` — demo email gate
-  - `/dashboard` — tabbed AI dashboard (Opportunities, Mentor Hub, Dropout risk, Analytics)
-  - `/api/jointhub/*` — dashboard APIs over sample Capstone datasets
+  - `/dashboard` — leader-first Mentor Hub (Overview, Opportunities, Mentors, Applications, Community, Advisor) with admin Dropout risk + Analytics
+  - `/prototype` — Canva design reference embed
+  - `/api/jointhub/*` — dashboard + JointHub Advisor APIs over sample Capstone datasets
   - `ml-backend/` — FastAPI Python service implementing the same four ML modules
 - Design tokens: Capstone palette Navy `#0D1B2A`, Teal `#028090`, Gold `#F4B942`, risk green/amber/red.
-- Impact figures (always): **$158,000+ · 85+ students · 6+ countries**.
-- Bootcamp: CreativeTech — Create With AI, **25–26 August 2026**, ALU Kigali.
+- Bootcamp: CreativeTech X SoCreative, **10–11 August 2026** (tentative), ALX Kigali.
 
 ## What shipped
 
@@ -28,18 +28,18 @@ Four live AI/DS modules on sample cohort data (not static mock cards):
 
 ## Demo path (Capstone)
 
-1. Open `/dashboard/login`
-2. Sign in as `esl02@jointhub.demo (Callie), esl03@jointhub.demo (Desmond), admin@jointhub.demo
-3. Review **Opportunities** (“Curated for You”) and the NLP recommendation sentence
-4. Open **Mentor Hub** for assigned mentor, top alternatives, matching matrix, session booking/log
+1. Open `/` then **Capstone demo login**, or go straight to `/dashboard/login`
+2. Sign in as `leader1@jointhub.demo`
+3. Land on **Overview**, then open **Opportunities** and **Mentors**
+4. Walk **Applications** + **Community**, then ask **Advisor** a deadline/eligibility question
 5. Sign out and use `admin@jointhub.demo` for full **Dropout risk** table + outreach and **Analytics** KPIs
 
 Demo accounts:
 
 | Email | Role |
 | --- | --- |
-| scholar1@jointhub.demo | student |
-| scholar2@jointhub.demo | student |
+| leader1@jointhub.demo | student |
+| leader2@jointhub.demo | student |
 | admin@jointhub.demo | admin |
 
 ## Data integration
@@ -102,7 +102,7 @@ British Council · ALX · Hood.D · A4 · JointHub Africa · ALU · @alueducatio
 
 ## External GitHub mirror
 
-This package is the Capstone II AI dashboard export intended for:
+This package is the Mentor Hub dashboard export intended for:
 
 `https://github.com/simplejointtrust-tech/jointhub_ai_dashbord`
 

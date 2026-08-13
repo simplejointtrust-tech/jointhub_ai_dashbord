@@ -3,66 +3,56 @@
     "email": "admin@jointhub.demo",
     "role": "admin",
     "full_name": "JointHub Admin",
-    "student_id": null
+    "student_id": null,
+    "mentor_id": null
+  },
+  {
+    "email": "leader1@jointhub.demo",
+    "role": "student",
+    "full_name": "Callie Davis",
+    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e",
+    "mentor_id": null
+  },
+  {
+    "email": "mentor1@jointhub.demo",
+    "role": "mentor",
+    "full_name": "Michael Adeniyi",
+    "student_id": null,
+    "mentor_id": "michael-adeniyi"
   },
   {
     "email": "esl02@jointhub.demo",
     "role": "student",
     "full_name": "Callie Davis",
-    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e"
+    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e",
+    "mentor_id": null
   },
   {
     "email": "esl03@jointhub.demo",
     "role": "student",
     "full_name": "Desmond Tunyinko",
-    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c"
+    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c",
+    "mentor_id": null
   },
   {
     "email": "esl06@jointhub.demo",
     "role": "student",
     "full_name": "Lisa Swai",
-    "student_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4"
-  },
-  {
-    "email": "esl07@jointhub.demo",
-    "role": "student",
-    "full_name": "Blessing Matiro",
-    "student_id": "7912e963-9252-54a0-8543-262e566ff29c"
-  },
-  {
-    "email": "esl08@jointhub.demo",
-    "role": "student",
-    "full_name": "CONFREY ALIANJI",
-    "student_id": "ba194f0a-4ac8-595f-a11d-54a5c7a8387b"
-  },
-  {
-    "email": "esl11@jointhub.demo",
-    "role": "student",
-    "full_name": "Winnie",
-    "student_id": "6a79888b-55bf-5996-a851-820283a533dd"
-  },
-  {
-    "email": "esl13@jointhub.demo",
-    "role": "student",
-    "full_name": "Calvin Felician Girambo",
-    "student_id": "92562ba5-db8c-5c42-8b92-74c208014f07"
-  },
-  {
-    "email": "esl16@jointhub.demo",
-    "role": "student",
-    "full_name": "Kobi Owulosua",
-    "student_id": "21eb43a5-603e-50f6-9fa6-1b9397c5d31c"
+    "student_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4",
+    "mentor_id": null
   },
   {
     "email": "scholar1@jointhub.demo",
     "role": "student",
     "full_name": "Callie Davis",
-    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e"
+    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e",
+    "mentor_id": null
   },
   {
     "email": "scholar2@jointhub.demo",
     "role": "student",
     "full_name": "Desmond Tunyinko",
-    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c"
+    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c",
+    "mentor_id": null
   }
 ]
