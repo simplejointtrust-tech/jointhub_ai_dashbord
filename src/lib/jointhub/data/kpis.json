@@ -1,8 +1,14 @@
 {
-  "registered_users": 24,
-  "opportunities_matched": 153,
-  "active_mentor_pairs": 11,
-  "at_risk_students_flagged": 11,
-  "nps_proxy": 42,
-  "scam_flags": 1
+  "registered_users": 17,
+  "opportunities_matched": 40,
+  "active_mentor_pairs": 8,
+  "at_risk_students_flagged": 0,
+  "nps_proxy": 82,
+  "scam_flags": 1,
+  "survey_responses": 17,
+  "impact": {
+    "scholarships_usd": 158000,
+    "students_supported": 85,
+    "countries": 6
+  }
 }

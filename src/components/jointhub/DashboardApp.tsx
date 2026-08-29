@@ -36,6 +36,7 @@ import type {
   Recommendation,
   RiskRow,
   SessionLog,
+  SurveyInsights,
 } from "@/lib/jointhub/types";
 import { cn } from "@/lib/utils";
 import { MentorMatchQuiz } from "@/components/jointhub/MentorMatchQuiz";
@@ -484,6 +485,8 @@ function MentorshipPanel({
   mentors,
   showHeatmap,
   onAskKay,
+  coachPlan,
+  surveyInsights,
 }: {
   assignment?: MentorAssignment;
   top3: MentorTop3[];
@@ -492,6 +495,8 @@ function MentorshipPanel({
   mentors: MentorProfile[];
   showHeatmap: boolean;
   onAskKay?: (prompt: string) => void;
+  coachPlan?: DashboardBundle["ai_coach"];
+  surveyInsights?: SurveyInsights | null;
 }) {
   const [bookingTopic, setBookingTopic] = useState("Career pathing");
   const [bookingNote, setBookingNote] = useState("");
@@ -501,9 +506,40 @@ function MentorshipPanel({
     [mentors],
   );
   const assignedPortrait = assignment ? mentorById.get(assignment.mentor_id) : undefined;
+  const surveyNeedLabels =
+    coachPlan?.priority_needs?.slice(0, 3) ??
+    surveyInsights?.top_mentor_needs.slice(0, 3).map((row) => row.label) ??
+    [];
 
   return (
     <div className="space-y-4">
+      {coachPlan || surveyInsights ? (
+        <section className="rounded-2xl border border-[#3A87B8]/20 bg-[#3A87B8]/[0.06] p-4">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3A87B8]">
+            Survey-informed Mentor Hub
+          </p>
+          <p className="mt-1 text-sm text-[#142033]/75">
+            {coachPlan
+              ? `${coachPlan.coach_name} built this plan from ${coachPlan.full_name}'s ESL mentor needs survey.`
+              : `${surveyInsights?.n_responses ?? 0} ESL survey responses are shaping mentor matching and Kay coaching.`}
+          </p>
+          {surveyNeedLabels.length > 0 ? (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {surveyNeedLabels.map((need) => (
+                <span
+                  key={need}
+                  className="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-[#142033]/75"
+                >
+                  {need}
+                </span>
+              ))}
+            </div>
+          ) : null}
+          {coachPlan?.headline ? (
+            <p className="mt-3 text-sm font-medium text-[#142033]">{coachPlan.headline}</p>
+          ) : null}
+        </section>
+      ) : null}
       <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
         <section className="rounded-2xl border border-[#142033]/10 bg-white p-5 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3A87B8]">
@@ -1678,14 +1714,134 @@ function RiskPanel({
   );
 }
 
+function SurveyInsightsPanel({ insights }: { insights: SurveyInsights }) {
+  const topNeeds = insights.top_mentor_needs.slice(0, 5);
+  const topInterests = insights.top_interests.slice(0, 5);
+  const topBarriers = insights.top_barriers.slice(0, 4);
+  const maxNeed = Math.max(...topNeeds.map((row) => row.count), 1);
+
+  return (
+    <section className="space-y-4 rounded-2xl border border-[#142033]/10 bg-white p-5">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3A87B8]">
+            ESL survey signal
+          </p>
+          <h3 className="mt-1 text-base font-semibold text-[#142033]">{insights.survey_name}</h3>
+          <p className="mt-1 text-sm text-[#142033]/65">
+            {insights.n_responses} responses · {insights.n_scholars} scholar track ·{" "}
+            {insights.n_mentor_track} mentor track · collected {insights.collected_at}
+          </p>
+        </div>
+        <div className="rounded-xl bg-[#142033]/[0.04] px-3 py-2 text-right">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#142033]/55">
+            Mentor confidence
+          </p>
+          <p className="text-xl font-semibold tabular-nums text-[#142033]">
+            {insights.avg_mentor_confidence.toFixed(2)}
+            <span className="text-sm font-medium text-[#142033]/55"> / 5</span>
+          </p>
+        </div>
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <KpiCard label="Survey responses" value={insights.n_responses} />
+        <KpiCard label="Scholar track" value={insights.n_scholars} />
+        <KpiCard label="Mentor track" value={insights.n_mentor_track} />
+        <KpiCard
+          label="Impact countries"
+          value={insights.impact_context?.countries ?? 6}
+        />
+      </div>
+
+      <div className="grid gap-4 lg:grid-cols-3">
+        <div>
+          <h4 className="text-sm font-semibold text-[#142033]">Top mentor needs</h4>
+          <ul className="mt-3 space-y-2">
+            {topNeeds.map((row) => (
+              <li key={row.label}>
+                <div className="mb-1 flex justify-between gap-2 text-xs text-[#142033]/70">
+                  <span>{row.label}</span>
+                  <span className="tabular-nums">{row.count}</span>
+                </div>
+                <div className="h-2 overflow-hidden rounded-full bg-[#142033]/10">
+                  <div
+                    className="h-full rounded-full bg-[#3A87B8]"
+                    style={{ width: `${Math.round((row.count / maxNeed) * 100)}%` }}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold text-[#142033]">Top interests</h4>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {topInterests.map((row) => (
+              <span
+                key={row.label}
+                className="rounded-full bg-[#142033]/[0.04] px-2.5 py-1 text-xs text-[#142033]/75"
+              >
+                {row.label} · {row.count}
+              </span>
+            ))}
+          </div>
+          <h4 className="mt-4 text-sm font-semibold text-[#142033]">Barriers</h4>
+          <ul className="mt-2 space-y-1.5 text-sm text-[#142033]/70">
+            {topBarriers.map((row) => (
+              <li key={row.label}>
+                {row.label}{" "}
+                <span className="tabular-nums text-[#142033]/45">({row.count})</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold text-[#142033]">What this means for Mentor Hub</h4>
+          <ul className="mt-3 space-y-2 text-sm text-[#142033]/70">
+            {insights.product_implications.slice(0, 4).map((item) => (
+              <li key={item} className="rounded-xl border border-[#142033]/08 px-3 py-2">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {insights.representative_quotes.length > 0 ? (
+        <div>
+          <h4 className="text-sm font-semibold text-[#142033]">Scholar voices</h4>
+          <div className="mt-3 grid gap-3 md:grid-cols-2">
+            {insights.representative_quotes.slice(0, 4).map((quote) => (
+              <blockquote
+                key={`${quote.name}-${quote.quote.slice(0, 24)}`}
+                className="rounded-xl border border-[#142033]/08 bg-[#142033]/[0.02] p-3"
+              >
+                <p className="text-sm leading-relaxed text-[#142033]/80">“{quote.quote}”</p>
+                <footer className="mt-2 text-xs font-medium text-[#142033]/55">
+                  {quote.name}
+                  {quote.country ? ` · ${quote.country}` : ""}
+                  {quote.theme ? ` · ${quote.theme}` : ""}
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
 function AnalyticsPanel({
   metrics,
   nlp,
   kpis,
+  surveyInsights,
 }: {
   metrics: ModelMetrics;
   nlp: NlpRow[];
   kpis: DashboardBundle["kpis"];
+  surveyInsights: SurveyInsights | null;
 }) {
   const metricCards = [
     {
@@ -1716,6 +1872,8 @@ function AnalyticsPanel({
 
   return (
     <div className="space-y-4">
+      {surveyInsights ? <SurveyInsightsPanel insights={surveyInsights} /> : null}
+
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {metricCards.map((card) => (
           <div key={card.label} className="rounded-2xl border border-[#142033]/10 bg-white p-4">
@@ -1739,7 +1897,10 @@ function AnalyticsPanel({
         <KpiCard label="Registered users" value={kpis.registered_users} />
         <KpiCard label="Opportunities matched" value={kpis.opportunities_matched} />
         <KpiCard label="Active mentor pairs" value={kpis.active_mentor_pairs} />
-        <KpiCard label="At-risk flagged" value={kpis.at_risk_students_flagged} />
+        <KpiCard
+          label="Survey responses"
+          value={kpis.survey_responses ?? surveyInsights?.n_responses ?? 0}
+        />
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
@@ -1841,6 +2002,9 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
     data.student?.full_name ??
     null;
   const starterPrompts =
+    (data.ai_coach?.coach_prompts && data.ai_coach.coach_prompts.length > 0
+      ? data.ai_coach.coach_prompts
+      : null) ??
     data.mentor_overview?.starter_prompts ??
     data.overview?.starter_prompts ??
     [
@@ -1946,7 +2110,10 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             <KpiCard label="Registered users" value={data.kpis.registered_users} />
             <KpiCard label="Opportunities matched" value={data.kpis.opportunities_matched} />
             <KpiCard label="Active mentor pairs" value={data.kpis.active_mentor_pairs} />
-            <KpiCard label="At-risk students flagged" value={data.kpis.at_risk_students_flagged} />
+            <KpiCard
+              label="Survey responses"
+              value={data.kpis.survey_responses ?? data.survey_insights?.n_responses ?? 0}
+            />
           </div>
         ) : null}
 
@@ -2036,6 +2203,8 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
             mentors={data.mentorship.mentors}
             showHeatmap={isAdmin}
             onAskKay={askKayAbout}
+            coachPlan={data.ai_coach}
+            surveyInsights={data.survey_insights}
           />
         ) : null}
         {tab === "applications" ? (
@@ -2054,7 +2223,12 @@ export function DashboardApp({ initialData }: { initialData: DashboardResponse }
           />
         ) : null}
         {tab === "analytics" ? (
-          <AnalyticsPanel metrics={data.metrics} nlp={data.nlp} kpis={data.kpis} />
+          <AnalyticsPanel
+            metrics={data.metrics}
+            nlp={data.nlp}
+            kpis={data.kpis}
+            surveyInsights={data.survey_insights}
+          />
         ) : null}
       </main>
 

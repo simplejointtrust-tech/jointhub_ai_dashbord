@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getSessionUser } from "@/lib/jointhub/auth";
 import {
   findStudent,
+  getAiCoachForStudent,
   getKpis,
   getMentorship,
   getMetrics,
@@ -10,6 +11,7 @@ import {
   getRecommendationsMap,
   getRiskRows,
   getStudents,
+  getSurveyInsights,
 } from "@/lib/jointhub/data-store";
 import {
   getCommunityFeed,
@@ -127,6 +129,8 @@ export async function GET(request: Request) {
     role: session.role,
     auth_email: session.email,
     personalised_sentence: personalised,
+    ai_coach: getAiCoachForStudent(studentId),
+    survey_insights: getSurveyInsights(),
   };
 
   return NextResponse.json({

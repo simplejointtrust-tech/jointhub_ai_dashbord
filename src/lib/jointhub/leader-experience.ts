@@ -5,12 +5,14 @@
  */
 
 import {
+  getAiCoachForStudent,
   getMentorship,
   getNlpRows,
   getRecommendationSentenceMap,
   getRecommendationsMap,
   getRiskRows,
   getStudents,
+  getSurveyInsights,
 } from "@/lib/jointhub/data-store";
 import type {
   MentorAssignment,
@@ -231,10 +233,12 @@ export function getLeaderOverview(studentId: string | null): LeaderOverview | nu
     cta: "Review opportunities",
   };
 
+  const surveyCoach = getAiCoachForStudent(studentId);
   if (risk?.risk_level === "high") {
     coaching = {
       level: "high",
       message:
+        surveyCoach?.risk_note ||
         risk.outreach_prompt ||
         "You may be falling behind. Book a short mentor check-in this week and reopen one saved opportunity.",
       cta: "Book a check-in",
@@ -243,8 +247,17 @@ export function getLeaderOverview(studentId: string | null): LeaderOverview | nu
     coaching = {
       level: "medium",
       message:
-        "A few signals suggest friction. Protect one focused hour this week for applications or mentor prep.",
+        surveyCoach?.risk_note ||
+        (surveyCoach?.barriers?.[0]
+          ? `Survey barrier flagged: ${surveyCoach.barriers[0]}. Protect one focused hour this week for applications or mentor prep.`
+          : "A few signals suggest friction. Protect one focused hour this week for applications or mentor prep."),
       cta: "Open mentor hub",
+    };
+  } else if (surveyCoach?.priority_needs?.length) {
+    coaching = {
+      level: "steady",
+      message: `Survey-backed focus: ${surveyCoach.priority_needs.slice(0, 2).join(" and ")}. Ask Kay for this week's plan.`,
+      cta: "Ask Kay for a week plan",
     };
   }
 
@@ -294,14 +307,22 @@ export function getLeaderOverview(studentId: string | null): LeaderOverview | nu
       },
     ],
     stats,
-    starter_prompts: [
-      "What should I apply to next?",
-      "Who is my mentor and why?",
-      "When is my nearest deadline?",
-      "Am I falling behind?",
-      "What should I do this week?",
-      "Help me draft essay talking points",
-    ],
+    starter_prompts: (() => {
+      const coach = getAiCoachForStudent(studentId);
+      const needs = (coach?.priority_needs ?? student.mentor_need_labels ?? []).slice(0, 2);
+      const prompts = [
+        "What should I apply to next?",
+        "Who is my mentor and why?",
+        "When is my nearest deadline?",
+        "Am I falling behind?",
+        "What should I do this week?",
+        "Help me draft essay talking points",
+      ];
+      if (needs[0]) prompts.unshift(`Help me with ${needs[0]}`);
+      if (student.barriers?.[0]) prompts.splice(2, 0, `How do I handle: ${student.barriers[0]}?`);
+      if (coach?.session_format) prompts.push(`Plan a ${coach.session_format} mentor session`);
+      return Array.from(new Set(prompts)).slice(0, 6);
+    })(),
   };
 }
 
@@ -616,7 +637,11 @@ export function answerAdvisorQuestion(
   }
 
   if (intent === "greeting") {
-    return `Hi ${name}. ${continuity} I can rank your next opportunity move, explain your ESL mentor fit, walk application stages, and build a week plan with you. What do you want to tackle first?`;
+    const coach = student ? getAiCoachForStudent(student.student_id) : null;
+    const surveyBit = coach?.priority_needs?.length
+      ? ` I already loaded your ESL Mentor Needs survey — top needs: ${coach.priority_needs.slice(0, 2).join(" and ")}.`
+      : "";
+    return `Hi ${name}. ${continuity}${surveyBit} I can rank your next opportunity move, explain your ESL mentor fit, walk application stages, and build a week plan with you. What do you want to tackle first?`;
   }
 
   if (intent === "identity") {
@@ -654,6 +679,13 @@ export function answerAdvisorQuestion(
     if (!mentor) {
       return "No assigned mentor is loaded for this account. Admin can focus a leader, or sign in as leader1@jointhub.demo so I can coach against a real match.";
     }
+    const coachPlan = student ? getAiCoachForStudent(student.student_id) : null;
+    const surveyNeedLine = coachPlan?.priority_needs?.length
+      ? ` Your survey said you most need help with ${coachPlan.priority_needs.slice(0, 3).join(", ")}.`
+      : "";
+    const discoverLine = coachPlan?.discover_preference
+      ? ` Match discovery preference: ${coachPlan.discover_preference}.`
+      : "";
     const wantsAlt = /(alternative|another|other mentor|show me a mentor)/.test(q);
     const alt =
       context.alternatives.find((item) => item.mentor_id !== mentor.mentor_id) ??
@@ -748,6 +780,29 @@ export function answerAdvisorQuestion(
   }
 
   if (intent === "plan") {
+    const coach = student ? getAiCoachForStudent(student.student_id) : null;
+    if (coach?.weekly_plan?.length) {
+      const surveySteps = coach.weekly_plan
+        .slice(0, 3)
+        .map((step, index) => `${index + 1}) ${step.focus}: ${step.action}`)
+        .join(" ");
+      const needs = coach.priority_needs.slice(0, 2).join(" and ") || "your named mentor needs";
+      const barriers = coach.barriers.slice(0, 2).join(" and ");
+      return [
+        continuity,
+        `From your ESL Mentor Needs survey, ${name}, I prioritised ${needs}.`,
+        barriers ? `We also account for barriers around ${barriers}.` : "",
+        `Week plan: ${surveySteps}`,
+        coach.session_format
+          ? `Default session format from your survey: ${coach.session_format}${coach.working_style ? ` · style: ${coach.working_style}` : ""}.`
+          : "",
+        topOpp ? `Opportunity tie-in: advance ${topOpp.title} before ${topOpp.deadline}.` : "",
+        mentor ? `Bring one blocker to your session with ${mentor.mentor_name}.` : "",
+        "Which step should we unpack first?",
+      ]
+        .filter(Boolean)
+        .join(" ");
+    }
     const steps = [
       topOpp
         ? `1) Advance ${topOpp.title} one stage before ${topOpp.deadline}.`
@@ -799,6 +854,22 @@ export function answerAdvisor(
       ? "Coach: Kay · AI coach (mentor caseload mode)"
       : "Coach: Kay · AI coach",
   );
+  const coachPlan = getAiCoachForStudent(studentId);
+  if (coachPlan) {
+    citations.push(
+      `ESL survey plan: ${coachPlan.priority_needs.slice(0, 2).join(", ") || "mentor needs loaded"}`,
+    );
+  }
+  try {
+    const insights = getSurveyInsights();
+    if (insights?.n_responses) {
+      citations.push(
+        `Cohort survey n=${insights.n_responses} · top need ${insights.top_mentor_needs[0]?.label ?? "networking"}`,
+      );
+    }
+  } catch {
+    // survey file optional in some environments
+  }
   if (context.recommendations[0]) {
     citations.push(
       `Top opportunity: ${context.recommendations[0].title} (${Math.round(context.recommendations[0].match_score * 100)}% match)`,

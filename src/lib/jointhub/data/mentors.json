@@ -1,146 +1,328 @@
 [
   {
-    "mentor_id": "f037761c-db4b-4b80-8aea-4b2549a67db4",
-    "name": "Mentor Ibrahim Nkrumah",
-    "country": "Rwanda",
-    "industry": "Technology",
-    "skills_offered": ["health", "leadership", "agri_food", "design_ux"],
-    "skills_vector": [0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1],
-    "career_stage_mentor": 6,
-    "availability_hrs_per_month": 6,
-    "languages": ["English"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "1bf0b711-67d0-4d0b-abcb-0e7285854850",
-    "name": "Mentor Nia Abebe",
-    "country": "Kenya",
-    "industry": "Education",
-    "skills_offered": ["health", "design_ux", "agri_food"],
-    "skills_vector": [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1],
-    "career_stage_mentor": 6,
-    "availability_hrs_per_month": 8,
-    "languages": ["English"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "1f21c024-da71-4475-80eb-1a18d1df71fa",
-    "name": "Mentor Oluwaseun Mwangi",
-    "country": "Nigeria",
-    "industry": "Finance",
-    "skills_offered": ["climate_env", "data_ai"],
-    "skills_vector": [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0],
-    "career_stage_mentor": 7,
-    "availability_hrs_per_month": 4,
-    "languages": ["English", "Swahili"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "eb918567-4c94-4e8a-aed1-b8766f698200",
-    "name": "Mentor Zuri Okafor",
-    "country": "Ghana",
-    "industry": "Health",
-    "skills_offered": ["finance", "design_ux"],
-    "skills_vector": [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0],
-    "career_stage_mentor": 7,
-    "availability_hrs_per_month": 4,
-    "languages": ["English", "Swahili"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "93a920e6-0ab3-4d6c-9d4f-21f723dcb561",
-    "name": "Mentor Kofi Kamau",
-    "country": "Uganda",
-    "industry": "Media",
-    "skills_offered": ["data_ai", "finance"],
-    "skills_vector": [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-    "career_stage_mentor": 6,
-    "availability_hrs_per_month": 2,
-    "languages": ["English", "French"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "c63c5b3f-a03a-457f-91d2-c96e1015c6d5",
-    "name": "Mentor Aisha Traore",
+    "mentor_id": "26022e54-151e-53d3-b5cd-5731b1473bd1",
+    "name": "Maria Laetitia Pereira",
     "country": "South Africa",
-    "industry": "Agriculture",
-    "skills_offered": ["design_ux", "entrepreneurship", "music_arts"],
-    "skills_vector": [0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
-    "career_stage_mentor": 7,
-    "availability_hrs_per_month": 2,
-    "languages": ["English"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "95207550-7014-4379-848f-336f36cbc8f5",
-    "name": "Mentor Jelani Dlamini",
-    "country": "Senegal",
-    "industry": "Climate",
-    "skills_offered": ["data_ai", "music_arts"],
-    "skills_vector": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    "career_stage_mentor": 7,
-    "availability_hrs_per_month": 4,
-    "languages": ["English"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "8f17e4c4-2cbd-4cf8-ad3d-d3d44a6362d1",
-    "name": "Mentor Mariam Boateng",
-    "country": "Ethiopia",
-    "industry": "Public Policy",
-    "skills_offered": ["media_film", "entrepreneurship", "agri_food"],
-    "skills_vector": [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
-    "career_stage_mentor": 4,
-    "availability_hrs_per_month": 4,
-    "languages": ["English"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "d13395c7-9191-46b2-b2d2-9b07b8ae4d5b",
-    "name": "Mentor Tunde Nkosi",
-    "country": "Rwanda",
-    "industry": "Technology",
-    "skills_offered": ["agri_food", "creative_tech", "music_arts"],
-    "skills_vector": [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
-    "career_stage_mentor": 6,
-    "availability_hrs_per_month": 8,
-    "languages": ["English"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "5b95c8a9-9e7d-4d60-b8f0-395be508a709",
-    "name": "Mentor Sanaa Adebayo",
-    "country": "Kenya",
     "industry": "Education",
-    "skills_offered": ["entrepreneurship", "agri_food", "design_ux", "finance"],
-    "skills_vector": [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1],
-    "career_stage_mentor": 4,
-    "availability_hrs_per_month": 4,
-    "languages": ["English", "French"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "0a030be9-a880-4e99-8897-7bc20884f174",
-    "name": "Mentor Bongani Kone",
-    "country": "Nigeria",
-    "industry": "Finance",
-    "skills_offered": ["data_ai", "music_arts", "social_impact"],
-    "skills_vector": [0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0],
-    "career_stage_mentor": 7,
-    "availability_hrs_per_month": 2,
-    "languages": ["English"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
-  },
-  {
-    "mentor_id": "1f83614f-0b1f-4cfb-a38a-202fdb816b2b",
-    "name": "Mentor Lindiwe Mugisha",
-    "country": "Ghana",
-    "industry": "Health",
-    "skills_offered": ["leadership", "climate_env", "media_film", "entrepreneurship"],
-    "skills_vector": [0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0],
+    "skills_offered": [
+      "creative_tech",
+      "social_impact",
+      "media_film"
+    ],
+    "skills_vector": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
     "career_stage_mentor": 6,
-    "availability_hrs_per_month": 0,
-    "languages": ["English"],
-    "bio": "Professional mentor supporting African leaders on JointHub Africa."
+    "availability_hrs_per_month": 2,
+    "languages": [
+      "English",
+      "Portuguese"
+    ],
+    "title": "Education mentor · ESL network",
+    "bio": "My main career goal over the next 6–12 months is to strengthen my leadership skills, expand my professional experience in communications and media, and take on opportunities where I can contribute strategically, lead pro",
+    "preferred_working_style": "Structured monthly goals",
+    "preferred_session_format": "No preference",
+    "source": "esl_survey"
+  },
+  {
+    "mentor_id": "1bcd3f2a-c8e9-5c7f-b5e7-1e9649cf76de",
+    "name": "Isaiah O'Kevwe Kporon",
+    "country": "Rwanda",
+    "industry": "Public policy",
+    "skills_offered": [
+      "leadership",
+      "creative_tech",
+      "climate_env",
+      "social_impact"
+    ],
+    "skills_vector": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "career_stage_mentor": 6,
+    "availability_hrs_per_month": 1,
+    "languages": [
+      "English"
+    ],
+    "title": "Public policy mentor · ESL network",
+    "bio": "I want to work on AI projects SimpleJoint Trust, study Theology, graduate and join the SJ in July 2027.",
+    "preferred_working_style": "Structured monthly goals",
+    "preferred_session_format": "Video call",
+    "source": "esl_survey"
+  },
+  {
+    "mentor_id": "d3685eb5-90f9-5fca-ba07-f2679b0dfb88",
+    "name": "Neemaisabella Henry swai",
+    "country": "Tanzania",
+    "industry": "Health",
+    "skills_offered": [
+      "leadership",
+      "music_arts",
+      "health",
+      "social_impact"
+    ],
+    "skills_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "career_stage_mentor": 5,
+    "availability_hrs_per_month": 1,
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "title": "Health mentor · ESL network",
+    "bio": "I want to work in saving lives and doing research on different ways diseases especially genetic ones and trying to find out their cure",
+    "preferred_working_style": "Structured monthly goals",
+    "preferred_session_format": "Phone / WhatsApp voice",
+    "source": "esl_survey"
+  },
+  {
+    "mentor_id": "b0c8db39-db5a-55b0-ab3c-21d6ecd68119",
+    "name": "Peggy Mapondera",
+    "country": "Zimbabwe",
+    "industry": "Finance",
+    "skills_offered": [
+      "entrepreneurship",
+      "finance",
+      "agri_food"
+    ],
+    "skills_vector": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "career_stage_mentor": 6,
+    "availability_hrs_per_month": 2,
+    "languages": [
+      "English"
+    ],
+    "title": "Finance mentor · ESL network",
+    "bio": "I want to set up a gender lens fund focused on agribusinesses in Zimbabwe and across Africa",
+    "preferred_working_style": "Accountability check-ins",
+    "preferred_session_format": "Video call",
+    "source": "esl_survey"
+  },
+  {
+    "mentor_id": "3b350172-8702-5c6c-9c8a-7b6b76c1a469",
+    "name": "Musana Rwiyereka Emile",
+    "country": "Drc",
+    "industry": "Technology",
+    "skills_offered": [
+      "leadership",
+      "entrepreneurship",
+      "data_ai"
+    ],
+    "skills_vector": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "career_stage_mentor": 6,
+    "availability_hrs_per_month": 2,
+    "languages": [
+      "English",
+      "French"
+    ],
+    "title": "Technology mentor · ESL network",
+    "bio": "Starting a new venture into telecom infrastructure",
+    "preferred_working_style": "Accountability check-ins",
+    "preferred_session_format": "Video call",
+    "source": "esl_survey"
+  },
+  {
+    "mentor_id": "a053c220-52c1-541e-b5fa-d59bb1ec3108",
+    "name": "Adelina",
+    "country": "Tanzania",
+    "industry": "Media",
+    "skills_offered": [
+      "leadership",
+      "creative_tech",
+      "entrepreneurship",
+      "media_film"
+    ],
+    "skills_vector": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "career_stage_mentor": 6,
+    "availability_hrs_per_month": 1,
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "title": "Media mentor · ESL network",
+    "bio": "Working in real estate, self-employed.",
+    "preferred_working_style": "Portfolio / application co-working",
+    "preferred_session_format": "Video call",
+    "source": "esl_survey"
+  },
+  {
+    "mentor_id": "10a757a7-b196-5197-a9a6-b51810504f1a",
+    "name": "AHMED MASOUD",
+    "country": "Tanzania",
+    "industry": "Education",
+    "skills_offered": [
+      "leadership",
+      "creative_tech",
+      "media_film",
+      "social_impact"
+    ],
+    "skills_vector": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "career_stage_mentor": 5,
+    "availability_hrs_per_month": 2,
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "title": "Education mentor · ESL network",
+    "bio": "Over the next 6–12 months, I want to strengthen my leadership skills while completing my undergraduate degree. I also want to mentor and guide young people in Tanzania by helping them develop the practical life skills, c",
+    "preferred_working_style": "Structured monthly goals",
+    "preferred_session_format": "Video call",
+    "source": "esl_survey"
+  },
+  {
+    "mentor_id": "61360981-37bc-53a3-b8b5-ada88d7de5e0",
+    "name": "Junior Ohouko",
+    "country": "Benin",
+    "industry": "Technology",
+    "skills_offered": [
+      "leadership",
+      "climate_env",
+      "social_impact"
+    ],
+    "skills_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "career_stage_mentor": 6,
+    "availability_hrs_per_month": 1,
+    "languages": [
+      "English",
+      "French"
+    ],
+    "title": "Technology mentor · ESL network",
+    "bio": "Support African countries in better protecting their natural sites, through an improved understanding and application of the Works Heritage Convention.",
+    "preferred_working_style": "Flexible ad-hoc advice",
+    "preferred_session_format": "No preference",
+    "source": "esl_survey"
+  },
+  {
+    "mentor_id": "cd812142-5c61-56f8-9ec8-f619ee39de63",
+    "name": "Barasa Wafula",
+    "country": "Kenya",
+    "industry": "Finance",
+    "skills_offered": [
+      "leadership",
+      "social_impact",
+      "climate_env",
+      "finance"
+    ],
+    "skills_vector": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "career_stage_mentor": 6,
+    "availability_hrs_per_month": 12,
+    "languages": [
+      "English"
+    ],
+    "title": "Finance mentor · ESL network",
+    "bio": "I want to lead energy access projects across Africa and Asia.",
+    "preferred_working_style": "Flexible ad-hoc advice",
+    "preferred_session_format": "Video call",
+    "source": "esl_survey"
   }
 ]

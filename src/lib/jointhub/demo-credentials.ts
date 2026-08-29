@@ -20,8 +20,8 @@ export const DEMO_CREDENTIALS: DemoCredential[] = [
     password: "LeaderDemo2026!",
     role: "leader",
     label: "Leader",
-    fullName: "Amina Okoro",
-    dashboardHint: "Scholar workspace, opportunities, and AI Coach Kay",
+    fullName: "Callie Davis",
+    dashboardHint: "ESL survey scholar workspace, opportunities, and AI Coach Kay",
   },
   {
     email: "mentor1@jointhub.demo",
@@ -37,7 +37,7 @@ export const DEMO_CREDENTIALS: DemoCredential[] = [
     role: "admin",
     label: "Admin",
     fullName: "JointHub Admin",
-    dashboardHint: "Full cohort dropout risk and analytics",
+    dashboardHint: "Full cohort + ESL survey insights, risk, and analytics",
   },
 ];
 

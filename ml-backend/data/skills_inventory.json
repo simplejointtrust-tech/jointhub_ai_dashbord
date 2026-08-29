@@ -1,602 +1,101 @@
 [
   {
-    "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
-    "skill_name": "data_ai",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
-    "skill_name": "music_arts",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
-    "skill_name": "creative_tech",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a",
-    "skill_name": "health",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a",
-    "skill_name": "music_arts",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b",
-    "skill_name": "creative_tech",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b",
-    "skill_name": "health",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
-    "skill_name": "leadership",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
-    "skill_name": "finance",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
-    "skill_name": "design_ux",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
-    "skill_name": "media_film",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833",
-    "skill_name": "media_film",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833",
-    "skill_name": "social_impact",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833",
-    "skill_name": "design_ux",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
-    "skill_name": "entrepreneurship",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
-    "skill_name": "health",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "3b8dd516-f0c2-476d-88c9-29ba5731a0a1",
-    "skill_name": "media_film",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "3b8dd516-f0c2-476d-88c9-29ba5731a0a1",
-    "skill_name": "agri_food",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "3b8dd516-f0c2-476d-88c9-29ba5731a0a1",
-    "skill_name": "leadership",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
-    "skill_name": "finance",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
-    "skill_name": "climate_env",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
-    "skill_name": "social_impact",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
-    "skill_name": "music_arts",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
-    "skill_name": "music_arts",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
-    "skill_name": "agri_food",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
-    "skill_name": "media_film",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
-    "skill_name": "finance",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
-    "skill_name": "music_arts",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "4404bc54-5468-46aa-95da-738a784bb119",
-    "skill_name": "creative_tech",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "4404bc54-5468-46aa-95da-738a784bb119",
-    "skill_name": "data_ai",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "4404bc54-5468-46aa-95da-738a784bb119",
-    "skill_name": "music_arts",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "afe20b59-9dab-4d2b-90cf-b55d23be4cf0",
-    "skill_name": "music_arts",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "afe20b59-9dab-4d2b-90cf-b55d23be4cf0",
-    "skill_name": "agri_food",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "afe20b59-9dab-4d2b-90cf-b55d23be4cf0",
-    "skill_name": "finance",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
-    "skill_name": "leadership",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
-    "skill_name": "data_ai",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
-    "skill_name": "media_film",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
-    "skill_name": "climate_env",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
-    "skill_name": "entrepreneurship",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
-    "skill_name": "leadership",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
-    "skill_name": "data_ai",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
-    "skill_name": "health",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
-    "skill_name": "creative_tech",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
-    "skill_name": "design_ux",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
-    "skill_name": "design_ux",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
-    "skill_name": "health",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
-    "skill_name": "finance",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
-    "skill_name": "climate_env",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
-    "skill_name": "media_film",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
-    "skill_name": "creative_tech",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
-    "skill_name": "leadership",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "c4031050-5ea6-46e6-8332-517a85594ea6",
-    "skill_name": "entrepreneurship",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "c4031050-5ea6-46e6-8332-517a85594ea6",
-    "skill_name": "design_ux",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
-    "skill_name": "entrepreneurship",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
-    "skill_name": "finance",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
-    "skill_name": "agri_food",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
-    "skill_name": "music_arts",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
-    "skill_name": "data_ai",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
-    "skill_name": "agri_food",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
-    "skill_name": "finance",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
-    "skill_name": "creative_tech",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
-    "skill_name": "health",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
-    "skill_name": "data_ai",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
-    "skill_name": "creative_tech",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
-    "skill_name": "leadership",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
-    "skill_name": "media_film",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
-    "skill_name": "social_impact",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
-    "skill_name": "health",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
-    "skill_name": "music_arts",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "fa92f34f-963b-4901-8889-1879d28029d7",
-    "skill_name": "climate_env",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "fa92f34f-963b-4901-8889-1879d28029d7",
-    "skill_name": "data_ai",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
-    "skill_name": "climate_env",
-    "self_rating": 2,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
-    "skill_name": "entrepreneurship",
-    "self_rating": 3,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
-  },
-  {
-    "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
-    "skill_name": "health",
-    "self_rating": 5,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": false
-  },
-  {
-    "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
-    "skill_name": "creative_tech",
-    "self_rating": 4,
-    "skill_category": "interest_track",
-    "assessed_date": "2026-07-01",
-    "verified_by_mentor": true
+    "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e",
+    "skills_needed": [
+      "leadership",
+      "creative_tech",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "CV / LinkedIn / portfolio review",
+      "Leadership",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ]
+  },
+  {
+    "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c",
+    "skills_needed": [
+      "social_impact",
+      "leadership",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Scholarship / fellowship applications",
+      "Leadership",
+      "Entrepreneurship / startup advice"
+    ]
+  },
+  {
+    "student_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4",
+    "skills_needed": [
+      "social_impact",
+      "leadership",
+      "entrepreneurship",
+      "data_ai"
+    ],
+    "mentor_need_labels": [
+      "Scholarship / fellowship applications",
+      "Leadership",
+      "Entrepreneurship / startup advice",
+      "Networking introductions",
+      "Research / academic guidance"
+    ]
+  },
+  {
+    "student_id": "7912e963-9252-54a0-8543-262e566ff29c",
+    "skills_needed": [
+      "leadership",
+      "social_impact",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "Scholarship / fellowship applications",
+      "Entrepreneurship / startup advice"
+    ]
+  },
+  {
+    "student_id": "ba194f0a-4ac8-595f-a11d-54a5c7a8387b",
+    "skills_needed": [
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Entrepreneurship / startup advice"
+    ]
+  },
+  {
+    "student_id": "6a79888b-55bf-5996-a851-820283a533dd",
+    "skills_needed": [
+      "leadership"
+    ],
+    "mentor_need_labels": [
+      "Networking introductions"
+    ]
+  },
+  {
+    "student_id": "92562ba5-db8c-5c42-8b92-74c208014f07",
+    "skills_needed": [
+      "leadership",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ]
+  },
+  {
+    "student_id": "21eb43a5-603e-50f6-9fa6-1b9397c5d31c",
+    "skills_needed": [
+      "leadership",
+      "entrepreneurship"
+    ],
+    "mentor_need_labels": [
+      "Career path clarity",
+      "Entrepreneurship / startup advice",
+      "Networking introductions"
+    ]
   }
 ]
