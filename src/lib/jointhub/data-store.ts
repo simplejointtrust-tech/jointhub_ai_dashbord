@@ -7,6 +7,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ESL_MENTORS } from "@/lib/jointhub/esl-mentors";
 import type {
+  AiCoachPlan,
   AuthUser,
   MentorAssignment,
   MentorProfile,
@@ -20,6 +21,7 @@ import type {
   RiskRow,
   SessionLog,
   StudentProfile,
+  SurveyInsights,
 } from "@/lib/jointhub/types";
 
 const DATA_DIR = join(process.cwd(), "src/lib/jointhub/data");
@@ -158,11 +160,18 @@ type RawRisk = {
 };
 
 export function getStudents(): StudentProfile[] {
-  return readJson<StudentProfile[]>("students.json").map((student) => ({
-    ...student,
-    programme: student.programme ?? "JointHub Leader",
-    campus: student.campus ?? "ALU",
-  }));
+  return readJson<Array<StudentProfile & { scholar_status?: boolean; source?: string }>>(
+    "students.json",
+  ).map((student) => {
+    const { scholar_status, source, ...rest } = student;
+    return {
+      ...rest,
+      programme: rest.programme ?? "JointHub Leader",
+      campus: rest.campus ?? "ALU",
+      leader_status: rest.leader_status ?? Boolean(scholar_status ?? true),
+      survey_source: rest.survey_source ?? source,
+    };
+  });
 }
 
 export function getMentors(): MentorProfile[] {
@@ -186,6 +195,21 @@ export function getKpis(): PlatformKpis {
 
 export function getMetrics(): ModelMetrics {
   return readJson<ModelMetrics>("metrics.json");
+}
+
+export function getSurveyInsights(): SurveyInsights {
+  return readJson<SurveyInsights>("survey_insights.json");
+}
+
+export function getAiCoachPlans(): AiCoachPlan[] {
+  return readJson<AiCoachPlan[]>("ai_coach.json");
+}
+
+export function getAiCoachForStudent(studentId: string | null | undefined): AiCoachPlan | null {
+  if (!studentId) {
+    return null;
+  }
+  return getAiCoachPlans().find((plan) => plan.student_id === studentId) ?? null;
 }
 
 export function getRecommendationsMap(): Record<string, Recommendation[]> {

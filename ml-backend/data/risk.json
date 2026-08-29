@@ -1,455 +1,140 @@
 {
   "predictions": [
     {
-      "student_id": "9898306b-f30f-4bdd-bdde-4ba7fd75f916",
-      "full_name": "Amina Okoro",
+      "student_id": "6936256f-985a-5a10-8115-62ea7b2d601e",
+      "full_name": "Callie Davis",
       "email": "leader1@jointhub.demo",
       "features": {
-        "days_since_last_login": 30,
-        "gpa_score": 2.24,
-        "attendance_rate": 0.55,
-        "days_since_last_mentor_session": 38,
-        "profile_completeness": 0.47
+        "days_since_last_login": 11,
+        "gpa_score": 2.75,
+        "attendance_rate": 0.6,
+        "days_since_last_mentor_session": 11,
+        "profile_completeness": 0.9
       },
-      "label": 1,
-      "risk_probability": 1.0,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_login",
-      "outreach_prompt": "Hi Amina, we noticed days since last login may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "57f4590d-f06f-4d24-b1bd-bc85d7be781a",
-      "full_name": "Kwame Mensah",
-      "email": "leader2@jointhub.demo",
-      "features": {
-        "days_since_last_login": 5,
-        "gpa_score": 3.4,
-        "attendance_rate": 0.72,
-        "days_since_last_mentor_session": 18,
-        "profile_completeness": 0.96
-      },
-      "label": 0,
-      "risk_probability": 0.0411,
+      "risk_probability": 0.2996,
       "at_risk": false,
       "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
+      "top_risk_factor": "financial_pressure",
+      "outreach_prompt": "Hi Callie, Kay here from JointHub. I noticed barriers around Unclear career direction, Limited access to opportunities. Want a 20-min check-in to unblock your next mentor step?"
     },
     {
-      "student_id": "0aa43dc1-d39c-4e29-8bc9-b6dddd43237b",
-      "full_name": "Chiamaka Diallo",
-      "email": "leader3@jointhub.demo",
-      "features": {
-        "days_since_last_login": 1,
-        "gpa_score": 3.34,
-        "attendance_rate": 0.95,
-        "days_since_last_mentor_session": 7,
-        "profile_completeness": 0.88
-      },
-      "label": 0,
-      "risk_probability": 0.0002,
-      "at_risk": false,
-      "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
-    },
-    {
-      "student_id": "5e88821b-f8f8-4dbb-bf0a-8a20f19053c5",
-      "full_name": "Thabo Nkrumah",
-      "email": "leader4@jointhub.demo",
+      "student_id": "35c29cf9-c20e-5726-a822-05371e5c7e5c",
+      "full_name": "Desmond Tunyinko",
+      "email": "esl03@jointhub.demo",
       "features": {
         "days_since_last_login": 11,
-        "gpa_score": 2.59,
-        "attendance_rate": 0.56,
-        "days_since_last_mentor_session": 37,
-        "profile_completeness": 0.4
-      },
-      "label": 1,
-      "risk_probability": 0.998,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": "Hi Thabo, we noticed days since last mentor session may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "571d2df0-32be-471f-bbbb-cf83afaef833",
-      "full_name": "Fatou Abebe",
-      "email": "leader5@jointhub.demo",
-      "features": {
-        "days_since_last_login": 29,
-        "gpa_score": 2.45,
-        "attendance_rate": 0.51,
-        "days_since_last_mentor_session": 51,
-        "profile_completeness": 0.55
-      },
-      "label": 1,
-      "risk_probability": 1.0,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": "Hi Fatou, we noticed days since last mentor session may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "a9c7bb16-8255-44c3-9d01-48d688ed7acd",
-      "full_name": "Ibrahim Mwangi",
-      "email": "leader6@jointhub.demo",
-      "features": {
-        "days_since_last_login": 0,
-        "gpa_score": 3.26,
-        "attendance_rate": 0.67,
-        "days_since_last_mentor_session": 18,
-        "profile_completeness": 0.86
-      },
-      "label": 0,
-      "risk_probability": 0.0038,
-      "at_risk": false,
-      "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
-    },
-    {
-      "student_id": "3b8dd516-f0c2-476d-88c9-29ba5731a0a1",
-      "full_name": "Nia Okafor",
-      "email": "leader7@jointhub.demo",
-      "features": {
-        "days_since_last_login": 15,
-        "gpa_score": 2.78,
-        "attendance_rate": 0.38,
-        "days_since_last_mentor_session": 39,
-        "profile_completeness": 0.34
-      },
-      "label": 1,
-      "risk_probability": 0.9999,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": "Hi Nia, we noticed days since last mentor session may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "456f8cfb-2f75-4ed9-87cf-3c621b56287f",
-      "full_name": "Oluwaseun Kamau",
-      "email": "leader8@jointhub.demo",
-      "features": {
-        "days_since_last_login": 16,
-        "gpa_score": 1.98,
-        "attendance_rate": 0.7,
-        "days_since_last_mentor_session": 49,
-        "profile_completeness": 0.52
-      },
-      "label": 1,
-      "risk_probability": 1.0,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": "Hi Oluwaseun, we noticed days since last mentor session may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "7defd6e3-6e1e-4ac3-b025-4237e5a9e16b",
-      "full_name": "Zuri Traore",
-      "email": "leader9@jointhub.demo",
-      "features": {
-        "days_since_last_login": 10,
-        "gpa_score": 3.34,
-        "attendance_rate": 0.96,
-        "days_since_last_mentor_session": 3,
-        "profile_completeness": 0.73
-      },
-      "label": 0,
-      "risk_probability": 0.0032,
-      "at_risk": false,
-      "risk_level": "low",
-      "top_risk_factor": "days_since_last_login",
-      "outreach_prompt": null
-    },
-    {
-      "student_id": "000fd018-031e-44d3-9c88-093e8a467dcb",
-      "full_name": "Kofi Dlamini",
-      "email": "leader10@jointhub.demo",
-      "features": {
-        "days_since_last_login": 0,
-        "gpa_score": 3.53,
-        "attendance_rate": 1.0,
-        "days_since_last_mentor_session": 12,
-        "profile_completeness": 0.85
-      },
-      "label": 0,
-      "risk_probability": 0.0005,
-      "at_risk": false,
-      "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
-    },
-    {
-      "student_id": "4404bc54-5468-46aa-95da-738a784bb119",
-      "full_name": "Aisha Boateng",
-      "email": "leader11@jointhub.demo",
-      "features": {
-        "days_since_last_login": 31,
-        "gpa_score": 2.48,
-        "attendance_rate": 0.56,
-        "days_since_last_mentor_session": 37,
-        "profile_completeness": 0.54
-      },
-      "label": 1,
-      "risk_probability": 1.0,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_login",
-      "outreach_prompt": "Hi Aisha, we noticed days since last login may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "afe20b59-9dab-4d2b-90cf-b55d23be4cf0",
-      "full_name": "Jelani Nkosi",
-      "email": "leader12@jointhub.demo",
-      "features": {
-        "days_since_last_login": 3,
         "gpa_score": 2.9,
-        "attendance_rate": 0.95,
-        "days_since_last_mentor_session": 9,
-        "profile_completeness": 1.0
+        "attendance_rate": 0.65,
+        "days_since_last_mentor_session": 14,
+        "profile_completeness": 0.9
       },
-      "label": 0,
-      "risk_probability": 0.0008,
+      "risk_probability": 0.2627,
       "at_risk": false,
       "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
+      "top_risk_factor": "financial_pressure",
+      "outreach_prompt": "Hi Desmond, Kay here from JointHub. I noticed barriers around Unclear career direction, Limited access to opportunities. Want a 20-min check-in to unblock your next mentor step?"
     },
     {
-      "student_id": "09b04c0d-ceda-43df-8d38-c529d4b229a5",
-      "full_name": "Mariam Adebayo",
-      "email": "leader13@jointhub.demo",
+      "student_id": "92bae857-51e0-5353-98ee-a2d2e0c03ad4",
+      "full_name": "Lisa Swai",
+      "email": "esl06@jointhub.demo",
       "features": {
-        "days_since_last_login": 2,
-        "gpa_score": 2.73,
-        "attendance_rate": 0.89,
-        "days_since_last_mentor_session": 23,
-        "profile_completeness": 0.86
+        "days_since_last_login": 9,
+        "gpa_score": 3.2,
+        "attendance_rate": 0.75,
+        "days_since_last_mentor_session": 8,
+        "profile_completeness": 0.9
       },
-      "label": 0,
-      "risk_probability": 0.0522,
+      "risk_probability": 0.1036,
       "at_risk": false,
       "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
+      "top_risk_factor": "financial_pressure",
+      "outreach_prompt": "Hi Lisa, Kay here from JointHub. I noticed barriers around Limited access to opportunities, Financial pressure. Want a 20-min check-in to unblock your next mentor step?"
     },
     {
-      "student_id": "01c9cf16-442d-4557-9f25-b2d4b2975a72",
-      "full_name": "Tunde Kone",
-      "email": "leader14@jointhub.demo",
-      "features": {
-        "days_since_last_login": 0,
-        "gpa_score": 2.98,
-        "attendance_rate": 0.79,
-        "days_since_last_mentor_session": 7,
-        "profile_completeness": 0.78
-      },
-      "label": 0,
-      "risk_probability": 0.0001,
-      "at_risk": false,
-      "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
-    },
-    {
-      "student_id": "2811da22-4342-4719-b0a6-184804e1d96f",
-      "full_name": "Sanaa Mugisha",
-      "email": "leader15@jointhub.demo",
-      "features": {
-        "days_since_last_login": 28,
-        "gpa_score": 2.3,
-        "attendance_rate": 0.56,
-        "days_since_last_mentor_session": 46,
-        "profile_completeness": 0.7
-      },
-      "label": 1,
-      "risk_probability": 1.0,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": "Hi Sanaa, we noticed days since last mentor session may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "f9e60d6f-6d1a-4ac6-ae79-daf0c0d4921d",
-      "full_name": "Bongani Okoro",
-      "email": "leader16@jointhub.demo",
-      "features": {
-        "days_since_last_login": 18,
-        "gpa_score": 2.52,
-        "attendance_rate": 0.62,
-        "days_since_last_mentor_session": 33,
-        "profile_completeness": 0.37
-      },
-      "label": 1,
-      "risk_probability": 0.9997,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": "Hi Bongani, we noticed days since last mentor session may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "f5c07336-ce6c-4a94-b1d5-74d8d9bc3bb4",
-      "full_name": "Lindiwe Mensah",
-      "email": "leader17@jointhub.demo",
+      "student_id": "7912e963-9252-54a0-8543-262e566ff29c",
+      "full_name": "Blessing Matiro",
+      "email": "esl07@jointhub.demo",
       "features": {
         "days_since_last_login": 8,
-        "gpa_score": 3.71,
-        "attendance_rate": 0.94,
-        "days_since_last_mentor_session": 2,
-        "profile_completeness": 0.88
+        "gpa_score": 3.5,
+        "attendance_rate": 0.85,
+        "days_since_last_mentor_session": 10,
+        "profile_completeness": 0.9
       },
-      "label": 0,
-      "risk_probability": 0.0008,
+      "risk_probability": 0.0571,
       "at_risk": false,
       "risk_level": "low",
-      "top_risk_factor": "days_since_last_login",
-      "outreach_prompt": null
+      "top_risk_factor": "unclear_career_direction",
+      "outreach_prompt": "Hi Blessing, Kay here from JointHub. I noticed barriers around Unclear career direction, Limited access to opportunities. Want a 20-min check-in to unblock your next mentor step?"
     },
     {
-      "student_id": "c4031050-5ea6-46e6-8332-517a85594ea6",
-      "full_name": "Yaw Diallo",
-      "email": "leader18@jointhub.demo",
+      "student_id": "ba194f0a-4ac8-595f-a11d-54a5c7a8387b",
+      "full_name": "CONFREY ALIANJI",
+      "email": "esl08@jointhub.demo",
       "features": {
-        "days_since_last_login": 1,
-        "gpa_score": 3.3,
-        "attendance_rate": 1.0,
-        "days_since_last_mentor_session": 22,
-        "profile_completeness": 0.97
+        "days_since_last_login": 8,
+        "gpa_score": 3.65,
+        "attendance_rate": 0.9,
+        "days_since_last_mentor_session": 9,
+        "profile_completeness": 0.9
       },
-      "label": 0,
-      "risk_probability": 0.023,
+      "risk_probability": 0.0397,
       "at_risk": false,
       "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
+      "top_risk_factor": "financial_pressure",
+      "outreach_prompt": "Hi CONFREY, Kay here from JointHub. I noticed barriers around Financial pressure. Want a 20-min check-in to unblock your next mentor step?"
     },
     {
-      "student_id": "f0704c73-aebe-415b-a34c-5253f6a516ca",
-      "full_name": "Adaeze Nkrumah",
-      "email": "leader19@jointhub.demo",
-      "features": {
-        "days_since_last_login": 23,
-        "gpa_score": 2.64,
-        "attendance_rate": 0.55,
-        "days_since_last_mentor_session": 34,
-        "profile_completeness": 0.48
-      },
-      "label": 1,
-      "risk_probability": 1.0,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": "Hi Adaeze, we noticed days since last mentor session may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "7730f884-5c12-455b-ab1f-8fee3b4c0bbe",
-      "full_name": "Emeka Abebe",
-      "email": "leader20@jointhub.demo",
+      "student_id": "6a79888b-55bf-5996-a851-820283a533dd",
+      "full_name": "Winnie",
+      "email": "esl11@jointhub.demo",
       "features": {
         "days_since_last_login": 4,
-        "gpa_score": 4.0,
-        "attendance_rate": 0.99,
+        "gpa_score": 3.65,
+        "attendance_rate": 0.9,
+        "days_since_last_mentor_session": 9,
+        "profile_completeness": 0.9
+      },
+      "risk_probability": 0.0291,
+      "at_risk": false,
+      "risk_level": "low",
+      "top_risk_factor": "financial_pressure",
+      "outreach_prompt": "Hi Winnie, Kay here from JointHub. I noticed barriers around Financial pressure. Want a 20-min check-in to unblock your next mentor step?"
+    },
+    {
+      "student_id": "92562ba5-db8c-5c42-8b92-74c208014f07",
+      "full_name": "Calvin Felician Girambo",
+      "email": "esl13@jointhub.demo",
+      "features": {
+        "days_since_last_login": 7,
+        "gpa_score": 3.35,
+        "attendance_rate": 0.8,
+        "days_since_last_mentor_session": 11,
+        "profile_completeness": 0.9
+      },
+      "risk_probability": 0.0758,
+      "at_risk": false,
+      "risk_level": "low",
+      "top_risk_factor": "unclear_career_direction",
+      "outreach_prompt": "Hi Calvin, Kay here from JointHub. I noticed barriers around Unclear career direction, Limited access to opportunities. Want a 20-min check-in to unblock your next mentor step?"
+    },
+    {
+      "student_id": "21eb43a5-603e-50f6-9fa6-1b9397c5d31c",
+      "full_name": "Kobi Owulosua",
+      "email": "esl16@jointhub.demo",
+      "features": {
+        "days_since_last_login": 8,
+        "gpa_score": 3.35,
+        "attendance_rate": 0.8,
         "days_since_last_mentor_session": 7,
-        "profile_completeness": 0.85
+        "profile_completeness": 0.9
       },
-      "label": 0,
-      "risk_probability": 0.0006,
+      "risk_probability": 0.0678,
       "at_risk": false,
       "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
-    },
-    {
-      "student_id": "5f80b75b-64ed-415d-a56c-e040331bffe5",
-      "full_name": "Naledi Mwangi",
-      "email": "leader21@jointhub.demo",
-      "features": {
-        "days_since_last_login": 14,
-        "gpa_score": 2.53,
-        "attendance_rate": 0.59,
-        "days_since_last_mentor_session": 23,
-        "profile_completeness": 0.6
-      },
-      "label": 1,
-      "risk_probability": 0.9506,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": "Hi Naledi, we noticed days since last mentor session may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
-    },
-    {
-      "student_id": "9b6fa444-a548-4f7d-86e5-6ad840c44035",
-      "full_name": "Sefu Okafor",
-      "email": "leader22@jointhub.demo",
-      "features": {
-        "days_since_last_login": 1,
-        "gpa_score": 3.9,
-        "attendance_rate": 0.92,
-        "days_since_last_mentor_session": 23,
-        "profile_completeness": 0.85
-      },
-      "label": 0,
-      "risk_probability": 0.0311,
-      "at_risk": false,
-      "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
-    },
-    {
-      "student_id": "fa92f34f-963b-4901-8889-1879d28029d7",
-      "full_name": "Imani Kamau",
-      "email": "leader23@jointhub.demo",
-      "features": {
-        "days_since_last_login": 3,
-        "gpa_score": 3.5,
-        "attendance_rate": 1.0,
-        "days_since_last_mentor_session": 14,
-        "profile_completeness": 0.78
-      },
-      "label": 0,
-      "risk_probability": 0.0042,
-      "at_risk": false,
-      "risk_level": "low",
-      "top_risk_factor": "days_since_last_mentor_session",
-      "outreach_prompt": null
-    },
-    {
-      "student_id": "142af419-9a75-42be-90ab-fd82ef778784",
-      "full_name": "Dakarai Traore",
-      "email": "leader24@jointhub.demo",
-      "features": {
-        "days_since_last_login": 21,
-        "gpa_score": 2.41,
-        "attendance_rate": 0.51,
-        "days_since_last_mentor_session": 29,
-        "profile_completeness": 0.72
-      },
-      "label": 1,
-      "risk_probability": 0.9998,
-      "at_risk": true,
-      "risk_level": "high",
-      "top_risk_factor": "days_since_last_login",
-      "outreach_prompt": "Hi Dakarai, we noticed days since last login may be affecting your JointHub progress. Can we schedule a 20-minute mentor check-in this week?"
+      "top_risk_factor": "limited_access_to_opportunities",
+      "outreach_prompt": "Hi Kobi, Kay here from JointHub. I noticed barriers around Limited access to opportunities, Low confidence / impostor feelings. Want a 20-min check-in to unblock your next mentor step?"
     }
-  ],
-  "feature_importance": {
-    "days_since_last_login": 0.23333333333333334,
-    "gpa_score": 0.25833333333333336,
-    "attendance_rate": 0.125,
-    "days_since_last_mentor_session": 0.23333333333333334,
-    "profile_completeness": 0.15
-  },
-  "logistic_coefficients": {
-    "days_since_last_login": 0.4866473100636548,
-    "gpa_score": -0.044762393957631166,
-    "attendance_rate": -0.008377579960737933,
-    "days_since_last_mentor_session": 0.3359957000187471,
-    "profile_completeness": -0.01779422604104469
-  },
-  "threshold": 0.65,
-  "metrics": {
-    "auc_roc": 1.0,
-    "target": 0.75
-  }
+  ]
 }

@@ -1,0 +1,398 @@
+{
+  "survey_name": "JointHub ESL Mentor Needs Survey",
+  "collected_at": "2026-07-23",
+  "n_responses": 17,
+  "n_scholars": 8,
+  "n_mentor_track": 9,
+  "avg_mentor_confidence": 4.29,
+  "top_interests": [
+    {
+      "label": "Leadership",
+      "count": 13
+    },
+    {
+      "label": "Entrepreneurship",
+      "count": 9
+    },
+    {
+      "label": "Creativity and Innovation",
+      "count": 7
+    },
+    {
+      "label": "Social impact",
+      "count": 5
+    },
+    {
+      "label": "Media / film",
+      "count": 5
+    },
+    {
+      "label": "Sustainability/Environment",
+      "count": 5
+    },
+    {
+      "label": "Human Development",
+      "count": 5
+    },
+    {
+      "label": "Data & AI",
+      "count": 5
+    },
+    {
+      "label": "Policy & Advocacy",
+      "count": 4
+    },
+    {
+      "label": "Music / arts",
+      "count": 3
+    },
+    {
+      "label": "Finance",
+      "count": 3
+    },
+    {
+      "label": "Healthcae",
+      "count": 2
+    }
+  ],
+  "top_mentor_needs": [
+    {
+      "label": "Networking introductions",
+      "count": 10
+    },
+    {
+      "label": "Entrepreneurship / startup advice",
+      "count": 9
+    },
+    {
+      "label": "Leadership",
+      "count": 8
+    },
+    {
+      "label": "Career path clarity",
+      "count": 7
+    },
+    {
+      "label": "Scholarship / fellowship applications",
+      "count": 5
+    },
+    {
+      "label": "Mental resilience & confidence",
+      "count": 3
+    },
+    {
+      "label": "CV / LinkedIn / portfolio review",
+      "count": 2
+    },
+    {
+      "label": "Technical skill growth",
+      "count": 2
+    },
+    {
+      "label": "Interview practice",
+      "count": 1
+    },
+    {
+      "label": "Research / academic guidance",
+      "count": 1
+    }
+  ],
+  "top_barriers": [
+    {
+      "label": "Limited access to opportunities",
+      "count": 10
+    },
+    {
+      "label": "Time management / overload",
+      "count": 7
+    },
+    {
+      "label": "Financial pressure",
+      "count": 6
+    },
+    {
+      "label": "Unclear career direction",
+      "count": 5
+    },
+    {
+      "label": "Family or community expectations",
+      "count": 4
+    },
+    {
+      "label": "Lack of role models",
+      "count": 3
+    },
+    {
+      "label": "Low confidence / impostor feelings",
+      "count": 3
+    },
+    {
+      "label": "Weak application materials",
+      "count": 2
+    },
+    {
+      "label": "Academic performance pressure",
+      "count": 2
+    },
+    {
+      "label": "Internet / device limits",
+      "count": 1
+    },
+    {
+      "label": "Limited time for networking",
+      "count": 1
+    }
+  ],
+  "countries": [
+    {
+      "label": "Tanzania",
+      "count": 7
+    },
+    {
+      "label": "Rwanda",
+      "count": 2
+    },
+    {
+      "label": "Zimbabwe",
+      "count": 2
+    },
+    {
+      "label": "South Africa",
+      "count": 1
+    },
+    {
+      "label": "Kenyan",
+      "count": 1
+    },
+    {
+      "label": "Drc",
+      "count": 1
+    },
+    {
+      "label": "Benin",
+      "count": 1
+    },
+    {
+      "label": "United States",
+      "count": 1
+    },
+    {
+      "label": "Kenya",
+      "count": 1
+    }
+  ],
+  "career_stages": [
+    {
+      "label": "Leading projects / teams",
+      "count": 9
+    },
+    {
+      "label": "Applying to scholarships / fellowships",
+      "count": 3
+    },
+    {
+      "label": "Early-career professional",
+      "count": 2
+    },
+    {
+      "label": "Building foundations",
+      "count": 2
+    },
+    {
+      "label": "Exploring interests (high school / early uni)",
+      "count": 1
+    }
+  ],
+  "session_formats": [
+    {
+      "label": "Video call",
+      "count": 10
+    },
+    {
+      "label": "No preference",
+      "count": 3
+    },
+    {
+      "label": "Phone / WhatsApp voice",
+      "count": 2
+    },
+    {
+      "label": "In-person if same city",
+      "count": 1
+    },
+    {
+      "label": "Chat / async",
+      "count": 1
+    }
+  ],
+  "working_styles": [
+    {
+      "label": "Structured monthly goals",
+      "count": 8
+    },
+    {
+      "label": "Accountability check-ins",
+      "count": 4
+    },
+    {
+      "label": "Flexible ad-hoc advice",
+      "count": 3
+    },
+    {
+      "label": "Portfolio / application co-working",
+      "count": 2
+    }
+  ],
+  "discover_preferences": [
+    {
+      "label": "Mix — system suggests, I confirm",
+      "count": 8
+    },
+    {
+      "label": "I choose from top 3 recommendations",
+      "count": 5
+    },
+    {
+      "label": "AI Matching system - Auto-assigned best global match",
+      "count": 2
+    },
+    {
+      "label": "I want to browse all mentors",
+      "count": 2
+    }
+  ],
+  "dashboard_feature_requests": [
+    {
+      "label": "Opportunity recommendations tied to mentor advice",
+      "count": 10
+    },
+    {
+      "label": "Assigned mentor match score",
+      "count": 7
+    },
+    {
+      "label": "Top 3 mentor alternatives",
+      "count": 5
+    },
+    {
+      "label": "Risk / check-in reminders",
+      "count": 5
+    },
+    {
+      "label": "Session booking",
+      "count": 5
+    },
+    {
+      "label": "Session log / goals tracker",
+      "count": 4
+    },
+    {
+      "label": "Offline / low-bandwidth model",
+      "count": 4
+    },
+    {
+      "label": "Mobile-friendly experience",
+      "count": 4
+    },
+    {
+      "label": "AI Matching",
+      "count": 3
+    },
+    {
+      "label": "Matching matrix transparency",
+      "count": 2
+    }
+  ],
+  "industry_preferences": [
+    {
+      "label": "Finance",
+      "count": 8
+    },
+    {
+      "label": "Technology",
+      "count": 6
+    },
+    {
+      "label": "Education",
+      "count": 5
+    },
+    {
+      "label": "Creative industries",
+      "count": 5
+    },
+    {
+      "label": "Media",
+      "count": 4
+    },
+    {
+      "label": "Public policy",
+      "count": 4
+    },
+    {
+      "label": "Nonprofit / social enterprise",
+      "count": 4
+    },
+    {
+      "label": "Climate",
+      "count": 2
+    },
+    {
+      "label": "Any — best match on skills",
+      "count": 2
+    },
+    {
+      "label": "Entrepreneurship",
+      "count": 1
+    },
+    {
+      "label": "Health",
+      "count": 1
+    },
+    {
+      "label": "Agriculture",
+      "count": 1
+    }
+  ],
+  "languages": [
+    {
+      "label": "English",
+      "count": 17
+    },
+    {
+      "label": "Swahili",
+      "count": 6
+    },
+    {
+      "label": "French",
+      "count": 2
+    },
+    {
+      "label": "Portuguese",
+      "count": 1
+    },
+    {
+      "label": "Shona",
+      "count": 1
+    }
+  ],
+  "product_implications": [
+    "Default Mentor Hub discovery to Top-3 choose flow (majority preference).",
+    "Prioritise mentor supply for networking introductions, entrepreneurship advice, and leadership coaching.",
+    "Surface barrier-aware AI Coach plans (opportunity access + financial pressure + unclear direction).",
+    "Keep structured monthly goals + video-call defaults in booking UX.",
+    "Show assigned match score, session/goals tracker, and top-3 alternatives as first-class dashboard cards."
+  ],
+  "representative_quotes": [
+    "I believe the Mentor Hub should create a supportive and inclusive environment where mentors and mentees can build meaningful relationships. Providing clear goals, regular check-ins, networking opportunities, and resources for leadership development would help maximize the impact of the program.",
+    "Mentors could also come to mentorship sessions with opportunities",
+    "Keep moving",
+    "Always do things with intentions it helps to narrow and concentrate your focus and attention",
+    "This is an interesting and great project Kay !!!",
+    "None for now"
+  ],
+  "impact_context": {
+    "scholarships_usd": 158000,
+    "students_supported": 85,
+    "countries": 6
+  }
+}

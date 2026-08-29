@@ -3,6 +3,7 @@ import { DashboardApp } from "@/components/jointhub/DashboardApp";
 import { getSessionUser } from "@/lib/jointhub/auth";
 import {
   findStudent,
+  getAiCoachForStudent,
   getKpis,
   getMentorship,
   getMetrics,
@@ -11,6 +12,7 @@ import {
   getRecommendationsMap,
   getRiskRows,
   getStudents,
+  getSurveyInsights,
 } from "@/lib/jointhub/data-store";
 import {
   getCommunityFeed,
@@ -115,6 +117,8 @@ export default async function DashboardPage() {
     role: session.role,
     auth_email: session.email,
     personalised_sentence: personalised,
+    ai_coach: getAiCoachForStudent(focusStudentId),
+    survey_insights: getSurveyInsights(),
     students:
       isAdmin || isMentor
         ? (isMentor
